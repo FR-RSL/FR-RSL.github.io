@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roi Gallcobar</title>
+  <title>Balar</title>
   <link rel="shortcut icon" href="../../../../Images/Factions/sylvan-watchers.png">
   <base href="assets/">
   <style>
@@ -186,10 +186,10 @@
       100% { transform: rotate(360deg); }
     }
     .aura {
-      width: 110px;
-      height: 110px;
-      border-radius: 12px;
-      display: none; /* Changé de flex à none par défaut */
+      width: 110px;           /* Augmenté */
+      height: 110px;          /* Augmenté */
+      border-radius: 12px;    /* Arrondi pour suivre l'image */
+      display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
@@ -367,11 +367,11 @@
           <div class="type-badge" id="champion-type">Defense</div>
         </div>
         <div class="extra-image">
-          <img src="../../../../Images/Affinity/magic.png" alt="Spirit" class="extra-img">
+          <img src="../../../../Images/Affinity/spirit.png" alt="Spirit" class="extra-img">
         </div>
       </div>
       <div class="image-container">
-        <img src="gallcobar.png" alt="Champion" class="champion-img" id="champion-img">
+        <img src="balar.png" alt="Champion" class="champion-img" id="champion-img">
       </div>
     </div>
     <div class="middle-panel" id="right-panel">
@@ -392,91 +392,90 @@
   <script>
     // Remplacer tout le script par une version simplifiée
     const championData = {
-      type: "Soutien",
+      type: "Attaque",
       spells: [
         {
           img: "sort1.png",
-          name: "Baton emmele",
+          name: "Epines malignes",
           description: `
-            Attaque un ennemi.
-            Place un buff <span class='gbt'>Bouclier</span> pendant 2 tours
-            sur l'allie ayant le moins de PV.
-            La valeur du <span class='gbt'>Bouclier</span> est egale a
-            15% des PV MAX de l'allie.
+            Attaque un ennemi. Avant d'attaquer, place un buff <span class='gbt'>Bouclier</span>
+			sur ce Champion pendant 2 tours. La valeur du <span class='gbt'>Bouclier</span> est proportionnelle
+			a l'ATQ de ce Champion.<br><br>
+			A 50% de chances de placer un debuff <span class='gbt'>Sensibilite au Poison</span> de 25% pendant 2 tours.
           `,
-          damage: "3.75*ATQ",
+          damage: "3.8*ATQ | 4*ATQ (Bouclier)",
           levelInfo: [
             "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Bouclier +10%",
-            "Niv. 4 : Dégâts +10%",
-            "Niv. 5 : Bouclier +10%",
+            "Niv. 3 : Chance de Buff/Debuff +10%",
+            "Niv. 4 : Chance de Buff/Debuff +15%"
           ],
         },
         {
           img: "sort2.png",
-          name: "Epines vitrioliques",
+          name: "Tornade de vie",
           description: `
-            Attaque tous les ennemis.
-            Possede 80% de chances de retirer tous les buffs.
-            Place sur chaque ennemi un debuff <span class='gbt'>Poison</span> de 5%
-            pendant 2 tours pour chaque buff qui lui a ete retire.
-            Possede egalement 80% de chances de placer un debuff
-            <span class='gbt'>Blocage des Buffs</span> sur tous les ennemis pendant 1 tour.
+            Attaque un ennemi.<br><br>
+			A 75% de chances de placer un debuff <span class='gbt'>Sangsue</span> sur tous les ennemis pendant 2 tours.<br><br>
+			Active instantanement tous les debuffs <span class='gbt'>Poison</span> sur tous les ennemis.
           `,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          damage: "4.2*ATQ",
           levelInfo: [
-          "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Chance de Buff/Debuff +10%",
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Dégâts +10%",
             "Niv. 4 : Chance de Buff/Debuff +10%",
-            "Niv. 5 : Temps de recharge -1",
+            "Niv. 5 : Chance de Buff/Debuff +15%",
+            "Niv. 6 : Temps de recharge -1",
           ],
         },
         {
           img: "sort3.png",
-          name: "Hypertrophie",
+          name: "Croissance monstrueuse",
           description: `
-            Retire tous les debuffs sur tous les allies.
-            Place sur chaque allie un buff <span class='gbt'>Soins continus</span> de 15%
-            pendant 1 toir pour chaque debuff qui lui a ete retire.<br><br>
-            Place egalement un buff <span class='gbt'>Bouclier</span> sur
-            tous les allies pendant 2 tours.
-            La valeur du <span class='gbt'>Bouclier</span> est egale a 25%
-            des PV MAX de ce Champion.
+            Attaque un ennemi.
+			Avant d'attaquer, place un buff <span class='gbt'>Augmentation de PRE</span> de 50% sur tous les allies pendant 2 tours.<br><br>
+			A 75% de chances de placer un debuff <span class='gbt'>Reduction de RES</span> de 50% sur tous les ennemis pendant 2 tours.<br><br>
+			Place trois debuffs <span class='gbt'>Poison</span> de 5% sur la cible initiale pendant 2 tours. Si cette attaque est critique,
+			place au lieu de ca trois debuffs <span class='gbt'>Poison</span> de 5% sur tous les ennemis pendant 2 tours.
           `,
-          cooldown: 5,
+          damage: "5.8*ATQ",
+          cooldown: 4,
           levelInfo: [
-            "Niv. 2 : Temps de recharge -1",
-            "Niv. 3 : Temps de recharge -1",
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Dégâts +10%",
+            "Niv. 4 : Chance de Buff/Debuff +10%",
+            "Niv. 5 : Chance de Buff/Debuff +15%",
+            "Niv. 6 : Temps de recharge -1",
           ],
         },
         {
           img: "passif1.png",
-          name: "Chamane des ronces [P]",
+          name: "Abandonne au chaos [P]",
           description: `
-            Des qu'un ennemi sous debuff <span class='gbt'>Poison</span>
-            attaque un allie sous buff <span class='gbt'>Soins continus</span>, 
-            active instantanement 1 debuff <span class='gbt'>Poison</span>
-            sur cet ennemi.
-            Active egalement instantanement 1 buff <span class='gbt'>Soins continus</span>
-            sur l'allie attaque.
+            Augmente l'effet Ignorer la DEF de ce Champion de 1% pour chaque debuff <span class='gbt'>Poison</span> active instantanement par ce Champion (s'accumule jusqu'a 20%).<br><br>
+			Remplit le Compteur de Tour de ce Champion de 5% des qu'un debuff <span class='gbt'>Poison</span> est place sur un ennemi.
           `,
           isPassive: true,
         },
       ],
       stats: {
-        PV: "20 970",
-        ATQ: "903",
-        DEF: "1 277",
-        VIT: "108",
+        PV: "15 360",
+        ATQ: "1 586",
+        DEF: "969",
+        VIT: "99",
         "TAUX C.": "15%",
-        "DÉG C.": "50%",
+        "DÉG C.": "63%",
         RÉS: "30",
-        PRÉ: "15",
+        PRÉ: "10",
       },
     };
 
-  	const aura = null; // Mettre null si pas d'aura, ou garder l'objet aura existant si il y en a une
+  	const aura = {
+    img: "../../../../Images/Auras/acc.png",
+    description: `
+      Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.
+    `,
+  };
 
     function showTooltip(event, spellIndex) {
       const spell = championData.spells[spellIndex];
@@ -525,8 +524,6 @@
     }
 
     function showAuraTooltip(event) {
-      if (!aura) return; // Ne rien faire si pas d'aura
-      
       const tooltip = document.getElementById("tooltip");
       tooltip.innerHTML = `
         <h4 class="gold-t">Aura</h4>
@@ -579,14 +576,8 @@
         <div class="stat-block">${statsHTML}</div>
       `;
 
-      // Mise à jour de l'aura
-      const auraSection = document.getElementById("aura-section");
-      if (aura) {
-        document.getElementById("aura-img").src = aura.img;
-        auraSection.style.display = "flex"; // Afficher la section
-      } else {
-        auraSection.style.display = "none"; // Cacher la section si pas d'aura
-      }
+      // Mettre à jour l'aura
+      document.getElementById("aura-img").src = aura.img;
     });
   </script>
 </body>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub</title>
+    <link rel="shortcut icon" href="../Images/Factions/demonspawn.png">
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to a common stylesheet if needed -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px; /* Largeur de la scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #12141c;
+            /* border-radius: 10px; Coins arrondis */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(68, 96, 255, 0.8); /* Couleur de la barre */
+            border-radius: 10px; /* Coins arrondis */
+            border: 2px solid rgba(10, 10, 30, 0.6); /* Bordure pour un effet esthétique */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(68, 96, 255, 1); /* Couleur au survol */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1c1f2b, #12141c);
+            size: 0cap;
+            color: #12141c;
+            margin: 0;
+            padding: 2rem;
+            height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+        }
+        h1 {
+            text-align: center;
+            color: #acacac;
+        }
+        h2 {
+            text-align: center;
+            color: #bebebe;
+            margin-top: 1rem;
+        }
+        .site-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .site-bubble {
+            width: 175px;
+            height: 175px;
+            background: rgba(10, 10, 30, 0.6);
+            border-radius: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: background 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+        }
+        .site-bubble:hover {
+            background: rgba(68, 96, 255, 0.8);
+            transform: scale(1.1);
+        }
+        .site-bubble img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        .site-bubble span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .back-to-hub {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: rgba(10, 10, 30, 0.8);
+        color: #f0f0f0;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .back-to-hub:hover {
+        background: rgba(10, 10, 30, 1);
+        transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-to-hub">← Retour au Hub</a>
+    <h2><strong style="color:red">Mythiques</strong></h2>
+    <div class="site-container">
+        <a href="mythical/komidus/komidus.html" class="site-bubble">
+            <img src="mythical/komidus/assets/komidus.png" alt="Fjorad">
+            <span>Komidus</span>
+        </a>
+        <a href="mythical/kurosa/kurosa.html" class="site-bubble">
+            <img src="mythical/kurosa/assets/kurosa.png" alt="Fjorad">
+            <span>Kurosa</span>
+        </a>
+        <a href="mythical/karnage/karnage.html" class="site-bubble">
+            <img src="mythical/karnage/assets/karnage.png" alt="Fjorad">
+            <span>Karnage</span>
+        </a>
+    </div>
+    <h2><strong style="color:gold">Legendaires</strong></h2>
+    <div class="site-container">
+        <a href="legendary/kymar/kymar.html" class="site-bubble">
+            <img src="legendary/kymar/assets/kymar.png" alt="Fjorad">
+            <span>Prince Kymar</span>
+        </a>
+        <a href="legendary/tyran/tyran.html" class="site-bubble">
+            <img src="legendary/tyran/assets/tyran.png" alt="Fjorad">
+            <span>Tyran Ixlimor</span>
+        </a>
+        <a href="legendary/comtesse/comtesse.html" class="site-bubble">
+            <img src="legendary/comtesse/assets/comtesse.png" alt="Fjorad">
+            <span>Comtesse Lix</span>
+        </a>
+        <a href="legendary/hephraak/hephraak.html" class="site-bubble">
+            <img src="legendary/hephraak/assets/hephraak.png" alt="Fjorad">
+            <span>Hephraak</span>
+        </a>
+        <a href="legendary/skorid/skorid.html" class="site-bubble">
+            <img src="legendary/skorid/assets/skorid.png" alt="Fjorad">
+            <span>Skorid</span>
+        </a>
+        <a href="legendary/drexthar/drexthar.html" class="site-bubble">
+            <img src="legendary/drexthar/assets/drexthar.png" alt="Fjorad">
+            <span>Drexthar</span>
+        </a>
+        <a href="legendary/candraphon/candraphon.html" class="site-bubble">
+            <img src="legendary/candraphon/assets/candraphon.png" alt="Fjorad">
+            <span>Candraphon</span>
+        </a>
+        <a href="legendary/sicia/sicia.html" class="site-bubble">
+            <img src="legendary/sicia/assets/sicia.png" alt="Fjorad">
+            <span>Sicia</span>
+        </a>
+        <a href="legendary/vasal/vasal.html" class="site-bubble">
+            <img src="legendary/vasal/assets/vasal.png" alt="Fjorad">
+            <span>Vasal</span>
+        </a>
+        <a href="legendary/wythir/wythir.html" class="site-bubble">
+            <img src="legendary/wythir/assets/wythir.png" alt="Fjorad">
+            <span>Wythir</span>
+        </a>
+        <a href="legendary/vulkanos/vulkanos.html" class="site-bubble">
+            <img src="legendary/vulkanos/assets/vulkanos.png" alt="Fjorad">
+            <span>Vulkanos</span>
+        </a>
+        <a href="legendary/praeva/praeva.html" class="site-bubble">
+            <img src="legendary/praeva/assets/praeva.png" alt="Fjorad">
+            <span>Praeva</span>
+        </a>
+        <a href="legendary/mortu/mortu.html" class="site-bubble">
+            <img src="legendary/mortu/assets/mortu.png" alt="Fjorad">
+            <span>Mortu Macaab</span>
+        </a>
+        <a href="legendary/lilitu/lilitu.html" class="site-bubble">
+            <img src="legendary/lilitu/assets/lilitu.png" alt="Fjorad">
+            <span>Duchesse Lilitu</span>
+        </a>
+    </div>
+</body>
+</html>

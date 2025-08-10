@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub</title>
+    <link rel="shortcut icon" href="../Images/Factions/knight-revenant.png">
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to a common stylesheet if needed -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px; /* Largeur de la scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #12141c;
+            /* border-radius: 10px; Coins arrondis */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(68, 96, 255, 0.8); /* Couleur de la barre */
+            border-radius: 10px; /* Coins arrondis */
+            border: 2px solid rgba(10, 10, 30, 0.6); /* Bordure pour un effet esthétique */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(68, 96, 255, 1); /* Couleur au survol */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1c1f2b, #12141c);
+            size: 0cap;
+            color: #12141c;
+            margin: 0;
+            padding: 2rem;
+            height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+        }
+        h1 {
+            text-align: center;
+            color: #acacac;
+        }
+        h2 {
+            text-align: center;
+            color: #bebebe;
+            margin-top: 1rem;
+        }
+        .site-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .site-bubble {
+            width: 175px;
+            height: 175px;
+            background: rgba(10, 10, 30, 0.6);
+            border-radius: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: background 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+        }
+        .site-bubble:hover {
+            background: rgba(68, 96, 255, 0.8);
+            transform: scale(1.1);
+        }
+        .site-bubble img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        .site-bubble span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .back-to-hub {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: rgba(10, 10, 30, 0.8);
+        color: #f0f0f0;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .back-to-hub:hover {
+        background: rgba(10, 10, 30, 1);
+        transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-to-hub">← Retour au Hub</a>
+    <h2><strong style="color:red">Mythiques</strong></h2>
+    <div class="site-container">
+        <a href="mythical/embrys/embrys.html" class="site-bubble">
+            <img src="mythical/embrys/assets/embrys.png" alt="Fjorad">
+            <span>Embrys</span>
+        </a>
+        <a href="mythical/krixia/krixia.html" class="site-bubble">
+            <img src="mythical/krixia/assets/krixia.png" alt="Fjorad">
+            <span>Krixia</span>
+        </a>
+    </div>
+    <h2><strong style="color:gold">Legendaires</strong></h2>
+    <div class="site-container">
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Jintoro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Dame Kimi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ninja</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Michinaki</span>
+        </a>
+        <a href="legendary/zinogre/zinogre.html" class="site-bubble">
+            <img src="legendary/zinogre/assets/zinogre.png" alt="Fjorad">
+            <span>Zinogre</span>
+        </a>
+        <a href="legendary/tetsuya/tetsuya.html" class="site-bubble">
+            <img src="legendary/tetsuya/assets/tetsuya.png" alt="Fjorad">
+            <span>Tetsuya</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Harima</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Yoshi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Nobel</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tatsu</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Genzin</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Kyoku</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Gamuran</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Karato</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Arashi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Riho</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Jingwon</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Yumeko</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+        <a href="legendary/shu-zhen/shu-zhen.html" class="site-bubble">
+            <img src="legendary/shu-zhen/assets/shu-zhen.png" alt="Fjorad">
+            <span>Shu-Zhen</span>
+        </a>
+        <a href="legendary/ieyasu/ieyasu.html" class="site-bubble">
+            <img src="legendary/ieyasu/assets/ieyasu.png" alt="Fjorad">
+            <span>Ieyasu</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Ginro</span>
+        </a>
+    </div>
+    <h2><strong style="color:purple">Epiques</strong></h2>
+    <div class="site-container">
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Toragi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Hotatsu</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Chani</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Nogoryo</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Umetogi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tomoe</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Sachi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fenshi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Burangiri</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Kunoichi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Wuji</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Suiren</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Chonoru</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Gore</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Jurojin</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Kinagashi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Masamoto</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Oboro</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Genbo</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tava</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tava</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tava</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Tava</span>
+        </a>
+    </div>
+    <h2><strong style="color:rgb(0, 110, 255)">Rares</strong></h2>
+    <div class="site-container">
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fauche-vie</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Assassin</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Taneko</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Masque de Sang</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Odachi</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Itinerant</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Maraudeur</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Vagabonde</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Fanatique</span>
+        </a>
+    </div>
+    <h2><strong style="color:greenyellow">Peu commun</strong></h2>
+    <div class="site-container">
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Infiltre</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Conscrit</span>
+        </a>
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Conscrit</span>
+        </a>
+    </div><h2><strong style="color:gray">Commun</strong></h2>
+    <div class="site-container">
+        <a href="legendary/fortus/fortus.html" class="site-bubble">
+            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
+            <span>Infiltre</span>
+        </a>
+    </div><br><br>
+</body>
+</html>

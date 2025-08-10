@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Champion Legendaire</title>
+  <base href="assets/"> <!-- Définit "assets/" comme chemin de base -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #1c1f2b, #12141c);
+      color: #f0f0f0;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      overflow: hidden; /* Empêche le défilement */
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      column-gap: 2rem; /* Espacement entre les panneaux */
+      padding: 2rem;
+      height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+      box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+    }
+    .left-panel {
+      flex: 1;
+      max-width: 25%; /* Réduit la largeur pour faire de la place au troisième panneau */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(10, 10, 30, 0.6);
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+    }
+    .champion-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    }
+    .type-badge {
+      margin-top: 1rem;
+      background-color: #28495f;
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .middle-panel {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centre tous les éléments horizontalement */
+      justify-content: flex-start; /* Aligne les éléments en haut */
+      background: rgba(10, 10, 30, 0.5);
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+    }
+    .right-panel {
+      flex: 1;
+      max-width: 30%; /* Largeur pour le panneau des statistiques */
+      background: rgba(10, 10, 30, 0.6);
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+    }
+    .spells {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+      column-gap: 10rem; /* Espacement horizontal */
+      row-gap: 3rem; /* Espacement vertical */
+      margin-top: 1rem;
+      justify-items: center;
+    }
+    .spell {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #d4af37;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    }
+    .spell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .passive-container {
+      display: grid; /* Utilise une grille pour un espacement uniforme */
+      grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour le passif et l'aura */
+      gap: 1rem; /* Espacement uniforme entre les éléments */
+      margin-top: 1rem; /* Espacement vertical avec les sorts */
+      justify-items: center; /* Centre les éléments horizontalement */
+    }
+    .passive {
+      position: relative;
+    }
+    .passive::before {
+      content: "";
+      position: absolute;
+      top: -2.5px;
+      left: -2.5px;
+      width: 85px;
+      height: 85px;
+      border: 3px solid #00f0ff;
+      border-radius: 50%;
+      animation: rotate 4s linear infinite;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .stats {
+      margin-top: 0;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1.2rem; /* Augmente la taille du texte */
+      line-height: 2.2; /* Améliore la lisibilité */
+      color: #ffd700; /* Texte doré pour ressortir */
+      transition: all 0.6s ease;
+    }
+    .stats h3 {
+      margin-top: 0;
+      font-size: 1.5rem; /* Augmente la taille du titre */
+      color: #ffd700;
+    }
+    .stat-block {
+      display: grid;
+      grid-template-columns: auto auto; /* Deux colonnes : nom et valeur */
+      gap: 0.5rem 2rem; /* Espacement entre les lignes et colonnes */
+      font-family: monospace; /* Police à largeur fixe pour alignement parfait */
+    }
+    .stat-name {
+      text-align: left;
+    }
+    .stat-value {
+      text-align: right;
+    }
+    .form-selector {
+      margin: 1rem auto;
+      text-align: center;
+    }
+    .form-selector button {
+      margin: 0 1rem;
+      padding: 1rem 2rem; /* Augmente la taille des boutons */
+      font-size: 1.2rem; /* Augmente la taille du texte */
+      border: none;
+      border-radius: 8px;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease; /* Ajoute une transition pour le fondu et l'animation */
+    }
+    .form-selector button:hover {
+      background: #666;
+      transform: scale(1.1); /* Agrandit légèrement le bouton au survol */
+    }
+    .form-selector button:active {
+      background: #007bff; /* Change la couleur au clic */
+      transform: scale(0.95); /* Réduit légèrement la taille pour un effet de clic */
+      transition: background 0.2s ease, transform 0.1s ease; /* Transition plus rapide pour le clic */
+    }
+    .aura {
+      width: 100px;
+      height: 100px;
+      border-radius: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .aura.hidden {
+      display: none;
+    }
+    #champion-container {
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    /* Bouton actif (forme sélectionnée) */
+    .form-selector button.active {
+      background: #007bff; /* Bleu */
+      color: #fff;
+      cursor: default; /* Curseur par défaut pour indiquer qu'il n'est pas cliquable */
+    }
+
+    /* Bouton désactivé */
+    .form-selector button:disabled {
+      background: #444; /* Couleur grisée */
+      color: #888;
+      cursor: not-allowed; /* Curseur interdit */
+    }
+    .gt {
+      color: lime; /* Texte en vert lime */
+    }
+    .gbt {
+      color: lime; /* Texte en vert lime */
+    }
+    .gbt::before {
+      content: "["; /* Ajoute un crochet ouvrant avant le texte */
+    }
+    .gbt::after {
+      content: "]"; /* Ajoute un crochet fermant après le texte */
+    }
+    .gold-t {
+      color: gold; /* Texte en doré */
+    }
+  </style>
+  <style>
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.95); /* Fond plus foncé et plus opaque */
+      color: #fff;
+      padding: 1.5rem; /* Augmente le padding pour agrandir la bulle */
+      border-radius: 12px; /* Arrondit davantage les coins */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Ombre plus marquée */
+      max-width: 600px; /* Augmente la largeur maximale */
+      z-index: 1000;
+      font-size: 1rem; /* Augmente la taille de la police */
+      line-height: 1.6; /* Augmente l'espacement entre les lignes */
+      display: none; /* Par défaut, la bulle est masquée */
+    }
+
+    .tooltip h4 {
+      margin: 0;
+      font-size: 1.5rem; /* Augmente la taille du titre */
+      color: #ffd700; /* Couleur dorée pour le titre */
+    }
+
+    .tooltip p {
+      margin: 0.8rem 0; /* Augmente l'espacement vertical entre les paragraphes */
+    }
+
+    .tooltip .level-info {
+      color: #aaa;
+      font-size: 0.9rem; /* Ajuste la taille de la police pour les infos de niveau */
+      margin-top: 1rem; /* Augmente l'espacement au-dessus des infos de niveau */
+      border-top: 1px solid #555;
+      padding-top: 0.8rem;
+      list-style-type: disc; /* Ajoute des puces */
+      padding-left: 1.5rem; /* Décale les puces */
+    }
+
+    .tooltip.hidden {
+      display: none;
+    }
+  </style>
+  <style>
+    .aura-img {
+      width: 80px; /* Réduit la largeur de l'image */
+      height: 80px; /* Réduit la hauteur de l'image */
+      object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur */
+      border-radius: 12px; /* Ajoute des coins arrondis */
+    }
+  </style>
+  <style>
+    .passive {
+      width: 80px; /* Assurez-vous que la largeur est identique */
+      height: 80px; /* Assurez-vous que la hauteur est identique */
+    }
+  </style>
+  <style>
+    .stat-block {
+      display: grid;
+      grid-template-columns: auto auto; /* Deux colonnes : une pour le nom, une pour la valeur */
+      gap: 0.5rem 2rem; /* Espacement entre les lignes et les colonnes */
+      font-family: monospace; /* Police à largeur fixe pour un alignement parfait */
+    }
+    .stat-name {
+      text-align: left; /* Aligne les noms à gauche */
+    }
+    .stat-value {
+      text-align: right; /* Aligne les valeurs à droite */
+    }
+  </style>
+  <style>
+    .spell:hover, 
+    .passive:hover, 
+    .aura:hover {
+      transform: scale(1.15); /* Agrandit l'élément à 120% de sa taille */
+      transition: transform 0.35s ease; /* Transition fluide */
+    }
+  </style>
+  <style>
+    /* Style pour le bouton de retour au Hub */
+    .back-to-hub {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(10, 10, 30, 0.8);
+      color: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .back-to-hub:hover {
+      background: rgba(10, 10, 30, 1);
+      transform: scale(1.1);
+    }
+  </style>
+  <style>
+  /* Style pour la bulle rouge "Mythique" */
+  .mythic-bubble {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: goldenrod;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  }
+
+  /* Conteneur pour l'image et les informations */
+  .left-panel-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /* Informations à gauche */
+  .info {
+    flex: 1;
+    text-align: left;
+    color: #ff0000; /* Texte en rouge */
+    font-weight: bold;
+  }
+
+  /* Image du personnage à droite */
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .champion-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  }
+</style>
+<style>
+  /* Conteneur principal pour aligner les éléments */
+  .left-panel-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Espacement entre les éléments */
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /* Informations à gauche */
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Boîte rouge "Mythique" */
+  .rarity-box {
+    background: rgb(255, 165, 0);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(197, 128, 0);
+  }
+
+  /* Type du champion */
+  .type-badge {
+    background-color: #28495f;
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem; /* Réduit la largeur */
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9rem; /* Réduit la taille du texte */
+    text-align: center;
+  }
+
+  /* Image du personnage au centre */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .champion-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  }
+
+  /* Image supplémentaire à droite */
+  .extra-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .extra-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 4rem;
+    align-items: left;
+  }
+</style>
+<style>
+  /* Style pour le cooldown */
+  .cooldown {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-left: auto; /* Aligne à droite */
+  }
+
+  .cooldown-icon {
+    width: 16px;
+    height: 16px;
+    background: url('cooldown-icon.png') no-repeat center center;
+    background-size: contain;
+  }
+</style>
+<style>
+  .spell-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espace entre le nom et le cooldown */
+  }
+
+  .spell-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700; /* Couleur dorée pour le nom */
+  }
+
+  .cooldown {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .cooldown-icon {
+    width: 16px;
+    height: 16px;
+    background: url('cooldown-icon.png') no-repeat center center;
+    background-size: contain;
+  }
+</style>
+<style>
+  .spell.passive {
+    border: 3px solid #00f0ff; /* Cercle bleu */
+    position: relative;
+  }
+
+  .spell.passive::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 86px; /* Taille légèrement plus grande que le sort */
+    height: 86px;
+    border: 3px solid rgba(0, 240, 255, 0.5); /* Lumière bleue translucide */
+    border-radius: 50%;
+    animation: rotate-light 4s linear infinite; /* Animation de rotation */
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.8); /* Effet lumineux */
+    pointer-events: none; /* Empêche l'élément d'intercepter les événements de la souris */
+  }
+
+  @keyframes rotate-light {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<style>
+  .spells .spell:only-child {
+    grid-column: span 2; /* Étend le sort sur deux colonnes pour le centrer */
+    justify-self: center; /* Centre horizontalement */
+  }
+</style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+  <!-- Bouton de retour au Hub -->
+  <a href="../../../hub.html" class="back-to-hub">← Retour au Hub</a>
+
+  <!-- Bouton pour accéder à un autre site -->
+
+
+  <div class="form-selector">
+    <br>
+    <!-- <button onclick="switchForm('form1')" class="active" disabled="">Forme 1</button>
+    <button onclick="switchForm('form2')" class="">Forme 2</button> -->
+  </div>
+  <div class="container" id="champion-container" style="opacity: 1; background-color: transparent;">
+    <div class="left-panel">
+      <!-- Conteneur pour le contenu de la section -->
+      <div class="left-panel-content">
+        <!-- Informations à gauche -->
+        <div class="info">
+          <div class="rarity-box">
+            <span>Legendaire</span>
+          </div>
+          <div class="type-badge" id="champion-type">Defense</div>
+        </div>
+        <div class="extra-image">
+          <img src="../../../../Images/Affinity/force.png" alt="Spirit" class="extra-img">
+        </div>
+      </div>
+      <!-- Image du personnage au centre -->
+      <div class="image-container">
+        <img src="tholin.png" alt="Champion" class="champion-img" id="champion-img">
+      </div>
+    </div>
+    <div class="middle-panel" id="right-panel">
+      <div class="spells" id="spells-section">
+        <!-- Les sorts seront générés dynamiquement ici -->
+      </div>
+      <div class="aura" id="aura-section">
+        <img src="" alt="Aura" class="aura-img" id="aura-img" onmouseover="showAuraTooltip(event)">
+      </div>
+    </div>
+    <div class="right-panel" id="stats-panel">
+      <div class="stats" id="stats-section">
+          <h3>Statistiques</h3>
+          <div class="stat-block">
+              <div class="stat-name">PV</div>
+              <div class="stat-value">22 635</div>
+            
+              <div class="stat-name">ATQ</div>
+              <div class="stat-value">1 068</div>
+            
+              <div class="stat-name">DEF</div>
+              <div class="stat-value">1 277</div>
+            
+              <div class="stat-name">VIT</div>
+              <div class="stat-value">100</div>
+            
+              <div class="stat-name">TAUX C.</div>
+              <div class="stat-value">15%</div>            
+              <div class="stat-name">DÉG C.</div>
+              <div class="stat-value">50%</div>
+            
+              <div class="stat-name">RÉS</</div>
+              <div class="stat-value">50</div>
+            
+              <div class="stat-name">PRÉ</div>
+              <div class="stat-value">20</div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="tooltip" class="tooltip hidden"></div>
+  <script>
+  const forms = {
+    form1: {
+      type: "Attaque",
+      spells: [
+        {
+          img: "sort1.png",
+          name: "Brise-demon",
+          description: `
+            Attaque tous les ennemis.
+            Avant d'attaquer, a 25% de chances
+            de placer un debuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
+            A 50% de chances de placer un debuff <span class='gbt'>Affaiblissement</span> de 25%
+            pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire.
+            Les ennemies membre de l'Alliance corrompue, les Boss ou sbires ne peuvent pas resister a cet effet.<br><br>
+            Accorde un Tour supplementaire si un debuff <span class='gbt'>Affaiblissement</span> a ete place sur tous les ennemis
+            par cette competence.
+
+          `,
+          damage: "2.5*ATQ",
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Dégâts +10%",
+            "Niv. 4 : Chance de Buff/Debuff +10%",
+            "Niv. 5 : Chance de Buff/Debuff +10%",
+          ],
+        },
+        {
+          img: "sort2.png",
+          name: "Retour dans l'abime",
+          description: `
+            Attaque 2 fois un ennemi.<br><br>
+            Chaque frappe ignorera 25% de la DEF de la cible.
+            Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire,
+            chaque frappe ignore au lieu de ca 50% de la DEF de la cible.<br><br>
+            Chaque frappe reduit l'ATQ de la cible de 5% (s'accumule jusqu'a 25%).
+            Chaque frappe augmente egalement l'ATQ de ce Champion de 5% (s'accumule jusqu'a 50%).
+          `,
+          damage: "2.4*ATQ",
+          cooldown: 4,
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Dégâts +10%",
+            "Niv. 4 : Temps de recharge -1"
+          ],
+        },
+        {
+          img: "sort3.png",
+          name: "Fureur enragee",
+          description: `
+            Attaque 2 fois tous les ennemis.
+            Avant d'attaquer, place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
+            sur ce Champion pendant 2 tours.<br><br>
+            Pour chaque coup critique porte par la premiere frappe, augmente les degats infliges par la seconde frappe de 10%.
+            Ignorera les buffs <span class='gbt'>Intuable</span> et <span class='gbt'>Bouclier</span>.
+          `,
+          damage: "2*ATQ",
+          cooldown: 4,
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Dégâts +10%",
+            "Niv. 4 : Temps de recharge -1"
+          ],
+        },
+        {
+          img: "passif1.png",
+          name: "Cauchemar du Mal [P]",
+          description: `
+            Active la competence <span class='gt'>Brise-demon</span> tous les cinq tours joues par ce Champion.<br><br>
+            Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas porter de coup critique sur ce Champion.
+          `,
+          isPassive: true,
+        },
+      ],
+      stats: {
+        PV: "14 865",
+        ATQ: "1 674",
+        DEF: "914",
+        VIT: "100",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        RÉS: "30",
+        PRÉ: "0",
+      },
+    },
+  };
+
+  const aura = {
+    img: "../../../../Images/Auras/attack.png",
+    description: `
+      Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%.
+    `,
+  };
+
+  function showTooltip(event, formKey, spellIndex) {
+    const spell = forms[formKey].spells[spellIndex];
+    const tooltip = document.getElementById("tooltip");
+
+    const levelInfoHTML = spell.levelInfo
+      ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+      : "";
+
+    const damageHTML = spell.damage
+      ? `<p><strong class=gold-t>Multiplicateur :</strong> <strong class="gt">${spell.damage}</strong></p>`
+      : "";
+
+    const cooldownHTML = spell.cooldown
+      ? `<div class="cooldown">
+           <div class="cooldown-icon"></div>
+           <strong style='color:cyan'>${spell.cooldown} tours</strong>
+         </div>`
+      : "";
+
+    tooltip.innerHTML = `
+      <div class="spell-header">
+        <span class="spell-name">${spell.name}</span>
+        ${cooldownHTML}
+      </div>
+      <p>${spell.description}</p>
+      ${damageHTML}
+      ${levelInfoHTML ? `<ul class="level-info">${levelInfoHTML}</ul>` : ""}
+    `;
+
+    const spellElement = event.currentTarget;
+    const rect = spellElement.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX}px`;
+    tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+
+    tooltip.style.display = "block";
+    tooltip.classList.remove("hidden");
+
+    spellElement.addEventListener("mouseleave", hideTooltip);
+  }
+
+  function hideTooltip() {
+    const tooltip = document.getElementById("tooltip");
+    tooltip.style.display = "none";
+    tooltip.classList.add("hidden");
+  }
+
+  let currentForm = "form1";
+
+  function switchForm(formKey) {
+    const form = forms[formKey];
+    currentForm = formKey;
+
+    const container = document.getElementById("champion-container");
+    container.style.opacity = 0;
+    container.style.backgroundColor = "#000";
+
+    setTimeout(() => {
+      document.getElementById("champion-type").textContent = form.type;
+
+      // Mettre à jour les sorts
+      const spellsHTML = form.spells
+        .map(
+          (spell, index) => `
+          <div class="spell ${spell.isPassive ? "passive" : ""}">
+            <img src="${spell.img}" alt="${spell.name}" 
+                 onmouseover="showTooltip(event, '${formKey}', ${index})">
+          </div>
+        `
+        )
+        .join("");
+      document.getElementById("spells-section").innerHTML = spellsHTML;
+
+      // Mettre à jour les statistiques
+      const statsHTML = Object.entries(form.stats)
+        .map(
+          ([key, value]) => `
+            <div class="stat-name">${key}</div>
+            <div class="stat-value">${value}</div>
+          `
+        )
+        .join("");
+      document.getElementById("stats-section").innerHTML = `
+        <h3>Statistiques</h3>
+        <div class="stat-block">${statsHTML}</div>
+      `;
+
+      // Mettre à jour l'aura
+      document.getElementById("aura-img").src = aura.img;
+
+      container.style.backgroundColor = "transparent";
+      container.style.opacity = 1;
+    }, 300);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    switchForm(currentForm);
+  });
+
+  function showAuraTooltip(event) {
+    const tooltip = document.getElementById("tooltip");
+
+    tooltip.innerHTML = `
+      <h4 class="gold-t">Aura</h4>
+      <p>${aura.description}</p>
+    `;
+
+    const auraElement = event.currentTarget;
+    const rect = auraElement.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX}px`;
+    tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+
+    tooltip.style.display = "block";
+    tooltip.classList.remove("hidden");
+
+    auraElement.addEventListener("mouseleave", hideTooltip);
+  }
+</script>
+</body>
+</html>

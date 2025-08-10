@@ -1,0 +1,240 @@
+/* Champion Légendaire - style.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #1c1f2b, #12141c);
+  color: #f0f0f0;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 2rem;
+  padding: 2rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.left-panel, .middle-panel, .right-panel {
+  background: rgba(10, 10, 30, 0.6);
+  border-radius: 16px;
+  padding: 1rem;
+  height: 60%;
+  transition: all 0.6s ease;
+}
+
+.left-panel {
+  flex: 1;
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middle-panel {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(10, 10, 30, 0.5);
+}
+
+.right-panel {
+  flex: 1;
+  max-width: 30%;
+}
+
+.champion-img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.type-badge {
+  margin-top: 1rem;
+  background-color: #28495f;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.spells {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+  row-gap: 3rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+
+.spell {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #d4af37;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.spell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.spell:hover,
+.passive:hover,
+.aura:hover {
+  transform: scale(1.15);
+  transition: transform 0.35s ease;
+}
+
+.spell.passive {
+  border: 3px solid #00f0ff;
+  position: relative;
+}
+
+.spell.passive::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 86px;
+  height: 86px;
+  border: 3px solid rgba(0, 240, 255, 0.5);
+  border-radius: 50%;
+  animation: rotate-light 4s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  pointer-events: none;
+}
+
+@keyframes rotate-light {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.passive {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.aura-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.stats {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 2.2;
+  color: #ffd700;
+}
+
+.stats h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.stat-block {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem 2rem;
+  font-family: monospace;
+}
+
+.stat-name {
+  text-align: left;
+}
+
+.stat-value {
+  text-align: right;
+}
+
+.back-to-hub {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(10, 10, 30, 0.8);
+  color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-hub:hover {
+  background: rgba(10, 10, 30, 1);
+  transform: scale(1.1);
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  z-index: 1000;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: none;
+}
+
+.tooltip h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+.tooltip p {
+  margin: 0.8rem 0;
+}
+
+.tooltip .level-info {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  border-top: 1px solid #555;
+  padding-top: 0.8rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.tooltip.hidden {
+  display: none;
+}
+
+.gold-t {
+  color: gold;
+}
+
+.gt, .gbt {
+  color: lime;
+}
+
+.gbt::before { content: "["; }
+.gbt::after { content: "]"; }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub</title>
+    <link rel="shortcut icon" href="https://www.coupcritique.fr/images/types/icon/normal.png">
+    <base href="sites/">
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to a common stylesheet if needed -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px; /* Largeur de la scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #12141c;
+            /* border-radius: 10px; Coins arrondis */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(68, 96, 255, 0.8); /* Couleur de la barre */
+            border-radius: 10px; /* Coins arrondis */
+            border: 2px solid rgba(10, 10, 30, 0.6); /* Bordure pour un effet esthétique */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(68, 96, 255, 1); /* Couleur au survol */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1c1f2b, #12141c);
+            size: 0cap;
+            color: #12141c;
+            margin: 0;
+            padding: 2rem;
+            height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            color: #acacac;
+        }
+        h2 {
+            text-align: center;
+            color: #bebebe;
+            margin-top: 1rem;
+        }
+        .site-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .site-bubble {
+            width: 175px;
+            height: 175px;
+            background: rgba(10, 10, 30, 0.6);
+            border-radius: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: background 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+        }
+        .site-bubble:hover {
+            background: rgba(68, 96, 255, 0.8);
+            transform: scale(1.1);
+        }
+        .site-bubble img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        .site-bubble span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur FR RSL !</h1>
+    <h2><strong style="color:blue">Factions</strong></h2>
+    <div class="site-container">
+        <a href="faction01/hub.html" class="site-bubble">
+            <img src="Images/Factions/bannerlords.png" alt="Fjorad">
+            <span>Seigneurs</span>
+        </a>
+        <a href="faction02/hub.html" class="site-bubble">
+            <img src="Images/Factions/high-elves.png" alt="Fjorad">
+            <span>Haut Elfes</span>
+        </a>
+        <a href="faction03/hub.html" class="site-bubble">
+            <img src="Images/Factions/sacred-order.png" alt="Fjorad">
+            <span>L'Ordre Sacre</span>
+        </a>
+        <a href="faction04/hub.html" class="site-bubble">
+            <img src="Images/Factions/barbarians.png" alt="Fjorad">
+            <span>Barbares</span>
+        </a>
+        <a href="faction05/hub.html" class="site-bubble">
+            <img src="Images/Factions/ogryn-tribes.png" alt="Fjorad">
+            <span>Tribus Ogryn</span>
+        </a>
+    </div>
+    <div class="site-container">
+        <a href="faction06/hub.html" class="site-bubble">
+            <img src="Images/Factions/lizardmen.png" alt="Fjorad">
+            <span>Homme Lezards</span>
+        </a>
+        <a href="faction07/hub.html" class="site-bubble">
+            <img src="Images/Factions/skinwalkers.png" alt="Fjorad">
+            <span>Marcheurs de Peau</span>
+        </a>
+        <a href="faction08/hub.html" class="site-bubble">
+            <img src="Images/Factions/orcs.png" alt="Fjorad">
+            <span>Orcs</span>
+        </a>
+        <a href="faction09/hub.html" class="site-bubble">
+            <img src="Images/Factions/demonspawn.png" alt="Fjorad">
+            <span>Rejetons Demo.</span>
+        </a>
+        <a href="faction10/hub.html" class="site-bubble">
+            <img src="Images/Factions/undead-hordes.png" alt="Fjorad">
+            <span>Morts-vivants</span>
+        </a>
+    </div>
+    <div class="site-container">
+        <a href="faction11/hub.html" class="site-bubble">
+            <img src="Images/Factions/dark-elves.png" alt="Fjorad">
+            <span>Elfes Noirs</span>
+        </a>
+        <a href="faction12/hub.html" class="site-bubble">
+            <img src="Images/Factions/knight-revenant.png" alt="Fjorad">
+            <span>Revenants Chevaliers</span>
+        </a>
+        <a href="faction13/hub.html" class="site-bubble">
+            <img src="Images/Factions/dwarves.png" alt="Fjorad">
+            <span>Nains</span>
+        </a>
+        <a href="faction14/hub.html" class="site-bubble">
+            <img src="Images/Factions/shadowkin.png" alt="Fjorad">
+            <span>Clan de l'Ombre</span>
+        </a>
+        <a href="faction15/hub.html" class="site-bubble">
+            <img src="Images/Factions/sylvan-watchers.png" alt="Fjorad">
+            <span>Gardes Sylvains</span>
+        </a>
+    </div>
+</body>
+</html>

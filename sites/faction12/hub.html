@@ -3,398 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub</title>
+    <title>Revenants Chevaliers - Hub</title>
     <link rel="shortcut icon" href="../Images/Factions/knight-revenant.png">
-    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to a common stylesheet if needed -->
+    <link rel="stylesheet" href="../../assets/styles.css">
     <style>
-        ::-webkit-scrollbar {
-            width: 12px; /* Largeur de la scrollbar */
+        :root {
+            --primary: #4460ff;
+            --secondary: #23263a;
+            --background: #181a24;
+            --bubble-bg: #23263a;
+            --bubble-hover: #4460ff;
+            --text-light: #f0f0f0;
+            --text-muted: #acacac;
+            --mythic: #e53935;
+            --legendary: #ffb700;
+            --epic: #a259e6;
+            --rare: #3498db;
         }
-
-        ::-webkit-scrollbar-track {
-            background: #12141c;
-            /* border-radius: 10px; Coins arrondis */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(68, 96, 255, 0.8); /* Couleur de la barre */
-            border-radius: 10px; /* Coins arrondis */
-            border: 2px solid rgba(10, 10, 30, 0.6); /* Bordure pour un effet esthétique */
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(68, 96, 255, 1); /* Couleur au survol */
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #1c1f2b, #12141c);
-            size: 0cap;
-            color: #12141c;
+            background: linear-gradient(135deg, var(--background), var(--secondary));
+            color: var(--text-light);
             margin: 0;
-            padding: 2rem;
-            height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+            padding: 0;
+            min-height: 100vh;
+            overflow-y: auto;
         }
-        h1 {
-            text-align: center;
-            color: #acacac;
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(24,26,36,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px #0004;
+            z-index: 10;
         }
-        h2 {
-            text-align: center;
-            color: #bebebe;
-            margin-top: 1rem;
+        header img {
+            height: 40px;
+            margin-right: 1rem;
+        }
+        header h1 {
+            color: var(--text-light);
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .search-bar {
+            flex: 1;
+            margin-left: 2rem;
+            max-width: 350px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: none;
+            background: #23263a;
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow 0.2s;
+        }
+        .search-bar input:focus {
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .back-to-hub {
+            background: var(--bubble-bg);
+            color: var(--text-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .back-to-hub:hover {
+            background: var(--bubble-hover);
+            transform: scale(1.07);
+        }
+        .category-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+            background: none;
+        }
+        .rarity-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.3em 1.2em;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px #0003;
+            margin-bottom: 0.2em;
+            vertical-align: middle;
+            transition: background 0.2s;
+            min-width: 120px;
+            min-height: 36px;
+            gap: 0.5em;
+        }
+        .mythic-label { background: var(--mythic); color: #fff; }
+        .legendary-label { background: var(--legendary); color: #23263a; }
+        .epic-label { background: var(--epic); color: #fff; }
+        .rare-label { background: var(--rare); color: #fff; }
+        .toggle-arrow {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        .collapsed .rarity-label .toggle-arrow {
+            transform: rotate(-90deg);
         }
         .site-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.2rem;
+            margin: 1rem auto 2rem auto;
+            max-width: 1280px; /* élargi pour 8 bulles */
+            transition: max-height 0.3s, opacity 0.3s;
+        }
+        .collapsed + .site-container {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            margin: 0;
         }
         .site-bubble {
-            width: 175px;
-            height: 175px;
-            background: rgba(10, 10, 30, 0.6);
-            border-radius: 20%;
+            width: 120px; /* réduit pour en mettre 8 */
+            height: 140px;
+            background: var(--bubble-bg);
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: center;
             text-decoration: none;
-            color: #f0f0f0;
-            transition: background 0.3s ease, transform 0.3s ease;
+            color: var(--text-light);
+            box-shadow: 0 4px 16px #0006;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
             overflow: hidden;
+            padding: 0.7em 0.5em 0.5em 0.5em;
         }
-        .site-bubble:hover {
-            background: rgba(68, 96, 255, 0.8);
-            transform: scale(1.1);
+        /* Survol selon la rareté */
+        .site-bubble[data-rarity="mythic"]:hover, .site-bubble[data-rarity="mythic"]:focus {
+            background: var(--mythic);
+            box-shadow: 0 8px 24px #e5393555;
+            color: #fff;
+        }
+        .site-bubble[data-rarity="legendary"]:hover, .site-bubble[data-rarity="legendary"]:focus {
+            background: var(--legendary);
+            box-shadow: 0 8px 24px #ffd70055;
+            color: #23263a;
+        }
+        .site-bubble[data-rarity="epic"]:hover, .site-bubble[data-rarity="epic"]:focus {
+            background: var(--epic);
+            box-shadow: 0 8px 24px #a259e655;
+            color: #fff;
+        }
+        .site-bubble[data-rarity="rare"]:hover, .site-bubble[data-rarity="rare"]:focus {
+            background: var(--rare);
+            box-shadow: 0 8px 24px #3498db55;
+            color: #fff;
+        }
+        .champion-img-box {
+            width: 110px;
+            height: 110px;
+            background: #fff1;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.7em;
+            box-shadow: 0 2px 8px #0003;
         }
         .site-bubble img {
-            width: 100px;
-            height: 100px;
-            border-radius: 20%;
-            margin-bottom: 1rem;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            border-radius: 20px;
+            display: block;
         }
         .site-bubble span {
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: inherit;
+            text-shadow: 0 1px 4px #0008;
+            margin-top: auto;
         }
-        .back-to-hub {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        background: rgba(10, 10, 30, 0.8);
-        color: #f0f0f0;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-decoration: none;
-        transition: background 0.3s ease, transform 0.2s ease;
+        /* Responsive : 8 bulles sur desktop, moins sur mobile */
+        @media (max-width: 1100px) {
+            .site-bubble { width: 100px; height: 100px; }
+            .champion-img-box { width: 60px; height: 60px; }
         }
-        .back-to-hub:hover {
-        background: rgba(10, 10, 30, 1);
-        transform: scale(1.1);
+        @media (max-width: 900px) {
+            .site-container { gap: 0.7rem; }
+            .site-bubble { width: 80px; height: 80px; }
+            .champion-img-box { width: 45px; height: 45px; }
         }
+        @media (max-width: 600px) {
+            .site-container { gap: 0.5rem; }
+            .site-bubble { width: 60px; height: 60px; }
+            .champion-img-box { width: 32px; height: 32px; }
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3350cc; }
     </style>
 </head>
 <body>
-    <a href="../../index.html" class="back-to-hub">← Retour au Hub</a>
-    <h2><strong style="color:red">Mythiques</strong></h2>
-    <div class="site-container">
-        <a href="mythical/embrys/embrys.html" class="site-bubble">
-            <img src="mythical/embrys/assets/embrys.png" alt="Fjorad">
+    <header>
+        <div style="display:flex;align-items:center;">
+            <a href="../../index.html" class="back-to-hub">← Hub</a>
+            <img src="../Images/Factions/knight-revenant.png" alt="Logo Gardes Sylvains">
+            <h1>Revenants Chevaliers</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher un champion...">
+        </div>
+    </header>
+    <div class="category-header" onclick="toggleCategory(this)">
+        <span class="rarity-label mythic-label">
+            Mythiques
+            <span class="toggle-arrow">▼</span>
+        </span>
+    </div>
+    <div class="site-container" id="mythicContainer">
+        <a href="mythical/embrys/embrys.html" class="site-bubble" data-name="embrys" data-rarity="mythic">
+            <div class="champion-img-box">
+                <img src="mythical/embrys/assets/embrys.png" alt="embrys">
+            </div>
             <span>Embrys</span>
         </a>
-        <a href="mythical/krixia/krixia.html" class="site-bubble">
-            <img src="mythical/krixia/assets/krixia.png" alt="Fjorad">
+        <a href="mythical/krixia/krixia.html" class="site-bubble" data-name="krixia" data-rarity="mythic">
+            <div class="champion-img-box">
+                <img src="mythical/krixia/assets/krixia.png" alt="krixia">
+            </div>
             <span>Krixia</span>
         </a>
     </div>
-    <h2><strong style="color:gold">Legendaires</strong></h2>
-    <div class="site-container">
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Jintoro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Dame Kimi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ninja</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Michinaki</span>
-        </a>
-        <a href="legendary/zinogre/zinogre.html" class="site-bubble">
-            <img src="legendary/zinogre/assets/zinogre.png" alt="Fjorad">
-            <span>Zinogre</span>
-        </a>
-        <a href="legendary/tetsuya/tetsuya.html" class="site-bubble">
-            <img src="legendary/tetsuya/assets/tetsuya.png" alt="Fjorad">
-            <span>Tetsuya</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Harima</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Yoshi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Nobel</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tatsu</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Genzin</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Kyoku</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Gamuran</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Karato</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Arashi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Riho</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Jingwon</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Yumeko</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
-        </a>
-        <a href="legendary/shu-zhen/shu-zhen.html" class="site-bubble">
-            <img src="legendary/shu-zhen/assets/shu-zhen.png" alt="Fjorad">
-            <span>Shu-Zhen</span>
-        </a>
-        <a href="legendary/ieyasu/ieyasu.html" class="site-bubble">
-            <img src="legendary/ieyasu/assets/ieyasu.png" alt="Fjorad">
-            <span>Ieyasu</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Ginro</span>
+    <div class="category-header" onclick="toggleCategory(this)">
+        <span class="rarity-label legendary-label">
+            Légendaires
+            <span class="toggle-arrow">▼</span>
+        </span>
+    </div>
+    <div class="site-container" id="legendaryContainer">
+        <a href="legendary/fortus/fortus.html" class="site-bubble" data-name="fortus" data-rarity="legendary">
+            <div class="champion-img-box">
+                <img src="legendary/fortus/assets/fortus.png" alt="fortus">
+            </div>
+            <span>Fortus</span>
         </a>
     </div>
-    <h2><strong style="color:purple">Epiques</strong></h2>
-    <div class="site-container">
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Toragi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Hotatsu</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Chani</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Nogoryo</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Umetogi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tomoe</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Sachi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fenshi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Burangiri</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Kunoichi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Wuji</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Suiren</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Chonoru</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Gore</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Jurojin</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Kinagashi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Masamoto</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Oboro</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Genbo</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tava</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tava</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tava</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Tava</span>
-        </a>
-    </div>
-    <h2><strong style="color:rgb(0, 110, 255)">Rares</strong></h2>
-    <div class="site-container">
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fauche-vie</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Assassin</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Taneko</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Masque de Sang</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Odachi</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Itinerant</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Maraudeur</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Vagabonde</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Fanatique</span>
-        </a>
-    </div>
-    <h2><strong style="color:greenyellow">Peu commun</strong></h2>
-    <div class="site-container">
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Infiltre</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Conscrit</span>
-        </a>
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Conscrit</span>
-        </a>
-    </div><h2><strong style="color:gray">Commun</strong></h2>
-    <div class="site-container">
-        <a href="legendary/fortus/fortus.html" class="site-bubble">
-            <img src="legendary/fortus/assets/fortus.png" alt="Fjorad">
-            <span>Infiltre</span>
-        </a>
-    </div><br><br>
+    <script>
+        // Filtre de recherche
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.site-bubble').forEach(bubble => {
+                const name = bubble.getAttribute('data-name').toLowerCase();
+                bubble.style.display = name.includes(query) ? '' : 'none';
+            });
+        });
+
+        // Système d'ouverture/fermeture des catégories
+        function toggleCategory(header) {
+            header.classList.toggle('collapsed');
+            const container = header.nextElementSibling;
+            if (container.classList.contains('site-container')) {
+                if (header.classList.contains('collapsed')) {
+                    container.style.maxHeight = '0';
+                    container.style.opacity = '0';
+                    container.style.pointerEvents = 'none';
+                    container.style.margin = '0';
+                } else {
+                    container.style.maxHeight = '';
+                    container.style.opacity = '';
+                    container.style.pointerEvents = '';
+                    container.style.margin = '';
+                }
+            }
+        }
+    </script>
 </body>
 </html>

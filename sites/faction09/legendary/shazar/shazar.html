@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Candraphon</title>
+  <title>Lord Shazar</title>
   <link rel="shortcut icon" href="../../../../Images/Factions/demonspawn.png">
   <base href="assets/">
   <style>
@@ -367,11 +367,11 @@
           <div class="type-badge" id="champion-type">Defense</div>
         </div>
         <div class="extra-image">
-          <img src="../../../../Images/Affinity/force.png" alt="Spirit" class="extra-img">
+          <img src="../../../../Images/Affinity/spirit.png" alt="Spirit" class="extra-img">
         </div>
       </div>
       <div class="image-container">
-        <img src="candraphon.png" alt="Champion" class="champion-img" id="champion-img">
+        <img src="shazar.png" alt="Champion" class="champion-img" id="champion-img">
       </div>
     </div>
     <div class="middle-panel" id="right-panel">
@@ -396,78 +396,66 @@
       spells: [
         {
 			img: "sort1.png",
-			name: "Punis l'Orgueil",
+			name: "Damnation",
 			description: `
-				Attaque 1 ennemi.<br><br>
-				Place une frappe supplementaire si la cible possede n'importe quel buff.
+				Attaque 3 fois 1 ennemi.
+				Les degats augmentent de 15% pour chaque debuff dont est affligee la cible.
 			`,
-			damage: "3*ATQ",
+			damage: "1.3*ATQ",
 			levelInfo: [
 				"Niv. 2 : Dégâts +5%",
 				"Niv. 3 : Dégâts +5%",
-				"Niv. 4 : Dégâts +10%",
+				"Niv. 4 : Dégâts +5%",
 				"Niv. 5 : Dégâts +10%",
 			],
         },
         {
 			img: "sort2.png",
-			name: "Allegresse du Boucher",
+			name: "Fureur Eternelle",
 			description: `
-				Attaque tous les ennemis.<br><br>
-				Accorde un Tour Supplementaire et reinitialise le temps de recharge de la Competence <span class='gt'>En Chasse</span> si cette attaque tue un ennemi.
+				Place un buff d'<span class='gbt'>Augmentation d'ATQ</span> de 50% sur ce Champion pendant 2 tours.
+				Il est impossible de retirer ce buff. Place un buff <span class='gbt'>Blocage des Debuffs</span> sur ce Champion
+				pendant 2 tours. Octroie un Tour Supplementaire.
 			`,
-			damage: "3.7*ATQ",
-			cooldown: 4,
 			levelInfo: [
-				"Niv. 2 : Dégâts +5%",
-				"Niv. 3 : Dégâts +5%",
-				"Niv. 4 : Dégâts +5%",
-				"Niv. 5 : Dégâts +5%",
-				"Niv. 6 : Temps de recharge -1",
+				"Niv. 2 : Temps de recharge -1",
 			],
+			cooldown: 4,
         },
         {
 			img: "sort3.png",
-			name: "En Chasse",
+			name: "Destin Cruel",
 			description: `
-				Place un buff <span class='gbt'>Voile Parfait</span>, un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%,
-				un buff <span class='gbt'>Augmentation de VIT</span> de 30% et un buff <span class='gbt'>Augmentation des DEG C.</span> de 30%
-				sur ce Champion pendant 2 tours.
+				Attaque tous les ennemis. Possede 75% de chances de placer deux debuffs de <span class='gbt'>Bombes</span>
+				qui detonent apres 2 tours. Reduit d'1 tour le compte a rebours de la detonation si cette attaque passe en critique.
 			`,
-			cooldown: 5,
-        },
-        {
-        	img: "passif1.png",
-        	name: "Depuis les Ombres [P]",
-        	description: `
-				<span class='gbt'>Effet Passif</span><br><br>
-				Les degats augmentent de 40% lorsque ce Champion attaque alors qu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>.<br>
-				Recoit 40% de degats en moins lorsqu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>. Augmente egalement le Compteur de Tour
-				de ce Champion de 15% chaque fois qu'il recoit des degats alors qu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>.<br>
-				Ne fonctionne pas si ce Champion est le seul allie vivant de l'equipe.<br><br>
-				<span class='gbt'>Effet Actif</span><br><br>
-				Place un buff <span class='gbt'>Voile Parfait</span> d'1 tour sur ce Champion chaque fois que le Compteur de Tour d'un ennemi est rempli.
-				Il est impossible de retirer ce buff.
-        	`,
-          	isPassive: true,
+			damage: "3.2*ATQ | 4.2*ATQ (Bombe)",
+			levelInfo: [
+				"Niv. 2 : Dégâts +10%",
+				"Niv. 3 : Chance de Buff/Debuff +10%",
+				"Niv. 4 : Chance de Buff/Debuff +15%",
+				"Niv. 5 : Dégâts +15%",
+				"Niv. 6 : Temps de recharge -1",
+			],
+			cooldown: 6,
         },
       ],
       stats: {
-        PV: "17 505",
-        ATQ: "1 509",
-        DEF: "903",
-        VIT: "96",
+        PV: "15 590",
+        ATQ: "1 343",
+        DEF: "1 189",
+        VIT: "101",
         "TAUX C.": "15%",
         "DÉG C.": "63%",
         RÉS: "30",
-        PRÉ: "10",
+        PRÉ: "0",
       },
   };
 
   const aura = {
-    img: "../../../../Images/Auras/attack.png",
-    description: `
-      Augmente la statistique ATQ des Alliés dans les batailles d'Arene de 33%.
+      img: "../../../../Images/Auras/speed.png",
+      description: `
+        Augmente la statistique VIT des Alliés dans les batailles d'Arene de 32%.
     `,
   };
 

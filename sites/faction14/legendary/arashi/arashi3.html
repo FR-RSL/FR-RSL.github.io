@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arashi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #23263a, #181a24);
+      color: #f0f0f0;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    .back-to-hub {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(23, 25, 37, 0.95);
+      border: 1px solid #4460ff;
+      color: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 1001;
+      backdrop-filter: blur(10px);
+    }
+
+    .back-to-hub:hover {
+      background: #4460ff;
+      transform: scale(1.05);
+    }
+
+    .container {
+      display: grid;
+      gap: 1.5rem;
+      padding: 4rem 1rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: calc(100vh - 6rem);
+    }
+
+    /* Layout Desktop */
+    @media (min-width: 1024px) {
+      .container {
+        grid-template-columns: 1fr 1.8fr 1.2fr;
+        grid-template-areas: "left middle right";
+        padding: 4rem 2rem 2rem;
+        gap: 2rem;
+      }
+    }
+
+    /* Layout Tablet */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container {
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: 
+          "left right"
+          "middle middle";
+        gap: 1.5rem;
+        padding: 4rem 1.5rem 2rem;
+      }
+    }
+
+    /* Layout Mobile */
+    @media (max-width: 767px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+          "left"
+          "middle" 
+          "right";
+        gap: 1rem;
+        padding: 4rem 1rem 2rem;
+      }
+    }
+
+    .panel {
+      background: rgba(23, 25, 37, 0.85);
+      border: 2px solid #303c7c;
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .panel:hover {
+      border-color: #4460ff;
+      box-shadow: 0 12px 48px rgba(68, 96, 255, 0.2);
+    }
+
+    .left-panel {
+      grid-area: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .champion-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .champion-info {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .champion-info {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+    }
+
+    .info-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rarity-box {
+      background: linear-gradient(45deg, rgb(255, 183, 0), rgb(255, 215, 0));
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 183, 0, 0.4);
+      min-width: 80px;
+    }
+
+    .type-badge {
+      background: linear-gradient(45deg, #111, #333);
+      border: 1px solid #4460ff;
+      border-radius: 8px;
+      padding: 0.4rem 0.8rem;
+      font-weight: bold;
+      color: #fff;
+      font-size: 0.8rem;
+      min-width: 70px;
+    }
+
+    .affinity-img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #4460ff;
+      padding: 4px;
+    }
+
+    .champion-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .champion-img {
+      max-width: 180px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(68, 96, 255, 0.4);
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 767px) {
+      .champion-img {
+        max-width: 150px;
+      }
+    }
+
+    .champion-img:hover {
+      transform: scale(1.05);
+    }
+
+    .middle-panel {
+      grid-area: middle;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spells-container {
+      display: grid;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      justify-items: center;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .spells-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .spells-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    .spell {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ffd700;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .spell {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .spell:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+
+    .spell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .spell.passive {
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+    }
+
+    .spell.passive::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border: 2px solid rgba(0, 255, 255, 0.3);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .spell.passive::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      top: -5px;
+      left: 50%;
+      transform-origin: center 42px;
+      animation: rotate-dot 4s linear infinite;
+    }
+
+    @media (min-width: 768px) {
+      .spell.passive::after {
+        transform-origin: center 48px;
+      }
+    }
+
+    @keyframes rotate-dot {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .aura-container {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .aura {
+      width: 90px;
+      height: 90px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .aura {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    .aura:hover {
+      transform: scale(1.05);
+    }
+
+    .aura-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .aura-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .right-panel {
+      grid-area: right;
+    }
+
+    .stats {
+      background-color: rgba(24, 26, 36, 0.6);
+      color: #e6b800;
+      border-radius: 12px;
+      padding: 1.5rem;
+      font-size: 1rem;
+      backdrop-filter: blur(5px);
+    }
+
+    .stats h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.3rem;
+      color: #e6b800;
+      text-align: center;
+      border-bottom: 2px solid #e6b800;
+      padding-bottom: 0.5rem;
+    }
+
+    .stat-block {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 767px) {
+      .stat-block {
+        font-size: 0.9rem;
+        gap: 0.4rem 0.8rem;
+      }
+    }
+
+    .stat-name {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .stat-value {
+      text-align: right;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .tooltip {
+      position: fixed;
+      background: rgba(24, 26, 36, 0.98);
+      border: 2px solid #4460ff;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+      max-width: 350px;
+      z-index: 1000;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      display: none;
+      backdrop-filter: blur(15px);
+    }
+
+    @media (min-width: 768px) {
+      .tooltip {
+        max-width: 450px;
+        font-size: 1rem;
+        padding: 1.5rem;
+      }
+    }
+
+    .tooltip.show {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tooltip h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+      color: #e6b800;
+    }
+
+    @media (min-width: 768px) {
+      .tooltip h4 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .spell-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .spell-name {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #e6b800;
+    }
+
+    @media (min-width: 768px) {
+      .spell-name {
+        font-size: 1.2rem;
+      }
+    }
+
+    .cooldown {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      color: #00ffff;
+      font-weight: bold;
+    }
+
+    .tooltip .level-info {
+      color: #aaa;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      border-top: 1px solid #555;
+      padding-top: 0.8rem;
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .tooltip .level-info {
+        font-size: 0.9rem;
+      }
+    }
+
+    .gbt {
+      color: lime;
+      font-weight: bold;
+    }
+    .gbt::before { content: "["; }
+    .gbt::after { content: "]"; }
+    
+    .gold-t { 
+      color: gold; 
+      font-weight: bold;
+    }
+
+    /* Animations d'entrée */
+    .panel {
+      animation: slideIn 0.6s ease-out;
+    }
+
+    .left-panel {
+      animation-delay: 0.1s;
+    }
+
+    .middle-panel {
+      animation-delay: 0.2s;
+    }
+
+    .right-panel {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Amélioration des interactions tactiles */
+    @media (max-width: 767px) {
+      .spell, .aura, .back-to-hub {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      
+      .back-to-hub {
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../../../hub.html" class="back-to-hub">← Retour au Hub</a>
+  
+  <div class="container">
+    <div class="left-panel panel">
+      <div class="champion-info">
+        <div class="info-group">
+          <div class="rarity-box">Légendaire</div>
+          <div class="type-badge" id="champion-type">Défense</div>
+        </div>
+        <div class="info-group">
+          <img src="../../../Images/Affinity/spirit.png" alt="Spirit" class="affinity-img">
+        </div>
+      </div>
+      <div class="champion-image-container">
+        <img src="assets/arashi.png" alt="Arashi" class="champion-img">
+      </div>
+    </div>
+
+    <div class="middle-panel panel">
+      <div class="spells-container" id="spells-section"></div>
+      <div class="aura-container">
+        <div class="aura">
+          <img src="" alt="Aura" class="aura-img" id="aura-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel panel">
+      <div class="stats">
+        <h3>Statistiques</h3>
+        <div class="stat-block" id="stats-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script>
+    const championData = {
+      type: "PV",
+      spells: [
+        {
+          img: "assets/sort1.png",
+          name: "Lames dissimulées",
+          description: `
+            Attaque 2 fois un ennemi.<br><br>
+            Chaque frappe a 75% de chances de voler un buff aléatoire.
+            Il est impossible de résister à cet effet si ce Champion se trouve
+            sous un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>.
+          `,
+          damage: "0.14*PV",
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Chance de Buff/Debuff +10%",
+            "Niv. 4 : Dégâts +10%",
+            "Niv. 5 : Chance de Buff/Debuff +15%",
+          ],
+        },
+        {
+          img: "assets/sort2.png",
+          name: "Assassin nautique",
+          description: `
+            Attaque un ennemi.<br><br>
+            Ignorera 25% de la DEF de la cible, ainsi que les buffs
+            <span class='gbt'>Bouclier</span> et <span class='gbt'>Renforcer</span>.
+            Ignorera également les buffs <span class='gbt'>Peau de Pierre</span> si
+            ce Champion se trouve sous un buff 
+            <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>.
+          `,
+          damage: "0.34*PV",
+          cooldown: 5,
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Temps de recharge -1",
+            "Niv. 4 : Dégâts +10%",
+            "Niv. 5 : Temps de recharge -1",
+          ],
+        },
+        {
+          img: "assets/sort3.png",
+          name: "Assaut du Ressac",
+          description: `
+            Attaque tous les ennemis.
+            Avant d'attaquer, place un buff <span class='gbt'>Voile parfait</span>
+            et un buff <span class='gbt'>Augmentation des DÉG C.</span> de 30%
+            sur ce Champion pendant 2 tours.<br><br>
+            Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique
+            plutôt que des dégâts de zone. Ignorera 15% de la DÉF du premier ennemi.
+            Après avoir frappé le premier ennemi, frappera chacun des autres ennemis.
+            Après la première frappe, chaque frappe successive ignore 5% supplémentaires de la DÉF
+            de la cible (s'accumule jusqu'à 35%).<br><br>
+            Pour chaque ennemi tué par cette attaque, augmente les PV de ce Champion de 5%
+            (s'accumule jusqu'à 30%).
+          `,
+          damage: "0.32*PV",
+          cooldown: 6,
+          levelInfo: [
+            "Niv. 2 : Dégâts +10%",
+            "Niv. 3 : Temps de recharge -1",
+            "Niv. 4 : Dégâts +10%",
+            "Niv. 5 : Temps de recharge -1",
+          ],
+        },
+        {
+          img: "assets/passif1.png",
+          name: "Seigneur pirate [P]",
+          description: `
+            <span class='gbt'>Effet Passif</span><br><br>
+            Au début de chaque Round, place un buff <span class='gbt'>Voile parfait</span>
+            sur ce Champion pendant 1 tour.<br><br>
+            Possède 20% de chances de renvoyer sur l'assaillant tous les dégâts et débuffs que
+            reçoit ce Champion. Ne fonctionnera que sur les compétences qui infligent des dégâts
+            ou qui infligent des dégâts et placent des débuffs.
+            Ne fonctionne pas contre les Boss.<br><br>
+            <span class='gbt'>Effet Actif</span><br><br>
+            Si les dégâts renvoyés tuent un ennemi, remplit le Compteur de Tour de ce Champion
+            de 30% et place un buff <span class='gbt'>Voile parfait</span> sur ce Champion pendant 1 tour.
+          `,
+          cooldown: 4,
+          levelInfo: [
+            "Niv. 2 : Temps de recharge -1",
+            "Niv. 3 : Temps de recharge -1",
+          ],
+          isPassive: true,
+        },
+      ],
+      stats: {
+        "PV": "23 955",
+        "ATQ": "793",
+        "DÉF": "1 189",
+        "VIT": "100",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "40",
+        "PRÉ": "0",
+      },
+    };
+
+    const aura = {
+      img: "../../../Images/Auras/speed.png",
+      description: `Augmente la statistique VIT des Alliés dans les batailles d'Arène de 28%.`,
+    };
+
+    let currentTooltip = null;
+
+    function showTooltip(event, spellIndex) {
+      const spell = championData.spells[spellIndex];
+      const tooltip = document.getElementById("tooltip");
+
+      const levelInfoHTML = spell.levelInfo
+        ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+        : "";
+
+      const damageHTML = spell.damage
+        ? `<p><strong class="gold-t">Multiplicateur :</strong> <strong class="gold-t">${spell.damage}</strong></p>`
+        : "";
+
+      const cooldownHTML = spell.cooldown
+        ? `<div class="cooldown">⏱ ${spell.cooldown} tours</div>`
+        : "";
+
+      tooltip.innerHTML = `
+        <div class="spell-header">
+          <span class="spell-name">${spell.name}</span>
+          ${cooldownHTML}
+        </div>
+        <div>${spell.description}</div>
+        ${damageHTML}
+        ${levelInfoHTML ? `<ul class="level-info">${levelInfoHTML}</ul>` : ""}
+      `;
+
+      positionTooltip(event, tooltip);
+      tooltip.classList.add("show");
+      currentTooltip = tooltip;
+    }
+
+    function showAuraTooltip(event) {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = `
+        <h4>Aura</h4>
+        <div>${aura.description}</div>
+      `;
+      positionTooltip(event, tooltip);
+      tooltip.classList.add("show");
+      currentTooltip = tooltip;
+    }
+
+    function positionTooltip(event, tooltip) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const tooltipRect = tooltip.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      let left = rect.left + (rect.width / 2) - 175; // Centrer approximativement
+      let top = rect.bottom + 10;
+
+      // Ajustements pour rester dans l'écran
+      if (left < 10) left = 10;
+      if (left + 350 > viewportWidth) left = viewportWidth - 360;
+      if (top + 200 > viewportHeight) top = rect.top - 210;
+
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    }
+
+    function hideTooltip() {
+      if (currentTooltip) {
+        currentTooltip.classList.remove("show");
+        currentTooltip = null;
+      }
+    }
+
+    // Initialisation
+    document.addEventListener("DOMContentLoaded", () => {
+      // Types et sorts
+      document.getElementById("champion-type").textContent = championData.type;
+
+      const spellsHTML = championData.spells
+        .map((spell, index) => `
+          <div class="spell ${spell.isPassive ? "passive" : ""}" 
+               onmouseenter="showTooltip(event, ${index})" 
+               onmouseleave="hideTooltip()"
+               ontouchstart="showTooltip(event, ${index})"
+               ontouchend="setTimeout(hideTooltip, 3000)">
+            <img src="${spell.img}" alt="${spell.name}">
+          </div>
+        `).join("");
+      document.getElementById("spells-section").innerHTML = spellsHTML;
+
+      // Statistiques
+      const statsHTML = Object.entries(championData.stats)
+        .map(([key, value]) => `
+          <div class="stat-name">${key}</div>
+          <div class="stat-value">${value}</div>
+        `).join("");
+      document.getElementById("stats-content").innerHTML = statsHTML;
+
+      // Aura
+      const auraImg = document.getElementById("aura-img");
+      auraImg.src = aura.img;
+      auraImg.onmouseenter = showAuraTooltip;
+      auraImg.onmouseleave = hideTooltip;
+      auraImg.ontouchstart = showAuraTooltip;
+      auraImg.ontouchend = () => setTimeout(hideTooltip, 3000);
+    });
+
+    // Fermer tooltip en cliquant ailleurs
+    document.addEventListener('click', function(event) {
+      if (currentTooltip && !event.target.closest('.spell') && !event.target.closest('.aura')) {
+        hideTooltip();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FR RSL Hub</title>
+    <link rel="shortcut icon" href="../sites/Images//Affinity/void.png">
+    <base href="sites/">
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        :root {
+            --primary: #4460ff;
+            --secondary: #23263a;
+            --background: #181a24;
+            --bubble-bg: #23263a;
+            --bubble-hover: #4460ff;
+            --text-light: #f0f0f0;
+            --text-muted: #acacac;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background), var(--secondary));
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(24,26,36,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px #0004;
+            z-index: 10;
+        }
+        header img {
+            height: 40px;
+            margin-right: 1rem;
+        }
+        header h1 {
+            color: var(--text-light);
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .search-bar {
+            flex: 1;
+            margin-left: 2rem;
+            max-width: 350px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: none;
+            background: #23263a;
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow 0.2s;
+        }
+        .search-bar input:focus {
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        .site-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .site-bubble {
+            width: 175px;
+            height: 175px;
+            background: var(--bubble-bg);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-light);
+            box-shadow: 0 4px 16px #0006;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-bubble:hover, .site-bubble:focus {
+            background: var(--bubble-hover);
+            transform: scale(1.07) translateY(-6px);
+            box-shadow: 0 8px 24px #4460ff55;
+            z-index: 2;
+        }
+        .site-bubble img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #fff1;
+            box-shadow: 0 2px 8px #0003;
+        }
+        .site-bubble span {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-shadow: 0 1px 4px #0008;
+        }
+        @media (max-width: 900px) {
+            .site-container { gap: 1rem; }
+            .site-bubble { width: 140px; height: 140px; }
+            .site-bubble img { width: 70px; height: 70px; }
+        }
+        @media (max-width: 600px) {
+            header { flex-direction: column; align-items: flex-start; }
+            .search-bar { margin: 1rem 0 0 0; width: 100%; max-width: none; }
+            .site-container { gap: 0.7rem; }
+            .site-bubble { width: 110px; height: 110px; }
+            .site-bubble img { width: 50px; height: 50px; }
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3350cc; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../sites/Images//Affinity/void.png" alt="Logo FR RSL">
+        <h1>FR RSL Hub</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher une faction...">
+        </div>
+    </header>
+    <h2>Factions</h2>
+    <div class="site-container" id="factionContainer">
+        <!-- Les bulles de faction sont ici -->
+        <a href="faction01/hub.html" class="site-bubble" data-name="Seigneurs">
+            <img src="Images/Factions/bannerlords.png" alt="Seigneurs">
+            <span>Seigneurs</span>
+        </a>
+        <a href="faction02/hub.html" class="site-bubble" data-name="Haut Elfes">
+            <img src="Images/Factions/high-elves.png" alt="Haut Elfes">
+            <span>Haut Elfes</span>
+        </a>
+        <a href="faction03/hub.html" class="site-bubble" data-name="Ordre Sacre">
+            <img src="Images/Factions/sacred-order.png" alt="Ordre Sacre">
+            <span>L'Ordre Sacre</span>
+        </a>
+        <a href="faction04/hub.html" class="site-bubble" data-name="Barbares">
+            <img src="Images/Factions/barbarians.png" alt="Barbares">
+            <span>Barbares</span>
+        </a>
+        <a href="faction05/hub.html" class="site-bubble" data-name="Tribus Ogryn">
+            <img src="Images/Factions/ogryn-tribes.png" alt="Tribus Ogryn">
+            <span>Tribus Ogryn</span>
+        </a>
+        <a href="faction06/hub.html" class="site-bubble" data-name="Homme Lezards">
+            <img src="Images/Factions/lizardmen.png" alt="Homme Lezards">
+            <span>Homme Lezards</span>
+        </a>
+        <a href="faction07/hub.html" class="site-bubble" data-name="Marcheurs de Peau">
+            <img src="Images/Factions/skinwalkers.png" alt="Marcheurs de Peau">
+            <span>Marcheurs de Peau</span>
+        </a>
+        <a href="faction08/hub.html" class="site-bubble" data-name="Orcs">
+            <img src="Images/Factions/orcs.png" alt="Orcs">
+            <span>Orcs</span>
+        </a>
+        <a href="faction09/hub.html" class="site-bubble" data-name="Rejetons Demoniaques">
+            <img src="Images/Factions/demonspawn.png" alt="Rejetons Demoniaques">
+            <span>Rejetons Demo.</span>
+        </a>
+        <a href="faction10/hub.html" class="site-bubble" data-name="Morts-vivants">
+            <img src="Images/Factions/undead-hordes.png" alt="Morts-vivants">
+            <span>Morts-vivants</span>
+        </a>
+        <a href="faction11/hub.html" class="site-bubble" data-name="Elfes Noirs">
+            <img src="Images/Factions/dark-elves.png" alt="Elfes Noirs">
+            <span>Elfes Noirs</span>
+        </a>
+        <a href="faction12/hub.html" class="site-bubble" data-name="Revenants Chevaliers">
+            <img src="Images/Factions/knight-revenant.png" alt="Revenants Chevaliers">
+            <span>Revenants Chevaliers</span>
+        </a>
+        <a href="faction13/hub.html" class="site-bubble" data-name="Nains">
+            <img src="Images/Factions/dwarves.png" alt="Nains">
+            <span>Nains</span>
+        </a>
+        <a href="faction14/hub.html" class="site-bubble" data-name="Clan de l'Ombre">
+            <img src="Images/Factions/shadowkin.png" alt="Clan de l'Ombre">
+            <span>Clan de l'Ombre</span>
+        </a>
+        <a href="faction15/hub.html" class="site-bubble" data-name="Gardes Sylvains">
+            <img src="Images/Factions/sylvan-watchers.png" alt="Gardes Sylvains">
+            <span>Gardes Sylvains</span>
+        </a>
+    </div>
+    <script>
+        // Filtre de recherche
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.site-bubble').forEach(bubble => {
+                const name = bubble.getAttribute('data-name').toLowerCase();
+                bubble.style.display = name.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

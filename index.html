@@ -3,221 +3,795 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FR RSL Hub</title>
-    <link rel="shortcut icon" href="../sites/Images//Affinity/void.png">
-    <base href="sites/">
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>FR RSL Hub - Votre Guide Complet</title>
+    <link rel="shortcut icon" href="sites/Images//Affinity/void.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         :root {
             --primary: #4460ff;
+            --primary-dark: #3350dd;
             --secondary: #23263a;
-            --background: #181a24;
-            --bubble-bg: #23263a;
-            --bubble-hover: #4460ff;
-            --text-light: #f0f0f0;
-            --text-muted: #acacac;
+            --background: #0a0b14;
+            --background-alt: #181a24;
+            --bubble-bg: rgba(35, 38, 58, 0.8);
+            --bubble-hover: rgba(68, 96, 255, 0.9);
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #06ffa5;
+            --purple: #8b5cf6;
+            --orange: #f59e0b;
+            --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--background), var(--secondary));
-            color: var(--text-light);
+
+        * {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            overflow-y: auto;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--background) 0%, var(--background-alt) 50%, var(--secondary) 100%);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Particules d'arrière-plan */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Header avec effet glassmorphism */
         header {
             position: sticky;
             top: 0;
-            background: rgba(24,26,36,0.95);
+            background: rgba(10, 11, 20, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 8px #0004;
-            z-index: 10;
+            padding: 1.5rem 3rem;
+            z-index: 100;
+            transition: all 0.3s ease;
         }
-        header img {
-            height: 40px;
-            margin-right: 1rem;
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
-        header h1 {
-            color: var(--text-light);
+
+        .logo-section img {
+            height: 45px;
+            filter: drop-shadow(0 0 20px var(--primary));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-section h1 {
             font-size: 2rem;
-            margin: 0;
-            letter-spacing: 2px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
         }
-        .search-bar {
+
+        .search-container {
             flex: 1;
+            max-width: 400px;
             margin-left: 2rem;
-            max-width: 350px;
+            position: relative;
         }
+
+        .search-bar {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .search-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--primary), var(--purple), var(--accent));
+            border-radius: 25px;
+            padding: 2px;
+            z-index: -1;
+        }
+
         .search-bar input {
             width: 100%;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 23px;
             border: none;
-            background: #23263a;
+            background: var(--background);
             color: var(--text-light);
             font-size: 1rem;
             outline: none;
-            transition: box-shadow 0.2s;
+            transition: all 0.3s ease;
+            position: relative;
         }
+
         .search-bar input:focus {
-            box-shadow: 0 0 0 2px var(--primary);
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(68, 96, 255, 0.4);
         }
-        h2 {
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            color: var(--primary);
-            margin-top: 2rem;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-light), var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(68, 96, 255, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(68, 96, 255, 0.6)); }
+        }
+
+        .hero p {
             font-size: 1.3rem;
-            letter-spacing: 1px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
         }
-        .site-container {
+
+        /* Navigation rapide */
+        .quick-nav {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem auto;
-            max-width: 1200px;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
-        .site-bubble {
-            width: 175px;
-            height: 175px;
-            background: var(--bubble-bg);
-            border-radius: 30px;
+
+        .nav-pill {
+            padding: 0.75rem 1.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+        }
+
+        .nav-pill:hover, .nav-pill.active {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(68, 96, 255, 0.3);
+        }
+
+        /* Sections principales */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Grille de cartes */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .faction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-light);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(68, 96, 255, 0.2);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            box-shadow: 0 10px 30px rgba(68, 96, 255, 0.3);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Bulles de factions */
+        .faction-bubble {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-light);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-light);
-            box-shadow: 0 4px 16px #0006;
-            transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            overflow: hidden;
         }
-        .site-bubble:hover, .site-bubble:focus {
-            background: var(--bubble-hover);
-            transform: scale(1.07) translateY(-6px);
-            box-shadow: 0 8px 24px #4460ff55;
-            z-index: 2;
+
+        .faction-bubble::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
         }
-        .site-bubble img {
-            width: 90px;
-            height: 90px;
+
+        .faction-bubble:hover::after {
+            opacity: 0.1;
+        }
+
+        .faction-bubble:hover {
+            transform: translateY(-8px) scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(68, 96, 255, 0.25);
+        }
+
+        .faction-bubble img {
+            width: 70px;
+            height: 70px;
             margin-bottom: 1rem;
-            object-fit: contain;
             border-radius: 50%;
-            background: #fff1;
-            box-shadow: 0 2px 8px #0003;
+            object-fit: cover;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
         }
-        .site-bubble span {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-light);
-            text-shadow: 0 1px 4px #0008;
+
+        .faction-bubble:hover img {
+            transform: scale(1.1);
         }
-        @media (max-width: 900px) {
-            .site-container { gap: 1rem; }
-            .site-bubble { width: 140px; height: 140px; }
-            .site-bubble img { width: 70px; height: 70px; }
+
+        .faction-bubble span {
+            font-size: 1rem;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-        @media (max-width: 600px) {
-            header { flex-direction: column; align-items: flex-start; }
-            .search-bar { margin: 1rem 0 0 0; width: 100%; max-width: none; }
-            .site-container { gap: 0.7rem; }
-            .site-bubble { width: 110px; height: 110px; }
-            .site-bubble img { width: 50px; height: 50px; }
+
+        /* Stats et fonctionnalités */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
         }
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--background); }
-        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3350cc; }
+
+        .stat-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(15px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--glass-bg);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-container {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .faction-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .quick-nav {
+                gap: 0.5rem;
+            }
+
+            .nav-pill {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faction-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faction-bubble {
+                min-height: 160px;
+                padding: 1rem;
+            }
+
+            .faction-bubble img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Scrollbar personnalisée */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--primary), var(--purple));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--primary-dark), var(--purple));
+        }
     </style>
 </head>
 <body>
+    <!-- Particules d'arrière-plan -->
+    <div class="particles"></div>
+
+    <!-- Header -->
     <header>
-        <img src="../sites/Images//Affinity/void.png" alt="Logo FR RSL">
-        <h1>FR RSL Hub</h1>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Rechercher une faction...">
+        <div class="logo-section">
+            <img src="sites/Images/Affinity/void.png" alt="Logo FR RSL">
+            <h1>FR RSL Hub</h1>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher factions, champions, guides...">
+            </div>
         </div>
     </header>
-    <h2>Factions</h2>
-    <div class="site-container" id="factionContainer">
-        <!-- Les bulles de faction sont ici -->
-        <a href="faction01/hub.html" class="site-bubble" data-name="Seigneurs">
-            <img src="Images/Factions/bannerlords.png" alt="Seigneurs">
-            <span>Seigneurs</span>
-        </a>
-        <a href="faction02/hub.html" class="site-bubble" data-name="Haut Elfes">
-            <img src="Images/Factions/high-elves.png" alt="Haut Elfes">
-            <span>Haut Elfes</span>
-        </a>
-        <a href="faction03/hub.html" class="site-bubble" data-name="Ordre Sacre">
-            <img src="Images/Factions/sacred-order.png" alt="Ordre Sacre">
-            <span>L'Ordre Sacre</span>
-        </a>
-        <a href="faction04/hub.html" class="site-bubble" data-name="Barbares">
-            <img src="Images/Factions/barbarians.png" alt="Barbares">
-            <span>Barbares</span>
-        </a>
-        <a href="faction05/hub.html" class="site-bubble" data-name="Tribus Ogryn">
-            <img src="Images/Factions/ogryn-tribes.png" alt="Tribus Ogryn">
-            <span>Tribus Ogryn</span>
-        </a>
-        <a href="faction06/hub.html" class="site-bubble" data-name="Homme Lezards">
-            <img src="Images/Factions/lizardmen.png" alt="Homme Lezards">
-            <span>Homme Lezards</span>
-        </a>
-        <a href="faction07/hub.html" class="site-bubble" data-name="Marcheurs de Peau">
-            <img src="Images/Factions/skinwalkers.png" alt="Marcheurs de Peau">
-            <span>Marcheurs de Peau</span>
-        </a>
-        <a href="faction08/hub.html" class="site-bubble" data-name="Orcs">
-            <img src="Images/Factions/orcs.png" alt="Orcs">
-            <span>Orcs</span>
-        </a>
-        <a href="faction09/hub.html" class="site-bubble" data-name="Rejetons Demoniaques">
-            <img src="Images/Factions/demonspawn.png" alt="Rejetons Demoniaques">
-            <span>Rejetons Demo.</span>
-        </a>
-        <a href="faction10/hub.html" class="site-bubble" data-name="Morts-vivants">
-            <img src="Images/Factions/undead-hordes.png" alt="Morts-vivants">
-            <span>Morts-vivants</span>
-        </a>
-        <a href="faction11/hub.html" class="site-bubble" data-name="Elfes Noirs">
-            <img src="Images/Factions/dark-elves.png" alt="Elfes Noirs">
-            <span>Elfes Noirs</span>
-        </a>
-        <a href="faction12/hub.html" class="site-bubble" data-name="Revenants Chevaliers">
-            <img src="Images/Factions/knight-revenant.png" alt="Revenants Chevaliers">
-            <span>Revenants Chevaliers</span>
-        </a>
-        <a href="faction13/hub.html" class="site-bubble" data-name="Nains">
-            <img src="Images/Factions/dwarves.png" alt="Nains">
-            <span>Nains</span>
-        </a>
-        <a href="faction14/hub.html" class="site-bubble" data-name="Clan de l'Ombre">
-            <img src="Images/Factions/shadowkin.png" alt="Clan de l'Ombre">
-            <span>Clan de l'Ombre</span>
-        </a>
-        <a href="faction15/hub.html" class="site-bubble" data-name="Gardes Sylvains">
-            <img src="Images/Factions/sylvan-watchers.png" alt="Gardes Sylvains">
-            <span>Gardes Sylvains</span>
-        </a>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Votre Guide Ultime</h2>
+        <p>Explorez le monde de Raid: Shadow Legends avec nos guides complets, fiches de champions et stratégies avancées</p>
+        
+        <!-- Navigation rapide -->
+        <div class="quick-nav">
+            <a href="#factions" class="nav-pill active">Factions</a>
+            <a href="#reliques" class="nav-pill">Reliques</a>
+            <a href="#joyaux" class="nav-pill">Joyaux</a>
+            <a href="#graces" class="nav-pill">Grâces</a>
+        </div>
+
+        <!-- Stats rapides -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Factions</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">950+</span>
+                <span class="stat-label">Champions</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Guides</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Builds</span>
+            </div>
+        </div>
     </div>
+
+    <div class="main-content">
+        <!-- Section Guides & Outils -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Guides & Outils</h2>
+                <p class="section-subtitle">Découvrez nos ressources essentielles pour optimiser votre gameplay</p>
+            </div>
+            <div class="card-grid" id="guides">
+                <a href="#" class="card">
+                    <div class="card-icon">💎</div>
+                    <h3>Reliques</h3>
+                    <p>Guide complet des reliques, sets optimaux et statistiques recommandées</p>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-icon">💍</div>
+                    <h3>Joyaux</h3>
+                    <p>Optimisation des joyaux pour maximiser les performances de vos champions</p>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Grâces</h3>
+                    <p>Système de grâces et bénédictions pour améliorer vos stratégies</p>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Builds PvP</h3>
+                    <p>Configurations optimales pour dominer l'Arène et les Guerres de Clans</p>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-icon">🏰</div>
+                    <h3>Donjons</h3>
+                    <p>Stratégies et équipes pour tous les donjons et défis</p>
+                </a>
+                <a href="https://pgbmax.github.io" class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Tier Lists</h3>
+                    <p>Classements actualisés des meilleurs champions par catégorie</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Factions -->
+        <section class="section" id="factions">
+            <div class="section-header">
+                <h2 class="section-title">Factions</h2>
+                <p class="section-subtitle">Explorez toutes les factions et découvrez leurs champions légendaires</p>
+            </div>
+            <div class="faction-grid" id="factionContainer">
+                <a href="sites/faction01/hub.html" class="faction-bubble" data-name="Seigneurs">
+                    <img src="sites/Images/Factions/bannerlords.png" alt="Seigneurs">
+                    <span>Seigneurs</span>
+                </a>
+                <a href="sites/faction02/hub.html" class="faction-bubble" data-name="Haut Elfes">
+                    <img src="sites/Images/Factions/high-elves.png" alt="Haut Elfes">
+                    <span>Haut Elfes</span>
+                </a>
+                <a href="sites/faction03/hub.html" class="faction-bubble" data-name="Ordre Sacre">
+                    <img src="sites/Images/Factions/sacred-order.png" alt="Ordre Sacre">
+                    <span>L'Ordre Sacré</span>
+                </a>
+                <a href="sites/faction04/hub.html" class="faction-bubble" data-name="Barbares">
+                    <img src="sites/Images/Factions/barbarians.png" alt="Barbares">
+                    <span>Barbares</span>
+                </a>
+                <a href="sites/faction05/hub.html" class="faction-bubble" data-name="Tribus Ogryn">
+                    <img src="sites/Images/Factions/ogryn-tribes.png" alt="Tribus Ogryn">
+                    <span>Tribus Ogryn</span>
+                </a>
+                <a href="sites/faction06/hub.html" class="faction-bubble" data-name="Homme Lezards">
+                    <img src="sites/Images/Factions/lizardmen.png" alt="Homme Lezards">
+                    <span>Homme Lézards</span>
+                </a>
+                <a href="sites/faction07/hub.html" class="faction-bubble" data-name="Marcheurs de Peau">
+                    <img src="sites/Images/Factions/skinwalkers.png" alt="Marcheurs de Peau">
+                    <span>Marcheurs de Peau</span>
+                </a>
+                <a href="sites/faction08/hub.html" class="faction-bubble" data-name="Orcs">
+                    <img src="sites/Images/Factions/orcs.png" alt="Orcs">
+                    <span>Orcs</span>
+                </a>
+                <a href="sites/faction09/hub.html" class="faction-bubble" data-name="Rejetons Demoniaques">
+                    <img src="sites/Images/Factions/demonspawn.png" alt="Rejetons Demoniaques">
+                    <span>Rejetons Démo.</span>
+                </a>
+                <a href="sites/faction10/hub.html" class="faction-bubble" data-name="Morts-vivants">
+                    <img src="sites/Images/Factions/undead-hordes.png" alt="Morts-vivants">
+                    <span>Morts-vivants</span>
+                </a>
+                <a href="sites/faction11/hub.html" class="faction-bubble" data-name="Elfes Noirs">
+                    <img src="sites/Images/Factions/dark-elves.png" alt="Elfes Noirs">
+                    <span>Elfes Noirs</span>
+                </a>
+                <a href="sites/faction12/hub.html" class="faction-bubble" data-name="Revenants Chevaliers">
+                    <img src="sites/Images/Factions/knight-revenant.png" alt="Revenants Chevaliers">
+                    <span>Revenants Chevaliers</span>
+                </a>
+                <a href="sites/faction13/hub.html" class="faction-bubble" data-name="Nains">
+                    <img src="sites/Images/Factions/dwarves.png" alt="Nains">
+                    <span>Nains</span>
+                </a>
+                <a href="sites/faction14/hub.html" class="faction-bubble" data-name="Clan de l'Ombre">
+                    <img src="sites/Images/Factions/shadowkin.png" alt="Clan de l'Ombre">
+                    <span>Clan de l'Ombre</span>
+                </a>
+                <a href="sites/faction15/hub.html" class="faction-bubble" data-name="Gardes Sylvains">
+                    <img src="sites/Images/Factions/sylvan-watchers.png" alt="Gardes Sylvains">
+                    <span>Gardes Sylvains</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Contenu Supplémentaire -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Ressources Avancées</h2>
+                <p class="section-subtitle">Approfondissez vos connaissances avec nos contenus experts</p>
+            </div>
+            <div class="card-grid">
+                <a href="#" class="card" id="reliques">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Sets de Reliques</h3>
+                    <p>Analyses détaillées des effets de sets et combinaisons optimales pour chaque situation</p>
+                </a>
+                <a href="#" class="card" id="joyaux">
+                    <div class="card-icon">🔮</div>
+                    <h3>Calculateur de Joyaux</h3>
+                    <p>Outil interactif pour optimiser vos joyaux selon vos champions et objectifs</p>
+                </a>
+                <a href="#" class="card" id="graces">
+                    <div class="card-icon">🌟</div>
+                    <h3>Guide des Grâces</h3>
+                    <p>Comprendre le système de grâces et maximiser leur impact sur vos performances</p>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Meta Analysis</h3>
+                    <p>Analyses régulières du meta, tendances et prédictions pour rester compétitif</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">À propos</a>
+                <a href="#">Contact</a>
+                <a href="#">Communauté Discord</a>
+                <a href="#">Guides</a>
+                <a href="#">Mises à jour</a>
+            </div>
+            <p style="color: var(--text-muted); margin-top: 1rem;">
+                © 2025 FR RSL Hub - Votre guide non-officiel pour Raid: Shadow Legends
+            </p>
+        </div>
+    </footer>
+
     <script>
-        // Filtre de recherche
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            document.querySelectorAll('.site-bubble').forEach(bubble => {
-                const name = bubble.getAttribute('data-name').toLowerCase();
-                bubble.style.display = name.includes(query) ? '' : 'none';
+        // Génération des particules
+        function createParticles() {
+            const particles = document.querySelector('.particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particles.appendChild(particle);
+            }
+        }
+
+        // Fonction de recherche améliorée
+        function initSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const factionBubbles = document.querySelectorAll('.faction-bubble');
+            const cards = document.querySelectorAll('.card');
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                
+                // Recherche dans les factions
+                factionBubbles.forEach(bubble => {
+                    const name = bubble.getAttribute('data-name').toLowerCase();
+                    bubble.style.display = name.includes(query) ? '' : 'none';
+                });
+
+                // Recherche dans les cartes (guides)
+                cards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    const matches = title.includes(query) || description.includes(query);
+                    card.style.display = matches ? '' : 'none';
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        }
+
+        // Navigation fluide
+        function initSmoothScroll() {
+            const navPills = document.querySelectorAll('.nav-pill');
+            
+            navPills.forEach(pill => {
+                pill.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Supprimer la classe active de tous les pills
+                    navPills.forEach(p => p.classList.remove('active'));
+                    // A

@@ -30,6 +30,23 @@ body {
   transform: scale(1.05);
 }
 
+/* Responsive pour le bouton retour */
+@media (max-width: 767px) {
+  .back-to-hub {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding-top: 0;
+  }
+}
+
 .container {
   display: grid;
   gap: 1.5rem;
@@ -38,6 +55,14 @@ body {
   margin: 0 auto;
   min-height: calc(100vh - 6rem);
   box-sizing: border-box;
+}
+
+/* Ajustement pour mobile avec bouton responsive */
+@media (max-width: 767px) {
+  .container {
+    padding: 1rem;
+    min-height: auto;
+  }
 }
 
 /* Layout Desktop */
@@ -71,7 +96,6 @@ body {
       "middle" 
       "right";
     gap: 1rem;
-    padding: 4rem 1rem 2rem;
   }
 }
 
@@ -94,9 +118,8 @@ body {
 
 .left-panel {
   grid-area: left;
-  align-items: center;
   text-align: center;
-  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .champion-name {
@@ -177,7 +200,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  flex: 1;
 }
 
 .champion-img {
@@ -201,8 +224,7 @@ body {
 
 .middle-panel {
   grid-area: middle;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .spells-container {
@@ -211,9 +233,18 @@ body {
   margin: 1rem 0;
   justify-items: center;
   width: 100%;
+  align-items: start;
 }
 
-@media (min-width: 768px) {
+/* Layout responsive pour les sorts */
+@media (min-width: 1200px) {
+  .spells-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .spells-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -229,8 +260,6 @@ body {
 
 .spell {
   position: relative;
-  width: 70px;
-  height: 70px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffd700;
@@ -243,10 +272,26 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour les sorts */
+@media (min-width: 1200px) {
   .spell {
     width: 80px;
     height: 80px;
+    border-width: 3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .spell {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .spell {
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -267,6 +312,12 @@ body {
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
 }
 
+@media (min-width: 1200px) {
+  .spell.passive {
+    border-width: 3px;
+  }
+}
+
 .spell.passive::before {
   content: "";
   position: absolute;
@@ -279,6 +330,16 @@ body {
   pointer-events: none;
 }
 
+@media (min-width: 1200px) {
+  .spell.passive::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-width: 2px;
+  }
+}
+
 .spell.passive::after {
   content: "";
   position: absolute;
@@ -288,13 +349,28 @@ body {
   border-radius: 50%;
   top: -5px;
   left: 50%;
-  transform-origin: center 42px;
   animation: rotate-dot 4s linear infinite;
 }
 
-@media (min-width: 768px) {
+/* Ajustement du point rotatif selon la taille */
+@media (min-width: 1200px) {
   .spell.passive::after {
-    transform-origin: center 48px;
+    width: 6px;
+    height: 6px;
+    top: -5px;
+    transform-origin: center 46px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .spell.passive::after {
+    transform-origin: center 46px;
+  }
+}
+
+@media (max-width: 767px) {
+  .spell.passive::after {
+    transform-origin: center 41px;
   }
 }
 
@@ -310,8 +386,6 @@ body {
 }
 
 .aura {
-  width: 90px;
-  height: 90px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -321,10 +395,25 @@ body {
   transition: all 0.3s ease;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour l'aura */
+@media (min-width: 1200px) {
+  .aura {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .aura {
     width: 110px;
     height: 110px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aura {
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -333,17 +422,30 @@ body {
 }
 
 .aura-img {
-  width: 80px;
-  height: 80px;
   object-fit: contain;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour l'image d'aura */
+@media (min-width: 1200px) {
+  .aura-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .aura-img {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aura-img {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -356,7 +458,7 @@ body {
   color: #e6b800;
   border-radius: 12px;
   padding: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   backdrop-filter: blur(5px);
   height: 100%;
   display: flex;
@@ -366,7 +468,7 @@ body {
 
 .stats h3 {
   margin: 0 0 1.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #e6b800;
   text-align: center;
   border-bottom: 2px solid #e6b800;
@@ -376,17 +478,17 @@ body {
 .stat-block {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
   font-family: 'Courier New', monospace;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   flex: 1;
   justify-content: space-between;
 }
 
 @media (max-width: 767px) {
   .stat-block {
-    font-size: 0.9rem;
-    gap: 0.8rem;
+    font-size: 1rem;
+    gap: 1rem;
   }
 }
 
@@ -394,8 +496,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 0;
-  border-bottom: 1px solid rgba(230, 184, 0, 0.2);
+  padding: 0.5rem 0;
 }
 
 .stat-row:last-child {
@@ -428,13 +529,37 @@ body {
   display: none;
   backdrop-filter: blur(15px);
   pointer-events: none;
+  /* Suppression de max-height fixe pour permettre le calcul dynamique */
+  overflow-y: auto;
+  /* Assurer une largeur minimale pour éviter les tooltips trop étroits */
+  min-width: 250px;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour le tooltip */
+@media (min-width: 1200px) {
+  .tooltip {
+    max-width: 500px;
+    min-width: 400px;
+    font-size: 1rem;
+    padding: 1.8rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .tooltip {
     max-width: 450px;
-    font-size: 1rem;
+    min-width: 350px;
+    font-size: 0.95rem;
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .tooltip {
+    max-width: 90vw;
+    font-size: 0.9rem;
+    padding: 1rem;
   }
 }
 
@@ -450,13 +575,26 @@ body {
 
 .tooltip h4 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
   color: #e6b800;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour les titres de tooltip */
+@media (min-width: 1200px) {
+  .tooltip h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .tooltip h4 {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .tooltip h4 {
+    font-size: 1.1rem;
   }
 }
 
@@ -470,14 +608,26 @@ body {
 }
 
 .spell-name {
-  font-size: 1rem;
   font-weight: bold;
   color: #e6b800;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour les noms de sorts */
+@media (min-width: 1200px) {
+  .spell-name {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .spell-name {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .spell-name {
+    font-size: 1rem;
   }
 }
 
@@ -492,7 +642,6 @@ body {
 
 .tooltip .level-info {
   color: #aaa;
-  font-size: 0.8rem;
   margin-top: 1rem;
   border-top: 1px solid #555;
   padding-top: 0.8rem;
@@ -500,9 +649,24 @@ body {
   padding-left: 1.2rem;
 }
 
-@media (min-width: 768px) {
+/* Tailles responsives pour les infos de niveau */
+@media (min-width: 1200px) {
+  .tooltip .level-info {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .tooltip .level-info {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .tooltip .level-info {
+    font-size: 0.8rem;
   }
 }
 

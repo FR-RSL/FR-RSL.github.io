@@ -108,7 +108,10 @@ let touchTimeout = null;
 
 function showTooltip(event, spellIndex) {
   const spell = championData.spells[spellIndex];
+  if (!spell) return;
+  
   const tooltip = document.getElementById("tooltip");
+  if (!tooltip) return;
 
   const levelInfoHTML = spell.levelInfo
     ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
@@ -139,6 +142,8 @@ function showTooltip(event, spellIndex) {
 
 function showAuraTooltip(event) {
   const tooltip = document.getElementById("tooltip");
+  if (!tooltip) return;
+  
   tooltip.innerHTML = `
     <h4>Aura</h4>
     <div>${aura.description}</div>
@@ -152,43 +157,58 @@ function positionTooltip(event, tooltip) {
   const rect = event.currentTarget.getBoundingClientRect();
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
-  const scrollY = window.scrollY;
-  const scrollX = window.scrollX;
+  const margin = 20;
   
-  // Dimensions estimées du tooltip
-  const tooltipWidth = Math.min(450, viewportWidth * 0.9);
-  const tooltipHeight = 200; // Estimation
-  const margin = 10;
+  // D'abord positionner le tooltip pour calculer sa taille
+  tooltip.style.left = '0px';
+  tooltip.style.top = '0px';
+  tooltip.style.visibility = 'hidden';
+  tooltip.style.display = 'block';
   
-  let left = rect.left + scrollX + (rect.width / 2) - (tooltipWidth / 2);
-  let top = rect.bottom + scrollY + margin;
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const tooltipWidth = tooltipRect.width;
+  const tooltipHeight = tooltipRect.height;
   
-  // Ajustement horizontal
-  if (left < margin) {
-    left = margin;
-  } else if (left + tooltipWidth > viewportWidth - margin) {
+  let left = rect.left + rect.width / 2 - tooltipWidth / 2;
+  let top = rect.bottom + 10;
+  
+  // Vérifier si le tooltip déborde horizontalement
+  if (left + tooltipWidth > viewportWidth - margin) {
     left = viewportWidth - tooltipWidth - margin;
   }
+  if (left < margin) {
+    left = margin;
+  }
   
-  // Ajustement vertical
-  if (top + tooltipHeight > viewportHeight + scrollY - margin) {
-    // Si pas assez de place en bas, afficher au-dessus
-    top = rect.top + scrollY - tooltipHeight - margin;
+  // Vérifier si le tooltip déborde verticalement en bas
+  if (top + tooltipHeight > viewportHeight - margin) {
+    // Essayer de le placer au-dessus du sort
+    top = rect.top - tooltipHeight - 10;
     
-    // Si toujours pas assez de place, centrer verticalement
-    if (top < scrollY + margin) {
-      top = scrollY + (viewportHeight - tooltipHeight) / 2;
+    // Si ça déborde encore en haut, le placer au maximum visible en bas
+    if (top < margin) {
+      top = viewportHeight - tooltipHeight - margin;
+      
+      // Si même comme ça c'est trop grand, ajuster la hauteur
+      if (top < margin) {
+        top = margin;
+        tooltip.style.maxHeight = `${viewportHeight - 2 * margin}px`;
+        tooltip.style.overflowY = 'auto';
+      }
     }
   }
   
+  // Appliquer la position finale
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;
-  tooltip.style.maxWidth = `${tooltipWidth}px`;
+  tooltip.style.visibility = 'visible';
 }
 
 function hideTooltip() {
   if (currentTooltip) {
     currentTooltip.classList.remove("show");
+    currentTooltip.style.maxHeight = ''; // Reset max-height
+    currentTooltip.style.overflowY = ''; // Reset overflow
     currentTooltip = null;
   }
   if (touchTimeout) {
@@ -210,65 +230,80 @@ function handleTouch(event, index, isAura = false) {
     showTooltip(event, index);
   }
   
-  touchTimeout = setTimeout(hideTooltip, 3000);
+  touchTimeout = setTimeout(hideTooltip, 5000);
 }
 
-// Initialisation
-document.addEventListener("DOMContentLoaded", () => {
+function initPage() {
   // Types et sorts
-  document.getElementById("champion-type").textContent = championData.type;
+  const championTypeElement = document.getElementById("champion-type");
+  if (championTypeElement) {
+    championTypeElement.textContent = championData.type;
+  }
 
-  const spellsHTML = championData.spells
-    .map((spell, index) => `
-      <div class="spell ${spell.isPassive ? "passive" : ""}" 
-           onmouseenter="showTooltip(event, ${index})" 
-           onmouseleave="hideTooltip()"
-           ontouchstart="handleTouch(event, ${index})"
-           aria-label="${spell.name}">
-        <img src="${spell.img}" alt="${spell.name}">
-      </div>
-    `).join("");
-  document.getElementById("spells-section").innerHTML = spellsHTML;
+  const spellsContainer = document.getElementById("spells-section");
+  if (!spellsContainer) return;
+  
+  // Créer les sorts avec des event listeners propres
+  spellsContainer.innerHTML = '';
+  
+  championData.spells.forEach((spell, index) => {
+    const spellDiv = document.createElement('div');
+    spellDiv.className = `spell ${spell.isPassive ? "passive" : ""}`;
+    spellDiv.setAttribute('aria-label', spell.name);
+    
+    const img = document.createElement('img');
+    img.src = spell.img;
+    img.alt = spell.name;
+    spellDiv.appendChild(img);
+    
+    // Event listeners simples et directs
+    spellDiv.addEventListener('mouseenter', (e) => showTooltip(e, index));
+    spellDiv.addEventListener('mouseleave', hideTooltip);
+    spellDiv.addEventListener('touchstart', (e) => handleTouch(e, index));
+    
+    spellsContainer.appendChild(spellDiv);
+  });
 
-  // Statistiques avec nouvelle structure
-  const statsHTML = Object.entries(championData.stats)
-    .map(([key, value]) => `
-      <div class="stat-row">
-        <div class="stat-name">${key}</div>
-        <div class="stat-value">${value}</div>
-      </div>
-    `).join("");
-  document.getElementById("stats-content").innerHTML = statsHTML;
+  // Statistiques
+  const statsContent = document.getElementById("stats-content");
+  if (statsContent) {
+    const statsHTML = Object.entries(championData.stats)
+      .map(([key, value]) => `
+        <div class="stat-row">
+          <div class="stat-name">${key}</div>
+          <div class="stat-value">${value}</div>
+        </div>
+      `).join("");
+    statsContent.innerHTML = statsHTML;
+  }
 
   // Aura
   const auraImg = document.getElementById("aura-img");
-  auraImg.src = aura.img;
-  auraImg.parentElement.onmouseenter = showAuraTooltip;
-  auraImg.parentElement.onmouseleave = hideTooltip;
-  auraImg.parentElement.ontouchstart = (e) => handleTouch(e, 0, true);
-  auraImg.parentElement.setAttribute('aria-label', 'Aura');
-});
+  if (auraImg) {
+    auraImg.src = aura.img;
+    const auraElement = auraImg.parentElement;
+    
+    // Event listeners pour l'aura
+    auraElement.addEventListener('mouseenter', showAuraTooltip);
+    auraElement.addEventListener('mouseleave', hideTooltip);
+    auraElement.addEventListener('touchstart', (e) => handleTouch(e, 0, true));
+    auraElement.setAttribute('aria-label', 'Aura');
+  }
+}
 
-// Fermer tooltip en cliquant ailleurs
-document.addEventListener('click', function(event) {
-  if (currentTooltip && 
-      !event.target.closest('.spell') && 
-      !event.target.closest('.aura') &&
-      !event.target.closest('.tooltip')) {
+// Rendre les fonctions globales (pour compatibilité si besoin)
+window.showTooltip = showTooltip;
+window.hideTooltip = hideTooltip;
+window.showAuraTooltip = showAuraTooltip;
+window.handleTouch = handleTouch;
+
+// Ajouter un event listener global pour fermer le tooltip si on sort de la zone
+document.addEventListener('mouseover', function(e) {
+  // Si la souris n'est pas sur un élément avec tooltip, fermer le tooltip
+  if (!e.target.closest('.spell') && !e.target.closest('.aura')) {
     hideTooltip();
   }
 });
 
-// Ajuster la position du tooltip lors du redimensionnement
-window.addEventListener('resize', () => {
-  if (currentTooltip && currentTooltip.classList.contains('show')) {
-    hideTooltip();
-  }
-});
-
-// Ajuster la position du tooltip lors du scroll
-window.addEventListener('scroll', () => {
-  if (currentTooltip && currentTooltip.classList.contains('show')) {
-    hideTooltip();
-  }
-});
+// Initialisation
+document.addEventListener("DOMContentLoaded", initPage);

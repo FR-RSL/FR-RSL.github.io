@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Calamitus</title>
+  <link rel="shortcut icon" href="../../../../Images/Factions/undead-hordes.png">
+  <base href="assets/">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #23263a, #181a24);
+      color: #f0f0f0;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      column-gap: 2rem;
+      padding: 2rem;
+      height: 100vh;
+      box-sizing: border-box;
+      transition: opacity 0.5s cubic-bezier(.4,0,.2,1);
+      opacity: 1;
+      background-color: transparent;
+    }
+    .left-panel {
+      flex: 1;
+      max-width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(23, 25, 37, 0.8);
+      border: 2px solid #303c7c;
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+      position: relative;
+    }
+    .left-panel-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      margin-top: 2rem;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .rarity-box {
+      background: rgba(255, 0, 0, 0.8);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+    .type-badge {
+      background: #111;
+      border-radius: 8px;
+      padding: 0.3rem 0.8rem;
+      font-weight: bold;
+      color: #fff;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .extra-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .extra-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 4rem;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 220px;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      /* Correction du placement */
+    }
+    .champion-img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(68, 96, 255, 0.4);
+      object-fit: contain;
+      margin-top: 0;
+      margin-bottom: 0;
+      /* Correction du placement */
+    }
+    .middle-panel {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: rgba(23, 25, 37, 0.8);
+      border: 2px solid #303c7c;
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+    }
+    .spells {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10rem;
+      row-gap: 3rem;
+      margin-top: 1rem;
+      justify-items: center;
+    }
+    .spell {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ffd700; /* Changé en jaune */
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); /* Ombre jaune */
+      transition: transform 0.35s ease;
+    }
+    .spell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .spell.passive {
+      border: 3px solid #00ffff; /* Cyan pour les passifs */
+    }
+    .spell.passive::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 86px;
+      height: 86px;
+      border: 3px solid rgba(0, 255, 255, 0.3); /* Cyan transparent */
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Ombre cyan */
+      pointer-events: none;
+    }
+    /* Ajout du point blanc tournant */
+    .spell.passive::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      top: -5px;
+      left: 50%;
+      transform-origin: center 48px; /* Rayon de rotation */
+      animation: rotate-dot 4s linear infinite;
+    }
+    @keyframes rotate-dot {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Mise à jour de l'animation existante pour la bordure */
+    @keyframes rotate-light {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .aura {
+      width: 110px;           /* Augmenté */
+      height: 110px;          /* Augmenté */
+      border-radius: 12px;    /* Arrondi pour suivre l'image */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-top: 1rem;
+      position: relative;
+      transition: box-shadow 0.4s;
+    }
+    .aura-img {
+      width: 100px;           /* Ajusté pour remplir la boîte */
+      height: 100px;          /* Ajusté pour remplir la boîte */
+      object-fit: contain;    /* Affiche l'image entière sans la couper */
+      border-radius: 12px;
+      transition: box-shadow 0.4s;
+    }
+    .right-panel {
+      flex: 1;
+      max-width: 30%;
+      background: rgba(23, 25, 37, 0.8);
+      border: 2px solid #303c7c;
+      border-radius: 16px;
+      padding: 1rem;
+      height: 60%;
+      transition: all 0.6s ease;
+    }
+    .stats {
+      margin-top: 0;
+      background-color: rgba(24, 26, 36, 0.4);
+      color: #e6b800;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1.2rem;
+      line-height: 2.2;
+      transition: all 0.6s ease;
+    }
+    .stats h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #e6b800;
+    }
+    .stat-block {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 0.5rem 2rem;
+      font-family: monospace;
+    }
+    .stat-name {
+      text-align: left;
+    }
+    .stat-value {
+      text-align: right;
+    }
+    .form-selector {
+      margin: 1rem auto;
+      text-align: center;
+    }
+    .form-selector button {
+      margin: 0 1rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: 1px solid #4460ff;
+      border-radius: 8px;
+      background: #23263a;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .form-selector button:hover {
+      background: #181a24;
+    }
+    .form-selector button:active {
+      background: #007bff;
+      transform: scale(0.95);
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    .form-selector button.active {
+      background: #4460ff;
+      color: #fff;
+      cursor: default;
+    }
+    .form-selector button:disabled {
+      background: #444;
+      color: #888;
+      cursor: not-allowed;
+    }
+    .gbt {
+      color: lime;
+    }
+    .gbt::before { content: "["; }
+    .gbt::after { content: "]"; }
+    .gold-t { color: gold; }
+    .tooltip {
+      position: absolute;
+      background: rgb(24, 26, 36);
+      border: 1px solid #4460ff;
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      max-width: 600px;
+      z-index: 1000;
+      font-size: 1rem;
+      line-height: 1.6;
+      display: none;
+    }
+    .tooltip h4 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #e6b800;
+    }
+    .tooltip .level-info {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      border-top: 1px solid #555;
+      padding-top: 0.8rem;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    .tooltip.hidden {
+      display: none;
+    }
+    .back-to-hub {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(23, 25, 37, 0.8);
+      border: 1px solid #4460ff;
+      color: #f0f0f0;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .back-to-hub:hover {
+      background: #4460ff;
+      transform: scale(1.1);
+    }
+    .cooldown {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-left: auto;
+    }
+    .cooldown-icon {
+      width: 16px;
+      height: 16px;
+      background: url('cooldown-icon.png') no-repeat center center;
+      background-size: contain;
+    }
+    .spell-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .spell-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #e6b800;
+    }
+  </style>
+</head>
+<body>
+  <a href="../../../hub.html" class="back-to-hub">← Retour au Hub</a>
+  <div class="form-selector">
+    <button onclick="switchForm('form1')" class="active" disabled>Forme 1</button>
+    <button onclick="switchForm('form2')">Forme 2</button>
+  </div>
+  <div class="container" id="champion-container">
+    <div class="left-panel">
+      <div class="left-panel-content">
+        <div class="info">
+          <div class="rarity-box">
+            <span>Mythique</span>
+          </div>
+          <div class="type-badge" id="champion-type">Defense</div>
+        </div>
+        <div class="extra-image">
+          <img src="../../../../Images/Affinity/spirit.png" alt="Spirit" class="extra-img">
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="calamitus.png" alt="Champion" class="champion-img" id="champion-img">
+      </div>
+    </div>
+    <div class="middle-panel" id="right-panel">
+      <div class="spells" id="spells-section"></div>
+      <div class="aura" id="aura-section">
+        <img src="" alt="Aura" class="aura-img" id="aura-img" onmouseover="showAuraTooltip(event)" onmouseout="hideAuraGlow()">
+      </div>
+    </div>
+    <div class="right-panel" id="stats-panel">
+      <div class="stats" id="stats-section">
+          <h3>Statistiques</h3>
+          <div class="stat-block">
+              <div class="stat-name">PV</div>
+              <div class="stat-value">22 635</div>
+              <div class="stat-name">ATQ</div>
+              <div class="stat-value">1 068</div>
+              <div class="stat-name">DEF</div>
+              <div class="stat-value">1 277</div>
+              <div class="stat-name">VIT</div>
+              <div class="stat-value">100</div>
+              <div class="stat-name">TAUX C.</div>
+              <div class="stat-value">15%</div>
+              <div class="stat-name">DÉG C.</div>
+              <div class="stat-value">50%</div>
+              <div class="stat-name">RÉS</div>
+              <div class="stat-value">50</div>
+              <div class="stat-name">PRÉ</div>
+              <div class="stat-value">20</div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="tooltip" class="tooltip hidden"></div>
+  <script>
+const forms = {
+      form1: {
+        type: "Attaque",
+        spells: [
+          {
+            img: "sort1.png",
+            name: "Massacre faucheur",
+            description: `
+              Attaque 2 fois un ennemi. Chaque frappe a 20% de chances
+              supplementaires de porter un coup critique.<br><br>
+              Chaque frappe restaure les PV MAX detruits de ce Champion
+              a hauteur des degats infliges. Chaque frappe soigne egalement
+              ce Champion a hauteur de 30% des degats infliges.<br><br>
+              Accorde un Tour supplementaire si cette attaque tue un ennemi.
+            `,
+            damage: "2.1*ATQ",
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%"
+            ]
+          },
+          {
+            img: "sort2.png",
+            name: "Horde de calamite",
+            description: `
+              Attaque 4 fois un ennemi. Chaque frappe a 20% de chances
+              supplementaires de porter un coup critique.<br><br>
+              La premiere frappe ignorera 10% de la DEF de la cible.
+              Chaque frappe suivante ignorera 5% supplementaires de la DEF de la cible.<br><br>
+              La premiere frappe place un debuff 
+              <span class='gbt'>Blocage des Buffs</span> pendant 2 tours.<br><br>
+              La deuxieme frappe place un debuff 
+              <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br><br>
+              La troisieme frappe place un debuff 
+              <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
+              La quatrieme frappe place un debuff 
+              <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours.
+            `,
+            damage: "1.8*ATQ",
+            cooldown: 3,
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%",
+              "Niv. 3 : Ignorer la RES +20%"
+            ]
+          },
+          {
+            img: "sort3.png",
+            name: "Necroclysme",
+            description: `
+              Attaque tous les ennemis. Cette attaque est toujours critique
+              et ignorera 20% de la DEF de chaque ennemi.<br><br>
+              Si cette attaque tue un ennemi, place un buff 
+              <span class='gbt'>Invincible</span> sur ce Champion pendant 1 tour.<br><br>
+              Si cette attque tue deux ennemis ou plus, place au lieu de ca un buff
+              <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.
+            `,
+            damage: "4.8*ATQ",
+            cooldown: 4,
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%",
+              "Niv. 3 : Temps de recharge -1"
+            ]
+          },
+          {
+            img: "meta1.png",
+            name: "Metamorphe",
+            description: `
+              Fait passer ce Champion a sa Forme alternative.
+              Accorde ensuite un Tour supplementaire.
+            `,
+            cooldown: 4,
+          },
+          {
+            img: "passif1.png",
+            name: "Creation immortelle [P]",
+            description: `
+              Au debut du tour de ce Champion, lui accorde un buff
+              <span class='gbt'>Bouclier</span> equivalent a 50% de ses PV MAX pendant 1 tour.
+              Place egalement un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% 
+              sur ce Champion pendant 1 tour.
+            `,
+            isPassive: true,
+          },
+        ],
+        stats: {
+          "PV": "16 845",
+          "ATQ": "1 553",
+          "DEF": "1 178",
+          "VIT": "105",
+          "TAUX C.": "15%",
+          "DÉG C.": "63%",
+          "RÉS": "30",
+          "PRÉ": "20"
+        },
+      },
+      form2: {
+        type: "Attaque",
+        spells: [
+        {
+            img: "sort4.png",
+            name: "Faux cruelle",
+            description: `
+              Attaque un ennemi. Possede 20% de chances supplementaires de porter un coup critique.<br><br>
+              Apres l'attaque, transfere tous les debuffs de ce Champion sur la cible.<br><br>
+              Si la cible se trouve sous debuff <span class='gbt'>Malediction</span> avant l'attaque,
+              transfere au lieu de ca tous les debuffs de ce Champion sur la cible avant l'attaque.`,
+            damage: "4*ATQ",
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%",
+              "Niv. 3 : Ignorer la RES +20%"
+            ]
+          },
+          {
+            img: "sort5.png",
+            name: "Ultime testament",
+            description: `
+              Attaque tous les ennemis. Possede 20% de chances supplementaires de porter un coup critique. 
+              Avant d'attaquer, retire tous les debuffs sur ce Champion.<br><br>
+              Ignorera 20% de la DEF de chaque ennemi.
+              Ignorera au lieu ce ca 35% de la DEF de la cible si elle se trouve sous debuff
+              <span class='gbt'>Malediction</span>.<br><br>
+              Les degats augmentent de 10% pour chaque debuff sur chaque cible.
+            `,
+            damage: "4.2*ATQ",
+            cooldown: 3,
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%",
+              "Niv. 3 : Temps de recharge -1"
+            ]
+          },
+          {
+            img: "sort6.png",
+            name: "Extinction",
+            description: `
+              Attaque tous les ennemis. Possede 20% de chances supplementaires de porter un coup critique.
+              Avant d'attaquer, place un debuff <span class='gbt'>Malediction</span>
+              et un debuff <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br><br>
+              Ignorera les buffs <span class='gbt'>Barriere de Vie</span>,
+              <span class='gbt'>Nuage de Poison</span> et 
+              <span class='gbt'>Protection d'allie</span>.
+            `,
+            damage: "4.4*ATQ",
+            cooldown: 3,
+            levelInfo: [
+              "Niv. 2 : Dégâts +20%",
+              "Niv. 3 : Ignorer la RES +20%"
+            ]
+          },
+          {
+            img: "meta2.png",
+            name: "Metamorphe",
+            description: `
+              Fait passer ce Champion a sa Forme de base.
+              Accorde ensuite un Tour supplementaire.
+            `,
+            cooldown: 4,
+          },
+          {
+            img: "passif2.png",
+          name: "Banquet de la mort [P]",
+          description: `
+            Des que ce Champion attaque un ennemi sous debuff <span class='gbt'>Malediction</span>,
+            soigne ce Champion de 30% des degats infliges.<br><br>
+            Augmente l'ATQ de ce Champion de 20% pour chaque ennemi sous debuff
+            <span class='gbt'>Malediction</span>.
+          `,
+            isPassive: true,
+          },
+        ],
+        stats: {
+          "PV": "16 845",
+          "ATQ": "1 553",
+          "DEF": "1 178",
+          "VIT": "105",
+          "TAUX C.": "15%",
+          "DÉG C.": "63%",
+          "RÉS": "30",
+          "PRÉ": "20"
+        },
+      },
+    };
+
+    const aura = {
+      img: "../../../../../../assets/images/auras/attack.png",
+      description: `
+        Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.
+      `,
+    };
+
+    function showTooltip(event, formKey, spellIndex) {
+      const spell = forms[formKey].spells[spellIndex];
+      const tooltip = document.getElementById("tooltip");
+
+      const levelInfoHTML = spell.levelInfo
+        ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+        : "";
+
+      const damageHTML = spell.damage
+        ? `<p><strong class=gold-t>Multiplicateur :</strong> <strong class="gt">${spell.damage}</strong></p>`
+        : "";
+
+      const cooldownHTML = spell.cooldown
+        ? `<div class="cooldown">
+             <div class="cooldown-icon"></div>
+             <strong style='color:cyan'>${spell.cooldown} tours</strong>
+           </div>`
+        : "";
+
+      tooltip.innerHTML = `
+        <div class="spell-header">
+          <span class="spell-name">${spell.name}</span>
+          ${cooldownHTML}
+        </div>
+        <p>${spell.description}</p>
+        ${damageHTML}
+        ${levelInfoHTML ? `<ul class="level-info">${levelInfoHTML}</ul>` : ""}
+      `;
+
+      const spellElement = event.currentTarget;
+      const rect = spellElement.getBoundingClientRect();
+      tooltip.style.left = `${rect.left + window.scrollX}px`;
+      tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+
+      tooltip.style.display = "block";
+      tooltip.classList.remove("hidden");
+
+      spellElement.addEventListener("mouseleave", hideTooltip);
+    }
+
+    function hideTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = "none";
+      tooltip.classList.add("hidden");
+    }
+
+    let currentForm = "form1";
+
+    function switchForm(formKey) {
+      const form = forms[formKey];
+      currentForm = formKey;
+
+      const container = document.getElementById("champion-container");
+      container.style.transition = "opacity 0.4s cubic-bezier(.4,0,.2,1)";
+      container.style.opacity = 0;
+
+      const buttons = document.querySelectorAll(".form-selector button");
+      buttons.forEach((button) => {
+        if (button.getAttribute("onclick").includes(formKey)) {
+          button.classList.add("active");
+          button.disabled = true;
+        } else {
+          button.classList.remove("active");
+          button.disabled = false;
+        }
+      });
+
+      setTimeout(() => {
+        document.getElementById("champion-type").textContent = form.type;
+
+        // Mettre à jour les sorts
+        const spellsHTML = form.spells
+          .map(
+            (spell, index) => `
+            <div class="spell ${spell.isPassive ? "passive" : ""}">
+              <img src="${spell.img}" alt="${spell.name}" 
+                   onmouseover="showTooltip(event, '${formKey}', ${index})">
+            </div>
+          `
+          )
+          .join("");
+        document.getElementById("spells-section").innerHTML = spellsHTML;
+
+        // Mettre à jour les statistiques
+        const statsHTML = Object.entries(form.stats)
+          .map(
+            ([key, value]) => `
+              <div class="stat-name">${key}</div>
+              <div class="stat-value">${value}</div>
+            `
+          )
+          .join("");
+        document.getElementById("stats-section").innerHTML = `
+          <h3>Statistiques</h3>
+          <div class="stat-block">${statsHTML}</div>
+        `;
+
+        // Mettre à jour l'aura
+        document.getElementById("aura-img").src = aura.img;
+
+        container.style.opacity = 1;
+      }, 300);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".form-selector button");
+      buttons.forEach((button) => {
+        if (button.getAttribute("onclick").includes(currentForm)) {
+          button.classList.add("active");
+          button.disabled = true;
+        }
+      });
+    });
+
+    switchForm(currentForm);
+
+    function showAuraTooltip(event) {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.innerHTML = `
+        <h4 class="gold-t">Aura</h4>
+        <p>${aura.description}</p>
+      `;
+      const auraElement = event.currentTarget;
+      const rect = auraElement.getBoundingClientRect();
+      tooltip.style.left = `${rect.left + window.scrollX}px`;
+      tooltip.style.top = `${rect.bottom + window.scrollY + 10}px`;
+      tooltip.style.display = "block";
+      tooltip.classList.remove("hidden");
+      auraElement.classList.add("glow");
+      document.getElementById("aura-img").classList.add("glow");
+      auraElement.addEventListener("mouseleave", hideTooltip);
+    }
+    function hideAuraGlow() {
+      document.getElementById("aura-img").classList.remove("glow");
+    }
+  </script>
+</body>
+</html>

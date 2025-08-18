@@ -216,17 +216,19 @@ function createAuraDescriptionHTML() {
 }
 
 function showTooltip(event, spellIndex) {
+  console.log('showTooltip called for spell', spellIndex);
   // Ne pas afficher le tooltip sur mobile
   if (isMobile()) return;
-  
+
   const tooltip = document.getElementById("tooltip");
   if (!tooltip) return;
-  
+
   const spell = championForms[currentForm].spells[spellIndex];
   tooltip.innerHTML = createSpellDescriptionHTML(spell, spellIndex);
   positionTooltip(event, tooltip);
   tooltip.classList.add("show");
   currentTooltip = tooltip;
+  console.log('Tooltip shown for spell', spellIndex);
 }
 
 function showAuraTooltip(event) {
@@ -243,38 +245,72 @@ function showAuraTooltip(event) {
 }
 
 function positionTooltip(event, tooltip) {
-  const rect = tooltip.getBoundingClientRect();
+  const rect = event.currentTarget.getBoundingClientRect();
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
-  
-  let left = event.clientX + 15;
-  let top = event.clientY - 10;
-  
-  // Ajustement horizontal
-  if (left + rect.width > viewportWidth - 20) {
-    left = event.clientX - rect.width - 15;
+  const margin = 20;
+
+  // D'abord positionner le tooltip pour calculer sa taille
+  tooltip.style.left = '0px';
+  tooltip.style.top = '0px';
+  tooltip.style.visibility = 'hidden';
+  tooltip.style.display = 'block';
+
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const tooltipWidth = tooltipRect.width;
+  const tooltipHeight = tooltipRect.height;
+
+  let left = rect.left + rect.width / 2 - tooltipWidth / 2;
+  let top = rect.bottom + 10;
+
+  // Vérifier si le tooltip déborde horizontalement
+  if (left + tooltipWidth > viewportWidth - margin) {
+    left = viewportWidth - tooltipWidth - margin;
   }
-  
-  // Ajustement vertical
-  if (top + rect.height > viewportHeight - 20) {
-    top = event.clientY - rect.height + 10;
+  if (left < margin) {
+    left = margin;
   }
-  
-  // S'assurer que le tooltip reste dans les limites
-  left = Math.max(10, Math.min(left, viewportWidth - rect.width - 10));
-  top = Math.max(10, Math.min(top, viewportHeight - rect.height - 10));
-  
+
+  // Vérifier si le tooltip déborde verticalement en bas
+  if (top + tooltipHeight > viewportHeight - margin) {
+    // Essayer de le placer au-dessus du sort
+    top = rect.top - tooltipHeight - 10;
+
+    // Si ça déborde encore en haut, le placer au maximum visible en bas
+    if (top < margin) {
+      top = viewportHeight - tooltipHeight - margin;
+
+      // Si même comme ça c'est trop grand, ajuster la hauteur
+      if (top < margin) {
+        top = margin;
+        tooltip.style.maxHeight = `${viewportHeight - 2 * margin}px`;
+        tooltip.style.overflowY = 'auto';
+      }
+    }
+  }
+
+  // Appliquer la position finale
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;
+  tooltip.style.visibility = 'visible';
 }
 
 function hideTooltip() {
-  const tooltip = document.getElementById("tooltip");
-  if (tooltip) {
-    tooltip.classList.remove("show");
+  console.log('hideTooltip called, currentTooltip:', currentTooltip);
+  if (currentTooltip) {
+    console.log('Classes before removal:', currentTooltip.classList.toString());
+    currentTooltip.classList.remove("show");
+    console.log('Classes after removal:', currentTooltip.classList.toString());
+    console.log('Display style:', currentTooltip.style.display);
+
+    // Force le masquage
+    currentTooltip.style.display = 'none';
+    currentTooltip.style.maxHeight = ''; // Reset max-height
+    currentTooltip.style.overflowY = ''; // Reset overflow
     currentTooltip = null;
+    console.log('Tooltip hidden');
   }
-  
+
   if (touchTimeout) {
     clearTimeout(touchTimeout);
     touchTimeout = null;
@@ -537,17 +573,19 @@ function updateSpells(spells) {
     const img = document.createElement('img');
     img.src = spell.img;
     img.alt = spell.name;
+    // Empêcher l'image d'intercepter les événements de souris
+    img.style.pointerEvents = 'none';
     spellDiv.appendChild(img);
 
     // Event listeners pour les sorts (desktop seulement)
-    spellDiv.addEventListener('mouseenter', (e) => showTooltip(e, index));
+    spellDiv.addEventListener('mouseenter', (e) => {
+      console.log('Mouse ENTER on spell', index);
+      showTooltip(e, index);
+    });
     spellDiv.addEventListener('mouseleave', (e) => {
-      // Même logique que pour les sorts
-      setTimeout(() => {
-        if (!spellDiv.matches(':hover')) {
-          hideTooltip();
-        }
-      }, 50);
+      console.log('Mouse LEAVE from spell', index);
+      // Fermer immédiatement le tooltip quand on quitte le sort
+      hideTooltip();
     });
     spellDiv.addEventListener('touchstart', (e) => handleTouch(e, index));
 
@@ -745,13 +783,9 @@ function updateAura() {
 
   // Event listeners pour l'aura (desktop seulement)
   auraElement.addEventListener('mouseenter', showAuraTooltip);
-  auraElement.addEventListener('mouseleave', (e) => {
-    // Même logique que pour les sorts
-    setTimeout(() => {
-      if (!auraElement.matches(':hover')) {
-        hideTooltip();
-      }
-    }, 50);
+  auraElement.addEventListener('mouseleave', () => {
+    // Fermer immédiatement le tooltip quand on quitte l'aura
+    hideTooltip();
   });
   auraElement.addEventListener('touchstart', (e) => handleTouch(e, 0, true));
   auraElement.setAttribute('aria-label', 'Aura');
@@ -812,30 +846,3 @@ window.addEventListener('resize', handleResize);
 
 // Fermer le tooltip si on clique ailleurs
 document.addEventListener('click', hideTooltip);
-
-// Gestion globale de la souris pour fermer les tooltips
-document.addEventListener('mouseover', function(e) {
-  // Si on est sur mobile, ignorer
-  if (isMobile()) return;
-
-  // Si la souris n'est pas sur un élément avec tooltip, fermer le tooltip
-  if (!e.target.closest('.spell') && !e.target.closest('.aura') && !e.target.closest('.tooltip')) {
-    hideTooltip();
-  }
-});
-
-// Ajouter un event listener pour les mouvements de souris plus général
-document.addEventListener('mousemove', function(e) {
-  if (isMobile()) return;
-
-  // Si on a un tooltip actif et qu'on n'est plus sur l'élément source
-  if (currentTooltip && currentTooltip.classList.contains('show')) {
-    const activeSpells = document.querySelectorAll('.spell:hover');
-    const activeAuras = document.querySelectorAll('.aura:hover');
-
-    // Si aucun sort ni aura n'est survolé, fermer le tooltip
-    if (activeSpells.length === 0 && activeAuras.length === 0) {
-      hideTooltip();
-    }
-  }
-});

@@ -142,7 +142,7 @@ Nains:
 "Forgerons légendaires et guerriers intrépides, les Nains excellent dans l'artisanat et le combat rapproché avec leurs armes ancestrales."
 
 Revenants Chevaliers:
-"Anciens paladins revenus d'entre les morts, les Revenants Chevaliers allient honneur chevaleresque et puissance surnaturelle."
+"Anciens paladins revenus d'entre les morts, les Revenants Chevaliers alliént honneur chevaleresque et puissance surnaturelle."
 ```
 
 ## 📊 **Comparaison Avant/Après :**

@@ -395,29 +395,29 @@
      type: "Attaque",
       spells: [
         {
-          img: "sort1.png",
+          img: "assets/sort1.png",
           name: "Brise-demon",
           description: `
             Attaque tous les ennemis.
             Avant d'attaquer, a 25% de chances
-            de placer un debuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
-            A 50% de chances de placer un debuff <span class='gbt'>Affaiblissement</span> de 25%
+            de placer un débuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
+            A 50% de chances de placer un débuff <span class='gbt'>Affaiblissement</span> de 25%
             pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire.
             Les ennemies membre de l'Alliance corrompue, les Boss ou sbires ne peuvent pas resister a cet effet.<br><br>
-            Accorde un Tour supplementaire si un debuff <span class='gbt'>Affaiblissement</span> a ete place sur tous les ennemis
-            par cette competence.
+            Accorde un Tour supplémentaire si un débuff <span class='gbt'>Affaiblissement</span> a ete place sur tous les ennemis
+            par cette compétence.
 
           `,
           damage: "2.5*ATQ",
           levelInfo: [
             "Niv. 2 : Dégâts +10%",
             "Niv. 3 : Dégâts +10%",
-            "Niv. 4 : Chance de Buff/Debuff +10%",
-            "Niv. 5 : Chance de Buff/Debuff +10%",
+            "Niv. 4 : Chance de Buff/débuff +10%",
+            "Niv. 5 : Chance de Buff/débuff +10%",
           ],
         },
         {
-          img: "sort2.png",
+          img: "assets/sort2.png",
           name: "Retour dans l'abime",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -425,7 +425,7 @@
             Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire,
             chaque frappe ignore au lieu de ca 50% de la DEF de la cible.<br><br>
             Chaque frappe reduit l'ATQ de la cible de 5% (s'accumule jusqu'a 25%).
-            Chaque frappe augmente egalement l'ATQ de ce Champion de 5% (s'accumule jusqu'a 50%).
+            Chaque frappe augmente également l'ATQ de ce Champion de 5% (s'accumule jusqu'a 50%).
           `,
           damage: "2.4*ATQ",
           cooldown: 4,
@@ -436,7 +436,7 @@
           ],
         },
         {
-          img: "sort3.png",
+          img: "assets/sort3.png",
           name: "Fureur enragee",
           description: `
             Attaque 2 fois tous les ennemis.
@@ -454,10 +454,10 @@
           ],
         },
         {
-          img: "passif1.png",
+          img: "assets/passif1.png",
           name: "Cauchemar du Mal [P]",
           description: `
-            Active la competence <span class='gt'>Brise-demon</span> tous les cinq tours joues par ce Champion.<br><br>
+            Active la compétence <span class='gt'>Brise-demon</span> tous les cinq tours joues par ce Champion.<br><br>
             Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas porter de coup critique sur ce Champion.
           `,
           isPassive: true,

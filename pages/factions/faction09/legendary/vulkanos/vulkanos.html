@@ -400,14 +400,14 @@
       type: "Defense",
       spells: [
         {
-			img: "sort1.png",
+			img: "assets/sort1.png",
 			name: "Lame en fusion",
 			description: `
             	Attaque un ennemi.<br><br>
-            	Chaque fois que cette competence est utilisee, augmente de maniere permanente
-				les degats infliges par cette competence de 10% (s'accumule jusqu'a 100%).<br><br>
-				Possede 50% de chances de contre-attaquer avec cette competence chaque fois qu'un ennemi
-				sous debuff <span class='gbt'>Brulure de PV</span> attaque ce Champion ou ses allies.
+            	Chaque fois que cette compétence est utilisee, augmente de maniere permanente
+				les degats infliges par cette compétence de 10% (s'accumule jusqu'a 100%).<br><br>
+				Possède 50% de chances de contre-attaquer avec cette compétence chaque fois qu'un ennemi
+				sous débuff <span class='gbt'>Brulure de PV</span> attaque ce Champion ou ses alliés.
           	`,
           	damage: "3.5*DEF",
           	levelInfo: [
@@ -416,12 +416,12 @@
           	],
         },
         {
-          	img: "sort2.png",
+          	img: "assets/sort2.png",
           	name: "Terreur ardente",
           	description: `
             	Attaque tous les ennemis.<br><br>
-				Place un debuff <span class='gbt'>Peur</span> pendant 2 tours.
-				Les ennemis affliges d'un debuff <span class='gbt'>Brulure de PV</span> ne peuvent pas resister a ce debuff.
+				Place un débuff <span class='gbt'>Peur</span> pendant 2 tours.
+				Les ennemis affliges d'un débuff <span class='gbt'>Brulure de PV</span> ne peuvent pas resister a ce débuff.
           	`,
           	damage: "3.6*DEF",
           	cooldown: 4,
@@ -432,26 +432,26 @@
           	],
         },
         {
-          	img: "sort3.png",
+          	img: "assets/sort3.png",
           	name: "Brulure de demolition",
           	description: `
             	Attaque 2 fois un ennemi.<br><br>
-            	Les degats infliges par cette competence augmentent de 10% pour les tours restants des debuffs
+            	Les degats infliges par cette compétence augmentent de 10% pour les tours restants des débuffs
 				<span class='gbt'>Brulure de PV</span> sur l'equipe ennemie (s'accumule jusqu'a 100%).
           	`,
           	damage: "3*DEF",
           	cooldown: 4,
           	factions: [
             `
-				Les degats recus par ce Champion sont reduits de 50% lorsque cette competence n'est pas en temps de recharge.
+				Les degats recus par ce Champion sont reduits de 50% lorsque cette compétence n'est pas en temps de recharge.
 			`,
             `
-				Chaque fois qu'un debuff <span class='gbt'>Brulure de PV</span> est active sur un ennemi, a 50% de chances
-				de reduire d'1 tour le temps de recharge de cette competence.
+				Chaque fois qu'un débuff <span class='gbt'>Brulure de PV</span> est active sur un ennemi, a 50% de chances
+				de reduire d'1 tour le temps de recharge de cette compétence.
 			`,
             `
-				Si la cible se trouve sous debuff <span class='gbt'>Brulure de PV</span>, cette attaque ignorera les buffs
-				<span class='gbt'>Peau de Pierre</span>, <span class='gbt'>Invincible</span>, <span class='gbt'>Protection d'allie</span>,
+				Si la cible se trouve sous débuff <span class='gbt'>Brulure de PV</span>, cette attaque ignorera les buffs
+				<span class='gbt'>Peau de Pierre</span>, <span class='gbt'>Invincible</span>, <span class='gbt'>Protection d'allié</span>,
 				<span class='gbt'>Blocage des Degats</span> et <span class='gbt'>Bouclier</span>.
 			`
           	],
@@ -462,32 +462,32 @@
           	],
         },
         {
-          	img: "passif1.png",
+          	img: "assets/passif1.png",
           	name: "Feu demoniaque deferlant [P]",
           	description: `
             	Des qu'un ennemi recoit un buff ou que son Compteur de Tour est augmente, a 50% de chances
-				de placer un debuff <span class='gbt'>Brulure de PV</span> sur cet ennemi pendant 2 tours.<br><br>
-				Si un ennemi est deja afflige d'un debuff <span class='gbt'>Brulure de PV</span>, a au lieu de ca 50%
+				de placer un débuff <span class='gbt'>Brulure de PV</span> sur cet ennemi pendant 2 tours.<br><br>
+				Si un ennemi est deja afflige d'un débuff <span class='gbt'>Brulure de PV</span>, a au lieu de ca 50%
 				de chances de l'activer instantanement.<br><br>
-				Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
           	`,
           	factions: [
             `
-            	Il est impossible de bloquer et de resister aux debuffs <span class='gbt'>Brulure de PV</span>
-				places par cette competence.
+            	Il est impossible de bloquer et de resister aux débuffs <span class='gbt'>Brulure de PV</span>
+				places par cette compétence.
             `,
             `
-            	Chaque fois qu'un debuff <span class='gbt'>Brulure de PV</span> s'active sur un ennemi,
+            	Chaque fois qu'un débuff <span class='gbt'>Brulure de PV</span> s'active sur un ennemi,
 				ce Champion gagne 5% d'Ignorer la DEF (s'accumule jusqu'a 100%).
             `,
             `
-            	Place un debuff <span class='gbt'>Blocage de reanimation</span> sur les ennemis tues alors qu'ils etaient
-				affliges d'un debuff <span class='gbt'>Brulure de PV</span>.
+            	Place un débuff <span class='gbt'>Blocage de reanimation</span> sur les ennemis tues alors qu'ils etaient
+				affliges d'un débuff <span class='gbt'>Brulure de PV</span>.
             `,
           	],
 			levelInfo: [
-        		"Niv. 2 : Chance de Buff/Debuff +10%",
-        		"Niv. 3 : Chance de Buff/Debuff +10%",
+        		"Niv. 2 : Chance de Buff/débuff +10%",
+        		"Niv. 3 : Chance de Buff/débuff +10%",
 			],
           	isPassive: true,
         },

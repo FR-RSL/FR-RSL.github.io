@@ -395,47 +395,47 @@
       type: "Soutien",
       spells: [
         {
-          img: "sort1.png",
+          img: "assets/sort1.png",
           name: "Dard de Gungnir",
           description: `
             Attaque un ennemi.
-            Possede 50% de chances de placer un debuff <span class='gbt'>Fou furieux</span> pendant 2 tours.<br><br>
-			Il est impossible de placer ce debuff sur les Boss.
+            Possède 50% de chances de placer un débuff <span class='gbt'>Fou furieux</span> pendant 2 tours.<br><br>
+			Il est impossible de placer ce débuff sur les Boss.
           `,
           damage: "5*ATQ",
           levelInfo: [
             "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Chances de Buff/Debuff +10%",
-            "Niv. 4 : Chances de Buff/Debuff +15%"
+            "Niv. 3 : Chances de Buff/débuff +10%",
+            "Niv. 4 : Chances de Buff/débuff +15%"
           ],
         },
         {
-          img: "sort2.png",
+          img: "assets/sort2.png",
           name: "Tempete de familiers",
           description: `
             Retire tous les buffs dont disposent les ennemis.<br><br>
-			Possede 80% de chances de placer un debuff <span class='gbt'>Reduction de DEF</span> de 60% sur tous les ennemis pendant 2 tours.
-			Possede egalement 80% de chances de placer un debuff <span class='gbt'>Etourdissement</span> sur tous les ennemis pendant 1 tour.
+			Possède 80% de chances de placer un débuff <span class='gbt'>Reduction de DEF</span> de 60% sur tous les ennemis pendant 2 tours.
+			Possède également 80% de chances de placer un débuff <span class='gbt'>Etourdissement</span> sur tous les ennemis pendant 1 tour.
           `,
           cooldown: 4,
           levelInfo: [
-            "Niv. 2 : Chances de Buff/Debuff +10%",
-            "Niv. 3 : Chances de Buff/Debuff +10%",
+            "Niv. 2 : Chances de Buff/débuff +10%",
+            "Niv. 3 : Chances de Buff/débuff +10%",
             "Niv. 4 : Temps de recharge -1",
           ],
         },
         {
-          img: "sort3.png",
+          img: "assets/sort3.png",
           name: "Jugement asgardien",
           description: `
             Attaque un ennemi.
 			Avant d'attaquer, vole tous les buffs de la cible.
-			Les degats infliges par cette competence dependent du Type de la cible :<br><br>
+			Les degats infliges par cette compétence dependent du Type de la cible :<br><br>
 			ATQ : Infligera des degats bases sur l'ATQ de la cible.<br><br>
 			DEF : Infligera des degats bases sur la DEF de la cible.<br><br>
 			PV/Soutien/Boss : Infligera des degats bases sur les PV MAX de la cible.<br><br>
-			Cette attaque ignorera egalement 100% de la DEF de la cible.<br><br>
-			Si la cible a ete tuee par cette competence, ranime un allie mort aleatoire
+			Cette attaque ignorera également 100% de la DEF de la cible.<br><br>
+			Si la cible a ete tuee par cette compétence, ranime un allié mort aleatoire
 			avec 50% de PV et 50% de Compteur de Tour.
           `,
 		  damage: "5*(ATQ Ennemie) | 5*(DEF Ennemie) | 0.35*(PV MAX Ennemie) | 0.1*(PV MAX Ennemie) (Boss)",
@@ -447,13 +447,13 @@
           ],
         },
         {
-          img: "passif1.png",
+          img: "assets/passif1.png",
           name: "Sagesse d'Odin [P]",
           description: `
             Tous les 9 tours, place un buff <span class='gbt'>Blocage des Degats</span>
-			sur ce Champion pendant 1 tour, puis applique egalement un effet
+			sur ce Champion pendant 1 tour, puis applique également un effet
 			<span class='gbt'>Propagation de Buff</span>, prenant tous les buffs
-			de ce Champion pour les placer sur tous les allies.
+			de ce Champion pour les placer sur tous les alliés.
           `,
           isPassive: true,
         },

@@ -414,7 +414,7 @@ const forms = {
         type: "PV",
         spells: [
         {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Choc sismique",
             description: `
               Attaque un ennemi.
@@ -425,7 +425,7 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Larcin sanglant",
             description: `
               Attaque un ennemi. Vole 2 buffs a une cible ennemie.
@@ -439,11 +439,11 @@ const forms = {
             ],
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Exterminer les faibles",
             description: `
               Attaque tous les ennemis. Les degats de cette
-              competence augmentent de 30% si les PV MAX de ce Champion
+              compétence augmentent de 30% si les PV MAX de ce Champion
               sont plus eleves que les PV MAX de la cible.
             `,
             damage: "0.31*PV",
@@ -454,20 +454,20 @@ const forms = {
             ],
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Science infinie [P]",
             description: `
               Les DEG C. de ce Champion sont augmentes de 1% par tranche de
-              1000 PV qu'il possede.<br><br>
+              1000 PV qu'il Possède.<br><br>
               Augmente les PV MAX de ce Champion de 20% (s'accumule jusqu'a 100%)
               et sa VIT de 20 (s'accumule jusqu'a 100). des que ce Champion tue un ennemi.
               Se reinitialise a chaque round.`,
@@ -489,7 +489,7 @@ const forms = {
         type: "Defense",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Arcs de douleur",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe augmente 
@@ -501,12 +501,12 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Procedure de broyage",
             description: `
               Attaque un ennemi. Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
-              Equilibre les PV de tous les allies. Les niveaux de PV de tous les allies
-              seront amenes au niveau de l'allie ayant le plus de PV.
+              Equilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés
+              seront amenes au niveau de l'allié ayant le plus de PV.
             `,
             damage: "5.31*DEF",
             cooldown: 5,
@@ -516,13 +516,13 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Moteur de guerre",
             description: `
-              Place un buff <span class='gbt'>Protection d'Allie</span> de 50%
-              sur tous les allies sauf ce Champion pendant 2 tours.
-              Place egalement un buff <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.<br><br>
-              Place ensuite un buff <span class='gbt'>Bouclier</span> de 2 tours sur les allies
+              Place un buff <span class='gbt'>Protection d'allié</span> de 50%
+              sur tous les alliés sauf ce Champion pendant 2 tours.
+              Place également un buff <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.<br><br>
+              Place ensuite un buff <span class='gbt'>Bouclier</span> de 2 tours sur les alliés
               ayant moins de 50% de PV. La valeur du bouclier est proportionnelle a la DEF de ce Champion.
             `,
             damage: "3.5*DEF (Bouclier)",
@@ -533,20 +533,20 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
             name: "Armure ensorcelee [P]",
             description: `
               Lorsqu'il est attaqué, renvoie sur l'assaillant 80% des degats recus par ce Champion.
-              Les debuffs places sur ce Champion detruisent la PRE de celui qui les produit de 10%
+              Les débuffs places sur ce Champion detruisent la PRE de celui qui les produit de 10%
               (s'accumule jusqu'a 50%).
             `,
             isPassive: true,

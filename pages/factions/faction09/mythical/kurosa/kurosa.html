@@ -414,11 +414,11 @@ const forms = {
         type: "Soutien",
         spells: [
           {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Déferlement de chaos",
             description: `
               Attaque tous les ennemis.<br><br>
-			  Soigne tous les allies. La valeur du soin est proportionnelle a l'ATQ de cette Championne.
+			  Soigne tous les alliés. La valeur du soin est proportionnelle a l'ATQ de cette Championne.
             `,
             damage: "3*ATQ | 2*ATQ (Soin)",
             levelInfo: [
@@ -427,12 +427,12 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Tout pour Siroth",
             description: `
-              Retire tous les debuffs sur tous les alliés.<br><br>
+              Retire tous les débuffs sur tous les alliés.<br><br>
               Ensuite, place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% 
-              et un buff <span class='gbt'>Bouclier</span> sur tous les allies pendant 2 tours.<br>
+              et un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.<br>
 			  La valeur du <span class='gbt'>Bouclier</span> est proportionnelle a l'ATQ de cette Championne.
             `,
             cooldown: 4,
@@ -441,12 +441,12 @@ const forms = {
             ]
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Propagation",
             description: `
               Place un buff <span class='gbt'>Raillerie</span> et un buff <span class='gbt'>Fortification</span> de 25% 
               sur cette Championne pendant 2 tours.<br>
-			  Place egalement un buff <span class='gbt'>Invincible</span> sur tous les allies sauf cette Championne pendant 2 tours.
+			  Place également un buff <span class='gbt'>Invincible</span> sur tous les alliés sauf cette Championne pendant 2 tours.
             `,
             cooldown: 5,
             levelInfo: [
@@ -454,22 +454,22 @@ const forms = {
             ]
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Collectrice de Pions [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
-              Recoit 15% de degats en moins pour chaque allie vivant.<br><br>
+              Recoit 15% de degats en moins pour chaque allié vivant.<br><br>
               <span class='gbt'>Effet Actif</span><br><br>
-              Fait instantanement passer cette Championne a sa Forme Alternative des que son dernier allie vivant est tue.
+              Fait instantanement passer cette Championne a sa Forme Alternative des que son dernier allié vivant est tue.
             `,
 			cooldown: 4,
             isPassive: true,
@@ -490,7 +490,7 @@ const forms = {
         type: "Attaque",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Destructrice de tout",
             description: `
               Attaque 3 fois un ennemi.<br><br>
@@ -504,12 +504,12 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Icône de devastation",
             description: `
               Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.
 			  Les cibles dont l'ATQ est inferieure a l'ATQ de cette Championne ne peuvent pas resister a cet effet.
-              Place egalement un debuff <span class='gbt'>Affaiblissement</span> de 25% sur tous les ennemis pendant 2 tours.
+              Place également un débuff <span class='gbt'>Affaiblissement</span> de 25% sur tous les ennemis pendant 2 tours.
 			  Les cibles dont l'ATQ est inferieure ou egale a l'ATQ de cette Championne ne peuvent pas resister a cet effet.
             `,
             damage: "4*ATQ",
@@ -520,14 +520,14 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Agent impitoyable",
             description: `
               Place un buff <span class='gbt'>Fracas</span> de 15% et un buff <span class='gbt'>Augmentation du TAUX C.</span> de 30%
 			  sur cette Championne pendant 3 tours.<br><br>
-			  Place un debuff <span class='gbt'>Peur Absolue</span> sur tous les ennemis pendant 1 tour.
+			  Place un débuff <span class='gbt'>Peur Absolue</span> sur tous les ennemis pendant 1 tour.
 			  Les cibles dont l'ATQ est inferieure ou egale a l'ATQ de cette Championne ne peuvent pas resister a cet effet.<br><br>
-              Accorde un Tour supplementaire.
+              Accorde un Tour supplémentaire.
             `,
             cooldown: 5,
             levelInfo: [
@@ -535,20 +535,20 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
           name: "Vile meurtriere [P]",
           description: `
-              Inflige 15% de degats supplementaires pour chaque allie mort.
-			  Chaque coup critique booste le Compteur de Tour de cette Championne de 10% pour chaque allie mort.
+              Inflige 15% de degats supplémentaires pour chaque allié mort.
+			  Chaque coup critique booste le Compteur de Tour de cette Championne de 10% pour chaque allié mort.
             `,
             isPassive: true,
           },

@@ -118,14 +118,14 @@ Par :
 ✅ Support de tous les types de champions
 ✅ Gestion des cooldowns
 ✅ Indicateurs passifs
-✅ Styles pour buffs/debuffs
+✅ Styles pour buffs/débuffs
 
 ## Notes importantes
 
 - Les images d'aura sont dans `assets/images/auras/`
 - Les images d'affinité sont dans `assets/images/affinity/`
 - Les icônes de faction sont dans `assets/images/factions/`
-- Utilisez `<span class='gbt'>Nom du buff</span>` pour styliser les buffs/debuffs
+- Utilisez `<span class='gbt'>Nom du buff</span>` pour styliser les buffs/débuffs
 - Les descriptions supportent le HTML (utilisez `<br>` pour les sauts de ligne)
 
 Cette template est basée sur la page d'Arashi et inclut toutes les améliorations récentes !

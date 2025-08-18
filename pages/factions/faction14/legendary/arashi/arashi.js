@@ -13,9 +13,9 @@ const championData = {
       damage: "0.14*PV",
       levelInfo: [
         "Niv. 2 : Dégâts +10%",
-        "Niv. 3 : Chance de Buff/Debuff +10%",
+        "Niv. 3 : Chance de Buff/débuff +10%",
         "Niv. 4 : Dégâts +10%",
-        "Niv. 5 : Chance de Buff/Debuff +15%",
+        "Niv. 5 : Chance de Buff/débuff +15%",
       ],
     },
     {
@@ -204,11 +204,11 @@ function positionTooltip(event, tooltip) {
   if (top + tooltipHeight > viewportHeight - margin) {
     // Essayer de le placer au-dessus du sort
     top = rect.top - tooltipHeight - 10;
-    
+
     // Si ça déborde encore en haut, le placer au maximum visible en bas
     if (top < margin) {
       top = viewportHeight - tooltipHeight - margin;
-      
+
       // Si même comme ça c'est trop grand, ajuster la hauteur
       if (top < margin) {
         top = margin;
@@ -217,7 +217,35 @@ function positionTooltip(event, tooltip) {
       }
     }
   }
-  
+
+  // NOUVELLE CONDITION : S'assurer que le tooltip ne chevauche pas l'image du sort
+  const tooltipBottom = top + tooltipHeight;
+  const tooltipRight = left + tooltipWidth;
+
+  // Vérifier si le tooltip chevauche avec l'image du sort
+  if (!(tooltipRight < rect.left ||
+        left > rect.right ||
+        tooltipBottom < rect.top ||
+        top > rect.bottom)) {
+    // Il y a chevauchement, repositionner
+    if (rect.top - tooltipHeight - 10 >= margin) {
+      // Placer au-dessus si possible
+      top = rect.top - tooltipHeight - 10;
+    } else if (rect.right + 10 + tooltipWidth <= viewportWidth - margin) {
+      // Placer à droite si possible
+      left = rect.right + 10;
+      top = rect.top + rect.height / 2 - tooltipHeight / 2;
+    } else if (rect.left - tooltipWidth - 10 >= margin) {
+      // Placer à gauche si possible
+      left = rect.left - tooltipWidth - 10;
+      top = rect.top + rect.height / 2 - tooltipHeight / 2;
+    } else {
+      // En dernier recours, placer en bas avec décalage
+      top = rect.bottom + 10;
+      left = Math.max(margin, Math.min(left, viewportWidth - tooltipWidth - margin));
+    }
+  }
+
   // Appliquer la position finale
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;

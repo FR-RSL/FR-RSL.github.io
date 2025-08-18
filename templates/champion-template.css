@@ -715,7 +715,7 @@ body::before {
     }
 }
 
-/* Styles pour les buffs/debuffs */
+/* Styles pour les buffs/débuffs */
 .gbt {
     display: inline-flex;
     align-items: center;

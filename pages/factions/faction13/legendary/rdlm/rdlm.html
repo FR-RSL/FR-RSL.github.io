@@ -395,13 +395,13 @@
      type: "Attaque",
       spells: [
         {
-          img: "sort1.png",
+          img: "assets/sort1.png",
           name: "Fente Fracassante",
           description: `
             Attaque un ennemi.<br><br>
             Remplit le Compteur de Tour de ce Champion de 10%.
             Remplit le Compteur de Tour de ce Champion de 2%
-            supplementaires pour chaque buff sur la cible.
+            supplémentaires pour chaque buff sur la cible.
           `,
           damage: "0.27*PV + 1*ATQ",
           levelInfo: [
@@ -412,12 +412,12 @@
           ],
         },
         {
-          img: "sort2.png",
+          img: "assets/sort2.png",
           name: "Hache Enchantee",
           description: `
             Attaque un ennemi.<br><br>
             Ignorera 50% de la DEF de la cible.<br><br>
-            Accorde un Tour supplementaire si cette attaque tue un ennemi.
+            Accorde un Tour supplémentaire si cette attaque tue un ennemi.
           `,
           damage: "0.3*PV + 1.8*ATQ",
           cooldown: 5,
@@ -429,15 +429,15 @@
           ],
         },
         {
-          img: "sort3.png",
+          img: "assets/sort3.png",
           name: "Force Royale",
           description: `
             Attaque tous les ennemis.<br><br>
             Ignorera les buffs <span class='gbt'>Bouclier</span>,
             <span class='gbt'>Renforcer</span>, <span class='gbt'>Intuable</span>,
-            <span class='gbt'>Protection d'allie</span> et
+            <span class='gbt'>Protection d'allié</span> et
             <span class='gbt'>Blocage des Degats</span>.<br><br>
-            Reduit de 2 tours le Temps de recharge de la competence <span class='gt'>Hache Enchantee</span>
+            Reduit de 2 tours le Temps de recharge de la compétence <span class='gt'>Hache Enchantee</span>
             si cette attaque tue un ennemi.
           `,
           damage: "0.35*PV + 1.8*ATQ",
@@ -449,12 +449,12 @@
           ],
         },
         {
-          img: "passif1.png",
+          img: "assets/passif1.png",
           name: "Habilete Fabuleuse [P]",
           description: `
             Augmente de 50% l'ATQ de ce Champion a chaque fois que ce Champion tue un ennemi.
             S'additionne jusqu'a 100%.<br><br>
-            Immunise contre les debuffs <span class='gbt'>Reduction d'ATQ</span> et <span class='gbt'>Blocage des Competences Actives</span>.
+            Immunise contre les débuffs <span class='gbt'>Reduction d'ATQ</span> et <span class='gbt'>Blocage des compétences Actives</span>.
           `,
           isPassive: true,
         },

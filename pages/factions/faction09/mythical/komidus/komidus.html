@@ -414,12 +414,12 @@ const forms = {
         type: "Soutien",
         spells: [
         {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Attiser l'angoisse",
             description: `
               Attaque 2 fois un ennemi.<br><br>
 			  Chaque frappe reduit la DEF de la cible de 2% (s'accumule jusqu'a 20%).<br><br>
-			  Chaque frappe vole egalement 10% du Compteur de Tour de la cible.
+			  Chaque frappe vole également 10% du Compteur de Tour de la cible.
             `,
             damage: "0.11*PV",
             levelInfo: [
@@ -428,14 +428,14 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Agonie accablante",
             description: `
               Attaque tous les ennemis.
-              Retire tous les buffs sur tous les ennemis et leur inflige un debuff
-			  <span class='gbt'>Blocage des competences actives</span> pendant 2 tours.<br><br>
-			  Vole egalement 20% du Compteur de Tour de chaque ennemi sous debuff
-			  <span class='gbt'>Blocage des competences actives</span>.
+              Retire tous les buffs sur tous les ennemis et leur inflige un débuff
+			  <span class='gbt'>Blocage des compétences actives</span> pendant 2 tours.<br><br>
+			  Vole également 20% du Compteur de Tour de chaque ennemi sous débuff
+			  <span class='gbt'>Blocage des compétences actives</span>.
             `,
             damage: "0.22*PV",
             cooldown: 3,
@@ -445,11 +445,11 @@ const forms = {
             ]
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Voleur de joie",
             description: `
               Attaque un ennemi. Vole 100% du Compteur de Tour de la cible.<br><br>
-			  Place egalement les competences de la cible en recharge.
+			  Place également les compétences de la cible en recharge.
             `,
             damage: "0.3*PV",
             cooldown: 4,
@@ -460,16 +460,16 @@ const forms = {
             ]
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Dramatis Miserae [P]",
             description: `
               Des que ce Champion perd 30% de PV ou plus lors d'un seul tour, inflige des degats equivalents
@@ -495,13 +495,13 @@ const forms = {
         type: "PV",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Artiste instable",
             description: `
               Attaque 2 fois un ennemi.<br><br>
-			  Chaque frappe possede 50% de chances de placer un debuff
+			  Chaque frappe Possède 50% de chances de placer un débuff
 			  <span class='gbt'>Bombe</span> pendant 2 tours.<br><br>
-			  Soigne ce Champion de 10% de ses PV MAX pour chaque debuff <span class='gbt'>Bombe</span>
+			  Soigne ce Champion de 10% de ses PV MAX pour chaque débuff <span class='gbt'>Bombe</span>
 			  place.
             `,
             damage: "0.12*PV | 0.15*PV (Bombe)",
@@ -511,16 +511,16 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Clou du spectacle explosif",
             description: `
               Attaque tous les ennemis.<br><br>
-			  Place 2 debuffs <span class='gbt'>Bombe</span> sur tous les ennemis pendant 2 tours.<br><br>
-			  Fait exploser instantanement tous les debuffs <span class='gbt'>Bombe</span> sur les ennemis
+			  Place 2 débuffs <span class='gbt'>Bombe</span> sur tous les ennemis pendant 2 tours.<br><br>
+			  Fait exploser instantanement tous les débuffs <span class='gbt'>Bombe</span> sur les ennemis
 			  dotes de buffs <span class='gbt'>Peau de Pierre</span> ou les ennemis 
 			  dont les PV sont inferieurs aux PV de ce Champion.<br><br>
-			  Ensuite, place un debuff <span class='gbt'>Etourdissement</span> pendant 1 tour sur tous les ennemis
-			  dont les debuffs <span class='gbt'>Bombe</span> ont explose a cause de cette competence.
+			  Ensuite, place un débuff <span class='gbt'>Etourdissement</span> pendant 1 tour sur tous les ennemis
+			  dont les débuffs <span class='gbt'>Bombe</span> ont explose a cause de cette compétence.
             `,
             damage: "0.25*PV | 0.33*PV (Bombe)",
             cooldown: 3,
@@ -530,13 +530,13 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Rappel mortel",
             description: `
               Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
-			  Place egalement un debuff <span class='gbt'>Affaiblissement</span> de 25%
+			  Place également un débuff <span class='gbt'>Affaiblissement</span> de 25%
 			  pendant 2 tours sur tous les ennemis.<br><br>
-			  Accorde ensuite un Tour supplementaire.
+			  Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
             levelInfo: [
@@ -544,23 +544,23 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
             name: "Rira bien [P]",
             description: `
-              Possede 100% de chances de renvoyer sur un assaillant tous les debuffs
+              Possède 100% de chances de renvoyer sur un assaillant tous les débuffs
 			  <span class='gbt'>Bombe</span> places sur ce Champion.
-			  Possede egalement 30% de chances de renvoyer sur un assaillant tous les autres debuffs
+			  Possède également 30% de chances de renvoyer sur un assaillant tous les autres débuffs
 			  places sur ce Champion.<br><br>
-			  Soigne ce Champion de 20% de ses PV MAX chaque fois qu'un ennemi est tue par un debuff <span class='gbt'>Bombe</span>.
+			  Soigne ce Champion de 20% de ses PV MAX chaque fois qu'un ennemi est tue par un débuff <span class='gbt'>Bombe</span>.
             `,
             isPassive: true,
           },

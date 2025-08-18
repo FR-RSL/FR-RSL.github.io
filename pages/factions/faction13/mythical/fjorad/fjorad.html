@@ -414,12 +414,12 @@ const forms = {
         type: "Soutien",
         spells: [
           {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Morsure du loup",
             description: `
-              Attaque 2 fois un ennemi. Chaque frappe a 50% de chance de placer un debuff 
+              Attaque 2 fois un ennemi. Chaque frappe a 50% de chance de placer un débuff 
               <span class='gbt'>Gel</span> pendant 1 tour.<br><br>
-              Si la cible ne se trouve pas sous debuff <span class='gbt'>Gel</span>, 
+              Si la cible ne se trouve pas sous débuff <span class='gbt'>Gel</span>, 
               repetera une fois l'attaque.
             `,
             damage: "2.6*ATQ",
@@ -429,26 +429,26 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Grand Capitaine",
             description: `
-              Place un buff <span class='gbt'>Blocage des Debuffs</span> et un buff
+              Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
               <span class='gbt'>Augmentation de VIT</span> de 30% sur tous les alliés pendant 2 tours.<br><br>
-              Reduit d'1 tour le temps de recharge de toutes les competences des alliés, sauf celles de ce Champion.
+              Reduit d'1 tour le temps de recharge de toutes les compétences des alliés, sauf celles de ce Champion.
             `,
             cooldown: 4,
             levelInfo: ["Niv. 2 : Temps de recharge -1"]
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Rage du Coeur-de-loup",
             description: `
               Attaque tous les ennemis.<br><br>
-              Place un debuff <span class='gbt'>Gel</span> sur tous les ennemis
-              pendant 1 tour et un debuff <span class='gbt'>Réduction de la VIT</span> de 30%
+              Place un débuff <span class='gbt'>Gel</span> sur tous les ennemis
+              pendant 1 tour et un débuff <span class='gbt'>Réduction de la VIT</span> de 30%
               sur tous les ennemis pendant 2 tours. Si un ennemi appartient au Pacte Gaellen, place au lieu
-              de ca un debuff <span class='gbt'>Gel</span> de 2 tours.<br><br>
-              Accorde un Tour supplementaire.
+              de ca un débuff <span class='gbt'>Gel</span> de 2 tours.<br><br>
+              Accorde un Tour supplémentaire.
             `,
             damage: "5.6*ATQ",
             cooldown: 5,
@@ -458,19 +458,19 @@ const forms = {
             ]
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Se mange froid [P]",
             description: `
-            Des que ce Champion recoit un debuff d'un ennemi, a 30% de chances de placer un debuff
+            Des que ce Champion recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
             <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour. Se produit une fois par tour.
             Ces chances passent a 100% si la cible appartient au Pacte Gaellen.
             `,
@@ -492,11 +492,11 @@ const forms = {
         type: "PV",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Fente de givre",
             description: `
               Attaque un ennemi.<br><br>
-              Si cette attaque tue un ennemi, reinitialise le temps de recharge d'une competence aleatoire de ce Champion.
+              Si cette attaque tue un ennemi, reinitialise le temps de recharge d'une compétence aleatoire de ce Champion.
             `,
             damage: "0.28*PV",
             levelInfo: [
@@ -504,10 +504,10 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Seisme de glacier",
             description: `
-              Attaque tous les ennemis. Inflige une frappe supplementaire aux ennemis sous debuffs
+              Attaque tous les ennemis. Inflige une frappe supplémentaire aux ennemis sous débuffs
               <span class='gbt'>Gel</span>,
               <span class='gbt'>Etourdissement</span>,
               <span class='gbt'>Peur</span>,
@@ -516,8 +516,8 @@ const forms = {
               <span class='gbt'>Petrification</span>.<br><br>
               Chaque frappe reduit les PV MAX de chaque cible de 25% des 
               degats infliges (s'accumule jusqu'a 50%).<br><br>
-              Chaque frappe reduit egalement le Compteur de Tour de chaque cible de 25%.
-              Il est impossible de resister a cet effet si un ennemi se trouve sous debuff
+              Chaque frappe reduit également le Compteur de Tour de chaque cible de 25%.
+              Il est impossible de resister a cet effet si un ennemi se trouve sous débuff
               <span class='gbt'>Gel</span>,
               <span class='gbt'>Etourdissement</span>,
               <span class='gbt'>Peur</span>,
@@ -533,14 +533,14 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Disciple de Tormin",
             description: `
               Attaque un ennemi.<br><br>
-              Ignorera 50% de la DEF de la cible. Si la cible se trouve sous debuff
+              Ignorera 50% de la DEF de la cible. Si la cible se trouve sous débuff
               <span class='gbt'>Gel</span>, Ignorera au lieu de ca 100% de la DEF de la cible.<br><br>
-              Si la cible est tuee lorsqu'elle se trouve sous debuff
-              <span class='gbt'>Gel</span>, place egalement un debuff <span class='gbt'>Blocage de reanimation</span>.
+              Si la cible est tuee lorsqu'elle se trouve sous débuff
+              <span class='gbt'>Gel</span>, place également un débuff <span class='gbt'>Blocage de reanimation</span>.
             `,
             damage: "0.33*PV",
             cooldown: 4,
@@ -550,20 +550,20 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
           name: "Resolution glaciale [P]",
           description: `
-            Contre-attaque avec la competence <span class='gt'>Fente de givre</span>
-            des qu'un ennemi augmente le temps de recharge d'une des competences de ce Champion.
+            Contre-attaque avec la compétence <span class='gt'>Fente de givre</span>
+            des qu'un ennemi augmente le temps de recharge d'une des compétences de ce Champion.
             `,
             isPassive: true,
           },

@@ -400,11 +400,11 @@
       type: "Attaque",
       spells: [
         {
-          img: "sort1.png",
+          img: "assets/sort1.png",
           name: "Chant de dague",
           description: `
             Attaque tous les ennemis.<br><br>
-            A 15% de chances de placer un debuff
+            A 15% de chances de placer un débuff
             <span class='gbt'>Etourdissement</span> pendant 1 tour.
             Ignorera 20% de la RES de chaque cible pour chaque buff
             <span class='gbt'>Soins continus</span> sur ce Champion.
@@ -412,30 +412,30 @@
           damage: "2.4*ATQ",
           levelInfo: [
             "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Chance de Buff/Debuff +10%",
+            "Niv. 3 : Chance de Buff/débuff +10%",
             "Niv. 4 : Dégâts +15%",
           ],
         },
         {
-          img: "sort2.png",
+          img: "assets/sort2.png",
           name: "Orchestre de Guerre",
           description: `
             Selectionne une cible.<br><br>
-            Si la cible est un ennemi, reduit d'1 tour la duree de tous les buffs
-            sur tous les ennemis. Place un debuff <span class='gbt'>Poison</span> de 5%
+            Si la cible est un ennemi, reduit d'1 tour la durée de tous les buffs
+            sur tous les ennemis. Place un débuff <span class='gbt'>Poison</span> de 5%
             sur tous les ennemis pendant 2 tours et un <span class='gbt'>Poison</span> de 5%
-            supplementaires pendant 2 tours pour chaque buff <span class='gbt'>Soins continus</span>
-            sur ce Champion. Il est impossible de resister a ces debuffs.
-            Ensuite, active instantanement tous les debuffs <span class='gbt'>Poison</span>
+            supplémentaires pendant 2 tours pour chaque buff <span class='gbt'>Soins continus</span>
+            sur ce Champion. Il est impossible de resister a ces débuffs.
+            Ensuite, active instantanement tous les débuffs <span class='gbt'>Poison</span>
             sur tous les ennemis.<br><br>
-            Si la cible est un allie, augmente d'1 tour la duree de tous les buffs, pui
-            active instantanement tous les buffs <span class='gbt'>Soins continus</span> sur tous les allies.
+            Si la cible est un allié, augmente d'1 tour la durée de tous les buffs, pui
+            active instantanement tous les buffs <span class='gbt'>Soins continus</span> sur tous les alliés.
             Place un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 2 tours.
-            Place egalement un buff <span class='gbt'>Soins continus</span> de 15% sur ce Champion
+            Place également un buff <span class='gbt'>Soins continus</span> de 15% sur ce Champion
             pendant 2 tours et un autre buff <span class='gbt'>Soins continus</span> de 15% pendant 2 tours
-            pour chaque allie vivant.<br><br>
+            pour chaque allié vivant.<br><br>
             Enfin, remplit le Compteur de Tour de ce Champion de 15% pour chaque buff
-            ou debuff place par cette competence.
+            ou débuff place par cette compétence.
           `,
           cooldown: 5,
           levelInfo: [
@@ -444,13 +444,13 @@
           ],
         },
         {
-          img: "sort3.png",
+          img: "assets/sort3.png",
           name: "Crescendo rythmique",
           description: `
             Attaque un ennemi.
             Avant d'attaquer, a 100% de chances de retirer tous les buffs
-            de la cible et de placer un debuff <span class='gbt'>Reduction de DEF</span> de 60% 
-            et un debuff <span class='gbt'>Affaiblissement</span> de 25% sur la cible pendant 2 tours.
+            de la cible et de placer un débuff <span class='gbt'>Reduction de DEF</span> de 60% 
+            et un débuff <span class='gbt'>Affaiblissement</span> de 25% sur la cible pendant 2 tours.
             Ignorera 20% de la RES de la cible pour chaque buff <span class='gbt'>Soins continus</span>
             sur ce Champion.
           `,
@@ -459,12 +459,12 @@
           factions: [
             `Retire tous les buffs de tous les ennemis si la cible initiale est tuee.
             Il est impossible de resister a ce retrait de buffs.`,
-            `Ignorera 5% de la DEF de la cible pour chaque debuff
+            `Ignorera 5% de la DEF de la cible pour chaque débuff
             <span class='gbt'>Poison</span> dont elle est affligee et chaque buff
             <span class='gbt'>Soins continus</span> sur ce Champion.`,
-            `Si la cible initiale se trouve sous debuff <span class='gbt'>Poison</span>,
-            attaque egalement tous les autres ennemis. Les degats infliges sont
-            proportionnels aux PV MAX de la cible initiale et au nombre de debuffs
+            `Si la cible initiale se trouve sous débuff <span class='gbt'>Poison</span>,
+            attaque également tous les autres ennemis. Les degats infliges sont
+            proportionnels aux PV MAX de la cible initiale et au nombre de débuffs
             <span class='gbt'>Poison</span> dont elle est affligee.
             Si la cible initiale est un Boss ou un sbire, les degats infliges
             sont equivalent a 10% de ses PV MAX.`,
@@ -477,7 +477,7 @@
           ],
         },
         {
-          img: "passif1.png",
+          img: "assets/passif1.png",
           name: "Symphonie de Sylvains [P]",
           description: `
             Ignore 15% de la DEF de la cible lorsque ce Champion attaque en se trouvant
@@ -489,9 +489,9 @@
             `Chaque buff <span class='gbt'>Soins continus</span> 
             sur ce Champion augmente son TAUX C. de 20%.`,
             `A chaque fois qu'un buff <span class='gbt'>Soins continus</span>
-            s'active sur ce Champion, remplit egalement son Compteur de Tour de 8%.`,
+            s'active sur ce Champion, remplit également son Compteur de Tour de 8%.`,
             `A chaque fois qu'un buff <span class='gbt'>Soins continus</span>
-            s'active sur ce Champion ou un allie, augmente les degats de ce Champion
+            s'active sur ce Champion ou un allié, augmente les degats de ce Champion
             de 5% (s'accumule jusqu'a 150%).`,
           ],
           isPassive: true,

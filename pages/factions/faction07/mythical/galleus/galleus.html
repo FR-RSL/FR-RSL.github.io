@@ -414,12 +414,12 @@ const forms = {
         type: "Defense",
         spells: [
           {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Coupure d'aile",
             description: `
-              Attaque un ennemi. Place un debuff
+              Attaque un ennemi. Place un débuff
               <span class='gbt'>Réduction de VIT</span> de 30% pendant 2 tours.<br><br>
-			  Lors d'une contre-attaque, les degats infliges par cette competence
+			  Lors d'une contre-attaque, les degats infliges par cette compétence
 			  sont bases sur la DEF ce ce Champion et les PV MAX de l'ennemi.
             `,
             damage: "3.6*DEF",
@@ -429,14 +429,14 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Sarcasme tranchant",
             description: `
               Attaque tous les ennemis.<br><br>
-			  Place un debuff <span class='gbt'>Provocation</span> pendant 1 tour.
-			  Si la cible est un Boss, place au lieu de ca un debuff
+			  Place un débuff <span class='gbt'>Provocation</span> pendant 1 tour.
+			  Si la cible est un Boss, place au lieu de ca un débuff
 			  <span class='gbt'>Provocation</span> pendant 2 tours.<br><br>
-			  Place egalement un buff <span class='gbt'>Invincible</span> sur ce Champion
+			  Place également un buff <span class='gbt'>Invincible</span> sur ce Champion
 			  pendant 1 tour et un buff <span class='gbt'>Contre-attaque</span> pendant 2 tours.
             `,
             damage: "4.7*DEF",
@@ -447,13 +447,13 @@ const forms = {
             ]
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Appel de Crete-sang",
             description: `
-              Retablit totalement les PV MAX detruits de tous les allies.<br><br>
-			  Place egalement un buff <span class='gbt'>Ranimation apres la Mort</span> et un buff
-			  <span class='gbt'>Augmentation de DEF</span> de 60% sur tous les allies pendant 2 tours.<br><br>
-			  Accorde ensuite un Tour supplementaire.
+              Retablit totalement les PV MAX detruits de tous les alliés.<br><br>
+			  Place également un buff <span class='gbt'>Ranimation apres la Mort</span> et un buff
+			  <span class='gbt'>Augmentation de DEF</span> de 60% sur tous les alliés pendant 2 tours.<br><br>
+			  Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
             levelInfo: [
@@ -461,21 +461,21 @@ const forms = {
             ]
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Regne sur le perchoir [P]",
             description: `
               Renvoie sur l'assaillant 50% des degats recus par ce Champion.<br><br>
 			  Si l'assaillant est un Boss, renvoie 100% des degats que recoit ce Champion.<br><br>
-			  Soigne egalement ce Champion a hauteur de 50% des degats recus.
+			  Soigne également ce Champion a hauteur de 50% des degats recus.
             `,
             isPassive: true,
           },
@@ -495,11 +495,11 @@ const forms = {
         type: "Defense",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Cri fulminant",
             description: `
               Attaque un ennemi.
-			  Place une frappe supplementaire sur tous les ennemis sous debuffs
+			  Place une frappe supplémentaire sur tous les ennemis sous débuffs
 			  <span class='gbt'>Reduction de DEF</span>.
             `,
             damage: "4*DEF (seul) | 3*DEF (zone)",
@@ -508,15 +508,15 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Ciel dechire",
             description: `
               Attaque tous les ennemis.<br><br>
-              Avant d'attaquer, place un debuff <span class='gbt'>Reduction de DEF</span>
+              Avant d'attaquer, place un débuff <span class='gbt'>Reduction de DEF</span>
 			  de 60% pendant 2 tours. Il est impossible de resister a cet effet.<br><br>
-			  Les degats augmentent de 10% pour chaque ennemi sous debuff
+			  Les degats augmentent de 10% pour chaque ennemi sous débuff
 			  <span class='gbt'>Reduction de DEF</span>.
-              Vole egalement 20% du Compteur de Tour de chaque ennemi.
+              Vole également 20% du Compteur de Tour de chaque ennemi.
             `,
             damage: "4.5*DEF",
             cooldown: 3,
@@ -526,14 +526,14 @@ const forms = {
             ]
           },
 		  {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Torture sonique",
             description: `
               Attaque tous les ennemis.<br><br>
 			  Ignorera 20% de la DEF de chaque ennemi n'ayant aucun buff.<br>
 			  Ignore les buffs <span class='gbt'>Blocage des Degats</span>.<br><br>
               Les degats augmentent de 15% pour chaque buff sur chaque cible.<br><br>
-			  Reduit la duree de tous les buffs des ennemis de 2 tours.
+			  Reduit la durée de tous les buffs des ennemis de 2 tours.
             `,
             damage: "4.7*DEF",
             cooldown: 4,
@@ -543,19 +543,19 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
             name: "Experience impie [P]",
             description: `
-              Immunise contre les debuffs
+              Immunise contre les débuffs
 			  <span class='gbt'>Etourdissement</span>,
 			  <span class='gbt'>Gel</span>,
 			  <span class='gbt'>Sommeil</span>,
@@ -564,8 +564,8 @@ const forms = {
 			  <span class='gbt'>Provocation</span>,
 			  <span class='gbt'>Mouton</span> et 
 			  <span class='gbt'>Petrification</span>.<br><br>
-			  Reinitialise egalement de facon aleatoire le temps de recharge de l'une
-			  des competences de ce Champion chaque fois qu'il tue un ennemi. Se produit une fois par competence.
+			  Reinitialise également de facon aleatoire le temps de recharge de l'une
+			  des compétences de ce Champion chaque fois qu'il tue un ennemi. Se produit une fois par compétence.
             `,
             isPassive: true,
           },

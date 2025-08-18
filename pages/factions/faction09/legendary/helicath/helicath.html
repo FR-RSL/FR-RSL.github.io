@@ -395,11 +395,11 @@
       type: "Defense",
       spells: [
         {
-			img: "sort1.png",
+			img: "assets/sort1.png",
 			name: "Griffe Pyroclastique",
 			description: `
 				Attaque deux fois un ennemi.
-				Chaque frappe possede 30% de chances de placer un debuff <span class='gbt'>Affaiblissement</span>
+				Chaque frappe Possède 30% de chances de placer un débuff <span class='gbt'>Affaiblissement</span>
 				de 25% pendant 2 tours.
 				Ignorera les buffs <span class='gbt'>Bouclier</span> et <span class='gbt'>Blocage des Degats</span>.
 			`,
@@ -407,16 +407,16 @@
 			levelInfo: [
 				"Niv. 2 : Dégâts +5%",
 				"Niv. 3 : Dégâts +5%",
-				"Niv. 4 : Chance de Buff/Debuff +10%",
-				"Niv. 5 : Chance de Buff/Debuff +10%",
+				"Niv. 4 : Chance de Buff/débuff +10%",
+				"Niv. 5 : Chance de Buff/débuff +10%",
 			],
         },
         {
-			img: "sort2.png",
+			img: "assets/sort2.png",
 			name: "Vents de la fosse",
 			description: `
 				Attaque tous les ennemis.
-				Place un buff <span class='gbt'>Bouclier</span> sur tous les allies pendant 2 tours.
+				Place un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
 				La valeur du <span class='gbt'>Bouclier</span> est proportionnelle a la DEF de ce Champion.
 			`,
 			damage: "3.8*DEF | 3.5*DEF (Bouclier)",
@@ -430,14 +430,14 @@
 			cooldown: 4,
         },
         {
-			img: "sort3.png",
+			img: "assets/sort3.png",
 			name: "Fervents serviteurs",
 			description: `
 				<span class='gbt'>Effet Actif</span><br><br>
-				Place un buff <span class='gbt'>Blocage des Degats</span> sur tous les allies pendant 2 tours.<br><br>
+				Place un buff <span class='gbt'>Blocage des Degats</span> sur tous les alliés pendant 2 tours.<br><br>
 				<span class='gbt'>Effet Passif</span><br><br>
-				Lorsqu'un buff <span class='gbt'>Blocage des Degats</span> place sur un allie par ce Champion est retire ou vole, ou qu'il expire, place un buff 
-				<span class='gbt'>Augmentation de DEF</span> de 60% sur cet allie pendant 2 tours.
+				Lorsqu'un buff <span class='gbt'>Blocage des Degats</span> place sur un allié par ce Champion est retire ou vole, ou qu'il expire, place un buff 
+				<span class='gbt'>Augmentation de DEF</span> de 60% sur cet allié pendant 2 tours.
 			`,
 			levelInfo: [
 				"Niv. 2 : Temps de recharge -1",
@@ -446,11 +446,11 @@
 			cooldown: 6,
         },
         {
-        	img: "passif1.png",
+        	img: "assets/passif1.png",
         	name: "Festin d'agonie [P]",
         	description: `
-				Augmente la DEF de ce Champion de 5% pour chaque allie sous buff <span class='gbt'>Blocage des Degats</span>.<br><br>
-				Contre-attaque avec la competence par defaut des qu'un allie se fait frapper lorsqu'il est sous buff <span class='gbt'>Blocage des Degats</span>.
+				Augmente la DEF de ce Champion de 5% pour chaque allié sous buff <span class='gbt'>Blocage des Degats</span>.<br><br>
+				Contre-attaque avec la compétence par defaut des qu'un allié se fait frapper lorsqu'il est sous buff <span class='gbt'>Blocage des Degats</span>.
 				Ne peut survenir qu'une fois par tour ennemi.
         	`,
           	isPassive: true,

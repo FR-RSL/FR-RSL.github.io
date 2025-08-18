@@ -141,29 +141,82 @@ function showAuraTooltip(event) {
 }
 
 function positionTooltip(event, tooltip) {
-  const rect = tooltip.getBoundingClientRect();
+  const spellRect = event.currentTarget.getBoundingClientRect();
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
-  
-  let left = event.clientX + 15;
-  let top = event.clientY - 10;
-  
-  // Ajustement horizontal
-  if (left + rect.width > viewportWidth - 20) {
-    left = event.clientX - rect.width - 15;
+  const margin = 20;
+
+  // D'abord positionner le tooltip pour calculer sa taille
+  tooltip.style.left = '0px';
+  tooltip.style.top = '0px';
+  tooltip.style.visibility = 'hidden';
+  tooltip.style.display = 'block';
+
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const tooltipWidth = tooltipRect.width;
+  const tooltipHeight = tooltipRect.height;
+
+  let left = spellRect.left + spellRect.width / 2 - tooltipWidth / 2;
+  let top = spellRect.bottom + 10;
+
+  // Vérifier si le tooltip déborde horizontalement
+  if (left + tooltipWidth > viewportWidth - margin) {
+    left = viewportWidth - tooltipWidth - margin;
   }
-  
-  // Ajustement vertical
-  if (top + rect.height > viewportHeight - 20) {
-    top = event.clientY - rect.height + 10;
+  if (left < margin) {
+    left = margin;
   }
-  
-  // S'assurer que le tooltip reste dans les limites
-  left = Math.max(10, Math.min(left, viewportWidth - rect.width - 10));
-  top = Math.max(10, Math.min(top, viewportHeight - rect.height - 10));
-  
+
+  // Vérifier si le tooltip déborde verticalement en bas
+  if (top + tooltipHeight > viewportHeight - margin) {
+    // Essayer de le placer au-dessus du sort
+    top = spellRect.top - tooltipHeight - 10;
+
+    // Si ça déborde encore en haut, le placer au maximum visible en bas
+    if (top < margin) {
+      top = viewportHeight - tooltipHeight - margin;
+
+      // Si même comme ça c'est trop grand, ajuster la hauteur
+      if (top < margin) {
+        top = margin;
+        tooltip.style.maxHeight = `${viewportHeight - 2 * margin}px`;
+        tooltip.style.overflowY = 'auto';
+      }
+    }
+  }
+
+  // NOUVELLE CONDITION : S'assurer que le tooltip ne chevauche pas l'image du sort
+  const tooltipBottom = top + tooltipHeight;
+  const tooltipRight = left + tooltipWidth;
+
+  // Vérifier si le tooltip chevauche avec l'image du sort
+  if (!(tooltipRight < spellRect.left ||
+        left > spellRect.right ||
+        tooltipBottom < spellRect.top ||
+        top > spellRect.bottom)) {
+    // Il y a chevauchement, repositionner
+    if (spellRect.top - tooltipHeight - 10 >= margin) {
+      // Placer au-dessus si possible
+      top = spellRect.top - tooltipHeight - 10;
+    } else if (spellRect.right + 10 + tooltipWidth <= viewportWidth - margin) {
+      // Placer à droite si possible
+      left = spellRect.right + 10;
+      top = spellRect.top + spellRect.height / 2 - tooltipHeight / 2;
+    } else if (spellRect.left - tooltipWidth - 10 >= margin) {
+      // Placer à gauche si possible
+      left = spellRect.left - tooltipWidth - 10;
+      top = spellRect.top + spellRect.height / 2 - tooltipHeight / 2;
+    } else {
+      // En dernier recours, placer en bas avec décalage
+      top = spellRect.bottom + 10;
+      left = Math.max(margin, Math.min(left, viewportWidth - tooltipWidth - margin));
+    }
+  }
+
+  // Appliquer la position finale
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;
+  tooltip.style.visibility = 'visible';
 }
 
 function hideTooltip() {

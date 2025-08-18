@@ -414,11 +414,11 @@ const forms = {
         type: "Soutien",
         spells: [
         {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Glaive fetide",
             description: `
               Attaque tous les ennemis. Detruit les PV MAX de chaque cible de 3% (s'accumule jusqu'a 30%).<br><br>
-              Reduit egalement d'1 tour la duree d'1 buff aleatoire sur tous les ennemis.
+              Reduit également d'1 tour la durée d'1 buff aleatoire sur tous les ennemis.
               Il est impossible de resister a cet effet si les ennemis sont affliges de piles de 
               <span class='gbt'>Necrose</span>.
             `,
@@ -429,13 +429,13 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Regard vide",
             description: `
-              Place un debuff <span class='gbt'>Peur Absolue</span> sur tous les ennemis pendant 1 tour
-              et un debuff <span class='gbt'>Reduction d'ATQ</span> de 50% sur tous les ennemis pendant 2 tours.
+              Place un débuff <span class='gbt'>Peur Absolue</span> sur tous les ennemis pendant 1 tour
+              et un débuff <span class='gbt'>Reduction d'ATQ</span> de 50% sur tous les ennemis pendant 2 tours.
               Il est impossible de resister a ces effets si les ennemis sont affliges de piles de <span class='gbt'>Necrose</span>.<br><br>
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 5,
             levelInfo: [
@@ -444,19 +444,19 @@ const forms = {
             ],
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "La demolition",
             description: `
               Attaque tous les ennemis.<br><br>
-              Retire tous les buffs <span class='gbt'>Peau de Pierre</span> et les remplaces par un debuff <span class='gbt'>Peur Absolue</span>.
-              Les buffs <span class='gbt'>Blocage des Debuffs</span> seront remplaces par des debuffs <span class='gbt'>Blocage des Buffs</span>.<br><br>
-              Retire egalement les buffs affectant positivement les stats et les remplace par leur debuff miroir equivalent.
+              Retire tous les buffs <span class='gbt'>Peau de Pierre</span> et les remplaces par un débuff <span class='gbt'>Peur Absolue</span>.
+              Les buffs <span class='gbt'>Blocage des débuffs</span> seront remplaces par des débuffs <span class='gbt'>Blocage des Buffs</span>.<br><br>
+              Retire également les buffs affectant positivement les stats et les remplace par leur débuff miroir equivalent.
               Par exemple, <span class='gbt'>Augmentation d'ATQ</span> sera remplace par <span class='gbt'>Reduction d'ATQ</span>.
               Les buffs tels que <span class='gbt'>Soins continus</span> et <span class='gbt'>Renforcer</span>
-              seront remplaces, respectivement, par des debuffs <span class='gbt'>Reduction des Soins</span> et <span class='gbt'>Affaiblissement</span>.
-              Les debuffs miroir auront la meme duree que les buffs avant qu'ils soient remplaces.<br><br>
-              Ensuite, vole 5% du Compteur de Tour de chaque cible pour chaque buff converti en debuff par cette competence.
-              Reduit egalement le Compteur de Tour de tous les ennemis de 20%.<br><br>
+              seront remplaces, respectivement, par des débuffs <span class='gbt'>Reduction des Soins</span> et <span class='gbt'>Affaiblissement</span>.
+              Les débuffs miroir auront la meme durée que les buffs avant qu'ils soient remplaces.<br><br>
+              Ensuite, vole 5% du Compteur de Tour de chaque cible pour chaque buff converti en débuff par cette compétence.
+              Reduit également le Compteur de Tour de tous les ennemis de 20%.<br><br>
               Il est impossible de resister a ces effets si les ennemis sont affliges de piles de <span class='gbt'>Necrose</span>.
             `,
             damage: "0.27*PV",
@@ -467,23 +467,23 @@ const forms = {
             ],
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Existence injustifiee [P]",
             description: `
               Des qu'un ennemi est tue, place une pile de <span class='gbt'>Necrose</span>
               sur tous les autres ennemis. Il est impossible de resister aux piles de <span class='gbt'>Necrose</span>
-              et de les bloquer. Les piles de <span class='gbt'>Necrose</span> ne peuvent etre retirees qu'en ranimant des allies morts.
+              et de les bloquer. Les piles de <span class='gbt'>Necrose</span> ne peuvent etre retirees qu'en ranimant des alliés morts.
               Cet effet ne fonctionne pas contre les Boss et leurs sbires.
-              Si plusieurs Champions de l'equipe disposent de cette Competence, cet effet ne sera active qu'une fois.<br><br>
+              Si plusieurs Champions de l'equipe disposent de cette compétence, cet effet ne sera active qu'une fois.<br><br>
               Au debut et a la fin du tour de ce Champion, active instantanement les piles de <span class='gbt'>Necrose</span>
               sur tous les ennemis.
             `,
@@ -505,12 +505,12 @@ const forms = {
         type: "PV",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Lame du demolisseur",
             description: `
-              Attaque un ennemi. Place une frappe supplementaire si la cible est
+              Attaque un ennemi. Place une frappe supplémentaire si la cible est
               affligee d'une pile de <span class='gbt'>Necrose</span>.<br><br>
-              Place egalement un debuff <span class='gbt'>Blocage de reanimation</span> 
+              Place également un débuff <span class='gbt'>Blocage de reanimation</span> 
               si cette attaque tue un ennemi.
             `,
             damage: "PV*(0.25+(PRE/10000))",
@@ -520,7 +520,7 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Atomiser",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -535,15 +535,15 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Ta vie est perdue !",
             description: `
               Echange ses PV avec un ennemi. 
               Si la cible est un Boss, retablit totalement les PV MAX detruits de ce Champion
               et soigne totalement ce Champion.<br><br>
-              Chaque fois que cette competence est utilisee, augmente l'effet Ignorer la DEF
+              Chaque fois que cette compétence est utilisee, augmente l'effet Ignorer la DEF
               de ce Champion de 10% lorsqu'il se trouve sous sa Forme alternative (s'accumule jusqu'a 50%).<br><br>
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 5,
             levelInfo: [
@@ -551,16 +551,16 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
             name: "Degenerateur [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
@@ -568,9 +568,9 @@ const forms = {
               du coup fatal sur l'assaillant, dont les degats en surplus eventuels.<br><br>
               Des qu'un ennemi est tue, place une pile de <span class='gbt'>Necrose</span>
               sur tous les autres ennemis. Il est impossible de resister aux piles de <span class='gbt'>Necrose</span>
-              et de les bloquer. Les piles de <span class='gbt'>Necrose</span> ne peuvent etre retirees qu'en ranimant des allies morts.
+              et de les bloquer. Les piles de <span class='gbt'>Necrose</span> ne peuvent etre retirees qu'en ranimant des alliés morts.
               Cet effet ne fonctionne pas contre les Boss et leurs sbires.<br><br>
-              Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.<br><br>
+              Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
               <span class='gbt'>Effet Actif</span><br><br>
               Si ce Champion est en passe d'etre tue par un coup fatal, anticipe ce Coup
               et place instantanement un buff <span class='gbt'>Ranimation apres la Mort</span> d'1 tour 

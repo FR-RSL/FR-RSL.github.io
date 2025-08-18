@@ -414,13 +414,13 @@ const forms = {
         type: "Soutien",
         spells: [
           {
-            img: "sort1.png",
+            img: "assets/sort1.png",
             name: "Tempete de Serpentia",
             description: `
               Attaque un ennemi.<br><br>
-			  Soigne tous tes allies a hauteur de 5% des PV MAX de cette Championne.<br><br>
-			  Remplit le Compteur de Tour de cette Championne de 5% pour chaque allie vivant
-			  et de 2,5% supplementaires pour chaque ennemi vivant.
+			  Soigne tous tes alliés a hauteur de 5% des PV MAX de cette Championne.<br><br>
+			  Remplit le Compteur de Tour de cette Championne de 5% pour chaque allié vivant
+			  et de 2,5% supplémentaires pour chaque ennemi vivant.
             `,
             damage: "0.27*PV",
             levelInfo: [
@@ -429,12 +429,12 @@ const forms = {
             ]
           },
           {
-            img: "sort2.png",
+            img: "assets/sort2.png",
             name: "Fortitude derangee",
             description: `
-              Retire tous les debuffs sur tous les allies,
+              Retire tous les débuffs sur tous les alliés,
 			  puis place un buff <span class='gbt'>Voile parfait</span>
-			  sur tous les allies, sauf cette Championne, pendant 2 tours.<br><br>
+			  sur tous les alliés, sauf cette Championne, pendant 2 tours.<br><br>
 			  Place un buff <span class='gbt'>Peau de Pierre</span> sur cette Championne pendant 1 tour.
             `,
             cooldown: 4,
@@ -443,11 +443,11 @@ const forms = {
             ]
           },
           {
-            img: "sort3.png",
+            img: "assets/sort3.png",
             name: "Regeneration anormale",
             description: `
-              Ranime tous les allies morts avec 50% de PV et 50% de Compteur de Tour.<br><br>
-			  Place un buff <span class='gbt'>Invincible</span> sur tous les allies pendant 2 tours.
+              Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.<br><br>
+			  Place un buff <span class='gbt'>Invincible</span> sur tous les alliés pendant 2 tours.
             `,
             cooldown: 6,
             levelInfo: [
@@ -456,22 +456,22 @@ const forms = {
             ]
           },
           {
-            img: "meta1.png",
+            img: "assets/meta1.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif1.png",
+            img: "assets/passif1.png",
             name: "Protection haineuse [P]",
             description: `
-              Tous les 7 tours, equilibre les PV de tous les allies.
+              Tous les 7 tours, equilibre les PV de tous les alliés.
 			  Le niveau de PV ce cette Championne sera ramene au niveau de PV moyen de l'equipe.<br><br>
-			  Les allies recevront 1% de degats en moins par tranche de 2% de PV perdus (s'accumule jusqu'a 25%).
-			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+			  Les alliés recevront 1% de degats en moins par tranche de 2% de PV perdus (s'accumule jusqu'a 25%).
+			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
             `,
             isPassive: true,
           },
@@ -491,13 +491,13 @@ const forms = {
         type: "Soutien",
         spells: [
         {
-            img: "sort4.png",
+            img: "assets/sort4.png",
             name: "Je te trouverai...",
 			description: `
               Attaque un ennemi.<br><br>
 			  Detruit la VIT de la cible de 3 points (s'accumule jusqu'a 30).<br><br>
-			  Reduit le Compteur de Tour de la cible de 5% pour chaque allie vivant 
-			  et de 2,5% supplementaires pour chaque ennemi vivant.
+			  Reduit le Compteur de Tour de la cible de 5% pour chaque allié vivant 
+			  et de 2,5% supplémentaires pour chaque ennemi vivant.
             `,
             damage: "0.29*PV",
             levelInfo: [
@@ -505,13 +505,13 @@ const forms = {
             ]
           },
           {
-            img: "sort5.png",
+            img: "assets/sort5.png",
             name: "Sinistre massacre",
 			description: `
               Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.<br><br>
-			  Place un debuff <span class='gbt'>Blocage des Buffs</span> et un debuff <span class='gbt'>Reduction de DEF</span>
+			  Place un débuff <span class='gbt'>Blocage des Buffs</span> et un débuff <span class='gbt'>Reduction de DEF</span>
 			  de 60% sur tous les ennemis pendant 2 tours. Si la VIT d'un ennemi est inferieure a la VIT
-			  de cette Championne, ces debuffs seront proteges.
+			  de cette Championne, ces débuffs seront proteges.
             `,
             damage: "0.27*PV",
             cooldown: 4,
@@ -521,12 +521,12 @@ const forms = {
             ]
           },
           {
-            img: "sort6.png",
+            img: "assets/sort6.png",
             name: "Murmure somnolent",
 			description: `
-              Place un debuff <span class='gbt'>Sommeil</span> pendant 1 tour
-			  et un debuff <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours sur tous les ennemis.
-			  Si la VIT d'un ennemi est inferieure a la VIT de cette Championne, le debuff
+              Place un débuff <span class='gbt'>Sommeil</span> pendant 1 tour
+			  et un débuff <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours sur tous les ennemis.
+			  Si la VIT d'un ennemi est inferieure a la VIT de cette Championne, le débuff
 			  <span class='gbt'>Reduction de VIT</span> sera protege.<br><br>
 			  Reduit ensuite le Compteur de Tour de tous les ennemis de 25%.
 			`,
@@ -537,21 +537,21 @@ const forms = {
             ]
           },
           {
-            img: "meta2.png",
+            img: "assets/meta2.png",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplementaire.
+              Accorde ensuite un Tour supplémentaire.
             `,
             cooldown: 4,
           },
           {
-            img: "passif2.png",
+            img: "assets/passif2.png",
           name: "Ils sont inferieurs [P]",
           description: `
-            Cette Championne est immunisee contre les debuffs <span class='gbt'>Blocage des Competences Actives</span>.<br><br>
-			Lorsque les allies attaquent, leurs degats seront augmentes de 25% du Compteur de Tour actuel de leur cible.
-			Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+            Cette Championne est immunisee contre les débuffs <span class='gbt'>Blocage des compétences Actives</span>.<br><br>
+			Lorsque les alliés attaquent, leurs degats seront augmentes de 25% du Compteur de Tour actuel de leur cible.
+			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
           `,
             isPassive: true,
           },

@@ -119,7 +119,7 @@ const FACTION_THEMES = {
     // Faction 15 - Gardes Sylvains
     'faction15': {
         name: 'Gardes Sylvains',
-        background: 'linear-gradient(135deg, #14532d 0%, #166534 50%, #14532d 100%)',
+        background: 'linear-gradient(135deg,rgb(168, 189, 176) 0%,rgb(78, 146, 104) 50%,rgb(66, 167, 106) 100%)',
         particles: '#16a34a',
         accent: '#22c55e'
     }

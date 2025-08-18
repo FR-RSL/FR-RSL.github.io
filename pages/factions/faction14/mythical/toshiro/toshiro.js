@@ -8,7 +8,7 @@ const championForms = {
         name: "Saignée rapide",
         description: `
           Attaque un ennemi. Possède 50% de chances d'attaquer
-          un autre ennemi s'il se trouve sous debuff <span class='gbt'>Sangsue</span>.<br><br>
+          un autre ennemi s'il se trouve sous débuff <span class='gbt'>Sangsue</span>.<br><br>
           Place également un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 1 tour.
         `,
         damage: "2.8*ATQ + 0.1*PV",
@@ -22,9 +22,9 @@ const championForms = {
         description: `
           Attaque 4 fois de façon aléatoire. Chaque frappe augmente l'ATQ et les PV
           de ce Champion de 5% lorsqu'il se trouve sous sa Forme de base (s'accumule jusqu'à 100%).
-          Si une cible se trouve sous debuff <span class='gbt'>Sangsue</span>, l'ATQ et les PV de ce Champion
+          Si une cible se trouve sous débuff <span class='gbt'>Sangsue</span>, l'ATQ et les PV de ce Champion
           sont au lieu de ça augmentés de 10%.<br><br>
-          Les dégâts infligés par cette compétence augmentent de 15% pour chaque debuff
+          Les dégâts infligés par cette compétence augmentent de 15% pour chaque débuff
           <span class='gbt'>Sangsue</span> placé sur l'équipe ennemie.
         `,
         damage: "1.5*ATQ + 0.1*PV",
@@ -39,9 +39,9 @@ const championForms = {
         name: "Typhon sanglant",
         description: `
           Attaque tous les ennemis.<br><br>
-          Place un debuff <span class='gbt'>Réduction de DEF</span> de 60% et un debuff
+          Place un débuff <span class='gbt'>Réduction de DEF</span> de 60% et un débuff
           <span class='gbt'>Sangsue</span> pendant 2 tours.<br><br>
-          Place une frappe supplémentaire sur les ennemis sous 2 debuffs ou plus.
+          Place une frappe supplémentaire sur les ennemis sous 2 débuffs ou plus.
         `,
         damage: "3.5*ATQ + 0.1*PV",
         cooldown: 3,
@@ -64,8 +64,8 @@ const championForms = {
         name: "Faim de Vornspore [P]",
         description: `
           Remplit le Compteur de Tour de ce Champion de 5% chaque fois 
-          qu'il attaque une cible sous debuff <span class='gbt'>Sangsue</span>.<br><br>
-          Inflige 25% de dégâts en plus aux ennemis sous debuff <span class='gbt'>Sangsue</span>.
+          qu'il attaque une cible sous débuff <span class='gbt'>Sangsue</span>.<br><br>
+          Inflige 25% de dégâts en plus aux ennemis sous débuff <span class='gbt'>Sangsue</span>.
         `,
         isPassive: true,
       },
@@ -89,7 +89,7 @@ const championForms = {
         name: "Entaille d'iaito",
         description: `
           Attaque tous les ennemis.
-          Possède 50% de chances d'augmenter d'1 tour la durée de tous les debuffs ennemis.
+          Possède 50% de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis.
         `,
         damage: "0.16*PV + 0.7*ATQ",
         levelInfo: [
@@ -102,7 +102,7 @@ const championForms = {
         description: `
           Attaque tous les ennemis.<br><br>
           Soigne tous les alliés sauf ce Champion à hauteur de 10% des dégâts infligés.
-          La valeur du soin augmente de 5% pour chaque debuff <span class='gbt'>Sangsue</span>
+          La valeur du soin augmente de 5% pour chaque débuff <span class='gbt'>Sangsue</span>
           dont est affligée l'équipe ennemie.
         `,
         damage: "0.25*PV + 0.7*ATQ",
@@ -117,8 +117,8 @@ const championForms = {
         name: "Massacre cinglant",
         description: `
           Attaque tous les ennemis.
-          Place un debuff <span class='gbt'>Réduction de VIT</span> de 30% 
-          et un debuff <span class='gbt'>Sangsue</span> pendant 2 tours.<br><br>
+          Place un débuff <span class='gbt'>Réduction de VIT</span> de 30% 
+          et un débuff <span class='gbt'>Sangsue</span> pendant 2 tours.<br><br>
           Accorde ensuite un Tour supplémentaire.
         `,
         damage: "0.27*PV + 0.7*ATQ",
@@ -142,8 +142,8 @@ const championForms = {
         name: "Enrobé de carnage [P]",
         description: `
           Double la quantité de soin reçue par ce Champion lorsqu'il attaque 
-          des ennemis sous debuff <span class='gbt'>Sangsue</span>.<br><br>
-          Réduit également les dégâts infligés par des ennemis sous debuffs 
+          des ennemis sous débuff <span class='gbt'>Sangsue</span>.<br><br>
+          Réduit également les dégâts infligés par des ennemis sous débuffs 
           <span class='gbt'>Sangsue</span> de 50%.
         `,
         isPassive: true,
@@ -288,6 +288,88 @@ function positionTooltip(event, tooltip) {
       }
     }
   }
+
+
+  // NOUVELLE CONDITION : S'assurer que le tooltip ne chevauche pas l'image du sort
+
+
+    const tooltipBottom = top + tooltipHeight;
+
+
+    const tooltipRight = left + tooltipWidth;
+
+
+    
+
+
+    // Vérifier si le tooltip chevauche avec l'image du sort
+
+
+    if (!(tooltipRight < rect.left || 
+
+
+          left > rect.right || 
+
+
+          tooltipBottom < rect.top || 
+
+
+          top > rect.bottom)) {
+
+
+      // Il y a chevauchement, repositionner
+
+
+      if (rect.top - tooltipHeight - 10 >= margin) {
+
+
+        // Placer au-dessus si possible
+
+
+        top = rect.top - tooltipHeight - 10;
+
+
+      } else if (rect.right + 10 + tooltipWidth <= viewportWidth - margin) {
+
+
+        // Placer à droite si possible
+
+
+        left = rect.right + 10;
+
+
+        top = rect.top + rect.height / 2 - tooltipHeight / 2;
+
+
+      } else if (rect.left - tooltipWidth - 10 >= margin) {
+
+
+        // Placer à gauche si possible
+
+
+        left = rect.left - tooltipWidth - 10;
+
+
+        top = rect.top + rect.height / 2 - tooltipHeight / 2;
+
+
+      } else {
+
+
+        // En dernier recours, placer en bas avec décalage
+
+
+        top = rect.bottom + 10;
+
+
+        left = Math.max(margin, Math.min(left, viewportWidth - tooltipWidth - margin));
+
+
+      }
+
+
+    }
+
 
   // Appliquer la position finale
   tooltip.style.left = `${left}px`;

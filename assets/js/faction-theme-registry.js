@@ -79,7 +79,7 @@ const FACTION_THEMES = {
     // Faction 10 - Morts-vivants
     'faction10': {
         name: 'Morts-vivants',
-        background: 'linear-gradient(135deg, #374151 0%, #4b5563 50%, #374151 100%)',
+        background: 'linear-gradient(135deg, #231f31ff 0%, #283329ff 50%, #2d5042ff 100%)',
         particles: '#6b7280',
         accent: '#9ca3af'
     },
@@ -87,7 +87,7 @@ const FACTION_THEMES = {
     // Faction 11 - Elfes Noirs
     'faction11': {
         name: 'Elfes Noirs',
-        background: 'linear-gradient(135deg, #581c87 0%, #6b21a8 50%, #581c87 100%)',
+        background: 'linear-gradient(135deg, #43395eff 0%, #3d3552ff 50%, #292233ff 100%)',
         particles: '#a855f7',
         accent: '#c084fc'
     },
@@ -103,8 +103,8 @@ const FACTION_THEMES = {
     // Faction 13 - Nains
     'faction13': {
         name: 'Nains',
-        background: 'linear-gradient(135deg, #78350f 0%, #92400e 50%, #78350f 100%)',
-        particles: '#f97316',
+        background: 'linear-gradient(135deg, #3d3531ff 0%, #7a5c49ff 50%, #8a7343ff 100%)',
+        particles: '#ff7f23ff',
         accent: '#fb923c'
     },
     

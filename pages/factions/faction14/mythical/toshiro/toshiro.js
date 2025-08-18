@@ -58,7 +58,6 @@ const championForms = {
           Accorde ensuite un Tour supplémentaire.
         `,
         cooldown: 4,
-        isMetamorphosis: true,
       },
       {
         img: "assets/passif1.png",
@@ -137,7 +136,6 @@ const championForms = {
           Accorde ensuite un Tour supplémentaire.
         `,
         cooldown: 4,
-        isMetamorphosis: true,
       },
       {
         img: "assets/passif2.png",

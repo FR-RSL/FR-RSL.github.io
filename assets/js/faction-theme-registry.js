@@ -23,7 +23,7 @@ const FACTION_THEMES = {
     // Faction 03 - Ordre Sacré
     'faction03': {
         name: 'Ordre Sacré',
-        background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fbbf24 100%)',
+        background: 'linear-gradient(135deg,rgb(165, 161, 152) 0%,rgb(231, 183, 99) 50%,rgb(238, 219, 173) 100%)',
         particles: '#fcd34d',
         accent: '#fde047'
     },
@@ -31,7 +31,7 @@ const FACTION_THEMES = {
     // Faction 04 - Barbares
     'faction04': {
         name: 'Barbares',
-        background: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #dc2626 100%)',
+        background: 'linear-gradient(135deg,rgb(228, 97, 46) 0%,rgb(241, 159, 34) 50%,rgb(255, 94, 0) 100%)',
         particles: '#ef4444',
         accent: '#f87171'
     },
@@ -55,7 +55,7 @@ const FACTION_THEMES = {
     // Faction 07 - Marcheurs de Peau
     'faction07': {
         name: 'Marcheurs de Peau',
-        background: 'linear-gradient(135deg, #7c2d12 0%, #9a3412 50%, #7c2d12 100%)',
+        background: 'linear-gradient(135deg,rgb(184, 53, 9) 0%,rgb(73, 52, 45) 50%,rgb(163, 61, 24) 100%)',
         particles: '#ea580c',
         accent: '#fb923c'
     },
@@ -63,7 +63,7 @@ const FACTION_THEMES = {
     // Faction 08 - Orcs
     'faction08': {
         name: 'Orcs',
-        background: 'linear-gradient(135deg, #365314 0%, #4d7c0f 50%, #365314 100%)',
+        background: 'linear-gradient(135deg,rgb(175, 113, 72) 0%,rgb(218, 68, 48) 50%,rgb(228, 153, 42) 100%)',
         particles: '#84cc16',
         accent: '#a3e635'
     },
@@ -71,7 +71,7 @@ const FACTION_THEMES = {
     // Faction 09 - Rejetons Démoniaques
     'faction09': {
         name: 'Rejetons Démoniaques',
-        background: 'linear-gradient(135deg, #7c1d6f 0%, #a21caf 50%, #7c1d6f 100%)',
+        background: 'linear-gradient(135deg,rgb(163, 20, 51) 0%,rgb(112, 46, 46) 50%,rgb(236, 76, 48) 100%)',
         particles: '#d946ef',
         accent: '#e879f9'
     },
@@ -119,7 +119,7 @@ const FACTION_THEMES = {
     // Faction 15 - Gardes Sylvains
     'faction15': {
         name: 'Gardes Sylvains',
-        background: 'linear-gradient(135deg,rgb(168, 189, 176) 0%,rgb(78, 146, 104) 50%,rgb(66, 167, 106) 100%)',
+        background: 'linear-gradient(135deg,rgb(145, 221, 174) 0%,rgb(78, 146, 104) 50%,rgb(66, 167, 106) 100%)',
         particles: '#16a34a',
         accent: '#22c55e'
     }

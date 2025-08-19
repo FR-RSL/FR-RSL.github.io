@@ -51,7 +51,7 @@ const championForms = {
               et ignorera 20% de la DEF de chaque ennemi.<br><br>
               Si cette attaque tue un ennemi, place un buff 
               <span class='gbt'>Invincible</span> sur ce Champion pendant 1 tour.<br><br>
-              Si cette attque tue deux ennemis ou plus, place au lieu de ca un buff
+              Si cette attaque tue deux ennemis ou plus, place au lieu de ca un buff
               <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.
             `,
             damage: "4.8*ATQ",

@@ -12,7 +12,7 @@ const championForms = {
               La second frappe augmente ensuite d’1 tour la durée de tous les débuffs sur la cible.
             `,
             damage: "2*ATQ",
-            levelInfo: ["Niv. 2 : Dégâts +10%"],
+            levelInfo: ["Dégâts +10%"],
           },
           {
             img: "assets/sort2.png",
@@ -24,7 +24,7 @@ const championForms = {
             `,
             damage: "4.6*ATQ",
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Dégâts +20%", "Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
             img: "assets/sort3.png",
@@ -36,7 +36,7 @@ const championForms = {
             `,
             damage: "6*ATQ",
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Dégâts +20%", "Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
             img: "assets/meta1.png",
@@ -81,7 +81,7 @@ const championForms = {
               Attaque tous les ennemis. Soigne tous les alliés de 30% des dégâts infligés.
             `,
             damage: "3*ATQ",
-            levelInfo: ["Niv. 2 : Dégâts +10%"],
+            levelInfo: ["Dégâts +10%"],
           },
           {
             img: "assets/sort5.png",
@@ -92,7 +92,7 @@ const championForms = {
               <span class='gbt'>Blocage des débuffs</span> pendant 2 tours.
             `,
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Temps de recharge -1"],
+            levelInfo: ["Temps de recharge -1"],
           },
           {
             img: "assets/sort6.png",
@@ -102,7 +102,7 @@ const championForms = {
               <span class='gbt'>Blocage des Degats</span> sur tous les alliés pendant 2 tours.
             `,
             cooldown: 6,
-            levelInfo: ["Niv. 2 : Temps de recharge -1","Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Temps de recharge -1","Temps de recharge -1"],
           },
           {
             img: "assets/meta2.png",
@@ -159,7 +159,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort - identique à Arashi
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

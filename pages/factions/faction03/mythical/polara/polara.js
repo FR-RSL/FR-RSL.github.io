@@ -12,7 +12,7 @@ const championForms = {
 			  A 25% de chances d'accorder un Tour supplémentaire.
             `,
             damage: "4*DEF + 1.2*ATQ",
-            levelInfo: ["Niv. 2 : Dégâts +20%"],
+            levelInfo: ["Dégâts +20%"],
           },
           {
             img: "assets/sort2.png",
@@ -30,7 +30,7 @@ const championForms = {
             `,
             damage: "1.8*DEF + 1.2*ATQ",
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Dégâts +20%", "Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
             img: "assets/sort3.png",
@@ -46,7 +46,7 @@ const championForms = {
             `,
             damage: "4*DEF + 1.2*ATQ",
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Dégâts +20%", "Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
             img: "assets/meta1.png",
@@ -97,8 +97,8 @@ const championForms = {
             `,
             damage: "3*DEF + 0.8*ATQ",
             levelInfo: [
-				"Niv. 2 : Dégâts +20%",
-				"Niv. 3 : Soins +20%"
+				"Dégâts +20%",
+				"Soins +20%"
 			],
           },
           {
@@ -112,7 +112,7 @@ const championForms = {
 			  ne peuvent pas resister a ce débuff.
             `,
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Temps de recharge -1"],
+            levelInfo: ["Temps de recharge -1"],
           },
           {
             img: "assets/sort6.png",
@@ -125,7 +125,7 @@ const championForms = {
             `,
             damage: "3*DEF + 0.8*ATQ",
             cooldown: 4,
-            levelInfo: ["Niv. 2 : Dégâts +20%", "Niv. 3 : Temps de recharge -1"],
+            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
             img: "assets/meta2.png",
@@ -188,7 +188,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort - identique à Arashi
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

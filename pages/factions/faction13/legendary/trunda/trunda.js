@@ -10,10 +10,10 @@ const championData = {
             <span class='gbt'>Etourdissement</span> pendant 1 tour.`,
           damage: "1.85*ATQ",
           levelInfo: [
-            "Niv. 2 : Dégâts +5%",
-            "Niv. 3 : Dégâts +5%",
-            "Niv. 4 : Chances de Buff/débuff +10%",
-            "Niv. 5 : Dégâts +10%"
+            "Dégâts +5%",
+            "Dégâts +5%",
+            "Chances de Buff/débuff +10%",
+            "Dégâts +10%"
           ],
         },
         {
@@ -28,9 +28,9 @@ const championData = {
           damage: "6*ATQ",
           cooldown: 4,
           levelInfo: [
-            "Niv. 2 : Dégâts +5%",
-            "Niv. 3 : Dégâts +5%",
-            "Niv. 4 : Dégâts +10%"
+            "Dégâts +5%",
+            "Dégâts +5%",
+            "Dégâts +10%"
           ],
         },
         {
@@ -47,9 +47,9 @@ const championData = {
           damage: "3*ATQ",
           cooldown: 5,
           levelInfo: [
-            "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Dégâts +10%",
-            "Niv. 4 : Dégâts +10%"
+            "Dégâts +10%",
+            "Dégâts +10%",
+            "Dégâts +10%"
           ],
         },
         {
@@ -96,7 +96,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

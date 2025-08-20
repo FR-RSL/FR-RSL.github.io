@@ -16,10 +16,10 @@ const championData = {
           `,
           damage: "1.4*ATQ",
           levelInfo: [
-            "Niv. 2 : Dégâts +5%",
-            "Niv. 3 : Chance de Buff/débuff +5%",
-            "Niv. 4 : Dégâts +10%",
-            "Niv. 5 : Chance de Buff/débuff +10%",
+            "Dégâts +5%",
+            "Chance de Buff/débuff +5%",
+            "Dégâts +10%",
+            "Chance de Buff/débuff +10%",
           ],
         },
         {
@@ -31,10 +31,10 @@ const championData = {
           `,
           cooldown: 3,
           levelInfo: [
-            "Niv. 2 : Chance de Buff/débuff +5%",
-            "Niv. 3 : Chance de Buff/débuff +5%",
-            "Niv. 4 : Chance de Buff/débuff +5%",
-            "Niv. 5 : Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
           ],
         },
         {
@@ -51,8 +51,8 @@ const championData = {
           damage: "4.3*ATQ",
           cooldown: 5,
           levelInfo: [
-            "Niv. 2 : Chance de Buff/débuff +25%",
-            "Niv. 3 : Temps de recharge -1",
+            "Chance de Buff/débuff +25%",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -68,9 +68,9 @@ const championData = {
           `,
           isPassive: true,
           levelInfo: [
-            "Niv. 2 : Chance de Buff/débuff +5%",
-            "Niv. 3 : Chance de Buff/débuff +5%",
-            "Niv. 4 : Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
+            "Chance de Buff/débuff +5%",
           ],
         },
       ],
@@ -100,7 +100,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

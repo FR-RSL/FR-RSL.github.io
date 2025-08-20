@@ -14,8 +14,8 @@ const championForms = {
             `,
             damage: "0.19*PV",
             levelInfo: [
-              "Niv. 2 : Dégâts +10%",
-              "Niv. 3 : Dégâts +10%",
+              "Dégâts +10%",
+              "Dégâts +10%",
             ]
           },
           {
@@ -29,8 +29,8 @@ const championForms = {
             `,
             cooldown: 5,
             levelInfo: [
-              "Niv. 2 : Ignorer la RES +20%",
-              "Niv. 3 : Temps de recharge -1"
+              "Ignorer la RES +20%",
+              "Temps de recharge -1"
             ],
           },
           {
@@ -52,8 +52,8 @@ const championForms = {
             damage: "0.27*PV",
             cooldown: 5,
             levelInfo: [
-              "Niv. 2 : Ignorer la RES +20%",
-              "Niv. 3 : Temps de recharge -1"
+              "Ignorer la RES +20%",
+              "Temps de recharge -1"
             ],
           },
           {
@@ -105,8 +105,8 @@ const championForms = {
             `,
             damage: "PV*(0.25+(PRE/10000))",
             levelInfo: [
-              "Niv. 2 : Dégâts +10%",
-              "Niv. 3 : Dégâts +20%"
+              "Dégâts +10%",
+              "Dégâts +20%"
             ]
           },
           {
@@ -120,8 +120,8 @@ const championForms = {
             damage: "PV*(0.28+(PRE/10000))",
             cooldown: 4,
             levelInfo: [
-              "Niv. 2 : Dégâts +20%",
-              "Niv. 3 : Temps de recharge -1"
+              "Dégâts +20%",
+              "Temps de recharge -1"
             ]
           },
           {
@@ -137,7 +137,7 @@ const championForms = {
             `,
             cooldown: 5,
             levelInfo: [
-              "Niv. 2 : Temps de recharge -1"
+              "Temps de recharge -1"
             ]
           },
           {
@@ -207,7 +207,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort - identique à Arashi
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

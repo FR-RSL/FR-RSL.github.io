@@ -10,10 +10,10 @@ const championData = {
 			`,
 			damage: "1.3*ATQ",
 			levelInfo: [
-				"Niv. 2 : Dégâts +5%",
-				"Niv. 3 : Dégâts +5%",
-				"Niv. 4 : Dégâts +5%",
-				"Niv. 5 : Dégâts +10%",
+				"Dégâts +5%",
+				"Dégâts +5%",
+				"Dégâts +5%",
+				"Dégâts +10%",
 			],
         },
         {
@@ -25,7 +25,7 @@ const championData = {
 				pendant 2 tours. Octroie un Tour supplémentaire.
 			`,
 			levelInfo: [
-				"Niv. 2 : Temps de recharge -1",
+				"Temps de recharge -1",
 			],
 			cooldown: 4,
         },
@@ -38,11 +38,11 @@ const championData = {
 			`,
 			damage: "3.2*ATQ | 4.2*ATQ (Bombe)",
 			levelInfo: [
-				"Niv. 2 : Dégâts +10%",
-				"Niv. 3 : Chance de Buff/débuff +10%",
-				"Niv. 4 : Chance de Buff/débuff +15%",
-				"Niv. 5 : Dégâts +15%",
-				"Niv. 6 : Temps de recharge -1",
+				"Dégâts +10%",
+				"Chance de Buff/débuff +10%",
+				"Chance de Buff/débuff +15%",
+				"Dégâts +15%",
+				"Temps de recharge -1",
 			],
 			cooldown: 6,
         },
@@ -77,7 +77,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

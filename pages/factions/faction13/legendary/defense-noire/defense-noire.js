@@ -13,10 +13,10 @@ const championData = {
           `,
           damage: "3*DEF + 0.2*PV",
           levelInfo: [
-            "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Chances de Buff/débuff +10%",
-            "Niv. 4 : Dégâts +10%",
-            "Niv. 5 : Chances de Buff/débuff +10%"
+            "Dégâts +10%",
+            "Chances de Buff/débuff +10%",
+            "Dégâts +10%",
+            "Chances de Buff/débuff +10%"
           ],
         },
         {
@@ -29,9 +29,9 @@ const championData = {
           `,
           cooldown: 6,
           levelInfo: [
-            "Niv. 2 : Temps de recharge -1",
-            "Niv. 3 : Temps de recharge -1",
-            "Niv. 4 : Temps de recharge -1",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -51,8 +51,8 @@ const championData = {
             "Les alliés infligent le double des degats aux cibles affligees de débuffs <span class='gbt'>Etourdissement</span> places par ce Champion."
           ],
           levelInfo: [
-            "Niv. 2 : Temps de recharge -1",
-            "Niv. 3 : Temps de recharge -1",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -123,7 +123,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort avec support des factions
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

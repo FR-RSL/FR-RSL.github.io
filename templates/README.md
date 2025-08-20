@@ -45,7 +45,7 @@ Copiez les 3 fichiers template dans le dossier de votre champion et renommez-les
 | `{{SPELL_1_DESCRIPTION}}` | Description HTML du sort | `Attaque 2 fois un ennemi.<br><br>...` |
 | `{{SPELL_1_DAMAGE}}` | Formule de dégâts | `0.14*PV` |
 | `{{SPELL_2_COOLDOWN}}` | Temps de recharge | `5` |
-| `{{SPELL_1_LEVEL_2}}` | Amélioration niveau 2 | `Niv. 2 : Dégâts +10%` |
+| `{{SPELL_1_LEVEL_2}}` | Amélioration niveau 2 | `Dégâts +10%` |
 
 #### Passif
 | Variable | Description | Exemple |

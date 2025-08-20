@@ -10,8 +10,8 @@ const championData = {
 			`,
 			damage: "1.7*DEF",
 			levelInfo: [
-				"Niv. 2 : Dégâts +10%",
-				"Niv. 3 : Dégâts +10%",
+				"Dégâts +10%",
+				"Dégâts +10%",
 			],
         },
         {
@@ -22,7 +22,7 @@ const championData = {
 				Place un buff <span class='gbt'>Voile Parfait</span> sur tous les alliés sauf cette Championne pendant 2 tours.
 			`,
 			levelInfo: [
-				"Niv. 2 : Temps de recharge -1",
+				"Temps de recharge -1",
 			],
 			cooldown: 5,
         },
@@ -35,8 +35,8 @@ const championData = {
 				Place un buff de <span class='gbt'>Soins Continus</span> de 15% sur tous les alliés pendant 2 tours.
 			`,
 			levelInfo: [
-				"Niv. 2 : Temps de recharge -1",
-				"Niv. 3 : Temps de recharge -1",
+				"Temps de recharge -1",
+				"Temps de recharge -1",
 			],
 			cooldown: 6,
         },
@@ -79,7 +79,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

@@ -12,7 +12,7 @@ const championForms = {
               Place également un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 1 tour.
             `,
             damage: "3.9*ATQ",
-            levelInfo: ["Niv. 2 : Dégâts +20%"],
+            levelInfo: ["Dégâts +20%"],
           },
           {
             img: "assets/sort2.png",
@@ -30,8 +30,8 @@ const championForms = {
             damage: "4*ATQ",
             cooldown: 3,
             levelInfo: [
-              "Niv. 2 : Dégâts +20%",
-              "Niv. 3 : Ignorer la RES +20%"
+              "Dégâts +20%",
+              "Ignorer la RES +20%"
             ]
           },
           {
@@ -47,8 +47,8 @@ const championForms = {
             damage: "4*ATQ",
             cooldown: 3,
             levelInfo: [
-              "Niv. 2 : Dégâts +20%",
-              "Niv. 3 : Ignorer la RES +20%"
+              "Dégâts +20%",
+              "Ignorer la RES +20%"
             ]
           },
           {
@@ -95,7 +95,7 @@ const championForms = {
               et remplit son Compteur de Tour de 10%.
             `,
             damage: "3.7*DEF",
-            levelInfo: ["Niv. 2 : Dégâts +20%"],
+            levelInfo: ["Dégâts +20%"],
           },
           {
             img: "assets/sort5.png",
@@ -109,9 +109,9 @@ const championForms = {
             damage: "2.5*DEF",
             cooldown: 4,
             levelInfo: [
-              "Niv. 2 : Dégâts +20%",
-              "Niv. 3 : Ignorer la RES +20%",
-              "Niv. 4 : Temps de recharge -1"
+              "Dégâts +20%",
+              "Ignorer la RES +20%",
+              "Temps de recharge -1"
             ]
           },
           {
@@ -124,9 +124,9 @@ const championForms = {
             `,
             cooldown: 5,
             levelInfo: [
-              "Niv. 3 : Ignorer la RES +20%",
-              "Niv. 2 : Temps de recharge -1",
-              "Niv. 4 : Temps de recharge -1"
+              "Ignorer la RES +20%",
+              "Temps de recharge -1",
+              "Temps de recharge -1"
             ]
           },
           {
@@ -186,7 +186,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort - identique à Arashi
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

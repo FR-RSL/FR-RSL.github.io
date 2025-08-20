@@ -13,9 +13,9 @@ type: "Attaque",
           `,
           damage: "2.4*ATQ",
           levelInfo: [
-            "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Chance de Buff/débuff +10%",
-            "Niv. 4 : Dégâts +15%",
+            "Dégâts +10%",
+            "Chance de Buff/débuff +10%",
+            "Dégâts +15%",
           ],
         },
         {
@@ -41,8 +41,8 @@ type: "Attaque",
           `,
           cooldown: 5,
           levelInfo: [
-            "Niv. 2 : Temps de recharge -1",
-            "Niv. 3 : Temps de recharge -1",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -72,10 +72,10 @@ type: "Attaque",
             sont equivalent a 10% de ses PV MAX.`,
           ],
           levelInfo: [
-            "Niv. 2 : Dégâts +10%",
-            "Niv. 3 : Dégâts +10%",
-            "Niv. 4 : Dégâts +15%",
-            "Niv. 5 : Temps de recharge -1",
+            "Dégâts +10%",
+            "Dégâts +10%",
+            "Dégâts +15%",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -131,7 +131,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort avec support des factions
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

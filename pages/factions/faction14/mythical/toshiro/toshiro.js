@@ -13,7 +13,7 @@ const championForms = {
         `,
         damage: "2.8*ATQ + 0.1*PV",
         levelInfo: [
-          "Niv. 2 : Dégâts +20%",
+          "Dégâts +20%",
         ]
       },
       {
@@ -30,8 +30,8 @@ const championForms = {
         damage: "1.5*ATQ + 0.1*PV",
         cooldown: 3,
         levelInfo: [
-          "Niv. 2 : Dégâts +10%",
-          "Niv. 3 : Dégâts +10%",
+          "Dégâts +10%",
+          "Dégâts +10%",
         ],
       },
       {
@@ -46,8 +46,8 @@ const championForms = {
         damage: "3.5*ATQ + 0.1*PV",
         cooldown: 3,
         levelInfo: [
-          "Niv. 2 : Dégâts +20%",
-          "Niv. 3 : Ignorer la RES +20%"
+          "Dégâts +20%",
+          "Ignorer la RES +20%"
         ]
       },
       {
@@ -93,7 +93,7 @@ const championForms = {
         `,
         damage: "0.16*PV + 0.7*ATQ",
         levelInfo: [
-          "Niv. 2 : Dégâts +20%"
+          "Dégâts +20%"
         ]
       },
       {
@@ -108,8 +108,8 @@ const championForms = {
         damage: "0.25*PV + 0.7*ATQ",
         cooldown: 4,
         levelInfo: [
-          "Niv. 2 : Dégâts +20%",
-          "Niv. 3 : Temps de recharge -1"
+          "Dégâts +20%",
+          "Temps de recharge -1"
         ]
       },
       {
@@ -124,8 +124,8 @@ const championForms = {
         damage: "0.27*PV + 0.7*ATQ",
         cooldown: 4,
         levelInfo: [
-          "Niv. 2 : Dégâts +20%",
-          "Niv. 3 : Ignorer la RES +20%"
+          "Dégâts +20%",
+          "Ignorer la RES +20%"
         ]
       },
       {
@@ -185,7 +185,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort - identique à Arashi
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

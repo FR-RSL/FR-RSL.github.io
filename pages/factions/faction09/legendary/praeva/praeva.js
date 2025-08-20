@@ -11,8 +11,8 @@ const championData = {
 			`,
 			damage: "5.1*ATQ",
 			levelInfo: [
-				"Niv. 2 : Dégâts +10%",
-				"Niv. 3 : Dégâts +10%",
+				"Dégâts +10%",
+				"Dégâts +10%",
 			],
         },
         {
@@ -24,10 +24,10 @@ const championData = {
 				<span class='gbt'>Augmentation de VIT</span> de 30% sur tous les alliés pendant 2 tours.
 			`,
 			levelInfo: [
-				"Niv. 2 : Soins +5%",
-				"Niv. 3 : Soins +5%",
-				"Niv. 4 : Temps de recharge -1",
-				"Niv. 5 : Temps de recharge -1",
+				"Soins +5%",
+				"Soins +5%",
+				"Temps de recharge -1",
+				"Temps de recharge -1",
 			],
 			cooldown: 5,
         },
@@ -39,8 +39,8 @@ const championData = {
 				Reinitialise totalement les temps de recharge de toutes ses compétences.
 			`,
 			levelInfo: [
-				"Niv. 2 : Temps de recharge -1",
-				"Niv. 3 : Temps de recharge -1",
+				"Temps de recharge -1",
+				"Temps de recharge -1",
 			],
 			cooldown: 6,
         },
@@ -96,7 +96,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

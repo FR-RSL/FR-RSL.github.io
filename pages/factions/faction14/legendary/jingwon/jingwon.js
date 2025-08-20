@@ -12,9 +12,9 @@ const championData = {
           `,
           damage: "0.23*PV",
           levelInfo: [
-            "Niv. 2 : Dégâts +5%",
-            "Niv. 3 : Dégâts +5%",
-            "Niv. 4 : Dégâts +10%",
+            "Dégâts +5%",
+            "Dégâts +5%",
+            "Dégâts +10%",
           ],
         },
         {
@@ -29,10 +29,10 @@ const championData = {
           damage: "0.28*PV",
           cooldown: 5,
           levelInfo: [
-            "Niv. 2 : Chance de Buff/débuff +10%",
-            "Niv. 3 : Chance de Buff/débuff +15%",
-            "Niv. 4 : Temps de recharge -1",
-            "Niv. 5 : Temps de recharge -1",
+            "Chance de Buff/débuff +10%",
+            "Chance de Buff/débuff +15%",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -48,9 +48,9 @@ const championData = {
           damage: "0.14*PV",
           cooldown: 5,
           levelInfo: [
-            "Niv. 2 : Chance de Buff/débuff +10%",
-            "Niv. 3 : Chance de Buff/débuff +10%",
-            "Niv. 4 : Temps de recharge -1",
+            "Chance de Buff/débuff +10%",
+            "Chance de Buff/débuff +10%",
+            "Temps de recharge -1",
           ],
         },
         {
@@ -78,8 +78,8 @@ const championData = {
           isPassive: true,
           cooldown: 6,
           levelInfo: [
-            "Niv. 2 : Temps de recharge -1",
-            "Niv. 3 : Temps de recharge -1",
+            "Temps de recharge -1",
+            "Temps de recharge -1",
           ],
         },
       ],
@@ -113,7 +113,7 @@ function isMobile() {
 // Fonction pour créer le HTML de description d'un sort
 function createSpellDescriptionHTML(spell, index) {
   const levelInfoHTML = spell.levelInfo
-    ? spell.levelInfo.map((info) => `<li>${info}</li>`).join("")
+    ? spell.levelInfo.map((info, index) => `<li>Niv. ${index + 2} : ${info}</li>`).join("")
     : "";
 
   const damageHTML = spell.damage

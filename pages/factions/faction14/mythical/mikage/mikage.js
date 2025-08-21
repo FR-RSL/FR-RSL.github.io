@@ -9,7 +9,7 @@ const championForms = {
             description: `
               Attaque un ennemi avec un allié aleatoire de la Faction du Clan de l'Ombre
               aleatoire. L'allié qui rejoint l'attaque utilisera sa compétence par defaut.<br><br>
-              Place pendant 2 tours un buff <span class='gbt'>Bouclier</span> equivalent a 10% des PV MAX
+              Place pendant 2 tours un buff ${BUFFS.SHIELD} equivalent a 10% des PV MAX
               de cette Championne sur l'allié ayant les PV les plus bas.
             `,
             damage: "3.9*ATQ",

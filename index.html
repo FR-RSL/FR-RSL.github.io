@@ -37,6 +37,219 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/rsl-theme.css">
 
+    <style>
+        /* Styles des conteneurs publicitaires */
+        .ad-container {
+            margin: 2rem auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .ad-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .ad-container-hero {
+            margin: 2rem auto;
+            max-width: 728px;
+        }
+
+        /* Styles du nouveau footer */
+        .site-footer {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+            padding: 4rem 0 1rem;
+            color: #e2e8f0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .footer-brand-info h3 {
+            color: #ffb700;
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-brand-info p {
+            color: #94a3b8;
+            margin: 0 0 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffb700;
+        }
+
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #ffb700;
+            margin: 0 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-disclaimer {
+            margin-bottom: 1.5rem;
+        }
+
+        .disclaimer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,183,0,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(255,183,0,0.2);
+        }
+
+        .disclaimer-icon {
+            font-size: 1.2rem;
+        }
+
+        .disclaimer-text {
+            color: #ffb700;
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            margin: 0 0 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .legal-links a:hover {
+            color: #fff;
+        }
+
+        .legal-notice {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-brand {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-sections {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-sections {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .legal-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+
     <!-- Google Analytics (à remplacer par votre ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -45,6 +258,13 @@
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-VOTRE_ID_PUBLISHER"
+     crossorigin="anonymous"></script>
+     
+    <!-- Cookie Consent -->
+    <script src="assets/js/cookies.js"></script>
 </head>
 <body>
     <!-- Particules d'arrière-plan -->
@@ -120,6 +340,20 @@
                 Découvrez nos guides, fiches de champions et dernières actualités.
             </p>
         </div>
+    </div>
+
+    <!-- Unique annonce principale -->
+    <div class="ad-container ad-container-hero">
+        <div class="ad-label">Publicité</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-VOTRE_ID_PUBLISHER"
+             data-ad-slot="VOTRE_AD_SLOT_MAIN"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <div class="main-content">
@@ -476,79 +710,80 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-sections">
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="#factions">Factions</a>
-                        <a href="#reliques">Reliques</a>
-                        <a href="#joyaux">Joyaux</a>
-                        <a href="#graces">Grâces</a>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/images/logos/logo.png" alt="Logo FR RSL" class="footer-logo">
+                    <div class="footer-brand-info">
+                        <h3>FR RSL</h3>
+                        <p>Guide français pour Raid: Shadow Legends</p>
+                        <div class="social-links">
+                            <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" title="Twitch"><i class="fab fa-twitch"></i></a>
+                            <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Ressources</h4>
-                    <div class="footer-links">
-                        <a href="https://pgbmax.github.io">Tier Lists</a>
-                        <a href="#">Calculateurs</a>
-                        <a href="#">Base de Données</a>
-                        <a href="#">Guides Vidéo</a>
+                
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4>Site</h4>
+                        <nav>
+                            <a href="#factions">Factions</a>
+                            <a href="#reliques">Reliques</a>
+                            <a href="#joyaux">Joyaux</a>
+                            <a href="#graces">Grâces</a>
+                        </nav>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Légal</h4>
-                    <div class="footer-links">
-                        <a href="mentions-legales.html">Mentions Légales</a>
-                        <a href="privacy-policy.html">Confidentialité</a>
-                        <a href="terms-of-service.html">CGU</a>
-                        <a href="disclaimer.html">Disclaimer</a>
+
+                    <div class="footer-section">
+                        <h4>Ressources</h4>
+                        <nav>
+                            <a href="https://pgbmax.github.io">Tier Lists</a>
+                            <a href="#">Calculateurs</a>
+                            <a href="#">Base de Données</a>
+                            <a href="#">Guides Vidéo</a>
+                        </nav>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Communauté</h4>
-                    <div class="footer-links">
-                        <a href="#">Discord FR RSL</a>
-                        <a href="#">Reddit</a>
-                        <a href="#">YouTube</a>
-                        <a href="#">Twitch</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <div class="footer-links">
-                        <a href="#">Contact</a>
-                        <a href="#">FAQ</a>
-                        <a href="#">Signaler un Bug</a>
-                        <a href="#">Suggestions</a>
+
+                    <div class="footer-section">
+                        <h4>Aide</h4>
+                        <nav>
+                            <a href="#">Contact</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Signaler un Bug</a>
+                            <a href="#">Suggestions</a>
+                        </nav>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom rsl-footer-bottom">
+
+            <div class="footer-bottom">
                 <div class="footer-disclaimer">
-                    <div class="disclaimer-badge">
-                        <span class="disclaimer-icon">⚠️</span>
+                    <span class="disclaimer-badge">
+                        <span class="disclaimer-icon">ℹ️</span>
                         <span class="disclaimer-text">Site de Fans Non-Officiel</span>
-                    </div>
-                    <p class="footer-copyright">
-                        © 2025 <strong>FR RSL</strong> - Guide français pour Raid: Shadow Legends
-                    </p>
-                    <p class="footer-legal">
-                        Ce site n'est pas affilié à <strong>Plarium Games</strong>.
-                        <em>Raid: Shadow Legends</em> est une marque déposée de Plarium Games Ltd.
-                    </p>
-                    <div class="footer-links-legal">
-                        <a href="disclaimer.html">Disclaimer</a>
-                        <span>•</span>
-                        <a href="privacy-policy.html">Confidentialité</a>
-                        <span>•</span>
-                        <a href="mentions-legales.html">Mentions Légales</a>
-                    </div>
+                    </span>
+                </div>
+                
+                <div class="footer-legal">
+                    <p class="copyright">© 2025 <strong>FR RSL</strong></p>
+                    <nav class="legal-links">
+                        <a href="/legal/mentions-legales.html">Mentions Légales</a>
+                        <a href="/legal/privacy-policy.html">Politique de Confidentialité</a>
+                        <a href="/legal/terms-of-service.html">Conditions d'Utilisation</a>
+                        <a href="/legal/disclaimer.html">Mentions d'Usage</a>
+                    </nav>
+                    <p class="legal-notice">Ce site n'est pas affilié à <strong>Plarium Games</strong>. Raid: Shadow Legends est une marque déposée de Plarium Games Ltd.</p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Font Awesome pour les icônes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Publicité Footer -->
     <div class="ad-container" id="ad-footer">

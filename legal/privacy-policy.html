@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de Confidentialité - FR RSL</title>
-    <link rel="shortcut icon" href="assets/images/logos/logo.png">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="description" content="Politique de confidentialité du site FR RSL - Guide Raid Shadow Legends en français">
+    <meta name="robots" content="noindex, follow">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/logos/logo.png">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/rsl-theme.css">
+    <link rel="stylesheet" href="../assets/css/legal.css">
     <style>
-        .legal-content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            line-height: 1.6;
+        .back-to-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: var(--primary, #4460ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
         }
-        .legal-content h1 { color: #ffb700; margin-bottom: 2rem; }
-        .legal-content h2 { color: #4460ff; margin-top: 2rem; }
-        .legal-content p { margin-bottom: 1rem; }
+        .back-to-home:hover {
+            background: var(--primary-dark, #3350dd);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
-<body>
+<body class="legal-page">
+    <a href="../index.html" class="back-to-home">← Retour à l'accueil</a>
     <div class="particles"></div>
     
-    <header>
-        <div class="logo-section">
-            <img src="assets/images/logos/logo.png" alt="Logo FR RSL">
-            <h1>FR RSL</h1>
+    <header class="legal-header">
+        <div class="legal-header-content">
+            <a href="../index.html" class="legal-logo">
+                <img src="../assets/images/logos/logo.png" alt="Logo FR RSL">
+                <h1>FR RSL</h1>
+            </a>
+            <nav class="legal-nav">
+                <a href="../index.html">Retour à l'accueil</a>
+            </nav>
         </div>
-        <nav>
-            <a href="index.html">Accueil</a>
-        </nav>
     </header>
 
     <div class="legal-content">
@@ -47,6 +64,24 @@
 
         <h2>2. Utilisation des données</h2>
         <p>Vos données sont utilisées pour :</p>
+        <ul>
+            <li>Améliorer votre expérience de navigation</li>
+            <li>Analyser l'utilisation du site</li>
+            <li>Personnaliser les annonces publicitaires via Google AdSense</li>
+            <li>Établir des statistiques de fréquentation</li>
+        </ul>
+
+        <h2>3. Google AdSense et Publicités</h2>
+        <p>Notre site utilise Google AdSense pour afficher des annonces publicitaires. Ce service utilise des cookies et collecte des données pour :</p>
+        <ul>
+            <li>Afficher des annonces personnalisées en fonction de vos centres d'intérêt</li>
+            <li>Éviter de montrer plusieurs fois les mêmes annonces</li>
+            <li>Mesurer l'efficacité des campagnes publicitaires</li>
+        </ul>
+        <p>Vous pouvez en savoir plus sur les pratiques de Google et vos choix en matière de publicité en visitant la page <a href="https://policies.google.com/technologies/ads" target="_blank">Publicité et confidentialité de Google</a>.</p>
+
+        <h2>4. Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants :</p>
         <ul>
             <li>Améliorer l'expérience utilisateur</li>
             <li>Afficher des publicités pertinentes</li>

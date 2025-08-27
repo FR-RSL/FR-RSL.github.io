@@ -21,6 +21,7 @@ const BUFFS = {
 	VEIL: `<span class='gbt'>Voile</span>`,
 	PERFECT_VEIL: `<span class='gbt'>Voile Parfait</span>`,
 	STRENGTHEN: `<span class='gbt'>Renforcer</span>`,
+	COUNTER: `<span class='gbt'>Contre-attaque</span>`,
 	LIFE_BARRIER: `<span class='gbt'>Barriere de Vie</span>`,
 	POISON_CLOUD: `<span class='gbt'>Nuage de Poison</span>`,
 	STONE_SKIN: `<span class='gbt'>Peau de Pierre</span>`,

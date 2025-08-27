@@ -122,6 +122,30 @@ const FACTION_THEMES = {
         background: 'linear-gradient(135deg,rgb(145, 221, 174) 0%,rgb(78, 146, 104) 50%,rgb(66, 167, 106) 100%)',
         particles: '#16a34a',
         accent: '#22c55e'
+    },
+
+    // Thème Yakarl - Tempête de Neige
+    'yakarl': {
+        name: 'Yakarl',
+        background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 30%, #1e40af 50%, #1e3a8a 70%, #0f172a 100%)',
+        particles: '#60a5fa',
+        accent: '#93c5fd'
+    },
+
+    // Thème Asgard - Aurore Boréale
+    'asgard': {
+        name: 'Asgard',
+        background: 'linear-gradient(135deg, #0c4a6e 0%, #065f46 25%, #047857 50%, #0891b2 75%, #0e7490 100%)',
+        particles: '#06d6a0',
+        accent: '#5eead4'
+    },
+
+    // Thème Tortues Ninja - Égouts
+    'tortues-ninja': {
+        name: 'Tortues Ninja',
+        background: 'linear-gradient(135deg, #14532d 0%, #166534 30%, #365314 50%, #1a2e05 70%, #0f1b07 100%)',
+        particles: '#15803d',
+        accent: '#22c55e'
     }
 };
 

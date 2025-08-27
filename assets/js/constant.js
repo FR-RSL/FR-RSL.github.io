@@ -13,7 +13,7 @@ const BUFFS = {
 
 	REVIVE_ON_DEATH: `<span class='gbt'>Ranimer apres la Mort</span>`,
 	ALLY_PROTECT: `<span class='gbt'>Protection d'allie</span>`,
-	UNKILLABLE: `<span class='gbt'>Intuable</span>`,
+	UNKILLABLE: `<span class='gbt'>Invincible</span>`,
 	BLOCK_DAMAGE: `<span class='gbt'>Blocage des Degats</span>`,
 	REFLECT_DAM: `<span class='gbt'>Renvoi de Degats</span>`,
 	RAGE: `<span class='gbt'>Rage</span>`,

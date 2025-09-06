@@ -94,3 +94,6 @@ const DEBUFFS = {
 	METEOR: `<span class='gbt'>Chatiment</span>`,
 	HEALS: `<span class='gbt'>Reduction des Soins</span>`
 }
+
+const PASSIVE = `<span class='gbt'>Effet Passif</span><br><br>`
+const ACTIVE = `<span class='gbt'>Effet Actif</span><br><br>`

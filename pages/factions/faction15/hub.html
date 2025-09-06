@@ -787,6 +787,45 @@
             </div>
         </section>
 
+        <!-- Section Rares -->
+        <section class="rarity-section" id="rares">
+            <div class="rarity-header" onclick="toggleCategory(this)">
+                <span class="rarity-label rare-label">
+                    ⚡ Champions Rares
+                    <span class="toggle-arrow">▼</span>
+                </span>
+            </div>
+            <div class="champions-grid" id="rareContainer">
+                <!-- Champions rares à ajouter -->
+            </div>
+        </section>
+
+        <!-- Section Peu Communes -->
+        <section class="rarity-section" id="peu-communes">
+            <div class="rarity-header" onclick="toggleCategory(this)">
+                <span class="rarity-label uncommon-label">
+                    🌿 Champions Peu Communs
+                    <span class="toggle-arrow">▼</span>
+                </span>
+            </div>
+            <div class="champions-grid" id="uncommonContainer">
+                <!-- Champions peu communs à ajouter -->
+            </div>
+        </section>
+
+        <!-- Section Communes -->
+        <section class="rarity-section" id="communes">
+            <div class="rarity-header" onclick="toggleCategory(this)">
+                <span class="rarity-label common-label">
+                    ⚪ Champions Communs
+                    <span class="toggle-arrow">▼</span>
+                </span>
+            </div>
+            <div class="champions-grid" id="commonContainer">
+                <!-- Champions communs à ajouter -->
+            </div>
+        </section>
+
     </div>
 
     <!-- Footer -->
@@ -925,7 +964,7 @@
                         if (section) {
                             section.scrollIntoView({
                                 behavior: 'smooth',
-                                block: 'start'
+                                block: "center"
                             });
                         }
                     }

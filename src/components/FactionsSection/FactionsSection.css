@@ -1,0 +1,4 @@
+/* Les styles des factions seront hérités du CSS global */
+.faction-bubble {
+  text-decoration: none;
+}

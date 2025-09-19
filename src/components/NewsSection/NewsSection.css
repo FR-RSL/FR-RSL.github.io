@@ -1,0 +1,4 @@
+/* Les styles des news seront hérités du CSS global */
+.news-link {
+  text-decoration: none;
+}

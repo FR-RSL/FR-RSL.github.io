@@ -1,0 +1,27 @@
+/* Les styles du footer seront hérités du CSS global */
+.site-footer a {
+  text-decoration: none;
+}
+
+.legal-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .legal-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

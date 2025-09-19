@@ -1,0 +1,525 @@
+/* Styles pour la page des reliques */
+
+.artifact-header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.logo-link img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-link h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(68, 96, 255, 0.1), rgba(255, 183, 0, 0.05));
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.category-filters {
+    margin-bottom: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-tab {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.filter-tab:hover {
+    background: rgba(68, 96, 255, 0.2);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.filter-tab.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.artifacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artifact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.artifact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: var(--primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+.artifact-card h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.artifact-stats {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.artifact-stats div {
+    margin-bottom: 0.25rem;
+}
+
+.rarity-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rarity-rare {
+    background: #3b82f6;
+    color: white;
+}
+
+.rarity-epique {
+    background: #8b5cf6;
+    color: white;
+}
+
+.rarity-legendaire {
+    background: #f59e0b;
+    color: black;
+}
+
+.rarity-mythique {
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #45b7d1);
+    color: white;
+    font-weight: bold;
+}
+
+/* Emplacements de joyaux */
+.gem-slots {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.gem-slot {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.gem-slot.filled {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-color: #2980b9;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+.gem-slot.large {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+}
+
+.gem-slots {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.gem-slot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--text-muted);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.gem-slot.filled {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.category-badge {
+    background: var(--footer-heading);
+    color: var(--background);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Modal */
+.artifact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.artifact-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--background-alt);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1001;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1002;
+}
+
+.modal-close:hover {
+    color: var(--text-light);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.modal-title-section h2 {
+    color: var(--text-light);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Styles spécifiques pour les nouvelles sections modal */
+.modal-rarity {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.rarity-text {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.category-text {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.modal-artifact-visual {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.artifact-large-icon {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.artifact-large-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-gem-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-description,
+.modal-stats,
+.modal-recommendations,
+.modal-synergies {
+    margin-bottom: 1.5rem;
+}
+
+.modal-description p,
+.modal-stats p,
+.modal-recommendations p,
+.modal-synergies p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.modal-stats h4,
+.modal-recommendations h4,
+.modal-synergies h4 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-stats ul,
+.modal-recommendations ul,
+.modal-synergies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-stats li,
+.modal-recommendations li,
+.modal-synergies li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-color);
+}
+
+.modal-body h3 {
+    color: var(--primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.modal-body p, .modal-body li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.set-bonus, .recommendations, .synergies {
+    margin-bottom: 2rem;
+}
+
+.set-bonus ul, .recommendations ul, .synergies ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .artifacts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .filter-tabs {
+        gap: 0.5rem;
+    }
+
+    .filter-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .artifacts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artifact-card {
+        padding: 1rem;
+    }
+
+    .artifact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}

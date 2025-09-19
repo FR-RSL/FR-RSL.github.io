@@ -1,0 +1,1356 @@
+/* Styles spécifiques pour la page des reliques */
+:root {
+    --relique-primary: #8B5CF6;
+    --relique-secondary: #3B82F6;
+    --relique-acc.relique-card {
+    background: linear-gradient(145deg, 
+        rgba(139, 92, 246, 0.1) 0%, 
+        rgba(59, 130, 246, 0.05) 50%, 
+        rgba(16, 185, 129, 0.1) 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.relique-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        transparent 70%);
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.relique-card:hover::before {
+    transform: rotate(45deg) translateX(100%);
+}
+
+.relique-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: linear-gradient(145deg, 
+        rgba(139, 92, 246, 0.2) 0%, 
+        rgba(59, 130, 246, 0.1) 50%, 
+        rgba(16, 185, 129, 0.2) 100%);
+    border: 2px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 
+        0 20px 60px rgba(139, 92, 246, 0.3),
+        0 0 50px rgba(139, 92, 246, 0.1) inset;
+} --relique-combat: #EF4444;
+    --relique-magie: #8B5CF6;
+    --relique-protection: #3B82F6;
+    --relique-soutien: #10B981;
+    --relique-special: #F59E0B;
+}
+
+.relique-header {
+    background: linear-gradient(135deg, var(--relique-primary), var(--relique-secondary));
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.relique-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/patterns/magic-pattern.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.logo-link img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-link h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(68, 96, 255, 0.1), rgba(255, 183, 0, 0.05));
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.category-filters {
+    margin-bottom: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.filter-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    color: var(--text-muted);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.filter-tab:hover::before {
+    left: 100%;
+}
+
+.filter-tab:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+}
+
+.filter-tab.active {
+    background: linear-gradient(135deg, var(--relique-primary), var(--relique-secondary));
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.filter-tab.active::before {
+    display: none;
+}
+
+/* Animations pour les cartes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+.relique-card {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.relique-card.fade-out {
+    animation: fadeOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.reliques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.relique-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.relique-card:hover {
+    transform: translateY(-5px);
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--relique-primary);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.relique-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, 
+        var(--relique-primary), 
+        var(--relique-secondary), 
+        var(--relique-accent), 
+        var(--relique-primary));
+    padding: 4px;
+    animation: relique-glow 3s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+@keyframes relique-glow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+        transform: rotate(0deg);
+    }
+    50% {
+        filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.7));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.5));
+        transform: rotate(5deg);
+    }
+}
+
+.relique-icon::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--background-alt);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.relique-icon img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+    transition: transform 0.3s ease;
+    z-index: 3;
+    position: relative;
+}
+
+.relique-card:hover .relique-icon img {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.relique-card h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Styles spécifiques par catégorie de relique */
+.relique-card[data-category="combat"] {
+    border-left: 4px solid var(--relique-combat);
+}
+
+.relique-card[data-category="combat"]:hover {
+    box-shadow: 
+        0 20px 60px rgba(239, 68, 68, 0.3),
+        0 0 50px rgba(239, 68, 68, 0.1) inset;
+}
+
+.relique-card[data-category="magie"] {
+    border-left: 4px solid var(--relique-magie);
+}
+
+.relique-card[data-category="magie"]:hover {
+    box-shadow: 
+        0 20px 60px rgba(139, 92, 246, 0.3),
+        0 0 50px rgba(139, 92, 246, 0.1) inset;
+}
+
+.relique-card[data-category="protection"] {
+    border-left: 4px solid var(--relique-protection);
+}
+
+.relique-card[data-category="protection"]:hover {
+    box-shadow: 
+        0 20px 60px rgba(59, 130, 246, 0.3),
+        0 0 50px rgba(59, 130, 246, 0.1) inset;
+}
+
+.relique-card[data-category="soutien"] {
+    border-left: 4px solid var(--relique-soutien);
+}
+
+.relique-card[data-category="soutien"]:hover {
+    box-shadow: 
+        0 20px 60px rgba(16, 185, 129, 0.3),
+        0 0 50px rgba(16, 185, 129, 0.1) inset;
+}
+
+.relique-card[data-category="special"] {
+    border-left: 4px solid var(--relique-special);
+}
+
+.relique-card[data-category="special"]:hover {
+    box-shadow: 
+        0 20px 60px rgba(245, 158, 11, 0.3),
+        0 0 50px rgba(245, 158, 11, 0.1) inset;
+}
+
+.relique-type {
+    color: var(--relique-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.effet-preview {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.relique-stats {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.relique-stats div {
+    margin-bottom: 0.25rem;
+}
+
+.rarity-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rarity-rare {
+    background: #3b82f6;
+    color: white;
+}
+
+.rarity-epique {
+    background: #8b5cf6;
+    color: white;
+}
+
+.rarity-legendaire {
+    background: #f59e0b;
+    color: black;
+}
+
+.rarity-mythique {
+    /* background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #45b7d1);
+	 */
+	background: red;
+    color: white;
+    font-weight: bold;
+}
+
+/* === SYSTÈME ULTRA-SPÉCIFIQUE DES EMPLACEMENTS DE JOYAUX === */
+
+/* Conteneurs des joyaux */
+body .gem-slots {
+    display: flex !important;
+    gap: 4px !important;
+    justify-content: center !important;
+    margin-top: 8px !important;
+    flex-wrap: wrap !important;
+}
+
+body .modal-gem-slots {
+    display: flex !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    margin: 12px 0 !important;
+    flex-wrap: wrap !important;
+}
+
+/* === STYLES DE BASE ULTRA-SPÉCIFIQUES === */
+body .gem-slot {
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #444 !important;
+    border-radius: 4px !important; /* Par défaut carre */
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #222 !important;
+    box-sizing: border-box !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
+body .gem-slot.large {
+    width: 32px !important;
+    height: 32px !important;
+    border-width: 3px !important;
+}
+
+body .gem-slot.filled {
+    background: #444 !important;
+    border-color: #666 !important;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* === FORMES ULTRA-SPÉCIFIQUES - TOUTES TAILLES === */
+
+/* ROND - Priorité maximale */
+body .gem-slot.gem-rond,
+body .gem-slots .gem-slot.gem-rond,
+body .modal-gem-slots .gem-slot.gem-rond {
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-rond.large,
+body .gem-slots .gem-slot.gem-rond.large,
+body .modal-gem-slots .gem-slot.gem-rond.large {
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 3px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-rond.filled,
+body .gem-slots .gem-slot.gem-rond.filled,
+body .modal-gem-slots .gem-slot.gem-rond.filled {
+    background: #444 !important;
+    border-color: #666 !important;
+    border-radius: 50% !important;
+}
+
+/* CARRE - Priorité maximale */
+body .gem-slot.gem-carre, 
+body .gem-slot.gem-carre,
+body .gem-slots .gem-slot.gem-carre, 
+body .gem-slots .gem-slot.gem-carre,
+body .modal-gem-slots .gem-slot.gem-carre, 
+body .modal-gem-slots .gem-slot.gem-carre {
+    border-radius: 4px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-carre.large, 
+body .gem-slot.gem-carre.large,
+body .gem-slots .gem-slot.gem-carre.large, 
+body .gem-slots .gem-slot.gem-carre.large,
+body .modal-gem-slots .gem-slot.gem-carre.large, 
+body .modal-gem-slots .gem-slot.gem-carre.large {
+    border-radius: 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 3px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-carre.filled, 
+body .gem-slot.gem-carre.filled,
+body .gem-slots .gem-slot.gem-carre.filled, 
+body .gem-slots .gem-slot.gem-carre.filled,
+body .modal-gem-slots .gem-slot.gem-carre.filled, 
+body .modal-gem-slots .gem-slot.gem-carre.filled {
+    background: #444 !important;
+    border-color: #666 !important;
+    border-radius: 4px !important;
+}
+
+/* TRIANGLE - Retour à l'approche ::before qui marchait mieux */
+body .gem-slot.gem-triangle,
+body .gem-slots .gem-slot.gem-triangle,
+body .modal-gem-slots .gem-slot.gem-triangle {
+    width: 20px !important;
+    height: 20px !important;
+    background: #444 !important;
+    position: relative !important;
+    clip-path: polygon(50% 10%, 10% 90%, 90% 90%) !important;
+    border: none !important;
+}
+
+body .gem-slot.gem-triangle::before,
+body .gem-slots .gem-slot.gem-triangle::before,
+body .modal-gem-slots .gem-slot.gem-triangle::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 3px !important;
+    left: 3px !important;
+    right: 3px !important;
+    bottom: 3px !important;
+    background: #222 !important;
+    clip-path: polygon(50% 10%, 10% 90%, 90% 90%) !important;
+}
+
+body .gem-slot.gem-triangle.large,
+body .gem-slots .gem-slot.gem-triangle.large,
+body .modal-gem-slots .gem-slot.gem-triangle.large {
+    width: 32px !important;
+    height: 32px !important;
+    background: #444 !important;
+}
+
+body .gem-slot.gem-triangle.large::before,
+body .gem-slots .gem-slot.gem-triangle.large::before,
+body .modal-gem-slots .gem-slot.gem-triangle.large::before {
+    top: 3px !important;
+    left: 3px !important;
+    right: 3px !important;
+    bottom: 3px !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-triangle.filled,
+body .gem-slots .gem-slot.gem-triangle.filled,
+body .modal-gem-slots .gem-slot.gem-triangle.filled {
+    background: #666 !important;
+}
+
+body .gem-slot.gem-triangle.filled::before,
+body .gem-slots .gem-slot.gem-triangle.filled::before,
+body .modal-gem-slots .gem-slot.gem-triangle.filled::before {
+    background: #444 !important;
+}
+
+/* LOSANGE - Priorité maximale */
+body .gem-slot.gem-losange,
+body .gem-slots .gem-slot.gem-losange,
+body .modal-gem-slots .gem-slot.gem-losange {
+    border-radius: 0 !important;
+    transform: rotate(45deg) !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-losange.large,
+body .gem-slots .gem-slot.gem-losange.large,
+body .modal-gem-slots .gem-slot.gem-losange.large {
+    border-radius: 0 !important;
+    transform: rotate(45deg) !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 3px solid #444 !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-losange.filled,
+body .gem-slots .gem-slot.gem-losange.filled,
+body .modal-gem-slots .gem-slot.gem-losange.filled {
+    background: #444 !important;
+    border-color: #666 !important;
+    transform: rotate(45deg) !important;
+}
+
+/* PENTAGONE - Approche avec pseudo-element et caractère Unicode */
+/* PENTAGON - Retour à l'approche ::before qui marchait mieux */
+body .gem-slot.gem-pentagone,
+body .gem-slots .gem-slot.gem-pentagone,
+body .modal-gem-slots .gem-slot.gem-pentagone {
+    width: 20px !important;
+    height: 20px !important;
+    background: #444 !important;
+    position: relative !important;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+    border: none !important;
+}
+
+body .gem-slot.gem-pentagone::before,
+body .gem-slots .gem-slot.gem-pentagone::before,
+body .modal-gem-slots .gem-slot.gem-pentagone::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 2px !important;
+    right: 2px !important;
+    bottom: 2px !important;
+    background: #222 !important;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) !important;
+}
+
+body .gem-slot.gem-pentagone.large,
+body .gem-slots .gem-slot.gem-pentagone.large,
+body .modal-gem-slots .gem-slot.gem-pentagone.large {
+    width: 32px !important;
+    height: 32px !important;
+    background: #444 !important;
+}
+
+body .gem-slot.gem-pentagone.large::before,
+body .gem-slots .gem-slot.gem-pentagone.large::before,
+body .modal-gem-slots .gem-slot.gem-pentagone.large::before {
+    top: 3px !important;
+    left: 3px !important;
+    right: 3px !important;
+    bottom: 3px !important;
+    background: #222 !important;
+}
+
+body .gem-slot.gem-pentagone.filled,
+body .gem-slots .gem-slot.gem-pentagone.filled,
+body .modal-gem-slots .gem-slot.gem-pentagone.filled {
+    background: #666 !important;
+}
+
+body .gem-slot.gem-pentagone.filled::before,
+body .gem-slots .gem-slot.gem-pentagone.filled::before,
+body .modal-gem-slots .gem-slot.gem-pentagone.filled::before {
+    background: #444 !important;
+}
+
+/* === STYLES POUR LES INFORMATIONS DES JOYAUX === */
+.gem-shapes-info {
+    margin-top: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.modal-gem-slots-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-gem-slots-section h4 {
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-align: center;
+}
+
+/* === SECTIONS DE LA MODALE === */
+/* === SECTIONS DE LA MODALE === */
+.modal-header-section {
+    margin-bottom: 25px;
+}
+
+.modal-visual-info {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.relique-large-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    overflow: hidden;
+}
+
+.relique-large-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.relique-main-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-rarity {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.rarity-text {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-text {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60a5fa;
+}
+
+.modal-description {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid rgba(139, 92, 246, 0.6);
+}
+
+.modal-description p {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.modal-stats-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-stats-section h4 {
+    margin-bottom: 12px;
+    color: #ffd700;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.stats-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stats-list li {
+    background: rgba(16, 185, 129, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    font-weight: 500;
+    text-align: center;
+}
+
+.modal-effect-info,
+.modal-upgrades-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-effect-info h4,
+.modal-upgrades-info h4 {
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.modal-effect-info p {
+    color: #10b981;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.upgrades-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.upgrade-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 12px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    transition: all 0.3s ease;
+}
+
+.upgrade-item:hover {
+    background: rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.upgrade-level {
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.upgrade-description {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.no-upgrades {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 15px;
+}
+
+/* === FIN DU SYSTÈME DES JOYAUX === */
+
+.category-badge {
+    background: var(--footer-heading);
+    color: var(--background);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.category-combat {
+    background: linear-gradient(135deg, var(--relique-combat), #dc2626);
+    color: white;
+    box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3);
+}
+
+.category-magie {
+    background: linear-gradient(135deg, var(--relique-magie), #7c3aed);
+    color: white;
+    box-shadow: 0 2px 10px rgba(139, 92, 246, 0.3);
+}
+
+.category-protection {
+    background: linear-gradient(135deg, var(--relique-protection), #2563eb);
+    color: white;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+}
+
+.category-soutien {
+    background: linear-gradient(135deg, var(--relique-soutien), #059669);
+    color: white;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+}
+
+.category-special {
+    background: linear-gradient(135deg, var(--relique-special), #d97706);
+    color: white;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+}
+
+/* Modal */
+.relique-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.relique-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--background-alt);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1001;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1002;
+}
+
+.modal-close:hover {
+    color: var(--text-light);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.modal-title-section h2 {
+    color: var(--text-light);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Styles spécifiques pour les nouvelles sections modal */
+.modal-rarity {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.rarity-text {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.category-text {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.modal-relique-visual {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.relique-large-icon {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.relique-large-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-gem-slots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.modal-description,
+.modal-stats,
+.modal-recommendations,
+.modal-synergies {
+    margin-bottom: 1.5rem;
+}
+
+.modal-description p,
+.modal-stats p,
+.modal-recommendations p,
+.modal-synergies p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.modal-stats h4,
+.modal-recommendations h4,
+.modal-synergies h4 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Ajout des styles pour les nouvelles sections de la modale */
+.modal-group-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-group-info h4 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal-group-info p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.group-description {
+    font-style: italic;
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.modal-stats ul,
+.modal-recommendations ul,
+.modal-synergies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-stats li,
+.modal-recommendations li,
+.modal-synergies li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-color);
+}
+
+.modal-body h3 {
+    color: var(--primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.modal-body p, .modal-body li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.set-bonus, .recommendations, .synergies {
+    margin-bottom: 2rem;
+}
+
+.set-bonus ul, .recommendations ul, .synergies ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reliques-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .filter-tabs {
+        gap: 0.5rem;
+    }
+
+    .filter-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .reliques-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .relique-card {
+        padding: 1rem;
+    }
+
+    .relique-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+/* === ICÔNES D'INFORMATION === */
+.relique-info-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 12px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.info-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: help;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.info-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.info-icon i {
+    font-size: 14px;
+    color: var(--text-primary);
+    opacity: 0.8;
+}
+
+.effect-icon:hover {
+    background: rgba(16, 185, 129, 0.3);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.effect-icon:hover i {
+    color: #10b981;
+}
+
+.upgrades-icon:hover {
+    background: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.5);
+}
+
+.upgrades-icon:hover i {
+    color: #f59e0b;
+}
+
+/* Tooltips pour les icônes */
+.info-icon[title] {
+    position: relative;
+}
+
+.info-icon[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    white-space: pre-line;
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}

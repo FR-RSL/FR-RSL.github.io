@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/images/logos/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- SEO Meta Tags -->
     <title>FR RSL - Guide Complet Raid Shadow Legends | Champions, Stratégies, Builds</title>
     <meta name="description" content="Guide français complet pour Raid Shadow Legends : fiches détaillées de tous les champions, builds optimaux, stratégies PvP/PvE, guides de factions et conseils d'experts.">
@@ -13,24 +14,98 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fr-rsl.fr/">
+    <meta property="og:url" content="https://fr-rsl.github.io/FR-RSL.github.io/">
     <meta property="og:title" content="FR RSL - Guide Complet Raid Shadow Legends">
     <meta property="og:description" content="Le guide français le plus complet pour Raid Shadow Legends. Découvrez tous les champions, leurs builds optimaux et les meilleures stratégies.">
-    <meta property="og:image" content="https://fr-rsl.fr/assets/images/logos/logo.png">
+    <meta property="og:image" content="https://fr-rsl.github.io/FR-RSL.github.io/assets/images/logos/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://fr-rsl.fr/">
+    <meta property="twitter:url" content="https://fr-rsl.github.io/FR-RSL.github.io/">
     <meta property="twitter:title" content="FR RSL - Guide Complet Raid Shadow Legends">
     <meta property="twitter:description" content="Le guide français le plus complet pour Raid Shadow Legends. Découvrez tous les champions, leurs builds optimaux et les meilleures stratégies.">
-    <meta property="twitter:image" content="https://fr-rsl.fr/assets/images/logos/logo.png">
+    <meta property="twitter:image" content="https://fr-rsl.github.io/FR-RSL.github.io/assets/images/logos/logo.png">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://fr-rsl.fr/">
+    <link rel="canonical" href="https://fr-rsl.github.io/FR-RSL.github.io/">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logos/logo.png">
-    <link rel="apple-touch-icon" href="assets/images/logos/logo.png">
+    <!-- SPA GitHub Pages Script -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: #ffb700;
+      font-family: 'Arial', sans-serif;
+    ">
+      <div style="
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(255, 183, 0, 0.3);
+        border-top: 4px solid #ffb700;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      "></div>
+      <h2 style="margin: 0; font-size: 1.5rem;">FR RSL</h2>
+      <p style="margin: 5px 0 0; opacity: 0.8;">Chargement...</p>
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+    </div>
+
+    <!-- React App Root -->
+    <div id="root"></div>
+    
+    <!-- Remove loading screen when React loads -->
+    <script type="text/javascript">
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease';
+            setTimeout(function() {
+              loadingScreen.remove();
+            }, 500);
+          }
+        }, 1000);
+      });
+    </script>
+
+    <!-- React App Entry Point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 
     <!-- Preload critical resources -->
     <link rel="preload" href="assets/css/main.css" as="style">
@@ -800,12 +875,9 @@
     <script src="assets/js/cookies.js"></script>
 
     <!-- Script de gestion des publicités (chargé par le système de cookies) -->
-    <script src="assets/js/ads.js"></script>
-
-    <!-- Google AdSense et Analytics seront chargés automatiquement selon le consentement -->
-    <script>
-        // Configuration pour le système de cookies
-        const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID'; // À remplacer par votre ID Google Analytics
-    </script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

@@ -1,0 +1,4 @@
+/* Les styles des guides seront hérités du CSS global */
+.guide-bubble {
+  text-decoration: none;
+}

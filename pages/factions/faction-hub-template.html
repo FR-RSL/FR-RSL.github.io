@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom de la Faction - FR RSL</title>
+    <link rel="shortcut icon" href="../../../assets/images/logos/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../assets/css/faction-hub.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html#factions">Factions</a></li>
+                <li><a href="../../../index.html#guides">Guides</a></li>
+                <li><a href="../../../index.html#outils">Outils</a></li>
+                <li><a href="../../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Breadcrumb -->
+
+        <!-- Faction Hero -->
+        <section class="faction-hero">
+            <div class="faction-header">
+                <img src="../../../assets/images/factions/faction-logo.png" alt="Nom de la Faction" class="faction-logo" onerror="this.style.display='none'">
+                <h1 class="faction-title">Nom de la Faction</h1>
+            </div>
+            <p class="faction-description">
+                Description de la faction. Parlez de son histoire, ses caractéristiques et son rôle dans l'univers de Raid Shadow Legends.
+            </p>
+            <div class="faction-stats">
+                <div class="faction-stat">
+                    <span class="stat-number">X</span>
+                    <span class="stat-label">Mythiques</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">X</span>
+                    <span class="stat-label">Légendaires</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">X</span>
+                    <span class="stat-label">Épiques</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">X</span>
+                    <span class="stat-label">Total</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Champions Section -->
+        <section class="champions-section">
+            <!-- Mythiques -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label mythic-label">
+                        <span>⭐</span>
+                        <span>Mythiques</span>
+                        <span class="rarity-count">X</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <!-- Exemple de champion -->
+                    <a href="mythical/nom-champion/nom-champion.html" class="champion-card" data-rarity="mythic">
+                        <div class="champion-portrait">
+                            <img src="mythical/nom-champion/nom-champion.jpg" alt="Nom Champion" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Nom Champion</div>
+                        <div class="champion-type">Type</div>
+                    </a>
+                    <!-- Ajouter d'autres champions mythiques ici -->
+                </div>
+            </div>
+
+            <!-- Légendaires -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label legendary-label">
+                        <span>👑</span>
+                        <span>Légendaires</span>
+                        <span class="rarity-count">X</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <!-- Exemple de champion -->
+                    <a href="legendary/nom-champion/nom-champion.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/nom-champion/nom-champion.jpg" alt="Nom Champion" onerror="this.innerHTML='⚔️'">
+                        </div>
+                        <div class="champion-name">Nom Champion</div>
+                        <div class="champion-type">Type</div>
+                    </a>
+                    <!-- Ajouter d'autres champions légendaires ici -->
+                </div>
+            </div>
+
+            <!-- Épiques -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label epic-label">
+                        <span>💎</span>
+                        <span>Épiques</span>
+                        <span class="rarity-count">X</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <!-- Exemple de champion -->
+                    <a href="epic/nom-champion/nom-champion.html" class="champion-card" data-rarity="epic">
+                        <div class="champion-portrait">
+                            <img src="epic/nom-champion/nom-champion.jpg" alt="Nom Champion" onerror="this.innerHTML='🗡️'">
+                        </div>
+                        <div class="champion-name">Nom Champion</div>
+                        <div class="champion-type">Type</div>
+                    </a>
+                    <!-- Ajouter d'autres champions épiques ici -->
+                </div>
+            </div>
+
+            <!-- Rares -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label rare-label">
+                        <span>🔷</span>
+                        <span>Rares</span>
+                        <span class="rarity-count">X</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <!-- Exemple de champion -->
+                    <a href="rare/nom-champion/nom-champion.html" class="champion-card" data-rarity="rare">
+                        <div class="champion-portrait">
+                            <img src="rare/nom-champion/nom-champion.jpg" alt="Nom Champion" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Nom Champion</div>
+                        <div class="champion-type">Type</div>
+                    </a>
+                    <!-- Ajouter d'autres champions rares ici -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>FR RSL</h3>
+                <p>
+                    Base de données française complète pour Raid Shadow Legends. 
+                    Guides de champions, tier lists, stratégies et builds optimaux pour tous les joueurs.
+                </p>
+                <div class="social-links">
+                    <a href="https://pgbmax.github.io" class="social-link" title="Tier Lists">📊</a>
+                    <a href="../../../pages/equipment/" class="social-link" title="Équipement">💎</a>
+                    <a href="../../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../index.html#factions">Factions</a></li>
+                    <li><a href="../../../index.html#guides">Guides</a></li>
+                    <li><a href="../../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/equipment/">Reliques</a></li>
+                    <li><a href="../../../pages/equipment/artifacts/">Artefacts</a></li>
+                    <li><a href="../../../pages/equipment/blessings/">Bénédictions</a></li>
+                    <li><a href="../../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Factions Populaires</h4>
+                <ul class="footer-links">
+                    <li><a href="../faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="../faction01/hub.html">Seigneurs</a></li>
+                    <li><a href="../faction15/hub.html">Gardes Sylvains</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../assets/js/faction-hub.js"></script>
+</body>
+</html>

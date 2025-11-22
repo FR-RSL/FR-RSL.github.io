@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikage</title>
+  <link rel="shortcut icon" href="../../../../../assets/images/factions/shadowkin.png">
+  <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
+  <!-- Registre des thèmes de faction -->
+  <script src="../../../../../assets/js/faction-theme-registry.js"></script>
+</head>
+<body>
+  <!-- Bouton retour responsive : fixe sur desktop, en haut sur mobile -->
+  <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+
+  <!-- Sélecteur de forme pour mythique -->
+  <div class="form-selector">
+    <button class="form-btn active" data-form="form1">Forme de Base</button>
+    <button class="form-btn" data-form="form2">Forme Alternative</button>
+  </div>
+
+  <div class="container">
+    <div class="left-panel panel">
+      <h2 class="champion-name">Dame Mikage</h2>
+      <div class="champion-info">
+        <div class="info-group">
+          <div class="rarity-box">Mythique</div>
+          <div class="type-badge" id="champion-type">Attaque</div>
+        </div>
+        <div class="info-group">
+          <img src="../../../../../assets/images/affinity/force.png" alt="Magic" class="affinity-img">
+        </div>
+      </div>
+      <div class="champion-image-container">
+        <img src="assets/mikage.png" alt="Toshiro" class="champion-img">
+      </div>
+    </div>
+
+    <div class="middle-panel panel">
+      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Compétences</h3>
+      <div class="spells-container" id="spells-section">
+        <!-- Les sorts seront générés par JavaScript -->
+      </div>
+      <div class="aura-container">
+        <div class="aura">
+          <img src="" alt="Aura" class="aura-img" id="aura-img">
+        </div>
+        <!-- La description mobile de l'aura sera ajoutée ici par JavaScript -->
+      </div>
+    </div>
+
+    <div class="right-panel panel">
+      <div class="stats">
+        <h3>Statistiques</h3>
+        <div class="stat-block" id="stats-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tooltip pour desktop uniquement -->
+  <div id="tooltip" class="tooltip"></div>
+  <script src="../../../../../assets/js/constant.js"></script><script src="mikage.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>

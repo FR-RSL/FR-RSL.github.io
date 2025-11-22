@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes les Factions - FR RSL</title>
+    <meta name="description" content="Explorez toutes les factions de Raid Shadow Legends : Seigneurs, Haut Elfes, Ordre Sacré, Barbares, et plus encore.">
+    <link rel="shortcut icon" href="../../assets/images/logos/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../assets/css/factions-list.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#factions">Factions</a></li>
+                <li><a href="../../index.html#guides">Guides</a></li>
+                <li><a href="../../index.html#outils">Outils</a></li>
+                <li><a href="../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Breadcrumb -->
+
+        <!-- Hero Section -->
+        <section class="factions-hero">
+            <h1 class="hero-title">
+                <span class="gradient-text">Toutes les Factions</span>
+            </h1>
+            <p class="hero-description">
+                Explorez les 15 factions de Raid Shadow Legends. Découvrez leurs champions, leurs forces et leurs stratégies.
+            </p>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span>🌐</span>
+                    <span>Toutes (15)</span>
+                </button>
+                <button class="filter-btn" data-filter="complete">
+                    <span>✅</span>
+                    <span>Complètes</span>
+                </button>
+                <button class="filter-btn" data-filter="progress">
+                    <span>🔄</span>
+                    <span>En cours</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Factions Grid -->
+        <section class="factions-section">
+            <div class="factions-grid">
+                <!-- Faction 01 - Seigneurs -->
+                <a href="faction01/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/bannerlords.png" alt="Seigneurs" class="faction-logo" onerror="this.innerHTML='🛡️'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Seigneurs</h2>
+                        <p class="faction-description">Nobles guerriers et stratèges du royaume</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">25+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">3 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 02 - Haut Elfes -->
+                <a href="faction02/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/high-elves.png" alt="Haut Elfes" class="faction-logo" onerror="this.innerHTML='🏹'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Haut Elfes</h2>
+                        <p class="faction-description">Maîtres de la magie et archers d'élite</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">20+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">2 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 03 - Ordre Sacré -->
+                <a href="faction03/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/sacred-order.png" alt="Ordre Sacré" class="faction-logo" onerror="this.innerHTML='✨'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Ordre Sacré</h2>
+                        <p class="faction-description">Guerriers de la lumière et guérisseurs</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">18+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">2 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 04 - Barbares -->
+                <a href="faction04/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/barbarians.png" alt="Barbares" class="faction-logo" onerror="this.innerHTML='⚔️'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Barbares</h2>
+                        <p class="faction-description">Féroces guerriers des terres sauvages</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">22+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 05 - Peaux-d'écailles -->
+                <a href="faction05/hub.html" class="faction-card" data-status="progress">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/lizardmen.png" alt="Peaux-d'écailles" class="faction-logo" onerror="this.innerHTML='🦎'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Peaux-d'écailles</h2>
+                        <p class="faction-description">Reptiles anciens et mystiques</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">15+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge progress">En cours</div>
+                    </div>
+                </a>
+
+                <!-- Faction 06 - Guerriers du Chaos -->
+                <a href="faction06/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/knights-revenant.png" alt="Guerriers du Chaos" class="faction-logo" onerror="this.innerHTML='💀'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Guerriers du Chaos</h2>
+                        <p class="faction-description">Chevaliers maudits revenus d'entre les morts</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">19+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 07 - Hordes Orcs -->
+                <a href="faction07/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/ogryn-tribes.png" alt="Hordes Orcs" class="faction-logo" onerror="this.innerHTML='👹'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Hordes Orcs</h2>
+                        <p class="faction-description">Tribus brutales et puissantes</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">17+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">2 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 08 - Nains -->
+                <a href="faction08/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/dwarves.png" alt="Nains" class="faction-logo" onerror="this.innerHTML='🔨'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Nains</h2>
+                        <p class="faction-description">Forgerons et mineurs des montagnes</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">16+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">2 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 09 - Rejetons Démoniaques -->
+                <a href="faction09/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/demonspawn.png" alt="Rejetons Démoniaques" class="faction-logo" onerror="this.innerHTML='😈'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Rejetons Démoniaques</h2>
+                        <p class="faction-description">Créatures infernales et corruptrices</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">30+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">3 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 10 - Morts-Vivants -->
+                <a href="faction10/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/undead-hordes.png" alt="Morts-Vivants" class="faction-logo" onerror="this.innerHTML='☠️'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Morts-Vivants</h2>
+                        <p class="faction-description">Légions immortelles des ténèbres</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">21+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">2 Mythiques</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 11 - Elfes Noirs -->
+                <a href="faction11/hub.html" class="faction-card" data-status="progress">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/dark-elves.png" alt="Elfes Noirs" class="faction-logo" onerror="this.innerHTML='🗡️'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Elfes Noirs</h2>
+                        <p class="faction-description">Assassins et nécromanciens des ombres</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">18+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge progress">En cours</div>
+                    </div>
+                </a>
+
+                <!-- Faction 12 - Adorateurs du Vide -->
+                <a href="faction12/hub.html" class="faction-card" data-status="progress">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/void-seekers.png" alt="Adorateurs du Vide" class="faction-logo" onerror="this.innerHTML='🌌'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Adorateurs du Vide</h2>
+                        <p class="faction-description">Cultistes des dimensions parallèles</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">14+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge progress">En cours</div>
+                    </div>
+                </a>
+
+                <!-- Faction 13 - Mages Sauvages -->
+                <a href="faction13/hub.html" class="faction-card" data-status="progress">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/wild-mages.png" alt="Mages Sauvages" class="faction-logo" onerror="this.innerHTML='🔮'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Mages Sauvages</h2>
+                        <p class="faction-description">Sorciers des terres indomptées</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">12+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge progress">En cours</div>
+                    </div>
+                </a>
+
+                <!-- Faction 14 - Clan de l'Ombre -->
+                <a href="faction14/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/shadowkin.png" alt="Clan de l'Ombre" class="faction-logo" onerror="this.innerHTML='🌙'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Clan de l'Ombre</h2>
+                        <p class="faction-description">Ninjas et guerriers mystiques</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">15+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+
+                <!-- Faction 15 - Gardes Sylvains -->
+                <a href="faction15/hub.html" class="faction-card" data-status="complete">
+                    <div class="faction-banner">
+                        <img src="../../assets/images/factions/sylvan-watchers.png" alt="Gardes Sylvains" class="faction-logo" onerror="this.innerHTML='🌲'">
+                    </div>
+                    <div class="faction-content">
+                        <h2 class="faction-name">Gardes Sylvains</h2>
+                        <p class="faction-description">Protecteurs des forêts ancestrales</p>
+                        <div class="faction-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👑</span>
+                                <span class="stat-value">12+</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⭐</span>
+                                <span class="stat-value">1 Mythique</span>
+                            </div>
+                        </div>
+                        <div class="faction-badge complete">Complète</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>FR RSL</h3>
+                <p>
+                    Base de données française complète pour Raid Shadow Legends. 
+                    Guides de champions, tier lists, stratégies et builds optimaux pour tous les joueurs.
+                </p>
+                <div class="social-links">
+                    <a href="https://pgbmax.github.io" class="social-link" title="Tier Lists">📊</a>
+                    <a href="../../pages/equipment/" class="social-link" title="Équipement">💎</a>
+                    <a href="../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html#factions">Factions</a></li>
+                    <li><a href="../../index.html#guides">Guides</a></li>
+                    <li><a href="../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../pages/equipment/">Reliques</a></li>
+                    <li><a href="../../pages/equipment/artifacts/">Artefacts</a></li>
+                    <li><a href="../../pages/equipment/blessings/">Bénédictions</a></li>
+                    <li><a href="../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Factions Populaires</h4>
+                <ul class="footer-links">
+                    <li><a href="faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="faction01/hub.html">Seigneurs</a></li>
+                    <li><a href="faction15/hub.html">Gardes Sylvains</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/factions-list.js"></script>
+</body>
+</html>

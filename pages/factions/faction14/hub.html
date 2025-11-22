@@ -5,942 +5,307 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clan de l'Ombre - FR RSL</title>
     <link rel="shortcut icon" href="../../../assets/images/logos/logo.png">
-    <link rel="stylesheet" href="../../../assets/css/main.css">
-    <style>
-        /* Variables spécifiques à Clan de l'Ombre */
-        :root {
-            --faction-primary: #1f2937;
-            --faction-secondary: #374151;
-            --faction-accent: #6b7280;
-            --faction-light: #9ca3af;
-            --mythic: #e53935;
-            --legendary: #ffb700;
-            --epic: #a259e6;
-            --rare: #3498db;
-            --uncommon: #4caf50;
-        }
-
-        /* Styles spécifiques pour cette faction */
-        .faction-hero {
-            background: linear-gradient(135deg, 
-                rgba(31, 41, 55, 0.1) 0%, 
-                rgba(55, 65, 81, 0.2) 50%, 
-                rgba(107, 114, 128, 0.1) 100%);
-            border: 1px solid rgba(31, 41, 55, 0.3);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .faction-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(31, 41, 55,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(107, 114, 128,0.2)"/><circle cx="40" cy="80" r="1.5" fill="rgba(31, 41, 55,0.15)"/></svg>');
-            animation: float 6s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        .faction-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .faction-logo {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 30px rgba(31, 41, 55, 0.6));
-            transition: all 0.3s ease;
-        }
-
-        .faction-logo:hover {
-            transform: scale(1.05) rotate(5deg);
-            filter: drop-shadow(0 0 40px rgba(31, 41, 55, 0.8));
-        }
-
-        .faction-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-            background: linear-gradient(135deg, var(--faction-primary), var(--faction-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(31, 41, 55, 0.5);
-        }
-
-        .faction-description {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            line-height: 1.6;
-        }
-
-        .faction-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .faction-stat {
-            background: var(--glass-bg);
-            border: 1px solid rgba(31, 41, 55, 0.3);
-            border-radius: 15px;
-            padding: 1rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--faction-primary);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Sections de rareté */
-        .rarity-section {
-            margin-bottom: 3rem;
-        }
-
-        .rarity-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            cursor: pointer;
-            user-select: none;
-            transition: all 0.3s ease;
-        }
-
-        .rarity-label {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 1.3rem;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            gap: 0.8rem;
-            min-width: 200px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .rarity-label::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .rarity-label:hover::before {
-            left: 100%;
-        }
-
-        .mythic-label { 
-            background: linear-gradient(135deg, var(--mythic), #c62828); 
-            color: #fff; 
-            box-shadow: 0 8px 32px rgba(229, 57, 53, 0.4);
-        }
-        .legendary-label { 
-            background: linear-gradient(135deg, var(--legendary), #ff8f00); 
-            color: #1a1a1a; 
-            box-shadow: 0 8px 32px rgba(255, 183, 0, 0.4);
-        }
-        .epic-label { 
-            background: linear-gradient(135deg, var(--epic), #7b1fa2); 
-            color: #fff; 
-            box-shadow: 0 8px 32px rgba(162, 89, 230, 0.4);
-        }
-        .rare-label { 
-            background: linear-gradient(135deg, var(--rare), #1976d2); 
-            color: #fff; 
-            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.4);
-        }
-        .uncommon-label { 
-            background: linear-gradient(135deg, var(--uncommon), #388e3c); 
-            color: #fff; 
-            box-shadow: 0 8px 32px rgba(76, 175, 80, 0.4);
-        }
-        .common-label { 
-            background: linear-gradient(135deg, #9e9e9e, #616161); 
-            color: #fff; 
-            box-shadow: 0 8px 32px rgba(158, 158, 158, 0.4);
-        }
-
-        .toggle-arrow {
-            font-size: 1.2em;
-            transition: transform 0.3s ease;
-            margin-left: auto;
-        }
-
-        .collapsed .toggle-arrow {
-            transform: rotate(-90deg);
-        }
-
-        .rarity-header:hover .rarity-label {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .champions-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 1.2rem;
-            margin: 0 auto 3rem auto;
-            max-width: 1400px;
-            padding: 0 2rem;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .collapsed + .champions-grid {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            pointer-events: none;
-            margin: 0;
-            transform: translateY(-20px);
-        }
-
-        .champion-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 0.5rem 0.8rem 0.8rem 0.8rem;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-light);
-            backdrop-filter: blur(20px);
-            box-shadow: var(--card-shadow);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-            width: 130px;
-            height: 170px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
-        .champion-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .champion-card:hover::before {
-            left: 100%;
-        }
-
-        .champion-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Effets de hover selon la rareté */
-        .champion-card[data-rarity="mythic"]:hover {
-            border-color: var(--mythic);
-            box-shadow: 0 20px 50px rgba(229, 57, 53, 0.3);
-        }
-        .champion-card[data-rarity="legendary"]:hover {
-            border-color: var(--legendary);
-            box-shadow: 0 20px 50px rgba(255, 183, 0, 0.3);
-        }
-        .champion-card[data-rarity="epic"]:hover {
-            border-color: var(--epic);
-            box-shadow: 0 20px 50px rgba(162, 89, 230, 0.3);
-        }
-        .champion-card[data-rarity="rare"]:hover {
-            border-color: var(--rare);
-            box-shadow: 0 20px 50px rgba(52, 152, 219, 0.3);
-        }
-        .champion-card[data-rarity="uncommon"]:hover {
-            border-color: var(--uncommon);
-            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.3);
-        }
-        .champion-card[data-rarity="common"]:hover {
-            border-color: #9e9e9e;
-            box-shadow: 0 20px 50px rgba(158, 158, 158, 0.3);
-        }
-
-        .champion-image {
-            width: calc(100% - 0.5rem);
-            height: 110px;
-            border-radius: 15px;
-            overflow: hidden;
-            margin: 0.25rem;
-            margin-bottom: 0.6rem;
-            
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            background: transparent;
-        }
-
-        .champion-card:hover .champion-image {
-            transform: scale(1.02);
-            
-        }
-
-        .champion-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 15px;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .champion-card:hover .champion-image img {
-            transform: scale(1.05);
-        }
-
-        .champion-name {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-light);
-            
-            transition: all 0.3s ease;
-            line-height: 1.2;
-            text-align: center;
-            padding: 0 0.2rem;
-            margin-top: auto;
-            margin-bottom: 0.5rem;
-        }
-
-        .champion-card:hover .champion-name {
-            transform: translateY(-2px);
-        }
-
-        /* Navigation rapide */
-        .quick-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .nav-pill {
-            padding: 0.75rem 1.5rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 25px;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            cursor: pointer;
-        }
-
-        .nav-pill:hover, .nav-pill.active {
-            background: var(--faction-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(31, 41, 55, 0.3);
-        }
-
-        /* Bouton retour à l'accueil dans le header */
-        .back-to-home {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 0.6rem 1.2rem;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            margin-right: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .back-to-home:hover {
-            background: var(--faction-primary);
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(31, 41, 55, 0.3);
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        /* Responsive Design avec flexbox */
-        @media (max-width: 1200px) {
-            .champions-grid {
-                gap: 1rem;
-                max-width: 1200px;
-            }
-            
-            .champion-card {
-                width: 125px;
-                height: 165px;
-            }
-
-            .champion-image {
-                height: 105px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .champions-grid {
-                gap: 0.8rem;
-                padding: 0 1rem;
-                max-width: 100%;
-            }
-
-            .champion-card {
-                width: 115px;
-                height: 155px;
-                padding: 0.4rem 0.6rem 0.6rem 0.6rem;
-            }
-
-            .champion-image {
-                height: 95px;
-                margin: 0.2rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .faction-header {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .faction-logo {
-                width: 100px;
-                height: 100px;
-            }
-
-            .faction-title {
-                font-size: 2.5rem;
-            }
-
-            .faction-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .champion-name {
-                font-size: 0.85rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .champions-grid {
-                gap: 0.6rem;
-                padding: 0 0.5rem;
-            }
-
-            .champion-card {
-                width: 105px;
-                height: 145px;
-                padding: 0.3rem 0.5rem 0.5rem 0.5rem;
-            }
-
-            .champion-image {
-                height: 85px;
-                margin: 0.15rem;
-                margin-bottom: 0.4rem;
-            }
-
-            .champion-name {
-                font-size: 0.8rem;
-            }
-
-            .faction-logo {
-                width: 80px;
-                height: 80px;
-            }
-
-            .faction-title {
-                font-size: 2rem;
-            }
-
-            .rarity-label {
-                font-size: 1rem;
-                padding: 0.8rem 1.2rem;
-                min-width: 140px;
-            }
-        }
-
-        /* Très petits écrans */
-        @media (max-width: 360px) {
-            .champions-grid {
-                gap: 0.5rem;
-            }
-
-            .champion-card {
-                width: 95px;
-                height: 135px;
-                padding: 0.25rem 0.4rem 0.4rem 0.4rem;
-            }
-
-            .champion-image {
-                height: 75px;
-                margin: 0.1rem;
-                margin-bottom: 0.3rem;
-            }
-
-            .champion-name {
-                font-size: 0.75rem;
-            }
-        }
-
-        /* Scrollbar personnalisée */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--background);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(var(--faction-primary), var(--faction-accent));
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(var(--faction-secondary), var(--faction-primary));
-        }
-    </style>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../assets/css/faction-hub.css">
 </head>
 <body>
-    <!-- Particules d'arrière-plan -->
-    <div class="particles"></div>
+    <div class="animated-bg"></div>
 
-    <!-- Header -->
-    <header>
-        <div class="logo-section">
-            <a href="../../../index.html" class="back-to-home">← Accueil</a>
-            <img src="../../../assets/images/logos/logo.png" alt="Logo FR RSL">
-            <h1>FR RSL</h1>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../index.html#factions">Factions</a></li>
+                <li><a href="../../../index.html#guides">Guides</a></li>
+                <li><a href="../../../index.html#outils">Outils</a></li>
+                <li><a href="../../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
         </div>
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Rechercher un champion...">
-            </div>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section spécifique à la faction -->
-    <div class="faction-hero">
-        <div class="faction-header">
-            <img src="../../../assets/images/factions/shadowkin.png" alt="Logo Clan de l'Ombre" class="faction-logo">
-            <h2 class="faction-title">Clan de l'Ombre</h2>
-        </div>
-        <p class="faction-description">
-            Le Clan de l'Ombre vient de Yakai dans l'est de Téléria et vécut sous la coupe
-            de l'Autocratie Mikage durant des siècles, avant de la renverser avec l'aide de Nains et de Gardes Sylvains.
-            Les loyalistes vivant toujours sur leurs terres, ils savent qu'ils ont beaucoup à faire pour retrouver leur fierté.
-        </p>
-        
-        <!-- Navigation rapide -->
-        <div class="quick-nav">
-            <a href="#mythiques" class="nav-pill active">🔥 Mythiques</a>
-            <a href="#legendaires" class="nav-pill">👑 Légendaires</a>
-            <a href="#epiques" class="nav-pill">💎 Épiques</a>
-            <a href="#rares" class="nav-pill">⚡ Rares</a>
-            <a href="#peu-communes" class="nav-pill">🌿 Peu Communs</a>
-            <a href="#communes" class="nav-pill">⚪ Communs</a>
-        </div>
-
-        <!-- Stats de la faction -->
-        <div class="faction-stats">
-            <div class="faction-stat">
-                <span class="stat-number">2</span>
-                <span class="stat-label">Mythiques</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">11</span>
-                <span class="stat-label">Légendaires</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Épiques</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">13</span>
-                <span class="stat-label">Total</span>
-            </div>
-    </div>
-    </div>
-    
-        </div>
-    </div>
-
+    <!-- Main Content -->
     <div class="main-content">
-        <!-- Section Mythiques -->
-        <section class="rarity-section" id="mythiques">
-            <div class="rarity-header" onclick="toggleCategory(this)">
-                <span class="rarity-label mythic-label">
-                    ✨ Champions Mythiques
-                    <span class="toggle-arrow">▼</span>
-                </span>
+        <!-- Faction Hero -->
+        <section class="faction-hero">
+            <div class="faction-header">
+                <img src="../../../assets/images/factions/shadowkin.png" alt="Clan de l'Ombre" class="faction-logo" onerror="this.style.display='none'">
+                <h1 class="faction-title">Clan de l'Ombre</h1>
             </div>
-            <div class="champions-grid" id="mythicalContainer">
-                <a href="mythical/toshiro/toshiro.html" class="champion-card" data-name="Toshiro" data-rarity="mythic">
-                    <div class="champion-image">
-                        <img src="mythical/toshiro/assets/toshiro.png" alt="Toshiro">
-                    </div>
-                    <span class="champion-name">Toshiro</span>
-                </a>
-                <a href="mythical/mikage/mikage.html" class="champion-card" data-name="Mikage" data-rarity="mythic">
-                    <div class="champion-image">
-                        <img src="mythical/mikage/assets/mikage.png" alt="Mikage">
-                    </div>
-                    <span class="champion-name">Dame Mikage</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Section Légendaires -->
-        <section class="rarity-section" id="legendaires">
-            <div class="rarity-header" onclick="toggleCategory(this)">
-                <span class="rarity-label legendary-label">
-                    👑 Champions Légendaires
-                    <span class="toggle-arrow">▼</span>
-                </span>
-            </div>
-            <div class="champions-grid" id="legendaryContainer">
-                <a href="legendary/jintoro/jintoro.html" class="champion-card" data-name="Jintoro" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/jintoro/assets/jintoro.png" alt="Jintoro">
-                    </div>
-                    <span class="champion-name">Jintoro</span>
-                </a>
-                <a href="legendary/kimi/kimi.html" class="champion-card" data-name="Kimi" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/kimi/assets/kimi.png" alt="Kimi">
-                    </div>
-                    <span class="champion-name">Dame Kimi</span>
-                </a>
-                <a href="legendary/ninja/ninja.html" class="champion-card" data-name="Ninja" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/ninja/assets/ninja.png" alt="Ninja">
-                    </div>
-                    <span class="champion-name">Ninja</span>
-                </a>
-				<a href="legendary/michinaki/michinaki.html" class="champion-card" data-name="michinaki" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/michinaki/assets/michinaki.png" alt="michinaki">
-                    </div>
-                    <span class="champion-name">Michinaki</span>
-                </a>
-                <a href="legendary/zinogre/zinogre.html" class="champion-card" data-name="Zinogre" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/zinogre/assets/zinogre.png" alt="Zinogre">
-                    </div>
-                    <span class="champion-name">Zinogre</span>
-                </a>
-                <a href="legendary/tetsuya/tetsuya.html" class="champion-card" data-name="Tetsuya" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/tetsuya/assets/tetsuya.png" alt="Tetsuya">
-                    </div>
-                    <span class="champion-name">Tetsuya</span>
-                </a>
-				<a href="legendary/harima/harima.html" class="champion-card" data-name="harima" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/harima/assets/harima.png" alt="harima">
-                    </div>
-                    <span class="champion-name">Harima</span>
-                </a>
-				<a href="legendary/yoshi/yoshi.html" class="champion-card" data-name="yoshi" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/yoshi/assets/yoshi.png" alt="yoshi">
-                    </div>
-                    <span class="champion-name">Yoshi</span>
-                </a>
-                <a href="legendary/arashi/arashi.html" class="champion-card" data-name="Arashi" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/arashi/assets/arashi.png" alt="Arashi">
-                    </div>
-                    <span class="champion-name">Arashi</span>
-                </a>
-                <a href="legendary/ishiyama/ishiyama.html" class="champion-card" data-name="Ishiyama" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/ishiyama/assets/ishiyama.png" alt="Ishiyama">
-                    </div>
-                    <span class="champion-name">Ishiyama</span>
-                </a>
-                <a href="legendary/riho/riho.html" class="champion-card" data-name="Riho" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/riho/assets/riho.png" alt="Riho">
-                    </div>
-                    <span class="champion-name">Riho</span>
-                </a>
-                <a href="legendary/jingwon/jingwon.html" class="champion-card" data-name="Jingwon" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/jingwon/assets/jingwon.png" alt="Jingwon">
-                    </div>
-                    <span class="champion-name">Jingwon</span>
-                </a>
-                <a href="legendary/shu-zhen/shu-zhen.html" class="champion-card" data-name="Shu-Zhen" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/shu-zhen/assets/shu-zhen.png" alt="Shu-Zhen">
-                    </div>
-                    <span class="champion-name">Shu-Zhen</span>
-                </a>
-                <a href="legendary/ieyasu/ieyasu.html" class="champion-card" data-name="Ieyasu" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/ieyasu/assets/ieyasu.png" alt="Ieyasu">
-                    </div>
-                    <span class="champion-name">Ieyasu</span>
-                </a>
-                <a href="legendary/leonardo/leonardo.html" class="champion-card" data-name="Leonardo" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/leonardo/assets/leonardo.png" alt="Leonardo">
-                    </div>
-                    <span class="champion-name">Leonardo</span>
-                </a>
+            <p class="faction-description">
+                Ninjas et samouraïs mystiques, le Clan de l'Ombre maîtrise les techniques martiales et la magie des ombres.
+            </p>
+            <div class="faction-stats">
+                <div class="faction-stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Mythiques</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Légendaires</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Épiques</span>
+                </div>
+                <div class="faction-stat">
+                    <span class="stat-number">17</span>
+                    <span class="stat-label">Total</span>
+                </div>
             </div>
         </section>
 
-        <!-- Section Épiques -->
-        <section class="rarity-section" id="epiques">
-            <div class="rarity-header" onclick="toggleCategory(this)">
-                <span class="rarity-label epic-label">
-                    💎 Champions Épiques
-                    <span class="toggle-arrow">▼</span>
-                </span>
+        <!-- Champions Section -->
+        <section class="champions-section">
+            <!-- Mythiques -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label mythic-label">
+                        <span>⭐</span>
+                        <span>Mythiques</span>
+                        <span class="rarity-count">2</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <a href="mythical/toshiro/toshiro.html" class="champion-card" data-rarity="mythic">
+                        <div class="champion-portrait">
+                            <img src="mythical/toshiro/assets/toshiro.png" alt="Toshiro" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Toshiro</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="mythical/mikage/mikage.html" class="champion-card" data-rarity="mythic">
+                        <div class="champion-portrait">
+                            <img src="mythical/mikage/assets/mikage.png" alt="Dame Mikage" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Dame Mikage</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                </div>
             </div>
-            <div class="champions-grid" id="epicContainer">
-                <!-- Champions epic à ajouter -->
+
+            <!-- Légendaires -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label legendary-label">
+                        <span>👑</span>
+                        <span>Légendaires</span>
+                        <span class="rarity-count">15</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <a href="legendary/jintoro/jintoro.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/jintoro/assets/jintoro.png" alt="Jintoro" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Jintoro</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/kimi/kimi.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/kimi/assets/kimi.png" alt="Dame Kimi" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Dame Kimi</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/ninja/ninja.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/ninja/assets/ninja.png" alt="Ninja" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Ninja</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/michinaki/michinaki.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/michinaki/assets/michinaki.png" alt="Michinaki" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Michinaki</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/zinogre/zinogre.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/zinogre/assets/zinogre.png" alt="Zinogre" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Zinogre</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/tetsuya/tetsuya.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/tetsuya/assets/tetsuya.png" alt="Tetsuya" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Tetsuya</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/harima/harima.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/harima/assets/harima.png" alt="Harima" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Harima</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/yoshi/yoshi.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/yoshi/assets/yoshi.png" alt="Yoshi" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Yoshi</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/arashi/arashi.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/arashi/assets/arashi.png" alt="Arashi" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Arashi</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/ishiyama/ishiyama.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/ishiyama/assets/ishiyama.png" alt="Ishiyama" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Ishiyama</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/riho/riho.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/riho/assets/riho.png" alt="Riho" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Riho</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/jingwon/jingwon.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/jingwon/assets/jingwon.png" alt="Jingwon" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Jingwon</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/shu-zhen/shu-zhen.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/shu-zhen/assets/shu-zhen.png" alt="Shu-Zhen" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Shu-Zhen</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/ieyasu/ieyasu.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/ieyasu/assets/ieyasu.png" alt="Ieyasu" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Ieyasu</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                    <a href="legendary/leonardo/leonardo.html" class="champion-card" data-rarity="legendary">
+                        <div class="champion-portrait">
+                            <img src="legendary/leonardo/assets/leonardo.png" alt="Leonardo" onerror="this.innerHTML='🛡️'">
+                        </div>
+                        <div class="champion-name">Leonardo</div>
+                        <div class="champion-type">AUCUN</div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Épiques -->
+            <div class="rarity-section">
+                <div class="rarity-header" onclick="toggleSection(this)">
+                    <div class="rarity-label epic-label">
+                        <span>💎</span>
+                        <span>Épiques</span>
+                        <span class="rarity-count">0</span>
+                        <span class="toggle-arrow">▼</span>
+                    </div>
+                </div>
+                <div class="champions-grid">
+                    <!-- Aucun champion épique pour le moment -->
+                </div>
             </div>
         </section>
-
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-sections">
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="../../../index.html">Accueil</a>
-                        <a href="../../equipment/">Équipement</a>
-                        <a href="../../guides/">Guides</a>
-                        <a href="../../tools/">Outils</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Clan de l'Ombre</h4>
-                    <div class="footer-links">
-                        <a href="#mythiques">Mythiques</a>
-                        <a href="#legendaires">Légendaires</a>
-                        <a href="#epiques">Épiques</a>
-                        <a href="#rares">Rares</a>
-                        <a href="#peu-communes">Peu Communs</a>
-                        <a href="#communes">Communs</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Autres Factions</h4>
-                    <div class="footer-links">
-                        <a href="../faction14/hub.html">Clan de l'Ombre</a>
-                        <a href="../faction13/hub.html">Nains</a>
-                        <a href="../faction12/hub.html">Revenants Chevaliers</a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <div class="footer-links">
-                        <a href="#">Contact</a>
-                        <a href="#">FAQ</a>
-                        <a href="#">Discord</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p style="color: var(--text-muted); text-align: center;">
-                    © 2025 FR RSL - Guide non-officiel pour Raid: Shadow Legends<br>
-                    <small>Ce site n'est pas affilié à Plarium Games.</small>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>FR RSL</h3>
+                <p>
+                    Base de données française complète pour Raid Shadow Legends. 
+                    Guides de champions, tier lists, stratégies et builds optimaux pour tous les joueurs.
                 </p>
+                <div class="social-links">
+                    <a href="https://pgbmax.github.io" class="social-link" title="Tier Lists">📊</a>
+                    <a href="../../../pages/equipment/" class="social-link" title="Équipement">💎</a>
+                    <a href="../../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
             </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../index.html#factions">Factions</a></li>
+                    <li><a href="../../../index.html#guides">Guides</a></li>
+                    <li><a href="../../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/equipment/">Reliques</a></li>
+                    <li><a href="../../../pages/equipment/artifacts/">Artefacts</a></li>
+                    <li><a href="../../../pages/equipment/blessings/">Bénédictions</a></li>
+                    <li><a href="../../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Factions Populaires</h4>
+                <ul class="footer-links">
+                    <li><a href="../faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="../faction01/hub.html">Seigneurs</a></li>
+                    <li><a href="../faction15/hub.html">Gardes Sylvains</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
         </div>
     </footer>
 
-    <script src="../../../assets/js/main.js"></script>
-    <script>
-        // Génération des particules spécifiques à la faction
-        function createFactionParticles() {
-            const particles = document.querySelector('.particles');
-            if (!particles) return;
-            
-            const particleCount = 30;
-            const colors = ['#1f2937', '#6b7280', '#9ca3af'];
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                particles.appendChild(particle);
-            }
-        }
-
-        // Recherche améliorée pour les champions
-        function initChampionSearch() {
-            const searchInput = document.getElementById('searchInput');
-            if (!searchInput) return;
-
-            searchInput.addEventListener('input', function() {
-                const query = this.value.toLowerCase();
-                document.querySelectorAll('.champion-card').forEach(card => {
-                    const name = card.getAttribute('data-name').toLowerCase();
-                    const isVisible = name.includes(query);
-                    card.style.display = isVisible ? '' : 'none';
-                    
-                    if (isVisible) {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(-20px)';
-                    }
-                });
-            });
-        }
-
-        // Système d'ouverture/fermeture des catégories amélioré
-        function toggleCategory(header) {
-            header.classList.toggle('collapsed');
-            const container = header.nextElementSibling;
-            
-            if (container && container.classList.contains('champions-grid')) {
-                const isCollapsed = header.classList.contains('collapsed');
-                
-                if (isCollapsed) {
-                    container.style.maxHeight = '0';
-                    container.style.opacity = '0';
-                    container.style.pointerEvents = 'none';
-                    container.style.margin = '0';
-                    container.style.transform = 'translateY(-20px)';
-                } else {
-                    container.style.maxHeight = '';
-                    container.style.opacity = '';
-                    container.style.pointerEvents = '';
-                    container.style.margin = '';
-                    container.style.transform = '';
-                }
-            }
-        }
-
-        // Navigation fluide vers les sections
-        function initSmoothNavigation() {
-            const navPills = document.querySelectorAll('.nav-pill');
-            
-            navPills.forEach(pill => {
-                pill.addEventListener('click', (e) => {
-                    const href = pill.getAttribute('href');
-                    if (href && href.startsWith('#')) {
-                        e.preventDefault();
-                        
-                        navPills.forEach(p => p.classList.remove('active'));
-                        pill.classList.add('active');
-                        
-                        const section = document.querySelector(href);
-                        if (section) {
-                            section.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
-            });
-        }
-
-        // Animation des statistiques
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            
-            statNumbers.forEach(stat => {
-                const finalValue = stat.textContent;
-                const isNumeric = /^\d+/.test(finalValue);
-                
-                if (isNumeric) {
-                    const targetNumber = parseInt(finalValue);
-                    let currentNumber = 0;
-                    const increment = Math.ceil(targetNumber / 30);
-                    
-                    const timer = setInterval(() => {
-                        currentNumber += increment;
-                        if (currentNumber >= targetNumber) {
-                            currentNumber = targetNumber;
-                            clearInterval(timer);
-                        }
-                        stat.textContent = currentNumber + (finalValue.includes('+') ? '+' : '');
-                    }, 50);
-                }
-            });
-        }
-
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            createFactionParticles();
-            initChampionSearch();
-            initSmoothNavigation();
-            
-            setTimeout(animateStats, 500);
-            
-            setTimeout(() => {
-                document.querySelectorAll('.champion-card').forEach((card, index) => {
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, index * 50);
-                });
-            }, 1000);
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="../../../assets/js/faction-hub.js"></script>
 </body>
 </html>

@@ -1,68 +1,391 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polara</title>
-  <link rel="shortcut icon" href="../../../../../assets/images/factions/barbarians.png">
-  <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
-  <!-- Registre des thèmes de faction -->
-  <script src="../../../../../assets/js/faction-theme-registry.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polara Cœur-de-feu - Champion Mythique | FR RSL</title>
+    <meta name="description" content="Guide complet de Polara Cœur-de-feu, champion mythique des Barbares dans Raid Shadow Legends.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../../../../assets/images/factions/barbarians.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
+	<script src="../../../../../assets/js/Macros.js"></script>
 </head>
 <body>
-  <!-- Bouton retour responsive : fixe sur desktop, en haut sur mobile -->
-  <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+    <div class="animated-bg"></div>
 
-  <!-- Sélecteur de forme pour mythique -->
-  <div class="form-selector">
-    <button class="form-btn active" data-form="form1">Forme de Base</button>
-    <button class="form-btn" data-form="form2">Forme Alternative</button>
-  </div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../../../../index.html" class="logo">
+                <img src="../../../../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../../../index.html#factions">Factions</a></li>
+                <li><a href="../../../../../index.html#guides">Guides</a></li>
+                <li><a href="../../../../../index.html#outils">Outils</a></li>
+                <li><a href="../../../../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="left-panel panel">
-      <h2 class="champion-name">Polara Coeur-de-feu</h2>
-      <div class="champion-info">
-        <div class="info-group">
-          <div class="rarity-box">Mythique</div>
-          <div class="type-badge" id="champion-type">Attaque</div>
+    <!-- Control Bar -->
+    <div class="control-bar">
+        <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+        <div class="form-selector">
+            <button class="form-btn active" data-form="form1">Forme de Base</button>
+            <button class="form-btn" data-form="form2">Forme Alternative</button>
         </div>
-        <div class="info-group">
-          <img src="../../../../../assets/images/affinity/force.png" alt="Magic" class="affinity-img">
-        </div>
-      </div>
-      <div class="champion-image-container">
-        <img src="assets/polara.png" alt="karnage" class="champion-img">
-      </div>
     </div>
 
-    <div class="middle-panel panel">
-      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Compétences</h3>
-      <div class="spells-container" id="spells-section">
-        <!-- Les sorts seront générés par JavaScript -->
-      </div>
-      <div class="aura-container">
-        <div class="aura">
-          <img src="" alt="Aura" class="aura-img" id="aura-img">
+    <!-- Champion Container -->
+    <div class="champion-container">
+        <!-- Champion Header -->
+        <div class="champion-header">
+            <h1 class="champion-name">Polara Cœur-de-feu</h1>
+            <div class="champion-meta">
+                <div class="rarity-badge">Mythique</div>
+                <div class="type-badge" id="champion-type" data-type-form1="Attaque" data-type-form2="Defense">Attaque</div>
+                <div class="affinity-badge">
+                    <img src="../../../../../assets/images/affinity/force.png" alt="Force">
+                    <span>Force</span>
+                </div>
+            </div>
         </div>
-        <!-- La description mobile de l'aura sera ajoutée ici par JavaScript -->
-      </div>
+
+        <!-- Main Grid -->
+        <div class="champion-grid">
+            <!-- Left: Champion Image & Aura -->
+            <div class="champion-image-card">
+                <div class="champion-image-wrapper">
+                    <img src="assets/polara.png" alt="Polara Cœur-de-feu" class="champion-image">
+                </div>
+                
+                <div class="aura-section">
+                    <div class="aura-title">🌟 Aura</div>
+                    <div class="aura-content">
+                        <img src="../../../../../assets/images/auras/attack.png" alt="Aura Attaque" class="aura-icon">
+                        <p class="aura-description">
+                            Augmente la statistique <strong>ATQ</strong> des Alliés dans les batailles d'Arène de <strong>40%</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle: Skills -->
+            <div class="skills-section">
+                <h2 class="skills-title">⚔️ Compétences</h2>
+                
+                <!-- FORM 1 SKILLS -->
+                <div data-form="form1" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort1.png" alt="Zele brulant" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Zele brulant</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque un ennemi.
+			  Place une frappe supplémentaire si la cible est affligee de débuffs.<br><br>
+			  A 25% de chances d'accorder un Tour supplémentaire.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 4*DEF + 1.2*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort2.png" alt="Conflagration fidele" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Conflagration fidele</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque 3 fois un ennemi.<br><br>
+			  Chaque frappe ignorera 25% de la DEF de la cible.
+			  Chaque frappe ignorera au lieu de ca 50% de la DEF de la cible
+			  si la cible est affligee d'un débuff <span class='gbt'>Brulure de PV</span> 
+			  ou <span class='gbt'>Gel</span>.<br><br>
+			  Chaque frappe detruit également la DEF et la RES de la cible de 3%
+			  (s'accumule jusqu'a 30%).<br><br>
+			  Place un débuff <span class='gbt'>Brulure de PV</span> sur tous les ennemis pendant 2 tours
+			  si la cible est tuee par cette compétence. Il est impossible de resister a ce débuff.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 1.8*DEF + 1.2*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort3.png" alt="Pyro Maxima" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Pyro Maxima</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+			  Cette attaque inflige a chaque chaque cible individuelle des degats sur cible unique
+			  plutot que des degats de zone. Ignorera les buffs <span class='gbt'>Bouclier</span>,
+			  <span class='gbt'>Blocage des Degats</span> et <span class='gbt'>Invincible</span>.<br><br>
+			  Active instantanement les débuffs <span class='gbt'>Brulure de PV</span> sur tous les ennemis.<br><br>
+              Place un débuff <span class='gbt'>Blocage de reanimation</span> sur les cibles tuees lorsqu'elles sont affligees
+			  d'un débuff <span class='gbt'>Brulure de PV</span> et <span class='gbt'>Gel</span>.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 4*DEF + 1.2*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta1.png" alt="Metamorphe [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Metamorphe [P]</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion à sa Forme alternative.
+              Accorde ensuite un tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif1.png" alt="Maitresse elementaire [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Maitresse elementaire [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Cette Championne inflige 25% de degats en plus aux ennemis 
+			  affliges d'un débuff <span class='gbt'>Brulure de PV</span> ou <span class='gbt'>Gel</span>.
+			  Cette Championne inflige 100% de degats en plus contre les ennemis affliges
+			  simultanement de débuffs <span class='gbt'>Brulure de PV</span> et <span class='gbt'>Gel</span>.<br><br>
+			  Cette Championne ignore la reduction des degats accordee par les débuffs <span class='gbt'>Gel</span>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- FORM 2 SKILLS -->
+                <div data-form="form2" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort4.png" alt="Decoupe glaciale" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Decoupe glaciale</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque un ennemi.<br><br>
+			  Place un buff <span class='gbt'>Protection d'allié</span> de 50% sur un allié aleatoire,
+			  sauf cette Championne, pendant 2 tours. Si l'allié se trouve deja sous buff
+			  <span class='gbt'>Protection d'allié</span>, le place sur un autre allié choisi de maniere aleatoire.<br><br>
+			  Soigne également cette Championne et les alliés sous buffs <span class='gbt'>Protection d'allié</span>.
+			  La valeur du soin est proportionnelle a la DEF de cette Championne.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 3*DEF + 0.8*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Soins +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort5.png" alt="Vrilles gelees" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Vrilles gelees</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
+			  <span class='gbt'>Renforcer</span> de 25% sur tous les alliés pendant 2 tours.<br><br>
+			  Place un débuff <span class='gbt'>Piege</span> de 100% sur tous les ennemis pendant 2 tours.
+			  Les ennemis affliges d'un débuff <span class='gbt'>Brulure de PV</span> ou <span class='gbt'>Gel</span>
+			  ne peuvent pas resister a ce débuff.
+                        </p>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort6.png" alt="Tempete de lame-glace" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Tempete de lame-glace</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis. Avant d'attaquer, place une pile
+			  d'<span class='gbt'>Interception</span> sur tous les alliés.<br><br>
+			  Place un débuff <span class='gbt'>Gel</span> sur tous les ennemis
+			  pendant 1 tour. Il est impossible de resister a ce débuff.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 3*DEF + 0.8*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta2.png" alt="Metamorphe" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Metamorphe</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion a sa Forme de base.
+              Accorde ensuite un Tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif2.png" alt="Reveil cryomantique [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Reveil cryomantique [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+<span class='gbt'>Effet Passif</span><br><br>
+			  Les alliés affliges d'un débuff <span class='gbt'>Gel</span> recoivent 90% de degats en mois.
+			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
+			  <span class='gbt'>Effet Actif</span><br><br>
+			  Une fois par Manche, ranime chaque allié, dont cette Championne, avec 100% de PV.
+			  Place un débuff <span class='gbt'>Gel</span> sur l'allié ranime pendant 1 tour.
+			  Il est impossible de bloquer ce débuff et d'y resister.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Stats -->
+            <div class="stats-section">
+                <h3 class="stats-title">📊 Statistiques</h3>
+                
+                <!-- FORM 1 STATS -->
+                <div data-form="form1" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">63%</span>
+                    </div>
+                </div>
+
+                <!-- FORM 2 STATS -->
+                <div data-form="form2" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">50%</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="right-panel panel">
-      <div class="stats">
-        <h3>Statistiques</h3>
-        <div class="stat-block" id="stats-content"></div>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FR RSL</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    La référence française pour Raid Shadow Legends
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Discord">💬</a>
+                    <a href="#" class="social-link" title="Twitter">🐦</a>
+                    <a href="../../../../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../../../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
+            </div>
 
-  <!-- Tooltip pour desktop uniquement -->
-  <div id="tooltip" class="tooltip"></div>
-  <script src="../../../../../assets/js/constant.js"></script><script src="polara.js"></script>
-</body>
-</html>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#factions">Factions</a></li>
+                    <li><a href="../../../../../index.html#guides">Guides</a></li>
+                    <li><a href="../../../../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Champions</h4>
+                <ul class="footer-links">
+                    <li><a href="../../hub.html">Barbares</a></li>
+                    <li><a href="../../../faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="../../../faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../../../../../index.html#factions">Toutes les Factions</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#guides">Guides de Build</a></li>
+                    <li><a href="../../../../../index.html#outils">Calculateurs</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                    <li><a href="../../../../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../../../assets/js/mythical.js"></script>
 </body>
 </html>

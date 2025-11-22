@@ -1,68 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toshiro</title>
-  <link rel="shortcut icon" href="../../../../../assets/images/factions/shadowkin.png">
-  <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
-  <!-- Registre des thèmes de faction -->
-  <script src="../../../../../assets/js/faction-theme-registry.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshiro l'Impitoyable - Champion Mythique | FR RSL</title>
+    <meta name="description" content="Guide complet de Toshiro l'Impitoyable, champion mythique Clan de l'Ombre dans Raid Shadow Legends.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../../../../assets/images/factions/shadowkin.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
+	<script src="../../../../../assets/js/Macros.js"></script>
 </head>
 <body>
-  <!-- Bouton retour responsive : fixe sur desktop, en haut sur mobile -->
-  <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+    <div class="animated-bg"></div>
 
-  <!-- Sélecteur de forme pour mythique -->
-  <div class="form-selector">
-    <button class="form-btn active" data-form="form1">Forme de Base</button>
-    <button class="form-btn" data-form="form2">Forme Alternative</button>
-  </div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../../../../index.html" class="logo">
+                <img src="../../../../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../../../index.html#factions">Factions</a></li>
+                <li><a href="../../../../../index.html#guides">Guides</a></li>
+                <li><a href="../../../../../index.html#outils">Outils</a></li>
+                <li><a href="../../../../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="left-panel panel">
-      <h2 class="champion-name">Toshiro le Sanglant</h2>
-      <div class="champion-info">
-        <div class="info-group">
-          <div class="rarity-box">Mythique</div>
-          <div class="type-badge" id="champion-type">Attaque</div>
+    <!-- Control Bar -->
+    <div class="control-bar">
+        <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+        <div class="form-selector">
+            <button class="form-btn active" data-form="form1">Forme de Base</button>
+            <button class="form-btn" data-form="form2">Forme Alternative</button>
         </div>
-        <div class="info-group">
-          <img src="../../../../../assets/images/affinity/magic.png" alt="Magic" class="affinity-img">
-        </div>
-      </div>
-      <div class="champion-image-container">
-        <img src="assets/toshiro.png" alt="Toshiro" class="champion-img">
-      </div>
     </div>
 
-    <div class="middle-panel panel">
-      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Compétences</h3>
-      <div class="spells-container" id="spells-section">
-        <!-- Les sorts seront générés par JavaScript -->
-      </div>
-      <div class="aura-container">
-        <div class="aura">
-          <img src="" alt="Aura" class="aura-img" id="aura-img">
+    <!-- Champion Container -->
+    <div class="champion-container">
+        <!-- Champion Header -->
+        <div class="champion-header">
+            <h1 class="champion-name">Toshiro l'Impitoyable</h1>
+            <div class="champion-meta">
+                <div class="rarity-badge">Mythique</div>
+                <div class="type-badge" id="champion-type" data-type-form1="Attaque" data-type-form2="PV">Attaque</div>
+                <div class="affinity-badge">
+                    <img src="../../../../../assets/images/affinity/magic.png" alt="Magie">
+                    <span>Magie</span>
+                </div>
+            </div>
         </div>
-        <!-- La description mobile de l'aura sera ajoutée ici par JavaScript -->
-      </div>
+
+        <!-- Main Grid -->
+        <div class="champion-grid">
+            <!-- Left: Champion Image & Aura -->
+            <div class="champion-image-card">
+                <div class="champion-image-wrapper">
+                    <img src="assets/toshiro.png" alt="Toshiro l'Impitoyable" class="champion-image">
+                </div>
+                
+                <div class="aura-section">
+                    <div class="aura-title">🌟 Aura</div>
+                    <div class="aura-content">
+                        <img src="../../../../../assets/images/auras/attack.png" alt="Aura" class="aura-icon">
+                        <p class="aura-description">
+                            Augmente la statistique <strong>ATQ</strong> des Alliés lors de toutes les Batailles de <strong>35%</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle: Skills -->
+            <div class="skills-section">
+                <h2 class="skills-title">⚔️ Compétences</h2>
+                
+                <!-- FORM 1 SKILLS -->
+                <div data-form="form1" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort1.png" alt="Saignée rapide" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Saignée rapide</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque un ennemi. Possède 50% de chances d'attaquer
+          un autre ennemi s'il se trouve sous débuff <span class='gbt'>Sangsue</span>.<br><br>
+          Place également un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 1 tour.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 2.8*ATQ + 0.1*PV</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort2.png" alt="Fléchettes sanguines" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Fléchettes sanguines</h3>
+                                <span class="skill-cooldown">⏱ 3 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque 4 fois de façon aléatoire. Chaque frappe augmente l'ATQ et les PV
+          de ce Champion de 5% lorsqu'il se trouve sous sa Forme de base (s'accumule jusqu'à 100%).
+          Si une cible se trouve sous débuff <span class='gbt'>Sangsue</span>, l'ATQ et les PV de ce Champion
+          sont au lieu de ça augmentés de 10%.<br><br>
+          Les dégâts infligés par cette compétence augmentent de 15% pour chaque débuff
+          <span class='gbt'>Sangsue</span> placé sur l'équipe ennemie.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 1.5*ATQ + 0.1*PV</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +10%</li>
+                            <li>Niv. 3 : Dégâts +10%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort3.png" alt="Typhon sanglant" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Typhon sanglant</h3>
+                                <span class="skill-cooldown">⏱ 3 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.<br><br>
+          Place un débuff <span class='gbt'>Réduction de DEF</span> de 60% et un débuff
+          <span class='gbt'>Sangsue</span> pendant 2 tours.<br><br>
+          Place une frappe supplémentaire sur les ennemis sous 2 débuffs ou plus.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 3.5*ATQ + 0.1*PV</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Ignorer la RES +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta1.png" alt="Métamorphe" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Métamorphe</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion à sa Forme alternative.
+          Accorde ensuite un Tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif1.png" alt="Faim de Vornspore [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Faim de Vornspore [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Remplit le Compteur de Tour de ce Champion de 5% chaque fois 
+          qu'il attaque une cible sous débuff <span class='gbt'>Sangsue</span>.<br><br>
+          Inflige 25% de dégâts en plus aux ennemis sous débuff <span class='gbt'>Sangsue</span>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- FORM 2 SKILLS -->
+                <div data-form="form2" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort4.png" alt="Entaille d'iaito" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Entaille d'iaito</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+          Possède 50% de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 0.16*PV + 0.7*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort5.png" alt="Dessine dans le sang" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Dessine dans le sang</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.<br><br>
+          Soigne tous les alliés sauf ce Champion à hauteur de 10% des dégâts infligés.
+          La valeur du soin augmente de 5% pour chaque débuff <span class='gbt'>Sangsue</span>
+          dont est affligée l'équipe ennemie.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 0.25*PV + 0.7*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort6.png" alt="Massacre cinglant" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Massacre cinglant</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+          Place un débuff <span class='gbt'>Réduction de VIT</span> de 30% 
+          et un débuff <span class='gbt'>Sangsue</span> pendant 2 tours.<br><br>
+          Accorde ensuite un Tour supplémentaire.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 0.27*PV + 0.7*ATQ</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Ignorer la RES +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta2.png" alt="Métamorphe" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Métamorphe</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion à sa Forme de base.
+          Accorde ensuite un Tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif2.png" alt="Enrobé de carnage [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Enrobé de carnage [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Double la quantité de soin reçue par ce Champion lorsqu'il attaque 
+          des ennemis sous débuff <span class='gbt'>Sangsue</span>.<br><br>
+          Réduit également les dégâts infligés par des ennemis sous débuffs 
+          <span class='gbt'>Sangsue</span> de 50%.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Stats -->
+            <div class="stats-section">
+                <h3 class="stats-title">📊 Statistiques</h3>
+                
+                <!-- FORM 1 STATS -->
+                <div data-form="form1" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">PV</span>
+                        <span class="stat-value">18 660</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">ATQ</span>
+                        <span class="stat-value">1 520</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉF</span>
+                        <span class="stat-value">1 090</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">VIT</span>
+                        <span class="stat-value">103</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">63%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">RÉS</span>
+                        <span class="stat-value">30</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">PRÉ</span>
+                        <span class="stat-value">20</span>
+                    </div>
+                </div>
+
+                <!-- FORM 2 STATS -->
+                <div data-form="form2" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">PV</span>
+                        <span class="stat-value">25 110</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">ATQ</span>
+                        <span class="stat-value">1 134</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉF</span>
+                        <span class="stat-value">1 046</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">VIT</span>
+                        <span class="stat-value">100</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">63%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">RÉS</span>
+                        <span class="stat-value">30</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">PRÉ</span>
+                        <span class="stat-value">20</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="right-panel panel">
-      <div class="stats">
-        <h3>Statistiques</h3>
-        <div class="stat-block" id="stats-content"></div>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FR RSL</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    La référence française pour Raid Shadow Legends
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Discord">💬</a>
+                    <a href="#" class="social-link" title="Twitter">🐦</a>
+                    <a href="../../../../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../../../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
+            </div>
 
-  <!-- Tooltip pour desktop uniquement -->
-  <div id="tooltip" class="tooltip"></div>
-  <script src="../../../../../assets/js/constant.js"></script><script src="toshiro.js"></script>
-</body>
-</html>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#factions">Factions</a></li>
+                    <li><a href="../../../../../index.html#guides">Guides</a></li>
+                    <li><a href="../../../../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Champions</h4>
+                <ul class="footer-links">
+                    <li><a href="../../hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../../../faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="../../../faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../../../../../index.html#factions">Toutes les Factions</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#guides">Guides de Build</a></li>
+                    <li><a href="../../../../../index.html#outils">Calculateurs</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                    <li><a href="../../../../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../../../assets/js/mythical.js"></script>
 </body>
 </html>

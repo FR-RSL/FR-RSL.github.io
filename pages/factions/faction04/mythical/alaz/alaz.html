@@ -1,68 +1,425 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alaz</title>
-  <link rel="shortcut icon" href="../../../../../assets/images/factions/barbarians.png">
-  <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
-  <!-- Registre des thèmes de faction -->
-  <script src="../../../../../assets/js/faction-theme-registry.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaz Porte-Soleil - Champion Mythique | FR RSL</title>
+    <meta name="description" content="Guide complet d'Alaz Porte-Soleil, champion mythique des Hauts Elfes dans Raid Shadow Legends.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../../../../assets/images/factions/highelves.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
+	<script src="../../../../../assets/js/Macros.js"></script>
 </head>
 <body>
-  <!-- Bouton retour responsive : fixe sur desktop, en haut sur mobile -->
-  <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+    <div class="animated-bg"></div>
 
-  <!-- Sélecteur de forme pour mythique -->
-  <div class="form-selector">
-    <button class="form-btn active" data-form="form1">Forme de Base</button>
-    <button class="form-btn" data-form="form2">Forme Alternative</button>
-  </div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../../../../../index.html" class="logo">
+                <img src="../../../../../assets/images/logos/logo.png" alt="FR RSL" onerror="this.style.display='none'">
+                <span>FR RSL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../../../index.html#factions">Factions</a></li>
+                <li><a href="../../../../../index.html#guides">Guides</a></li>
+                <li><a href="../../../../../index.html#outils">Outils</a></li>
+                <li><a href="../../../../../index.html#ressources">Ressources</a></li>
+            </ul>
+            <a href="https://pgbmax.github.io" class="nav-cta">Tier Lists</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="left-panel panel">
-      <h2 class="champion-name">Alaz Porte-Soleil</h2>
-      <div class="champion-info">
-        <div class="info-group">
-          <div class="rarity-box">Mythique</div>
-          <div class="type-badge" id="champion-type">Attaque</div>
+    <!-- Control Bar -->
+    <div class="control-bar">
+        <a href="../../hub.html" class="back-to-hub">← Retour au Hub</a>
+        <div class="form-selector">
+            <button class="form-btn active" data-form="form1">Forme de Base</button>
+            <button class="form-btn" data-form="form2">Forme Alternative</button>
         </div>
-        <div class="info-group">
-          <img src="../../../../../assets/images/affinity/force.png" alt="Magic" class="affinity-img">
-        </div>
-      </div>
-      <div class="champion-image-container">
-        <img src="assets/alaz.png" alt="karnage" class="champion-img">
-      </div>
     </div>
 
-    <div class="middle-panel panel">
-      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Compétences</h3>
-      <div class="spells-container" id="spells-section">
-        <!-- Les sorts seront générés par JavaScript -->
-      </div>
-      <div class="aura-container">
-        <div class="aura">
-          <img src="" alt="Aura" class="aura-img" id="aura-img">
+    <!-- Champion Container -->
+    <div class="champion-container">
+        <!-- Champion Header -->
+        <div class="champion-header">
+            <h1 class="champion-name">Alaz Porte-Soleil</h1>
+            <div class="champion-meta">
+                <div class="rarity-badge">Mythique</div>
+                <div class="type-badge" id="champion-type" data-type-form1="Defense" data-type-form2="PV">Défense</div>
+                <div class="affinity-badge">
+                    <img src="../../../../../assets/images/affinity/force.png" alt="Force">
+                    <span>Force</span>
+                </div>
+            </div>
         </div>
-        <!-- La description mobile de l'aura sera ajoutée ici par JavaScript -->
-      </div>
+
+        <!-- Main Grid -->
+        <div class="champion-grid">
+            <!-- Left: Champion Image & Aura -->
+            <div class="champion-image-card">
+                <div class="champion-image-wrapper">
+                    <img src="assets/alaz.png" alt="Alaz Porte-Soleil" class="champion-image">
+                </div>
+                
+                <div class="aura-section">
+                    <div class="aura-title">🌟 Aura</div>
+                    <div class="aura-content">
+                        <img src="../../../../../assets/images/auras/defence.png" alt="Aura Défense" class="aura-icon">
+                        <p class="aura-description">
+                            Augmente la statistique <strong>DEF</strong> des Alliés lors de toutes les Batailles de <strong>35%</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle: Skills -->
+            <div class="skills-section">
+                <h2 class="skills-title">⚔️ Compétences</h2>
+                
+                <!-- FORM 1 SKILLS -->
+                <div data-form="form1" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort1.png" alt="Hache a photons" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Hache a photons</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque 2 fois un ennemi.
+			  Place une frappe supplémentaire si la cible
+			  se trouve sous buff <span class='gbt'>Bouclier</span>.<br><br>
+			  Chaque frappe ignorera les buffs <span class='gbt'>Bouclier</span>.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 2*DEF</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort2.png" alt="Tonnerre retentissant" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Tonnerre retentissant</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+			  Avant d'attaquer, place un buff <span class='gbt'>Augmentation de DEF</span>
+			  de 60% sur tous les alliés pendant 2 tours.<br><br>
+			  Place une frappe supplémentaire sur les cibles ayant moins de 50% de PV apres
+			  la premiere frappe. Si les PV de la cible sont superieurs ou egaux a 50% apres
+			  la premiere frappe, reduit plutot les PV MAX de la cible de 30% des degats infliges.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 4.2*DEF</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort3.png" alt="Regard argent" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Regard argent</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Place un débuff <span class='gbt'>Provocation</span> sur l'ennemi cible pendant 2 tours.
+			  Il est impossible de resister a ce débuff si la cible Possède moins de 50% de PV.<br><br>
+			  Place également sur tous les alliés un buff <span class='gbt'>Contre-attaque</span>
+			  pendant 2 tours et un buff <span class='gbt'>Blocage des Degats</span> pendant 1 tour.
+                        </p>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Ignorer la RES +20%</li>
+                            <li>Niv. 3 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta1.png" alt="Metamorphe" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Metamorphe</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion a sa Forme alternative.
+              Accorde ensuite un Tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif1.png" alt="Cuirasse du soleil [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Cuirasse du soleil [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Augmente la DEF de ce Champion de 5% chaque fois qu'il contre-attaque
+			  (s'accumule jusqu'a 100%). Se reinitialise a chaque round.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- FORM 2 SKILLS -->
+                <div data-form="form2" style="display: none;">
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort4.png" alt="Secousse d'eclair" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Secousse d'eclair</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+			  Place une frappe supplémentaire sur les ennemis
+			  sous débuff <span class='gbt'>Brulure de PV</span>.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 0.18*PV</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort5.png" alt="Eruption solaire" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Eruption solaire</h3>
+                                <span class="skill-cooldown">⏱ 3 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Attaque tous les ennemis.
+			  Place un débuff <span class='gbt'>Brulure de PV</span> pendant 2 tours.
+			  Les ennemis sous buff <span class='gbt'>Peau de Pierre</span> ne peuvent pas resister a ce débuff.<br><br>
+			  Active ensuite instantanement les débuffs <span class='gbt'>Brulure de PV</span> sur les ennemis
+			  sous buff <span class='gbt'>Peau de Pierre</span>.<br><br>
+			  Place également un débuff <span class='gbt'>Peur absolue</span> sur tous les ennemis pendant 1 tour.
+                        </p>
+                        <div class="skill-multiplier">📊 Multiplicateur : 0.3*PV</div>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Dégâts +20%</li>
+                            <li>Niv. 3 : Ignorer la RES +20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/sort6.png" alt="Rayon regenerant" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Rayon regenerant</h3>
+                                <span class="skill-cooldown">⏱ 5 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Restaure totalement tous les PV MAX detruits des alliés,
+			  puis soigne tous les alliés de 30% des PV MAX de ce Champion.<br><br>
+			  Place également un buff <span class='gbt'>Renforcer</span> de 25% et un buff
+			  <span class='gbt'>Augmentation de RES</span> de 50% sur tous les alliés pendant 2 tours.
+                        </p>
+                        <ul class="skill-upgrades">
+                            <li>Niv. 2 : Temps de recharge -1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <img src="assets/meta2.png" alt="Metamorphe" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">Metamorphe</h3>
+                                <span class="skill-cooldown">⏱ 4 tours</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Fait passer ce Champion a sa Forme de base.
+              Accorde ensuite un Tour supplémentaire.
+                        </p>
+                    </div>
+
+                    <!-- Skill -->
+                    <div class="skill-card passive">
+                        <div class="skill-header">
+                            <img src="assets/passif2.png" alt="Coeur de cieux [P]" class="skill-icon">
+                            <div class="skill-info">
+                                <h3 class="skill-name">✨ Coeur de cieux [P] [P]</h3>
+                            </div>
+                        </div>
+                        <p class="skill-description">
+Augmente les PV de ce Champion de 6 points par tranche de 1 point de DEF
+			  dont il dispose lorsqu'il est sous sa Forme alternative.<br><br>
+			  Augmente de 20% les chances que les compétences des ennemis ne s'activent pas
+			  lorsqu'ils se trouve sous débuff <span class='gbt'>Peur</span> ou <span class='gbt'>Peur absolue</span>
+			  tout en etant affliges d'un débuff <span class='gbt'>Brulure de PV</span>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Stats -->
+            <div class="stats-section">
+                <h3 class="stats-title">📊 Statistiques</h3>
+                
+                <!-- FORM 1 STATS -->
+                <div data-form="form1" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">PV</span>
+                        <span class="stat-value">20 970</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">ATQ</span>
+                        <span class="stat-value">980</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DEF</span>
+                        <span class="stat-value">1 476</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">VIT</span>
+                        <span class="stat-value">105</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">63%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">RÉS</span>
+                        <span class="stat-value">50</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">PRÉ</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <!-- FORM 2 STATS -->
+                <div data-form="form2" style="display: none;">
+                    <div class="stat-row">
+                        <span class="stat-name">PV</span>
+                        <span class="stat-value">23 955</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">ATQ</span>
+                        <span class="stat-value">958</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DEF</span>
+                        <span class="stat-value">1 299</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">VIT</span>
+                        <span class="stat-value">105</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">TAUX C.</span>
+                        <span class="stat-value">15%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">DÉG C.</span>
+                        <span class="stat-value">63%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">RÉS</span>
+                        <span class="stat-value">50</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-name">PRÉ</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="right-panel panel">
-      <div class="stats">
-        <h3>Statistiques</h3>
-        <div class="stat-block" id="stats-content"></div>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FR RSL</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    La référence française pour Raid Shadow Legends
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Discord">💬</a>
+                    <a href="#" class="social-link" title="Twitter">🐦</a>
+                    <a href="../../../../../index.html#factions" class="social-link" title="Factions">🏰</a>
+                    <a href="../../../../../index.html#guides" class="social-link" title="Guides">📚</a>
+                </div>
+            </div>
 
-  <!-- Tooltip pour desktop uniquement -->
-  <div id="tooltip" class="tooltip"></div>
-  <script src="../../../../../assets/js/constant.js"></script><script src="alaz.js"></script>
-</body>
-</html>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#factions">Factions</a></li>
+                    <li><a href="../../../../../index.html#guides">Guides</a></li>
+                    <li><a href="../../../../../index.html#outils">Outils</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Champions</h4>
+                <ul class="footer-links">
+                    <li><a href="../../hub.html">Hauts Elfes</a></li>
+                    <li><a href="../../../faction09/hub.html">Rejetons Démoniaques</a></li>
+                    <li><a href="../../../faction14/hub.html">Clan de l'Ombre</a></li>
+                    <li><a href="../../../../../index.html#factions">Toutes les Factions</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul class="footer-links">
+                    <li><a href="../../../../../index.html#guides">Guides de Build</a></li>
+                    <li><a href="../../../../../index.html#outils">Calculateurs</a></li>
+                    <li><a href="https://pgbmax.github.io">Tier Lists</a></li>
+                    <li><a href="../../../../../index.html#ressources">Aide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FR RSL - Communauté Française Non-Officielle</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Raid: Shadow Legends est une marque déposée de Plarium Games Ltd. 
+                Ce site n'est pas affilié à Plarium.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../../../assets/js/mythical.js"></script>
 </body>
 </html>

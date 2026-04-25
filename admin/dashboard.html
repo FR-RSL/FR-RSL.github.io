@@ -8,388 +8,401 @@
     <link rel="shortcut icon" href="../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../assets/css/main.css">
     <style>
+        /* ── Layout ── */
+        .admin-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
         .admin-wrap {
-            max-width: 1100px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1.5rem 3rem;
+            width: 100%;
             position: relative;
             z-index: 10;
+            flex: 1;
         }
 
         /* ── Topbar ── */
         .admin-topbar {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
             gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
-        .admin-topbar h1 {
-            font-size: 1.8rem;
+        .topbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex: 1;
+            min-width: 0;
+        }
+        .topbar-brand img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(68,96,255,0.5));
+        }
+        .topbar-brand h1 {
+            font-size: 1.45rem;
             margin: 0;
-            background: linear-gradient(135deg, var(--text-light), var(--primary));
+            white-space: nowrap;
+            background: linear-gradient(135deg, var(--text-light) 40%, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .topbar-actions { display: flex; gap: 0.7rem; align-items: center; }
+        .topbar-actions { display: flex; gap: 0.6rem; align-items: center; }
+
+        /* ── Buttons ── */
         .btn {
-            padding: 0.55rem 1.2rem; border-radius: 10px; border: none;
-            font-weight: 600; font-size: 0.88rem; cursor: pointer;
-            transition: all 0.2s; text-decoration: none; display: inline-block; font-family: inherit;
+            padding: 0.5rem 1.1rem;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-family: inherit;
+            white-space: nowrap;
         }
-        .btn-ghost  { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
-        .btn-ghost:hover { color: var(--text-light); }
-        .btn-danger { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
-        .btn-danger:hover { background: rgba(229,57,53,0.35); }
+        .btn-ghost {
+            background: var(--glass-bg);
+            color: var(--text-muted);
+            border: 1px solid var(--glass-border);
+        }
+        .btn-ghost:hover { color: var(--text-light); background: rgba(255,255,255,0.07); }
+        .btn-danger {
+            background: rgba(239,83,80,0.15);
+            color: #ef5350;
+            border: 1px solid rgba(239,83,80,0.3);
+        }
+        .btn-danger:hover { background: rgba(239,83,80,0.28); }
 
         /* ── Welcome banner ── */
         .welcome-banner {
-            background: linear-gradient(135deg, rgba(68,96,255,0.12) 0%, rgba(68,96,255,0.04) 100%);
-            border: 1px solid rgba(68,96,255,0.25);
-            border-radius: 18px;
-            padding: 1.8rem 2rem;
-            margin-bottom: 2rem;
+            background: linear-gradient(130deg, rgba(68,96,255,0.14) 0%, rgba(6,255,165,0.04) 100%);
+            border: 1px solid rgba(68,96,255,0.3);
+            border-radius: 20px;
+            padding: 1.6rem 2rem;
+            margin-bottom: 2.5rem;
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
-        .welcome-banner .banner-logo {
-            width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;
-            filter: drop-shadow(0 0 18px rgba(68,96,255,0.5));
-        }
-        .welcome-banner h2 {
-            margin: 0 0 0.3rem;
-            font-size: 1.35rem;
+        .banner-text { flex: 1; min-width: 180px; }
+        .banner-text h2 {
+            font-size: 1.2rem;
             font-weight: 700;
+            margin: 0 0 0.35rem;
+            color: var(--text-light);
         }
-        .welcome-banner p {
+        .banner-text p {
             margin: 0;
-            font-size: 0.88rem;
+            font-size: 0.84rem;
             color: var(--text-muted);
+            line-height: 1.5;
         }
-        .welcome-banner .stats-row {
-            margin-left: auto;
+        .stats-row {
             display: flex;
-            gap: 1rem;
+            gap: 0.85rem;
             flex-wrap: wrap;
         }
         .stat-chip {
             background: rgba(255,255,255,0.05);
             border: 1px solid var(--glass-border);
-            border-radius: 10px;
-            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            padding: 0.6rem 1.1rem;
             text-align: center;
-            min-width: 80px;
+            min-width: 76px;
+            transition: border-color 0.2s;
         }
+        .stat-chip:hover { border-color: rgba(68,96,255,0.4); }
         .stat-chip .sc-value {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             color: var(--text-light);
             display: block;
             line-height: 1;
+            letter-spacing: -0.02em;
         }
         .stat-chip .sc-label {
-            font-size: 0.67rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.25rem;
+            letter-spacing: 0.07em;
+            margin-top: 0.3rem;
             display: block;
         }
 
-        /* ── Section heading ── */
-        .section-heading {
-            font-size: 0.72rem;
+        /* ── Section title ── */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0 0 1rem;
+        }
+        .section-title span {
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--text-muted);
-            margin: 0 0 0.85rem;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--glass-border);
         }
 
-        /* ── Cards grid ── */
+        /* ── Cards ── */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
         .admin-card {
+            --cc: #4460ff;
+            --cbg: rgba(68,96,255,0.08);
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 16px;
-            padding: 1.4rem 1.5rem;
-            backdrop-filter: blur(12px);
+            padding: 1.35rem 1.4rem 1.2rem;
             text-decoration: none;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
-            cursor: pointer;
-            transition: border-color 0.2s, background 0.2s, transform 0.15s;
-            position: relative;
-            overflow: hidden;
+            gap: 0.5rem;
+            transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
+            backdrop-filter: blur(12px);
         }
-        .admin-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transition: opacity 0.2s;
-            border-radius: inherit;
+        .admin-card:hover {
+            border-color: var(--cc);
+            background: var(--cbg);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
         }
-        .admin-card:hover { transform: translateY(-2px); }
-        .admin-card:hover::before { opacity: 1; }
         .admin-card:active { transform: none; }
 
-        .card-blue   { --card-color: #4460ff; --card-bg: rgba(68,96,255,0.1); }
-        .card-green  { --card-color: #06ffa5; --card-bg: rgba(6,255,165,0.08); }
-        .card-gold   { --card-color: #e6b800; --card-bg: rgba(230,184,0,0.08); }
-        .card-purple { --card-color: #a78bfa; --card-bg: rgba(167,139,250,0.1); }
-        .card-red    { --card-color: #ef5350; --card-bg: rgba(239,83,80,0.08); }
-        .card-teal   { --card-color: #34d399; --card-bg: rgba(52,211,153,0.08); }
-
-        .admin-card:hover { border-color: var(--card-color); background: var(--card-bg); }
-        .admin-card::before { background: var(--card-bg); }
+        .card-blue   { --cc: #4460ff; --cbg: rgba(68,96,255,0.1); }
+        .card-green  { --cc: #06ffa5; --cbg: rgba(6,255,165,0.08); }
+        .card-gold   { --cc: #e6b800; --cbg: rgba(230,184,0,0.08); }
+        .card-purple { --cc: #a78bfa; --cbg: rgba(167,139,250,0.1); }
 
         .card-icon {
-            width: 44px; height: 44px;
-            border-radius: 12px;
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.08);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.4rem;
-            flex-shrink: 0;
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+        .card-tag {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cc);
+            opacity: 0.8;
         }
         .card-title {
-            font-size: 1rem;
+            font-size: 0.97rem;
             font-weight: 700;
             color: var(--text-light);
             margin: 0;
+            line-height: 1.2;
         }
         .card-desc {
-            font-size: 0.78rem;
+            font-size: 0.77rem;
             color: var(--text-muted);
-            line-height: 1.4;
+            line-height: 1.45;
             margin: 0;
+            flex: 1;
         }
-        .card-arrow {
-            margin-top: auto;
-            font-size: 0.75rem;
-            color: var(--card-color);
-            font-weight: 600;
+        .card-cta {
+            margin-top: 0.5rem;
+            font-size: 0.73rem;
+            font-weight: 700;
+            color: var(--cc);
             opacity: 0;
             transition: opacity 0.2s;
         }
-        .admin-card:hover .card-arrow { opacity: 1; }
+        .admin-card:hover .card-cta { opacity: 1; }
 
-        /* ── Quick links row ── */
+        /* ── Quick links ── */
         .quick-links {
             display: flex;
-            gap: 0.75rem;
+            gap: 0.65rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
         }
         .quick-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
+            gap: 0.45rem;
+            padding: 0.45rem 0.95rem;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 10px;
+            border-radius: 9px;
             text-decoration: none;
             color: var(--text-muted);
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 600;
             transition: all 0.15s;
         }
-        .quick-link:hover { color: var(--text-light); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); }
+        .quick-link:hover {
+            color: var(--text-light);
+            border-color: rgba(255,255,255,0.22);
+            background: rgba(255,255,255,0.06);
+        }
 
-        /* ── Activity log panel ── */
-        .activity-panel {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            overflow: hidden;
-            backdrop-filter: blur(12px);
-        }
-        .activity-header {
-            padding: 1rem 1.4rem;
-            border-bottom: 1px solid var(--glass-border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .activity-header h3 { font-size: 0.9rem; font-weight: 700; margin: 0; }
-        .activity-body { padding: 0.6rem 0; }
-        .activity-item {
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
-            padding: 0.65rem 1.4rem;
-            transition: background 0.15s;
-        }
-        .activity-item:hover { background: rgba(255,255,255,0.02); }
-        .activity-dot {
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        .dot-blue   { background: #4460ff; }
-        .dot-gold   { background: #e6b800; }
-        .dot-green  { background: #06ffa5; }
-        .dot-purple { background: #a78bfa; }
-        .activity-text { flex: 1; font-size: 0.82rem; color: var(--text-muted); }
-        .activity-text strong { color: var(--text-light); font-weight: 600; }
-        .activity-time { font-size: 0.7rem; color: var(--text-muted); opacity: 0.6; }
-
-        @media (max-width: 640px) {
-            .welcome-banner .stats-row { margin-left: 0; width: 100%; }
+        @media (max-width: 600px) {
+            .admin-wrap { padding: 1.2rem 1rem 2rem; }
+            .welcome-banner { padding: 1.2rem 1.2rem; gap: 1.2rem; }
             .cards-grid { grid-template-columns: 1fr 1fr; }
-            .admin-topbar h1 { font-size: 1.4rem; }
+            .topbar-brand h1 { font-size: 1.15rem; }
         }
-        @media (max-width: 400px) {
+        @media (max-width: 380px) {
             .cards-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body>
+<body style="visibility:hidden">
     <div class="particles"></div>
+    <div class="admin-root">
+        <div class="admin-wrap">
 
-    <header>
-        <div class="logo-section">
-            <img src="../assets/images/logos/logo.png" alt="FR RSL">
-            <h1>FR RSL</h1>
-        </div>
-    </header>
-
-    <div class="admin-wrap">
-        <!--Topbar-->
-        <div class="admin-topbar">
-            <h1>⚙️ Dashboard Admin</h1>
-            <div class="topbar-actions">
-                <a href="../index.html" class="btn btn-ghost">← Site</a>
-                <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
-            </div>
-        </div>
-
-        <!--Welcomebanner-->
-        <div class="welcome-banner">
-            <img src="../assets/images/logos/logo.png" alt="FR RSL" class="banner-logo">
-            <div>
-                <h2>Bienvenue dans l'admin FR RSL</h2>
-                <p>Gère les champions, les hubs de factions et les articles du site.</p>
-            </div>
-            <div class="stats-row">
-                <div class="stat-chip">
-                    <span class="sc-value" id="statChampions">…</span>
-                    <span class="sc-label">Champions</span>
+            <!--Topbar-->
+            <div class="admin-topbar">
+                <div class="topbar-brand">
+                    <img src="../assets/images/logos/logo.png" alt="FR RSL">
+                    <h1>Dashboard Admin</h1>
                 </div>
-                <div class="stat-chip">
-                    <span class="sc-value" id="statArticles">…</span>
-                    <span class="sc-label">Articles</span>
-                </div>
-                <div class="stat-chip">
-                    <span class="sc-value">15</span>
-                    <span class="sc-label">Factions</span>
+                <div class="topbar-actions">
+                    <a href="../index.html" class="btn btn-ghost">← Site</a>
+                    <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
                 </div>
             </div>
-        </div>
 
-        <!--Section:Champions-->
-        <p class="section-heading">Champions</p>
-        <div class="cards-grid">
-            <a href="champion-creator.html" class="admin-card card-blue">
-                <div class="card-icon">⚔️</div>
-                <p class="card-title">Créer un Champion</p>
-                <p class="card-desc">Ajoute un nouveau champion légendaire ou mythique avec ses compétences, stats et portrait.</p>
-                <span class="card-arrow">Ouvrir →</span>
-            </a>
-            <a href="champion-editor.html" class="admin-card card-green">
-                <div class="card-icon">✏️</div>
-                <p class="card-title">Modifier un Champion</p>
-                <p class="card-desc">Édite le fichier JS ou HTML d'un champion existant directement depuis GitHub.</p>
-                <span class="card-arrow">Ouvrir →</span>
-            </a>
-        </div>
+            <!--Welcomebanner-->
+            <div class="welcome-banner">
+                <div class="banner-text">
+                    <h2>Panneau d'administration FR RSL</h2>
+                    <p>Gère les champions, les hubs de factions et les articles du site depuis ici.</p>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-chip">
+                        <span class="sc-value" id="statChampions">…</span>
+                        <span class="sc-label">Champions</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="sc-value" id="statArticles">…</span>
+                        <span class="sc-label">Articles</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="sc-value">15</span>
+                        <span class="sc-label">Factions</span>
+                    </div>
+                </div>
+            </div>
 
-        <!--Section:Factions-->
-        <p class="section-heading">Factions</p>
-        <div class="cards-grid">
-            <a href="hub-editor.html" class="admin-card card-gold">
-                <div class="card-icon">🏰</div>
-                <p class="card-title">Modifier un Hub</p>
-                <p class="card-desc">Modifie le titre, la description, les couleurs et le lore des 15 hubs de faction.</p>
-                <span class="card-arrow">Ouvrir →</span>
-            </a>
-        </div>
+            <!--Section:Champions-->
+            <div class="section-title"><span>Champions</span></div>
+            <div class="cards-grid">
+                <a href="champion-creator.html" class="admin-card card-blue">
+                    <div class="card-icon">⚔️</div>
+                    <span class="card-tag">Nouveau</span>
+                    <p class="card-title">Créer un Champion</p>
+                    <p class="card-desc">Ajoute un nouveau champion légendaire ou mythique avec ses compétences, stats et portrait.</p>
+                    <span class="card-cta">Ouvrir →</span>
+                </a>
+                <a href="champion-editor.html" class="admin-card card-green">
+                    <div class="card-icon">✏️</div>
+                    <span class="card-tag">Édition</span>
+                    <p class="card-title">Modifier un Champion</p>
+                    <p class="card-desc">Édite le fichier JS ou HTML d'un champion existant directement depuis GitHub.</p>
+                    <span class="card-cta">Ouvrir →</span>
+                </a>
+            </div>
 
-        <!--Section:Contenu-->
-        <p class="section-heading">Contenu</p>
-        <div class="cards-grid">
-            <a href="articles.html" class="admin-card card-purple">
-                <div class="card-icon">📋</div>
-                <p class="card-title">Articles</p>
-                <p class="card-desc">Crée, modifie ou supprime les articles qui apparaissent sur la page d'accueil du site.</p>
-                <span class="card-arrow">Ouvrir →</span>
-            </a>
-        </div>
+            <!--Section:Factions&Contenu-->
+            <div class="section-title"><span>Factions &amp; Contenu</span></div>
+            <div class="cards-grid">
+                <a href="hub-editor.html" class="admin-card card-gold">
+                    <div class="card-icon">🏰</div>
+                    <span class="card-tag">Factions</span>
+                    <p class="card-title">Modifier un Hub</p>
+                    <p class="card-desc">Modifie le titre, les couleurs et le lore des 15 hubs de faction.</p>
+                    <span class="card-cta">Ouvrir →</span>
+                </a>
+                <a href="articles.html" class="admin-card card-purple">
+                    <div class="card-icon">📋</div>
+                    <span class="card-tag">Contenu</span>
+                    <p class="card-title">Articles</p>
+                    <p class="card-desc">Crée, modifie ou supprime les articles de la page d'accueil du site.</p>
+                    <span class="card-cta">Ouvrir →</span>
+                </a>
+            </div>
 
-        <!--Quicklinks-->
-        <p class="section-heading">Liens rapides</p>
-        <div class="quick-links">
-            <a href="../index.html" class="quick-link">🌐 Page d'accueil</a>
-            <a href="../pages/equipment/index.html" class="quick-link">🛡️ Équipement</a>
-            <a href="../pages/factions/faction01/hub.html" class="quick-link">🏰 Hub Seigneurs</a>
-            <a href="https://github.com/FR-RSL/FR-RSL.github.io" target="_blank" class="quick-link">🐙 GitHub</a>
+            <!--Quicklinks-->
+            <div class="section-title"><span>Liens rapides</span></div>
+            <div class="quick-links">
+                <a href="../index.html" class="quick-link">🌐 Page d'accueil</a>
+                <a href="../pages/equipment/index.html" class="quick-link">🛡️ Équipement</a>
+                <a href="../pages/factions/faction01/hub.html" class="quick-link">🏰 Hub Seigneurs</a>
+                <a href="https://github.com/FR-RSL/FR-RSL.github.io" target="_blank" rel="noopener" class="quick-link">🐙 GitHub</a>
+            </div>
+
         </div>
     </div>
 
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/articles.js"></script>
     <script>
-    (function() {
+    (function () {
         var token = sessionStorage.getItem('admin_token');
         if (!token){window.location.href='index.html';return;}
+        document.body.style.visibility = 'visible';
 
-        document.getElementById('btnLogout').addEventListener('click', function() {
+        document.getElementById('btnLogout').addEventListener('click', function () {
             sessionStorage.removeItem('admin_token');
             window.location.href = 'index.html';
         });
 
-        // Stats
+        // Articles count
         if (typeof ARTICLES !== 'undefined') {
             document.getElementById('statArticles').textContent = ARTICLES.length;
         }
 
-        // Load champion count from GitHub
+        // Champion count via GitHub API
         fetch('https://api.github.com/repos/FR-RSL/FR-RSL.github.io/contents/assets/js/champions-index.js', {
-            headers: { 'Authorization': 'Bearer '+token, 'X-GitHub-Api-Version': '2022-11-28' }
-        }).then(function(r){ return r.ok ? r.json() : null; })
-          .then(function(data) {
+            headers: { 'Authorization': 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
+        }).then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (data) {
             if (!data)return;
-            var src = atob(data.content.replace(/\n/g,''));
+            var src = atob(data.content.replace(/\n/g, ''));
             var m = src.match(/const CHAMPIONS\s*=\s*\[/);
             if (man select) return;
-            var count = (src.match(/\{[^}]*faction:/g)||[]).length;
+            var count = (src.match(/\{[^}]*faction:/g) || []).length;
             document.getElementById('statChampions').textContent = count;
-        }).catch(function(){
+        }).catch(function () {
             document.getElementById('statChampions').textContent = '—';
         });
 
         // Particles
         var c = document.querySelector('.particles');
         if (c) {
-            for (var i = 0; i < 18; i++) {
+            for (var i = 0; i < 15; i++) {
                 var d = document.createElement('div');
                 d.className = 'particle';
-                d.style.left = Math.random()*100+'%';
-                d.style.top  = Math.random()*100+'%';
-                d.style.animationDelay    = (Math.random()*6)+'s';
-                d.style.animationDuration = (4+Math.random()*4)+'s';
+                d.style.left = Math.random() * 100 + '%';
+                d.style.top = Math.random() * 100 + '%';
+                d.style.animationDelay = (Math.random() * 6) + 's';
+                d.style.animationDuration = (4 + Math.random() * 4) + 's';
                 c.appendChild(d);
             }
         }

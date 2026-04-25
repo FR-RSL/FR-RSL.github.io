@@ -71,7 +71,7 @@
     .view-link:hover { color: var(--accent); }
   </style>
 </head>
-<body>
+<body style="visibility:hidden">
 <div class="particles"></div>
 <header>
   <div class="logo-section">
@@ -86,6 +86,7 @@
     <div class="topbar-actions">
       <a href="champion-creator.html" class="btn btn-ghost">⚔️ Créer</a>
       <a href="dashboard.html" class="btn btn-ghost">← Dashboard</a>
+      <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
     </div>
   </div>
 
@@ -156,7 +157,12 @@ var curFileIdx = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
   ghTok = sessionStorage.getItem('admin_token');
-  if (!ghTok){window.location.href='index.html';return;}
+  if (!ghTok) { window.location.href = 'index.html'; return; }
+  document.body.style.visibility = 'visible';
+  document.getElementById('btnLogout').addEventListener('click', function() {
+    sessionStorage.removeItem('admin_token');
+    window.location.href = 'index.html';
+  });
   spawnParticles();
   loadChampionsList();
   document.getElementById('codeEditor').addEventListener('input', function() {

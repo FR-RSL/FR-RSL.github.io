@@ -450,7 +450,7 @@
         }
     </style>
 </head>
-<body>
+<body style="visibility:hidden">
 <div class="particles"></div>
 
 <header>
@@ -467,6 +467,7 @@
         <h1>⚔️ Créateur de Champion</h1>
         <div class="topbar-actions">
             <a href="dashboard.html" class="btn btn-ghost">← Dashboard</a>
+            <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
         </div>
     </div>
 
@@ -748,7 +749,12 @@ var imgs2       = [];
 // ── Boot ───────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
   ghTok = sessionStorage.getItem('admin_token');
-  if (!ghTok){window.location.href='index.html';return;}
+  if (!ghTok) { window.location.href = 'index.html'; return; }
+  document.body.style.visibility = 'visible';
+  document.getElementById('btnLogout').addEventListener('click', function() {
+    sessionStorage.removeItem('admin_token');
+    window.location.href = 'index.html';
+  });
   buildStatsGrid('statsGrid1');
   buildStatsGrid('statsGrid2');
   buildAuraGrid();

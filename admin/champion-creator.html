@@ -1,0 +1,1419 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un Champion — Admin FR-RSL</title>
+  <style>
+    :root {
+      --bg: #0a0b14;
+      --bg-alt: #181a24;
+      --border: rgba(255,255,255,0.1);
+      --primary: #4460ff;
+      --accent: #06ffa5;
+      --gold: #e6b800;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --danger: #ef4444;
+      --success: #22c55e;
+      --glass: rgba(255,255,255,0.04);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    .topbar a:hover { color: var(--text); }
+    .topbar h1 { font-size: 1.1rem; font-weight: 700; color: var(--gold); flex: 1; text-align: center; }
+    .status-bar {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+    }
+    .status-bar.ok { border-color: var(--success); color: var(--success); }
+    .status-bar.err { border-color: var(--danger); color: var(--danger); }
+    .status-bar.loading { border-color: var(--primary); color: var(--primary); }
+
+    /* ── Layout ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+
+    /* ── Tabs ── */
+    .tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+    .tab-btn {
+      padding: 0.6rem 1.2rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Cards / Sections ── */
+    .card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card h2 {
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.75rem; }
+
+    /* ── Forms ── */
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-group label { font-size: 0.8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { outline: none; border-color: var(--primary); }
+    .form-group textarea { min-height: 90px; resize: vertical; }
+    .form-group select option { background: #1e2030; }
+
+    /* ── Toggle ── */
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+    }
+    .toggle-row label { font-size: 0.9rem; cursor: pointer; }
+    .toggle {
+      width: 42px; height: 22px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      position: relative;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .toggle input { display: none; }
+    .toggle-knob {
+      position: absolute;
+      top: 2px; left: 2px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--muted);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .toggle input:checked ~ .toggle-knob { transform: translateX(20px); background: var(--accent); }
+    .toggle input:checked + .toggle { background: rgba(6,255,165,0.15); }
+
+    /* ── Spell cards ── */
+    .spell-list { display: flex; flex-direction: column; gap: 1rem; }
+    .spell-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      position: relative;
+    }
+    .spell-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .spell-number {
+      background: var(--primary);
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .spell-card-header h4 { font-size: 0.9rem; flex: 1; }
+    .spell-img-preview {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .spell-img-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .spell-img-preview span { font-size: 1.5rem; }
+    .btn-remove-spell {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      color: var(--danger);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .btn-remove-spell:hover { background: rgba(239,68,68,0.2); }
+    .level-info-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .level-info-item { display: flex; gap: 0.4rem; align-items: center; }
+    .level-info-item input { flex: 1; }
+    .btn-small {
+      background: rgba(68,96,255,0.15);
+      border: 1px solid rgba(68,96,255,0.3);
+      color: var(--primary);
+      border-radius: 6px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-small:hover { background: rgba(68,96,255,0.25); }
+    .btn-small.danger {
+      background: rgba(239,68,68,0.1);
+      border-color: rgba(239,68,68,0.3);
+      color: var(--danger);
+    }
+    .btn-add-spell {
+      background: var(--glass);
+      border: 2px dashed rgba(68,96,255,0.4);
+      color: var(--primary);
+      border-radius: 10px;
+      padding: 0.75rem;
+      cursor: pointer;
+      text-align: center;
+      font-size: 0.9rem;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%;
+    }
+    .btn-add-spell:hover { border-color: var(--primary); background: rgba(68,96,255,0.05); }
+
+    /* ── Description editor ── */
+    .desc-editor { position: relative; }
+    .desc-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+      padding: 0.4rem;
+    }
+    .btn-token {
+      background: rgba(68,96,255,0.15);
+      border: 1px solid rgba(68,96,255,0.25);
+      color: #93c5fd;
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    .btn-token:hover { background: rgba(68,96,255,0.3); }
+    .btn-token.debuff {
+      background: rgba(239,68,68,0.1);
+      border-color: rgba(239,68,68,0.25);
+      color: #fca5a5;
+    }
+    .btn-token.debuff:hover { background: rgba(239,68,68,0.2); }
+    .desc-editor textarea {
+      border-radius: 0 0 8px 8px !important;
+    }
+
+    /* ── Portrait upload ── */
+    .portrait-upload-area {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .portrait-upload-area:hover { border-color: var(--primary); }
+    .portrait-preview {
+      max-width: 180px;
+      max-height: 180px;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* ── Aura selector ── */
+    .aura-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.5rem;
+    }
+    .aura-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      background: var(--glass);
+      transition: border-color 0.2s;
+    }
+    .aura-option:hover { border-color: rgba(255,255,255,0.2); }
+    .aura-option.selected { border-color: var(--gold); background: rgba(230,184,0,0.08); }
+    .aura-option img { width: 40px; height: 40px; border-radius: 50%; }
+    .aura-option span { font-size: 0.65rem; color: var(--muted); text-align: center; }
+
+    /* ── Affinity selector ── */
+    .affinity-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+    .affinity-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      background: var(--glass);
+      transition: border-color 0.2s;
+    }
+    .affinity-option:hover { border-color: rgba(255,255,255,0.2); }
+    .affinity-option.selected { border-color: var(--primary); background: rgba(68,96,255,0.08); }
+    .affinity-option img { width: 36px; height: 36px; }
+    .affinity-option span { font-size: 0.7rem; color: var(--muted); }
+
+    /* ── Stats grid ── */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
+    .stat-field { display: flex; gap: 0.5rem; align-items: center; }
+    .stat-field label { font-size: 0.8rem; color: var(--muted); width: 80px; flex-shrink: 0; }
+    .stat-field input { flex: 1; }
+
+    /* ── Faction spells (lead) ── */
+    .faction-effects { background: rgba(230,184,0,0.04); border: 1px solid rgba(230,184,0,0.2); border-radius: 8px; padding: 0.75rem; margin-top: 0.5rem; }
+    .faction-effects h5 { font-size: 0.75rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+    /* ── Mythical form tabs ── */
+    .form-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+    .form-tab-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .form-tab-btn.active { background: rgba(68,96,255,0.2); border-color: var(--primary); color: var(--text); }
+    .form-panel { display: none; }
+    .form-panel.active { display: block; }
+
+    /* ── Publish section ── */
+    .publish-section { text-align: center; padding: 1.5rem; }
+    .btn-publish {
+      background: linear-gradient(135deg, var(--primary), #6677ff);
+      border: none;
+      color: white;
+      border-radius: 12px;
+      padding: 0.9rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.1s, opacity 0.2s;
+    }
+    .btn-publish:hover { transform: translateY(-1px); opacity: 0.9; }
+    .btn-publish:active { transform: translateY(0); }
+    .btn-publish:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .progress-log {
+      margin-top: 1rem;
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: left;
+      font-family: monospace;
+      font-size: 0.8rem;
+      max-height: 250px;
+      overflow-y: auto;
+      display: none;
+    }
+    .progress-log.visible { display: block; }
+    .log-line { padding: 0.15rem 0; }
+    .log-line.ok { color: var(--success); }
+    .log-line.err { color: var(--danger); }
+    .log-line.info { color: var(--muted); }
+    .log-line.warn { color: var(--gold); }
+
+    /* ── Summary preview ── */
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+    .summary-item { background: var(--glass); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem; }
+    .summary-item .key { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.2rem; }
+    .summary-item .val { font-size: 0.9rem; color: var(--text); }
+
+    /* ── Hidden file inputs ── */
+    input[type="file"] { display: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .affinity-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="dashboard.html">← Dashboard</a>
+  <h1>Créateur de Champion</h1>
+  <div id="statusBar" class="status-bar">Chargement…</div>
+</div>
+
+<div class="page">
+
+  <!--──TABS──-->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(0)">1. Infos</button>
+    <button class="tab-btn" onclick="switchTab(1)">2. Compétences</button>
+    <button class="tab-btn" onclick="switchTab(2)">3. Stats &amp; Aura</button>
+    <button class="tab-btn" onclick="switchTab(3)">4. Portrait</button>
+    <button class="tab-btn" onclick="switchTab(4)">5. Publier</button>
+  </div>
+
+  <!--══════════════════════════════════════════════════════
+       TAB 1 — INFOS GÉNÉRALES
+  ══════════════════════════════════════════════════════ -->
+  <div class="tab-panel active" id="tab0">
+
+    <div class="card">
+      <h2>Identité du Champion</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nom court (slug)</label>
+          <input type="text" id="slug" placeholder="ex: acelin" oninput="onSlugInput(this.value)">
+          <small style="color:var(--muted);font-size:0.75rem">Utilisé comme nom de dossier et de fichier</small>
+        </div>
+        <div class="form-group">
+          <label>Nom complet</label>
+          <input type="text" id="fullName" placeholder="ex: Acelin le Vaillant">
+        </div>
+        <div class="form-group">
+          <label>Faction</label>
+          <select id="faction">
+            <option value="faction01">Seigneurs</option>
+            <option value="faction02">Haut Elfes</option>
+            <option value="faction03">Ordre Sacré</option>
+            <option value="faction04">Barbares</option>
+            <option value="faction05">Tribus Ogryn</option>
+            <option value="faction06">Homme Lézards</option>
+            <option value="faction07">Marcheurs de Peau</option>
+            <option value="faction08">Orcs</option>
+            <option value="faction09">Rejetons Démoniaques</option>
+            <option value="faction10">Morts-vivants</option>
+            <option value="faction11">Elfes Noirs</option>
+            <option value="faction12">Revenants Chevaliers</option>
+            <option value="faction13">Nains</option>
+            <option value="faction14">Clan de l'Ombre</option>
+            <option value="faction15">Gardes Sylvains</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Rareté</label>
+          <select id="rarity" onchange="onRarityChange(this.value)">
+            <option value="legendary">Légendaire</option>
+            <option value="mythical">Mythique</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Type</label>
+          <select id="champType">
+            <option value="Attaque">Attaque</option>
+            <option value="Defense">Défense</option>
+            <option value="Soutien">Soutien</option>
+            <option value="HP">HP</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Affinité</h2>
+      <div class="affinity-grid" id="affinityGrid">
+        <div class="affinity-option selected" data-val="force" onclick="selectAffinity('force')">
+          <img src="../assets/images/affinity/force.png" alt="Force">
+          <span>Force</span>
+        </div>
+        <div class="affinity-option" data-val="magic" onclick="selectAffinity('magic')">
+          <img src="../assets/images/affinity/magic.png" alt="Magie">
+          <span>Magie</span>
+        </div>
+        <div class="affinity-option" data-val="spirit" onclick="selectAffinity('spirit')">
+          <img src="../assets/images/affinity/spirit.png" alt="Esprit">
+          <span>Esprit</span>
+        </div>
+        <div class="affinity-option" data-val="void" onclick="selectAffinity('void')">
+          <img src="../assets/images/affinity/void.png" alt="Vide">
+          <span>Vide</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Options spéciales</h2>
+      <div class="toggle-row">
+        <label class="toggle">
+          <input type="checkbox" id="isLeadFaction" onchange="renderSpells()">
+          <span class="toggle-knob"></span>
+        </label>
+        <label for="isLeadFaction">Lead Faction (la compétence passive a un bonus de faction)</label>
+      </div>
+      <div id="mythicalSection" style="display:none">
+        <hr style="border-color:var(--border);margin:0.75rem 0">
+        <div class="toggle-row" style="margin-bottom:0.75rem">
+          <span style="font-size:0.85rem;color:var(--muted)">Noms des formes :</span>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Bouton Forme 1</label>
+            <input type="text" id="form1Label" value="Forme de Base">
+          </div>
+          <div class="form-group">
+            <label>Bouton Forme 2</label>
+            <input type="text" id="form2Label" value="Forme Alternative">
+          </div>
+          <div class="form-group">
+            <label>Type Forme 2</label>
+            <select id="champType2">
+              <option value="Attaque">Attaque</option>
+              <option value="Defense">Défense</option>
+              <option value="Soutien">Soutien</option>
+              <option value="HP">HP</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--══════════════════════════════════════════════════════
+       TAB 2 — COMPÉTENCES
+  ══════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab1">
+
+    <div id="mythicalFormTabs" style="display:none" class="card" style="padding:0.75rem">
+      <div class="form-tabs">
+        <button class="form-tab-btn active" onclick="switchFormTab('form1')">Forme 1</button>
+        <button class="form-tab-btn" onclick="switchFormTab('form2')">Forme 2</button>
+      </div>
+    </div>
+
+    <!--Form1spells-->
+    <div id="spellsForm1">
+      <div class="card">
+        <h2>Compétences — <span id="form1LabelDisplay">Forme principale</span></h2>
+        <div class="spell-list" id="spellList1"></div>
+        <button class="btn-add-spell" onclick="addSpell(1)">+ Ajouter une compétence</button>
+      </div>
+    </div>
+
+    <!--Form2spells(mythicalonly)-->
+    <div id="spellsForm2" style="display:none">
+      <div class="card">
+        <h2>Compétences — <span id="form2LabelDisplay">Forme alternative</span></h2>
+        <div class="spell-list" id="spellList2"></div>
+        <button class="btn-add-spell" onclick="addSpell(2)">+ Ajouter une compétence</button>
+      </div>
+    </div>
+
+    <div style="color:var(--muted);font-size:0.8rem;padding:0.5rem 0">
+      💡 Utilise <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.3rem;border-radius:4px">${BUFFS.XXX}</code> et <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.3rem;border-radius:4px">${DEBUFFS.XXX}</code> dans les descriptions — les boutons de raccourci sont disponibles dans chaque champ.
+    </div>
+
+  </div>
+
+  <!--══════════════════════════════════════════════════════
+       TAB 3 — STATS & AURA
+  ══════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab2">
+
+    <!--Statsform1-->
+    <div class="card">
+      <h2>Statistiques <span id="statsForm1Label"></span></h2>
+      <div class="stats-grid" id="statsGrid1"></div>
+    </div>
+
+    <!--Statsform2(mythical)-->
+    <div id="statsForm2Section" style="display:none" class="card">
+      <h2>Statistiques — Forme 2</h2>
+      <div class="stats-grid" id="statsGrid2"></div>
+    </div>
+
+    <!--Aura-->
+    <div class="card">
+      <h2>Aura</h2>
+      <h3>Image d'aura</h3>
+      <div class="aura-grid" id="auraGrid"></div>
+      <div class="form-group" style="margin-top:1rem">
+        <label>Description de l'aura</label>
+        <div class="desc-editor">
+          <div class="desc-toolbar" id="auraDescToolbar"></div>
+          <textarea id="auraDesc" rows="4" placeholder="Augmente la DEF des alliés de 25%..."></textarea>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--══════════════════════════════════════════════════════
+       TAB 4 — PORTRAIT
+  ══════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab3">
+    <div class="card">
+      <h2>Portrait du Champion</h2>
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem">L'image sera nommée <code id="portraitFilename" style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> et placée dans le dossier <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px">assets/</code> du champion.</p>
+      <div class="portrait-upload-area" onclick="document.getElementById('portraitInput').click()">
+        <div id="portraitPlaceholder">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🖼️</div>
+          <div style="color:var(--muted);font-size:0.85rem">Cliquer pour choisir une image</div>
+          <div style="color:var(--muted);font-size:0.75rem;margin-top:0.25rem">PNG, JPG — recommandé 400×500px</div>
+        </div>
+        <img id="portraitPreviewImg" class="portrait-preview" style="display:none">
+      </div>
+      <input type="file" id="portraitInput" accept="image/*" onchange="onPortraitChange(this)">
+    </div>
+  </div>
+
+  <!--══════════════════════════════════════════════════════
+       TAB 5 — PUBLIER
+  ══════════════════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab4">
+    <div class="card">
+      <h2>Récapitulatif</h2>
+      <div class="summary-grid" id="summaryGrid"></div>
+      <div id="filesList" style="color:var(--muted);font-size:0.8rem"></div>
+    </div>
+    <div class="publish-section">
+      <button class="btn-publish" id="publishBtn" onclick="publishChampion()">
+        🚀 Publier le Champion
+      </button>
+      <div class="progress-log" id="progressLog"></div>
+    </div>
+  </div>
+
+</div><!--/page-->
+
+<!--══════════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════════ -->
+<script>
+// ─── Configuration GitHub ───────────────────────────────────
+const GITHUB_OWNER  = 'FR-RSL';
+const GITHUB_REPO   = 'FR-RSL.github.io';
+const GITHUB_BRANCH = 'main';
+
+// ─── Faction metadata ────────────────────────────────────────
+const FACTION_META = {
+  faction01: { name: 'Seigneurs',              img: 'bannerlords.png'    },
+  faction02: { name: 'Haut Elfes',             img: 'high-elves.png'     },
+  faction03: { name: "Ordre Sacré",            img: 'sacred-order.png'   },
+  faction04: { name: 'Barbares',               img: 'barbarians.png'     },
+  faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.png'   },
+  faction06: { name: 'Homme Lézards',          img: 'lizardmen.png'      },
+  faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.png'    },
+  faction08: { name: 'Orcs',                   img: 'orcs.png'           },
+  faction09: { name: 'Rejetons Démoniaques',   img: 'demonspawn.png'     },
+  faction10: { name: 'Morts-vivants',          img: 'undead-hordes.png'  },
+  faction11: { name: 'Elfes Noirs',            img: 'dark-elves.png'     },
+  faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.png'},
+  faction13: { name: 'Nains',                  img: 'dwarves.png'        },
+  faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.png'      },
+  faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png'},
+};
+
+// ─── Auras available ─────────────────────────────────────────
+const AURAS = [
+  { key: 'attack',       label: 'ATQ' },
+  { key: 'defence',      label: 'DEF' },
+  { key: 'hp',           label: 'PV' },
+  { key: 'speed',        label: 'VIT' },
+  { key: 'crit',         label: 'Taux C.' },
+  { key: 'acc',          label: 'PRÉ' },
+  { key: 'res',          label: 'RÉS' },
+  { key: 'sup-attack',   label: 'ATQ+' },
+  { key: 'sup-defence',  label: 'DEF+' },
+  { key: 'sup-hp',       label: 'PV+' },
+  { key: 'sup-speed',    label: 'VIT+' },
+  { key: 'sup-crit',     label: 'Taux+' },
+  { key: 'sup-acc',      label: 'PRÉ+' },
+];
+
+// ─── BUFFS / DEBUFFS tokens for toolbar ──────────────────────
+const BUFF_TOKENS = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS',
+  'SHIELD','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM',
+  'RAGE','VEIL','PERFECT_VEIL','STRENGTHEN','COUNTER','LIFE_BARRIER','HEALS','FORTIFY'];
+const DEBUFF_TOKENS = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION',
+  'BLOCK_BUFFS','WEAKEN','HEX','POISON','BURN','ATK','DEF','SPD','LEECH'];
+
+// ─── State ───────────────────────────────────────────────────
+let token = null;
+let selectedAffinity = 'force';
+let selectedAura = 'defence';
+let portraitBase64 = null;
+
+// spells1[i] = { name, desc, damage, cooldown, levelInfo:[], factions:[], isPassive, imgFile, imgBase64, imgDataUrl }
+let spells1 = [];
+let spells2 = [];
+// spell images: spellImgs1[i], spellImgs2[i] = { base64, dataUrl, ext }
+let spellImgs1 = [];
+let spellImgs2 = [];
+let portraitExt = 'png';
+
+let currentFormTab = 'form1';
+
+// ─── Init ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  token = sessionStorage.getItem('ghToken');
+  if (!token){window.location.href='index.html';return;}
+  document.getElementById('statusBar').textContent = 'Connecté';
+  document.getElementById('statusBar').className = 'status-bar ok';
+
+  renderStatsGrid(1);
+  renderStatsGrid(2);
+  renderAuraGrid();
+  buildDescToolbar('auraDescToolbar', 'auraDesc');
+  addSpell(1);
+  addSpell(1);
+
+  // sync form labels
+  document.getElementById('form1Label').addEventListener('input', syncFormLabels);
+  document.getElementById('form2Label').addEventListener('input', syncFormLabels);
+});
+
+// ─── Tab switching ────────────────────────────────────────────
+function switchTab(idx) {
+  document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+  document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+  if (idx === 4) buildSummary();
+}
+
+// ─── Form tab (mythical forms) ────────────────────────────────
+function switchFormTab(form) {
+  currentFormTab = form;
+  document.querySelectorAll('.form-tab-btn').forEach(b => b.classList.toggle('active', b.textContent.toLowerCase().includes(form.slice(-1) === '1' ? '1' : '2')));
+  document.getElementById('spellsForm1').style.display = form === 'form1' ? 'block' : 'none';
+  document.getElementById('spellsForm2').style.display = form === 'form2' ? 'block' : 'none';
+}
+
+// ─── Rarity change ────────────────────────────────────────────
+function onRarityChange(val) {
+  const isMythical = val === 'mythical';
+  document.getElementById('mythicalSection').style.display = isMythical ? 'block' : 'none';
+  document.getElementById('mythicalFormTabs').style.display = isMythical ? 'block' : 'none';
+  document.getElementById('spellsForm2').style.display = isMythical && currentFormTab === 'form2' ? 'block' : 'none';
+  document.getElementById('statsForm2Section').style.display = isMythical ? 'block' : 'none';
+  document.getElementById('statsForm1Label').textContent = isMythical ? '— Forme 1' : '';
+}
+
+// ─── Slug input ───────────────────────────────────────────────
+function onSlugInput(v) {
+  const slug = v.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
+  if (document.getElementById('slug').value !== slug) document.getElementById('slug').value = slug;
+  document.getElementById('portraitFilename').textContent = slug ? slug + '.png' : 'champion.png';
+}
+
+// ─── Affinity selector ───────────────────────────────────────
+function selectAffinity(val) {
+  selectedAffinity = val;
+  document.querySelectorAll('.affinity-option').forEach(el =>
+    el.classList.toggle('selected', el.dataset.val === val));
+}
+
+// ─── Aura grid ────────────────────────────────────────────────
+function renderAuraGrid() {
+  const grid = document.getElementById('auraGrid');
+  grid.innerHTML = AURAS.map(a => `
+    <div class="aura-option ${a.key === selectedAura ? 'selected' : ''}" data-key="${a.key}" onclick="selectAura('${a.key}')">
+      <img src="../assets/images/auras/${a.key}.png" alt="${a.label}">
+      <span>${a.label}</span>
+    </div>`).join('');
+}
+function selectAura(key) {
+  selectedAura = key;
+  document.querySelectorAll('.aura-option').forEach(el =>
+    el.classList.toggle('selected', el.dataset.key === key));
+}
+
+// ─── Stats grid ───────────────────────────────────────────────
+const STAT_FIELDS = ['PV','ATQ','DEF','VIT','TAUX C.','DÉG C.','RÉS','PRÉ'];
+function renderStatsGrid(form) {
+  const grid = document.getElementById('statsGrid' + form);
+  grid.innerHTML = STAT_FIELDS.map(s => `
+    <div class="stat-field">
+      <label>${s}</label>
+      <input type="text" id="stat${form}_${s.replace(/\s/g,'_').replace(/\./g,'')}" placeholder="—" class="stat-input">
+    </div>`).join('');
+}
+function getStats(form) {
+  const obj = {};
+  STAT_FIELDS.forEach(s => {
+    const id = 'stat' + form + '_' + s.replace(/\s/g,'_').replace(/\./g,'');
+    obj[s] = document.getElementById(id)?.value.trim() || '0';
+  });
+  return obj;
+}
+
+// ─── Description toolbar ─────────────────────────────────────
+function buildDescToolbar(toolbarId, textareaId) {
+  const bar = document.getElementById(toolbarId);
+  if (!bar)return;
+  const buffs = BUFF_TOKENS.slice(0, 10).map(k =>
+    `<button class="btn-token" onclick="insertToken('${textareaId}','BUFFS','${k}')">B.${k}</button>`).join('');
+  const debuffs = DEBUFF_TOKENS.slice(0, 10).map(k =>
+    `<button class="btn-token debuff" onclick="insertToken('${textareaId}','DEBUFFS','${k}')">D.${k}</button>`).join('');
+  bar.innerHTML = buffs + debuffs;
+}
+function insertToken(textareaId, type, key) {
+  const ta = document.getElementById(textareaId);
+  if (tail -10 /home/pierre/ft_irc/srcs/Server.cpp) return;
+  const token_str = '${' + type + '.' + key + '}';
+  const start = ta.selectionStart;
+  ta.value = ta.value.slice(0, start) + token_str + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = start + token_str.length;
+  ta.focus();
+}
+
+// ─── Sync form labels ─────────────────────────────────────────
+function syncFormLabels() {
+  const l1 = document.getElementById('form1Label').value || 'Forme de Base';
+  const l2 = document.getElementById('form2Label').value || 'Forme Alternative';
+  document.getElementById('form1LabelDisplay').textContent = l1;
+  document.getElementById('form2LabelDisplay').textContent = l2;
+  const btns = document.querySelectorAll('.form-tab-btn');
+  if (btns[0]) btns[0].textContent = l1;
+  if (btns[1]) btns[1].textContent = l2;
+}
+
+// ─── Spell management ─────────────────────────────────────────
+function addSpell(form) {
+  const list = form === 1 ? spells1 : spells2;
+  const imgs = form === 1 ? spellImgs1 : spellImgs2;
+  list.push({ name: '', desc: '', damage: '', cooldown: '', levelInfo: [], factions: ['','',''], isPassive: false });
+  imgs.push(null);
+  renderSpells();
+}
+
+function removeSpell(form, idx) {
+  const list = form === 1 ? spells1 : spells2;
+  const imgs = form === 1 ? spellImgs1 : spellImgs2;
+  list.splice(idx, 1);
+  imgs.splice(idx, 1);
+  renderSpells();
+}
+
+function renderSpells() {
+  renderSpellList(1);
+  renderSpellList(2);
+}
+
+function renderSpellList(form) {
+  const container = document.getElementById('spellList' + form);
+  if (!container)return;
+  const list = form === 1 ? spells1 : spells2;
+  const imgs = form === 1 ? spellImgs1 : spellImgs2;
+  const isLead = document.getElementById('isLeadFaction').checked;
+
+  container.innerHTML = '';
+  list.forEach((spell, i) => {
+    const imgUrl = imgs[i] ? imgs[i].dataUrl : '';
+    const imgHtml = imgUrl
+      ? `<img src="${imgUrl}" alt="Sort ${i+1}">`
+      : `<span>🔮</span>`;
+
+    const levelInfoHtml = spell.levelInfo.map((li, li_i) => `
+      <div class="level-info-item">
+        <input type="text" value="${escHtml(li)}" placeholder="Niv. ${li_i+2} : Dégâts +10%"
+          oninput="updateLevelInfo(${form},${i},${li_i},this.value)">
+        <button class="btn-small danger" onclick="removeLevelInfo(${form},${i},${li_i})">✕</button>
+      </div>`).join('');
+
+    const factionHtml = isLead ? `
+      <div class="faction-effects">
+        <h5>Effets de Lead Faction :</h5>
+        <div class="form-group" style="margin-bottom:0.4rem">
+          <label style="font-size:0.72rem;text-transform:none">1 allié de faction :</label>
+          <textarea rows="2" placeholder="Effet pour 1 allié..."
+            oninput="updateFaction(${form},${i},0,this.value)">${escHtml(spell.factions[0]||'')}</textarea>
+        </div>
+        <div class="form-group" style="margin-bottom:0.4rem">
+          <label style="font-size:0.72rem;text-transform:none">2 alliés de faction :</label>
+          <textarea rows="2" placeholder="Effet pour 2 alliés..."
+            oninput="updateFaction(${form},${i},1,this.value)">${escHtml(spell.factions[1]||'')}</textarea>
+        </div>
+        <div class="form-group">
+          <label style="font-size:0.72rem;text-transform:none">3 alliés de faction :</label>
+          <textarea rows="2" placeholder="Effet pour 3 alliés..."
+            oninput="updateFaction(${form},${i},2,this.value)">${escHtml(spell.factions[2]||'')}</textarea>
+        </div>
+      </div>` : '';
+
+    const card = document.createElement('div');
+    card.className = 'spell-card';
+    card.innerHTML = `
+      <div class="spell-card-header">
+        <div class="spell-number">${i+1}</div>
+        <div class="spell-img-preview" onclick="triggerSpellImgUpload(${form},${i})">
+          ${imgHtml}
+        </div>
+        <input type="text" value="${escHtml(spell.name)}" placeholder="Nom de la compétence"
+          oninput="updateSpellField(${form},${i},'name',this.value)"
+          style="flex:1;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:8px;padding:0.5rem;color:var(--text)">
+        <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--muted);cursor:pointer">
+          <input type="checkbox" ${spell.isPassive ? 'checked' : ''} onchange="updateSpellField(${form},${i},'isPassive',this.checked)">
+          Passif
+        </label>
+        <button class="btn-remove-spell" onclick="removeSpell(${form},${i})">✕</button>
+      </div>
+
+      <div class="form-group" style="margin-bottom:0.6rem">
+        <label>Description</label>
+        <div class="desc-editor">
+          <div class="desc-toolbar" id="toolbar_${form}_${i}"></div>
+          <textarea rows="3" id="spellDesc_${form}_${i}" placeholder="Description de la compétence..."
+            oninput="updateSpellField(${form},${i},'desc',this.value)">${escHtml(spell.desc)}</textarea>
+        </div>
+      </div>
+
+      <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.6rem">
+        <div class="form-group">
+          <label>Multiplicateur (optionnel)</label>
+          <input type="text" value="${escHtml(spell.damage)}" placeholder="ex: 3.5*DEF"
+            oninput="updateSpellField(${form},${i},'damage',this.value)">
+        </div>
+        <div class="form-group">
+          <label>Temps de recharge (optionnel)</label>
+          <input type="number" value="${spell.cooldown||''}" placeholder="ex: 4" min="1" max="9"
+            oninput="updateSpellField(${form},${i},'cooldown',this.value)">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Améliorations de niveau</label>
+        <div class="level-info-list" id="levelInfoList_${form}_${i}">
+          ${levelInfoHtml}
+        </div>
+        <button class="btn-small" style="margin-top:0.4rem" onclick="addLevelInfo(${form},${i})">+ Ajouter un niveau</button>
+      </div>
+
+      ${factionHtml}
+    `;
+    container.appendChild(card);
+    buildDescToolbar('toolbar_' + form + '_' + i, 'spellDesc_' + form + '_' + i);
+  });
+
+  // hidden inputs for spell image uploads
+  list.forEach((_, i) => {
+    const existingInput = document.getElementById('spellImgInput_' + form + '_' + i);
+    if (!existingInput){
+      const inp = document.createElement('input');
+      inp.type = 'file';
+      inp.accept = 'image/*';
+      inp.id = 'spellImgInput_' + form + '_' + i;
+      inp.onchange = function() { onSpellImgChange(form, i, this); };
+      document.body.appendChild(inp);
+    }
+  });
+}
+
+function triggerSpellImgUpload(form, idx) {
+  document.getElementById('spellImgInput_' + form + '_' + idx)?.click();
+}
+
+function onSpellImgChange(form, idx, input) {
+  const file = input.files[0];
+  if (!file)return;
+  const imgs = form === 1 ? spellImgs1 : spellImgs2;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dataUrl = e.target.result;
+    const base64 = dataUrl.split(',')[1];
+    const ext = file.name.split('.').pop().toLowerCase();
+    imgs[idx] = { base64, dataUrl, ext };
+    renderSpells();
+  };
+  reader.readAsDataURL(file);
+}
+
+function updateSpellField(form, idx, field, value) {
+  const list = form === 1 ? spells1 : spells2;
+  if (list[idx]) list[idx][field] = value;
+}
+function updateLevelInfo(form, idx, liIdx, value) {
+  const list = form === 1 ? spells1 : spells2;
+  if (list[idx]) list[idx].levelInfo[liIdx] = value;
+}
+function addLevelInfo(form, idx) {
+  const list = form === 1 ? spells1 : spells2;
+  if (list[idx]) { list[idx].levelInfo.push(''); renderSpells(); }
+}
+function removeLevelInfo(form, idx, liIdx) {
+  const list = form === 1 ? spells1 : spells2;
+  if (list[idx]) { list[idx].levelInfo.splice(liIdx, 1); renderSpells(); }
+}
+function updateFaction(form, idx, factIdx, value) {
+  const list = form === 1 ? spells1 : spells2;
+  if (list[idx]) { if (!list[idx].factions)list[idx].factions=['','',''];list[idx].factions[factIdx]=value;}
+}
+
+// ─── Portrait upload ──────────────────────────────────────────
+function onPortraitChange(input) {
+  const file = input.files[0];
+  if (!file)return;
+  portraitExt = file.name.split('.').pop().toLowerCase();
+  const reader = new FileReader();
+  reader.onload = e => {
+    portraitBase64 = e.target.result.split(',')[1];
+    document.getElementById('portraitPlaceholder').style.display = 'none';
+    const img = document.getElementById('portraitPreviewImg');
+    img.src = e.target.result;
+    img.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+// ─── Escape HTML helper ───────────────────────────────────────
+function escHtml(s) {
+  if (sudo make fclean) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─── Build summary ────────────────────────────────────────────
+function buildSummary() {
+  const slug = document.getElementById('slug').value.trim();
+  const fullName = document.getElementById('fullName').value.trim();
+  const faction = document.getElementById('faction').value;
+  const rarity = document.getElementById('rarity').value;
+  const champType = document.getElementById('champType').value;
+  const fMeta = FACTION_META[faction];
+
+  const grid = document.getElementById('summaryGrid');
+  grid.innerHTML = [
+    ['Slug', slug || '(vide)'],
+    ['Nom complet', fullName || '(vide)'],
+    ['Faction', fMeta?.name || faction],
+    ['Rareté', rarity === 'legendary' ? 'Légendaire' : 'Mythique'],
+    ['Affinité', selectedAffinity],
+    ['Type', champType],
+    ['Compétences F1', spells1.length],
+    ['Aura', selectedAura],
+    ['Portrait', portraitBase64 ? 'Chargé ✓' : 'Non chargé'],
+  ].map(([k,v]) => `<div class="summary-item"><div class="key">${k}</div><div class="val">${v}</div></div>`).join('');
+
+  // List files to be created
+  const basePath = `pages/factions/${faction}/${rarity}/${slug}/`;
+  const files = [
+    basePath + slug + '.html',
+    basePath + slug + '.js',
+    portraitBase64 ? basePath + 'assets/' + slug + '.png' : null,
+    ...spells1.map((_, i) => spellImgs1[i] ? basePath + 'assets/sort' + (i+1) + '.png' : null),
+    'assets/js/champions-index.js (mise à jour)',
+  ].filter(Boolean);
+
+  if (document.getElementById('rarity').value === 'mythical') {
+    spells2.forEach((_, i) => {
+      if (spellImgs2[i]) files.push(basePath + 'assets/sort_f2_' + (i+1) + '.png');
+    });
+  }
+
+  document.getElementById('filesList').innerHTML = '<strong style="color:var(--muted);font-size:0.75rem">FICHIERS À CRÉER :</strong><ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.75rem;list-style:disc">' +
+    files.map(f => '<li style="margin-bottom:0.2rem">' + f + '</li>').join('') + '</ul>';
+}
+
+// ─── Generate JS content ──────────────────────────────────────
+function collectSpellData(list, imgs, isLead) {
+  return list.map((s, i) => {
+    // Refresh description from DOM
+    const descEl = document.getElementById('spellDesc_1_' + i) || document.getElementById('spellDesc_2_' + i);
+    const spellNo = i + 1;
+    const imgPath = 'assets/sort' + spellNo + '.png';
+
+    const obj = {};
+    obj.img = imgPath;
+    obj.name = s.name || ('Compétence ' + spellNo);
+    obj.desc = s.desc || '';
+    if (s.damage && s.damage.trim()) obj.damage = s.damage.trim();
+    if (s.cooldown && String(s.cooldown).trim()) obj.cooldown = parseInt(s.cooldown);
+    if (s.levelInfo && s.levelInfo.filter(x => x.trim()).length > 0)
+      obj.levelInfo = s.levelInfo.filter(x => x.trim());
+    if (isLead && s.factions && s.factions.some(x => x.trim()))
+      obj.factions = s.factions;
+    if (s.isPassive) obj.isPassive = true;
+    return obj;
+  });
+}
+
+function spellsToJs(spells, isLead) {
+  return spells.map((s, i) => {
+    const lines = [];
+    lines.push('          img: "' + s.img + '",');
+    lines.push('          name: "' + escJs(s.name) + '",');
+    lines.push('          description: `' + s.desc.replace(/`/g,'\\`') + '`,');
+    if (s.damage) lines.push('          damage: "' + escJs(s.damage) + '",');
+    if (s.cooldown) lines.push('          cooldown: ' + s.cooldown + ',');
+    if (s.levelInfo && s.levelInfo.length)
+      lines.push('          levelInfo: [' + s.levelInfo.map(l => '"' + escJs(l) + '"').join(', ') + '],');
+    if (s.factions && s.factions.length)
+      lines.push('          factions: [\n' + s.factions.map(f => '            `' + f.replace(/`/g,'\\`') + '`').join(',\n') + '\n          ],');
+    if (s.isPassive) lines.push('          isPassive: true,');
+    return '        {\n' + lines.join('\n') + '\n        }';
+  }).join(',\n');
+}
+
+function escJs(s) { return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"'); }
+
+function buildLegendaryJs(slug, champType, stats, auraKey, auraDesc) {
+  const isLead = document.getElementById('isLeadFaction').checked;
+  const spData = collectSpellData(spells1, spellImgs1, isLead);
+  const statsJs = STAT_FIELDS.map(k => '        "' + k + '": "' + escJs(stats[k]) + '"').join(',\n');
+  const auraPath = '../../../../../assets/images/auras/' + auraKey + '.png';
+
+  return `const championData = {
+  type: "${escJs(champType)}",
+  spells: [
+${spellsToJs(spData, isLead)}
+  ],
+  stats: {
+${statsJs}
+  }
+};
+
+const aura = {
+  img: "${auraPath}",
+  description: \`${auraDesc.replace(/`/g,'\\`')}\`
+};
+`;
+}
+
+function buildMythicalJs(slug, champType1, champType2, stats1, stats2, auraKey, auraDesc) {
+  const isLead = document.getElementById('isLeadFaction').checked;
+  const spData1 = collectSpellData(spells1, spellImgs1, isLead);
+  const spData2 = collectSpellData(spells2, spellImgs2, isLead);
+  const statsJs1 = STAT_FIELDS.map(k => '          "' + k + '": "' + escJs(stats1[k]) + '"').join(',\n');
+  const statsJs2 = STAT_FIELDS.map(k => '          "' + k + '": "' + escJs(stats2[k]) + '"').join(',\n');
+  const auraPath = '../../../../../assets/images/auras/' + auraKey + '.png';
+
+  // For mythical, spell images form2 use sort_f2_X.png
+  const spData2WithImgs = spData2.map((s, i) => ({ ...s, img: 'assets/sort_f2_' + (i+1) + '.png' }));
+
+  return `// Données des deux formes du champion
+const championForms = {
+  form1: {
+    type: "${escJs(champType1)}",
+    spells: [
+${spellsToJs(spData1, isLead)}
+    ],
+    stats: {
+${statsJs1}
+    }
+  },
+  form2: {
+    type: "${escJs(champType2)}",
+    spells: [
+${spellsToJs(spData2WithImgs, isLead)}
+    ],
+    stats: {
+${statsJs2}
+    }
+  }
+};
+
+const aura = {
+  img: "${auraPath}",
+  description: \`${auraDesc.replace(/`/g,'\\`')}\`
+};
+`;
+}
+
+// ─── Generate HTML ────────────────────────────────────────────
+function buildHtml(slug, fullName, rarity, faction) {
+  const fMeta = FACTION_META[faction];
+  const css = rarity === 'legendary' ? 'legendary' : 'mythical';
+  const runtime = rarity === 'legendary' ? 'champion-runtime-legendary' : 'champion-runtime-mythical';
+  const rarityLabel = rarity === 'legendary' ? 'Légendaire' : 'Mythique';
+  const formSelector = rarity === 'mythical' ? `
+  <div class="form-selector">
+    <button class="form-btn active" data-form="form1">${escHtml(document.getElementById('form1Label').value || 'Forme de Base')}</button>
+    <button class="form-btn" data-form="form2">${escHtml(document.getElementById('form2Label').value || 'Forme Alternative')}</button>
+  </div>` : '';
+  const champType = document.getElementById('champType').value;
+
+  return `<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escHtml(fullName)}</title>
+  <link rel="shortcut icon" href="../../../../../assets/images/factions/${fMeta?.img || 'bannerlords.png'}">
+  <link rel="stylesheet" href="../../../../../assets/css/${css}.css">
+  <script src="../../../../../assets/js/faction-theme-registry.js"><\/script>
+</head>
+<body>
+  <a href="../../hub.html" class="back-to-hub">\u2190 Retour au Hub</a>
+${formSelector}
+  <div class="container">
+    <div class="left-panel panel">
+      <h2 class="champion-name">${escHtml(fullName)}</h2>
+      <div class="champion-info">
+        <div class="info-group">
+          <div class="rarity-box">${rarityLabel}</div>
+          <div class="type-badge" id="champion-type">${escHtml(champType)}</div>
+        </div>
+        <div class="info-group">
+          <img src="../../../../../assets/images/affinity/${selectedAffinity}.png" alt="${selectedAffinity}" class="affinity-img">
+        </div>
+      </div>
+      <div class="champion-image-container">
+        <img src="assets/${escHtml(slug)}.png" alt="${escHtml(fullName)}" class="champion-img">
+      </div>
+    </div>
+
+    <div class="middle-panel panel">
+      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Comp\u00e9tences</h3>
+      <div class="spells-container" id="spells-section"></div>
+      <div class="aura-container">
+        <div class="aura">
+          <img src="" alt="Aura" class="aura-img" id="aura-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel panel">
+      <div class="stats">
+        <h3>Statistiques</h3>
+        <div class="stat-block" id="stats-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+  <script src="../../../../../assets/js/constant.js"><\/script>
+  <script src="${escHtml(slug)}.js"><\/script>
+  <script src="../../../../../assets/js/${runtime}.js"><\/script>
+</body>
+</html>`;
+}
+
+// ─── Update champions-index.js ────────────────────────────────
+async function updateChampionsIndex(slug, fullName, faction, rarity) {
+  log('info', 'Lecture de champions-index.js…');
+  const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/assets/js/champions-index.js', {
+    headers: { Authorization: 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
+  });
+  if (!res.ok)thrownewError('Lecturechampions-index.js:'+res.status);
+  const data = await res.json();
+  const sha = data.sha;
+  const current = atob(data.content.replace(/\n/g,''));
+
+  // Insert new champion before ].map(
+  const insertMarker = '].map(c';
+  const idx = current.lastIndexOf(insertMarker);
+  if (idx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
+
+  const newEntry = `  { name: '${escJs(fullName)}', faction: '${faction}', rarity: '${rarity}', folder: '${escJs(slug)}' },\n  `;
+  const newContent = current.slice(0, idx) + newEntry + current.slice(idx);
+
+  log('info', 'Commit de champions-index.js…');
+  const putRes = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/assets/js/champions-index.js', {
+    method: 'PUT',
+    headers: {
+      Authorization: 'Bearer ' + token,
+      'Content-Type': 'application/json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    },
+    body: JSON.stringify({
+      message: 'feat: Ajouter ' + fullName + ' dans l\'index des champions',
+      content: btoa(unescape(encodeURIComponent(newContent))),
+      sha: sha,
+      branch: GITHUB_BRANCH
+    })
+  });
+  if (!putRes.ok){
+    const err = await putRes.json().catch(() => ({}));
+    throw new Error('Commit champions-index : ' + (err.message || putRes.status));
+  }
+  log('ok', 'champions-index.js mis à jour ✓');
+}
+
+// ─── GitHub file upload ───────────────────────────────────────
+async function uploadFile(path, base64Content, message) {
+  // Check if file exists (to get SHA for update)
+  let sha = null;
+  const checkRes = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + path, {
+    headers: { Authorization: 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
+  });
+  if (checkRes.ok) {
+    const existing = await checkRes.json();
+    sha = existing.sha;
+  }
+
+  const body = { message, content: base64Content, branch: GITHUB_BRANCH };
+  if (sha) body.sha = sha;
+
+  const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + path, {
+    method: 'PUT',
+    headers: {
+      Authorization: 'Bearer ' + token,
+      'Content-Type': 'application/json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok){
+    const err = await res.json().catch(() => ({}));
+    throw new Error(path + ' : ' + (err.message || res.status));
+  }
+}
+
+// ─── Main publish function ────────────────────────────────────
+async function publishChampion() {
+  const slug     = document.getElementById('slug').value.trim();
+  const fullName = document.getElementById('fullName').value.trim();
+  const faction  = document.getElementById('faction').value;
+  const rarity   = document.getElementById('rarity').value;
+  const champType  = document.getElementById('champType').value;
+  const champType2 = document.getElementById('champType2').value;
+  const auraDesc   = document.getElementById('auraDesc').value;
+
+  if (!slug||!fullName){
+    alert('Le nom court (slug) et le nom complet sont obligatoires.');
+    return;
+  }
+
+  const stats1 = getStats(1);
+  const stats2 = rarity === 'mythical' ? getStats(2) : null;
+
+  const basePath = 'pages/factions/' + faction + '/' + rarity + '/' + slug + '/';
+
+  const btn = document.getElementById('publishBtn');
+  btn.disabled = true;
+  btn.textContent = 'Publication en cours…';
+
+  const logEl = document.getElementById('progressLog');
+  logEl.className = 'progress-log visible';
+  logEl.innerHTML = '';
+
+  try {
+    const commitMsg = 'feat: Ajouter le champion ' + fullName;
+
+    // 1. HTML
+    log('info', 'Génération et upload du HTML…');
+    const htmlContent = buildHtml(slug, fullName, rarity, faction);
+    await uploadFile(basePath + slug + '.html', btoa(unescape(encodeURIComponent(htmlContent))), commitMsg);
+    log('ok', slug + '.html ✓');
+
+    // 2. JS data
+    log('info', 'Génération et upload du JS…');
+    const jsContent = rarity === 'legendary'
+      ? buildLegendaryJs(slug, champType, stats1, selectedAura, auraDesc)
+      : buildMythicalJs(slug, champType, champType2, stats1, stats2, selectedAura, auraDesc);
+    await uploadFile(basePath + slug + '.js', btoa(unescape(encodeURIComponent(jsContent))), commitMsg);
+    log('ok', slug + '.js ✓');
+
+    // 3. Portrait
+    if (portraitBase64) {
+      log('info', 'Upload du portrait…');
+      await uploadFile(basePath + 'assets/' + slug + '.png', portraitBase64, commitMsg);
+      log('ok', 'Portrait ✓');
+    } else {
+      log('warn', 'Portrait ignoré (non chargé) — à ajouter manuellement');
+    }
+
+    // 4. Spell images form 1
+    for (let i = 0; i < spells1.length; i++) {
+      if (spellImgs1[i]) {
+        log('info', 'Upload sort ' + (i+1) + ' (Forme 1)…');
+        await uploadFile(basePath + 'assets/sort' + (i+1) + '.png', spellImgs1[i].base64, commitMsg);
+        log('ok', 'sort' + (i+1) + '.png ✓');
+      }
+    }
+
+    // 5. Spell images form 2 (mythical)
+    if (rarity === 'mythical') {
+      for (let i = 0; i < spells2.length; i++) {
+        if (spellImgs2[i]) {
+          log('info', 'Upload sort ' + (i+1) + ' (Forme 2)…');
+          await uploadFile(basePath + 'assets/sort_f2_' + (i+1) + '.png', spellImgs2[i].base64, commitMsg);
+          log('ok', 'sort_f2_' + (i+1) + '.png ✓');
+        }
+      }
+    }
+
+    // 6. Update champions-index.js
+    await updateChampionsIndex(slug, fullName, faction, rarity);
+
+    log('ok', '');
+    log('ok', '✅ Champion publié avec succès !');
+    log('info', 'URL : pages/factions/' + faction + '/' + rarity + '/' + slug + '/' + slug + '.html');
+    btn.textContent = '✅ Publié !';
+    btn.style.background = 'linear-gradient(135deg, var(--success), #16a34a)';
+
+  } catch (e) {
+    log('err', 'ERREUR : ' + e.message);
+    btn.disabled = false;
+    btn.textContent = '🚀 Publier le Champion';
+  }
+}
+
+// ─── Log helper ───────────────────────────────────────────────
+function log(type, msg) {
+  const el = document.getElementById('progressLog');
+  const line = document.createElement('div');
+  line.className = 'log-line ' + type;
+  line.textContent = (type === 'ok' ? '✓ ' : type === 'err' ? '✗ ' : type === 'warn' ? '⚠ ' : '  ') + msg;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+}
+</script>
+
+</body>
+</html>

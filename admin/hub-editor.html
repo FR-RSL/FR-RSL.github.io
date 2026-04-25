@@ -1,0 +1,479 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modifier un Hub — FR RSL Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    .admin-wrap { max-width: 1200px; margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
+    .admin-topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .admin-topbar h1 { font-size: 1.6rem; margin: 0; background: linear-gradient(135deg, var(--text-light), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .topbar-actions { display: flex; gap: 0.7rem; align-items: center; }
+    .btn { padding: 0.55rem 1.2rem; border-radius: 10px; border: none; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; font-family: inherit; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-ghost { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
+    .btn-ghost:hover { color: var(--text-light); }
+    .btn-success { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
+    .btn-success:hover { background: rgba(6,255,165,0.25); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    /* Layout */
+    .editor-layout { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start; }
+    @media (max-width: 860px) { .editor-layout { grid-template-columns: 1fr; } }
+    /* Left panel */
+    .list-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; backdrop-filter: blur(12px); }
+    .list-panel-header { padding: 1rem 1.2rem; border-bottom: 1px solid var(--glass-border); }
+    .list-panel-header h2 { font-size: 0.95rem; font-weight: 700; margin: 0; }
+    .faction-list { padding: 0.5rem; }
+    .faction-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.75rem; border-radius: 10px; border: 1px solid transparent; cursor: pointer; transition: all 0.15s; }
+    .faction-item:hover { background: rgba(255,255,255,0.04); border-color: var(--glass-border); }
+    .faction-item.active { background: rgba(230,184,0,0.08); border-color: rgba(230,184,0,0.3); }
+    .faction-logo { width: 36px; height: 36px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
+    .faction-info { flex: 1; min-width: 0; }
+    .faction-name { font-size: 0.88rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .faction-id { font-size: 0.68rem; color: var(--text-muted); }
+    /* Right panel */
+    .editor-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; backdrop-filter: blur(12px); }
+    .editor-header { padding: 1rem 1.5rem; border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.7rem; }
+    .editor-header h2 { font-size: 0.95rem; font-weight: 700; margin: 0; }
+    .editor-meta { font-size: 0.78rem; color: var(--text-muted); }
+    .editor-body { padding: 1.2rem 1.5rem; }
+    /* Tabs for hub sections */
+    .section-tabs { display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .section-tab { padding: 0.32rem 0.85rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--glass-bg); color: var(--text-muted); font-size: 0.76rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .section-tab.on { background: rgba(230,184,0,0.12); border-color: rgba(230,184,0,0.4); color: #e6b800; }
+    /* Quick-edit fields */
+    .quick-panel { display: none; }
+    .quick-panel.on { display: block; }
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+    .field input, .field textarea, .field select { width: 100%; box-sizing: border-box; padding: 0.65rem 0.9rem; border-radius: 9px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.88rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: #e6b800; }
+    .field textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 640px) { .form-grid-2 { grid-template-columns: 1fr; } }
+    /* Colors section */
+    .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+    .color-field { display: flex; align-items: center; gap: 0.6rem; }
+    .color-field input[type="color"] { width: 40px; height: 36px; border: 2px solid var(--glass-border); border-radius: 7px; padding: 0; cursor: pointer; background: none; flex-shrink: 0; }
+    .color-field input[type="text"] { flex: 1; padding: 0.5rem 0.7rem; border-radius: 7px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.85rem; font-family: 'Courier New', monospace; outline: none; transition: border-color 0.2s; }
+    .color-field input[type="text"]:focus { border-color: #e6b800; }
+    .color-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 700; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    /* Code editor for raw HTML */
+    .code-editor { width: 100%; box-sizing: border-box; min-height: 60vh; padding: 1rem; border-radius: 10px; border: 2px solid var(--glass-border); background: rgba(0,0,0,0.35); color: #e2e8f0; font-size: 0.81rem; font-family: 'Courier New', Consolas, monospace; line-height: 1.6; resize: vertical; outline: none; transition: border-color 0.2s; tab-size: 2; }
+    .code-editor:focus { border-color: #e6b800; }
+    /* Footer */
+    .editor-footer { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; border-top: 1px solid var(--glass-border); flex-wrap: wrap; gap: 0.7rem; }
+    .editor-actions { display: flex; gap: 0.7rem; align-items: center; }
+    .pub-log { display: none; margin: 0 1.5rem 1rem; background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); border-radius: 10px; padding: 0.8rem 1rem; font-family: 'Courier New', monospace; font-size: 0.76rem; max-height: 120px; overflow-y: auto; }
+    .pub-log.open { display: block; }
+    .log-ok { color: var(--accent); } .log-err { color: #ef5350; } .log-inf { color: var(--text-muted); }
+    .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
+    .status-bar { padding: 0.6rem 1rem; border-radius: 9px; font-size: 0.83rem; font-weight: 500; margin-bottom: 1rem; display: none; }
+    .status-bar.success { background: rgba(6,255,165,0.12); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); display: flex; gap: 0.5rem; align-items: center; }
+    .status-bar.error   { background: rgba(229,57,53,0.15); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); display: flex; gap: 0.5rem; align-items: center; }
+    .status-bar.info    { background: rgba(68,96,255,0.15); color: #818cf8; border: 1px solid rgba(68,96,255,0.3); display: flex; gap: 0.5rem; align-items: center; }
+    .view-link { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; }
+    .view-link:hover { color: var(--accent); }
+    .hint { font-size: 0.73rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .section-title-label { font-size: 1rem; font-weight: 700; color: #e6b800; margin-bottom: 1.2rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border); }
+  </style>
+</head>
+<body>
+<div class="particles"></div>
+<header>
+  <div class="logo-section">
+    <img src="../assets/images/logos/logo.png" alt="FR RSL">
+    <h1>FR RSL</h1>
+  </div>
+</header>
+
+<div class="admin-wrap">
+  <div class="admin-topbar">
+    <h1>🏰 Modifier un Hub de Faction</h1>
+    <div class="topbar-actions">
+      <a href="dashboard.html" class="btn btn-ghost">← Dashboard</a>
+    </div>
+  </div>
+
+  <div class="status-bar" id="statusBar"></div>
+
+  <div class="editor-layout">
+    <!--LEFT:factionlist-->
+    <div class="list-panel">
+      <div class="list-panel-header">
+        <h2>Factions</h2>
+      </div>
+      <div class="faction-list" id="factionList"></div>
+    </div>
+
+    <!--RIGHT:editor-->
+    <div class="editor-panel" id="editorPanel">
+      <div class="editor-header">
+        <div>
+          <h2 id="editorTitle">Sélectionner une faction</h2>
+          <div class="editor-meta" id="editorMeta"></div>
+        </div>
+        <a id="viewLink" href="#" target="_blank" class="view-link" style="display:none">Voir le hub ↗</a>
+      </div>
+      <div class="editor-body">
+        <div id="emptyState" class="empty-state">
+          <div class="icon">🏰</div>
+          <p>Sélectionne une faction dans la liste pour modifier son hub.</p>
+        </div>
+        <div id="editorContent" style="display:none">
+          <div class="section-tabs">
+            <button class="section-tab on" onclick="switchSection('quick',this)">✨ Édition rapide</button>
+            <button class="section-tab"    onclick="switchSection('raw',this)">🔧 HTML brut</button>
+          </div>
+          <!--Quickeditsection-->
+          <div class="quick-panel on" id="sec-quick">
+            <div class="section-title-label">Identité de la faction</div>
+            <div class="form-grid-2">
+              <div class="field">
+                <label>Titre de la faction</label>
+                <input type="text" id="q-title" placeholder="ex: Seigneurs">
+              </div>
+              <div class="field">
+                <label>Nom de la page (balise &lt;title&gt;)</label>
+                <input type="text" id="q-pagetitle" placeholder="ex: Seigneurs - FR RSL">
+              </div>
+            </div>
+            <div class="field">
+              <label>Description (texte sous le titre)</label>
+              <textarea id="q-desc" rows="3" placeholder="Description de la faction…"></textarea>
+            </div>
+            <div class="section-title-label" style="margin-top:1.5rem">Couleurs de la faction</div>
+            <div class="color-grid" id="colorGrid"></div>
+            <div class="section-title-label" style="margin-top:1.5rem">Lore / Histoire</div>
+            <div class="field">
+              <textarea id="q-lore" rows="5" placeholder="Texte de lore / histoire de la faction…"></textarea>
+              <div class="hint">Supporte le HTML basique (&lt;br&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;p&gt;)</div>
+            </div>
+          </div>
+          <!--RawHTMLsection-->
+          <div class="quick-panel" id="sec-raw">
+            <div class="hint" style="margin-bottom:0.8rem">⚠️ Édition directe du fichier hub.html. Sois prudent.</div>
+            <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pub-log" id="pubLog"></div>
+      <div class="editor-footer" id="editorFooter" style="display:none">
+        <div class="editor-actions">
+          <button class="btn btn-success" id="btnSave" onclick="saveHub()">💾 Sauvegarder</button>
+          <button class="btn btn-ghost"   onclick="loadHub(currentFaction)">↺ Recharger</button>
+        </div>
+        <span id="modifiedBadge" style="font-size:0.78rem;color:#e6b800;display:none">● Modifications non sauvegardées</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script>
+var GH_OWNER  = 'FR-RSL';
+var GH_REPO   = 'FR-RSL.github.io';
+var GH_BRANCH = 'main';
+
+var FACTIONS = [
+  { id:'faction01', name:'Seigneurs',           img:'bannerlords.png'    },
+  { id:'faction02', name:'Haut Elfes',           img:'high-elves.png'     },
+  { id:'faction03', name:'Ordre Sacré',          img:'sacred-order.png'   },
+  { id:'faction04', name:'Barbares',             img:'barbarians.png'     },
+  { id:'faction05', name:'Tribus Ogryn',         img:'ogryn-tribes.png'   },
+  { id:'faction06', name:'Homme Lézards',        img:'lizardmen.png'      },
+  { id:'faction07', name:'Marcheurs de Peau',    img:'skinwalkers.png'    },
+  { id:'faction08', name:'Orcs',                 img:'orcs.png'           },
+  { id:'faction09', name:'Rejetons Démoniaques', img:'demonspawn.png'     },
+  { id:'faction10', name:'Morts-vivants',        img:'undead-hordes.png'  },
+  { id:'faction11', name:'Elfes Noirs',          img:'dark-elves.png'     },
+  { id:'faction12', name:'Revenants Chevaliers', img:'knight-revenant.png'},
+  { id:'faction13', name:'Nains',                img:'dwarves.png'        },
+  { id:'faction14', name:"Clan de l'Ombre",      img:'shadowkin.png'      },
+  { id:'faction15', name:'Gardes Sylvains',      img:'sylvan-watchers.png'},
+];
+
+var COLOR_VARS = [
+  { key:'--faction-primary',   label:'Primaire'    },
+  { key:'--faction-secondary', label:'Secondaire'  },
+  { key:'--faction-accent',    label:'Accent'      },
+  { key:'--faction-light',     label:'Clair'       },
+];
+
+var ghTok = null;
+var currentFaction = null;
+var hubRawContent  = '';
+var hubSha         = '';
+var curSection     = 'quick';
+
+document.addEventListener('DOMContentLoaded', function() {
+  ghTok = sessionStorage.getItem('admin_token');
+  if (!ghTok){window.location.href='index.html';return;}
+  spawnParticles();
+  buildFactionList();
+  buildColorGrid();
+  // Track changes
+  ['q-title','q-pagetitle','q-desc','q-lore'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', function(){ document.getElementById('modifiedBadge').style.display='inline'; });
+  });
+  document.getElementById('codeEditor').addEventListener('input', function() {
+    document.getElementById('modifiedBadge').style.display = 'inline';
+  });
+});
+
+function spawnParticles() {
+  var c = document.querySelector('.particles');
+  if (cd FR-RSL.github.io/) return;
+  for (var i = 0; i < 18; i++) {
+    var d = document.createElement('div');
+    d.className = 'particle';
+    d.style.left = Math.random()*100+'%';
+    d.style.top  = Math.random()*100+'%';
+    d.style.animationDelay    = (Math.random()*6)+'s';
+    d.style.animationDuration = (4+Math.random()*4)+'s';
+    c.appendChild(d);
+  }
+}
+
+function buildFactionList() {
+  var html = FACTIONS.map(function(f) {
+    var imgSrc = '../assets/images/factions/'+f.img;
+    return '<div class="faction-item" id="fi-'+f.id+'" onclick="selectFaction(\''+f.id+'\')">' +
+      '<img class="faction-logo" src="'+imgSrc+'" alt="" onerror="this.style.display=\'none\'">' +
+      '<div class="faction-info"><div class="faction-name">'+f.name+'</div><div class="faction-id">'+f.id+'</div></div>' +
+      '</div>';
+  }).join('');
+  document.getElementById('factionList').innerHTML = html;
+}
+
+function buildColorGrid() {
+  var html = COLOR_VARS.map(function(cv) {
+    var safeKey = cv.key.replace(/--/g,'').replace(/-/g,'_');
+    return '<div><div class="color-label">'+cv.label+' <code style="font-size:0.62rem;opacity:0.6">'+cv.key+'</code></div>' +
+      '<div class="color-field">' +
+      '<input type="color" id="cp_'+safeKey+'" oninput="syncColor(\''+safeKey+'\',this.value)">' +
+      '<input type="text"  id="ct_'+safeKey+'" placeholder="#000000" oninput="syncColorText(\''+safeKey+'\',this.value)">' +
+      '</div></div>';
+  }).join('');
+  document.getElementById('colorGrid').innerHTML = html;
+}
+
+function syncColor(key, val) {
+  var t = document.getElementById('ct_'+key);
+  if (t) t.value = val;
+  document.getElementById('modifiedBadge').style.display = 'inline';
+}
+function syncColorText(key, val) {
+  if (/^#[0-9a-fA-F]{6}$/.test(val)) {
+    var p = document.getElementById('cp_'+key);
+    if (p) p.value = val;
+  }
+  document.getElementById('modifiedBadge').style.display = 'inline';
+}
+
+function selectFaction(id) {
+  currentFaction = id;
+  document.querySelectorAll('.faction-item').forEach(function(el) { el.classList.remove('active'); });
+  var el = document.getElementById('fi-'+id);
+  if (el) el.classList.add('active');
+  var f = FACTIONS.find(function(x){ return x.id===id; });
+  document.getElementById('editorTitle').textContent = f ? f.name : id;
+  document.getElementById('editorMeta').textContent  = 'pages/factions/'+id+'/hub.html';
+  var vl = document.getElementById('viewLink');
+  vl.href = '../pages/factions/'+id+'/hub.html'; vl.style.display = 'inline';
+  loadHub(id);
+}
+
+async function loadHub(factionId) {
+  if (!factionId)return;
+  plog('inf', 'Chargement de hub.html…');
+  document.getElementById('pubLog').className = 'pub-log open';
+  document.getElementById('emptyState').style.display    = 'none';
+  document.getElementById('editorContent').style.display = 'block';
+  document.getElementById('editorFooter').style.display  = 'flex';
+  document.getElementById('modifiedBadge').style.display = 'none';
+  var path = 'pages/factions/'+factionId+'/hub.html';
+  try {
+    var r = await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+path, {
+      headers: { 'Authorization': 'Bearer '+ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
+    });
+    if (!r.ok)thrownewError('HTTP'+r.status);
+    var data = await r.json();
+    hubSha = data.sha;
+    hubRawContent = decodeURIComponent(escape(atob(data.content.replace(/\n/g,''))));
+    document.getElementById('codeEditor').value = hubRawContent;
+    plog('ok', 'hub.html chargé ('+Math.round(hubRawContent.length/1024*10)/10+' Ko)');
+    parseQuickFields(hubRawContent);
+    document.getElementById('modifiedBadge').style.display = 'none';
+  } catch(e) {
+    plog('err', 'Erreur : '+e.message);
+    showStatus('error', 'Erreur de chargement : '+e.message);
+  }
+}
+
+/* ── Parse quick-edit fields from raw HTML ── */
+function parseQuickFields(src) {
+  // Title tag
+  var m = src.match(/<title>(.*?)<\/title>/i);
+  setQ('q-pagetitle', m ? m[1] : '');
+  // faction-title
+  var m2 = src.match(/class="faction-title"[^>]*>([\s\S]*?)<\/h\d>/i);
+  if (!m2)m2=src.match(/<h1[^>]*class="faction-title"[^>]*>([\s\S]*?)<\/h1>/i);
+  setQ('q-title', m2 ? m2[1].replace(/<[^>]+>/g,'').trim() : '');
+  // CSS vars
+  COLOR_VARS.forEach(function(cv) {
+    var safeKey = cv.key.replace(/--/g,'').replace(/-/g,'_');
+    var re = new RegExp(cv.key.replace(/[-]/g,'\\-')+'\\s*:\\s*(#[0-9a-fA-F]{3,8})', 'i');
+    var mc = src.match(re);
+    var val = mc ? mc[1] : '#888888';
+    var cp = document.getElementById('cp_'+safeKey);
+    var ct = document.getElementById('ct_'+safeKey);
+    if (cp) cp.value = (val.length === 4) ? val : val.substring(0,7);
+    if (ct) ct.value = val;
+  });
+  // Description paragraph (first <p> inside faction-hero or faction-description)
+  var m3 = src.match(/class="faction-description"[^>]*>([\s\S]*?)<\/p>/i);
+  if (!m3)m3=src.match(/class="faction-subtitle"[^>]*>([\s\S]*?)<\/p>/i);
+  setQ('q-desc', m3 ? m3[1].trim() : '');
+  // Lore section
+  var m4 = src.match(/class="lore-text"[^>]*>([\s\S]*?)<\/(?:div|p)>/i);
+  if (!m4)m4=src.match(/class="faction-lore"[^>]*>([\s\S]*?)<\/div>/i);
+  setQ('q-lore', m4 ? m4[1].trim() : '');
+}
+
+function setQ(id, val) {
+  var el = document.getElementById(id);
+  if (el) el.value = val;
+}
+
+/* ── Apply quick-edit fields back to raw HTML ── */
+function applyQuickToRaw(src) {
+  var title     = document.getElementById('q-title').value;
+  var pageTitle = document.getElementById('q-pagetitle').value;
+  var desc      = document.getElementById('q-desc').value;
+  var lore      = document.getElementById('q-lore').value;
+  // Page title
+  if (pageTitle) src = src.replace(/<title>[\s\S]*?<\/title>/i, '<title>'+pageTitle+'</title>');
+  // Faction title (replace content of .faction-title)
+  if (title) {
+    src = src.replace(/(class="faction-title"[^>]*>)([\s\S]*?)(<\/h\d>)/i, function(m, open, content, close) {
+      return open + title + close;
+    });
+  }
+  // CSS vars
+  COLOR_VARS.forEach(function(cv) {
+    var safeKey = cv.key.replace(/--/g,'').replace(/-/g,'_');
+    var ct = document.getElementById('ct_'+safeKey);
+    if (ct && ct.value) {
+      var re = new RegExp('('+cv.key.replace(/[-]/g,'\\-')+'\\s*:\\s*)#[0-9a-fA-F]{3,8}', 'gi');
+      src = src.replace(re, '$1'+ct.value);
+    }
+  });
+  // Description
+  if (desc) {
+    src = src.replace(/(class="faction-description"[^>]*>)([\s\S]*?)(<\/p>)/i, function(m, o, c, cl){ return o+desc+cl; });
+    src = src.replace(/(class="faction-subtitle"[^>]*>)([\s\S]*?)(<\/p>)/i, function(m, o, c, cl){ return o+desc+cl; });
+  }
+  // Lore
+  if (lore) {
+    src = src.replace(/(class="lore-text"[^>]*>)([\s\S]*?)(<\/(?:div|p)>)/i, function(m, o, c, cl){ return o+lore+cl; });
+    src = src.replace(/(class="faction-lore"[^>]*>)([\s\S]*?)(<\/div>)/i, function(m, o, c, cl){ return o+lore+cl; });
+  }
+  return src;
+}
+
+/* ── Section switch ── */
+function switchSection(name, btn) {
+  curSection = name;
+  document.querySelectorAll('.section-tab').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  document.querySelectorAll('.quick-panel').forEach(function(p){ p.classList.remove('on'); });
+  document.getElementById('sec-'+name).classList.add('on');
+  if (name === 'raw') {
+    // Sync raw editor from quick fields
+    document.getElementById('codeEditor').value = applyQuickToRaw(hubRawContent);
+  } else if (name === 'quick') {
+    // Parse from raw editor
+    var raw = document.getElementById('codeEditor').value;
+    parseQuickFields(raw);
+  }
+}
+
+/* ── Save ── */
+async function saveHub() {
+  if (!currentFaction)return;
+  var path = 'pages/factions/'+currentFaction+'/hub.html';
+  // Build final content
+  var finalContent;
+  if (curSection === 'raw') {
+    finalContent = document.getElementById('codeEditor').value;
+  } else {
+    finalContent = applyQuickToRaw(hubRawContent);
+    document.getElementById('codeEditor').value = finalContent;
+  }
+  document.getElementById('btnSave').disabled = true;
+  plog('inf', 'Sauvegarde…');
+  document.getElementById('pubLog').className = 'pub-log open';
+  try {
+    var encoded = btoa(unescape(encodeURIComponent(finalContent)));
+    var f = FACTIONS.find(function(x){ return x.id===currentFaction; });
+    var r = await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+path, {
+      method: 'PUT',
+      headers: { 'Authorization': 'Bearer '+ghTok, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
+      body: JSON.stringify({
+        message: 'edit: Modifier hub '+( f ? f.name : currentFaction),
+        content: encoded,
+        sha: hubSha,
+        branch: GH_BRANCH
+      })
+    });
+    if (!r.ok){vare=awaitr.json().catch(function(){return{};});thrownewError(e.message||r.status);}
+    var updated = await r.json();
+    hubSha = updated.content.sha;
+    hubRawContent = finalContent;
+    document.getElementById('modifiedBadge').style.display = 'none';
+    plog('ok', 'hub.html sauvegardé avec succès');
+    showStatus('success', 'Hub sauvegardé sur GitHub');
+  } catch(e) {
+    plog('err', 'Erreur : '+e.message);
+    showStatus('error', 'Erreur : '+e.message);
+  }
+  document.getElementById('btnSave').disabled = false;
+}
+
+function showStatus(type, msg) {
+  var el = document.getElementById('statusBar');
+  el.className = 'status-bar '+type;
+  el.innerHTML = (type==='success'?'✅ ':type==='error'?'❌ ':'ℹ️ ')+msg;
+  el.style.display = 'flex';
+  if (type !== 'error') setTimeout(function(){ el.style.display='none'; }, 5000);
+}
+
+function plog(type, msg) {
+  var el = document.getElementById('pubLog');
+  var line = document.createElement('div');
+  line.className = 'log-'+type;
+  line.textContent = (type==='ok'?'✓ ':type==='err'?'✗ ':'  ')+msg;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+}
+
+// Tab key support
+document.addEventListener('keydown', function(e) {
+  if (e.target.id === 'codeEditor' && e.key === 'Tab') {
+    e.preventDefault();
+    var ta = e.target;
+    var s = ta.selectionStart;
+    ta.value = ta.value.slice(0,s)+'  '+ta.value.slice(ta.selectionEnd);
+    ta.selectionStart = ta.selectionEnd = s+2;
+  }
+});
+</script>
+</body>
+</html>

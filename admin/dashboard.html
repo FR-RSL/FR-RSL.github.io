@@ -1,0 +1,636 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin — FR RSL</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        /* ── Layout ──────────────────────────────────── */
+        .admin-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ── Top bar ─────────────────────────────────── */
+        .admin-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .admin-topbar h1 {
+            font-size: 1.6rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--text-light), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .topbar-actions { display: flex; gap: 0.7rem; align-items: center; }
+
+        .btn {
+            padding: 0.55rem 1.2rem;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-danger { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
+        .btn-danger:hover { background: rgba(229,57,53,0.35); }
+        .btn-ghost { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
+        .btn-ghost:hover { color: var(--text-light); }
+        .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
+        .btn-success { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
+        .btn-success:hover { background: rgba(6,255,165,0.25); }
+
+        /* ── Status bar ──────────────────────────────── */
+        .status-bar {
+            padding: 0.65rem 1.2rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+
+        .status-bar.info    { background: rgba(68,96,255,0.15);  color: #818cf8; border: 1px solid rgba(68,96,255,0.3);  display: flex; align-items: center; gap: 0.5rem; }
+        .status-bar.success { background: rgba(6,255,165,0.12);  color: #06ffa5; border: 1px solid rgba(6,255,165,0.3);  display: flex; align-items: center; gap: 0.5rem; }
+        .status-bar.error   { background: rgba(229,57,53,0.15);  color: #ef5350; border: 1px solid rgba(229,57,53,0.3);  display: flex; align-items: center; gap: 0.5rem; }
+
+        /* ── Layout 2 colonnes ───────────────────────── */
+        .admin-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        /* ── Liste des articles ──────────────────────── */
+        .articles-panel {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .panel-header h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-count {
+            background: rgba(68,96,255,0.2);
+            color: #818cf8;
+            border-radius: 8px;
+            padding: 0.1rem 0.55rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .article-list { padding: 0.8rem; }
+
+        .article-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .article-item:hover { background: rgba(255,255,255,0.04); border-color: var(--glass-border); }
+        .article-item.selected { background: rgba(68,96,255,0.1); border-color: rgba(68,96,255,0.3); }
+
+        .article-item-info { flex: 1; min-width: 0; }
+
+        .article-item-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .article-item-meta {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-top: 0.2rem;
+        }
+
+        .article-item-date { font-size: 0.75rem; color: var(--text-muted); }
+
+        .article-cat-badge {
+            font-size: 0.67rem;
+            font-weight: 700;
+            padding: 0.15rem 0.45rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .cat-Champions    { background: rgba(255,183,0,0.15);  color: #ffb700; }
+        .cat-Factions     { background: rgba(68,96,255,0.15);  color: #818cf8; }
+        .cat-Equipement   { background: rgba(16,185,129,0.15); color: #34d399; }
+        .cat-Guide        { background: rgba(139,92,246,0.15); color: #a78bfa; }
+        .cat-Mise-a-jour  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+        .article-item-actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+        /* ── Formulaire ──────────────────────────────── */
+        .form-panel {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 1rem;
+        }
+
+        .form-panel-header {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .form-panel-header h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .form-body { padding: 1.2rem 1.5rem; }
+
+        .field { margin-bottom: 1rem; }
+
+        .field label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 0.45rem;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.7rem 0.9rem;
+            border-radius: 9px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.04);
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.25s;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .field select option { background: #1a1d2e; }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 90px;
+            line-height: 1.5;
+        }
+
+        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+
+        .form-actions {
+            display: flex;
+            gap: 0.7rem;
+            padding: 1rem 1.5rem 1.5rem;
+        }
+
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 900px) {
+            .admin-layout { grid-template-columns: 1fr; }
+            .form-panel { position: static; }
+        }
+
+        @media (max-width: 600px) {
+            .article-item-actions { display: none; }
+            .field-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+
+    <header>
+        <div class="logo-section">
+            <img src="../assets/images/logos/logo.png" alt="FR RSL">
+            <h1>FR RSL</h1>
+        </div>
+    </header>
+
+    <div class="admin-wrap">
+        <!--Topbar-->
+        <div class="admin-topbar">
+            <h1>📋 Gestion des articles</h1>
+            <div class="topbar-actions">
+                <a href="../index.html" class="btn btn-ghost">← Site</a>
+                <button class="btn btn-primary" id="btnNew">+ Nouvel article</button>
+                <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
+            </div>
+        </div>
+
+        <!--Statusbar-->
+        <div class="status-bar" id="statusBar"></div>
+
+        <!--Mainlayout-->
+        <div class="admin-layout">
+
+            <!--Listedesarticles-->
+            <div class="articles-panel">
+                <div class="panel-header">
+                    <h2>Articles <span class="article-count" id="articleCount">0</span></h2>
+                    <span style="font-size:0.8rem; color:var(--text-muted);">Plus récent en premier</span>
+                </div>
+                <div class="article-list" id="articleList">
+                    <!--rempliparJS-->
+                </div>
+            </div>
+
+            <!--Formulaire-->
+            <div class="form-panel" id="formPanel">
+                <div class="form-panel-header">
+                    <h2 id="formTitle">Nouvel article</h2>
+                </div>
+                <div class="form-body">
+                    <input type="hidden" id="editId">
+
+                    <div class="field">
+                        <label for="fTitle">Titre *</label>
+                        <input type="text" id="fTitle" placeholder="Titre de l'article" maxlength="120">
+                    </div>
+
+                    <div class="field">
+                        <label for="fExcerpt">Extrait *</label>
+                        <textarea id="fExcerpt" placeholder="Description courte (1-2 phrases)…" maxlength="280"></textarea>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="fCategory">Catégorie *</label>
+                            <select id="fCategory">
+                                <option value="Champions">Champions</option>
+                                <option value="Factions">Factions</option>
+                                <option value="Équipement">Équipement</option>
+                                <option value="Guide">Guide</option>
+                                <option value="Mise à jour">Mise à jour</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="fDate">Date *</label>
+                            <input type="date" id="fDate">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="fLink">Lien (URL relative)</label>
+                        <input type="text" id="fLink" placeholder="pages/factions/faction01/hub.html">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" id="btnSave" style="flex:1;">💾 Sauvegarder</button>
+                    <button class="btn btn-ghost" id="btnCancel">Annuler</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--GitHubcommitmodal-->
+    <div id="commitModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:#1a1d2e; border:1px solid var(--glass-border); border-radius:16px; padding:2rem; max-width:440px; width:90%; text-align:center;">
+            <div style="font-size:2rem; margin-bottom:1rem;">⏳</div>
+            <h3 style="margin:0 0 0.5rem;">Publication en cours…</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;" id="commitMsg">Mise à jour du fichier articles.js sur GitHub</p>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/articles.js"></script>
+    <script>
+    (function () {
+        /* ══════════════════════════════════════════════
+           CONFIG
+        ══════════════════════════════════════════════ */
+        const GITHUB_OWNER  = 'PGBmax';
+        const GITHUB_REPO   = 'FR-RSL.github.io';
+        const GITHUB_BRANCH = 'main';
+        const FILE_PATH     = 'assets/js/articles.js';
+
+        /* ══════════════════════════════════════════════
+           AUTH CHECK
+        ══════════════════════════════════════════════ */
+        const token = sessionStorage.getItem('admin_token');
+        if (!token){window.location.href='index.html';return;}
+
+        document.getElementById('btnLogout').addEventListener('click', () => {
+            sessionStorage.removeItem('admin_token');
+            window.location.href = 'index.html';
+        });
+
+        /* ══════════════════════════════════════════════
+           STATE
+        ══════════════════════════════════════════════ */
+        // Working copy of articles (loaded from articles.js already in page)
+        let articles = JSON.parse(JSON.stringify(ARTICLES));
+        let editingId = null;   // null = new article
+
+        /* ══════════════════════════════════════════════
+           UI HELPERS
+        ══════════════════════════════════════════════ */
+        function showStatus(type, msg) {
+            const el = document.getElementById('statusBar');
+            el.className = 'status-bar ' + type;
+            el.innerHTML = (type === 'success' ? '✅ ' : type === 'error' ? '❌ ' : 'ℹ️ ') + msg;
+            el.style.display = 'flex';
+            if (type !== 'error') setTimeout(() => { el.style.display = 'none'; }, 5000);
+        }
+
+        function catClass(cat) {
+            return 'cat-' + cat
+                .replace(/\s+/g, '-')
+                .normalize('NFD').replace(/\p{Diacritic}/gu, '');
+        }
+
+        function formatDate(dateStr) {
+            const d = new Date(dateStr + 'T00:00:00');
+            return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+
+        /* ══════════════════════════════════════════════
+           RENDER ARTICLE LIST
+        ══════════════════════════════════════════════ */
+        function renderList() {
+            const list = document.getElementById('articleList');
+            document.getElementById('articleCount').textContent = articles.length;
+
+            if (articles.length === 0) {
+                list.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:2rem;font-size:0.9rem;">Aucun article. Créez-en un !</p>';
+                return;
+            }
+
+            list.innerHTML = articles.map(a => `
+                <div class="article-item ${editingId === a.id ? 'selected' : ''}" data-id="${a.id}">
+                    <div class="article-item-info">
+                        <div class="article-item-title" title="${escHtml(a.title)}">${escHtml(a.title)}</div>
+                        <div class="article-item-meta">
+                            <span class="article-cat-badge ${catClass(a.category)}">${escHtml(a.category)}</span>
+                            <span class="article-item-date">${formatDate(a.date)}</span>
+                        </div>
+                    </div>
+                    <div class="article-item-actions">
+                        <button class="btn btn-ghost btn-sm" data-action="edit" data-id="${a.id}">✏️</button>
+                        <button class="btn btn-danger btn-sm" data-action="delete" data-id="${a.id}">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Listeners
+            list.querySelectorAll('.article-item').forEach(el => {
+                el.addEventListener('click', (e) => {
+                    const btn = e.target.closest('[data-action]');
+                    if (btn) {
+                        e.stopPropagation();
+                        const id = parseInt(btn.dataset.id);
+                        if (btn.dataset.action === 'edit')   editArticle(id);
+                        if (btn.dataset.action === 'delete') deleteArticle(id);
+                    } else {
+                        editArticle(parseInt(el.dataset.id));
+                    }
+                });
+            });
+        }
+
+        /* ══════════════════════════════════════════════
+           FORM HELPERS
+        ══════════════════════════════════════════════ */
+        function clearForm() {
+            editingId = null;
+            document.getElementById('editId').value = '';
+            document.getElementById('fTitle').value = '';
+            document.getElementById('fExcerpt').value = '';
+            document.getElementById('fCategory').value = 'Champions';
+            document.getElementById('fDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('fLink').value = '';
+            document.getElementById('formTitle').textContent = 'Nouvel article';
+            renderList();
+        }
+
+        function editArticle(id) {
+            const a = articles.find(x => x.id === id);
+            if (!a) return;
+            editingId = id;
+            document.getElementById('editId').value   = id;
+            document.getElementById('fTitle').value   = a.title;
+            document.getElementById('fExcerpt').value = a.excerpt;
+            document.getElementById('fCategory').value= a.category;
+            document.getElementById('fDate').value    = a.date;
+            document.getElementById('fLink').value    = a.link || '';
+            document.getElementById('formTitle').textContent = 'Modifier l\'article';
+            renderList();
+        }
+
+        function deleteArticle(id) {
+            if (!confirm('Supprimer cet article ?')) return;
+            articles = articles.filter(a => a.id !== id);
+            if (editingId === id) clearForm();
+            else renderList();
+        }
+
+        document.getElementById('btnNew').addEventListener('click', clearForm);
+        document.getElementById('btnCancel').addEventListener('click', clearForm);
+
+        document.getElementById('btnSave').addEventListener('click', () => {
+            const title   = document.getElementById('fTitle').value.trim();
+            const excerpt = document.getElementById('fExcerpt').value.trim();
+            const category= document.getElementById('fCategory').value;
+            const date    = document.getElementById('fDate').value;
+            const link    = document.getElementById('fLink').value.trim() || '#';
+
+            if (!title||!excerpt||!date){
+                showStatus('error', 'Veuillez remplir les champs obligatoires (*).');
+                return;
+            }
+
+            if (editingId !== null) {
+                // Update existing
+                const idx = articles.findIndex(a => a.id === editingId);
+                if (idx !== -1) articles[idx] = { id: editingId, date, title, excerpt, category, link };
+            } else {
+                // New article — id = max + 1
+                const newId = articles.length > 0 ? Math.max(...articles.map(a => a.id)) + 1 : 1;
+                articles.unshift({ id: newId, date, title, excerpt, category, link });
+            }
+
+            // Sort by date descending
+            articles.sort((a, b) => b.date.localeCompare(a.date));
+
+            clearForm();
+            showStatus('info', 'Article enregistré localement. Cliquez sur « Publier » pour sauvegarder sur GitHub.');
+            document.getElementById('publishBtn')?.remove(); // Remove old
+
+            // Show publish button in topbar
+            const topActions = document.querySelector('.topbar-actions');
+            const old = topActions.querySelector('.publish-btn');
+            if (!old){
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-success publish-btn';
+                btn.textContent = '🚀 Publier';
+                btn.addEventListener('click', publishToGitHub);
+                topActions.insertBefore(btn, topActions.firstChild);
+            }
+        });
+
+        /* ══════════════════════════════════════════════
+           GITHUB API — PUBLISH
+        ══════════════════════════════════════════════ */
+        async function publishToGitHub() {
+            const modal = document.getElementById('commitModal');
+            modal.style.display = 'flex';
+
+            try {
+                // 1. Fetch current file SHA
+                const getRes = await fetch(
+                    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=${GITHUB_BRANCH}`,
+                    { headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' } }
+                );
+                if (!getRes.ok) throw new Error('Impossible de lire articles.js sur GitHub.');
+                const fileData = await getRes.json();
+                const currentSha = fileData.sha;
+
+                // 2. Build updated articles.js content
+                const newContent = buildArticlesJs(articles);
+
+                // 3. Commit
+                const putRes = await fetch(
+                    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                            'Content-Type': 'application/json',
+                            'X-GitHub-Api-Version': '2022-11-28'
+                        },
+                        body: JSON.stringify({
+                            message: `[Admin] Mise à jour articles — ${new Date().toISOString().split('T')[0]}`,
+                            content: btoa(unescape(encodeURIComponent(newContent))),
+                            sha: currentSha,
+                            branch: GITHUB_BRANCH
+                        })
+                    }
+                );
+
+                if (!putRes.ok){
+                    const err = await putRes.json();
+                    throw new Error(err.message || 'Erreur lors du commit GitHub.');
+                }
+
+                modal.style.display = 'none';
+                document.querySelector('.publish-btn')?.remove();
+                showStatus('success', 'Articles publiés avec succès sur GitHub ! Le site se met à jour dans ~30 secondes.');
+
+            } catch (err) {
+                modal.style.display = 'none';
+                showStatus('error', err.message);
+            }
+        }
+
+        /* ══════════════════════════════════════════════
+           BUILD articles.js
+        ══════════════════════════════════════════════ */
+        function buildArticlesJs(arts) {
+            const header = `/**
+ * \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+ *  Syst\u00e8me d'articles \u2014 FR RSL
+ * \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+ *
+ * G\u00e9n\u00e9r\u00e9 automatiquement par l'interface d'administration.
+ * Derni\u00e8re mise \u00e0 jour\u00a0: ${new Date().toLocaleDateString('fr-FR')}
+ */
+
+`;
+            const rows = arts.map(a => {
+                const lines = [
+                    `    id: ${a.id},`,
+                    `    date: '${a.date}',`,
+                    `    title: ${jsStr(a.title)},`,
+                    `    excerpt: ${jsStr(a.excerpt)},`,
+                    `    category: ${jsStr(a.category)},`,
+                    `    link: ${jsStr(a.link)},`,
+                ];
+                return '  {\n' + lines.join('\n') + '\n  }';
+            });
+
+            const body = `const ARTICLES = [\n${rows.join(',\n')},\n];\n\n` +
+                `/** Renvoie les N articles les plus r\u00e9cents */\n` +
+                `function getLatestArticles(n = 3) {\n  return ARTICLES.slice(0, n);\n}\n\n` +
+                `/** Renvoie les articles d'une cat\u00e9gorie donn\u00e9e */\n` +
+                `function getArticlesByCategory(category) {\n  return ARTICLES.filter(a => a.category === category);\n}\n`;
+
+            return header + body;
+        }
+
+        function jsStr(s) {
+            // Wraps string safely in double quotes, escaping internals
+            return '"' + String(s).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n') + '"';
+        }
+
+        function escHtml(str) {
+            return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        /* ══════════════════════════════════════════════
+           INIT
+        ══════════════════════════════════════════════ */
+        // Set today as default date
+        document.getElementById('fDate').value = new Date().toISOString().split('T')[0];
+
+        renderList();
+    })();
+    </script>
+</body>
+</html>

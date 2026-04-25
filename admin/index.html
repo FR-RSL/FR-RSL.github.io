@@ -1,0 +1,230 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — FR RSL</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+        .login-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        .login-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo img { width: 48px; height: 48px; }
+        .login-logo h1 { font-size: 1.6rem; margin: 0; }
+
+        .login-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            margin-top: -1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.85rem 1.1rem;
+            border-radius: 10px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.04);
+            color: var(--text-light);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+        }
+
+        .form-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .form-hint a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.95rem;
+            border-radius: 12px;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 0.8rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-login:hover { background: var(--primary-dark); }
+        .btn-login:active { transform: scale(0.98); }
+
+        .error-msg {
+            background: rgba(229,57,53,0.15);
+            border: 1px solid rgba(229,57,53,0.4);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: #ef5350;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .admin-badge {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: rgba(255,183,0,0.15);
+            border: 1px solid rgba(255,183,0,0.3);
+            border-radius: 12px;
+            padding: 0.3rem 0.7rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #ffb700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+
+    <div class="login-card">
+        <span class="admin-badge">Accès Admin</span>
+
+        <div class="login-logo">
+            <img src="../assets/images/logos/logo.png" alt="FR RSL">
+            <h1>FR RSL</h1>
+        </div>
+        <p class="login-subtitle">Espace d'administration — accès restreint</p>
+
+        <form id="loginForm" autocomplete="off">
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="••••••••••" autocomplete="current-password">
+            </div>
+
+            <div class="form-group">
+                <label for="ghToken">Token GitHub Personnel (PAT)</label>
+                <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+                <p class="form-hint">
+                    Nécessaire pour sauvegarder les articles dans le repo.<br>
+                    <a href="https://github.com/settings/tokens/new?scopes=repo&description=FR-RSL+Admin" target="_blank" rel="noopener">→ Générer un token</a> avec scope <code>contents: write</code>
+                </p>
+            </div>
+
+            <button type="submit" class="btn-login">Connexion</button>
+            <div class="error-msg" id="errorMsg">Mot de passe incorrect ou token invalide.</div>
+        </form>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+    (function () {
+        // SHA-256 du mot de passe admin — généré côté serveur
+        const PASSWORD_HASH = '48ea6a4e7c8d0d9ce3ee1b02485b6e4acb698632046baf24a56d829979c1432c';
+        const GITHUB_REPO   = 'FR-RSL/FR-RSL.github.io';  // ← format: proprietaire/nom-du-repo
+
+        // Rediriger si déjà connecté
+        if (sessionStorage.getItem('admin_token')) {
+            window.location.href = 'dashboard.html';
+            return;
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const token    = document.getElementById('ghToken').value.trim();
+            const errorEl  = document.getElementById('errorMsg');
+            errorEl.style.display = 'none';
+
+            if (!password||!token){
+                errorEl.textContent = 'Veuillez remplir les deux champs.';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            // Hash SHA-256 du mot de passe saisi
+            const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
+            const hashHex    = Array.from(new Uint8Array(hashBuffer))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+
+            if (hashHex !== PASSWORD_HASH) {
+                errorEl.textContent = 'Mot de passe incorrect.';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            // Vérifier que le token GitHub est valide
+            const btn = document.querySelector('.btn-login');
+            btn.textContent = 'Vérification…';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}`, {
+                    headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' }
+                });
+                if (!res.ok) {
+                    const body = await res.json().catch(() => ({}));
+                    const detail = body.message || `HTTP ${res.status}`;
+                    throw new Error(`GitHub (${res.status}) : ${detail}`);
+                }
+
+                // Stocker le token dans sessionStorage (effacé à la fermeture du tab)
+                sessionStorage.setItem('admin_token', token);
+                window.location.href = 'dashboard.html';
+
+            } catch (err) {
+                errorEl.textContent = err.message || 'Erreur de vérification du token GitHub.';
+                errorEl.style.display = 'block';
+                btn.textContent = 'Connexion';
+                btn.disabled = false;
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -1,715 +1,619 @@
-<!DOCTYPE html>
+<!DOCTYPEhtml>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <title>FR RSL - Guide Complet Raid Shadow Legends | Champions, Stratégies, Builds</title>
-    <meta name="description" content="Guide français complet pour Raid Shadow Legends : fiches détaillées de tous les champions, builds optimaux, stratégies PvP/PvE, guides de factions et conseils d'experts.">
-    <meta name="keywords" content="Raid Shadow Legends, guide français, champions RSL, builds, stratégies, PvP, PvE, factions, tier list">
+    <!--SEO-->
+    <title>FR RSL — Guide Communautaire Raid: Shadow Legends</title>
+    <meta name="description" content="Guide communautaire français pour Raid: Shadow Legends — fiches de champions, équipements et stratégies pour les 15 factions de Teleria.">
+    <meta name="keywords" content="Raid Shadow Legends, guide français, champions RSL, factions, artefacts, bénédictions, reliques">
     <meta name="author" content="FR RSL">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
+    <!--OpenGraph-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fr-rsl.fr/">
-    <meta property="og:title" content="FR RSL - Guide Complet Raid Shadow Legends">
-    <meta property="og:description" content="Le guide français le plus complet pour Raid Shadow Legends. Découvrez tous les champions, leurs builds optimaux et les meilleures stratégies.">
+    <meta property="og:title" content="FR RSL — Guide Communautaire Raid: Shadow Legends">
+    <meta property="og:description" content="Guide communautaire français pour Raid: Shadow Legends — fiches de champions, équipements et stratégies.">
     <meta property="og:image" content="https://fr-rsl.fr/assets/images/logos/logo.png">
 
-    <!-- Twitter -->
+    <!--Twitter-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://fr-rsl.fr/">
-    <meta property="twitter:title" content="FR RSL - Guide Complet Raid Shadow Legends">
-    <meta property="twitter:description" content="Le guide français le plus complet pour Raid Shadow Legends. Découvrez tous les champions, leurs builds optimaux et les meilleures stratégies.">
+    <meta property="twitter:title" content="FR RSL — Guide Communautaire Raid: Shadow Legends">
+    <meta property="twitter:description" content="Guide communautaire français pour Raid: Shadow Legends — fiches de champions, équipements et stratégies.">
     <meta property="twitter:image" content="https://fr-rsl.fr/assets/images/logos/logo.png">
 
-    <!-- Canonical URL -->
+    <!--Canonical-->
     <link rel="canonical" href="https://fr-rsl.fr/">
 
-    <!-- Favicon -->
+    <!--Favicon-->
     <link rel="shortcut icon" href="assets/images/logos/logo.png">
     <link rel="apple-touch-icon" href="assets/images/logos/logo.png">
 
-    <!-- Preload critical resources -->
+    <!--Styles-->
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/rsl-theme.css">
 
     <style>
-        /* Styles des conteneurs publicitaires */
-        .ad-container {
-            margin: 2rem auto;
+        /* ── Hero ──────────────────────────────────────── */
+        .hero {
+            padding: 5rem 2rem 4rem;
             text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 1rem;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-        .ad-label {
-            font-size: 0.8rem;
-            color: #666;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-        .ad-container-hero {
-            margin: 2rem auto;
-            max-width: 728px;
         }
 
-        /* Styles du nouveau footer */
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(68, 96, 255, 0.1);
+            border: 1px solid rgba(68, 96, 255, 0.28);
+            border-radius: 20px;
+            padding: 0.35rem 1rem;
+            font-size: 0.78rem;
+            color: #818cf8;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h2 {
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* ── Barre de recherche hero ──────────────────── */
+        .hero-search {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 540px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-search input {
+            flex: 1;
+            padding: 0.9rem 1.5rem;
+            border-radius: 14px 0 0 14px;
+            border: 2px solid rgba(68, 96, 255, 0.4);
+            border-right: none;
+            background: rgba(255,255,255,0.06);
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s, background 0.3s;
+        }
+
+        .hero-search input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .hero-search input:focus {
+            border-color: var(--primary);
+            background: rgba(68, 96, 255, 0.08);
+        }
+
+        .hero-search button {
+            padding: 0.9rem 1.6rem;
+            border-radius: 0 14px 14px 0;
+            border: 2px solid var(--primary);
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            white-space: nowrap;
+        }
+
+        .hero-search button:hover {
+            background: var(--primary-dark);
+            transform: translateX(1px);
+        }
+
+        /* ── Catégories ──────────────────────────────── */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .category-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 1.4rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-light);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card.disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .category-card:not(.disabled):hover {
+            border-color: rgba(68, 96, 255, 0.55);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(68, 96, 255, 0.18);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .category-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+
+        .category-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .category-badge {
+            margin-left: auto;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.2rem 0.55rem;
+            border-radius: 8px;
+            background: rgba(68, 96, 255, 0.2);
+            color: #818cf8;
+            border: 1px solid rgba(68, 96, 255, 0.3);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .category-badge.soon {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        /* ── Articles ────────────────────────────────── */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+        }
+
+        .article-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-light);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .article-card:hover {
+            border-color: rgba(68, 96, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(68, 96, 255, 0.14);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .article-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .cat-Champions    { background: rgba(255,183,0,0.15);  color: #ffb700; }
+        .cat-Factions     { background: rgba(68,96,255,0.15);  color: #818cf8; }
+        .cat-Équipement   { background: rgba(16,185,129,0.15); color: #34d399; }
+        .cat-Guide        { background: rgba(139,92,246,0.15); color: #a78bfa; }
+        .cat-Mise-à-jour  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+        .article-date {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .article-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .article-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .article-link {
+            font-size: 0.82rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: auto;
+        }
+
+        /* ── Grille des factions ─────────────────────── */
+        .faction-grid-home {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.9rem;
+        }
+
+        .faction-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.4rem 0.8rem 1.2rem;
+            min-height: 155px;
+            border-radius: 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faction-tile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(68, 96, 255, 0.07), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .faction-tile:hover { border-color: rgba(68, 96, 255, 0.5); transform: translateY(-5px); box-shadow: 0 14px 35px rgba(68, 96, 255, 0.22); }
+        .faction-tile:hover::before { opacity: 1; }
+
+        .faction-tile img {
+            width: 68px;
+            height: 68px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faction-tile:hover img { transform: scale(1.1) translateY(-2px); }
+
+        .faction-tile span {
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faction-tile:hover span { color: var(--text-light); }
+
+        /* ── Equipment grid ──────────────────────────── */
+        .equipment-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* ── Footer ──────────────────────────────────── */
         .site-footer {
             background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
             padding: 4rem 0 1rem;
             color: #e2e8f0;
             border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        .footer-main { display: grid; grid-template-columns: 1.5fr 2fr; gap: 4rem; margin-bottom: 3rem; }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 1rem; }
+        .footer-logo  { width: 64px; height: auto; flex-shrink: 0; }
+
+        .footer-brand-info h3 { color: #ffb700; margin: 0 0 0.4rem; font-size: 1.4rem; }
+        .footer-brand-info p  { color: #94a3b8; margin: 0 0 1rem; font-size: 0.9rem; line-height: 1.5; }
+
+        .social-links { display: flex; gap: 0.9rem; margin-top: 0.5rem; }
+        .social-links a { color: #94a3b8; font-size: 1.4rem; transition: color 0.3s, transform 0.3s; }
+        .social-links a:hover { color: #ffb700; transform: translateY(-2px); }
+
+        .footer-sections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .footer-section h4 { color: #ffb700; margin: 0 0 1rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.8px; }
+        .footer-section nav { display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-section a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-section a:hover { color: #fff; }
+
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; text-align: center; }
+        .footer-disclaimer { margin-bottom: 1.5rem; }
+        .disclaimer-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,183,0,0.08); padding: 0.4rem 1rem; border-radius: 2rem; border: 1px solid rgba(255,183,0,0.2); }
+        .disclaimer-icon { font-size: 1rem; }
+        .disclaimer-text { color: #ffb700; font-size: 0.85rem; }
+        .footer-legal { color: #94a3b8; font-size: 0.85rem; }
+        .copyright { margin: 0 0 1rem; }
+        .legal-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .legal-links a { color: #64748b; text-decoration: none; transition: color 0.3s; }
+        .legal-links a:hover { color: #94a3b8; }
+        .legal-notice { max-width: 560px; margin: 0 auto; line-height: 1.5; color: #475569; }
+
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 1100px) {
+            .categories-grid   { grid-template-columns: repeat(2, 1fr); }
+            .faction-grid-home { grid-template-columns: repeat(4, 1fr); }
+            .equipment-grid    { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .footer-main {
-            display: grid;
-            grid-template-columns: 1.5fr 2fr;
-            gap: 4rem;
-            margin-bottom: 3rem;
+        @media (max-width: 860px) {
+            .faction-grid-home { grid-template-columns: repeat(3, 1fr); }
+            .articles-grid     { grid-template-columns: 1fr; }
         }
 
-        .footer-brand {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+        @media (max-width: 640px) {
+            .faction-grid-home { grid-template-columns: repeat(2, 1fr); }
+            .categories-grid   { grid-template-columns: 1fr; }
+            .equipment-grid    { grid-template-columns: 1fr; }
+            .hero-search       { flex-direction: column; }
+            .hero-search input  { border-radius: 14px; border: 2px solid rgba(68,96,255,0.4); }
+            .hero-search button { border-radius: 14px; }
         }
 
-        .footer-logo {
-            width: 80px;
-            height: auto;
-        }
-
-        .footer-brand-info h3 {
-            color: #ffb700;
-            margin: 0 0 0.5rem;
-            font-size: 1.5rem;
-        }
-
-        .footer-brand-info p {
-            color: #94a3b8;
-            margin: 0 0 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            color: #94a3b8;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #ffb700;
-        }
-
-        .footer-sections {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            color: #ffb700;
-            margin: 0 0 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-section nav {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            text-align: center;
-        }
-
-        .footer-disclaimer {
-            margin-bottom: 1.5rem;
-        }
-
-        .disclaimer-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255,183,0,0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            border: 1px solid rgba(255,183,0,0.2);
-        }
-
-        .disclaimer-icon {
-            font-size: 1.2rem;
-        }
-
-        .disclaimer-text {
-            color: #ffb700;
-            font-size: 0.9rem;
-        }
-
-        .footer-legal {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        .copyright {
-            margin: 0 0 1rem;
-        }
-
-        .legal-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .legal-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .legal-links a:hover {
-            color: #fff;
-        }
-
-        .legal-notice {
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
-
-        /* Responsive */
         @media (max-width: 968px) {
-            .footer-main {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer-brand {
-                justify-content: center;
-                text-align: center;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
+            .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-brand { justify-content: center; text-align: center; flex-direction: column; align-items: center; }
+            .social-links { justify-content: center; }
         }
 
-        @media (max-width: 768px) {
-            .footer-sections {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-        }
+        @media (max-width: 768px) { .footer-sections { grid-template-columns: repeat(2, 1fr); } }
 
         @media (max-width: 480px) {
-            .footer-sections {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-section {
-                text-align: center;
-            }
-
-            .legal-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+            .footer-sections { grid-template-columns: 1fr; }
+            .footer-section  { text-align: center; }
+            .legal-links     { flex-direction: column; gap: 0.5rem; }
         }
     </style>
 
-    <!-- Google Analytics (à remplacer par votre ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-VOTRE_ID_PUBLISHER"
-     crossorigin="anonymous"></script>
-     
-    <!-- Cookie Consent -->
     <script src="assets/js/cookies.js"></script>
 </head>
 <body>
-    <!-- Particules d'arrière-plan -->
     <div class="particles"></div>
 
-    <!-- Header avec navigation -->
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="assets/images/logos/logo.png" alt="Logo FR RSL">
-                <h1>FR RSL</h1>
-            </div>
-
-            <nav class="main-nav">
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">Champions <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="#factions">Toutes les Factions</a>
-                        <a href="pages/factions/faction14/hub.html">Clan de l'Ombre</a>
-                        <a href="pages/factions/faction15/hub.html">Gardes Sylvains</a>
-                        <a href="#">Tier Lists</a>
-                    </div>
-                </div>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">Guides <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="#guides">Tous les Guides</a>
-                        <a href="#">Reliques</a>
-                        <a href="#">Joyaux</a>
-                        <a href="#">Grâces</a>
-                        <a href="#">Builds PvP</a>
-                        <a href="#">Donjons</a>
-                    </div>
-                </div>
-
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">Outils <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="#">Calculateurs</a>
-                        <a href="#">Optimiseur de Builds</a>
-                        <a href="#">Planificateur d'Équipe</a>
-                        <a href="#">Base de Données</a>
-                    </div>
-                </div>
-
-                <a href="#actualites" class="nav-link">Actualités</a>
-            </nav>
-
-            <div class="search-container">
-                <div class="advanced-search-bar">
-                    <div class="search-input-wrapper">
-                        <div class="search-icon">🔍</div>
-                        <input type="text" id="searchInput" placeholder="Tapez pour rechercher : Tetsuya, Arbiter, Shadowkin..." autocomplete="off">
-                        <div class="search-shortcut">Ctrl+K</div>
-                        <div class="search-clear" id="searchClear">✕</div>
-                    </div>
-                    <div class="search-suggestions" id="searchSuggestions"></div>
-                </div>
-            </div>
+    <!--──Header──-->
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logos/logo.png" alt="Logo FR RSL">
+            <h1>FR RSL</h1>
         </div>
+        <nav class="quick-nav" style="margin:0;">
+            <a href="#news"       class="nav-pill">🗞️ Mises à jour</a>
+            <a href="#categories" class="nav-pill">Catégories</a>
+            <a href="#factions"   class="nav-pill">Factions</a>
+            <a href="pages/search/index.html" class="nav-pill active">🔍 Recherche</a>
+        </nav>
     </header>
 
-    <!-- Hero Section simplifié -->
+    <!--──Hero──-->
     <div class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="hero-title-main">FR RSL</span>
-                <span class="hero-title-sub">Guide Français pour Raid: Shadow Legends</span>
-            </h1>
-            <p class="hero-description">
-                Bienvenue sur le guide français le plus complet pour Raid: Shadow Legends.
-                Découvrez nos guides, fiches de champions et dernières actualités.
-            </p>
+        <div class="hero-eyebrow">✦ Guide communautaire · Fan Site</div>
+        <h2>Guide &amp; Wiki FR<br>Raid: Shadow Legends</h2>
+        <p>Fiches de champions, builds et stratégies — créés par la communauté française.</p>
+
+        <!--Recherchechampions→pagedédiée-->
+        <form class="hero-search" action="pages/search/index.html" method="get" role="search">
+            <input type="text" name="q" placeholder="Rechercher un champion…" autocomplete="off" aria-label="Rechercher un champion">
+            <button type="submit">🔍 Chercher</button>
+        </form>
+
+        <div class="quick-nav" style="justify-content:center; margin:0;">
+            <a href="#news"       class="nav-pill active">🗞️ Mises à jour</a>
+            <a href="#categories" class="nav-pill">📂 Catégories</a>
+            <a href="#factions"   class="nav-pill">⚔️ Factions</a>
         </div>
     </div>
 
-    <!-- Unique annonce principale -->
-    <div class="ad-container ad-container-hero">
-        <div class="ad-label">Publicité</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-VOTRE_ID_PUBLISHER"
-             data-ad-slot="VOTRE_AD_SLOT_MAIN"
-             data-ad-format="horizontal"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
+    <!--──Contenuprincipal──-->
     <div class="main-content">
-        <!-- Section Actualités -->
-        <section class="section" id="actualites">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Actualités & Nouveautés</h2>
-                    <p class="section-subtitle">Restez informé des dernières mises à jour et ajouts au site</p>
-                </div>
-                <div class="news-grid">
-                    <article class="news-card">
-                        <div class="news-date">19 Déc 2024</div>
-                        <h3>Nouveau Champion : Tetsuya le Sauveur</h3>
-                        <p>Guide complet du nouveau lead faction Shadowkin avec builds optimaux et stratégies.</p>
-                        <a href="pages/factions/faction14/legendary/tetsuya/tetsuya.html" class="news-link">Lire la suite →</a>
-                    </article>
 
-                    <article class="news-card">
-                        <div class="news-date">15 Déc 2024</div>
-                        <h3>Mise à jour des Tier Lists</h3>
-                        <p>Classements mis à jour suite aux derniers équilibrages et nouveaux champions.</p>
-                        <a href="https://pgbmax.github.io" class="news-link">Voir les tier lists →</a>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-date">10 Déc 2024</div>
-                        <h3>Guides Gardes Sylvains</h3>
-                        <p>Nouvelle section dédiée à la faction des Gardes Sylvains avec tous leurs champions.</p>
-                        <a href="pages/factions/faction15/hub.html" class="news-link">Explorer →</a>
-                    </article>
-                </div>
+        <!--──Dernièresmisesàjour──-->
+        <section class="section" id="news">
+            <div class="section-header">
+                <h2 class="section-title">Dernières mises à jour</h2>
+                <p class="section-subtitle">Suivez les ajouts et changements sur le site</p>
+            </div>
+            <div class="articles-grid" id="articlesContainer">
+                <!--Remplidynamiquementpararticles.js-->
             </div>
         </section>
 
-        <!-- Section Guides -->
-        <section class="section" id="guides">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Guides & Ressources</h2>
-                    <p class="section-subtitle">Tout ce dont vous avez besoin pour progresser dans Raid: Shadow Legends</p>
-                </div>
-                <div class="guides-grid">
-                    <a href="#" class="guide-bubble">
-                        <div class="guide-icon">💎</div>
-                        <h3>Reliques</h3>
-                        <p>Guide complet des sets de reliques et optimisation</p>
-                    </a>
-                    <a href="#" class="guide-bubble">
-                        <div class="guide-icon">💍</div>
-                        <h3>Joyaux</h3>
-                        <p>Optimisation des joyaux pour vos champions</p>
-                    </a>
-                    <a href="#" class="guide-bubble">
-                        <div class="guide-icon">✨</div>
-                        <h3>Grâces</h3>
-                        <p>Système de grâces et bénédictions</p>
-                    </a>
-                    <a href="#" class="guide-bubble">
-                        <div class="guide-icon">⚔️</div>
-                        <h3>Builds PvP</h3>
-                        <p>Configurations pour l'Arène et les Guerres de Clans</p>
-                    </a>
-                    <a href="#" class="guide-bubble">
-                        <div class="guide-icon">🏰</div>
+        <!--──Catégories──-->
+        <section class="section" id="categories">
+            <div class="section-header">
+                <h2 class="section-title">Catégories</h2>
+                <p class="section-subtitle">Toutes les sections du guide</p>
+            </div>
+
+            <div class="categories-grid">
+                <a href="#factions" class="category-card">
+                    <span class="category-icon">⚔️</span>
+                    <div class="category-info">
+                        <h3>Champions</h3>
+                        <p>Fiches détaillées, sorts et builds</p>
+                    </div>
+                    <span class="category-badge">118 fiches</span>
+                </a>
+
+                <a href="pages/equipment/index.html" class="category-card">
+                    <span class="category-icon">🛡️</span>
+                    <div class="category-info">
+                        <h3>Équipement</h3>
+                        <p>Artefacts, accessoires, bénédictions</p>
+                    </div>
+                    <span class="category-badge">4 sections</span>
+                </a>
+
+                <a href="#" class="category-card disabled">
+                    <span class="category-icon">🏰</span>
+                    <div class="category-info">
                         <h3>Donjons</h3>
-                        <p>Stratégies pour tous les donjons et défis</p>
-                    </a>
-                    <a href="https://pgbmax.github.io" class="guide-bubble">
-                        <div class="guide-icon">📊</div>
-                        <h3>Tier Lists</h3>
-                        <p>Classements des meilleurs champions</p>
-                    </a>
-                </div>
+                        <p>Stratégies et compositions</p>
+                    </div>
+                    <span class="category-badge soon">Bientôt</span>
+                </a>
+
+                <a href="https://pgbmax.github.io" class="category-card" target="_blank" rel="noopener">
+                    <span class="category-icon">📊</span>
+                    <div class="category-info">
+                        <h3>Tier List</h3>
+                        <p>Classement des meilleurs champions</p>
+                    </div>
+                    <span class="category-badge">↗ Externe</span>
+                </a>
             </div>
         </section>
 
-        <!-- Section Factions -->
-        <section class="section faction-section" id="factions">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Factions de Teleria</h2>
-                    <p class="section-subtitle">Choisissez votre faction et découvrez tous ses champions légendaires</p>
-                </div>
-            <div class="faction-grid" id="factionContainer">
-                <a href="pages/factions/faction01/hub.html" class="faction-bubble" data-name="Seigneurs">
+        <!--──Factions──-->
+        <section class="section" id="factions">
+            <div class="section-header">
+                <h2 class="section-title">Les Factions de Teleria</h2>
+                <p class="section-subtitle">Explorez les 15 factions et leurs champions légendaires &amp; mythiques</p>
+            </div>
+
+            <div class="faction-grid-home">
+                <a href="pages/factions/faction01/hub.html" class="faction-tile faction-bubble" data-name="Seigneurs">
                     <img src="assets/images/factions/bannerlords.png" alt="Seigneurs">
                     <span>Seigneurs</span>
                 </a>
-                <a href="pages/factions/faction02/hub.html" class="faction-bubble" data-name="Haut Elfes">
+                <a href="pages/factions/faction02/hub.html" class="faction-tile faction-bubble" data-name="Haut Elfes">
                     <img src="assets/images/factions/high-elves.png" alt="Haut Elfes">
                     <span>Haut Elfes</span>
                 </a>
-                <a href="pages/factions/faction03/hub.html" class="faction-bubble" data-name="Ordre Sacre">
-                    <img src="assets/images/factions/sacred-order.png" alt="Ordre Sacre">
+                <a href="pages/factions/faction03/hub.html" class="faction-tile faction-bubble" data-name="Ordre Sacré">
+                    <img src="assets/images/factions/sacred-order.png" alt="Ordre Sacré">
                     <span>L'Ordre Sacré</span>
                 </a>
-                <a href="pages/factions/faction04/hub.html" class="faction-bubble" data-name="Barbares">
+                <a href="pages/factions/faction04/hub.html" class="faction-tile faction-bubble" data-name="Barbares">
                     <img src="assets/images/factions/barbarians.png" alt="Barbares">
                     <span>Barbares</span>
                 </a>
-                <a href="pages/factions/faction05/hub.html" class="faction-bubble" data-name="Tribus Ogryn">
+                <a href="pages/factions/faction05/hub.html" class="faction-tile faction-bubble" data-name="Tribus Ogryn">
                     <img src="assets/images/factions/ogryn-tribes.png" alt="Tribus Ogryn">
                     <span>Tribus Ogryn</span>
                 </a>
-                <a href="pages/factions/faction06/hub.html" class="faction-bubble" data-name="Homme Lezards">
-                    <img src="assets/images/factions/lizardmen.png" alt="Homme Lezards">
+                <a href="pages/factions/faction06/hub.html" class="faction-tile faction-bubble" data-name="Homme Lézards">
+                    <img src="assets/images/factions/lizardmen.png" alt="Homme Lézards">
                     <span>Homme Lézards</span>
                 </a>
-                <a href="pages/factions/faction07/hub.html" class="faction-bubble" data-name="Marcheurs de Peau">
+                <a href="pages/factions/faction07/hub.html" class="faction-tile faction-bubble" data-name="Marcheurs de Peau">
                     <img src="assets/images/factions/skinwalkers.png" alt="Marcheurs de Peau">
                     <span>Marcheurs de Peau</span>
                 </a>
-                <a href="pages/factions/faction08/hub.html" class="faction-bubble" data-name="Orcs">
+                <a href="pages/factions/faction08/hub.html" class="faction-tile faction-bubble" data-name="Orcs">
                     <img src="assets/images/factions/orcs.png" alt="Orcs">
                     <span>Orcs</span>
                 </a>
-                <a href="pages/factions/faction09/hub.html" class="faction-bubble" data-name="Rejetons Demoniaques">
-                    <img src="assets/images/factions/demonspawn.png" alt="Rejetons Demoniaques">
+                <a href="pages/factions/faction09/hub.html" class="faction-tile faction-bubble" data-name="Rejetons Démoniaques">
+                    <img src="assets/images/factions/demonspawn.png" alt="Rejetons Démoniaques">
                     <span>Rejetons Démo.</span>
                 </a>
-                <a href="pages/factions/faction10/hub.html" class="faction-bubble" data-name="Morts-vivants">
+                <a href="pages/factions/faction10/hub.html" class="faction-tile faction-bubble" data-name="Morts-vivants">
                     <img src="assets/images/factions/undead-hordes.png" alt="Morts-vivants">
                     <span>Morts-vivants</span>
                 </a>
-                <a href="pages/factions/faction11/hub.html" class="faction-bubble" data-name="Elfes Noirs">
+                <a href="pages/factions/faction11/hub.html" class="faction-tile faction-bubble" data-name="Elfes Noirs">
                     <img src="assets/images/factions/dark-elves.png" alt="Elfes Noirs">
                     <span>Elfes Noirs</span>
                 </a>
-                <a href="pages/factions/faction12/hub.html" class="faction-bubble" data-name="Revenants Chevaliers">
+                <a href="pages/factions/faction12/hub.html" class="faction-tile faction-bubble" data-name="Revenants Chevaliers">
                     <img src="assets/images/factions/knight-revenant.png" alt="Revenants Chevaliers">
-                    <span>Revenants Chevaliers</span>
+                    <span>Revenants Chev.</span>
                 </a>
-                <a href="pages/factions/faction13/hub.html" class="faction-bubble" data-name="Nains">
+                <a href="pages/factions/faction13/hub.html" class="faction-tile faction-bubble" data-name="Nains">
                     <img src="assets/images/factions/dwarves.png" alt="Nains">
                     <span>Nains</span>
                 </a>
-                <a href="pages/factions/faction14/hub.html" class="faction-bubble" data-name="Clan de l'Ombre">
+                <a href="pages/factions/faction14/hub.html" class="faction-tile faction-bubble" data-name="Clan de l'Ombre">
                     <img src="assets/images/factions/shadowkin.png" alt="Clan de l'Ombre">
                     <span>Clan de l'Ombre</span>
                 </a>
-                <a href="pages/factions/faction15/hub.html" class="faction-bubble" data-name="Gardes Sylvains">
+                <a href="pages/factions/faction15/hub.html" class="faction-tile faction-bubble" data-name="Gardes Sylvains">
                     <img src="assets/images/factions/sylvan-watchers.png" alt="Gardes Sylvains">
                     <span>Gardes Sylvains</span>
                 </a>
             </div>
-            </div>
         </section>
 
-        <!-- Section Reliques -->
-        <section class="section" id="reliques">
+        <!--──Équipement──-->
+        <section class="section" id="equipement">
             <div class="section-header">
-                <h2 class="section-title">Reliques & Équipements</h2>
-                <p class="section-subtitle">Maîtrisez l'art de l'équipement pour optimiser vos champions</p>
+                <h2 class="section-title">Équipement</h2>
+                <p class="section-subtitle">Guides de référence pour optimiser vos champions</p>
             </div>
-            <div class="card-grid">
-                <a href="#" class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Sets de Reliques</h3>
-                    <p>Guide complet des 20+ sets de reliques, leurs effets et synergies optimales</p>
-                </a>
-                <a href="#" class="card">
+
+            <div class="card-grid equipment-grid">
+                <a href="pages/equipment/artifacts/index.html" class="card">
                     <div class="card-icon">⚔️</div>
-                    <h3>Statistiques Principales</h3>
-                    <p>Comprendre ATK%, DEF%, HP%, Vitesse et leurs impacts sur le gameplay</p>
+                    <h3>Artefacts</h3>
+                    <p>Sets d'équipements, statistiques principales et builds optimaux</p>
                 </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Sous-statistiques</h3>
-                    <p>Optimisation des sous-stats : Taux Critique, Dégâts Critiques, Résistance</p>
+                <a href="pages/equipment/accessories/index.html" class="card">
+                    <div class="card-icon">💍</div>
+                    <h3>Accessoires</h3>
+                    <p>Bagues, amulettes et bannières pour compléter vos builds</p>
                 </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🔧</div>
-                    <h3>Calculateur d'Équipement</h3>
-                    <p>Outil interactif pour calculer les statistiques optimales de vos builds</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">💰</div>
-                    <h3>Farming Efficace</h3>
-                    <p>Stratégies pour farmer les meilleures reliques dans les donjons</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">⭐</div>
-                    <h3>Amélioration & Forge</h3>
-                    <p>Guide pour améliorer et forger vos reliques de manière optimale</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Section Joyaux -->
-        <section class="section" id="joyaux">
-            <div class="section-header">
-                <h2 class="section-title">Joyaux & Optimisation</h2>
-                <p class="section-subtitle">Débloquez le potentiel caché de vos champions avec les joyaux</p>
-            </div>
-            <div class="card-grid">
-                <a href="#" class="card">
-                    <div class="card-icon">💎</div>
-                    <h3>Types de Joyaux</h3>
-                    <p>Découvrez tous les types de joyaux et leurs effets spécifiques</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🔮</div>
-                    <h3>Builds Joyaux PvP</h3>
-                    <p>Configurations optimales pour dominer l'Arène et les Guerres de Clans</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🏰</div>
-                    <h3>Builds Joyaux PvE</h3>
-                    <p>Optimisations pour les donjons, campagne et contenu PvE</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Simulateur de Joyaux</h3>
-                    <p>Testez différentes combinaisons avant d'investir vos ressources</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Joyaux par Rôle</h3>
-                    <p>Recommandations spécifiques selon le rôle de votre champion</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🎖️</div>
-                    <h3>Joyaux Légendaires</h3>
-                    <p>Guide des joyaux les plus rares et leurs utilisations optimales</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Section Grâces -->
-        <section class="section" id="graces">
-            <div class="section-header">
-                <h2 class="section-title">Grâces & Bénédictions</h2>
-                <p class="section-subtitle">Exploitez le système de grâces pour transcender vos limites</p>
-            </div>
-            <div class="card-grid">
-                <a href="#" class="card">
+                <a href="pages/equipment/blessings/index.html" class="card">
                     <div class="card-icon">✨</div>
-                    <h3>Types de Grâces</h3>
-                    <p>Comprendre les différents types de grâces et leurs mécaniques</p>
+                    <h3>Bénédictions</h3>
+                    <p>Grâces divines et leurs effets sur les capacités de vos champions</p>
                 </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🌟</div>
-                    <h3>Bénédictions Divines</h3>
-                    <p>Guide des bénédictions les plus puissantes et comment les obtenir</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Synergies Grâces</h3>
-                    <p>Combinaisons optimales entre grâces, reliques et joyaux</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">⚖️</div>
-                    <h3>Équilibrage Meta</h3>
-                    <p>Impact des grâces sur l'équilibre du jeu et le meta actuel</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Stratégies Avancées</h3>
-                    <p>Techniques expertes pour maximiser l'efficacité des grâces</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Progression Grâces</h3>
-                    <p>Planification à long terme pour développer vos grâces efficacement</p>
+                <a href="pages/equipment/reliques/index.html" class="card">
+                    <div class="card-icon">💎</div>
+                    <h3>Reliques</h3>
+                    <p>Puissants artefacts anciens et leurs synergies de set</p>
                 </a>
             </div>
         </section>
 
-        <!-- Section Contenu Supplémentaire -->
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Ressources Avancées</h2>
-                <p class="section-subtitle">Approfondissez vos connaissances avec nos contenus experts</p>
-            </div>
-            <div class="card-grid">
-                <a href="pages/equipment/" class="card">
-                    <div class="card-icon">⚙️</div>
-                    <h3>Hub Équipement</h3>
-                    <p>Centre de ressources pour reliques, joyaux, grâces et optimisation</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Meta Analysis</h3>
-                    <p>Analyses régulières du meta, tendances et prédictions pour rester compétitif</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🧮</div>
-                    <h3>Calculateurs Avancés</h3>
-                    <p>Outils de calcul pour optimiser dégâts, vitesse, résistance et précision</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>Base de Données</h3>
-                    <p>Accès complet à toutes les données du jeu : champions, sorts, statistiques</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🎥</div>
-                    <h3>Guides Vidéo</h3>
-                    <p>Tutoriels vidéo détaillés pour maîtriser les mécaniques complexes</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">💡</div>
-                    <h3>Conseils d'Experts</h3>
-                    <p>Astuces et stratégies partagées par les meilleurs joueurs de la communauté</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3>Mises à Jour</h3>
-                    <p>Suivez les dernières nouveautés, patchs et changements du jeu</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Section Stratégies & Tactiques -->
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Stratégies & Tactiques</h2>
-                <p class="section-subtitle">Développez votre expertise tactique pour tous les modes de jeu</p>
-            </div>
-            <div class="card-grid">
-                <a href="#" class="card">
-                    <div class="card-icon">⚔️</div>
-                    <h3>Compositions d'Équipe</h3>
-                    <p>Guides pour créer des équipes synergiques et équilibrées</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🏟️</div>
-                    <h3>Stratégies Arène</h3>
-                    <p>Dominez l'Arène Classique et l'Arène Tag avec nos tactiques éprouvées</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🏰</div>
-                    <h3>Guerres de Clans</h3>
-                    <p>Coordination d'équipe et stratégies pour remporter les guerres de clans</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🗡️</div>
-                    <h3>Donjons Avancés</h3>
-                    <p>Techniques pour farmer efficacement tous les donjons niveau 25</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">👑</div>
-                    <h3>Contenu Endgame</h3>
-                    <p>Stratégies pour le Clan Boss, Hydra et autres défis de haut niveau</p>
-                </a>
-                <a href="#" class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Optimisation Ressources</h3>
-                    <p>Gestion efficace de l'énergie, de l'argent et des ressources rares</p>
-                </a>
-            </div>
-        </section>
     </div>
 
-    <!-- Footer -->
+    <!--──Footer──-->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-main">
@@ -717,7 +621,7 @@
                     <img src="assets/images/logos/logo.png" alt="Logo FR RSL" class="footer-logo">
                     <div class="footer-brand-info">
                         <h3>FR RSL</h3>
-                        <p>Guide français pour Raid: Shadow Legends</p>
+                        <p>Guide communautaire français<br>pour Raid: Shadow Legends</p>
                         <div class="social-links">
                             <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
                             <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -726,40 +630,34 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="footer-sections">
                     <div class="footer-section">
-                        <h4>Site</h4>
+                        <h4>Factions</h4>
                         <nav>
-                            <a href="#factions">Factions</a>
-                            <a href="#reliques">Reliques</a>
-                            <a href="#joyaux">Joyaux</a>
-                            <a href="#graces">Grâces</a>
+                            <a href="pages/factions/faction01/hub.html">Seigneurs</a>
+                            <a href="pages/factions/faction04/hub.html">Barbares</a>
+                            <a href="pages/factions/faction09/hub.html">Rejetons Démo.</a>
+                            <a href="#factions">Toutes les factions →</a>
                         </nav>
                     </div>
-
+                    <div class="footer-section">
+                        <h4>Équipement</h4>
+                        <nav>
+                            <a href="pages/equipment/artifacts/index.html">Artefacts</a>
+                            <a href="pages/equipment/accessories/index.html">Accessoires</a>
+                            <a href="pages/equipment/blessings/index.html">Bénédictions</a>
+                            <a href="pages/equipment/reliques/index.html">Reliques</a>
+                        </nav>
+                    </div>
                     <div class="footer-section">
                         <h4>Ressources</h4>
                         <nav>
+                            <a href="pages/search/index.html">Recherche champions</a>
                             <a href="https://pgbmax.github.io">Tier Lists</a>
-                            <a href="#">Calculateurs</a>
-                            <a href="#">Base de Données</a>
-                            <a href="#">Guides Vidéo</a>
-                        </nav>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>Aide</h4>
-                        <nav>
-                            <a href="#">Contact</a>
-                            <a href="#">FAQ</a>
-                            <a href="#">Signaler un Bug</a>
-                            <a href="#">Suggestions</a>
                         </nav>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <div class="footer-disclaimer">
                     <span class="disclaimer-badge">
@@ -767,9 +665,8 @@
                         <span class="disclaimer-text">Site de Fans Non-Officiel</span>
                     </span>
                 </div>
-                
                 <div class="footer-legal">
-                    <p class="copyright">© 2025 <strong>FR RSL</strong></p>
+                    <p class="copyright">© 2026 <strong>FR RSL</strong></p>
                     <nav class="legal-links">
                         <a href="/legal/mentions-legales.html">Mentions Légales</a>
                         <a href="/legal/privacy-policy.html">Politique de Confidentialité</a>
@@ -782,30 +679,38 @@
         </div>
     </footer>
 
-    <!-- Font Awesome pour les icônes sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Publicité Footer -->
-    <div class="ad-container" id="ad-footer">
-        <div class="ad-label">Publicité</div>
-    </div>
-
-    <!-- Scripts -->
+    <!--Scripts-->
+    <script src="assets/js/articles.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- Script de recherche avancée -->
-    <script src="assets/js/advanced-search.js"></script>
-
-    <!-- Script de gestion des cookies (DOIT être chargé en premier) -->
-    <script src="assets/js/cookies.js"></script>
-
-    <!-- Script de gestion des publicités (chargé par le système de cookies) -->
     <script src="assets/js/ads.js"></script>
-
-    <!-- Google AdSense et Analytics seront chargés automatiquement selon le consentement -->
     <script>
-        // Configuration pour le système de cookies
-        const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID'; // À remplacer par votre ID Google Analytics
+        const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
+
+        /* ── Rendu des articles ── */
+        (function renderArticles() {
+            const container = document.getElementById('articlesContainer');
+            if (!container || typeof ARTICLES === 'undefined') return;
+
+            const latest = getLatestArticles(3);
+            const catClass = c => 'cat-' + c.replace(/\s/g, '-').replace(/[éèê]/g, 'e').replace(/[àâ]/g, 'a');
+
+            container.innerHTML = latest.map(a => {
+                const d = new Date(a.date);
+                const dateStr = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+                return `
+                <a href="${a.link}" class="article-card">
+                    <div class="article-meta">
+                        <span class="article-category ${catClass(a.category)}">${a.category}</span>
+                        <span class="article-date">${dateStr}</span>
+                    </div>
+                    <h3>${a.title}</h3>
+                    <p>${a.excerpt}</p>
+                    <span class="article-link">Lire →</span>
+                </a>`;
+            }).join('');
+        })();
     </script>
 </body>
 </html>

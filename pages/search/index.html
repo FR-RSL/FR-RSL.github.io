@@ -1,0 +1,433 @@
+<!DOCTYPEhtml>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche — FR RSL</title>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" href="../../assets/images/logos/logo.png">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        /* ── Layout ──────────────────────────────────── */
+        .search-page {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ── Barre de recherche ──────────────────────── */
+        .search-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .search-header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, var(--text-light), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .search-bar-main {
+            display: flex;
+            gap: 0;
+            max-width: 600px;
+        }
+
+        .search-bar-main input {
+            flex: 1;
+            padding: 0.9rem 1.4rem;
+            border-radius: 14px 0 0 14px;
+            border: 2px solid rgba(68, 96, 255, 0.4);
+            border-right: none;
+            background: rgba(255,255,255,0.06);
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar-main input:focus {
+            border-color: var(--primary);
+        }
+
+        .search-bar-main input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-bar-main button {
+            padding: 0.9rem 1.4rem;
+            border-radius: 0 14px 14px 0;
+            border: 2px solid var(--primary);
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-bar-main button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ── Filtres ─────────────────────────────────── */
+        .search-filters {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        /* ── Résultats ───────────────────────────────── */
+        .search-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .search-meta strong {
+            color: var(--text-light);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .champion-result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1rem 0.8rem 0.9rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            gap: 0.6rem;
+            text-align: center;
+        }
+
+        .champion-result:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.4);
+        }
+
+        .champion-result.rarity-mythical  { border-color: rgba(229,57,53,0.3); }
+        .champion-result.rarity-legendary { border-color: rgba(255,183,0,0.3); }
+
+        .champion-result.rarity-mythical:hover  { border-color: #e53935; box-shadow: 0 14px 32px rgba(229,57,53,0.25); }
+        .champion-result.rarity-legendary:hover { border-color: #ffb700; box-shadow: 0 14px 32px rgba(255,183,0,0.25); }
+
+        .result-portrait {
+            width: 100px;
+            height: 120px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: center top;
+            background: rgba(255,255,255,0.05);
+            flex-shrink: 0;
+        }
+
+        .result-portrait-placeholder {
+            width: 100px;
+            height: 120px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .result-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .result-faction {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .result-faction img {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .result-rarity {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.18rem 0.55rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .rarity-mythical  .result-rarity { background: rgba(229,57,53,0.2);  color: #ef5350; }
+        .rarity-legendary .result-rarity { background: rgba(255,183,0,0.2);  color: #ffb700; }
+
+        /* ── État vide ───────────────────────────────── */
+        .search-empty {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .search-empty .empty-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-empty h2 {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ── No query state ──────────────────────────── */
+        .search-prompt {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .search-prompt .prompt-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .search-prompt p { font-size: 1rem; }
+
+        /* ── Footer ──────────────────────────────────── */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 0.6rem 1.2rem;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-home:hover {
+            background: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 640px) {
+            .results-grid { grid-template-columns: repeat(2, 1fr); }
+            .search-bar-main { flex-direction: column; }
+            .search-bar-main input  { border-radius: 14px; border: 2px solid rgba(68,96,255,0.4); }
+            .search-bar-main button { border-radius: 14px; }
+        }
+
+        @media (max-width: 360px) {
+            .results-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+
+    <!--──Header──-->
+    <header>
+        <div class="logo-section">
+            <a href="../../index.html" class="back-home">← Accueil</a>
+            <img src="../../assets/images/logos/logo.png" alt="Logo FR RSL">
+            <h1>FR RSL</h1>
+        </div>
+    </header>
+
+    <!--──Contenu──-->
+    <div class="search-page">
+
+        <div class="search-header">
+            <h1>🔍 Recherche de champions</h1>
+            <form class="search-bar-main" id="searchForm" role="search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    name="q"
+                    placeholder="Nom du champion… ex : Acelin, Thor, Nell"
+                    autocomplete="off"
+                    aria-label="Rechercher un champion"
+                >
+                <button type="submit">Chercher</button>
+            </form>
+
+            <!--Filtresrareté-->
+            <div class="search-filters">
+                <button class="filter-btn active" data-rarity="all">Tous</button>
+                <button class="filter-btn" data-rarity="mythical">🔥 Mythiques</button>
+                <button class="filter-btn" data-rarity="legendary">👑 Légendaires</button>
+            </div>
+        </div>
+
+        <!--Compteurderésultats-->
+        <div class="search-meta" id="searchMeta"></div>
+
+        <!--Grillederésultats-->
+        <div class="results-grid" id="resultsGrid"></div>
+
+        <!--Étatvide/étatinitial-->
+        <div class="search-prompt" id="searchPrompt">
+            <div class="prompt-icon">⚔️</div>
+            <p>Tapez le nom d'un champion pour commencer la recherche.</p>
+        </div>
+
+    </div>
+
+    <!--Scripts-->
+    <script src="../../assets/js/champions-index.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+    (function () {
+        const input    = document.getElementById('searchInput');
+        const meta     = document.getElementById('searchMeta');
+        const grid     = document.getElementById('resultsGrid');
+        const prompt   = document.getElementById('searchPrompt');
+        const form     = document.getElementById('searchForm');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        let currentQuery  = '';
+        let currentRarity = 'all';
+
+        /* ── Lire le paramètre ?q= depuis l'URL ── */
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlQuery  = (urlParams.get('q') || '').trim();
+        if (urlQuery) {
+            input.value   = urlQuery;
+            currentQuery  = urlQuery.toLowerCase();
+        }
+
+        /* ── Filtres de rareté ── */
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentRarity = btn.dataset.rarity;
+                render();
+            });
+        });
+
+        /* ── Soumission du formulaire ── */
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            currentQuery = input.value.trim().toLowerCase();
+            // Mettre à jour l'URL sans recharger
+            const url = new URL(window.location.href);
+            url.searchParams.set('q', input.value.trim());
+            window.history.replaceState({}, '', url);
+            render();
+        });
+
+        /* ── Saisie en temps réel ── */
+        input.addEventListener('input', () => {
+            currentQuery = input.value.trim().toLowerCase();
+            render();
+        });
+
+        /* ── Rendu ── */
+        function render() {
+            if (!currentQuery){
+                grid.innerHTML   = '';
+                meta.textContent = '';
+                prompt.style.display = 'block';
+                return;
+            }
+
+            prompt.style.display = 'none';
+
+            const results = CHAMPIONS.filter(c => {
+                const matchQuery  = normalize(c.name).includes(normalize(currentQuery))
+                                 || normalize(c.factionName).includes(normalize(currentQuery));
+                const matchRarity = currentRarity === 'all' || c.rarity === currentRarity;
+                return matchQuery && matchRarity;
+            });
+
+            meta.innerHTML = results.length > 0
+                ? `<strong>${results.length}</strong> résultat${results.length > 1 ? 's' : ''} pour « <strong>${escHtml(input.value.trim())}</strong> »`
+                : '';
+
+            if (results.length === 0) {
+                grid.innerHTML = `
+                    <div class="search-empty" style="grid-column:1/-1">
+                        <div class="empty-icon">😶</div>
+                        <h2>Aucun champion trouvé</h2>
+                        <p>Essayez un autre nom ou vérifiez l'orthographe.</p>
+                    </div>`;
+                return;
+            }
+
+            grid.innerHTML = results.map(c => `
+                <a href="../../${c.url}" class="champion-result rarity-${c.rarity}">
+                    ${c.img
+                        ? `<img class="result-portrait" src="../../${c.img}" alt="${escHtml(c.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                           <div class="result-portrait-placeholder" style="display:none">⚔️</div>`
+                        : `<div class="result-portrait-placeholder">⚔️</div>`
+                    }
+                    <span class="result-rarity">${c.rarity === 'mythical' ? 'Mythique' : 'Légendaire'}</span>
+                    <span class="result-name">${escHtml(c.name)}</span>
+                    <div class="result-faction">
+                        <img src="../../${c.factionImg}" alt="${escHtml(c.factionName)}">
+                        ${escHtml(c.factionName)}
+                    </div>
+                </a>`
+            ).join('');
+        }
+
+        /* ── Utilitaires ── */
+        function normalize(str) {
+            return str.toLowerCase()
+                .normalize('NFD').replace(/\p{Diacritic}/gu, '')
+                .replace(/['']/g, "'");
+        }
+
+        function escHtml(str) {
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+
+        /* ── Lancer si query dans l'URL ── */
+        if (currentQuery) render();
+    })();
+    </script>
+</body>
+</html>

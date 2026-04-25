@@ -1,5 +1,5 @@
 /**
- * Index des champions pour la recherche — FR RSL
+ * Index des champions pour la recherche â FR RSL
  *
  * Pour AJOUTER un champion :
  *   Ajouter un objet dans le tableau CHAMPIONS avec les champs :
@@ -9,13 +9,13 @@
 const FACTION_META = {
   faction01: { name: 'Seigneurs',              img: 'bannerlords.png'    },
   faction02: { name: 'Haut Elfes',             img: 'high-elves.png'     },
-  faction03: { name: "Ordre Sacré",            img: 'sacred-order.png'   },
+  faction03: { name: "Ordre SacrÃ©",            img: 'sacred-order.png'   },
   faction04: { name: 'Barbares',               img: 'barbarians.png'     },
   faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.png'   },
-  faction06: { name: 'Homme Lézards',          img: 'lizardmen.png'      },
+  faction06: { name: 'Homme LÃ©zards',          img: 'lizardmen.png'      },
   faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.png'    },
   faction08: { name: 'Orcs',                   img: 'orcs.png'           },
-  faction09: { name: 'Rejetons Démoniaques',   img: 'demonspawn.png'     },
+  faction09: { name: 'Rejetons DÃ©moniaques',   img: 'demonspawn.png'     },
   faction10: { name: 'Morts-vivants',          img: 'undead-hordes.png'  },
   faction11: { name: 'Elfes Noirs',            img: 'dark-elves.png'     },
   faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.png'},
@@ -24,18 +24,18 @@ const FACTION_META = {
   faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png'},
 };
 
-/** Génère l'URL de la page champion depuis la racine du site */
+/** GÃ©nÃ¨re l'URL de la page champion depuis la racine du site */
 function _url(faction, rarity, folder) {
   return `pages/factions/${faction}/${rarity}/${folder}/${folder}.html`;
 }
 
-/** Génère le chemin de l'image portrait depuis la racine */
+/** GÃ©nÃ¨re le chemin de l'image portrait depuis la racine */
 function _img(faction, rarity, folder) {
   return `pages/factions/${faction}/${rarity}/${folder}/assets/${folder}.png`;
 }
 
 const CHAMPIONS = [
-  // ── Faction 01 — Seigneurs ──────────────────────────────────
+  // ââ Faction 01 â Seigneurs ââââââââââââââââââââââââââââââââââ
   { name: 'Acelin',          faction: 'faction01', rarity: 'legendary', folder: 'acelin'         },
   { name: 'Adelyn',          faction: 'faction01', rarity: 'legendary', folder: 'adelyn'         },
   { name: 'Baron',           faction: 'faction01', rarity: 'legendary', folder: 'baron'          },
@@ -62,11 +62,11 @@ const CHAMPIONS = [
   { name: 'Titus',           faction: 'faction01', rarity: 'legendary', folder: 'titus'          },
   { name: 'Androc',          faction: 'faction01', rarity: 'mythical',  folder: 'androc'         },
 
-  // ── Faction 03 — Ordre Sacré ────────────────────────────────
+  // ââ Faction 03 â Ordre SacrÃ© ââââââââââââââââââââââââââââââââ
   { name: 'Polara',          faction: 'faction03', rarity: 'mythical',  folder: 'polara'         },
   { name: 'Siegfrund',       faction: 'faction03', rarity: 'mythical',  folder: 'siegfrund'      },
 
-  // ── Faction 04 — Barbares ───────────────────────────────────
+  // ââ Faction 04 â Barbares âââââââââââââââââââââââââââââââââââ
   { name: 'Freyja',          faction: 'faction04', rarity: 'legendary', folder: 'freyja'         },
   { name: 'Loki',            faction: 'faction04', rarity: 'legendary', folder: 'loki'           },
   { name: 'Odin',            faction: 'faction04', rarity: 'legendary', folder: 'odin'           },
@@ -74,18 +74,18 @@ const CHAMPIONS = [
   { name: 'Thor',            faction: 'faction04', rarity: 'legendary', folder: 'thor'           },
   { name: 'Alaz',            faction: 'faction04', rarity: 'mythical',  folder: 'alaz'           },
 
-  // ── Faction 06 — Homme Lézards ──────────────────────────────
+  // ââ Faction 06 â Homme LÃ©zards ââââââââââââââââââââââââââââââ
   { name: 'Donatello',       faction: 'faction06', rarity: 'legendary', folder: 'donatello'      },
 
-  // ── Faction 07 — Marcheurs de Peau ─────────────────────────
+  // ââ Faction 07 â Marcheurs de Peau âââââââââââââââââââââââââ
   { name: 'Galleus',         faction: 'faction07', rarity: 'mythical',  folder: 'galleus'        },
   { name: 'Mezomel',         faction: 'faction07', rarity: 'mythical',  folder: 'mezomel'        },
 
-  // ── Faction 08 — Orcs ───────────────────────────────────────
+  // ââ Faction 08 â Orcs âââââââââââââââââââââââââââââââââââââââ
   { name: "Ash'nar",         faction: 'faction08', rarity: 'mythical',  folder: 'ashnar'         },
   { name: 'Gharol',          faction: 'faction08', rarity: 'mythical',  folder: 'gharol'         },
 
-  // ── Faction 09 — Rejetons Démoniaques ──────────────────────
+  // ââ Faction 09 â Rejetons DÃ©moniaques ââââââââââââââââââââââ
   { name: 'Candraphon',      faction: 'faction09', rarity: 'legendary', folder: 'candraphon'     },
   { name: 'Chat',            faction: 'faction09', rarity: 'legendary', folder: 'chat'           },
   { name: 'Comtesse Lix',    faction: 'faction09', rarity: 'legendary', folder: 'comtesse'       },
@@ -108,23 +108,23 @@ const CHAMPIONS = [
   { name: 'Komidus',         faction: 'faction09', rarity: 'mythical',  folder: 'komidus'        },
   { name: 'Kurosa',          faction: 'faction09', rarity: 'mythical',  folder: 'kurosa'         },
 
-  // ── Faction 10 — Morts-vivants ──────────────────────────────
+  // ââ Faction 10 â Morts-vivants ââââââââââââââââââââââââââââââ
   { name: 'Calamitus',       faction: 'faction10', rarity: 'mythical',  folder: 'calamitus'      },
   { name: 'Theodosia',       faction: 'faction10', rarity: 'mythical',  folder: 'theodosia'      },
 
-  // ── Faction 11 — Elfes Noirs ────────────────────────────────
+  // ââ Faction 11 â Elfes Noirs ââââââââââââââââââââââââââââââââ
   { name: 'Aphidus',         faction: 'faction11', rarity: 'mythical',  folder: 'aphidus'        },
 
-  // ── Faction 12 — Revenants Chevaliers ──────────────────────
+  // ââ Faction 12 â Revenants Chevaliers ââââââââââââââââââââââ
   { name: 'Fortus',          faction: 'faction12', rarity: 'legendary', folder: 'fortus'         },
   { name: 'Embrys',          faction: 'faction12', rarity: 'mythical',  folder: 'embrys'         },
   { name: 'Krixia',          faction: 'faction12', rarity: 'mythical',  folder: 'krixia'         },
 
-  // ── Faction 13 — Nains ──────────────────────────────────────
+  // ââ Faction 13 â Nains ââââââââââââââââââââââââââââââââââââââ
   { name: 'Acrizia',            faction: 'faction13', rarity: 'legendary', folder: 'acrizia'        },
   { name: 'Arnorn',             faction: 'faction13', rarity: 'legendary', folder: 'arnorn'         },
   { name: 'Brogni',             faction: 'faction13', rarity: 'legendary', folder: 'brogni'         },
-  { name: 'Défense Noire',      faction: 'faction13', rarity: 'legendary', folder: 'defense-noire'  },
+  { name: 'DÃ©fense Noire',      faction: 'faction13', rarity: 'legendary', folder: 'defense-noire'  },
   { name: 'Gnut',               faction: 'faction13', rarity: 'legendary', folder: 'gnut'           },
   { name: 'Roi de la Montagne', faction: 'faction13', rarity: 'legendary', folder: 'rdlm'           },
   { name: 'Senna',              faction: 'faction13', rarity: 'legendary', folder: 'senna'          },
@@ -134,7 +134,7 @@ const CHAMPIONS = [
   { name: 'Fjorad',             faction: 'faction13', rarity: 'mythical',  folder: 'fjorad'         },
   { name: 'Frolni',             faction: 'faction13', rarity: 'mythical',  folder: 'frolni'         },
 
-  // ── Faction 14 — Clan de l'Ombre ───────────────────────────
+  // ââ Faction 14 â Clan de l'Ombre âââââââââââââââââââââââââââ
   { name: 'Arashi',       faction: 'faction14', rarity: 'legendary', folder: 'arashi'      },
   { name: 'Harima',       faction: 'faction14', rarity: 'legendary', folder: 'harima'      },
   { name: 'Ieyasu',       faction: 'faction14', rarity: 'legendary', folder: 'ieyasu'      },
@@ -154,7 +154,7 @@ const CHAMPIONS = [
   { name: 'Mikage',       faction: 'faction14', rarity: 'mythical',  folder: 'mikage'      },
   { name: 'Toshiro',      faction: 'faction14', rarity: 'mythical',  folder: 'toshiro'     },
 
-  // ── Faction 15 — Gardes Sylvains ───────────────────────────
+  // ââ Faction 15 â Gardes Sylvains âââââââââââââââââââââââââââ
   { name: 'Ailil',            faction: 'faction15', rarity: 'legendary', folder: 'ailil'       },
   { name: 'Aratheia',         faction: 'faction15', rarity: 'legendary', folder: 'aratheia'    },
   { name: 'Balar',            faction: 'faction15', rarity: 'legendary', folder: 'balar'       },
@@ -178,7 +178,8 @@ const CHAMPIONS = [
   { name: 'Arbais',           faction: 'faction15', rarity: 'mythical',  folder: 'arbais'      },
   { name: 'Nais',             faction: 'faction15', rarity: 'mythical',  folder: 'nais'        },
   { name: 'Nell',             faction: 'faction15', rarity: 'mythical',  folder: 'nell'        },
-].map(c => ({
+  { name: 'chazzup ciao', faction: 'faction15', rarity: 'legendary', folder: 'ciao' },
+  ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,
   img: c.noImg ? null : `pages/factions/${c.faction}/${c.rarity}/${c.folder}/assets/${c.folder}.png`,

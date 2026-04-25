@@ -270,7 +270,7 @@
                     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=${GITHUB_BRANCH}`,
                     { headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' } }
                 );
-                if (!getRes.ok){constb=awaitgetRes.json().catch(()=>({}));thrownewError(`GitHub(${getRes.status}):${b.message||'Erreurlecturefichier'}`);}
+                if (!getRes.ok) { const b = await getRes.json().catch(() => ({})); throw new Error(`GitHub (${getRes.status}) : ${b.message || 'Erreur lecture fichier'}`); }}
                 const fileData = await getRes.json();
                 const putRes = await fetch(
                     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`,
@@ -285,7 +285,7 @@
                         })
                     }
                 );
-                if (!putRes.ok){consterr=awaitputRes.json();thrownewError(err.message||'ErreurlorsducommitGitHub.');}
+                if (!putRes.ok) { const err = await putRes.json(); throw new Error(err.message || 'Erreur lors du commit GitHub.'); }
                 modal.style.display = 'none';
                 document.querySelector('.publish-btn')?.remove();
                 showStatus('success', 'Articles publiés avec succès sur GitHub !');

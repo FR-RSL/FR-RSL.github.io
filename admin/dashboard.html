@@ -9,356 +9,202 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
     <style>
-        /* ── Layout ── */
-        .admin-root {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
         .admin-wrap {
-            max-width: 1080px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 2rem 1.5rem 3rem;
-            width: 100%;
             position: relative;
             z-index: 10;
-            flex: 1;
         }
 
-        /* ── Topbar ── */
-        .admin-topbar {
+        /* Topbar */
+        .topbar {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
         }
         .topbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex: 1;
-            min-width: 0;
+            display: flex; align-items: center; gap: 0.65rem; flex: 1;
         }
         .topbar-brand img {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
+            width: 32px; height: 32px; object-fit: contain;
             filter: drop-shadow(0 0 8px rgba(68,96,255,0.5));
         }
         .topbar-brand h1 {
-            font-size: 1.45rem;
-            margin: 0;
-            white-space: nowrap;
+            font-size: 1.25rem; margin: 0; font-weight: 800;
             background: linear-gradient(135deg, var(--text-light) 40%, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-        .topbar-actions { display: flex; gap: 0.6rem; align-items: center; }
-
-        /* ── Buttons ── */
+        .topbar-actions { display: flex; gap: 0.5rem; }
         .btn {
-            padding: 0.5rem 1.1rem;
-            border-radius: 10px;
-            border: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-family: inherit;
-            white-space: nowrap;
+            padding: 0.45rem 1rem; border-radius: 9px; border: none;
+            font-weight: 600; font-size: 0.82rem; cursor: pointer;
+            transition: all 0.18s; text-decoration: none; display: inline-flex;
+            align-items: center; gap: 0.3rem; font-family: inherit; white-space: nowrap;
         }
-        .btn-ghost {
-            background: var(--glass-bg);
-            color: var(--text-muted);
-            border: 1px solid var(--glass-border);
-        }
+        .btn-ghost { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
         .btn-ghost:hover { color: var(--text-light); background: rgba(255,255,255,0.07); }
-        .btn-danger {
-            background: rgba(239,83,80,0.15);
-            color: #ef5350;
-            border: 1px solid rgba(239,83,80,0.3);
-        }
-        .btn-danger:hover { background: rgba(239,83,80,0.28); }
+        .btn-danger { background: rgba(239,83,80,0.14); color: #ef5350; border: 1px solid rgba(239,83,80,0.28); }
+        .btn-danger:hover { background: rgba(239,83,80,0.26); }
 
-        /* ── Welcome banner ── */
-        .welcome-banner {
-            background: linear-gradient(130deg, rgba(68,96,255,0.14) 0%, rgba(6,255,165,0.04) 100%);
-            border: 1px solid rgba(68,96,255,0.3);
-            border-radius: 20px;
-            padding: 1.6rem 2rem;
-            margin-bottom: 2.5rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .banner-text { flex: 1; min-width: 180px; }
-        .banner-text h2 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0 0 0.35rem;
-            color: var(--text-light);
-        }
-        .banner-text p {
-            margin: 0;
-            font-size: 0.84rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
+        /* Stats row */
         .stats-row {
-            display: flex;
-            gap: 0.85rem;
-            flex-wrap: wrap;
+            display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap;
         }
-        .stat-chip {
-            background: rgba(255,255,255,0.05);
+        .stat-card {
+            flex: 1; min-width: 100px;
+            background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 0.6rem 1.1rem;
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
             text-align: center;
-            min-width: 76px;
-            transition: border-color 0.2s;
+            backdrop-filter: blur(10px);
         }
-        .stat-chip:hover { border-color: rgba(68,96,255,0.4); }
-        .stat-chip .sc-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-light);
-            display: block;
-            line-height: 1;
-            letter-spacing: -0.02em;
+        .stat-card .val {
+            font-size: 2rem; font-weight: 800; line-height: 1;
+            color: var(--text-light); display: block; letter-spacing: -0.03em;
         }
-        .stat-chip .sc-label {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            margin-top: 0.3rem;
-            display: block;
+        .stat-card .lbl {
+            font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; color: var(--text-muted); display: block; margin-top: 0.25rem;
         }
 
-        /* ── Section title ── */
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin: 0 0 1rem;
-        }
-        .section-title span {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-        }
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--glass-border);
-        }
-
-        /* ── Cards ── */
-        .cards-grid {
+        /* Grid */
+        .tool-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin-bottom: 2rem;
         }
-        .admin-card {
-            --cc: #4460ff;
-            --cbg: rgba(68,96,255,0.08);
+        .tool-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 1.35rem 1.4rem 1.2rem;
+            border-radius: 14px;
+            padding: 1.2rem 1.3rem;
             text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
-            backdrop-filter: blur(12px);
+            display: flex; align-items: center; gap: 1rem;
+            transition: border-color 0.18s, background 0.18s, transform 0.14s, box-shadow 0.18s;
+            backdrop-filter: blur(10px);
+            --cc: #4460ff; --cbg: rgba(68,96,255,0.09);
         }
-        .admin-card:hover {
-            border-color: var(--cc);
-            background: var(--cbg);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        .tool-card:hover {
+            border-color: var(--cc); background: var(--cbg);
+            transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2);
         }
-        .admin-card:active { transform: none; }
+        .tc-green  { --cc: #06ffa5; --cbg: rgba(6,255,165,0.07); }
+        .tc-gold   { --cc: #e6b800; --cbg: rgba(230,184,0,0.07); }
+        .tc-purple { --cc: #a78bfa; --cbg: rgba(167,139,250,0.09); }
 
-        .card-blue   { --cc: #4460ff; --cbg: rgba(68,96,255,0.1); }
-        .card-green  { --cc: #06ffa5; --cbg: rgba(6,255,165,0.08); }
-        .card-gold   { --cc: #e6b800; --cbg: rgba(230,184,0,0.08); }
-        .card-purple { --cc: #a78bfa; --cbg: rgba(167,139,250,0.1); }
+        .tc-icon {
+            width: 42px; height: 42px; border-radius: 11px;
+            background: var(--cbg); border: 1px solid rgba(255,255,255,0.07);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; flex-shrink: 0;
+        }
+        .tc-body { flex: 1; min-width: 0; }
+        .tc-title { font-size: 0.9rem; font-weight: 700; color: var(--text-light); margin: 0 0 0.2rem; }
+        .tc-desc  { font-size: 0.72rem; color: var(--text-muted); margin: 0; line-height: 1.35; }
 
-        .card-icon {
-            font-size: 1.6rem;
-            line-height: 1;
-            margin-bottom: 0.2rem;
+        /* Quick links */
+        .ql-row { display: flex; gap: 0.55rem; flex-wrap: wrap; }
+        .ql {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.38rem 0.8rem;
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            border-radius: 8px; text-decoration: none;
+            color: var(--text-muted); font-size: 0.78rem; font-weight: 600;
+            transition: all 0.14s;
         }
-        .card-tag {
-            font-size: 0.62rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--cc);
-            opacity: 0.8;
-        }
-        .card-title {
-            font-size: 0.97rem;
-            font-weight: 700;
-            color: var(--text-light);
-            margin: 0;
-            line-height: 1.2;
-        }
-        .card-desc {
-            font-size: 0.77rem;
-            color: var(--text-muted);
-            line-height: 1.45;
-            margin: 0;
-            flex: 1;
-        }
-        .card-cta {
-            margin-top: 0.5rem;
-            font-size: 0.73rem;
-            font-weight: 700;
-            color: var(--cc);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-        .admin-card:hover .card-cta { opacity: 1; }
+        .ql:hover { color: var(--text-light); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); }
 
-        /* ── Quick links ── */
-        .quick-links {
-            display: flex;
-            gap: 0.65rem;
-            flex-wrap: wrap;
+        .divider {
+            font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-muted);
+            margin: 0 0 0.75rem; display: flex; align-items: center; gap: 0.6rem;
         }
-        .quick-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.45rem 0.95rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 9px;
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: all 0.15s;
-        }
-        .quick-link:hover {
-            color: var(--text-light);
-            border-color: rgba(255,255,255,0.22);
-            background: rgba(255,255,255,0.06);
-        }
+        .divider::after { content: ''; flex: 1; height: 1px; background: var(--glass-border); }
 
-        @media (max-width: 600px) {
-            .admin-wrap { padding: 1.2rem 1rem 2rem; }
-            .welcome-banner { padding: 1.2rem 1.2rem; gap: 1.2rem; }
-            .cards-grid { grid-template-columns: 1fr 1fr; }
-            .topbar-brand h1 { font-size: 1.15rem; }
-        }
-        @media (max-width: 380px) {
-            .cards-grid { grid-template-columns: 1fr; }
+        @media (max-width: 500px) {
+            .tool-grid { grid-template-columns: 1fr; }
+            .stats-row .stat-card .val { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <div class="particles"></div>
-    <div class="admin-root">
-        <div class="admin-wrap">
+    <div class="admin-wrap">
 
-            <!--Topbar-->
-            <div class="admin-topbar">
-                <div class="topbar-brand">
-                    <img src="../assets/images/logos/logo.png" alt="FR RSL">
-                    <h1>Dashboard Admin</h1>
-                </div>
-                <div class="topbar-actions">
-                    <a href="../index.html" class="btn btn-ghost">← Site</a>
-                    <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
-                </div>
+        <!--Topbar-->
+        <div class="topbar">
+            <div class="topbar-brand">
+                <img src="../assets/images/logos/logo.png" alt="FR RSL">
+                <h1>Admin FR RSL</h1>
             </div>
-
-            <!--Welcomebanner-->
-            <div class="welcome-banner">
-                <div class="banner-text">
-                    <h2>Panneau d'administration FR RSL</h2>
-                    <p>Gère les champions, les hubs de factions et les articles du site depuis ici.</p>
-                </div>
-                <div class="stats-row">
-                    <div class="stat-chip">
-                        <span class="sc-value" id="statChampions">…</span>
-                        <span class="sc-label">Champions</span>
-                    </div>
-                    <div class="stat-chip">
-                        <span class="sc-value" id="statArticles">…</span>
-                        <span class="sc-label">Articles</span>
-                    </div>
-                    <div class="stat-chip">
-                        <span class="sc-value">15</span>
-                        <span class="sc-label">Factions</span>
-                    </div>
-                </div>
+            <div class="topbar-actions">
+                <a href="../index.html" class="btn btn-ghost">← Site</a>
+                <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
             </div>
-
-            <!--Section:Champions-->
-            <div class="section-title"><span>Champions</span></div>
-            <div class="cards-grid">
-                <a href="champion-creator.html" class="admin-card card-blue">
-                    <div class="card-icon">⚔️</div>
-                    <span class="card-tag">Nouveau</span>
-                    <p class="card-title">Créer un Champion</p>
-                    <p class="card-desc">Ajoute un nouveau champion légendaire ou mythique avec ses compétences, stats et portrait.</p>
-                    <span class="card-cta">Ouvrir →</span>
-                </a>
-                <a href="champion-editor.html" class="admin-card card-green">
-                    <div class="card-icon">✏️</div>
-                    <span class="card-tag">Édition</span>
-                    <p class="card-title">Modifier un Champion</p>
-                    <p class="card-desc">Édite le fichier JS ou HTML d'un champion existant directement depuis GitHub.</p>
-                    <span class="card-cta">Ouvrir →</span>
-                </a>
-            </div>
-
-            <!--Section:Factions&Contenu-->
-            <div class="section-title"><span>Factions &amp; Contenu</span></div>
-            <div class="cards-grid">
-                <a href="hub-editor.html" class="admin-card card-gold">
-                    <div class="card-icon">🏰</div>
-                    <span class="card-tag">Factions</span>
-                    <p class="card-title">Modifier un Hub</p>
-                    <p class="card-desc">Modifie le titre, les couleurs et le lore des 15 hubs de faction.</p>
-                    <span class="card-cta">Ouvrir →</span>
-                </a>
-                <a href="articles.html" class="admin-card card-purple">
-                    <div class="card-icon">📋</div>
-                    <span class="card-tag">Contenu</span>
-                    <p class="card-title">Articles</p>
-                    <p class="card-desc">Crée, modifie ou supprime les articles de la page d'accueil du site.</p>
-                    <span class="card-cta">Ouvrir →</span>
-                </a>
-            </div>
-
-            <!--Quicklinks-->
-            <div class="section-title"><span>Liens rapides</span></div>
-            <div class="quick-links">
-                <a href="../index.html" class="quick-link">🌐 Page d'accueil</a>
-                <a href="../pages/equipment/index.html" class="quick-link">🛡️ Équipement</a>
-                <a href="../pages/factions/faction01/hub.html" class="quick-link">🏰 Hub Seigneurs</a>
-                <a href="https://github.com/FR-RSL/FR-RSL.github.io" target="_blank" rel="noopener" class="quick-link">🐙 GitHub</a>
-            </div>
-
         </div>
+
+        <!--Stats-->
+        <div class="stats-row">
+            <div class="stat-card">
+                <span class="val" id="statChampions">…</span>
+                <span class="lbl">Champions</span>
+            </div>
+            <div class="stat-card">
+                <span class="val" id="statArticles">…</span>
+                <span class="lbl">Articles</span>
+            </div>
+            <div class="stat-card">
+                <span class="val">15</span>
+                <span class="lbl">Factions</span>
+            </div>
+        </div>
+
+        <!--Tools-->
+        <p class="divider">Outils</p>
+        <div class="tool-grid">
+            <a href="champion-creator.html" class="tool-card">
+                <div class="tc-icon">⚔️</div>
+                <div class="tc-body">
+                    <p class="tc-title">Créer un Champion</p>
+                    <p class="tc-desc">Nouveau légendaire ou mythique</p>
+                </div>
+            </a>
+            <a href="champion-editor.html" class="tool-card tc-green">
+                <div class="tc-icon">✏️</div>
+                <div class="tc-body">
+                    <p class="tc-title">Modifier un Champion</p>
+                    <p class="tc-desc">JS / HTML depuis GitHub</p>
+                </div>
+            </a>
+            <a href="hub-editor.html" class="tool-card tc-gold">
+                <div class="tc-icon">🏰</div>
+                <div class="tc-body">
+                    <p class="tc-title">Modifier un Hub</p>
+                    <p class="tc-desc">Titre, couleurs, lore des 15 factions</p>
+                </div>
+            </a>
+            <a href="articles.html" class="tool-card tc-purple">
+                <div class="tc-icon">📋</div>
+                <div class="tc-body">
+                    <p class="tc-title">Articles</p>
+                    <p class="tc-desc">Créer, modifier, supprimer</p>
+                </div>
+            </a>
+        </div>
+
+        <!--Quicklinks-->
+        <p class="divider">Liens rapides</p>
+        <div class="ql-row">
+            <a href="../index.html" class="ql">🌐 Accueil</a>
+            <a href="../pages/equipment/index.html" class="ql">🛡️ Équipement</a>
+            <a href="../pages/factions/faction01/hub.html" class="ql">🏰 Hub Seigneurs</a>
+            <a href="https://github.com/FR-RSL/FR-RSL.github.io" target="_blank" rel="noopener" class="ql">🐙 GitHub</a>
+        </div>
+
     </div>
 
     <script src="../assets/js/main.js"></script>
@@ -366,19 +212,17 @@
     <script>
     (function () {
         var token = sessionStorage.getItem('admin_token');
-        if (!token){window.location.href='index.html';return;}
+        if (!token){window.location.replace('index.html');return;}
 
         document.getElementById('btnLogout').addEventListener('click', function () {
             sessionStorage.removeItem('admin_token');
-            window.location.href = 'index.html';
+            window.location.replace('index.html');
         });
 
-        // Articles count
         if (typeof ARTICLES !== 'undefined') {
             document.getElementById('statArticles').textContent = ARTICLES.length;
         }
 
-        // Champion count via GitHub API
         fetch('https://api.github.com/repos/FR-RSL/FR-RSL.github.io/contents/assets/js/champions-index.js', {
             headers: { 'Authorization': 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
         }).then(function (r) { return r.ok ? r.json() : null; })
@@ -392,20 +236,6 @@
         }).catch(function () {
             document.getElementById('statChampions').textContent = '—';
         });
-
-        // Particles
-        var c = document.querySelector('.particles');
-        if (c) {
-            for (var i = 0; i < 15; i++) {
-                var d = document.createElement('div');
-                d.className = 'particle';
-                d.style.left = Math.random() * 100 + '%';
-                d.style.top = Math.random() * 100 + '%';
-                d.style.animationDelay = (Math.random() * 6) + 's';
-                d.style.animationDuration = (4 + Math.random() * 4) + 's';
-                c.appendChild(d);
-            }
-        }
     })();
     </script>
 </body>

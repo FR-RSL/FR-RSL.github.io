@@ -1,10 +1,6 @@
 /**
- * ══════════════════════════════════════════════════════
- *  Système d'articles — FR RSL
- * ══════════════════════════════════════════════════════
- *
- * Généré automatiquement par l'interface d'administration.
- * Dernière mise à jour : 25/04/2026
+ * Système d'articles — FR RSL
+ * Généré le 26/04/2026
  */
 
 const ARTICLES = [
@@ -15,14 +11,6 @@ const ARTICLES = [
     excerpt: "Toutes les fiches de la faction 15 sont désormais disponibles — 20 légendaires et 3 mythiques.",
     category: "Factions",
     link: "pages/factions/faction15/hub.html",
-  },
-  {
-    id: 6,
-    date: '2026-04-07',
-    title: "test",
-    excerpt: "www",
-    category: "Mise à jour",
-    link: "#",
   },
   {
     id: 4,
@@ -58,12 +46,5 @@ const ARTICLES = [
   },
 ];
 
-/** Renvoie les N articles les plus récents */
-function getLatestArticles(n = 3) {
-  return ARTICLES.slice(0, n);
-}
-
-/** Renvoie les articles d'une catégorie donnée */
-function getArticlesByCategory(category) {
-  return ARTICLES.filter(a => a.category === category);
-}
+function getLatestArticles(n = 3) { return ARTICLES.slice(0, n); }
+function getArticlesByCategory(category) { return ARTICLES.filter(a => a.category === category); }

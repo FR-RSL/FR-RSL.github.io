@@ -18,6 +18,8 @@
     .btn-primary:hover { background: var(--primary-dark); }
     .btn-ghost { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
     .btn-ghost:hover { color: var(--text-light); }
+    .btn-danger { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
+    .btn-danger:hover { background: rgba(229,57,53,0.35); }
     .btn-success { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
     .btn-success:hover { background: rgba(6,255,165,0.25); }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -82,6 +84,17 @@
     .view-link:hover { color: var(--accent); }
     .hint { font-size: 0.73rem; color: var(--text-muted); margin-top: 0.25rem; }
     .section-title-label { font-size: 1rem; font-weight: 700; color: #e6b800; margin-bottom: 1.2rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border); }
+    /* Order panel */
+    .order-section { margin-bottom: 1.5rem; }
+    .order-section-label { font-size: 0.85rem; font-weight: 700; color: #e6b800; margin-bottom: 0.5rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--glass-border); }
+    .order-list { display: flex; flex-direction: column; gap: 0.35rem; min-height: 30px; padding: 0.2rem 0; }
+    .order-item { display: flex; align-items: center; gap: 0.65rem; padding: 0.45rem 0.75rem; background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); border-radius: 8px; cursor: grab; user-select: none; transition: background 0.15s, border-color 0.15s; }
+    .order-item:active { cursor: grabbing; }
+    .order-item.drag-over { border-color: #e6b800; background: rgba(230,184,0,0.1); }
+    .order-item.dragging { opacity: 0.35; border-style: dashed; }
+    .drag-handle { color: var(--text-muted); font-size: 1rem; line-height: 1; flex-shrink: 0; }
+    .order-thumb { width: 30px; height: 30px; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.05); flex-shrink: 0; }
+    .order-name { font-size: 0.86rem; font-weight: 600; flex: 1; }
   </style>
 </head>
 <body>
@@ -131,6 +144,7 @@
           <div class="section-tabs">
             <button class="section-tab on" onclick="switchSection('quick',this)">✨ Édition rapide</button>
             <button class="section-tab"    onclick="switchSection('raw',this)">🔧 HTML brut</button>
+            <button class="section-tab"    onclick="switchSection('order',this)">🔀 Ordre des champions</button>
           </div>
           <!--Quickeditsection-->
           <div class="quick-panel on" id="sec-quick">
@@ -161,6 +175,10 @@
           <div class="quick-panel" id="sec-raw">
             <div class="hint" style="margin-bottom:0.8rem">⚠️ Édition directe du fichier hub.html. Sois prudent.</div>
             <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+          </div>
+          <!--OrderSection-->
+          <div class="quick-panel" id="sec-order">
+            <p style="color:var(--text-muted);font-size:0.82rem">Sélectionne une faction pour voir ses champions.</p>
           </div>
         </div>
       </div>
@@ -396,18 +414,23 @@ function applyQuickToRaw(src) {
 
 /* ── Section switch ── */
 function switchSection(name, btn) {
+  // When leaving 'order', bake order changes into hubRawContent
+  if (curSection === 'order' && name !== 'order') {
+    hubRawContent = applyOrderToRaw(hubRawContent);
+    document.getElementById('codeEditor').value = hubRawContent;
+  }
   curSection = name;
   document.querySelectorAll('.section-tab').forEach(function(b){ b.classList.remove('on'); });
   btn.classList.add('on');
   document.querySelectorAll('.quick-panel').forEach(function(p){ p.classList.remove('on'); });
   document.getElementById('sec-'+name).classList.add('on');
   if (name === 'raw') {
-    // Sync raw editor from quick fields
     document.getElementById('codeEditor').value = applyQuickToRaw(hubRawContent);
   } else if (name === 'quick') {
-    // Parse from raw editor
     var raw = document.getElementById('codeEditor').value;
     parseQuickFields(raw);
+  } else if (name === 'order') {
+    buildOrderPanel(hubRawContent, currentFaction);
   }
 }
 
@@ -419,6 +442,9 @@ async function saveHub() {
   var finalContent;
   if (curSection === 'raw') {
     finalContent = document.getElementById('codeEditor').value;
+  } else if (curSection === 'order') {
+    finalContent = applyOrderToRaw(hubRawContent);
+    document.getElementById('codeEditor').value = finalContent;
   } else {
     finalContent = applyQuickToRaw(hubRawContent);
     document.getElementById('codeEditor').value = finalContent;
@@ -451,6 +477,108 @@ async function saveHub() {
     showStatus('error', 'Erreur : '+e.message);
   }
   document.getElementById('btnSave').disabled = false;
+}
+
+/* ── Champion order drag-and-drop ── */
+var _cardHtmlMap = {}; // key: gridId+'::'+dataName → original outerHTML
+
+var GRID_SECTIONS = [
+  { id: 'mythicalContainer',  label: '🔥 Mythiques'  },
+  { id: 'legendaryContainer', label: '👑 Légendaires' },
+  { id: 'epicContainer',      label: '💎 Épiques'     },
+  { id: 'rareContainer',      label: '⚡ Rares'       },
+  { id: 'uncommonContainer',  label: '🌿 Peu Communs' },
+  { id: 'commonContainer',    label: '⚪ Communs'     },
+];
+
+function buildOrderPanel(src, factionId) {
+  _cardHtmlMap = {};
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(src, 'text/html');
+  var html = '';
+  GRID_SECTIONS.forEach(function(sec) {
+    var grid = doc.getElementById(sec.id);
+    if (!grid) return;
+    var cards = grid.querySelectorAll('a.champion-card');
+    if (cards.length === 0) return;
+    html += '<div class="order-section">';
+    html += '<div class="order-section-label">'+sec.label+' ('+cards.length+')</div>';
+    html += '<div class="order-list" id="ol-'+sec.id+'">';
+    cards.forEach(function(card) {
+      var name = card.getAttribute('data-name') || '';
+      var imgEl = card.querySelector('img');
+      var imgSrc = imgEl ? imgEl.getAttribute('src') : '';
+      var adminImgSrc = imgSrc ? '../pages/factions/'+factionId+'/'+imgSrc : '';
+      var displayName = '';
+      var nameEl = card.querySelector('.champion-name');
+      if (nameEl) displayName = nameEl.textContent.trim();
+      else displayName = name;
+      var key = sec.id+'::'+name;
+      _cardHtmlMap[key] = card.outerHTML;
+      html += '<div class="order-item" draggable="true" data-grid="'+sec.id+'" data-name="'+name+'" data-key="'+key+'">';
+      html += '<span class="drag-handle">⠿</span>';
+      if (adminImgSrc) html += '<img class="order-thumb" src="'+adminImgSrc+'" alt="" onerror="this.style.display=\'none\'">';
+      html += '<span class="order-name">'+displayName+'</span>';
+      html += '</div>';
+    });
+    html += '</div></div>';
+  });
+  var panel = document.getElementById('sec-order');
+  panel.innerHTML = html || '<p style="color:var(--text-muted);padding:1rem 0">Aucun champion trouvé dans ce hub.</p>';
+  if (html) initDragDrop();
+}
+
+var _dragSrc = null;
+function initDragDrop() {
+  document.querySelectorAll('#sec-order .order-item').forEach(function(item) {
+    item.addEventListener('dragstart', function(e) {
+      _dragSrc = this;
+      this.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    item.addEventListener('dragend', function() {
+      this.classList.remove('dragging');
+      document.querySelectorAll('#sec-order .order-item').forEach(function(i){ i.classList.remove('drag-over'); });
+    });
+    item.addEventListener('dragover', function(e) {
+      if (!_dragSrc || this === _dragSrc) return;
+      if (this.getAttribute('data-grid') !== _dragSrc.getAttribute('data-grid')) return;
+      e.preventDefault();
+      this.classList.add('drag-over');
+    });
+    item.addEventListener('dragleave', function() { this.classList.remove('drag-over'); });
+    item.addEventListener('drop', function(e) {
+      e.preventDefault();
+      this.classList.remove('drag-over');
+      if (!_dragSrc || this === _dragSrc) return;
+      if (this.getAttribute('data-grid') !== _dragSrc.getAttribute('data-grid')) return;
+      var parent = this.parentNode;
+      var items = Array.from(parent.querySelectorAll('.order-item'));
+      var srcIdx = items.indexOf(_dragSrc);
+      var dstIdx = items.indexOf(this);
+      if (srcIdx < dstIdx) parent.insertBefore(_dragSrc, this.nextSibling);
+      else parent.insertBefore(_dragSrc, this);
+      document.getElementById('modifiedBadge').style.display = 'inline';
+    });
+  });
+}
+
+function applyOrderToRaw(src) {
+  GRID_SECTIONS.forEach(function(sec) {
+    var list = document.getElementById('ol-'+sec.id);
+    if (!list) return;
+    var items = list.querySelectorAll('.order-item');
+    if (items.length === 0) return;
+    var newCards = '';
+    items.forEach(function(item) {
+      var key = item.getAttribute('data-key');
+      if (_cardHtmlMap[key]) newCards += '\n                '+_cardHtmlMap[key];
+    });
+    newCards += '\n            ';
+    var re = new RegExp('(<div[^>]+id=["\']'+sec.id+'["\'][^>]*>)[\\s\\S]*?(</div>)');
+    src = src.replace(re, '$1'+newCards+'$2');
+  });
+  return src;
 }
 
 function showStatus(type, msg) {

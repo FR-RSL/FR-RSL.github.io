@@ -145,7 +145,7 @@ const CHAMPIONS = [
   { name: 'Leonardo',     faction: 'faction14', rarity: 'legendary', folder: 'leonardo'    },
   { name: 'Michinaki',    faction: 'faction14', rarity: 'legendary', folder: 'michinaki'   },
   { name: 'Ninja',        faction: 'faction14', rarity: 'legendary', folder: 'ninja'       },
-  { name: 'Nobel',        faction: 'faction14', rarity: 'legendary', folder: 'nobel', noImg: true },
+  { name: 'Nobel',        faction: 'faction14', rarity: 'legendary', folder: 'nobel',	   },
   { name: 'Riho',         faction: 'faction14', rarity: 'legendary', folder: 'riho'        },
   { name: 'Shu-Zhen',     faction: 'faction14', rarity: 'legendary', folder: 'shu-zhen'    },
   { name: 'Tetsuya',      faction: 'faction14', rarity: 'legendary', folder: 'tetsuya'     },
@@ -178,7 +178,6 @@ const CHAMPIONS = [
   { name: 'Arbais',           faction: 'faction15', rarity: 'mythical',  folder: 'arbais'      },
   { name: 'Nais',             faction: 'faction15', rarity: 'mythical',  folder: 'nais'        },
   { name: 'Nell',             faction: 'faction15', rarity: 'mythical',  folder: 'nell'        },
-  { name: 'chazzup ciao', faction: 'faction15', rarity: 'legendary', folder: 'ciao' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

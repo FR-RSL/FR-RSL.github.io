@@ -206,19 +206,23 @@ async function loadChampionsList() {
 
 function renderList() {
   var q = (document.getElementById('searchBox').value||'').toLowerCase();
-  var filtered = allChamps.filter(function(c) {
-    if (curFilter === 'legendary' && c.rarity !== 'legendary') return false;
-    if (curFilter === 'mythical'  && c.rarity !== 'mythical')  return false;
-    return !q||c.name.toLowerCase().includes(q)||c.folder.includes(q);
-  });
-  var html = filtered.map(function(c) {
+  var filtered = [];
+  for (var i = 0; i < allChamps.length; i++) {
+    var c = allChamps[i];
+    if (curFilter === 'legendary' && c.rarity !== 'legendary') continue;
+    if (curFilter === 'mythical'  && c.rarity !== 'mythical')  continue;
+    if (q && !c.name.toLowerCase().includes(q) && !c.folder.includes(q)) continue;
+    filtered.push({ c: c, i: i });
+  }
+  var html = filtered.map(function(item) {
+    var c = item.c;
     var isActive = currentChamp && currentChamp.folder === c.folder && currentChamp.faction === c.faction ? ' active' : '';
     var imgPath = 'https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+
       '/pages/factions/'+c.faction+'/'+c.rarity+'/'+c.folder+'/assets/'+c.folder+'.png';
     var badge = c.rarity === 'legendary'
       ? '<span class="badge badge-leg">Légendaire</span>'
       : '<span class="badge badge-myt">Mythique</span>';
-    return '<div class="champ-item'+isActive+'" onclick="selectChamp('+JSON.stringify(c)+')">' +
+    return '<div class="champ-item'+isActive+'" onclick="selectChamp('+item.i+')">' +
       '<img class="champ-portrait" src="'+imgPath+'" alt="" onerror="this.src=\'\';" style="background:rgba(255,255,255,0.05)">' +
       '<div class="champ-info"><div class="champ-name">'+c.name+'</div>' +
       '<div class="champ-meta">'+badge+' <span style="opacity:0.6">'+c.faction+'</span></div></div>' +
@@ -238,10 +242,10 @@ function setFilter(f, btn) {
 }
 
 /* ── Select & load champion files ── */
-function selectChamp(c) {
-  currentChamp = c;
+function selectChamp(idx) {
+  currentChamp = allChamps[idx];
   renderList();
-  loadChampion(c);
+  loadChampion(currentChamp);
 }
 
 async function loadChampion(c) {

@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="shortcut icon" href="../assets/images/logos/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
+  <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
   <style>
     .admin-wrap { max-width: 1200px; margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
     .admin-topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
@@ -71,7 +72,7 @@
     .view-link:hover { color: var(--accent); }
   </style>
 </head>
-<body style="visibility:hidden">
+<body>
 <div class="particles"></div>
 <header>
   <div class="logo-section">
@@ -158,7 +159,6 @@ var curFileIdx = 0;
 document.addEventListener('DOMContentLoaded', function() {
   ghTok = sessionStorage.getItem('admin_token');
   if (!ghTok) { window.location.href = 'index.html'; return; }
-  document.body.style.visibility = 'visible';
   document.getElementById('btnLogout').addEventListener('click', function() {
     sessionStorage.removeItem('admin_token');
     window.location.href = 'index.html';

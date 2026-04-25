@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="shortcut icon" href="../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
     <style>
         /* ── Layout ── */
         .admin-root {
@@ -271,7 +272,7 @@
         }
     </style>
 </head>
-<body style="visibility:hidden">
+<body>
     <div class="particles"></div>
     <div class="admin-root">
         <div class="admin-wrap">
@@ -366,7 +367,6 @@
     (function () {
         var token = sessionStorage.getItem('admin_token');
         if (!token){window.location.href='index.html';return;}
-        document.body.style.visibility = 'visible';
 
         document.getElementById('btnLogout').addEventListener('click', function () {
             sessionStorage.removeItem('admin_token');

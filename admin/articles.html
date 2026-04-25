@@ -217,7 +217,7 @@
         }
         function editArticle(id) {
             const a = articles.find(x => x.id === id);
-            if (al ./btc input.txt ) return;
+            if (!a) return;
             editingId = id;
             document.getElementById('editId').value   = id;
             document.getElementById('fTitle').value   = a.title;
@@ -229,7 +229,7 @@
             renderList();
         }
         function deleteArticle(id) {
-            if (!confirm('Supprimercetarticle?'))return;
+            if (!confirm('Supprimer cet article ?')) return;
             articles = articles.filter(a => a.id !== id);
             if (editingId === id) clearForm();
             else renderList();
@@ -242,7 +242,7 @@
             const category = document.getElementById('fCategory').value;
             const date     = document.getElementById('fDate').value;
             const link     = document.getElementById('fLink').value.trim() || '#';
-            if (!title||!excerpt||!date){showStatus('error','Veuillezremplirleschampsobligatoires(*).');return;}
+            if (!title || !excerpt || !date) { showStatus('error', 'Veuillez remplir les champs obligatoires (*).'); return; }
             if (editingId !== null) {
                 const idx = articles.findIndex(a => a.id === editingId);
                 if (idx !== -1) articles[idx] = { id: editingId, date, title, excerpt, category, link };
@@ -270,7 +270,7 @@
                     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=${GITHUB_BRANCH}`,
                     { headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' } }
                 );
-                if (!getRes.ok) { const b = await getRes.json().catch(() => ({})); throw new Error(`GitHub (${getRes.status}) : ${b.message || 'Erreur lecture fichier'}`); }}
+                if (!getRes.ok) { const b = await getRes.json().catch(() => ({})); throw new Error(`GitHub (${getRes.status}) : ${b.message || 'Erreur lecture fichier'}`); }
                 const fileData = await getRes.json();
                 const putRes = await fetch(
                     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`,

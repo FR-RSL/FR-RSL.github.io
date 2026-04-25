@@ -305,7 +305,7 @@ function showFile(idx) {
 /* ── Save file to GitHub ── */
 async function saveFile() {
   var f = currentFiles[curFileIdx];
-  if (find /home/pierre/FR-RSL.github.io/pages/factions/faction01/legendary -name "*.js" | head -3) return;
+  if (!f) return;
   var newContent = document.getElementById('codeEditor').value;
   document.getElementById('btnSave').disabled = true;
   plog('inf', 'Sauvegarde de '+f.label+'…');

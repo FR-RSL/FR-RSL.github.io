@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliques - Guide Complet | FR RSL</title>
+    <meta name="description" content="Guide complet des reliques Raid Shadow Legends - Tous les effets spéciaux et stratégies d'utilisation">
+    <meta name="keywords" content="RSL, reliques, objets spéciaux, effets, stratégies, builds">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../../assets/images/logos/logo.png">
+    <link rel="apple-touch-icon" href="../../../assets/images/logos/logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/rsl-theme.css">
+    <link rel="stylesheet" href="../../../assets/css/reliques.css">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles"></div>
+
+    <!-- Header -->
+    <header class="relique-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="../../../assets/images/logos/logo.png" alt="Logo FR RSL">
+                    <h1>FR RSL</h1>
+                </a>
+            </div>
+            <nav class="breadcrumb">
+                <a href="../../../index.html">Accueil</a>
+                <span>›</span>
+                <span>Reliques</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1><i class="fas fa-magic"></i> Guide des Reliques</h1>
+            <p>Découvrez toutes les reliques de Raid Shadow Legends, leurs effets spéciaux et stratégies d'utilisation</p>
+        </div>
+    </section>
+
+    <!-- Filtres par catégorie -->
+    <section class="category-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">Toutes</button>
+                <button class="filter-tab" data-category="standard">Standard</button>
+                <button class="filter-tab" data-category="chimere">Chimère</button>
+                <button class="filter-tab" data-category="aventure-alice">Aventure d'Alice</button>
+                <button class="filter-tab" data-category="clan">Clan</button>
+                <button class="filter-tab" data-category="arene-direct">Arène en Direct</button>
+                <button class="filter-tab" data-category="guerre-factions">Guerre de Factions</button>
+                <button class="filter-tab" data-category="eveil-chaos">Éveil du Chaos</button>
+                <button class="filter-tab" data-category="decouverte">Découverte</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille des reliques -->
+    <section class="reliques-section">
+        <div class="container">
+            <div class="reliques-grid" id="reliquesGrid">
+                <!-- Les reliques seront générées par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails -->
+    <div id="reliqueModal" class="relique-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- Le contenu sera généré dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="../../../index.html">Accueil</a>
+                        <a href="../index.html">Équipement</a>
+                        <a href="../../factions/">Factions</a>
+                        <a href="../../guides/">Guides</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Reliques</h4>
+                    <div class="footer-links">
+                        <a href="#combat">Combat</a>
+                        <a href="#magie">Magie</a>
+                        <a href="#protection">Protection</a>
+                        <a href="#soutien">Soutien</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Autres Équipements</h4>
+                    <div class="footer-links">
+                        <a href="../artifacts/">Artéfacts</a>
+                        <a href="../accessories/">Accessoires</a>
+                        <a href="../blessings/">Grâces</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="../../../legal/disclaimer.html">Disclaimer</a>
+                        <a href="../../../legal/privacy-policy.html">Confidentialité</a>
+                        <a href="#">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: var(--text-muted); text-align: center;">
+                    © 2025 FR RSL - Guide non-officiel pour Raid: Shadow Legends<br>
+                    <small>Ce site n'est pas affilié à Plarium Games.</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../assets/js/main.js"></script>
+    <script src="../../../assets/js/reliques.js"></script>
+</body>
+</html>

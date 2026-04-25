@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bandeau Cookies - FR RSL</title>
+    <link rel="shortcut icon" href="assets/images/logos/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+        .test-button {
+            background: #4460ff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+        .test-button:hover {
+            background: #3b4de8;
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logos/logo.png" alt="Logo FR RSL">
+            <h1>FR RSL - Test Cookies</h1>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+        </nav>
+    </header>
+
+    <div class="test-container">
+        <h1 style="color: #ffb700;">🍪 Test du Système de Cookies</h1>
+        
+        <p>Cette page permet de tester le bandeau de consentement aux cookies.</p>
+        
+        <div class="status" id="cookie-status">
+            <strong>Statut actuel :</strong> <span id="status-text">Chargement...</span>
+        </div>
+        
+        <h2 style="color: #4460ff;">Actions de test :</h2>
+        
+        <button class="test-button" onclick="showCurrentStatus()">
+            📊 Afficher le statut actuel
+        </button>
+        
+        <button class="test-button" onclick="cookieConsent.resetConsent()">
+            🔄 Réinitialiser les cookies (recharge la page)
+        </button>
+        
+        <button class="test-button" onclick="cookieConsent.showSettings()">
+            ⚙️ Ouvrir les paramètres
+        </button>
+        
+        <button class="test-button" onclick="testAnalytics()">
+            📈 Tester Google Analytics
+        </button>
+        
+        <button class="test-button" onclick="testAds()">
+            📢 Tester les publicités
+        </button>
+        
+        <h2 style="color: #4460ff;">Informations techniques :</h2>
+        
+        <div class="status">
+            <strong>LocalStorage :</strong><br>
+            <pre id="localstorage-content"></pre>
+        </div>
+        
+        <div class="status">
+            <strong>Scripts chargés :</strong><br>
+            <span id="scripts-loaded"></span>
+        </div>
+        
+        <h2 style="color: #4460ff;">Pages légales :</h2>
+        <p>Vérifiez que toutes les pages légales sont accessibles :</p>
+        
+        <a href="mentions-legales.html" class="test-button" style="display: inline-block; text-decoration: none;">
+            📄 Mentions Légales
+        </a>
+        
+        <a href="privacy-policy.html" class="test-button" style="display: inline-block; text-decoration: none;">
+            🔒 Politique de Confidentialité
+        </a>
+        
+        <a href="terms-of-service.html" class="test-button" style="display: inline-block; text-decoration: none;">
+            📋 Conditions d'Utilisation
+        </a>
+        
+        <a href="disclaimer.html" class="test-button" style="display: inline-block; text-decoration: none;">
+            ⚠️ Disclaimer Fansite
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/ads.js"></script>
+    
+    <script>
+        const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
+        
+        function showCurrentStatus() {
+            const consent = cookieConsent.getConsentLevel();
+            const statusText = document.getElementById('status-text');
+            
+            if (!consent) {
+                statusText.textContent = 'Aucun consentement donné';
+                statusText.style.color = '#ef4444';
+            } else {
+                const prefs = consent.preferences;
+                statusText.innerHTML = `
+                    Consentement donné le ${new Date(consent.timestamp).toLocaleString()}<br>
+                    Essentiels: ✅ | Analytiques: ${prefs.analytics ? '✅' : '❌'} | Publicités: ${prefs.advertising ? '✅' : '❌'}
+                `;
+                statusText.style.color = '#10b981';
+            }
+            
+            updateTechnicalInfo();
+        }
+        
+        function updateTechnicalInfo() {
+            // LocalStorage
+            const localStorageContent = document.getElementById('localstorage-content');
+            const cookieData = localStorage.getItem('fr-rsl-cookie-consent');
+            localStorageContent.textContent = cookieData ? JSON.stringify(JSON.parse(cookieData), null, 2) : 'Aucune donnée';
+            
+            // Scripts chargés
+            const scriptsLoaded = document.getElementById('scripts-loaded');
+            const scripts = [];
+            if (window.gtag) scripts.push('Google Analytics ✅');
+            if (window.adsbygoogle) scripts.push('Google AdSense ✅');
+            scriptsLoaded.innerHTML = scripts.length > 0 ? scripts.join('<br>') : 'Aucun script externe chargé';
+        }
+        
+        function testAnalytics() {
+            if (window.gtag) {
+                gtag('event', 'test_event', {
+                    'event_category': 'test',
+                    'event_label': 'cookie_test_page'
+                });
+                alert('✅ Événement Google Analytics envoyé !');
+            } else {
+                alert('❌ Google Analytics non chargé. Vérifiez le consentement aux cookies analytiques.');
+            }
+        }
+        
+        function testAds() {
+            const adContainers = document.querySelectorAll('.ad-container');
+            if (adContainers.length > 0) {
+                alert(`✅ ${adContainers.length} emplacements publicitaires trouvés !`);
+            } else {
+                alert('❌ Aucun emplacement publicitaire trouvé. Vérifiez le consentement aux cookies publicitaires.');
+            }
+        }
+        
+        // Mise à jour automatique du statut
+        setInterval(showCurrentStatus, 2000);
+        
+        // Affichage initial
+        setTimeout(showCurrentStatus, 1000);
+    </script>
+</body>
+</html>

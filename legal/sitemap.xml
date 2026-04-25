@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://fr-rsl.fr/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Hubs de factions -->
+    <url>
+        <loc>https://fr-rsl.fr/pages/factions/faction14/hub.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fr-rsl.fr/pages/factions/faction15/hub.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Champions populaires (exemples) -->
+    <url>
+        <loc>https://fr-rsl.fr/pages/factions/faction14/legendary/tetsuya/tetsuya.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://fr-rsl.fr/pages/factions/faction14/legendary/arashi/arashi.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://fr-rsl.fr/pages/factions/faction14/mythical/toshiro/toshiro.html</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Ajouter d'autres champions importants ici -->
+    
+</urlset>

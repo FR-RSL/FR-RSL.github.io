@@ -1,1419 +1,1347 @@
 <!DOCTYPEhtml>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Créer un Champion — Admin FR-RSL</title>
-  <style>
-    :root {
-      --bg: #0a0b14;
-      --bg-alt: #181a24;
-      --border: rgba(255,255,255,0.1);
-      --primary: #4460ff;
-      --accent: #06ffa5;
-      --gold: #e6b800;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --danger: #ef4444;
-      --success: #22c55e;
-      --glass: rgba(255,255,255,0.04);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Champion — FR RSL Admin</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        /* ── Wrap admin ─────────────────────────────── */
+        .admin-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
 
-    /* ── Top bar ── */
-    .topbar {
-      background: var(--bg-alt);
-      border-bottom: 1px solid var(--border);
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .topbar a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
-    .topbar a:hover { color: var(--text); }
-    .topbar h1 { font-size: 1.1rem; font-weight: 700; color: var(--gold); flex: 1; text-align: center; }
-    .status-bar {
-      font-size: 0.8rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-    }
-    .status-bar.ok { border-color: var(--success); color: var(--success); }
-    .status-bar.err { border-color: var(--danger); color: var(--danger); }
-    .status-bar.loading { border-color: var(--primary); color: var(--primary); }
+        /* ── Topbar ──────────────────────────────────── */
+        .admin-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .admin-topbar h1 {
+            font-size: 1.6rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--text-light), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .topbar-actions { display: flex; gap: 0.7rem; align-items: center; }
 
-    /* ── Layout ── */
-    .page { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+        /* ── Buttons ─────────────────────────────────── */
+        .btn {
+            padding: 0.55rem 1.2rem;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            font-family: inherit;
+        }
+        .btn-primary  { background: var(--primary);               color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-ghost    { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
+        .btn-ghost:hover  { color: var(--text-light); }
+        .btn-success  { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
+        .btn-success:hover { background: rgba(6,255,165,0.25); }
+        .btn-danger   { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
+        .btn-danger:hover  { background: rgba(229,57,53,0.35); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-sm { padding: 0.3rem 0.7rem; font-size: 0.78rem; }
 
-    /* ── Tabs ── */
-    .tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
-    .tab-btn {
-      padding: 0.6rem 1.2rem;
-      background: none;
-      border: none;
-      color: var(--muted);
-      font-size: 0.9rem;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .tab-btn:hover { color: var(--text); }
-    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+        /* ── Tabs navigation ─────────────────────────── */
+        .tab-nav {
+            display: flex;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px 14px 0 0;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 0.85rem 0.5rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-muted);
+            font-size: 0.83rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .tab-btn:hover { color: var(--text-light); background: rgba(255,255,255,0.03); }
+        .tab-btn.active { color: #e6b800; border-bottom-color: #e6b800; background: rgba(230,184,0,0.06); }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
 
-    /* ── Cards / Sections ── */
-    .card {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .card h2 {
-      font-size: 1rem;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .card h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.75rem; }
+        /* ── Panels ─────────────────────────────────── */
+        .panel {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 0 0 16px 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(12px);
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #e6b800;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .sub-panel {
+            background: rgba(255,255,255,0.025);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .sub-panel-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.9rem;
+        }
 
-    /* ── Forms ── */
-    .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
-    .form-group label { font-size: 0.8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.6rem 0.8rem;
-      color: var(--text);
-      font-size: 0.9rem;
-      font-family: inherit;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { outline: none; border-color: var(--primary); }
-    .form-group textarea { min-height: 90px; resize: vertical; }
-    .form-group select option { background: #1e2030; }
+        /* ── Form fields ─────────────────────────────── */
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+        .field { margin-bottom: 0; }
+        .field label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.4rem;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.65rem 0.9rem;
+            border-radius: 9px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.04);
+            color: var(--text-light);
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus { border-color: var(--primary); }
+        .field textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+        .field select option { background: #1a1d2e; }
+        .field-hint { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; }
 
-    /* ── Toggle ── */
-    .toggle-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.6rem 0;
-    }
-    .toggle-row label { font-size: 0.9rem; cursor: pointer; }
-    .toggle {
-      width: 42px; height: 22px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 11px;
-      border: 1px solid var(--border);
-      position: relative;
-      cursor: pointer;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
-    .toggle input { display: none; }
-    .toggle-knob {
-      position: absolute;
-      top: 2px; left: 2px;
-      width: 16px; height: 16px;
-      border-radius: 50%;
-      background: var(--muted);
-      transition: transform 0.2s, background 0.2s;
-    }
-    .toggle input:checked ~ .toggle-knob { transform: translateX(20px); background: var(--accent); }
-    .toggle input:checked + .toggle { background: rgba(6,255,165,0.15); }
+        /* ── Affinity ────────────────────────────────── */
+        .affinity-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+        }
+        .aff-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.7rem 0.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.03);
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, transform 0.15s;
+            user-select: none;
+        }
+        .aff-tile:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
+        .aff-tile.on { border-color: var(--primary); background: rgba(68,96,255,0.1); }
+        .aff-tile img { width: 38px; height: 38px; display: block; }
+        .aff-tile span { font-size: 0.72rem; color: var(--text-muted); }
+        .aff-tile.on span { color: var(--text-light); }
 
-    /* ── Spell cards ── */
-    .spell-list { display: flex; flex-direction: column; gap: 1rem; }
-    .spell-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem;
-      position: relative;
-    }
-    .spell-card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .spell-number {
-      background: var(--primary);
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .spell-card-header h4 { font-size: 0.9rem; flex: 1; }
-    .spell-img-preview {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--gold);
-      background: rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      flex-shrink: 0;
-      cursor: pointer;
-    }
-    .spell-img-preview img { width: 100%; height: 100%; object-fit: cover; }
-    .spell-img-preview span { font-size: 1.5rem; }
-    .btn-remove-spell {
-      background: rgba(239,68,68,0.1);
-      border: 1px solid rgba(239,68,68,0.3);
-      color: var(--danger);
-      border-radius: 6px;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.75rem;
-      cursor: pointer;
-    }
-    .btn-remove-spell:hover { background: rgba(239,68,68,0.2); }
-    .level-info-list { display: flex; flex-direction: column; gap: 0.4rem; }
-    .level-info-item { display: flex; gap: 0.4rem; align-items: center; }
-    .level-info-item input { flex: 1; }
-    .btn-small {
-      background: rgba(68,96,255,0.15);
-      border: 1px solid rgba(68,96,255,0.3);
-      color: var(--primary);
-      border-radius: 6px;
-      padding: 0.3rem 0.7rem;
-      font-size: 0.75rem;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .btn-small:hover { background: rgba(68,96,255,0.25); }
-    .btn-small.danger {
-      background: rgba(239,68,68,0.1);
-      border-color: rgba(239,68,68,0.3);
-      color: var(--danger);
-    }
-    .btn-add-spell {
-      background: var(--glass);
-      border: 2px dashed rgba(68,96,255,0.4);
-      color: var(--primary);
-      border-radius: 10px;
-      padding: 0.75rem;
-      cursor: pointer;
-      text-align: center;
-      font-size: 0.9rem;
-      transition: border-color 0.2s, background 0.2s;
-      width: 100%;
-    }
-    .btn-add-spell:hover { border-color: var(--primary); background: rgba(68,96,255,0.05); }
+        /* ── Toggle ──────────────────────────────────── */
+        .toggle-row { display: flex; align-items: center; gap: 0.8rem; padding: 0.4rem 0; }
+        .toggle-label { font-size: 0.9rem; cursor: pointer; }
+        .toggle-wrap {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+        .toggle-wrap input { opacity: 0; width: 0; height: 0; position: absolute; }
+        .toggle-track {
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--glass-border);
+            transition: all 0.2s;
+        }
+        .toggle-track::after {
+            content: '';
+            position: absolute;
+            top: 3px; left: 3px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            transition: transform 0.2s, background 0.2s;
+        }
+        .toggle-wrap input:checked ~ .toggle-track { background: rgba(6,255,165,0.2); border-color: rgba(6,255,165,0.4); }
+        .toggle-wrap input:checked ~ .toggle-track::after { transform: translateX(20px); background: var(--accent); }
 
-    /* ── Description editor ── */
-    .desc-editor { position: relative; }
-    .desc-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-bottom: none;
-      border-radius: 8px 8px 0 0;
-      padding: 0.4rem;
-    }
-    .btn-token {
-      background: rgba(68,96,255,0.15);
-      border: 1px solid rgba(68,96,255,0.25);
-      color: #93c5fd;
-      border-radius: 4px;
-      padding: 0.15rem 0.45rem;
-      font-size: 0.72rem;
-      cursor: pointer;
-      font-family: monospace;
-    }
-    .btn-token:hover { background: rgba(68,96,255,0.3); }
-    .btn-token.debuff {
-      background: rgba(239,68,68,0.1);
-      border-color: rgba(239,68,68,0.25);
-      color: #fca5a5;
-    }
-    .btn-token.debuff:hover { background: rgba(239,68,68,0.2); }
-    .desc-editor textarea {
-      border-radius: 0 0 8px 8px !important;
-    }
+        /* ── Spells ──────────────────────────────────── */
+        .spells-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .spell-card {
+            background: rgba(255,255,255,0.025);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .spell-head {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 0.8rem;
+        }
+        .spell-num {
+            background: var(--primary);
+            color: #fff;
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700;
+            flex-shrink: 0;
+        }
+        .spell-img-btn {
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            border: 2px solid #e6b800;
+            background: rgba(255,255,255,0.05);
+            cursor: pointer;
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            transition: border-color 0.2s;
+        }
+        .spell-img-btn:hover { border-color: var(--accent); }
+        .spell-img-btn img { width: 100%; height: 100%; object-fit: cover; }
+        .spell-name-input {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.04);
+            color: var(--text-light);
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .spell-name-input:focus { border-color: var(--primary); }
+        .passive-check { display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; }
+        .passive-check input { cursor: pointer; }
+        .btn-rm-spell {
+            background: rgba(229,57,53,0.12);
+            border: 1px solid rgba(229,57,53,0.3);
+            color: #ef5350;
+            border-radius: 6px;
+            padding: 0.2rem 0.55rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .btn-rm-spell:hover { background: rgba(229,57,53,0.25); }
+        .btn-add-spell {
+            width: 100%;
+            background: rgba(255,255,255,0.02);
+            border: 2px dashed rgba(68,96,255,0.35);
+            color: var(--primary);
+            border-radius: 10px;
+            padding: 0.7rem;
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-family: inherit;
+            transition: border-color 0.2s, background 0.2s;
+            margin-top: 0.5rem;
+        }
+        .btn-add-spell:hover { border-color: var(--primary); background: rgba(68,96,255,0.05); }
 
-    /* ── Portrait upload ── */
-    .portrait-upload-area {
-      border: 2px dashed var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-    .portrait-upload-area:hover { border-color: var(--primary); }
-    .portrait-preview {
-      max-width: 180px;
-      max-height: 180px;
-      border-radius: 8px;
-      margin: 0 auto;
-      display: block;
-    }
+        /* ── Desc toolbar ────────────────────────────── */
+        .desc-wrap { border: 2px solid var(--glass-border); border-radius: 9px; overflow: hidden; transition: border-color 0.2s; }
+        .desc-wrap:focus-within { border-color: var(--primary); }
+        .desc-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.2rem;
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0.35rem;
+        }
+        .tk {
+            border: 1px solid rgba(68,96,255,0.25);
+            background: rgba(68,96,255,0.1);
+            color: #93c5fd;
+            border-radius: 4px;
+            padding: 0.1rem 0.38rem;
+            font-size: 0.67rem;
+            cursor: pointer;
+            font-family: monospace;
+        }
+        .tk:hover { background: rgba(68,96,255,0.22); }
+        .tk.d { border-color: rgba(239,68,68,0.25); background: rgba(239,68,68,0.1); color: #fca5a5; }
+        .tk.d:hover { background: rgba(239,68,68,0.2); }
+        .desc-wrap textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.6rem 0.9rem;
+            border: none;
+            background: rgba(255,255,255,0.04);
+            color: var(--text-light);
+            font-size: 0.87rem;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
+            outline: none;
+        }
+        .spell-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.6rem 0; }
 
-    /* ── Aura selector ── */
-    .aura-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-      gap: 0.5rem;
-    }
-    .aura-option {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      background: var(--glass);
-      transition: border-color 0.2s;
-    }
-    .aura-option:hover { border-color: rgba(255,255,255,0.2); }
-    .aura-option.selected { border-color: var(--gold); background: rgba(230,184,0,0.08); }
-    .aura-option img { width: 40px; height: 40px; border-radius: 50%; }
-    .aura-option span { font-size: 0.65rem; color: var(--muted); text-align: center; }
+        /* ── Level info ──────────────────────────────── */
+        .lvl-list { display: flex; flex-direction: column; gap: 0.35rem; }
+        .lvl-row { display: flex; gap: 0.35rem; align-items: center; }
+        .lvl-row input { flex: 1; padding: 0.45rem 0.7rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; }
+        .lvl-row input:focus { border-color: var(--primary); }
 
-    /* ── Affinity selector ── */
-    .affinity-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.5rem;
-    }
-    .affinity-option {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      background: var(--glass);
-      transition: border-color 0.2s;
-    }
-    .affinity-option:hover { border-color: rgba(255,255,255,0.2); }
-    .affinity-option.selected { border-color: var(--primary); background: rgba(68,96,255,0.08); }
-    .affinity-option img { width: 36px; height: 36px; }
-    .affinity-option span { font-size: 0.7rem; color: var(--muted); }
+        /* ── Faction effects ─────────────────────────── */
+        .faction-block {
+            margin-top: 0.7rem;
+            padding: 0.85rem 0.9rem;
+            background: rgba(230,184,0,0.04);
+            border: 1px solid rgba(230,184,0,0.2);
+            border-radius: 9px;
+        }
+        .faction-block-title { font-size: 0.7rem; text-transform: uppercase; color: #e6b800; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: 0.05em; }
 
-    /* ── Stats grid ── */
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
-    .stat-field { display: flex; gap: 0.5rem; align-items: center; }
-    .stat-field label { font-size: 0.8rem; color: var(--muted); width: 80px; flex-shrink: 0; }
-    .stat-field input { flex: 1; }
+        /* ── Mythical form tabs ───────────────────────── */
+        .form-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+        .form-tab {
+            padding: 0.4rem 1.1rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.83rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .form-tab.on { background: rgba(68,96,255,0.18); border-color: var(--primary); color: var(--text-light); }
 
-    /* ── Faction spells (lead) ── */
-    .faction-effects { background: rgba(230,184,0,0.04); border: 1px solid rgba(230,184,0,0.2); border-radius: 8px; padding: 0.75rem; margin-top: 0.5rem; }
-    .faction-effects h5 { font-size: 0.75rem; color: var(--gold); margin-bottom: 0.5rem; }
+        /* ── Aura ────────────────────────────────────── */
+        .aura-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px,1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+        .aura-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--glass-border);
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            transition: border-color 0.2s;
+            user-select: none;
+        }
+        .aura-tile:hover { border-color: rgba(255,255,255,0.25); }
+        .aura-tile.on { border-color: #e6b800; background: rgba(230,184,0,0.07); }
+        .aura-tile img { width: 38px; height: 38px; border-radius: 50%; display: block; }
+        .aura-tile span { font-size: 0.6rem; color: var(--text-muted); text-align: center; }
 
-    /* ── Mythical form tabs ── */
-    .form-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-    .form-tab-btn {
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: var(--glass);
-      color: var(--muted);
-      cursor: pointer;
-      font-size: 0.85rem;
-      transition: all 0.2s;
-    }
-    .form-tab-btn.active { background: rgba(68,96,255,0.2); border-color: var(--primary); color: var(--text); }
-    .form-panel { display: none; }
-    .form-panel.active { display: block; }
+        /* ── Stats ───────────────────────────────────── */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px,1fr)); gap: 0.65rem; }
+        .stat-row { display: flex; align-items: center; gap: 0.5rem; }
+        .stat-row label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); width: 75px; flex-shrink: 0; }
+        .stat-row input { flex: 1; padding: 0.5rem 0.7rem; border-radius: 7px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.85rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+        .stat-row input:focus { border-color: var(--primary); }
 
-    /* ── Publish section ── */
-    .publish-section { text-align: center; padding: 1.5rem; }
-    .btn-publish {
-      background: linear-gradient(135deg, var(--primary), #6677ff);
-      border: none;
-      color: white;
-      border-radius: 12px;
-      padding: 0.9rem 2.5rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.1s, opacity 0.2s;
-    }
-    .btn-publish:hover { transform: translateY(-1px); opacity: 0.9; }
-    .btn-publish:active { transform: translateY(0); }
-    .btn-publish:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .progress-log {
-      margin-top: 1rem;
-      background: rgba(0,0,0,0.3);
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: left;
-      font-family: monospace;
-      font-size: 0.8rem;
-      max-height: 250px;
-      overflow-y: auto;
-      display: none;
-    }
-    .progress-log.visible { display: block; }
-    .log-line { padding: 0.15rem 0; }
-    .log-line.ok { color: var(--success); }
-    .log-line.err { color: var(--danger); }
-    .log-line.info { color: var(--muted); }
-    .log-line.warn { color: var(--gold); }
+        /* ── Portrait ────────────────────────────────── */
+        .portrait-drop {
+            border: 2px dashed var(--glass-border);
+            border-radius: 14px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .portrait-drop:hover { border-color: var(--primary); }
+        .portrait-preview { max-width: 200px; border-radius: 10px; margin: 0 auto; display: block; }
 
-    /* ── Summary preview ── */
-    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
-    .summary-item { background: var(--glass); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem; }
-    .summary-item .key { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; margin-bottom: 0.2rem; }
-    .summary-item .val { font-size: 0.9rem; color: var(--text); }
+        /* ── Publish / log ───────────────────────────── */
+        .publish-center { text-align: center; padding: 1.5rem 0; }
+        .btn-publish {
+            background: linear-gradient(135deg, var(--primary), #6677ff);
+            border: none;
+            color: #fff;
+            border-radius: 14px;
+            padding: 0.9rem 2.5rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+        .btn-publish:hover { transform: translateY(-2px); opacity: 0.92; }
+        .btn-publish:active { transform: none; }
+        .btn-publish:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .pub-log {
+            display: none;
+            margin-top: 1rem;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.77rem;
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        .pub-log.open { display: block; }
+        .log-ok  { color: var(--accent); }
+        .log-err { color: #ef5350; }
+        .log-inf { color: var(--text-muted); }
+        .log-wrn { color: #e6b800; }
 
-    /* ── Hidden file inputs ── */
-    input[type="file"] { display: none; }
+        /* ── Summary ─────────────────────────────────── */
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px,1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+        .summ-item { background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.6rem 0.8rem; }
+        .summ-k { font-size: 0.67rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
+        .summ-v { font-size: 0.9rem; color: var(--text-light); }
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .form-grid { grid-template-columns: 1fr; }
-      .affinity-grid { grid-template-columns: repeat(2, 1fr); }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 640px) {
+            .admin-wrap { padding: 1rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .affinity-row { grid-template-columns: repeat(2,1fr); }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .tab-btn { font-size: 0.7rem; padding: 0.7rem 0.25rem; }
+        }
+    </style>
 </head>
 <body>
+<div class="particles"></div>
 
-<div class="topbar">
-  <a href="dashboard.html">← Dashboard</a>
-  <h1>Créateur de Champion</h1>
-  <div id="statusBar" class="status-bar">Chargement…</div>
-</div>
+<header>
+    <div class="logo-section">
+        <img src="../assets/images/logos/logo.png" alt="FR RSL">
+        <h1>FR RSL</h1>
+    </div>
+</header>
 
-<div class="page">
+<div class="admin-wrap">
 
-  <!--──TABS──-->
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab(0)">1. Infos</button>
-    <button class="tab-btn" onclick="switchTab(1)">2. Compétences</button>
-    <button class="tab-btn" onclick="switchTab(2)">3. Stats &amp; Aura</button>
-    <button class="tab-btn" onclick="switchTab(3)">4. Portrait</button>
-    <button class="tab-btn" onclick="switchTab(4)">5. Publier</button>
-  </div>
-
-  <!--══════════════════════════════════════════════════════
-       TAB 1 — INFOS GÉNÉRALES
-  ══════════════════════════════════════════════════════ -->
-  <div class="tab-panel active" id="tab0">
-
-    <div class="card">
-      <h2>Identité du Champion</h2>
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Nom court (slug)</label>
-          <input type="text" id="slug" placeholder="ex: acelin" oninput="onSlugInput(this.value)">
-          <small style="color:var(--muted);font-size:0.75rem">Utilisé comme nom de dossier et de fichier</small>
+    <!--──Topbar──-->
+    <div class="admin-topbar">
+        <h1>⚔️ Créateur de Champion</h1>
+        <div class="topbar-actions">
+            <a href="dashboard.html" class="btn btn-ghost">← Dashboard</a>
         </div>
-        <div class="form-group">
-          <label>Nom complet</label>
-          <input type="text" id="fullName" placeholder="ex: Acelin le Vaillant">
-        </div>
-        <div class="form-group">
-          <label>Faction</label>
-          <select id="faction">
-            <option value="faction01">Seigneurs</option>
-            <option value="faction02">Haut Elfes</option>
-            <option value="faction03">Ordre Sacré</option>
-            <option value="faction04">Barbares</option>
-            <option value="faction05">Tribus Ogryn</option>
-            <option value="faction06">Homme Lézards</option>
-            <option value="faction07">Marcheurs de Peau</option>
-            <option value="faction08">Orcs</option>
-            <option value="faction09">Rejetons Démoniaques</option>
-            <option value="faction10">Morts-vivants</option>
-            <option value="faction11">Elfes Noirs</option>
-            <option value="faction12">Revenants Chevaliers</option>
-            <option value="faction13">Nains</option>
-            <option value="faction14">Clan de l'Ombre</option>
-            <option value="faction15">Gardes Sylvains</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Rareté</label>
-          <select id="rarity" onchange="onRarityChange(this.value)">
-            <option value="legendary">Légendaire</option>
-            <option value="mythical">Mythique</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Type</label>
-          <select id="champType">
-            <option value="Attaque">Attaque</option>
-            <option value="Defense">Défense</option>
-            <option value="Soutien">Soutien</option>
-            <option value="HP">HP</option>
-          </select>
-        </div>
-      </div>
     </div>
 
-    <div class="card">
-      <h2>Affinité</h2>
-      <div class="affinity-grid" id="affinityGrid">
-        <div class="affinity-option selected" data-val="force" onclick="selectAffinity('force')">
-          <img src="../assets/images/affinity/force.png" alt="Force">
-          <span>Force</span>
+    <!--──Tabnav──-->
+    <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" data-tab="t-infos"    onclick="goTab('t-infos')">1. Infos</button>
+        <button class="tab-btn"        data-tab="t-spells"   onclick="goTab('t-spells')">2. Compétences</button>
+        <button class="tab-btn"        data-tab="t-stats"    onclick="goTab('t-stats')">3. Stats &amp; Aura</button>
+        <button class="tab-btn"        data-tab="t-portrait" onclick="goTab('t-portrait')">4. Portrait</button>
+        <button class="tab-btn"        data-tab="t-publish"  onclick="goTab('t-publish')">5. Publier</button>
+    </div>
+
+    <!--══════════════════════════════════════
+         TAB 1 — INFOS
+    ══════════════════════════════════════ -->
+    <div class="tab-panel panel active" id="t-infos">
+
+        <div class="section-title">Identité</div>
+        <div class="form-grid" style="margin-bottom:1.2rem">
+            <div class="field">
+                <label>Nom court (slug)</label>
+                <input type="text" id="slug" placeholder="ex: acelin" oninput="onSlug(this.value)">
+                <div class="field-hint">Nom de dossier &amp; fichier — lettres minuscules + _ uniquement</div>
+            </div>
+            <div class="field">
+                <label>Nom complet</label>
+                <input type="text" id="fullName" placeholder="ex: Acelin le Vaillant">
+            </div>
+            <div class="field">
+                <label>Faction</label>
+                <select id="faction">
+                    <option value="faction01">Seigneurs</option>
+                    <option value="faction02">Haut Elfes</option>
+                    <option value="faction03">Ordre Sacré</option>
+                    <option value="faction04">Barbares</option>
+                    <option value="faction05">Tribus Ogryn</option>
+                    <option value="faction06">Homme Lézards</option>
+                    <option value="faction07">Marcheurs de Peau</option>
+                    <option value="faction08">Orcs</option>
+                    <option value="faction09">Rejetons Démoniaques</option>
+                    <option value="faction10">Morts-vivants</option>
+                    <option value="faction11">Elfes Noirs</option>
+                    <option value="faction12">Revenants Chevaliers</option>
+                    <option value="faction13">Nains</option>
+                    <option value="faction14">Clan de l'Ombre</option>
+                    <option value="faction15">Gardes Sylvains</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Rareté</label>
+                <select id="rarity" onchange="onRarity(this.value)">
+                    <option value="legendary">Légendaire</option>
+                    <option value="mythical">Mythique</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Type</label>
+                <select id="champType">
+                    <option value="Attaque">Attaque</option>
+                    <option value="Defense">Défense</option>
+                    <option value="Soutien">Soutien</option>
+                    <option value="HP">HP</option>
+                </select>
+            </div>
         </div>
-        <div class="affinity-option" data-val="magic" onclick="selectAffinity('magic')">
-          <img src="../assets/images/affinity/magic.png" alt="Magie">
-          <span>Magie</span>
+
+        <div class="section-title">Affinité</div>
+        <div class="affinity-row" style="margin-bottom:1.2rem">
+            <div class="aff-tile on" data-aff="force"  onclick="pickAff(this)">
+                <img src="../assets/images/affinity/force.png" alt="Force">
+                <span>Force</span>
+            </div>
+            <div class="aff-tile" data-aff="magic"  onclick="pickAff(this)">
+                <img src="../assets/images/affinity/magic.png" alt="Magie">
+                <span>Magie</span>
+            </div>
+            <div class="aff-tile" data-aff="spirit" onclick="pickAff(this)">
+                <img src="../assets/images/affinity/spirit.png" alt="Esprit">
+                <span>Esprit</span>
+            </div>
+            <div class="aff-tile" data-aff="void"   onclick="pickAff(this)">
+                <img src="../assets/images/affinity/void.png" alt="Vide">
+                <span>Vide</span>
+            </div>
         </div>
-        <div class="affinity-option" data-val="spirit" onclick="selectAffinity('spirit')">
-          <img src="../assets/images/affinity/spirit.png" alt="Esprit">
-          <span>Esprit</span>
+
+        <div class="section-title">Options</div>
+        <div class="toggle-row">
+            <label class="toggle-wrap">
+                <input type="checkbox" id="isLead" onchange="renderAllSpells()">
+                <span class="toggle-track"></span>
+            </label>
+            <span class="toggle-label">Lead Faction (les compétences ont des effets de faction)</span>
         </div>
-        <div class="affinity-option" data-val="void" onclick="selectAffinity('void')">
-          <img src="../assets/images/affinity/void.png" alt="Vide">
-          <span>Vide</span>
+
+        <div id="mythOpts" style="display:none;margin-top:1rem">
+            <div class="sub-panel">
+                <div class="sub-panel-title">Noms des formes (Mythique)</div>
+                <div class="form-grid">
+                    <div class="field">
+                        <label>Bouton Forme 1</label>
+                        <input type="text" id="form1lbl" value="Forme de Base" oninput="syncFormLabels()">
+                    </div>
+                    <div class="field">
+                        <label>Bouton Forme 2</label>
+                        <input type="text" id="form2lbl" value="Forme Alternative" oninput="syncFormLabels()">
+                    </div>
+                    <div class="field">
+                        <label>Type — Forme 2</label>
+                        <select id="champType2">
+                            <option value="Attaque">Attaque</option>
+                            <option value="Defense">Défense</option>
+                            <option value="Soutien">Soutien</option>
+                            <option value="HP">HP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="card">
-      <h2>Options spéciales</h2>
-      <div class="toggle-row">
-        <label class="toggle">
-          <input type="checkbox" id="isLeadFaction" onchange="renderSpells()">
-          <span class="toggle-knob"></span>
-        </label>
-        <label for="isLeadFaction">Lead Faction (la compétence passive a un bonus de faction)</label>
-      </div>
-      <div id="mythicalSection" style="display:none">
-        <hr style="border-color:var(--border);margin:0.75rem 0">
-        <div class="toggle-row" style="margin-bottom:0.75rem">
-          <span style="font-size:0.85rem;color:var(--muted)">Noms des formes :</span>
+    </div><!--/t-infos-->
+
+    <!--══════════════════════════════════════
+         TAB 2 — COMPÉTENCES
+    ══════════════════════════════════════ -->
+    <div class="tab-panel panel" id="t-spells">
+
+        <!--Formtabs(mythicalonly)-->
+        <div id="formTabsWrap" style="display:none;margin-bottom:1rem">
+            <div class="form-tabs">
+                <button class="form-tab on" data-ft="1" onclick="pickFormTab(1)">Forme 1</button>
+                <button class="form-tab"    data-ft="2" onclick="pickFormTab(2)">Forme 2</button>
+            </div>
         </div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Bouton Forme 1</label>
-            <input type="text" id="form1Label" value="Forme de Base">
-          </div>
-          <div class="form-group">
-            <label>Bouton Forme 2</label>
-            <input type="text" id="form2Label" value="Forme Alternative">
-          </div>
-          <div class="form-group">
-            <label>Type Forme 2</label>
-            <select id="champType2">
-              <option value="Attaque">Attaque</option>
-              <option value="Defense">Défense</option>
-              <option value="Soutien">Soutien</option>
-              <option value="HP">HP</option>
-            </select>
-          </div>
+
+        <div id="spellsPanel1">
+            <div class="section-title">Compétences — <span id="form1title">Forme principale</span></div>
+            <div class="spells-list" id="spellList1"></div>
+            <button class="btn-add-spell" onclick="addSpell(1)">+ Ajouter une compétence</button>
         </div>
-      </div>
-    </div>
 
-  </div>
-
-  <!--══════════════════════════════════════════════════════
-       TAB 2 — COMPÉTENCES
-  ══════════════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab1">
-
-    <div id="mythicalFormTabs" style="display:none" class="card" style="padding:0.75rem">
-      <div class="form-tabs">
-        <button class="form-tab-btn active" onclick="switchFormTab('form1')">Forme 1</button>
-        <button class="form-tab-btn" onclick="switchFormTab('form2')">Forme 2</button>
-      </div>
-    </div>
-
-    <!--Form1spells-->
-    <div id="spellsForm1">
-      <div class="card">
-        <h2>Compétences — <span id="form1LabelDisplay">Forme principale</span></h2>
-        <div class="spell-list" id="spellList1"></div>
-        <button class="btn-add-spell" onclick="addSpell(1)">+ Ajouter une compétence</button>
-      </div>
-    </div>
-
-    <!--Form2spells(mythicalonly)-->
-    <div id="spellsForm2" style="display:none">
-      <div class="card">
-        <h2>Compétences — <span id="form2LabelDisplay">Forme alternative</span></h2>
-        <div class="spell-list" id="spellList2"></div>
-        <button class="btn-add-spell" onclick="addSpell(2)">+ Ajouter une compétence</button>
-      </div>
-    </div>
-
-    <div style="color:var(--muted);font-size:0.8rem;padding:0.5rem 0">
-      💡 Utilise <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.3rem;border-radius:4px">${BUFFS.XXX}</code> et <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.3rem;border-radius:4px">${DEBUFFS.XXX}</code> dans les descriptions — les boutons de raccourci sont disponibles dans chaque champ.
-    </div>
-
-  </div>
-
-  <!--══════════════════════════════════════════════════════
-       TAB 3 — STATS & AURA
-  ══════════════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab2">
-
-    <!--Statsform1-->
-    <div class="card">
-      <h2>Statistiques <span id="statsForm1Label"></span></h2>
-      <div class="stats-grid" id="statsGrid1"></div>
-    </div>
-
-    <!--Statsform2(mythical)-->
-    <div id="statsForm2Section" style="display:none" class="card">
-      <h2>Statistiques — Forme 2</h2>
-      <div class="stats-grid" id="statsGrid2"></div>
-    </div>
-
-    <!--Aura-->
-    <div class="card">
-      <h2>Aura</h2>
-      <h3>Image d'aura</h3>
-      <div class="aura-grid" id="auraGrid"></div>
-      <div class="form-group" style="margin-top:1rem">
-        <label>Description de l'aura</label>
-        <div class="desc-editor">
-          <div class="desc-toolbar" id="auraDescToolbar"></div>
-          <textarea id="auraDesc" rows="4" placeholder="Augmente la DEF des alliés de 25%..."></textarea>
+        <div id="spellsPanel2" style="display:none;margin-top:1.5rem">
+            <div class="section-title">Compétences — <span id="form2title">Forme alternative</span></div>
+            <div class="spells-list" id="spellList2"></div>
+            <button class="btn-add-spell" onclick="addSpell(2)">+ Ajouter une compétence</button>
         </div>
-      </div>
-    </div>
 
-  </div>
-
-  <!--══════════════════════════════════════════════════════
-       TAB 4 — PORTRAIT
-  ══════════════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab3">
-    <div class="card">
-      <h2>Portrait du Champion</h2>
-      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem">L'image sera nommée <code id="portraitFilename" style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> et placée dans le dossier <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px">assets/</code> du champion.</p>
-      <div class="portrait-upload-area" onclick="document.getElementById('portraitInput').click()">
-        <div id="portraitPlaceholder">
-          <div style="font-size:2rem;margin-bottom:0.5rem">🖼️</div>
-          <div style="color:var(--muted);font-size:0.85rem">Cliquer pour choisir une image</div>
-          <div style="color:var(--muted);font-size:0.75rem;margin-top:0.25rem">PNG, JPG — recommandé 400×500px</div>
+        <div style="margin-top:0.75rem;color:var(--text-muted);font-size:0.8rem">
+            💡 Utilise les boutons dans les descriptions pour insérer <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius:3px">${BUFFS.XXX}</code> / <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius:3px">${DEBUFFS.XXX}</code>
         </div>
-        <img id="portraitPreviewImg" class="portrait-preview" style="display:none">
-      </div>
-      <input type="file" id="portraitInput" accept="image/*" onchange="onPortraitChange(this)">
-    </div>
-  </div>
 
-  <!--══════════════════════════════════════════════════════
-       TAB 5 — PUBLIER
-  ══════════════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab4">
-    <div class="card">
-      <h2>Récapitulatif</h2>
-      <div class="summary-grid" id="summaryGrid"></div>
-      <div id="filesList" style="color:var(--muted);font-size:0.8rem"></div>
-    </div>
-    <div class="publish-section">
-      <button class="btn-publish" id="publishBtn" onclick="publishChampion()">
-        🚀 Publier le Champion
-      </button>
-      <div class="progress-log" id="progressLog"></div>
-    </div>
-  </div>
+    </div><!--/t-spells-->
 
-</div><!--/page-->
+    <!--══════════════════════════════════════
+         TAB 3 — STATS & AURA
+    ══════════════════════════════════════ -->
+    <div class="tab-panel panel" id="t-stats">
 
-<!--══════════════════════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════════════════════ -->
+        <div class="section-title" id="statsTitle1">Statistiques</div>
+        <div class="stats-grid" id="statsGrid1" style="margin-bottom:1.5rem"></div>
+
+        <div id="statsCard2" style="display:none">
+            <div class="section-title">Statistiques — Forme 2</div>
+            <div class="stats-grid" id="statsGrid2" style="margin-bottom:1.5rem"></div>
+        </div>
+
+        <div class="section-title">Aura</div>
+        <div class="aura-grid" id="auraGrid"></div>
+        <div class="field" style="margin-top:0.5rem">
+            <label>Description de l'aura</label>
+            <div class="desc-wrap">
+                <div class="desc-toolbar" id="auraToolbar"></div>
+                <textarea id="auraDesc" rows="3" placeholder="Augmente la DEF des alliés de 25%..."></textarea>
+            </div>
+        </div>
+
+    </div><!--/t-stats-->
+
+    <!--══════════════════════════════════════
+         TAB 4 — PORTRAIT
+    ══════════════════════════════════════ -->
+    <div class="tab-panel panel" id="t-portrait">
+
+        <div class="section-title">Portrait du Champion</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem">
+            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">assets/</code>.
+        </p>
+        <div class="portrait-drop" onclick="document.getElementById('portraitInput').click()">
+            <div id="portraitPh">
+                <div style="font-size:2.5rem;margin-bottom:0.5rem">🖼️</div>
+                <p>Cliquer pour choisir une image</p>
+                <small>PNG, JPG — recommandé 400×500 px</small>
+            </div>
+            <img id="portraitPreview" class="portrait-preview" style="display:none">
+        </div>
+        <input type="file" id="portraitInput" accept="image/*" onchange="onPortrait(this)">
+
+    </div><!--/t-portrait-->
+
+    <!--══════════════════════════════════════
+         TAB 5 — PUBLIER
+    ══════════════════════════════════════ -->
+    <div class="tab-panel panel" id="t-publish">
+
+        <div class="section-title">Récapitulatif</div>
+        <div class="summary-grid" id="summaryGrid"></div>
+        <div id="filesList" style="color:var(--text-muted);font-size:0.78rem;margin-bottom:1rem"></div>
+
+        <div class="publish-center">
+            <button class="btn-publish" id="publishBtn" onclick="doPublish()">🚀 Publier le Champion</button>
+            <div class="pub-log" id="pubLog"></div>
+        </div>
+
+    </div><!--/t-publish-->
+
+</div><!--/admin-wrap-->
+
+<!--Hiddenfileinputsforspellimages(injectedbyJS)-->
+<div id="fileInputs" style="display:none"></div>
+
 <script>
-// ─── Configuration GitHub ───────────────────────────────────
-const GITHUB_OWNER  = 'FR-RSL';
-const GITHUB_REPO   = 'FR-RSL.github.io';
-const GITHUB_BRANCH = 'main';
+// ── Config ─────────────────────────────────────────────────
+var GH_OWNER  = 'FR-RSL';
+var GH_REPO   = 'FR-RSL.github.io';
+var GH_BRANCH = 'main';
 
-// ─── Faction metadata ────────────────────────────────────────
-const FACTION_META = {
-  faction01: { name: 'Seigneurs',              img: 'bannerlords.png'    },
-  faction02: { name: 'Haut Elfes',             img: 'high-elves.png'     },
-  faction03: { name: "Ordre Sacré",            img: 'sacred-order.png'   },
-  faction04: { name: 'Barbares',               img: 'barbarians.png'     },
-  faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.png'   },
-  faction06: { name: 'Homme Lézards',          img: 'lizardmen.png'      },
-  faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.png'    },
-  faction08: { name: 'Orcs',                   img: 'orcs.png'           },
-  faction09: { name: 'Rejetons Démoniaques',   img: 'demonspawn.png'     },
-  faction10: { name: 'Morts-vivants',          img: 'undead-hordes.png'  },
-  faction11: { name: 'Elfes Noirs',            img: 'dark-elves.png'     },
-  faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.png'},
-  faction13: { name: 'Nains',                  img: 'dwarves.png'        },
-  faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.png'      },
-  faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png'},
+// ── Faction metadata ───────────────────────────────────────
+var FMETA = {
+  faction01: { name: 'Seigneurs',              img: 'bannerlords.png' },
+  faction02: { name: 'Haut Elfes',             img: 'high-elves.png' },
+  faction03: { name: 'Ordre Sacre',            img: 'sacred-order.png' },
+  faction04: { name: 'Barbares',               img: 'barbarians.png' },
+  faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.png' },
+  faction06: { name: 'Homme Lezards',          img: 'lizardmen.png' },
+  faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.png' },
+  faction08: { name: 'Orcs',                   img: 'orcs.png' },
+  faction09: { name: 'Rejetons Demoniaques',   img: 'demonspawn.png' },
+  faction10: { name: 'Morts-vivants',          img: 'undead-hordes.png' },
+  faction11: { name: 'Elfes Noirs',            img: 'dark-elves.png' },
+  faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.png' },
+  faction13: { name: 'Nains',                  img: 'dwarves.png' },
+  faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.png' },
+  faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png' }
 };
 
-// ─── Auras available ─────────────────────────────────────────
-const AURAS = [
-  { key: 'attack',       label: 'ATQ' },
-  { key: 'defence',      label: 'DEF' },
-  { key: 'hp',           label: 'PV' },
-  { key: 'speed',        label: 'VIT' },
-  { key: 'crit',         label: 'Taux C.' },
-  { key: 'acc',          label: 'PRÉ' },
-  { key: 'res',          label: 'RÉS' },
-  { key: 'sup-attack',   label: 'ATQ+' },
-  { key: 'sup-defence',  label: 'DEF+' },
-  { key: 'sup-hp',       label: 'PV+' },
-  { key: 'sup-speed',    label: 'VIT+' },
-  { key: 'sup-crit',     label: 'Taux+' },
-  { key: 'sup-acc',      label: 'PRÉ+' },
+// ── Auras ──────────────────────────────────────────────────
+var AURAS = [
+  { key:'attack',      lbl:'ATQ'    },
+  { key:'defence',     lbl:'DEF'    },
+  { key:'hp',          lbl:'PV'     },
+  { key:'speed',       lbl:'VIT'    },
+  { key:'crit',        lbl:'Taux C.'},
+  { key:'acc',         lbl:'PRE'    },
+  { key:'res',         lbl:'RES'    },
+  { key:'sup-attack',  lbl:'ATQ +'  },
+  { key:'sup-defence', lbl:'DEF +'  },
+  { key:'sup-hp',      lbl:'PV +'   },
+  { key:'sup-speed',   lbl:'VIT +'  },
+  { key:'sup-crit',    lbl:'Taux +'  },
+  { key:'sup-acc',     lbl:'PRE +'  }
 ];
 
-// ─── BUFFS / DEBUFFS tokens for toolbar ──────────────────────
-const BUFF_TOKENS = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS',
-  'SHIELD','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM',
-  'RAGE','VEIL','PERFECT_VEIL','STRENGTHEN','COUNTER','LIFE_BARRIER','HEALS','FORTIFY'];
-const DEBUFF_TOKENS = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION',
-  'BLOCK_BUFFS','WEAKEN','HEX','POISON','BURN','ATK','DEF','SPD','LEECH'];
+// ── Buff / Debuff tokens ───────────────────────────────────
+var BUFFS_TK   = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS','SHIELD','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM','RAGE','VEIL','STRENGTHEN','COUNTER','HEALS','FORTIFY'];
+var DEBUFFS_TK = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION','BLOCK_BUFFS','WEAKEN','HEX','POISON','BURN','ATK','DEF','SPD','LEECH'];
+var STAT_KEYS  = ['PV','ATQ','DEF','VIT','TAUX C.','DEG C.','RES','PRE'];
 
-// ─── State ───────────────────────────────────────────────────
-let token = null;
-let selectedAffinity = 'force';
-let selectedAura = 'defence';
-let portraitBase64 = null;
+// ── State ──────────────────────────────────────────────────
+var ghTok       = null;
+var selAff      = 'force';
+var selAura     = 'defence';
+var portraitB64 = null;
+var curFt       = 1;    // current form tab (1 or 2)
+var spells1     = [];
+var spells2     = [];
+var imgs1       = [];
+var imgs2       = [];
 
-// spells1[i] = { name, desc, damage, cooldown, levelInfo:[], factions:[], isPassive, imgFile, imgBase64, imgDataUrl }
-let spells1 = [];
-let spells2 = [];
-// spell images: spellImgs1[i], spellImgs2[i] = { base64, dataUrl, ext }
-let spellImgs1 = [];
-let spellImgs2 = [];
-let portraitExt = 'png';
-
-let currentFormTab = 'form1';
-
-// ─── Init ────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  token = sessionStorage.getItem('ghToken');
-  if (!token){window.location.href='index.html';return;}
-  document.getElementById('statusBar').textContent = 'Connecté';
-  document.getElementById('statusBar').className = 'status-bar ok';
-
-  renderStatsGrid(1);
-  renderStatsGrid(2);
-  renderAuraGrid();
-  buildDescToolbar('auraDescToolbar', 'auraDesc');
+// ── Boot ───────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  ghTok = sessionStorage.getItem('admin_token');
+  if (!ghTok){window.location.href='index.html';return;}
+  buildStatsGrid('statsGrid1');
+  buildStatsGrid('statsGrid2');
+  buildAuraGrid();
+  buildToolbar('auraToolbar', 'auraDesc');
   addSpell(1);
   addSpell(1);
-
-  // sync form labels
-  document.getElementById('form1Label').addEventListener('input', syncFormLabels);
-  document.getElementById('form2Label').addEventListener('input', syncFormLabels);
+  spawnParticles();
 });
 
-// ─── Tab switching ────────────────────────────────────────────
-function switchTab(idx) {
-  document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-  document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
-  if (idx === 4) buildSummary();
+// ── Particles ──────────────────────────────────────────────
+function spawnParticles() {
+  var c = document.querySelector('.particles');
+  if (code .) return;
+  for (var i = 0; i < 18; i++) {
+    var d = document.createElement('div');
+    d.className = 'particle';
+    d.style.left = Math.random() * 100 + '%';
+    d.style.top  = Math.random() * 100 + '%';
+    d.style.animationDelay    = (Math.random() * 6) + 's';
+    d.style.animationDuration = (4 + Math.random() * 4) + 's';
+    c.appendChild(d);
+  }
 }
 
-// ─── Form tab (mythical forms) ────────────────────────────────
-function switchFormTab(form) {
-  currentFormTab = form;
-  document.querySelectorAll('.form-tab-btn').forEach(b => b.classList.toggle('active', b.textContent.toLowerCase().includes(form.slice(-1) === '1' ? '1' : '2')));
-  document.getElementById('spellsForm1').style.display = form === 'form1' ? 'block' : 'none';
-  document.getElementById('spellsForm2').style.display = form === 'form2' ? 'block' : 'none';
+// ── Tab nav ────────────────────────────────────────────────
+function goTab(id) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.tab === id);
+  });
+  document.querySelectorAll('.tab-panel').forEach(function(p) {
+    p.classList.toggle('active', p.id === id);
+  });
+  if (id === 't-publish') buildSummary();
 }
 
-// ─── Rarity change ────────────────────────────────────────────
-function onRarityChange(val) {
-  const isMythical = val === 'mythical';
-  document.getElementById('mythicalSection').style.display = isMythical ? 'block' : 'none';
-  document.getElementById('mythicalFormTabs').style.display = isMythical ? 'block' : 'none';
-  document.getElementById('spellsForm2').style.display = isMythical && currentFormTab === 'form2' ? 'block' : 'none';
-  document.getElementById('statsForm2Section').style.display = isMythical ? 'block' : 'none';
-  document.getElementById('statsForm1Label').textContent = isMythical ? '— Forme 1' : '';
+// ── Affinity ───────────────────────────────────────────────
+function pickAff(el) {
+  selAff = el.getAttribute('data-aff');
+  document.querySelectorAll('.aff-tile').forEach(function(t) {
+    t.classList.toggle('on', t.getAttribute('data-aff') === selAff);
+  });
 }
 
-// ─── Slug input ───────────────────────────────────────────────
-function onSlugInput(v) {
-  const slug = v.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
-  if (document.getElementById('slug').value !== slug) document.getElementById('slug').value = slug;
-  document.getElementById('portraitFilename').textContent = slug ? slug + '.png' : 'champion.png';
+// ── Rarity ────────────────────────────────────────────────
+function onRarity(val) {
+  var isMyt = (val === 'mythical');
+  document.getElementById('mythOpts').style.display       = isMyt ? 'block' : 'none';
+  document.getElementById('formTabsWrap').style.display   = isMyt ? 'block' : 'none';
+  document.getElementById('spellsPanel2').style.display   = (isMyt && curFt === 2) ? 'block' : 'none';
+  document.getElementById('statsCard2').style.display     = isMyt ? 'block' : 'none';
+  document.getElementById('statsTitle1').textContent      = isMyt ? 'Statistiques — Forme 1' : 'Statistiques';
 }
 
-// ─── Affinity selector ───────────────────────────────────────
-function selectAffinity(val) {
-  selectedAffinity = val;
-  document.querySelectorAll('.affinity-option').forEach(el =>
-    el.classList.toggle('selected', el.dataset.val === val));
+// ── Slug sync ─────────────────────────────────────────────
+function onSlug(v) {
+  var s = v.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
+  if (document.getElementById('slug').value !== s) document.getElementById('slug').value = s;
+  document.getElementById('portraitName').textContent = (s || 'champion') + '.png';
 }
 
-// ─── Aura grid ────────────────────────────────────────────────
-function renderAuraGrid() {
-  const grid = document.getElementById('auraGrid');
-  grid.innerHTML = AURAS.map(a => `
-    <div class="aura-option ${a.key === selectedAura ? 'selected' : ''}" data-key="${a.key}" onclick="selectAura('${a.key}')">
-      <img src="../assets/images/auras/${a.key}.png" alt="${a.label}">
-      <span>${a.label}</span>
-    </div>`).join('');
-}
-function selectAura(key) {
-  selectedAura = key;
-  document.querySelectorAll('.aura-option').forEach(el =>
-    el.classList.toggle('selected', el.dataset.key === key));
+// ── Form tabs (mythical) ──────────────────────────────────
+function pickFormTab(n) {
+  curFt = n;
+  document.querySelectorAll('.form-tab').forEach(function(b) {
+    b.classList.toggle('on', parseInt(b.getAttribute('data-ft')) === n);
+  });
+  document.getElementById('spellsPanel1').style.display = (n === 1) ? 'block' : 'none';
+  document.getElementById('spellsPanel2').style.display = (n === 2) ? 'block' : 'none';
 }
 
-// ─── Stats grid ───────────────────────────────────────────────
-const STAT_FIELDS = ['PV','ATQ','DEF','VIT','TAUX C.','DÉG C.','RÉS','PRÉ'];
-function renderStatsGrid(form) {
-  const grid = document.getElementById('statsGrid' + form);
-  grid.innerHTML = STAT_FIELDS.map(s => `
-    <div class="stat-field">
-      <label>${s}</label>
-      <input type="text" id="stat${form}_${s.replace(/\s/g,'_').replace(/\./g,'')}" placeholder="—" class="stat-input">
-    </div>`).join('');
+// ── Sync form labels ──────────────────────────────────────
+function syncFormLabels() {
+  var l1 = document.getElementById('form1lbl').value || 'Forme de Base';
+  var l2 = document.getElementById('form2lbl').value || 'Forme Alternative';
+  document.getElementById('form1title').textContent = l1;
+  document.getElementById('form2title').textContent = l2;
+  var tabs = document.querySelectorAll('.form-tab');
+  if (tabs[0]) tabs[0].textContent = l1;
+  if (tabs[1]) tabs[1].textContent = l2;
 }
-function getStats(form) {
-  const obj = {};
-  STAT_FIELDS.forEach(s => {
-    const id = 'stat' + form + '_' + s.replace(/\s/g,'_').replace(/\./g,'');
-    obj[s] = document.getElementById(id)?.value.trim() || '0';
+
+// ── Stats grid ────────────────────────────────────────────
+function buildStatsGrid(gridId) {
+  var g = document.getElementById(gridId);
+  if (gcl git@github.com:FR-RSL/FR-RSL.github.io.git) return;
+  g.innerHTML = STAT_KEYS.map(function(k) {
+    var id = gridId + '_' + k.replace(/\s/g,'_').replace(/\./g,'');
+    return '<div class="stat-row"><label>' + k + '</label><input type="text" id="' + id + '" placeholder="—"></div>';
+  }).join('');
+}
+
+function getStats(gridId) {
+  var obj = {};
+  STAT_KEYS.forEach(function(k) {
+    var id = gridId + '_' + k.replace(/\s/g,'_').replace(/\./g,'');
+    var el = document.getElementById(id);
+    obj[k] = el ? el.value.trim() : '0';
   });
   return obj;
 }
 
-// ─── Description toolbar ─────────────────────────────────────
-function buildDescToolbar(toolbarId, textareaId) {
-  const bar = document.getElementById(toolbarId);
-  if (!bar)return;
-  const buffs = BUFF_TOKENS.slice(0, 10).map(k =>
-    `<button class="btn-token" onclick="insertToken('${textareaId}','BUFFS','${k}')">B.${k}</button>`).join('');
-  const debuffs = DEBUFF_TOKENS.slice(0, 10).map(k =>
-    `<button class="btn-token debuff" onclick="insertToken('${textareaId}','DEBUFFS','${k}')">D.${k}</button>`).join('');
-  bar.innerHTML = buffs + debuffs;
+// ── Aura grid ─────────────────────────────────────────────
+function buildAuraGrid() {
+  var g = document.getElementById('auraGrid');
+  g.innerHTML = AURAS.map(function(a) {
+    return '<div class="aura-tile' + (a.key === selAura ? ' on' : '') + '" data-akey="' + a.key + '" onclick="pickAura(this)">' +
+           '<img src="../assets/images/auras/' + a.key + '.png" alt="' + a.lbl + '">' +
+           '<span>' + a.lbl + '</span></div>';
+  }).join('');
 }
-function insertToken(textareaId, type, key) {
-  const ta = document.getElementById(textareaId);
+
+function pickAura(el) {
+  selAura = el.getAttribute('data-akey');
+  document.querySelectorAll('.aura-tile').forEach(function(t) {
+    t.classList.toggle('on', t.getAttribute('data-akey') === selAura);
+  });
+}
+
+// ── Desc toolbar ──────────────────────────────────────────
+function buildToolbar(toolId, taId) {
+  var bar = document.getElementById(toolId);
+  if (!bar)return;
+  var html = BUFFS_TK.slice(0,12).map(function(k) {
+    return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
+  }).join('') + DEBUFFS_TK.slice(0,10).map(function(k) {
+    return '<button class="tk d" onclick="insertTk(\'' + taId + '\',\'DEBUFFS\',\'' + k + '\')">D.' + k + '</button>';
+  }).join('');
+  bar.innerHTML = html;
+}
+
+function insertTk(taId, type, key) {
+  var ta = document.getElementById(taId);
   if (tail -10 /home/pierre/ft_irc/srcs/Server.cpp) return;
-  const token_str = '${' + type + '.' + key + '}';
-  const start = ta.selectionStart;
-  ta.value = ta.value.slice(0, start) + token_str + ta.value.slice(ta.selectionEnd);
-  ta.selectionStart = ta.selectionEnd = start + token_str.length;
+  var tok = '${' + type + '.' + key + '}';
+  var s = ta.selectionStart;
+  ta.value = ta.value.slice(0, s) + tok + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = s + tok.length;
   ta.focus();
 }
 
-// ─── Sync form labels ─────────────────────────────────────────
-function syncFormLabels() {
-  const l1 = document.getElementById('form1Label').value || 'Forme de Base';
-  const l2 = document.getElementById('form2Label').value || 'Forme Alternative';
-  document.getElementById('form1LabelDisplay').textContent = l1;
-  document.getElementById('form2LabelDisplay').textContent = l2;
-  const btns = document.querySelectorAll('.form-tab-btn');
-  if (btns[0]) btns[0].textContent = l1;
-  if (btns[1]) btns[1].textContent = l2;
-}
-
-// ─── Spell management ─────────────────────────────────────────
+// ── Spell management ──────────────────────────────────────
 function addSpell(form) {
-  const list = form === 1 ? spells1 : spells2;
-  const imgs = form === 1 ? spellImgs1 : spellImgs2;
-  list.push({ name: '', desc: '', damage: '', cooldown: '', levelInfo: [], factions: ['','',''], isPassive: false });
+  var list = (form === 1) ? spells1 : spells2;
+  var imgs = (form === 1) ? imgs1   : imgs2;
+  list.push({ name:'', desc:'', damage:'', cooldown:'', levelInfo:[], factions:['','',''], isPassive:false });
   imgs.push(null);
-  renderSpells();
+  renderSpellList(form);
 }
 
 function removeSpell(form, idx) {
-  const list = form === 1 ? spells1 : spells2;
-  const imgs = form === 1 ? spellImgs1 : spellImgs2;
+  var list = (form === 1) ? spells1 : spells2;
+  var imgs = (form === 1) ? imgs1   : imgs2;
   list.splice(idx, 1);
   imgs.splice(idx, 1);
-  renderSpells();
+  renderSpellList(form);
 }
 
-function renderSpells() {
+function renderAllSpells() {
   renderSpellList(1);
   renderSpellList(2);
 }
 
 function renderSpellList(form) {
-  const container = document.getElementById('spellList' + form);
+  var container = document.getElementById('spellList' + form);
   if (!container)return;
-  const list = form === 1 ? spells1 : spells2;
-  const imgs = form === 1 ? spellImgs1 : spellImgs2;
-  const isLead = document.getElementById('isLeadFaction').checked;
+  var list = (form === 1) ? spells1 : spells2;
+  var imgs = (form === 1) ? imgs1   : imgs2;
+  var isLead = document.getElementById('isLead').checked;
 
   container.innerHTML = '';
-  list.forEach((spell, i) => {
-    const imgUrl = imgs[i] ? imgs[i].dataUrl : '';
-    const imgHtml = imgUrl
-      ? `<img src="${imgUrl}" alt="Sort ${i+1}">`
-      : `<span>🔮</span>`;
 
-    const levelInfoHtml = spell.levelInfo.map((li, li_i) => `
-      <div class="level-info-item">
-        <input type="text" value="${escHtml(li)}" placeholder="Niv. ${li_i+2} : Dégâts +10%"
-          oninput="updateLevelInfo(${form},${i},${li_i},this.value)">
-        <button class="btn-small danger" onclick="removeLevelInfo(${form},${i},${li_i})">✕</button>
-      </div>`).join('');
+  list.forEach(function(sp, i) {
+    var imgHtml = imgs[i]
+      ? '<img src="' + imgs[i].dataUrl + '" alt="">'
+      : '🔮';
 
-    const factionHtml = isLead ? `
-      <div class="faction-effects">
-        <h5>Effets de Lead Faction :</h5>
-        <div class="form-group" style="margin-bottom:0.4rem">
-          <label style="font-size:0.72rem;text-transform:none">1 allié de faction :</label>
-          <textarea rows="2" placeholder="Effet pour 1 allié..."
-            oninput="updateFaction(${form},${i},0,this.value)">${escHtml(spell.factions[0]||'')}</textarea>
-        </div>
-        <div class="form-group" style="margin-bottom:0.4rem">
-          <label style="font-size:0.72rem;text-transform:none">2 alliés de faction :</label>
-          <textarea rows="2" placeholder="Effet pour 2 alliés..."
-            oninput="updateFaction(${form},${i},1,this.value)">${escHtml(spell.factions[1]||'')}</textarea>
-        </div>
-        <div class="form-group">
-          <label style="font-size:0.72rem;text-transform:none">3 alliés de faction :</label>
-          <textarea rows="2" placeholder="Effet pour 3 alliés..."
-            oninput="updateFaction(${form},${i},2,this.value)">${escHtml(spell.factions[2]||'')}</textarea>
-        </div>
-      </div>` : '';
+    var lvlHtml = sp.levelInfo.map(function(li, li_i) {
+      return '<div class="lvl-row">' +
+        '<input type="text" value="' + esc(li) + '" placeholder="Niv. ' + (li_i+2) + ' : Dégâts +10%"' +
+        ' oninput="updateLvl(' + form + ',' + i + ',' + li_i + ',this.value)">' +
+        '<button class="btn btn-sm btn-danger" onclick="rmLvl(' + form + ',' + i + ',' + li_i + ')">✕</button></div>';
+    }).join('');
 
-    const card = document.createElement('div');
+    var factHtml = isLead
+      ? '<div class="faction-block"><div class="faction-block-title">Effets Lead Faction</div>' +
+        [0,1,2].map(function(fi) {
+          return '<div class="field" style="margin-bottom:0.5rem"><label>' + (fi+1) + ' allié' + (fi>0?'s':'') + ' de faction</label>' +
+            '<textarea rows="2" oninput="updateFact(' + form + ',' + i + ',' + fi + ',this.value)">' + esc(sp.factions[fi]||'') + '</textarea></div>';
+        }).join('') + '</div>'
+      : '';
+
+    var card = document.createElement('div');
     card.className = 'spell-card';
-    card.innerHTML = `
-      <div class="spell-card-header">
-        <div class="spell-number">${i+1}</div>
-        <div class="spell-img-preview" onclick="triggerSpellImgUpload(${form},${i})">
-          ${imgHtml}
-        </div>
-        <input type="text" value="${escHtml(spell.name)}" placeholder="Nom de la compétence"
-          oninput="updateSpellField(${form},${i},'name',this.value)"
-          style="flex:1;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:8px;padding:0.5rem;color:var(--text)">
-        <label style="display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--muted);cursor:pointer">
-          <input type="checkbox" ${spell.isPassive ? 'checked' : ''} onchange="updateSpellField(${form},${i},'isPassive',this.checked)">
-          Passif
-        </label>
-        <button class="btn-remove-spell" onclick="removeSpell(${form},${i})">✕</button>
-      </div>
+    var descTaId = 'spDesc_' + form + '_' + i;
+    var tbId     = 'spTb_'   + form + '_' + i;
+    card.innerHTML =
+      '<div class="spell-head">' +
+        '<div class="spell-num">' + (i+1) + '</div>' +
+        '<div class="spell-img-btn" onclick="triggerSpImg(' + form + ',' + i + ')">' + imgHtml + '</div>' +
+        '<input class="spell-name-input" type="text" value="' + esc(sp.name) + '"' +
+               ' placeholder="Nom de la compétence" oninput="setSp(' + form + ',' + i + ',\'name\',this.value)">' +
+        '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="setSp(' + form + ',' + i + ',\'isPassive\',this.checked)"> Passif</label>' +
+        '<button class="btn-rm-spell" onclick="removeSpell(' + form + ',' + i + ')">✕</button>' +
+      '</div>' +
+      '<div class="field" style="margin-bottom:0.6rem">' +
+        '<label>Description</label>' +
+        '<div class="desc-wrap">' +
+          '<div class="desc-toolbar" id="' + tbId + '"></div>' +
+          '<textarea id="' + descTaId + '" rows="3" placeholder="Description..."' +
+                    ' oninput="setSp(' + form + ',' + i + ',\'desc\',this.value)">' + esc(sp.desc) + '</textarea>' +
+        '</div>' +
+      '</div>' +
+      '<div class="spell-info-grid">' +
+        '<div class="field"><label>Multiplicateur (opt.)</label>' +
+          '<input type="text" value="' + esc(sp.damage) + '" placeholder="ex: 3.5*DEF"' +
+                 ' oninput="setSp(' + form + ',' + i + ',\'damage\',this.value)"></div>' +
+        '<div class="field"><label>Temps de recharge (opt.)</label>' +
+          '<input type="number" value="' + (sp.cooldown||'') + '" placeholder="ex: 4" min="1" max="9"' +
+                 ' oninput="setSp(' + form + ',' + i + ',\'cooldown\',this.value)"></div>' +
+      '</div>' +
+      '<div class="field"><label>Améliorations de niveau</label>' +
+        '<div class="lvl-list" id="lvlList_' + form + '_' + i + '">' + lvlHtml + '</div>' +
+        '<button class="btn btn-sm btn-ghost" style="margin-top:0.4rem" onclick="addLvl(' + form + ',' + i + ')">+ Niveau</button>' +
+      '</div>' +
+      factHtml;
 
-      <div class="form-group" style="margin-bottom:0.6rem">
-        <label>Description</label>
-        <div class="desc-editor">
-          <div class="desc-toolbar" id="toolbar_${form}_${i}"></div>
-          <textarea rows="3" id="spellDesc_${form}_${i}" placeholder="Description de la compétence..."
-            oninput="updateSpellField(${form},${i},'desc',this.value)">${escHtml(spell.desc)}</textarea>
-        </div>
-      </div>
-
-      <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.6rem">
-        <div class="form-group">
-          <label>Multiplicateur (optionnel)</label>
-          <input type="text" value="${escHtml(spell.damage)}" placeholder="ex: 3.5*DEF"
-            oninput="updateSpellField(${form},${i},'damage',this.value)">
-        </div>
-        <div class="form-group">
-          <label>Temps de recharge (optionnel)</label>
-          <input type="number" value="${spell.cooldown||''}" placeholder="ex: 4" min="1" max="9"
-            oninput="updateSpellField(${form},${i},'cooldown',this.value)">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Améliorations de niveau</label>
-        <div class="level-info-list" id="levelInfoList_${form}_${i}">
-          ${levelInfoHtml}
-        </div>
-        <button class="btn-small" style="margin-top:0.4rem" onclick="addLevelInfo(${form},${i})">+ Ajouter un niveau</button>
-      </div>
-
-      ${factionHtml}
-    `;
     container.appendChild(card);
-    buildDescToolbar('toolbar_' + form + '_' + i, 'spellDesc_' + form + '_' + i);
+    buildToolbar(tbId, descTaId);
   });
 
-  // hidden inputs for spell image uploads
-  list.forEach((_, i) => {
-    const existingInput = document.getElementById('spellImgInput_' + form + '_' + i);
-    if (!existingInput){
-      const inp = document.createElement('input');
+  // Ensure hidden file inputs exist
+  list.forEach(function(_, i) {
+    var inputId = 'spImgFile_' + form + '_' + i;
+    if (!document.getElementById(inputId)){
+      var inp = document.createElement('input');
       inp.type = 'file';
       inp.accept = 'image/*';
-      inp.id = 'spellImgInput_' + form + '_' + i;
-      inp.onchange = function() { onSpellImgChange(form, i, this); };
-      document.body.appendChild(inp);
+      inp.id = inputId;
+      inp.style.display = 'none';
+      inp.setAttribute('data-form', form);
+      inp.setAttribute('data-idx', i);
+      inp.addEventListener('change', function() {
+        onSpImg(parseInt(this.getAttribute('data-form')), parseInt(this.getAttribute('data-idx')), this);
+      });
+      document.getElementById('fileInputs').appendChild(inp);
     }
   });
 }
 
-function triggerSpellImgUpload(form, idx) {
-  document.getElementById('spellImgInput_' + form + '_' + idx)?.click();
+function triggerSpImg(form, idx) {
+  var inp = document.getElementById('spImgFile_' + form + '_' + idx);
+  if (inp) inp.click();
 }
 
-function onSpellImgChange(form, idx, input) {
-  const file = input.files[0];
+function onSpImg(form, idx, input) {
+  var file = input.files[0];
   if (!file)return;
-  const imgs = form === 1 ? spellImgs1 : spellImgs2;
-  const reader = new FileReader();
+  var imgs = (form === 1) ? imgs1 : imgs2;
+  var reader = new FileReader();
   reader.onload = function(e) {
-    const dataUrl = e.target.result;
-    const base64 = dataUrl.split(',')[1];
-    const ext = file.name.split('.').pop().toLowerCase();
-    imgs[idx] = { base64, dataUrl, ext };
-    renderSpells();
+    imgs[idx] = { base64: e.target.result.split(',')[1], dataUrl: e.target.result };
+    renderSpellList(form);
   };
   reader.readAsDataURL(file);
 }
 
-function updateSpellField(form, idx, field, value) {
-  const list = form === 1 ? spells1 : spells2;
-  if (list[idx]) list[idx][field] = value;
+function setSp(form, idx, field, val) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx]) list[idx][field] = val;
 }
-function updateLevelInfo(form, idx, liIdx, value) {
-  const list = form === 1 ? spells1 : spells2;
-  if (list[idx]) list[idx].levelInfo[liIdx] = value;
+function updateLvl(form, idx, li, val) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx]) list[idx].levelInfo[li] = val;
 }
-function addLevelInfo(form, idx) {
-  const list = form === 1 ? spells1 : spells2;
-  if (list[idx]) { list[idx].levelInfo.push(''); renderSpells(); }
+function addLvl(form, idx) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx]) { list[idx].levelInfo.push(''); renderSpellList(form); }
 }
-function removeLevelInfo(form, idx, liIdx) {
-  const list = form === 1 ? spells1 : spells2;
-  if (list[idx]) { list[idx].levelInfo.splice(liIdx, 1); renderSpells(); }
+function rmLvl(form, idx, li) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx]) { list[idx].levelInfo.splice(li,1); renderSpellList(form); }
 }
-function updateFaction(form, idx, factIdx, value) {
-  const list = form === 1 ? spells1 : spells2;
-  if (list[idx]) { if (!list[idx].factions)list[idx].factions=['','',''];list[idx].factions[factIdx]=value;}
+function updateFact(form, idx, fi, val) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx]) { if (!list[idx].factions)list[idx].factions=['','',''];list[idx].factions[fi]=val;}
 }
 
-// ─── Portrait upload ──────────────────────────────────────────
-function onPortraitChange(input) {
-  const file = input.files[0];
+// ── Portrait ──────────────────────────────────────────────
+function onPortrait(input) {
+  var file = input.files[0];
   if (!file)return;
-  portraitExt = file.name.split('.').pop().toLowerCase();
-  const reader = new FileReader();
-  reader.onload = e => {
-    portraitBase64 = e.target.result.split(',')[1];
-    document.getElementById('portraitPlaceholder').style.display = 'none';
-    const img = document.getElementById('portraitPreviewImg');
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    portraitB64 = e.target.result.split(',')[1];
+    document.getElementById('portraitPh').style.display = 'none';
+    var img = document.getElementById('portraitPreview');
     img.src = e.target.result;
     img.style.display = 'block';
   };
   reader.readAsDataURL(file);
 }
 
-// ─── Escape HTML helper ───────────────────────────────────────
-function escHtml(s) {
-  if (sudo make fclean) return '';
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+// ── HTML escape ───────────────────────────────────────────
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escJs(s) {
+  return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"');
 }
 
-// ─── Build summary ────────────────────────────────────────────
+// ── Build summary ─────────────────────────────────────────
 function buildSummary() {
-  const slug = document.getElementById('slug').value.trim();
-  const fullName = document.getElementById('fullName').value.trim();
-  const faction = document.getElementById('faction').value;
-  const rarity = document.getElementById('rarity').value;
-  const champType = document.getElementById('champType').value;
-  const fMeta = FACTION_META[faction];
+  var slug     = document.getElementById('slug').value.trim();
+  var fullName = document.getElementById('fullName').value.trim();
+  var faction  = document.getElementById('faction').value;
+  var rarity   = document.getElementById('rarity').value;
+  var fmeta    = FMETA[faction] || {};
 
-  const grid = document.getElementById('summaryGrid');
-  grid.innerHTML = [
-    ['Slug', slug || '(vide)'],
-    ['Nom complet', fullName || '(vide)'],
-    ['Faction', fMeta?.name || faction],
-    ['Rareté', rarity === 'legendary' ? 'Légendaire' : 'Mythique'],
-    ['Affinité', selectedAffinity],
-    ['Type', champType],
-    ['Compétences F1', spells1.length],
-    ['Aura', selectedAura],
-    ['Portrait', portraitBase64 ? 'Chargé ✓' : 'Non chargé'],
-  ].map(([k,v]) => `<div class="summary-item"><div class="key">${k}</div><div class="val">${v}</div></div>`).join('');
+  var grid = document.getElementById('summaryGrid');
+  var items = [
+    ['Slug',       slug || '—'],
+    ['Nom',        fullName || '—'],
+    ['Faction',    fmeta.name || faction],
+    ['Rarete',     rarity === 'legendary' ? 'Legendaire' : 'Mythique'],
+    ['Affinite',   selAff],
+    ['Type',       document.getElementById('champType').value],
+    ['Sorts F1',   spells1.length],
+    ['Aura',       selAura],
+    ['Portrait',   portraitB64 ? 'Charge' : 'Manquant']
+  ];
+  grid.innerHTML = items.map(function(it) {
+    return '<div class="summ-item"><div class="summ-k">' + it[0] + '</div><div class="summ-v">' + it[1] + '</div></div>';
+  }).join('');
 
-  // List files to be created
-  const basePath = `pages/factions/${faction}/${rarity}/${slug}/`;
-  const files = [
-    basePath + slug + '.html',
-    basePath + slug + '.js',
-    portraitBase64 ? basePath + 'assets/' + slug + '.png' : null,
-    ...spells1.map((_, i) => spellImgs1[i] ? basePath + 'assets/sort' + (i+1) + '.png' : null),
-    'assets/js/champions-index.js (mise à jour)',
-  ].filter(Boolean);
+  var base = 'pages/factions/' + faction + '/' + rarity + '/' + (slug||'?') + '/';
+  var files = [base + (slug||'?') + '.html', base + (slug||'?') + '.js'];
+  if (portraitB64)  files.push(base + 'assets/' + (slug||'?') + '.png');
+  spells1.forEach(function(_, i) { if (imgs1[i]) files.push(base + 'assets/sort' + (i+1) + '.png'); });
+  if (rarity === 'mythical')
+    spells2.forEach(function(_, i) { if (imgs2[i]) files.push(base + 'assets/sort_f2_' + (i+1) + '.png'); });
+  files.push('assets/js/champions-index.js (mise a jour)');
 
-  if (document.getElementById('rarity').value === 'mythical') {
-    spells2.forEach((_, i) => {
-      if (spellImgs2[i]) files.push(basePath + 'assets/sort_f2_' + (i+1) + '.png');
-    });
-  }
-
-  document.getElementById('filesList').innerHTML = '<strong style="color:var(--muted);font-size:0.75rem">FICHIERS À CRÉER :</strong><ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.75rem;list-style:disc">' +
-    files.map(f => '<li style="margin-bottom:0.2rem">' + f + '</li>').join('') + '</ul>';
+  document.getElementById('filesList').innerHTML =
+    '<strong style="text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem">Fichiers a creer :</strong>' +
+    '<ul style="margin-top:0.4rem;padding-left:1.1rem;list-style:disc">' +
+    files.map(function(f) { return '<li style="margin-bottom:0.15rem">' + f + '</li>'; }).join('') +
+    '</ul>';
 }
 
-// ─── Generate JS content ──────────────────────────────────────
-function collectSpellData(list, imgs, isLead) {
-  return list.map((s, i) => {
-    // Refresh description from DOM
-    const descEl = document.getElementById('spellDesc_1_' + i) || document.getElementById('spellDesc_2_' + i);
-    const spellNo = i + 1;
-    const imgPath = 'assets/sort' + spellNo + '.png';
-
-    const obj = {};
-    obj.img = imgPath;
-    obj.name = s.name || ('Compétence ' + spellNo);
-    obj.desc = s.desc || '';
-    if (s.damage && s.damage.trim()) obj.damage = s.damage.trim();
-    if (s.cooldown && String(s.cooldown).trim()) obj.cooldown = parseInt(s.cooldown);
-    if (s.levelInfo && s.levelInfo.filter(x => x.trim()).length > 0)
-      obj.levelInfo = s.levelInfo.filter(x => x.trim());
-    if (isLead && s.factions && s.factions.some(x => x.trim()))
-      obj.factions = s.factions;
-    if (s.isPassive) obj.isPassive = true;
-    return obj;
-  });
-}
-
-function spellsToJs(spells, isLead) {
-  return spells.map((s, i) => {
-    const lines = [];
-    lines.push('          img: "' + s.img + '",');
-    lines.push('          name: "' + escJs(s.name) + '",');
-    lines.push('          description: `' + s.desc.replace(/`/g,'\\`') + '`,');
-    if (s.damage) lines.push('          damage: "' + escJs(s.damage) + '",');
-    if (s.cooldown) lines.push('          cooldown: ' + s.cooldown + ',');
-    if (s.levelInfo && s.levelInfo.length)
-      lines.push('          levelInfo: [' + s.levelInfo.map(l => '"' + escJs(l) + '"').join(', ') + '],');
-    if (s.factions && s.factions.length)
-      lines.push('          factions: [\n' + s.factions.map(f => '            `' + f.replace(/`/g,'\\`') + '`').join(',\n') + '\n          ],');
-    if (s.isPassive) lines.push('          isPassive: true,');
-    return '        {\n' + lines.join('\n') + '\n        }';
+// ── JS code generators ────────────────────────────────────
+function spellsToObj(list, imgs_arr, suffix) {
+  return list.map(function(sp, i) {
+    var imgPath = 'assets/' + (suffix ? 'sort_f2_' : 'sort') + (i+1) + '.png';
+    var o = '        {\n';
+    o += '          img: "' + imgPath + '",\n';
+    o += '          name: "' + escJs(sp.name || ('Competence ' + (i+1))) + '",\n';
+    o += '          description: `' + (sp.desc||'').replace(/`/g,'\\`') + '`,\n';
+    if (sp.damage && sp.damage.trim())   o += '          damage: "' + escJs(sp.damage) + '",\n';
+    if (sp.cooldown && String(sp.cooldown).trim()) o += '          cooldown: ' + parseInt(sp.cooldown) + ',\n';
+    if (sp.levelInfo && sp.levelInfo.filter(function(x){return x.trim();}).length)
+      o += '          levelInfo: [' + sp.levelInfo.filter(function(x){return x.trim();}).map(function(x){return '"'+escJs(x)+'"';}).join(', ') + '],\n';
+    var isLead = document.getElementById('isLead').checked;
+    if (isLead && sp.factions && sp.factions.some(function(x){return x.trim();}))
+      o += '          factions: [\n' + sp.factions.map(function(f){return '            `' + f.replace(/`/g,'\\`') + '`';}).join(',\n') + '\n          ],\n';
+    if (sp.isPassive) o += '          isPassive: true,\n';
+    o += '        }';
+    return o;
   }).join(',\n');
 }
 
-function escJs(s) { return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"'); }
+function buildLegJs(slug, type, stats, aura_key, aura_desc) {
+  var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+  var statsLines = Object.keys(stats).map(function(k) {
+    return '        "' + k + '": "' + escJs(stats[k]) + '"';
+  }).join(',\n');
+  return 'const championData = {\n' +
+    '  type: "' + escJs(type) + '",\n' +
+    '  spells: [\n' + spellsToObj(spells1, imgs1, false) + '\n  ],\n' +
+    '  stats: {\n' + statsLines + '\n  }\n};\n\n' +
+    'const aura = {\n' +
+    '  img: "' + auraPath + '",\n' +
+    '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
+}
 
-function buildLegendaryJs(slug, champType, stats, auraKey, auraDesc) {
-  const isLead = document.getElementById('isLeadFaction').checked;
-  const spData = collectSpellData(spells1, spellImgs1, isLead);
-  const statsJs = STAT_FIELDS.map(k => '        "' + k + '": "' + escJs(stats[k]) + '"').join(',\n');
-  const auraPath = '../../../../../assets/images/auras/' + auraKey + '.png';
-
-  return `const championData = {
-  type: "${escJs(champType)}",
-  spells: [
-${spellsToJs(spData, isLead)}
-  ],
-  stats: {
-${statsJs}
+function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
+  var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+  function statsLines(s) {
+    return Object.keys(s).map(function(k) {
+      return '          "' + k + '": "' + escJs(s[k]) + '"';
+    }).join(',\n');
   }
-};
-
-const aura = {
-  img: "${auraPath}",
-  description: \`${auraDesc.replace(/`/g,'\\`')}\`
-};
-`;
+  return 'const championForms = {\n' +
+    '  form1: {\n' +
+    '    type: "' + escJs(type1) + '",\n' +
+    '    spells: [\n' + spellsToObj(spells1, imgs1, false) + '\n    ],\n' +
+    '    stats: {\n' + statsLines(stats1) + '\n    }\n  },\n' +
+    '  form2: {\n' +
+    '    type: "' + escJs(type2) + '",\n' +
+    '    spells: [\n' + spellsToObj(spells2, imgs2, true) + '\n    ],\n' +
+    '    stats: {\n' + statsLines(stats2) + '\n    }\n  }\n};\n\n' +
+    'const aura = {\n' +
+    '  img: "' + auraPath + '",\n' +
+    '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
 }
 
-function buildMythicalJs(slug, champType1, champType2, stats1, stats2, auraKey, auraDesc) {
-  const isLead = document.getElementById('isLeadFaction').checked;
-  const spData1 = collectSpellData(spells1, spellImgs1, isLead);
-  const spData2 = collectSpellData(spells2, spellImgs2, isLead);
-  const statsJs1 = STAT_FIELDS.map(k => '          "' + k + '": "' + escJs(stats1[k]) + '"').join(',\n');
-  const statsJs2 = STAT_FIELDS.map(k => '          "' + k + '": "' + escJs(stats2[k]) + '"').join(',\n');
-  const auraPath = '../../../../../assets/images/auras/' + auraKey + '.png';
-
-  // For mythical, spell images form2 use sort_f2_X.png
-  const spData2WithImgs = spData2.map((s, i) => ({ ...s, img: 'assets/sort_f2_' + (i+1) + '.png' }));
-
-  return `// Données des deux formes du champion
-const championForms = {
-  form1: {
-    type: "${escJs(champType1)}",
-    spells: [
-${spellsToJs(spData1, isLead)}
-    ],
-    stats: {
-${statsJs1}
-    }
-  },
-  form2: {
-    type: "${escJs(champType2)}",
-    spells: [
-${spellsToJs(spData2WithImgs, isLead)}
-    ],
-    stats: {
-${statsJs2}
-    }
+function buildHtmlContent(slug, fullName, rarity, faction) {
+  var fmeta    = FMETA[faction] || { img: 'bannerlords.png' };
+  var css      = (rarity === 'legendary') ? 'legendary' : 'mythical';
+  var runtime  = (rarity === 'legendary') ? 'champion-runtime-legendary' : 'champion-runtime-mythical';
+  var rarLabel = (rarity === 'legendary') ? 'Legendaire' : 'Mythique';
+  var type     = document.getElementById('champType').value;
+  var formSel  = '';
+  if (rarity === 'mythical') {
+    var l1 = esc(document.getElementById('form1lbl').value || 'Forme de Base');
+    var l2 = esc(document.getElementById('form2lbl').value || 'Forme Alternative');
+    formSel = '\n  <div class="form-selector">\n' +
+      '    <button class="form-btn active" data-form="form1">' + l1 + '</button>\n' +
+      '    <button class="form-btn" data-form="form2">' + l2 + '</button>\n' +
+      '  </div>';
   }
-};
-
-const aura = {
-  img: "${auraPath}",
-  description: \`${auraDesc.replace(/`/g,'\\`')}\`
-};
-`;
+  return '<!DOCTYPE html>\n<html lang="fr">\n<head>\n' +
+    '  <meta charset="UTF-8">\n' +
+    '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+    '  <title>' + esc(fullName) + '</title>\n' +
+    '  <link rel="shortcut icon" href="../../../../../assets/images/factions/' + fmeta.img + '">\n' +
+    '  <link rel="stylesheet" href="../../../../../assets/css/' + css + '.css">\n' +
+    '  <script src="../../../../../assets/js/faction-theme-registry.js"><\/script>\n' +
+    '</head>\n<body>\n' +
+    '  <a href="../../hub.html" class="back-to-hub">\u2190 Retour au Hub</a>' + formSel + '\n' +
+    '  <div class="container">\n' +
+    '    <div class="left-panel panel">\n' +
+    '      <h2 class="champion-name">' + esc(fullName) + '</h2>\n' +
+    '      <div class="champion-info">\n' +
+    '        <div class="info-group">\n' +
+    '          <div class="rarity-box">' + rarLabel + '</div>\n' +
+    '          <div class="type-badge" id="champion-type">' + esc(type) + '</div>\n' +
+    '        </div>\n' +
+    '        <div class="info-group">\n' +
+    '          <img src="../../../../../assets/images/affinity/' + selAff + '.png" alt="' + selAff + '" class="affinity-img">\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '      <div class="champion-image-container">\n' +
+    '        <img src="assets/' + esc(slug) + '.png" alt="' + esc(fullName) + '" class="champion-img">\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="middle-panel panel">\n' +
+    '      <h3 style="text-align:center;color:#e6b800;margin-bottom:1.5rem">Comp\u00e9tences</h3>\n' +
+    '      <div class="spells-container" id="spells-section"></div>\n' +
+    '      <div class="aura-container"><div class="aura"><img src="" alt="Aura" class="aura-img" id="aura-img"></div></div>\n' +
+    '    </div>\n' +
+    '    <div class="right-panel panel">\n' +
+    '      <div class="stats"><h3>Statistiques</h3><div class="stat-block" id="stats-content"></div></div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '  <div id="tooltip" class="tooltip"></div>\n' +
+    '  <script src="../../../../../assets/js/constant.js"><\/script>\n' +
+    '  <script src="' + esc(slug) + '.js"><\/script>\n' +
+    '  <script src="../../../../../assets/js/' + runtime + '.js"><\/script>\n' +
+    '</body>\n</html>';
 }
 
-// ─── Generate HTML ────────────────────────────────────────────
-function buildHtml(slug, fullName, rarity, faction) {
-  const fMeta = FACTION_META[faction];
-  const css = rarity === 'legendary' ? 'legendary' : 'mythical';
-  const runtime = rarity === 'legendary' ? 'champion-runtime-legendary' : 'champion-runtime-mythical';
-  const rarityLabel = rarity === 'legendary' ? 'Légendaire' : 'Mythique';
-  const formSelector = rarity === 'mythical' ? `
-  <div class="form-selector">
-    <button class="form-btn active" data-form="form1">${escHtml(document.getElementById('form1Label').value || 'Forme de Base')}</button>
-    <button class="form-btn" data-form="form2">${escHtml(document.getElementById('form2Label').value || 'Forme Alternative')}</button>
-  </div>` : '';
-  const champType = document.getElementById('champType').value;
-
-  return `<!DOCTYPEhtml>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escHtml(fullName)}</title>
-  <link rel="shortcut icon" href="../../../../../assets/images/factions/${fMeta?.img || 'bannerlords.png'}">
-  <link rel="stylesheet" href="../../../../../assets/css/${css}.css">
-  <script src="../../../../../assets/js/faction-theme-registry.js"><\/script>
-</head>
-<body>
-  <a href="../../hub.html" class="back-to-hub">\u2190 Retour au Hub</a>
-${formSelector}
-  <div class="container">
-    <div class="left-panel panel">
-      <h2 class="champion-name">${escHtml(fullName)}</h2>
-      <div class="champion-info">
-        <div class="info-group">
-          <div class="rarity-box">${rarityLabel}</div>
-          <div class="type-badge" id="champion-type">${escHtml(champType)}</div>
-        </div>
-        <div class="info-group">
-          <img src="../../../../../assets/images/affinity/${selectedAffinity}.png" alt="${selectedAffinity}" class="affinity-img">
-        </div>
-      </div>
-      <div class="champion-image-container">
-        <img src="assets/${escHtml(slug)}.png" alt="${escHtml(fullName)}" class="champion-img">
-      </div>
-    </div>
-
-    <div class="middle-panel panel">
-      <h3 style="text-align: center; color: #e6b800; margin-bottom: 1.5rem;">Comp\u00e9tences</h3>
-      <div class="spells-container" id="spells-section"></div>
-      <div class="aura-container">
-        <div class="aura">
-          <img src="" alt="Aura" class="aura-img" id="aura-img">
-        </div>
-      </div>
-    </div>
-
-    <div class="right-panel panel">
-      <div class="stats">
-        <h3>Statistiques</h3>
-        <div class="stat-block" id="stats-content"></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="tooltip" class="tooltip"></div>
-  <script src="../../../../../assets/js/constant.js"><\/script>
-  <script src="${escHtml(slug)}.js"><\/script>
-  <script src="../../../../../assets/js/${runtime}.js"><\/script>
-</body>
-</html>`;
-}
-
-// ─── Update champions-index.js ────────────────────────────────
-async function updateChampionsIndex(slug, fullName, faction, rarity) {
-  log('info', 'Lecture de champions-index.js…');
-  const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/assets/js/champions-index.js', {
-    headers: { Authorization: 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
+// ── GitHub API ────────────────────────────────────────────
+async function ghPut(path, b64, message) {
+  var sha = null;
+  var check = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path, {
+    headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
   });
-  if (!res.ok)thrownewError('Lecturechampions-index.js:'+res.status);
-  const data = await res.json();
-  const sha = data.sha;
-  const current = atob(data.content.replace(/\n/g,''));
-
-  // Insert new champion before ].map(
-  const insertMarker = '].map(c';
-  const idx = current.lastIndexOf(insertMarker);
-  if (idx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
-
-  const newEntry = `  { name: '${escJs(fullName)}', faction: '${faction}', rarity: '${rarity}', folder: '${escJs(slug)}' },\n  `;
-  const newContent = current.slice(0, idx) + newEntry + current.slice(idx);
-
-  log('info', 'Commit de champions-index.js…');
-  const putRes = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/assets/js/champions-index.js', {
-    method: 'PUT',
-    headers: {
-      Authorization: 'Bearer ' + token,
-      'Content-Type': 'application/json',
-      'X-GitHub-Api-Version': '2022-11-28'
-    },
-    body: JSON.stringify({
-      message: 'feat: Ajouter ' + fullName + ' dans l\'index des champions',
-      content: btoa(unescape(encodeURIComponent(newContent))),
-      sha: sha,
-      branch: GITHUB_BRANCH
-    })
-  });
-  if (!putRes.ok){
-    const err = await putRes.json().catch(() => ({}));
-    throw new Error('Commit champions-index : ' + (err.message || putRes.status));
-  }
-  log('ok', 'champions-index.js mis à jour ✓');
-}
-
-// ─── GitHub file upload ───────────────────────────────────────
-async function uploadFile(path, base64Content, message) {
-  // Check if file exists (to get SHA for update)
-  let sha = null;
-  const checkRes = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + path, {
-    headers: { Authorization: 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28' }
-  });
-  if (checkRes.ok) {
-    const existing = await checkRes.json();
-    sha = existing.sha;
-  }
-
-  const body = { message, content: base64Content, branch: GITHUB_BRANCH };
+  if (check.ok) { var ex = await check.json(); sha = ex.sha; }
+  var body = { message: message, content: b64, branch: GH_BRANCH };
   if (sha) body.sha = sha;
-
-  const res = await fetch('https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + path, {
+  var r = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path, {
     method: 'PUT',
-    headers: {
-      Authorization: 'Bearer ' + token,
-      'Content-Type': 'application/json',
-      'X-GitHub-Api-Version': '2022-11-28'
-    },
+    headers: { 'Authorization': 'Bearer ' + ghTok, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
     body: JSON.stringify(body)
   });
-  if (!res.ok){
-    const err = await res.json().catch(() => ({}));
-    throw new Error(path + ' : ' + (err.message || res.status));
-  }
+  if (!r.ok){vare=awaitr.json().catch(function(){return{};});thrownewError(path+'('+r.status+'):'+(e.message||'erreur'));}
 }
 
-// ─── Main publish function ────────────────────────────────────
-async function publishChampion() {
-  const slug     = document.getElementById('slug').value.trim();
-  const fullName = document.getElementById('fullName').value.trim();
-  const faction  = document.getElementById('faction').value;
-  const rarity   = document.getElementById('rarity').value;
-  const champType  = document.getElementById('champType').value;
-  const champType2 = document.getElementById('champType2').value;
-  const auraDesc   = document.getElementById('auraDesc').value;
+async function updateIndex(slug, fullName, faction, rarity) {
+  plog('inf', 'Lecture champions-index.js...');
+  var r = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/assets/js/champions-index.js', {
+    headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
+  });
+  if (!r.ok)thrownewError('Lecturechampions-index:'+r.status);
+  var data = await r.json();
+  var cur  = atob(data.content.replace(/\n/g,''));
+  var marker = '].map(c';
+  var idx = cur.lastIndexOf(marker);
+  if (idx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
+  var entry = "  { name: '" + escJs(fullName) + "', faction: '" + faction + "', rarity: '" + rarity + "', folder: '" + escJs(slug) + "' },\n  ";
+  var newContent = cur.slice(0, idx) + entry + cur.slice(idx);
+  plog('inf', 'Commit champions-index.js...');
+  var upd = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/assets/js/champions-index.js', {
+    method: 'PUT',
+    headers: { 'Authorization': 'Bearer ' + ghTok, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
+    body: JSON.stringify({ message: 'feat: Ajouter ' + fullName + " dans l'index", content: btoa(unescape(encodeURIComponent(newContent))), sha: data.sha, branch: GH_BRANCH })
+  });
+  if (!upd.ok){vare2=awaitupd.json().catch(function(){return{};});thrownewError('champions-indexPUT:'+(e2.message||upd.status));}
+  plog('ok', 'champions-index.js mis a jour');
+}
 
-  if (!slug||!fullName){
-    alert('Le nom court (slug) et le nom complet sont obligatoires.');
-    return;
-  }
+// ── Publish ───────────────────────────────────────────────
+async function doPublish() {
+  var slug     = document.getElementById('slug').value.trim();
+  var fullName = document.getElementById('fullName').value.trim();
+  var faction  = document.getElementById('faction').value;
+  var rarity   = document.getElementById('rarity').value;
+  var type1    = document.getElementById('champType').value;
+  var type2    = document.getElementById('champType2').value;
+  var auraDesc = document.getElementById('auraDesc').value;
 
-  const stats1 = getStats(1);
-  const stats2 = rarity === 'mythical' ? getStats(2) : null;
+  if (!slug||!fullName){alert('Leslugetlenomcompletsontobligatoires.');return;}
 
-  const basePath = 'pages/factions/' + faction + '/' + rarity + '/' + slug + '/';
+  var stats1 = getStats('statsGrid1');
+  var stats2 = getStats('statsGrid2');
+  var base   = 'pages/factions/' + faction + '/' + rarity + '/' + slug + '/';
+  var msg    = 'feat: Ajouter le champion ' + fullName;
 
-  const btn = document.getElementById('publishBtn');
+  var btn = document.getElementById('publishBtn');
   btn.disabled = true;
-  btn.textContent = 'Publication en cours…';
-
-  const logEl = document.getElementById('progressLog');
-  logEl.className = 'progress-log visible';
-  logEl.innerHTML = '';
+  btn.textContent = 'Publication...';
+  document.getElementById('pubLog').className = 'pub-log open';
+  document.getElementById('pubLog').innerHTML = '';
 
   try {
-    const commitMsg = 'feat: Ajouter le champion ' + fullName;
+    // HTML
+    plog('inf', 'Upload HTML...');
+    var htmlContent = buildHtmlContent(slug, fullName, rarity, faction);
+    await ghPut(base + slug + '.html', btoa(unescape(encodeURIComponent(htmlContent))), msg);
+    plog('ok', slug + '.html cree');
 
-    // 1. HTML
-    log('info', 'Génération et upload du HTML…');
-    const htmlContent = buildHtml(slug, fullName, rarity, faction);
-    await uploadFile(basePath + slug + '.html', btoa(unescape(encodeURIComponent(htmlContent))), commitMsg);
-    log('ok', slug + '.html ✓');
+    // JS data
+    plog('inf', 'Upload JS...');
+    var jsContent = (rarity === 'legendary')
+      ? buildLegJs(slug, type1, stats1, selAura, auraDesc)
+      : buildMytJs(slug, type1, type2, stats1, stats2, selAura, auraDesc);
+    await ghPut(base + slug + '.js', btoa(unescape(encodeURIComponent(jsContent))), msg);
+    plog('ok', slug + '.js cree');
 
-    // 2. JS data
-    log('info', 'Génération et upload du JS…');
-    const jsContent = rarity === 'legendary'
-      ? buildLegendaryJs(slug, champType, stats1, selectedAura, auraDesc)
-      : buildMythicalJs(slug, champType, champType2, stats1, stats2, selectedAura, auraDesc);
-    await uploadFile(basePath + slug + '.js', btoa(unescape(encodeURIComponent(jsContent))), commitMsg);
-    log('ok', slug + '.js ✓');
-
-    // 3. Portrait
-    if (portraitBase64) {
-      log('info', 'Upload du portrait…');
-      await uploadFile(basePath + 'assets/' + slug + '.png', portraitBase64, commitMsg);
-      log('ok', 'Portrait ✓');
+    // Portrait
+    if (portraitB64) {
+      plog('inf', 'Upload portrait...');
+      await ghPut(base + 'assets/' + slug + '.png', portraitB64, msg);
+      plog('ok', 'Portrait charge');
     } else {
-      log('warn', 'Portrait ignoré (non chargé) — à ajouter manuellement');
+      plog('wrn', 'Portrait non charge — a ajouter manuellement');
     }
 
-    // 4. Spell images form 1
-    for (let i = 0; i < spells1.length; i++) {
-      if (spellImgs1[i]) {
-        log('info', 'Upload sort ' + (i+1) + ' (Forme 1)…');
-        await uploadFile(basePath + 'assets/sort' + (i+1) + '.png', spellImgs1[i].base64, commitMsg);
-        log('ok', 'sort' + (i+1) + '.png ✓');
+    // Spell images form 1
+    for (var i = 0; i < spells1.length; i++) {
+      if (imgs1[i]) {
+        plog('inf', 'Upload sort ' + (i+1) + ' (Forme 1)...');
+        await ghPut(base + 'assets/sort' + (i+1) + '.png', imgs1[i].base64, msg);
+        plog('ok', 'sort' + (i+1) + '.png');
       }
     }
 
-    // 5. Spell images form 2 (mythical)
+    // Spell images form 2
     if (rarity === 'mythical') {
-      for (let i = 0; i < spells2.length; i++) {
-        if (spellImgs2[i]) {
-          log('info', 'Upload sort ' + (i+1) + ' (Forme 2)…');
-          await uploadFile(basePath + 'assets/sort_f2_' + (i+1) + '.png', spellImgs2[i].base64, commitMsg);
-          log('ok', 'sort_f2_' + (i+1) + '.png ✓');
+      for (var j = 0; j < spells2.length; j++) {
+        if (imgs2[j]) {
+          plog('inf', 'Upload sort ' + (j+1) + ' (Forme 2)...');
+          await ghPut(base + 'assets/sort_f2_' + (j+1) + '.png', imgs2[j].base64, msg);
+          plog('ok', 'sort_f2_' + (j+1) + '.png');
         }
       }
     }
 
-    // 6. Update champions-index.js
-    await updateChampionsIndex(slug, fullName, faction, rarity);
+    // Update index
+    await updateIndex(slug, fullName, faction, rarity);
 
-    log('ok', '');
-    log('ok', '✅ Champion publié avec succès !');
-    log('info', 'URL : pages/factions/' + faction + '/' + rarity + '/' + slug + '/' + slug + '.html');
-    btn.textContent = '✅ Publié !';
-    btn.style.background = 'linear-gradient(135deg, var(--success), #16a34a)';
+    plog('ok', '');
+    plog('ok', 'Champion publie avec succes !');
+    plog('inf', 'URL : ' + base + slug + '.html');
+    btn.textContent = 'Publie !';
+    btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';
 
-  } catch (e) {
-    log('err', 'ERREUR : ' + e.message);
+  } catch(e) {
+    plog('err', 'ERREUR : ' + e.message);
     btn.disabled = false;
-    btn.textContent = '🚀 Publier le Champion';
+    btn.textContent = 'Publier le Champion';
   }
 }
 
-// ─── Log helper ───────────────────────────────────────────────
-function log(type, msg) {
-  const el = document.getElementById('progressLog');
-  const line = document.createElement('div');
-  line.className = 'log-line ' + type;
-  line.textContent = (type === 'ok' ? '✓ ' : type === 'err' ? '✗ ' : type === 'warn' ? '⚠ ' : '  ') + msg;
+// ── Progress log ──────────────────────────────────────────
+function plog(type, msg) {
+  var el = document.getElementById('pubLog');
+  var line = document.createElement('div');
+  line.className = 'log-' + type;
+  line.textContent = (type==='ok'?'✓ ':type==='err'?'✗ ':type==='wrn'?'⚠ ':'  ') + msg;
   el.appendChild(line);
   el.scrollTop = el.scrollHeight;
 }
 </script>
-
 </body>
 </html>

@@ -123,6 +123,15 @@ const FACTION_THEMES = {
         particles: '#16a34a',
         accent: '#22c55e'
     },
+    
+    // Faction 16 - Argonites
+    'faction15': {
+        name: 'Argonites',
+        background: 'linear-gradient(135deg,rgb(255, 202, 29) 0%,rgb(255, 144, 53) 50%,rgb(255, 205, 96) 100%)',
+        particles: '#ffd18b',
+        accent: '#ffffff'
+    },
+
 
     // Thème Yakarl - Tempête de Neige
     'yakarl': {

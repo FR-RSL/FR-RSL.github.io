@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homme Lézards - FR RSL</title>
+    <title>Argonites - FR RSL</title>
     <link rel="shortcut icon" href="../../../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../../../assets/css/main.css">
     <style>
-        /* Variables spécifiques à Homme Lézards */
+        /* Variables spécifiques à Argonites */
         :root {
-            --faction-primary: #4d7c0f;
-            --faction-secondary: #365314;
-            --faction-accent: #65a30d;
-            --faction-light: #84cc16;
+            --faction-primary: #06b6d4;
+            --faction-secondary: #0891b2;
+            --faction-accent: #22d3ee;
+            --faction-light: #67e8f9;
             --mythic: #e53935;
             --legendary: #ffb700;
             --epic: #a259e6;
@@ -23,10 +23,10 @@
         /* Styles spécifiques pour cette faction */
         .faction-hero {
             background: linear-gradient(135deg, 
-                rgba(77, 124, 15, 0.1) 0%, 
-                rgba(54, 83, 20, 0.2) 50%, 
-                rgba(77, 124, 15, 0.1) 100%);
-            border: 1px solid rgba(77, 124, 15, 0.3);
+                rgba(6, 182, 212, 0.1) 0%, 
+                rgba(8, 145, 178, 0.2) 50%, 
+                rgba(6, 182, 212, 0.1) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
             padding: 3rem 2rem;
             text-align: center;
             margin-bottom: 2rem;
@@ -43,7 +43,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(5, 150, 105,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(16, 185, 129,0.2)"/><circle cx="40" cy="80" r="1.5" fill="rgba(5, 150, 105,0.15)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(229, 231, 235,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(243, 244, 246,0.2)"/><circle cx="40" cy="80" r="1.5" fill="rgba(229, 231, 235,0.15)"/></svg>');
             animation: float 6s ease-in-out infinite;
             pointer-events: none;
         }
@@ -60,13 +60,13 @@
             width: 120px;
             height: 120px;
             object-fit: contain;
-            filter: drop-shadow(0 0 30px rgba(5, 150, 105, 0.6));
+            filter: drop-shadow(0 0 30px rgba(229, 231, 235, 0.6));
             transition: all 0.3s ease;
         }
 
         .faction-logo:hover {
             transform: scale(1.05) rotate(5deg);
-            filter: drop-shadow(0 0 40px rgba(5, 150, 105, 0.8));
+            filter: drop-shadow(0 0 40px rgba(229, 231, 235, 0.8));
         }
 
         .faction-title {
@@ -77,7 +77,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(5, 150, 105, 0.5);
+            text-shadow: 0 0 30px rgba(229, 231, 235, 0.5);
         }
 
         .faction-description {
@@ -98,7 +98,7 @@
 
         .faction-stat {
             background: var(--glass-bg);
-            border: 1px solid rgba(77, 124, 15, 0.3);
+            border: 1px solid rgba(6, 182, 212, 0.3);
             border-radius: 15px;
             padding: 1rem;
             text-align: center;
@@ -142,9 +142,9 @@
             font-size: 1.3rem;
             padding: 1rem 2rem;
             border-radius: 25px;
-            box-shadow: 0 8px 32px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(77, 124, 15, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.1);
             gap: 0.8rem;
             min-width: 200px;
             transition: all 0.3s ease;
@@ -274,33 +274,33 @@
 
         .champion-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
 
         /* Effets de hover selon la rareté */
         .champion-card[data-rarity="mythic"]:hover {
             border-color: var(--mythic);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
         .champion-card[data-rarity="legendary"]:hover {
             border-color: var(--legendary);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
         .champion-card[data-rarity="epic"]:hover {
             border-color: var(--epic);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
         .champion-card[data-rarity="rare"]:hover {
             border-color: var(--rare);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
         .champion-card[data-rarity="uncommon"]:hover {
             border-color: var(--uncommon);
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
         .champion-card[data-rarity="common"]:hover {
             border-color: #9e9e9e;
-            box-shadow: 0 20px 50px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.3);
         }
 
         .champion-image {
@@ -377,7 +377,7 @@
         .nav-pill:hover, .nav-pill.active {
             background: var(--faction-primary);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
         }
 
         /* Bouton retour à l'accueil dans le header */
@@ -401,7 +401,7 @@
         .back-to-home:hover {
             background: var(--faction-primary);
             transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(77, 124, 15, 0.3);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
         }
 
         .logo-section {
@@ -570,13 +570,10 @@
     <!-- Hero Section spécifique à la faction -->
     <div class="faction-hero">
         <div class="faction-header">
-            <img src="../../../assets/images/factions/lizardmen.png" alt="Logo Homme Lézards" class="faction-logo">
-            <h2 class="faction-title">Homme Lézards</h2>
+            <img src="../../../assets/images/factions/argonites.png" alt="Logo Argonites" class="faction-logo">
+            <h2 class="faction-title">Argonites</h2>
         </div>
-        <p class="faction-description">
-            Jadis, les ancêtres des Hommes Lézards s'appelaient les Descendants de Dragon et régnaient sur le plus gran empire de toute l'histoire de Téléria,
-            brisé par le péché et la guerre civile. Désormais, ils vivent dans les marais des Lacs du Chagrin, où ils aidèrent à fonder le Pacte Gaellen, mais leur fierté disparaît.
-        </p>
+        <p class="faction-description">A l'est des Iles perdues se trouvent les Argolades, un vaste archipel habite par les Argonites. Pendant que le reste de Teleria se rencontrait et se battait, ils resterent isoles, ne se souciant que de leurs epreuves. Desormais unis sous une banniere, les Argonites se sont allies a l'Union Nyresienne, et ils veulent accueillir des etrangers sur leurs terres.</p>
         
         <!-- Navigation rapide -->
         <div class="quick-nav">
@@ -636,12 +633,6 @@
             </div>
             <div class="champions-grid" id="legendaryContainer">
                 <!-- Champions légendaires à ajouter -->
-				<a href="legendary/donatello/donatello.html" class="champion-card" data-name="Donatello" data-rarity="legendary">
-                    <div class="champion-image">
-                        <img src="legendary/donatello/assets/donatello.png" alt="Donatello">
-                    </div>
-                    <span class="champion-name">Donatello</span>
-                </a>
             </div>
         </section>
 
@@ -674,7 +665,7 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Homme Lézards</h4>
+                    <h4>Argonites</h4>
                     <div class="footer-links">
                         <a href="#mythiques">Mythiques</a>
                         <a href="#legendaires">Légendaires</a>
@@ -718,7 +709,7 @@
             if (!particles) return;
             
             const particleCount = 30;
-            const colors = ["#4d7c0f", "#65a30d", "#84cc16"];
+            const colors = ["#06b6d4", "#22d3ee", "#67e8f9"];
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');

@@ -58,12 +58,12 @@ Des que ce Champion est tue, le ranime avec 50% de PV et 100% de Compteur de Tou
         }
     ],
     stats: {
-          "PV": "17505",
-          "ATQ": "1707",
+          "PV": "17 505",
+          "ATQ": "1 707",
           "DEF": "980",
           "VIT": "115",
-          "TAUX C.": "15",
-          "DEG C.": "63",
+          "TAUX C.": "15%",
+          "DEG C.": "63%",
           "RES": "30",
           "PRE": "0"
     }
@@ -125,12 +125,12 @@ Ceci ne placera pas la competence <span class='gt'>Rupture Glaciale</span> en te
         }
     ],
     stats: {
-          "PV": "25605",
+          "PV": "25 605",
           "ATQ": "815",
-          "DEF": "1332",
+          "DEF": "1 332",
           "VIT": "115",
-          "TAUX C.": "15",
-          "DEG C.": "63",
+          "TAUX C.": "15%",
+          "DEG C.": "63%",
           "RES": "30",
           "PRE": "0"
     }

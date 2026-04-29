@@ -1108,6 +1108,17 @@ function esc(s) {
 function escJs(s) {
   return String(s||'').replace(/\\/g,'\\\\').replace(/"/g,'\\"');
 }
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function fmtStat(v) {
+  var s = String(v).trim();
+  var m = s.match(/^(\d{4,})(.*)$/);
+  if (!m) return s;
+  var num = m[1], sfx = m[2], res = '';
+  while (num.length > 3) { res = '\u202f' + num.slice(-3) + res; num = num.slice(0, -3); }
+  return num + res + sfx;
+}
 
 // ── Build summary ─────────────────────────────────────────
 function buildSummary() {
@@ -1172,7 +1183,7 @@ function spellsToObj(list, imgs_arr, suffix) {
 function buildLegJs(slug, type, stats, aura_key, aura_desc) {
   var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
   var statsLines = Object.keys(stats).map(function(k) {
-    return '        "' + k + '": "' + escJs(stats[k]) + '"';
+    return '        "' + k + '": "' + escJs(fmtStat(stats[k])) + '"';
   }).join(',\n');
   return 'const championData = {\n' +
     '  type: "' + escJs(type) + '",\n' +
@@ -1187,7 +1198,7 @@ function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
   var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
   function statsLines(s) {
     return Object.keys(s).map(function(k) {
-      return '          "' + k + '": "' + escJs(s[k]) + '"';
+      return '          "' + k + '": "' + escJs(fmtStat(s[k])) + '"';
     }).join(',\n');
   }
   return 'const championForms = {\n' +
@@ -1330,6 +1341,41 @@ async function doPublish() {
       for (var j = 0; j < spells2.length; j++) {
         if (imgs2[j]) files.push({ path: base + 'assets/sort_f2_' + (j+1) + '.png', content: imgs2[j].base64 });
       }
+    }
+
+    // hub.html de la faction
+    plog('inf', 'Mise \u00e0 jour du hub ' + faction + '...');
+    var hubPath = 'pages/factions/' + faction + '/hub.html';
+    var hubR = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + hubPath, {
+      headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
+    });
+    if (hubR.ok) {
+      var hubData  = await hubR.json();
+      var hubCur   = decodeURIComponent(escape(atob(hubData.content.replace(/\n/g, ''))));
+      var cId      = rarity === 'legendary' ? 'legendaryContainer' : 'mythicalContainer';
+      var dAttr    = rarity === 'legendary' ? 'legendary' : 'mythic';
+      var mIdx     = hubCur.indexOf('id="' + cId + '">');
+      if (mIdx !== -1) {
+        var closeIdx = hubCur.indexOf('\n            </div>', mIdx);
+        if (closeIdx !== -1) {
+          var card =
+            '\n                <a href="' + rarity + '/' + slug + '/' + slug + '.html" class="champion-card" data-name="' + escHtml(fullName) + '" data-rarity="' + dAttr + '">' +
+            '\n                    <div class="champion-image">' +
+            '\n                        <img src="' + rarity + '/' + slug + '/assets/' + slug + '.png" alt="' + escHtml(fullName) + '">' +
+            '\n                    </div>' +
+            '\n                    <span class="champion-name">' + escHtml(fullName) + '</span>' +
+            '\n                </a>';
+          var hubNew = hubCur.slice(0, closeIdx) + card + hubCur.slice(closeIdx);
+          files.push({ path: hubPath, content: btoa(unescape(encodeURIComponent(hubNew))) });
+          plog('ok', 'hub.html mis \u00e0 jour');
+        } else {
+          plog('wrn', 'hub.html : fermeture du container introuvable, ajout manuel requis');
+        }
+      } else {
+        plog('wrn', 'hub.html : container "' + cId + '" introuvable, ajout manuel requis');
+      }
+    } else {
+      plog('wrn', 'hub.html introuvable (HTTP ' + hubR.status + '), ajout manuel requis');
     }
 
     // champions-index.js (lecture + modification)

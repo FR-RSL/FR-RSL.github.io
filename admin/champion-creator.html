@@ -334,8 +334,11 @@
         /* ── Level info ──────────────────────────────── */
         .lvl-list { display: flex; flex-direction: column; gap: 0.35rem; }
         .lvl-row { display: flex; gap: 0.35rem; align-items: center; }
-        .lvl-row input { flex: 1; padding: 0.45rem 0.7rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; }
-        .lvl-row input:focus { border-color: var(--primary); }
+        .lvl-row select { flex: 1; padding: 0.45rem 0.7rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(20,20,35,0.9); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; cursor: pointer; }
+        .lvl-row select:focus { border-color: var(--primary); }
+        .lvl-row input[type=number] { width: 68px; flex: none; padding: 0.45rem 0.55rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; text-align: center; }
+        .lvl-row input[type=number]:focus { border-color: var(--primary); }
+        .lvl-row .lvl-unit { font-size: 0.78rem; color: var(--text-muted); min-width: 16px; text-align: left; }
 
         /* ── Faction effects ─────────────────────────── */
         .faction-block {
@@ -735,6 +738,19 @@ var BUFFS_TK   = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS','
 var DEBUFFS_TK = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION','SHEEP','FATIGUE','UNFEEBLE','BLOCK_BUFFS','BLOCK_REA','BOMB','HEBETEMENT','DECAPITE','ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BURN','POISON','POISON_S','WEAKEN','HEX','LEECH','PAIN_LINK','LOCK_ACTIVE','LOCK_PASSIF','SCEAU','MASTER_SCEAU','BERSERK','HUNTER','NECROSIS','DEATHBRAND','TRAP','IRON_MARK','METEOR','HEALS'];
 var STAT_KEYS  = ['PV','ATQ','DEF','VIT','TAUX C.','DEG C.','RES','PRE'];
 
+// ── Level upgrade types ────────────────────────────────────
+var LEVEL_UPG = [
+  { key: 'dmg',    lbl: 'Dégâts',                  unit: '%',  fmt: function(v){ return 'Dégâts +' + v + '%'; } },
+  { key: 'chance', lbl: 'Chances de Buff/Debuff',   unit: '%',  fmt: function(v){ return 'Chances de Buff/Debuff +' + v + '%'; } },
+  { key: 'cd',     lbl: 'Temps de recharge',         unit: '',   fmt: function(v){ return 'Temps de recharge -' + v; } },
+  { key: 'res',    lbl: 'Ignorer la RES',            unit: '%',  fmt: function(v){ return 'Ignorer la RES +' + v + '%'; } },
+  { key: 'heals',  lbl: 'Soins',                    unit: '%',  fmt: function(v){ return 'Soins +' + v + '%'; } }
+];
+function lvlToString(li) {
+  var t = LEVEL_UPG.find(function(u){ return u.key === li.type; }) || LEVEL_UPG[0];
+  return t.fmt(li.val || 0);
+}
+
 // ── State ──────────────────────────────────────────────────
 var ghTok       = null;
 var selAff      = 'force';
@@ -949,9 +965,16 @@ function renderSpellList(form) {
       : '🔮';
 
     var lvlHtml = sp.levelInfo.map(function(li, li_i) {
+      var selOpts = LEVEL_UPG.map(function(u) {
+        return '<option value="' + u.key + '"' + (li.type === u.key ? ' selected' : '') + '>' + u.lbl + '</option>';
+      }).join('');
+      var curUnit = (LEVEL_UPG.find(function(u){ return u.key === li.type; }) || LEVEL_UPG[0]).unit;
       return '<div class="lvl-row">' +
-        '<input type="text" value="' + esc(li) + '" placeholder="Niv. ' + (li_i+2) + ' : Dégâts +10%"' +
-        ' oninput="updateLvl(' + form + ',' + i + ',' + li_i + ',this.value)">' +
+        '<span style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap">Niv.' + (li_i+2) + '</span>' +
+        '<select onchange="updateLvlType(' + form + ',' + i + ',' + li_i + ',this.value)">' + selOpts + '</select>' +
+        '<input type="number" min="1" max="99" value="' + (li.val || 10) + '"' +
+        ' oninput="updateLvlVal(' + form + ',' + i + ',' + li_i + ',this.value)">' +
+        '<span class="lvl-unit">' + (curUnit || '×') + '</span>' +
         '<button class="btn btn-sm btn-danger" onclick="rmLvl(' + form + ',' + i + ',' + li_i + ')">✕</button></div>';
     }).join('');
 
@@ -1042,13 +1065,17 @@ function setSp(form, idx, field, val) {
   var list = (form === 1) ? spells1 : spells2;
   if (list[idx]) list[idx][field] = val;
 }
-function updateLvl(form, idx, li, val) {
+function updateLvlType(form, idx, li, type) {
   var list = (form === 1) ? spells1 : spells2;
-  if (list[idx]) list[idx].levelInfo[li] = val;
+  if (list[idx] && list[idx].levelInfo[li]) { list[idx].levelInfo[li].type = type; renderSpellList(form); }
+}
+function updateLvlVal(form, idx, li, val) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (list[idx] && list[idx].levelInfo[li]) list[idx].levelInfo[li].val = parseInt(val) || 0;
 }
 function addLvl(form, idx) {
   var list = (form === 1) ? spells1 : spells2;
-  if (list[idx]) { list[idx].levelInfo.push(''); renderSpellList(form); }
+  if (list[idx]) { list[idx].levelInfo.push({ type: 'dmg', val: 10 }); renderSpellList(form); }
 }
 function rmLvl(form, idx, li) {
   var list = (form === 1) ? spells1 : spells2;
@@ -1131,8 +1158,8 @@ function spellsToObj(list, imgs_arr, suffix) {
     o += '          description: `' + (sp.desc||'').replace(/`/g,'\\`') + '`,\n';
     if (sp.damage && sp.damage.trim())   o += '          damage: "' + escJs(sp.damage) + '",\n';
     if (sp.cooldown && String(sp.cooldown).trim()) o += '          cooldown: ' + parseInt(sp.cooldown) + ',\n';
-    if (sp.levelInfo && sp.levelInfo.filter(function(x){return x.trim();}).length)
-      o += '          levelInfo: [' + sp.levelInfo.filter(function(x){return x.trim();}).map(function(x){return '"'+escJs(x)+'"';}).join(', ') + '],\n';
+    if (sp.levelInfo && sp.levelInfo.length)
+      o += '          levelInfo: [' + sp.levelInfo.map(function(li){ return '"' + escJs(lvlToString(li)) + '"'; }).join(', ') + '],\n';
     var isLead = document.getElementById('isLead').checked;
     if (isLead && sp.factions && sp.factions.some(function(x){return x.trim();}))
       o += '          factions: [\n' + sp.factions.map(function(f){return '            `' + f.replace(/`/g,'\\`') + '`';}).join(',\n') + '\n          ],\n';

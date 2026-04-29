@@ -381,11 +381,7 @@
         .aura-tile span { font-size: 0.6rem; color: var(--text-muted); text-align: center; }
 
         /* ── Stats ───────────────────────────────────── */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px,1fr)); gap: 0.65rem; }
-        .stat-row { display: flex; align-items: center; gap: 0.5rem; }
-        .stat-row label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); width: 75px; flex-shrink: 0; }
-        .stat-row input { flex: 1; padding: 0.5rem 0.7rem; border-radius: 7px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.85rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
-        .stat-row input:focus { border-color: var(--primary); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 0.75rem; }
 
         /* ── Portrait ────────────────────────────────── */
         .portrait-drop {
@@ -842,7 +838,7 @@ function buildStatsGrid(gridId) {
   if (!g) return;
   g.innerHTML = STAT_KEYS.map(function(k) {
     var id = gridId + '_' + k.replace(/\s/g,'_').replace(/\./g,'');
-    return '<div class="stat-row"><label>' + k + '</label><input type="text" id="' + id + '" placeholder="—"></div>';
+    return '<div class="field"><label>' + k + '</label><input type="text" id="' + id + '" placeholder="—"></div>';
   }).join('');
 }
 
@@ -877,9 +873,9 @@ function pickAura(el) {
 function buildToolbar(toolId, taId) {
   var bar = document.getElementById(toolId);
   if (!bar)return;
-  var html = BUFFS_TK.slice(0,12).map(function(k) {
+  var html = BUFFS_TK.map(function(k) {
     return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
-  }).join('') + DEBUFFS_TK.slice(0,10).map(function(k) {
+  }).join('') + DEBUFFS_TK.map(function(k) {
     return '<button class="tk d" onclick="insertTk(\'' + taId + '\',\'DEBUFFS\',\'' + k + '\')">D.' + k + '</button>';
   }).join('');
   bar.innerHTML = html;
@@ -893,6 +889,7 @@ function insertTk(taId, type, key) {
   ta.value = ta.value.slice(0, s) + tok + ta.value.slice(ta.selectionEnd);
   ta.selectionStart = ta.selectionEnd = s + tok.length;
   ta.focus();
+  ta.dispatchEvent(new Event('input'));
 }
 
 // ── Spell management ──────────────────────────────────────
@@ -1213,7 +1210,7 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '  <script src="../../../../../assets/js/constant.js"><\/script>\n' +
     '  <script src="' + esc(slug) + '.js"><\/script>\n' +
     '  <script src="../../../../../assets/js/' + runtime + '.js"><\/script>\n' +
-    '</body>\n</html>';
+    '</' + 'body>\n</' + 'html>';
 }
 
 // ── GitHub API ────────────────────────────────────────────

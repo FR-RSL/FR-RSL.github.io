@@ -48,12 +48,12 @@ Des que ce Champion tue un ennemi, accorde a ce Champion 20% de chances d'Esquiv
         }
   ],
   stats: {
-        "PV": "25770",
+        "PV": "25 770",
         "ATQ": "716",
-        "DEF": "1145",
+        "DEF": "1 145",
         "VIT": "98",
-        "TAUX C.": "15",
-        "DEG C.": "63",
+        "TAUX C.": "15%",
+        "DEG C.": "63%",
         "RES": "40",
         "PRE": "0"
   }

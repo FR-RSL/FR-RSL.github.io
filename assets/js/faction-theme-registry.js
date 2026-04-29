@@ -127,7 +127,7 @@ const FACTION_THEMES = {
     // Faction 16 - Argonites
     'faction16': {
         name: 'Argonites',
-        background: 'linear-gradient(135deg,rgb(255, 202, 29) 0%,rgb(255, 144, 53) 50%,rgb(255, 205, 96) 100%)',
+        background: 'linear-gradient(135deg,rgb(255, 202, 29) 0%,rgb(255, 169, 98) 50%,rgb(255, 241, 209) 100%)',
         particles: '#ffd18b',
         accent: '#ffffff'
     },

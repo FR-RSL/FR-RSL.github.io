@@ -167,6 +167,8 @@ function buildEditorToolbar() {
   var html =
     '<button class="tk p" onclick="insertEditorToken(\'PASSIVE\')">PASSIF</button>' +
     '<button class="tk p" onclick="insertEditorToken(\'ACTIVE\')">ACTIF</button>' +
+    '<button class="tk p" onclick="insertEditorToken(\'INSTANT\')">INSTANT</button>' +
+    '<button class="tk p" onclick="insertEditorToken(\'RETURN\')">↵ Saut ligne</button>' +
     BUFFS_TK.map(function(k) {
       return '<button class="tk" onclick="insertEditorToken(\'BUFFS.' + k + '\')">B.' + k + '</button>';
     }).join('') +

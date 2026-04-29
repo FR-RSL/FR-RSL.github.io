@@ -879,6 +879,8 @@ function buildToolbar(toolId, taId) {
   var html =
     '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'PASSIVE\')">PASSIF</button>' +
     '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'ACTIVE\')">ACTIF</button>' +
+    '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'INSTANT\')">INSTANT</button>' +
+    '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'RETURN\')">↵ Saut ligne</button>' +
     BUFFS_TK.map(function(k) {
       return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
     }).join('') +
@@ -1231,44 +1233,20 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '</' + 'body>\n</' + 'html>';
 }
 
-// ── GitHub API ────────────────────────────────────────────
-async function ghPut(path, b64, message) {
-  var sha = null;
-  var check = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path, {
-    headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
-  });
-  if (check.ok) { var ex = await check.json(); sha = ex.sha; }
-  var body = { message: message, content: b64, branch: GH_BRANCH };
-  if (sha) body.sha = sha;
-  var r = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + path, {
-    method: 'PUT',
-    headers: { 'Authorization': 'Bearer ' + ghTok, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
-    body: JSON.stringify(body)
-  });
-  if (!r.ok) { var e = await r.json().catch(function(){return{};}); throw new Error(path+'('+r.status+'): '+(e.message||'erreur')); }
-}
-
-async function updateIndex(slug, fullName, faction, rarity) {
-  plog('inf', 'Lecture champions-index.js...');
-  var r = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/assets/js/champions-index.js', {
-    headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
-  });
-  if (!r.ok) throw new Error('Lecture champions-index: '+r.status);
-  var data = await r.json();
-  var cur  = atob(data.content.replace(/\n/g,''));
-  var marker = '].map(c';
-  var idx = cur.lastIndexOf(marker);
-  if (idx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
-  var entry = "  { name: '" + escJs(fullName) + "', faction: '" + faction + "', rarity: '" + rarity + "', folder: '" + escJs(slug) + "' },\n  ";
-  var newContent = cur.slice(0, idx) + entry + cur.slice(idx);
-  plog('inf', 'Commit champions-index.js...');
-  var upd = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/assets/js/champions-index.js', {
-    method: 'PUT',
-    headers: { 'Authorization': 'Bearer ' + ghTok, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
-    body: JSON.stringify({ message: 'feat: Ajouter ' + fullName + " dans l'index", content: btoa(unescape(encodeURIComponent(newContent))), sha: data.sha, branch: GH_BRANCH })
-  });
-  if (!upd.ok) { var e2 = await upd.json().catch(function(){return{};}); throw new Error('champions-index PUT: '+(e2.message||upd.status)); }
-  plog('ok', 'champions-index.js mis a jour');
+// ── GitHub Git API ────────────────────────────────────────
+async function ghApi(method, endpoint, body) {
+  var opts = {
+    method: method,
+    headers: {
+      'Authorization': 'Bearer ' + ghTok,
+      'Content-Type': 'application/json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  };
+  if (body !== undefined) opts.body = JSON.stringify(body);
+  var r = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + endpoint, opts);
+  if (!r.ok) { var e = await r.json().catch(function(){return{};}); throw new Error(endpoint + ' (' + r.status + '): ' + (e.message || 'erreur')); }
+  return r.json();
 }
 
 // ── Publish ───────────────────────────────────────────────
@@ -1281,7 +1259,7 @@ async function doPublish() {
   var type2    = document.getElementById('champType2').value;
   var auraDesc = document.getElementById('auraDesc').value;
 
-  if (!slug||!fullName){alert('Le slug et le nom complet sont obligatoires.');return;}
+  if (!slug || !fullName) { alert('Le slug et le nom complet sont obligatoires.'); return; }
 
   var stats1 = getStats('statsGrid1');
   var stats2 = getStats('statsGrid2');
@@ -1295,56 +1273,84 @@ async function doPublish() {
   document.getElementById('pubLog').innerHTML = '';
 
   try {
-    // HTML
-    plog('inf', 'Upload HTML...');
-    var htmlContent = buildHtmlContent(slug, fullName, rarity, faction);
-    await ghPut(base + slug + '.html', btoa(unescape(encodeURIComponent(htmlContent))), msg);
-    plog('ok', slug + '.html cree');
+    // ── 1. Préparer tous les fichiers ─────────────────────
+    var files = []; // { path, content (base64) }
 
-    // JS data
-    plog('inf', 'Upload JS...');
+    // HTML
+    var htmlContent = buildHtmlContent(slug, fullName, rarity, faction);
+    files.push({ path: base + slug + '.html', content: btoa(unescape(encodeURIComponent(htmlContent))) });
+
+    // JS
     var jsContent = (rarity === 'legendary')
       ? buildLegJs(slug, type1, stats1, selAura, auraDesc)
       : buildMytJs(slug, type1, type2, stats1, stats2, selAura, auraDesc);
-    await ghPut(base + slug + '.js', btoa(unescape(encodeURIComponent(jsContent))), msg);
-    plog('ok', slug + '.js cree');
+    files.push({ path: base + slug + '.js', content: btoa(unescape(encodeURIComponent(jsContent))) });
 
     // Portrait
     if (portraitB64) {
-      plog('inf', 'Upload portrait...');
-      await ghPut(base + 'assets/' + slug + '.png', portraitB64, msg);
-      plog('ok', 'Portrait charge');
+      files.push({ path: base + 'assets/' + slug + '.png', content: portraitB64 });
     } else {
-      plog('wrn', 'Portrait non charge — a ajouter manuellement');
+      plog('wrn', 'Portrait non chargé — à ajouter manuellement');
     }
 
-    // Spell images form 1
+    // Images de sorts — Forme 1
     for (var i = 0; i < spells1.length; i++) {
-      if (imgs1[i]) {
-        plog('inf', 'Upload sort ' + (i+1) + ' (Forme 1)...');
-        await ghPut(base + 'assets/sort' + (i+1) + '.png', imgs1[i].base64, msg);
-        plog('ok', 'sort' + (i+1) + '.png');
-      }
+      if (imgs1[i]) files.push({ path: base + 'assets/sort' + (i+1) + '.png', content: imgs1[i].base64 });
     }
 
-    // Spell images form 2
+    // Images de sorts — Forme 2 (mythique)
     if (rarity === 'mythical') {
       for (var j = 0; j < spells2.length; j++) {
-        if (imgs2[j]) {
-          plog('inf', 'Upload sort ' + (j+1) + ' (Forme 2)...');
-          await ghPut(base + 'assets/sort_f2_' + (j+1) + '.png', imgs2[j].base64, msg);
-          plog('ok', 'sort_f2_' + (j+1) + '.png');
-        }
+        if (imgs2[j]) files.push({ path: base + 'assets/sort_f2_' + (j+1) + '.png', content: imgs2[j].base64 });
       }
     }
 
-    // Update index
-    await updateIndex(slug, fullName, faction, rarity);
+    // champions-index.js (lecture + modification)
+    plog('inf', 'Lecture champions-index.js...');
+    var idxR = await fetch('https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/assets/js/champions-index.js', {
+      headers: { 'Authorization': 'Bearer ' + ghTok, 'X-GitHub-Api-Version': '2022-11-28' }
+    });
+    if (!idxR.ok) throw new Error('Lecture champions-index: ' + idxR.status);
+    var idxData   = await idxR.json();
+    var idxCur    = atob(idxData.content.replace(/\n/g, ''));
+    var marker    = '].map(c';
+    var markerIdx = idxCur.lastIndexOf(marker);
+    if (markerIdx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
+    var entry  = "  { name: '" + escJs(fullName) + "', faction: '" + faction + "', rarity: '" + rarity + "', folder: '" + escJs(slug) + "' },\n  ";
+    var idxNew = idxCur.slice(0, markerIdx) + entry + idxCur.slice(markerIdx);
+    files.push({ path: 'assets/js/champions-index.js', content: btoa(unescape(encodeURIComponent(idxNew))) });
+
+    plog('inf', files.length + ' fichiers prêts — création du commit...');
+
+    // ── 2. HEAD actuel ────────────────────────────────────
+    var refData    = await ghApi('GET', '/git/refs/heads/' + GH_BRANCH);
+    var headSha    = refData.object.sha;
+    var commitData = await ghApi('GET', '/git/commits/' + headSha);
+    var treeSha    = commitData.tree.sha;
+
+    // ── 3. Créer les blobs (base64) ───────────────────────
+    plog('inf', 'Envoi des blobs...');
+    var treeItems = [];
+    for (var k = 0; k < files.length; k++) {
+      var blob = await ghApi('POST', '/git/blobs', { content: files[k].content, encoding: 'base64' });
+      treeItems.push({ path: files[k].path, mode: '100644', type: 'blob', sha: blob.sha });
+    }
+
+    // ── 4. Créer le tree ──────────────────────────────────
+    plog('inf', 'Création du tree...');
+    var newTree = await ghApi('POST', '/git/trees', { base_tree: treeSha, tree: treeItems });
+
+    // ── 5. Créer le commit ────────────────────────────────
+    plog('inf', 'Création du commit...');
+    var newCommit = await ghApi('POST', '/git/commits', { message: msg, tree: newTree.sha, parents: [headSha] });
+
+    // ── 6. Mettre à jour la branche ───────────────────────
+    await ghApi('PATCH', '/git/refs/heads/' + GH_BRANCH, { sha: newCommit.sha });
 
     plog('ok', '');
-    plog('ok', 'Champion publie avec succes !');
+    plog('ok', files.length + ' fichiers publiés en 1 seul commit !');
     plog('inf', 'URL : ' + base + slug + '.html');
-    btn.textContent = 'Publie !';
+    btn.textContent = 'Publié !';
     btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';
 
   } catch(e) {

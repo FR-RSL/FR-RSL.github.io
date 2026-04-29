@@ -98,3 +98,5 @@ const DEBUFFS = {
 
 const PASSIVE = `<span class='gbt'>Effet Passif</span><br><br>`
 const ACTIVE = `<span class='gbt'>Effet Actif</span><br><br>`
+const INSTANT = `<span class='gbt'>Tour instantané</span><br><br>`
+const RETURN = `<br>`

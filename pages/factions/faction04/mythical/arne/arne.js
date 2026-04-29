@@ -69,7 +69,7 @@ Des que ce Champion est tue, le ranime avec 50% de PV et 100% de Compteur de Tou
     }
   },
   form2: {
-    type: "HP",
+    type: "PV",
     spells: [
         {
           img: "assets/sort_f2_1.png",

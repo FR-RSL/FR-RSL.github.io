@@ -125,7 +125,7 @@ const FACTION_THEMES = {
     },
     
     // Faction 16 - Argonites
-    'faction15': {
+    'faction16': {
         name: 'Argonites',
         background: 'linear-gradient(135deg,rgb(255, 202, 29) 0%,rgb(255, 144, 53) 50%,rgb(255, 205, 96) 100%)',
         particles: '#ffd18b',
@@ -179,6 +179,7 @@ function detectFaction() {
             const iconToFaction = {
                 'shadowkin': 'faction14',
                 'sylvan': 'faction15',
+                'argonites': 'faction16',
                 'demonspawn': 'faction09',
                 'undead': 'faction10',
                 'orcs': 'faction08',

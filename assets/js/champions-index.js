@@ -22,6 +22,7 @@ const FACTION_META = {
   faction13: { name: 'Nains',                  img: 'dwarves.png'        },
   faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.png'      },
   faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png'},
+  faction16: { name: 'Argonites',              img: 'argonites.png'      },
 };
 
 /** GÃ©nÃ¨re l'URL de la page champion depuis la racine du site */

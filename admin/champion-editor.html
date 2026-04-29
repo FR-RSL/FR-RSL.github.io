@@ -70,6 +70,14 @@
     .filter-btn.on { background: rgba(68,96,255,0.18); border-color: var(--primary); color: var(--text-light); }
     .view-link { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; }
     .view-link:hover { color: var(--accent); }
+    /* Token toolbar */
+    .tk-bar { display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0.6rem 0; margin-bottom: 0.6rem; border-bottom: 1px solid var(--glass-border); }
+    .tk-bar .tk { padding: 0.18rem 0.45rem; font-size: 0.68rem; border-radius: 5px; border: 1px solid rgba(68,96,255,0.25); background: rgba(68,96,255,0.08); color: #a5b4fc; cursor: pointer; font-family: monospace; font-weight: 600; transition: background 0.15s; }
+    .tk-bar .tk:hover { background: rgba(68,96,255,0.22); }
+    .tk-bar .tk.d { border-color: rgba(239,68,68,0.25); background: rgba(239,68,68,0.1); color: #fca5a5; }
+    .tk-bar .tk.d:hover { background: rgba(239,68,68,0.2); }
+    .tk-bar .tk.p { border-color: rgba(253,186,116,0.35); background: rgba(253,186,116,0.08); color: #fde68a; }
+    .tk-bar .tk.p:hover { background: rgba(253,186,116,0.2); }
   </style>
 </head>
 <body>
@@ -128,6 +136,7 @@
         </div>
         <div id="editorContent" style="display:none">
           <div class="file-tabs" id="fileTabs"></div>
+          <div class="tk-bar" id="tkBar"></div>
           <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
         </div>
       </div>
@@ -149,6 +158,35 @@ var GH_OWNER  = 'FR-RSL';
 var GH_REPO   = 'FR-RSL.github.io';
 var GH_BRANCH = 'main';
 
+var BUFFS_TK   = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS','SHIELD','SHIELD_MAGMA','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM','RAGE','ET_RAGE','VEIL','PERFECT_VEIL','STRENGTHEN','COUNTER','LIFE_BARRIER','POISON_CLOUD','STONE_SKIN','REVENGE','SERPENT_WILL','BONE_ARMOR','LIGHT_ORB','TAUNT','ECLIPSE','INTERCEPT','FERVEUR','STORMBREAKER','HEALS','FORTIFY','SHATTER'];
+var DEBUFFS_TK = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION','SHEEP','FATIGUE','UNFEEBLE','BLOCK_BUFFS','BLOCK_REA','BOMB','HEBETEMENT','DECAPITE','ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BURN','POISON','POISON_S','WEAKEN','HEX','LEECH','PAIN_LINK','LOCK_ACTIVE','LOCK_PASSIF','SCEAU','MASTER_SCEAU','BERSERK','HUNTER','NECROSIS','DEATHBRAND','TRAP','IRON_MARK','METEOR','HEALS'];
+
+function buildEditorToolbar() {
+  var bar = document.getElementById('tkBar');
+  if (!bar) return;
+  var html =
+    '<button class="tk p" onclick="insertEditorToken(\'PASSIVE\')">PASSIF</button>' +
+    '<button class="tk p" onclick="insertEditorToken(\'ACTIVE\')">ACTIF</button>' +
+    BUFFS_TK.map(function(k) {
+      return '<button class="tk" onclick="insertEditorToken(\'BUFFS.' + k + '\')">B.' + k + '</button>';
+    }).join('') +
+    DEBUFFS_TK.map(function(k) {
+      return '<button class="tk d" onclick="insertEditorToken(\'DEBUFFS.' + k + '\')">D.' + k + '</button>';
+    }).join('');
+  bar.innerHTML = html;
+}
+
+function insertEditorToken(tok) {
+  var ta = document.getElementById('codeEditor');
+  if (!ta) return;
+  var str = '${' + tok + '}';
+  var s = ta.selectionStart;
+  ta.value = ta.value.slice(0, s) + str + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = s + str.length;
+  ta.focus();
+  document.getElementById('modifiedBadge').style.display = 'inline';
+}
+
 var ghTok = null;
 var allChamps = [];
 var curFilter = 'all';
@@ -165,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   spawnParticles();
   loadChampionsList();
+  buildEditorToolbar();
   document.getElementById('codeEditor').addEventListener('input', function() {
     document.getElementById('modifiedBadge').style.display = 'inline';
   });

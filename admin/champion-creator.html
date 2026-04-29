@@ -314,6 +314,8 @@
         .tk:hover { background: rgba(68,96,255,0.22); }
         .tk.d { border-color: rgba(239,68,68,0.25); background: rgba(239,68,68,0.1); color: #fca5a5; }
         .tk.d:hover { background: rgba(239,68,68,0.2); }
+        .tk.p { border-color: rgba(253,186,116,0.35); background: rgba(253,186,116,0.08); color: #fde68a; }
+        .tk.p:hover { background: rgba(253,186,116,0.2); }
         .desc-wrap textarea {
             width: 100%;
             box-sizing: border-box;
@@ -511,6 +513,7 @@
                     <option value="faction13">Nains</option>
                     <option value="faction14">Clan de l'Ombre</option>
                     <option value="faction15">Gardes Sylvains</option>
+                    <option value="faction16">Argonites</option>
                 </select>
             </div>
             <div class="field">
@@ -728,8 +731,8 @@ var AURAS = [
 ];
 
 // ── Buff / Debuff tokens ───────────────────────────────────
-var BUFFS_TK   = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS','SHIELD','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM','RAGE','VEIL','STRENGTHEN','COUNTER','HEALS','FORTIFY'];
-var DEBUFFS_TK = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION','BLOCK_BUFFS','WEAKEN','HEX','POISON','BURN','ATK','DEF','SPD','LEECH'];
+var BUFFS_TK   = ['ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BLOCK_DEBUFFS','SHIELD','SHIELD_MAGMA','REVIVE_ON_DEATH','ALLY_PROTECT','UNKILLABLE','BLOCK_DAMAGE','REFLECT_DAM','RAGE','ET_RAGE','VEIL','PERFECT_VEIL','STRENGTHEN','COUNTER','LIFE_BARRIER','POISON_CLOUD','STONE_SKIN','REVENGE','SERPENT_WILL','BONE_ARMOR','LIGHT_ORB','TAUNT','ECLIPSE','INTERCEPT','FERVEUR','STORMBREAKER','HEALS','FORTIFY','SHATTER'];
+var DEBUFFS_TK = ['STUN','GEL','SLEEP','PROVOKE','FEAR','TRUE_FEAR','PETRIFICATION','SHEEP','FATIGUE','UNFEEBLE','BLOCK_BUFFS','BLOCK_REA','BOMB','HEBETEMENT','DECAPITE','ATK','DEF','SPD','PRE','RES','CRATE','CDAM','BURN','POISON','POISON_S','WEAKEN','HEX','LEECH','PAIN_LINK','LOCK_ACTIVE','LOCK_PASSIF','SCEAU','MASTER_SCEAU','BERSERK','HUNTER','NECROSIS','DEATHBRAND','TRAP','IRON_MARK','METEOR','HEALS'];
 var STAT_KEYS  = ['PV','ATQ','DEF','VIT','TAUX C.','DEG C.','RES','PRE'];
 
 // ── State ──────────────────────────────────────────────────
@@ -872,12 +875,16 @@ function pickAura(el) {
 // ── Desc toolbar ──────────────────────────────────────────
 function buildToolbar(toolId, taId) {
   var bar = document.getElementById(toolId);
-  if (!bar)return;
-  var html = BUFFS_TK.map(function(k) {
-    return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
-  }).join('') + DEBUFFS_TK.map(function(k) {
-    return '<button class="tk d" onclick="insertTk(\'' + taId + '\',\'DEBUFFS\',\'' + k + '\')">D.' + k + '</button>';
-  }).join('');
+  if (!bar) return;
+  var html =
+    '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'PASSIVE\')">PASSIF</button>' +
+    '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'ACTIVE\')">ACTIF</button>' +
+    BUFFS_TK.map(function(k) {
+      return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
+    }).join('') +
+    DEBUFFS_TK.map(function(k) {
+      return '<button class="tk d" onclick="insertTk(\'' + taId + '\',\'DEBUFFS\',\'' + k + '\')">D.' + k + '</button>';
+    }).join('');
   bar.innerHTML = html;
 }
 
@@ -885,6 +892,17 @@ function insertTk(taId, type, key) {
   var ta = document.getElementById(taId);
   if (!ta) return;
   var tok = '${' + type + '.' + key + '}';
+  var s = ta.selectionStart;
+  ta.value = ta.value.slice(0, s) + tok + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = s + tok.length;
+  ta.focus();
+  ta.dispatchEvent(new Event('input'));
+}
+
+function insertDirect(taId, varName) {
+  var ta = document.getElementById(taId);
+  if (!ta) return;
+  var tok = '${' + varName + '}';
   var s = ta.selectionStart;
   ta.value = ta.value.slice(0, s) + tok + ta.value.slice(ta.selectionEnd);
   ta.selectionStart = ta.selectionEnd = s + tok.length;

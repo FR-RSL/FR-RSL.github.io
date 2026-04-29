@@ -18,7 +18,7 @@ Ne peut pas produire qu'une fois par tour`,
 Pour la premiere frappe, les degats recus par l'ennemi selectionne initialement augmenteront de 75%.
 Chaque ennemi frappe apres la frappe initiale recevra 15% de degats bonus en moins (se reduit jusqu'a 15% de degats bonus).${RETURN}
 Detruit egalement les PV MAX de chaque ennemi de 30% des degats infliges (s'accumule jusqu'a 50%).${RETURN}${RETURN}
-Pour la seconde frappe, les degars recus par l'ennemi selectionne initialement augmenteront de 15%. Chaque ennemi frappe apres la frappe initiale recevra 15% de degats bonus en plus (s'accumule jusqu'a 75% de degats bonus).${RETURN}${RETURN}
+Pour la seconde frappe, les degats recus par l'ennemi selectionne initialement augmenteront de 15%. Chaque ennemi frappe apres la frappe initiale recevra 15% de degats bonus en plus (s'accumule jusqu'a 75% de degats bonus).${RETURN}${RETURN}
 Cette attaque ignore 15% de la DEF de chaque cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "0.19*PV",
           cooldown: 4,

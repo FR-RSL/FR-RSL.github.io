@@ -22,7 +22,7 @@ L'activation instantane de cette competence ne la placera pas en temps de rechar
 Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
 Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
           cooldown: 5,
-          levelInfo: ["Temps de recharge -1", "Temps de recharge -3"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.png",

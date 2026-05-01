@@ -78,6 +78,10 @@
     .tk-bar .tk.d:hover { background: rgba(239,68,68,0.2); }
     .tk-bar .tk.p { border-color: rgba(253,186,116,0.35); background: rgba(253,186,116,0.08); color: #fde68a; }
     .tk-bar .tk.p:hover { background: rgba(253,186,116,0.2); }
+    .tk-bar .tk.grn { border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.08); color: #4ade80; }
+    .tk-bar .tk.grn:hover { background: rgba(74,222,128,0.2); }
+    .tk-bar .tk.gld { border-color: rgba(250,204,21,0.3); background: rgba(250,204,21,0.08); color: #fbbf24; }
+    .tk-bar .tk.gld:hover { background: rgba(250,204,21,0.2); }
   </style>
 </head>
 <body>
@@ -168,7 +172,11 @@ function buildEditorToolbar() {
     '<button class="tk p" onclick="insertEditorToken(\'PASSIVE\')">PASSIF</button>' +
     '<button class="tk p" onclick="insertEditorToken(\'ACTIVE\')">ACTIF</button>' +
     '<button class="tk p" onclick="insertEditorToken(\'INSTANT\')">INSTANT</button>' +
-    '<button class="tk p" onclick="insertEditorToken(\'RETURN\')">↵ Saut ligne</button>' +
+    '<button class="tk grn" onclick="insertEditorToken(\'RETURN\')">↵ Saut ligne</button>' +
+    '<button class="tk grn" onclick="insertEditorOpenGrn()">&lt;Vert&gt;</button>' +
+    '<button class="tk grn" onclick="insertEditorCloseTag()">&lt;/Vert&gt;</button>' +
+    '<button class="tk gld" onclick="insertEditorOpenGld()">&lt;Or&gt;</button>' +
+    '<button class="tk gld" onclick="insertEditorCloseTag()">&lt;/Or&gt;</button>' +
     BUFFS_TK.map(function(k) {
       return '<button class="tk" onclick="insertEditorToken(\'BUFFS.' + k + '\')">B.' + k + '</button>';
     }).join('') +
@@ -188,6 +196,19 @@ function insertEditorToken(tok) {
   ta.focus();
   document.getElementById('modifiedBadge').style.display = 'inline';
 }
+
+function insertEditorRaw(str) {
+  var ta = document.getElementById('codeEditor');
+  if (!ta) return;
+  var s = ta.selectionStart;
+  ta.value = ta.value.slice(0, s) + str + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = s + str.length;
+  ta.focus();
+  document.getElementById('modifiedBadge').style.display = 'inline';
+}
+function insertEditorOpenGrn()  { insertEditorRaw('<span class="grn-t">'); }
+function insertEditorOpenGld()  { insertEditorRaw('<span class="gold-t">'); }
+function insertEditorCloseTag() { insertEditorRaw('</' + 'span>'); }
 
 var ghTok = null;
 var allChamps = [];

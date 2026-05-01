@@ -854,6 +854,10 @@ body::before {
   color: gold; 
   font-weight: bold;
 }
+.grn-t {
+  color: #4ade80;
+  font-weight: bold;
+}
 
 /* Animations d'entrée modernes */
 .panel {

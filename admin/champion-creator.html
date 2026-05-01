@@ -316,6 +316,10 @@
         .tk.d:hover { background: rgba(239,68,68,0.2); }
         .tk.p { border-color: rgba(253,186,116,0.35); background: rgba(253,186,116,0.08); color: #fde68a; }
         .tk.p:hover { background: rgba(253,186,116,0.2); }
+        .tk.grn { border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.08); color: #4ade80; }
+        .tk.grn:hover { background: rgba(74,222,128,0.2); }
+        .tk.gld { border-color: rgba(250,204,21,0.3); background: rgba(250,204,21,0.08); color: #fbbf24; }
+        .tk.gld:hover { background: rgba(250,204,21,0.2); }
         .desc-wrap textarea {
             width: 100%;
             box-sizing: border-box;
@@ -898,7 +902,11 @@ function buildToolbar(toolId, taId) {
     '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'PASSIVE\')">PASSIF</button>' +
     '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'ACTIVE\')">ACTIF</button>' +
     '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'INSTANT\')">INSTANT</button>' +
-    '<button class="tk p" onclick="insertDirect(\'' + taId + '\',\'RETURN\')">↵ Saut ligne</button>' +
+    '<button class="tk grn" onclick="insertDirect(\'' + taId + '\',\'RETURN\')">↵ Saut ligne</button>' +
+    '<button class="tk grn" onclick="insertOpenGrn(\'' + taId + '\')">&lt;Vert&gt;</button>' +
+    '<button class="tk grn" onclick="insertCloseTag(\'' + taId + '\')">&lt;/Vert&gt;</button>' +
+    '<button class="tk gld" onclick="insertOpenGld(\'' + taId + '\')">&lt;Or&gt;</button>' +
+    '<button class="tk gld" onclick="insertCloseTag(\'' + taId + '\')">&lt;/Or&gt;</button>' +
     BUFFS_TK.map(function(k) {
       return '<button class="tk" onclick="insertTk(\'' + taId + '\',\'BUFFS\',\'' + k + '\')">B.' + k + '</button>';
     }).join('') +
@@ -929,6 +937,19 @@ function insertDirect(taId, varName) {
   ta.focus();
   ta.dispatchEvent(new Event('input'));
 }
+
+function insertRaw(taId, str) {
+  var ta = document.getElementById(taId);
+  if (!ta) return;
+  var s = ta.selectionStart;
+  ta.value = ta.value.slice(0, s) + str + ta.value.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = s + str.length;
+  ta.focus();
+  ta.dispatchEvent(new Event('input'));
+}
+function insertOpenGrn(taId)  { insertRaw(taId, '<span class="grn-t">'); }
+function insertOpenGld(taId)  { insertRaw(taId, '<span class="gold-t">'); }
+function insertCloseTag(taId) { insertRaw(taId, '</' + 'span>'); }
 
 // ── Spell management ──────────────────────────────────────
 function addSpell(form) {

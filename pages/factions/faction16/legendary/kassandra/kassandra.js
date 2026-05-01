@@ -21,7 +21,7 @@ Il est impossible de resister aux effets de cette Competence si cette Championne
         },
         {
           img: "assets/sort3.png",
-          name: "G",
+          name: "Grace d'Isu",
           description: `Retire tous les debuffs sur cette Championne, la soigne de 50% de ses PV MAX et remplit de 50% son Compteur de Tour.${RETURN}${RETURN}
 Place un buff ${BUFFS.ATK} de 50%, un buff ${BUFFS.SHATTER} de 15% et un buff ${BUFFS.SPD} de 30% sur cette Championne pendant 2 tours.${RETURN}${RETURN}${PASSIVE}
 Empeche la mort de cette Championne et la garde en vie avec 1 PV si elle se trouve sous buff ${BUFFS.ATK}, ${BUFFS.SHATTER} et ${BUFFS.SPD}.`,

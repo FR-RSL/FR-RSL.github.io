@@ -1,5 +1,5 @@
 const championData = {
-  type: "Attaque",
+  type: "Defense",
   spells: [
         {
           img: "assets/sort1.png",

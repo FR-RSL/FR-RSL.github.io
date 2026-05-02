@@ -163,7 +163,8 @@ const CHAMPIONS = [
   { name: 'Keberon le Sous-flamme',      faction: 'faction16', rarity: 'legendary', folder: 'keberon'   },
   { name: 'Knosson Taureau de bronze',   faction: 'faction16', rarity: 'legendary', folder: 'knosson'   },
   { name: 'Pelops le vainqueur',         faction: 'faction16', rarity: 'legendary', folder: 'pelops'    },
-].map(c => ({
+  { name: 'Dexikos des Marees', faction: 'faction16', rarity: 'epic', folder: 'dexikos' },
+  ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,
   img: c.noImg ? null : `pages/factions/${c.faction}/${c.rarity}/${c.folder}/assets/${c.folder}.png`,

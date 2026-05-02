@@ -528,6 +528,10 @@
                 <select id="rarity" onchange="onRarity(this.value)">
                     <option value="legendary">Légendaire</option>
                     <option value="mythical">Mythique</option>
+                    <option value="epic">Épique</option>
+                    <option value="rare">Rare</option>
+                    <option value="uncommon">Peu commun</option>
+                    <option value="common">Commun</option>
                 </select>
             </div>
             <div class="field">
@@ -643,7 +647,7 @@
 
         <div class="section-title">Aura</div>
         <div class="aura-grid" id="auraGrid"></div>
-        <div class="field" style="margin-top:0.5rem">
+        <div class="field" style="margin-top:0.5rem" id="auraDescWrap" style="display:none">
             <label>Description de l'aura</label>
             <div class="desc-wrap">
                 <div class="desc-toolbar" id="auraToolbar"></div>
@@ -760,7 +764,7 @@ function lvlToString(li) {
 // ── State ──────────────────────────────────────────────────
 var ghTok       = null;
 var selAff      = 'force';
-var selAura     = 'defence';
+var selAura     = null;
 var portraitB64 = null;
 var curFt       = 1;    // current form tab (1 or 2)
 var spells1     = [];
@@ -780,6 +784,7 @@ document.addEventListener('DOMContentLoaded', function() {
   buildStatsGrid('statsGrid2');
   buildAuraGrid();
   buildToolbar('auraToolbar', 'auraDesc');
+  document.getElementById('auraDescWrap').style.display = 'none';
   addSpell(1);
   addSpell(1);
   spawnParticles();
@@ -880,7 +885,10 @@ function getStats(gridId) {
 // ── Aura grid ─────────────────────────────────────────────
 function buildAuraGrid() {
   var g = document.getElementById('auraGrid');
-  g.innerHTML = AURAS.map(function(a) {
+  var noneHtml = '<div class="aura-tile' + (selAura === null ? ' on' : '') + '" data-akey="__none__" onclick="pickAura(this)" style="opacity:0.6">' +
+    '<div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem">✕</div>' +
+    '<span>Aucune</span></div>';
+  g.innerHTML = noneHtml + AURAS.map(function(a) {
     return '<div class="aura-tile' + (a.key === selAura ? ' on' : '') + '" data-akey="' + a.key + '" onclick="pickAura(this)">' +
            '<img src="../assets/images/auras/' + a.key + '.png" alt="' + a.lbl + '">' +
            '<span>' + a.lbl + '</span></div>';
@@ -888,10 +896,13 @@ function buildAuraGrid() {
 }
 
 function pickAura(el) {
-  selAura = el.getAttribute('data-akey');
+  var k = el.getAttribute('data-akey');
+  selAura = (k === '__none__') ? null : k;
   document.querySelectorAll('.aura-tile').forEach(function(t) {
-    t.classList.toggle('on', t.getAttribute('data-akey') === selAura);
+    var tk = t.getAttribute('data-akey');
+    t.classList.toggle('on', selAura === null ? tk === '__none__' : tk === selAura);
   });
+  document.getElementById('auraDescWrap').style.display = selAura ? 'block' : 'none';
 }
 
 // ── Desc toolbar ──────────────────────────────────────────
@@ -1156,11 +1167,11 @@ function buildSummary() {
     ['Slug',       slug || '—'],
     ['Nom',        fullName || '—'],
     ['Faction',    fmeta.name || faction],
-    ['Rarete',     rarity === 'legendary' ? 'Legendaire' : 'Mythique'],
+    ['Rarete',     { legendary:'Légendaire', mythical:'Mythique', epic:'Épique', rare:'Rare', uncommon:'Peu commun', common:'Commun' }[rarity] || rarity],
     ['Affinite',   selAff],
     ['Type',       document.getElementById('champType').value],
     ['Sorts F1',   spells1.length],
-    ['Aura',       selAura],
+    ['Aura',       selAura || 'Aucune'],
     ['Portrait',   portraitB64 ? 'Charge' : 'Manquant']
   ];
   grid.innerHTML = items.map(function(it) {
@@ -1204,25 +1215,38 @@ function spellsToObj(list, imgs_arr, suffix) {
 }
 
 function buildLegJs(slug, type, stats, aura_key, aura_desc) {
-  var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
   var statsLines = Object.keys(stats).map(function(k) {
     return '        "' + k + '": "' + escJs(fmtStat(stats[k])) + '"';
   }).join(',\n');
+  var auraBlock = '';
+  if (aura_key) {
+    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+    auraBlock = '\nconst aura = {\n' +
+      '  img: "' + auraPath + '",\n' +
+      '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
+  } else {
+    auraBlock = '\nconst aura = null;\n';
+  }
   return 'const championData = {\n' +
     '  type: "' + escJs(type) + '",\n' +
     '  spells: [\n' + spellsToObj(spells1, imgs1, false) + '\n  ],\n' +
-    '  stats: {\n' + statsLines + '\n  }\n};\n\n' +
-    'const aura = {\n' +
-    '  img: "' + auraPath + '",\n' +
-    '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
+    '  stats: {\n' + statsLines + '\n  }\n};\n' + auraBlock;
 }
 
 function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
-  var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
   function statsLines(s) {
     return Object.keys(s).map(function(k) {
       return '          "' + k + '": "' + escJs(fmtStat(s[k])) + '"';
     }).join(',\n');
+  }
+  var auraBlock = '';
+  if (aura_key) {
+    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+    auraBlock = '\nconst aura = {\n' +
+      '  img: "' + auraPath + '",\n' +
+      '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
+  } else {
+    auraBlock = '\nconst aura = null;\n';
   }
   return 'const championForms = {\n' +
     '  form1: {\n' +
@@ -1232,17 +1256,15 @@ function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
     '  form2: {\n' +
     '    type: "' + escJs(type2) + '",\n' +
     '    spells: [\n' + spellsToObj(spells2, imgs2, true) + '\n    ],\n' +
-    '    stats: {\n' + statsLines(stats2) + '\n    }\n  }\n};\n\n' +
-    'const aura = {\n' +
-    '  img: "' + auraPath + '",\n' +
-    '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
+    '    stats: {\n' + statsLines(stats2) + '\n    }\n  }\n};\n' + auraBlock;
 }
 
 function buildHtmlContent(slug, fullName, rarity, faction) {
   var fmeta    = FMETA[faction] || { img: 'bannerlords.png' };
-  var css      = (rarity === 'legendary') ? 'legendary' : 'mythical';
-  var runtime  = (rarity === 'legendary') ? 'champion-runtime-legendary' : 'champion-runtime-mythical';
-  var rarLabel = (rarity === 'legendary') ? 'Legendaire' : 'Mythique';
+  var css      = (rarity === 'mythical') ? 'mythical' : 'legendary';
+  var runtime  = (rarity === 'mythical') ? 'champion-runtime-mythical' : 'champion-runtime-legendary';
+  var rarLabels = { legendary:'Legendaire', mythical:'Mythique', epic:'Epique', rare:'Rare', uncommon:'Peu commun', common:'Commun' };
+  var rarLabel = rarLabels[rarity] || rarity;
   var type     = document.getElementById('champType').value;
   var formSel  = '';
   if (rarity === 'mythical') {
@@ -1320,7 +1342,18 @@ async function doPublish() {
   var type2    = document.getElementById('champType2').value;
   var auraDesc = document.getElementById('auraDesc').value;
 
-  if (!slug || !fullName) { alert('Le slug et le nom complet sont obligatoires.'); return; }
+  // ── Validation ─────────────────────────────────────────
+  var missing = [];
+  if (!slug)     missing.push('Slug (nom court)');
+  if (!fullName) missing.push('Nom complet');
+  if (spells1.length === 0) missing.push('Au moins 1 sort (Forme 1)');
+  if (spells1.some(function(s){ return !s.name.trim(); })) missing.push('Nom manquant sur un sort (Forme 1)');
+  if (rarity === 'mythical' && spells2.length === 0) missing.push('Au moins 1 sort (Forme 2)');
+  if (!portraitB64) missing.push('Portrait du champion (onglet 4)');
+  if (missing.length) {
+    alert('⚠️ Champs obligatoires manquants :\n\n• ' + missing.join('\n• '));
+    return;
+  }
 
   var stats1 = getStats('statsGrid1');
   var stats2 = getStats('statsGrid2');
@@ -1375,8 +1408,9 @@ async function doPublish() {
     if (hubR.ok) {
       var hubData  = await hubR.json();
       var hubCur   = decodeURIComponent(escape(atob(hubData.content.replace(/\n/g, ''))));
-      var cId      = rarity === 'legendary' ? 'legendaryContainer' : 'mythicalContainer';
-      var dAttr    = rarity === 'legendary' ? 'legendary' : 'mythic';
+      var rarToContainer = { legendary:'legendaryContainer', mythical:'mythicalContainer', epic:'epicContainer', rare:'rareContainer', uncommon:'uncommonContainer', common:'commonContainer' };
+      var cId      = rarToContainer[rarity] || 'legendaryContainer';
+      var dAttr    = rarity;
       var mIdx     = hubCur.indexOf('id="' + cId + '">');
       if (mIdx !== -1) {
         var closeIdx = hubCur.indexOf('\n            </div>', mIdx);

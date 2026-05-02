@@ -218,7 +218,7 @@ function handleTouch(event, index, isAura = false) {
 
 // Fonction pour l'aura
 function showAuraTooltip(event) {
-  if (isMobile()) return;
+  if (isMobile() || !aura) return;
 
   const tooltip = document.getElementById("tooltip");
   tooltip.innerHTML = `
@@ -291,14 +291,13 @@ function initPage() {
 
   // Mettre à jour l'aura
   const auraImg = document.getElementById("aura-img");
-  if (auraImg) {
+  const auraContainer = auraImg ? auraImg.closest('.aura-container') : null;
+  if (aura && auraImg) {
     auraImg.src = aura.img;
     auraImg.addEventListener('mouseenter', showAuraTooltip);
     auraImg.addEventListener('mouseleave', hideTooltip);
     auraImg.addEventListener('touchstart', (e) => handleTouch(e, 0, true));
 
-    // Créer la description mobile de l'aura (toujours, le CSS gère l'affichage)
-    const auraContainer = auraImg.closest('.aura-container');
     if (auraContainer) {
       const mobileAuraDesc = document.createElement('div');
       mobileAuraDesc.className = 'mobile-aura-description';
@@ -308,6 +307,8 @@ function initPage() {
       `;
       auraContainer.appendChild(mobileAuraDesc);
     }
+  } else if (auraContainer) {
+    auraContainer.style.display = 'none';
   }
 }
 

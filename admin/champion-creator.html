@@ -786,7 +786,6 @@ document.addEventListener('DOMContentLoaded', function() {
   buildToolbar('auraToolbar', 'auraDesc');
   document.getElementById('auraDescWrap').style.display = 'none';
   addSpell(1);
-  addSpell(1);
   spawnParticles();
 });
 
@@ -1289,7 +1288,7 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '      <h2 class="champion-name">' + esc(fullName) + '</h2>\n' +
     '      <div class="champion-info">\n' +
     '        <div class="info-group">\n' +
-    '          <div class="rarity-box">' + rarLabel + '</div>\n' +
+    '          <div class="rarity-box rarity-' + rarity + '">' + rarLabel + '</div>\n' +
     '          <div class="type-badge" id="champion-type">' + esc(type) + '</div>\n' +
     '        </div>\n' +
     '        <div class="info-group">\n' +
@@ -1375,7 +1374,7 @@ async function doPublish() {
     files.push({ path: base + slug + '.html', content: btoa(unescape(encodeURIComponent(htmlContent))) });
 
     // JS
-    var jsContent = (rarity === 'legendary')
+    var jsContent = (rarity !== 'mythical')
       ? buildLegJs(slug, type1, stats1, selAura, auraDesc)
       : buildMytJs(slug, type1, type2, stats1, stats2, selAura, auraDesc);
     files.push({ path: base + slug + '.js', content: btoa(unescape(encodeURIComponent(jsContent))) });

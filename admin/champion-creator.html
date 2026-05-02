@@ -1442,7 +1442,7 @@ async function doPublish() {
     });
     if (!idxR.ok) throw new Error('Lecture champions-index: ' + idxR.status);
     var idxData   = await idxR.json();
-    var idxCur    = atob(idxData.content.replace(/\n/g, ''));
+    var idxCur    = decodeURIComponent(escape(atob(idxData.content.replace(/\n/g, ''))));
     var marker    = '].map(c';
     var markerIdx = idxCur.lastIndexOf(marker);
     if (markerIdx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');

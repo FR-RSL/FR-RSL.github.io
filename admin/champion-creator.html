@@ -472,6 +472,8 @@
     <div class="admin-topbar">
         <h1>⚔️ Créateur de Champion</h1>
         <div class="topbar-actions">
+            <span id="draftStatus" style="font-size:0.8rem;color:var(--text-muted);transition:opacity 1.5s;opacity:0"></span>
+            <button class="btn btn-ghost" onclick="clearDraft()" title="Effacer le brouillon et repartir de zéro">✕ Brouillon</button>
             <a href="dashboard.html" class="btn btn-ghost">← Dashboard</a>
             <button class="btn btn-danger" id="btnLogout">Déconnexion</button>
         </div>
@@ -777,8 +779,10 @@ document.addEventListener('DOMContentLoaded', function() {
   buildAuraGrid();
   buildToolbar('auraToolbar', 'auraDesc');
   document.getElementById('auraDescWrap').style.display = 'none';
-  addSpell(1);
+  var draftLoaded = loadDraft();
+  if (!draftLoaded) addSpell(1);
   spawnParticles();
+  setInterval(saveDraft, 5000);
 });
 
 // ── Particles ──────────────────────────────────────────────
@@ -1032,7 +1036,7 @@ function renderSpellList(form) {
         '<div class="spell-img-btn" onclick="triggerSpImg(' + form + ',' + i + ')">' + imgHtml + '</div>' +
         '<input class="spell-name-input" type="text" value="' + esc(sp.name) + '"' +
                ' placeholder="Nom de la compétence" oninput="setSp(' + form + ',' + i + ',\'name\',this.value)">' +
-        '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="setSp(' + form + ',' + i + ',\'isPassive\',this.checked)"> Passif</label>' +
+        '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="togglePassive(' + form + ',' + i + ',this.checked)"> Passif</label>' +
         '<button class="btn-rm-spell" onclick="removeSpell(' + form + ',' + i + ')">✕</button>' +
       '</div>' +
       '<div class="field" style="margin-bottom:0.6rem">' +
@@ -1101,6 +1105,14 @@ function setSp(form, idx, field, val) {
   var list = (form === 1) ? spells1 : spells2;
   if (list[idx]) list[idx][field] = val;
 }
+function togglePassive(form, idx, checked) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (!list[idx]) return;
+  list[idx].isPassive = checked;
+  var name = (list[idx].name || '').replace(/\s*\[P\]$/i, '').trim();
+  list[idx].name = checked ? (name ? name + ' [P]' : '[P]') : name;
+  renderSpellList(form);
+}
 function updateLvlType(form, idx, li, type) {
   var list = (form === 1) ? spells1 : spells2;
   if (list[idx] && list[idx].levelInfo[li]) {
@@ -1139,6 +1151,99 @@ function onPortrait(input) {
     img.style.display = 'block';
   };
   reader.readAsDataURL(file);
+}
+
+// ── LocalStorage draft ───────────────────────────────────
+var DRAFT_KEY = 'champ_creator_draft';
+
+function saveDraft() {
+  try {
+    var draft = {
+      slug:      document.getElementById('slug').value,
+      fullName:  document.getElementById('fullName').value,
+      faction:   document.getElementById('faction').value,
+      rarity:    document.getElementById('rarity').value,
+      champType: document.getElementById('champType').value,
+      champType2:document.getElementById('champType2').value,
+      form1lbl:  document.getElementById('form1lbl').value,
+      form2lbl:  document.getElementById('form2lbl').value,
+      isLead:    document.getElementById('isLead').checked,
+      selAff:    selAff,
+      selAura:   selAura,
+      auraDesc:  document.getElementById('auraDesc').value,
+      spells1:   spells1,
+      spells2:   spells2,
+      stats1:    getStats('statsGrid1'),
+      stats2:    getStats('statsGrid2'),
+    };
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    showDraftIndicator('Brouillon sauvegardé');
+  } catch(e) {}
+}
+
+function loadDraft() {
+  try {
+    var raw = localStorage.getItem(DRAFT_KEY);
+    if (!raw) return false;
+    var d = JSON.parse(raw);
+    document.getElementById('slug').value      = d.slug      || '';
+    document.getElementById('fullName').value  = d.fullName  || '';
+    document.getElementById('faction').value   = d.faction   || 'faction01';
+    document.getElementById('rarity').value    = d.rarity    || 'legendary';
+    document.getElementById('champType').value = d.champType || 'Attaque';
+    document.getElementById('champType2').value= d.champType2|| 'Attaque';
+    document.getElementById('form1lbl').value  = d.form1lbl  || 'Forme de Base';
+    document.getElementById('form2lbl').value  = d.form2lbl  || 'Forme Alternative';
+    document.getElementById('isLead').checked  = !!d.isLead;
+    if (d.selAff) {
+      selAff = d.selAff;
+      document.querySelectorAll('.aff-tile').forEach(function(t) {
+        t.classList.toggle('on', t.getAttribute('data-aff') === selAff);
+      });
+    }
+    selAura = d.selAura !== undefined ? d.selAura : null;
+    buildAuraGrid();
+    document.getElementById('auraDescWrap').style.display = selAura ? 'block' : 'none';
+    if (d.auraDesc) document.getElementById('auraDesc').value = d.auraDesc;
+    if (d.spells1 && d.spells1.length) {
+      spells1 = d.spells1; imgs1 = spells1.map(function(){ return null; });
+    }
+    if (d.spells2 && d.spells2.length) {
+      spells2 = d.spells2; imgs2 = spells2.map(function(){ return null; });
+    }
+    renderSpellList(1);
+    renderSpellList(2);
+    if (d.stats1) restoreStats('statsGrid1', d.stats1);
+    if (d.stats2) restoreStats('statsGrid2', d.stats2);
+    onSlug(d.slug || '');
+    onRarity(d.rarity || 'legendary');
+    syncFormLabels();
+    showDraftIndicator('Brouillon restauré ✓');
+    return true;
+  } catch(e) { return false; }
+}
+
+function restoreStats(gridId, stats) {
+  STAT_KEYS.forEach(function(k) {
+    var id = gridId + '_' + k.replace(/\s/g,'_').replace(/\./g,'');
+    var el = document.getElementById(id);
+    if (el && stats[k] !== undefined) el.value = stats[k];
+  });
+}
+
+function clearDraft() {
+  if (!confirm('Effacer le brouillon et repartir de zéro ?')) return;
+  localStorage.removeItem(DRAFT_KEY);
+  location.reload();
+}
+
+function showDraftIndicator(msg) {
+  var el = document.getElementById('draftStatus');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.opacity = '1';
+  clearTimeout(el._t);
+  el._t = setTimeout(function() { el.style.opacity = '0'; }, 2500);
 }
 
 // ── HTML escape ───────────────────────────────────────────

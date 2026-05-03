@@ -173,6 +173,7 @@ const CHAMPIONS = [
     { name: 'Sentinelle engloutie', faction: 'faction16', rarity: 'rare', folder: 'sentinelle' },
     { name: 'Vestele epine-fleuve', faction: 'faction15', rarity: 'legendary', folder: 'vestele' },
     { name: 'Baerd le Trapu', faction: 'faction15', rarity: 'legendary', folder: 'baerd' },
+    { name: 'Arachoa Tourne-lune', faction: 'faction01', rarity: 'mythical', folder: 'arachoa' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

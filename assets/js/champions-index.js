@@ -172,6 +172,7 @@ const CHAMPIONS = [
     { name: 'Acolyte du Rampant', faction: 'faction16', rarity: 'rare', folder: 'rampant' },
     { name: 'Sentinelle engloutie', faction: 'faction16', rarity: 'rare', folder: 'sentinelle' },
     { name: 'Vestele epine-fleuve', faction: 'faction15', rarity: 'legendary', folder: 'vestele' },
+    { name: 'Baerd le Trapu', faction: 'faction15', rarity: 'legendary', folder: 'baerd' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

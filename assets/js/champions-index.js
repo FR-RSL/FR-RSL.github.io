@@ -164,6 +164,7 @@ const CHAMPIONS = [
   { name: 'Knosson Taureau de bronze',   faction: 'faction16', rarity: 'legendary', folder: 'knosson'   },
   { name: 'Pelops le vainqueur',         faction: 'faction16', rarity: 'legendary', folder: 'pelops'    },
   { name: 'Dexikos des Marees', faction: 'faction16', rarity: 'epic', folder: 'dexikos' },
+    { name: 'Galatee Garde-Lion', faction: 'faction16', rarity: 'epic', folder: 'galatee' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

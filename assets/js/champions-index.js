@@ -171,6 +171,7 @@ const CHAMPIONS = [
     { name: 'Pegason pourpre', faction: 'faction16', rarity: 'rare', folder: 'pegason' },
     { name: 'Acolyte du Rampant', faction: 'faction16', rarity: 'rare', folder: 'rampant' },
     { name: 'Sentinelle engloutie', faction: 'faction16', rarity: 'rare', folder: 'sentinelle' },
+    { name: 'Vestele epine-fleuve', faction: 'faction15', rarity: 'legendary', folder: 'vestele' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

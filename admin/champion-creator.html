@@ -1557,7 +1557,7 @@ async function doPublish() {
     var marker    = '].map(c';
     var markerIdx = idxCur.lastIndexOf(marker);
     if (markerIdx === -1) throw new Error('Marqueur ].map( introuvable dans champions-index.js');
-    var entry  = "  { name: '" + escJs(fullName) + "', faction: '" + faction + "', rarity: '" + rarity + "', folder: '" + escJs(slug) + "' },\n  ";
+    var entry  = "  { name: \"" + escJs(fullName) + "\", faction: '" + faction + "', rarity: '" + rarity + "', folder: '" + escJs(slug) + "' },\n  ";
     var idxNew = idxCur.slice(0, markerIdx) + entry + idxCur.slice(markerIdx);
     files.push({ path: 'assets/js/champions-index.js', content: btoa(unescape(encodeURIComponent(idxNew))) });
 

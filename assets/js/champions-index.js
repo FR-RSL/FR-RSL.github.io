@@ -175,7 +175,7 @@ const CHAMPIONS = [
     { name: 'Baerd le Trapu', faction: 'faction15', rarity: 'legendary', folder: 'baerd' },
     { name: 'Arachoa Tourne-lune', faction: 'faction01', rarity: 'mythical', folder: 'arachoa' },
     { name: 'Rae', faction: 'faction11', rarity: 'legendary', folder: 'rae' },
-    { name: 'Lanakis l'Elue', faction: 'faction11', rarity: 'legendary', folder: 'lanakis' },
+    { name: "Lanakis l'Elue", faction: 'faction11', rarity: 'legendary', folder: 'lanakis' },
     { name: 'Foli', faction: 'faction11', rarity: 'legendary', folder: 'foli' },
     { name: 'Noct le Paralyseur', faction: 'faction11', rarity: 'legendary', folder: 'noct' },
     { name: 'Truath', faction: 'faction11', rarity: 'legendary', folder: 'truath' },

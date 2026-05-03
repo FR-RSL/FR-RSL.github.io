@@ -173,7 +173,7 @@ const CHAMPIONS = [
     { name: 'Sentinelle engloutie', faction: 'faction16', rarity: 'rare', folder: 'sentinelle' },
     { name: 'Vestele epine-fleuve', faction: 'faction15', rarity: 'legendary', folder: 'vestele' },
     { name: 'Baerd le Trapu', faction: 'faction15', rarity: 'legendary', folder: 'baerd' },
-    { name: 'Arachoa Tourne-lune', faction: 'faction01', rarity: 'mythical', folder: 'arachoa' },
+    { name: 'Arachoa Tourne-lune', faction: 'faction11', rarity: 'mythical', folder: 'arachoa' },
     { name: 'Rae', faction: 'faction11', rarity: 'legendary', folder: 'rae' },
     { name: "Lanakis l'Elue", faction: 'faction11', rarity: 'legendary', folder: 'lanakis' },
     { name: 'Foli', faction: 'faction11', rarity: 'legendary', folder: 'foli' },

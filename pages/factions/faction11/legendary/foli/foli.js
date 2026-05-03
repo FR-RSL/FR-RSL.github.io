@@ -22,6 +22,7 @@ const championData = {
           description: `Attaque tous les ennemis. Reduit de 15% le Compteur de Tour de chaque ennemi, puis attaque l'ennemi cible.${RETURN}${RETURN}
 Place un debuff ${DEBUFFS.BLOCK_REA} sur les cibles tuees.`,
           damage: "4*ATQ",
+	  cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {

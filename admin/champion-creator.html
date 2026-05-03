@@ -482,8 +482,7 @@
         <button class="tab-btn active" data-tab="t-infos"    onclick="goTab('t-infos')">1. Infos</button>
         <button class="tab-btn"        data-tab="t-spells"   onclick="goTab('t-spells')">2. Compétences</button>
         <button class="tab-btn"        data-tab="t-stats"    onclick="goTab('t-stats')">3. Stats &amp; Aura</button>
-        <button class="tab-btn"        data-tab="t-portrait" onclick="goTab('t-portrait')">4. Portrait</button>
-        <button class="tab-btn"        data-tab="t-publish"  onclick="goTab('t-publish')">5. Publier</button>
+        <button class="tab-btn"        data-tab="t-publish"  onclick="goTab('t-publish')">4. Publier</button>
     </div>
 
     <!--══════════════════════════════════════
@@ -599,6 +598,20 @@
             </div>
         </div>
 
+        <div class="section-title" style="margin-top:1.2rem">Portrait du Champion</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem">
+            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">assets/</code>.
+        </p>
+        <div class="portrait-drop" onclick="document.getElementById('portraitInput').click()">
+            <div id="portraitPh">
+                <div style="font-size:2.5rem;margin-bottom:0.5rem">🖼️</div>
+                <p>Cliquer pour choisir une image</p>
+                <small>PNG, JPG — recommandé 400×500 px</small>
+            </div>
+            <img id="portraitPreview" class="portrait-preview" style="display:none">
+        </div>
+        <input type="file" id="portraitInput" accept="image/*" onchange="onPortrait(this)">
+
     </div><!--/t-infos-->
 
     <!--══════════════════════════════════════
@@ -658,28 +671,7 @@
     </div><!--/t-stats-->
 
     <!--══════════════════════════════════════
-         TAB 4 — PORTRAIT
-    ══════════════════════════════════════ -->
-    <div class="tab-panel panel" id="t-portrait">
-
-        <div class="section-title">Portrait du Champion</div>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem">
-            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">assets/</code>.
-        </p>
-        <div class="portrait-drop" onclick="document.getElementById('portraitInput').click()">
-            <div id="portraitPh">
-                <div style="font-size:2.5rem;margin-bottom:0.5rem">🖼️</div>
-                <p>Cliquer pour choisir une image</p>
-                <small>PNG, JPG — recommandé 400×500 px</small>
-            </div>
-            <img id="portraitPreview" class="portrait-preview" style="display:none">
-        </div>
-        <input type="file" id="portraitInput" accept="image/*" onchange="onPortrait(this)">
-
-    </div><!--/t-portrait-->
-
-    <!--══════════════════════════════════════
-         TAB 5 — PUBLIER
+         TAB 4 — PUBLIER
     ══════════════════════════════════════ -->
     <div class="tab-panel panel" id="t-publish">
 
@@ -749,12 +741,12 @@ var STAT_KEYS  = ['PV','ATQ','DEF','VIT','TAUX C.','DEG C.','RES','PRE'];
 
 // ── Level upgrade types ────────────────────────────────────
 var LEVEL_UPG = [
-  { key: 'dmg',    lbl: 'Dégâts',                  unit: '%',  fmt: function(v){ return 'Dégâts +' + v + '%'; } },
-  { key: 'chance', lbl: 'Chances de Buff/Debuff',   unit: '%',  fmt: function(v){ return 'Chances de Buff/Debuff +' + v + '%'; } },
-  { key: 'cd',     lbl: 'Temps de recharge',         unit: '',   fmt: function(v){ return 'Temps de recharge -' + v; } },
-  { key: 'res',    lbl: 'Ignorer la RES',            unit: '%',  fmt: function(v){ return 'Ignorer la RES +' + v + '%'; } },
-  { key: 'shield',  lbl: 'Bouclier',                    unit: '%',  fmt: function(v){ return 'Bouclier +' + v + '%'; } },
-  { key: 'heals',  lbl: 'Soins',                    unit: '%',  fmt: function(v){ return 'Soins +' + v + '%'; } }
+  { key: 'dmg',    lbl: 'Dégâts',                  unit: '%',  step: 5, fmt: function(v){ return 'Dégâts +' + v + '%'; } },
+  { key: 'chance', lbl: 'Chances de Buff/Debuff',   unit: '%',  step: 5, fmt: function(v){ return 'Chances de Buff/Debuff +' + v + '%'; } },
+  { key: 'cd',     lbl: 'Temps de recharge',         unit: '',   step: 0, fmt: function(v){ return 'Temps de recharge -1'; } },
+  { key: 'res',    lbl: 'Ignorer la RES',            unit: '%',  step: 5, fmt: function(v){ return 'Ignorer la RES +' + v + '%'; } },
+  { key: 'shield', lbl: 'Bouclier',                  unit: '%',  step: 5, fmt: function(v){ return 'Bouclier +' + v + '%'; } },
+  { key: 'heals',  lbl: 'Soins',                    unit: '%',  step: 5, fmt: function(v){ return 'Soins +' + v + '%'; } }
 ];
 function lvlToString(li) {
   var t = LEVEL_UPG.find(function(u){ return u.key === li.type; }) || LEVEL_UPG[0];
@@ -902,6 +894,10 @@ function pickAura(el) {
     t.classList.toggle('on', selAura === null ? tk === '__none__' : tk === selAura);
   });
   document.getElementById('auraDescWrap').style.display = selAura ? 'block' : 'none';
+  if (selAura) {
+    var ta = document.getElementById('auraDesc');
+    if (!ta.value.trim()) ta.value = 'Augmente la statistique ';
+  }
 }
 
 // ── Desc toolbar ──────────────────────────────────────────
@@ -1001,13 +997,20 @@ function renderSpellList(form) {
       var selOpts = LEVEL_UPG.map(function(u) {
         return '<option value="' + u.key + '"' + (li.type === u.key ? ' selected' : '') + '>' + u.lbl + '</option>';
       }).join('');
-      var curUnit = (LEVEL_UPG.find(function(u){ return u.key === li.type; }) || LEVEL_UPG[0]).unit;
+      var curUpg  = (LEVEL_UPG.find(function(u){ return u.key === li.type; }) || LEVEL_UPG[0]);
+      var curUnit = curUpg.unit;
+      var isCd    = li.type === 'cd';
+      var curStep = curUpg.step || 1;
+      var curVal  = isCd ? 1 : (li.val || 10);
+      var inputHtml = isCd
+        ? '<span style="font-size:0.8rem;color:var(--text-muted);padding:0 0.3rem">−1</span>'
+        : '<input type="number" min="' + curStep + '" max="99" step="' + curStep + '" value="' + curVal + '"' +
+          ' oninput="updateLvlVal(' + form + ',' + i + ',' + li_i + ',this.value)">';
       return '<div class="lvl-row">' +
         '<span style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap">Niv.' + (li_i+2) + '</span>' +
         '<select onchange="updateLvlType(' + form + ',' + i + ',' + li_i + ',this.value)">' + selOpts + '</select>' +
-        '<input type="number" min="1" max="99" value="' + (li.val || 10) + '"' +
-        ' oninput="updateLvlVal(' + form + ',' + i + ',' + li_i + ',this.value)">' +
-        '<span class="lvl-unit">' + (curUnit || '×') + '</span>' +
+        inputHtml +
+        (curUnit ? '<span class="lvl-unit">' + curUnit + '</span>' : '') +
         '<button class="btn btn-sm btn-danger" onclick="rmLvl(' + form + ',' + i + ',' + li_i + ')">✕</button></div>';
     }).join('');
 
@@ -1100,7 +1103,11 @@ function setSp(form, idx, field, val) {
 }
 function updateLvlType(form, idx, li, type) {
   var list = (form === 1) ? spells1 : spells2;
-  if (list[idx] && list[idx].levelInfo[li]) { list[idx].levelInfo[li].type = type; renderSpellList(form); }
+  if (list[idx] && list[idx].levelInfo[li]) {
+    list[idx].levelInfo[li].type = type;
+    if (type === 'cd') list[idx].levelInfo[li].val = 1;
+    renderSpellList(form);
+  }
 }
 function updateLvlVal(form, idx, li, val) {
   var list = (form === 1) ? spells1 : spells2;

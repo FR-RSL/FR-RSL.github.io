@@ -182,7 +182,7 @@ const CHAMPIONS = [
     { name: 'Xenomorphe', faction: 'faction11', rarity: 'legendary', folder: 'xeno' },
     { name: 'Mavara la Voyante', faction: 'faction11', rarity: 'legendary', folder: 'mavara' },
     { name: "Zavia", faction: 'faction11', rarity: 'legendary', folder: 'zavia' },
-    { name: "maranix", faction: 'faction11', rarity: 'legendary', folder: 'maranix' },
+    { name: "Maranix", faction: 'faction11', rarity: 'legendary', folder: 'maranix' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

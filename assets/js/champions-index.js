@@ -187,6 +187,7 @@ const CHAMPIONS = [
     { name: "Cromax Sanglune", faction: 'faction11', rarity: 'legendary', folder: 'cromax' },
     { name: "Parle-nuees Zyclic", faction: 'faction11', rarity: 'legendary', folder: 'zyclic' },
     { name: "Noldua du Crepuscule", faction: 'faction11', rarity: 'legendary', folder: 'noldua' },
+    { name: "Astralithe", faction: 'faction11', rarity: 'legendary', folder: 'astralithe' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

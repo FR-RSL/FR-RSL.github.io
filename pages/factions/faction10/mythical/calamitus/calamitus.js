@@ -122,7 +122,7 @@ const championForms = {
               Les degats augmentent de 10% pour chaque débuff sur chaque cible.
             `,
             damage: "4.2*ATQ",
-            cooldown: 3,
+            cooldown: 4,
             levelInfo: [
               "Dégâts +20%",
               "Temps de recharge -1"

@@ -186,26 +186,6 @@ const CHAMPIONS = [
     { name: 'Pegason pourpre', faction: 'faction16', rarity: 'rare', folder: 'pegason' },
     { name: 'Acolyte du Rampant', faction: 'faction16', rarity: 'rare', folder: 'rampant' },
     { name: 'Sentinelle engloutie', faction: 'faction16', rarity: 'rare', folder: 'sentinelle' },
-<<<<<<< HEAD
-=======
-    { name: 'Vestele epine-fleuve', faction: 'faction15', rarity: 'legendary', folder: 'vestele' },
-    { name: 'Baerd le Trapu', faction: 'faction15', rarity: 'legendary', folder: 'baerd' },
-    { name: 'Arachoa Tourne-lune', faction: 'faction11', rarity: 'mythical', folder: 'arachoa' },
-    { name: 'Rae', faction: 'faction11', rarity: 'legendary', folder: 'rae' },
-    { name: "Lanakis l'Elue", faction: 'faction11', rarity: 'legendary', folder: 'lanakis' },
-    { name: 'Foli', faction: 'faction11', rarity: 'legendary', folder: 'foli' },
-    { name: 'Noct le Paralyseur', faction: 'faction11', rarity: 'legendary', folder: 'noct' },
-    { name: 'Truath', faction: 'faction11', rarity: 'legendary', folder: 'truath' },
-    { name: 'Xenomorphe', faction: 'faction11', rarity: 'legendary', folder: 'xeno' },
-    { name: 'Mavara la Voyante', faction: 'faction11', rarity: 'legendary', folder: 'mavara' },
-    { name: "Zavia", faction: 'faction11', rarity: 'legendary', folder: 'zavia' },
-    { name: "Maranix", faction: 'faction11', rarity: 'legendary', folder: 'maranix' },
-    { name: "Vizir Ovelis", faction: 'faction11', rarity: 'legendary', folder: 'vizir' },
-    { name: "Cromax Sanglune", faction: 'faction11', rarity: 'legendary', folder: 'cromax' },
-    { name: "Parle-nuees Zyclic", faction: 'faction11', rarity: 'legendary', folder: 'zyclic' },
-    { name: "Noldua du Crepuscule", faction: 'faction11', rarity: 'legendary', folder: 'noldua' },
-    { name: "Astralithe", faction: 'faction11', rarity: 'legendary', folder: 'astralithe' },
->>>>>>> refs/remotes/origin/main
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

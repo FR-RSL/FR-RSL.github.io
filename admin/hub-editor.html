@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modifier un Hub — FR RSL Admin</title>
   <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' https://raw.githubusercontent.com data: blob:; font-src 'self'">
   <link rel="shortcut icon" href="../assets/images/logos/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
@@ -195,6 +196,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/security.js"></script>
 <script>
 var GH_OWNER  = 'FR-RSL';
 var GH_REPO   = 'FR-RSL.github.io';
@@ -379,10 +381,12 @@ function setQ(id, val) {
 
 /* ── Apply quick-edit fields back to raw HTML ── */
 function applyQuickToRaw(src) {
-  var title     = document.getElementById('q-title').value;
-  var pageTitle = document.getElementById('q-pagetitle').value;
-  var desc      = document.getElementById('q-desc').value;
-  var lore      = document.getElementById('q-lore').value;
+  // Sanitise les champs texte brut pour éviter les injections HTML/XSS
+  var title     = SecurityUtils.sanitizeText(document.getElementById('q-title').value);
+  var pageTitle = SecurityUtils.sanitizeText(document.getElementById('q-pagetitle').value);
+  var desc      = SecurityUtils.sanitizeText(document.getElementById('q-desc').value);
+  // q-lore supporte intentionnellement le HTML basique (indiqué dans l'interface)
+  var lore      = document.getElementById('q-lore').value.replace(/<script[\s\S]*?<\/script>/gi, '');
   // Page title
   if (pageTitle) src = src.replace(/<title>[\s\S]*?<\/title>/i, '<title>'+pageTitle+'</title>');
   // Faction title (replace content of .faction-title)

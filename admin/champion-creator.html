@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer un Champion — FR RSL Admin</title>
     <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' https://raw.githubusercontent.com data: blob:; font-src 'self'">
     <link rel="shortcut icon" href="../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../assets/css/main.css">
     <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
@@ -693,6 +694,7 @@
 <!--Hiddenfileinputsforspellimages(injectedbyJS)-->
 <div id="fileInputs" style="display:none"></div>
 
+<script src="../assets/js/security.js"></script>
 <script>
 // ── Config ─────────────────────────────────────────────────
 var GH_OWNER  = 'FR-RSL';
@@ -1446,7 +1448,7 @@ async function ghApi(method, endpoint, body) {
 // ── Publish ───────────────────────────────────────────────
 async function doPublish() {
   var slug     = document.getElementById('slug').value.trim();
-  var fullName = document.getElementById('fullName').value.trim();
+  var fullName = SecurityUtils.sanitizeText(document.getElementById('fullName').value);
   var faction  = document.getElementById('faction').value;
   var rarity   = document.getElementById('rarity').value;
   var type1    = document.getElementById('champType').value;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin — FR RSL</title>
     <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' https://raw.githubusercontent.com data: blob:; font-src 'self'">
     <link rel="shortcut icon" href="../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../assets/css/main.css">
     <style>
@@ -143,30 +144,27 @@
 
         <form id="loginForm" autocomplete="off">
             <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder="••••••••••" autocomplete="current-password">
-            </div>
-
-            <div class="form-group">
                 <label for="ghToken">Token GitHub Personnel (PAT)</label>
-                <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+                <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false">
                 <p class="form-hint">
-                    Nécessaire pour sauvegarder les articles dans le repo.<br>
-                    <a href="https://github.com/settings/tokens/new?scopes=repo&description=FR-RSL+Admin" target="_blank" rel="noopener">→ Générer un token</a> avec scope <code>contents: write</code>
+                    Votre token GitHub est l'unique clé d'accès — il est validé directement par GitHub.<br>
+                    <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener noreferrer">→ Générer un fine-grained token</a> avec le scope <code>Contents: Read and write</code> sur ce repo uniquement.
                 </p>
             </div>
 
             <button type="submit" class="btn-login">Connexion</button>
-            <div class="error-msg" id="errorMsg">Mot de passe incorrect ou token invalide.</div>
+            <div class="error-msg" id="errorMsg"></div>
         </form>
     </div>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/security.js"></script>
     <script>
     (function () {
-        // SHA-256 du mot de passe admin — généré côté serveur
-        const PASSWORD_HASH = '48ea6a4e7c8d0d9ce3ee1b02485b6e4acb698632046baf24a56d829979c1432c';
-        const GITHUB_REPO   = 'FR-RSL/FR-RSL.github.io';  // ← format: proprietaire/nom-du-repo
+        var GITHUB_REPO = 'FR-RSL/FR-RSL.github.io';
+
+        // Rate limiter : 5 tentatives max sur 15 minutes
+        var loginLimiter = new SecurityUtils.RateLimiter('admin_login', 5, 15 * 60 * 1000);
 
         // Rediriger si déjà connecté
         if (sessionStorage.getItem('admin_token')) {
@@ -174,54 +172,100 @@
             return;
         }
 
+        function showError(msg) {
+            var el = document.getElementById('errorMsg');
+            el.textContent = msg;
+            el.style.display = 'block';
+        }
+
+        function clearError() {
+            var el = document.getElementById('errorMsg');
+            el.textContent = '';
+            el.style.display = 'none';
+        }
+
+        // Vérifie le rate limit au chargement pour afficher le délai restant
+        (function checkBlockOnLoad() {
+            var status = loginLimiter.check();
+            if (!status.allowed) {
+                var btn = document.querySelector('.btn-login');
+                btn.disabled = true;
+                showError('Trop de tentatives. Réessayez dans ' + status.waitSec + ' seconde(s).');
+                var interval = setInterval(function () {
+                    var s = loginLimiter.check();
+                    if (s.allowed) {
+                        clearInterval(interval);
+                        btn.disabled = false;
+                        clearError();
+                    } else {
+                        showError('Trop de tentatives. Réessayez dans ' + s.waitSec + ' seconde(s).');
+                    }
+                }, 1000);
+            }
+        })();
+
         document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            const password = document.getElementById('password').value;
-            const token    = document.getElementById('ghToken').value.trim();
-            const errorEl  = document.getElementById('errorMsg');
-            errorEl.style.display = 'none';
 
-            if (!password||!token){
-                errorEl.textContent = 'Veuillez remplir les deux champs.';
-                errorEl.style.display = 'block';
+            // Vérification du rate limit avant toute action
+            var limitStatus = loginLimiter.check();
+            if (!limitStatus.allowed) {
+                showError('Trop de tentatives. Réessayez dans ' + limitStatus.waitSec + ' seconde(s).');
                 return;
             }
 
-            // Hash SHA-256 du mot de passe saisi
-            const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
-            const hashHex    = Array.from(new Uint8Array(hashBuffer))
-                .map(b => b.toString(16).padStart(2, '0')).join('');
+            var token   = SecurityUtils.sanitizeText(document.getElementById('ghToken').value);
+            clearError();
 
-            if (hashHex !== PASSWORD_HASH) {
-                errorEl.textContent = 'Mot de passe incorrect.';
-                errorEl.style.display = 'block';
+            if (!token) {
+                showError('Veuillez saisir votre token GitHub.');
                 return;
             }
 
-            // Vérifier que le token GitHub est valide
-            const btn = document.querySelector('.btn-login');
+            // Validation basique du format du token GitHub (ghp_, github_pat_, gho_, ghu_, ghs_)
+            if (!/^(ghp_|github_pat_|gho_|ghu_|ghs_)[A-Za-z0-9_]+$/.test(token)) {
+                showError('Format de token invalide. Les tokens GitHub commencent par ghp_, github_pat_, etc.');
+                return;
+            }
+
+            var btn = document.querySelector('.btn-login');
             btn.textContent = 'Vérification…';
             btn.disabled = true;
 
             try {
-                const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}`, {
-                    headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' }
+                // L'authentification repose entièrement sur GitHub (système reconnu).
+                // Le token est validé par l'API GitHub — aucun secret n'est stocké ici.
+                var res = await fetch('https://api.github.com/repos/' + GITHUB_REPO, {
+                    headers: {
+                        'Authorization': 'Bearer ' + token,
+                        'X-GitHub-Api-Version': '2022-11-28'
+                    }
                 });
+
                 if (!res.ok) {
-                    const body = await res.json().catch(() => ({}));
-                    const detail = body.message || `HTTP ${res.status}`;
-                    throw new Error(`GitHub (${res.status}) : ${detail}`);
+                    var body = await res.json().catch(function () { return {}; });
+                    var detail = body.message || ('HTTP ' + res.status);
+                    throw new Error('GitHub (' + res.status + ') : ' + detail);
                 }
 
-                // Stocker le token dans sessionStorage (effacé à la fermeture du tab)
+                // Succès : réinitialise le compteur et stocke le token (effacé à la fermeture du tab)
+                loginLimiter.reset();
                 sessionStorage.setItem('admin_token', token);
                 window.location.href = 'dashboard.html';
 
             } catch (err) {
-                errorEl.textContent = err.message || 'Erreur de vérification du token GitHub.';
-                errorEl.style.display = 'block';
-                btn.textContent = 'Connexion';
-                btn.disabled = false;
+                // Échec : enregistre la tentative et affiche l'erreur
+                loginLimiter.recordFailure();
+                var newStatus = loginLimiter.check();
+                var errMsg = err.message || 'Erreur de vérification du token GitHub.';
+                if (!newStatus.allowed) {
+                    errMsg += ' Compte temporairement bloqué (' + newStatus.waitSec + 's).';
+                    btn.disabled = true;
+                } else {
+                    btn.textContent = 'Connexion';
+                    btn.disabled = false;
+                }
+                showError(errMsg);
             }
         });
     })();

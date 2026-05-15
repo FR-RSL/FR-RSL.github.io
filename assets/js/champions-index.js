@@ -196,6 +196,7 @@ const CHAMPIONS = [
     { name: "Visix l'Insoumise", faction: 'faction11', rarity: 'legendary', folder: 'visix' },
     { name: "Mithrala Fleaudevie", faction: 'faction11', rarity: 'legendary', folder: 'mithrala' },
     { name: "Tramaria", faction: 'faction11', rarity: 'legendary', folder: 'tramaria' },
+    { name: "Kael Ultime", faction: 'faction11', rarity: 'legendary', folder: 'kael_ultime' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

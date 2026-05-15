@@ -538,9 +538,38 @@
 
         /* ── Summary ─────────────────────────────────── */
         .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px,1fr)); gap: 0.5rem; margin-bottom: 1rem; }
-        .summ-item { background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 2px; padding: 0.6rem 0.8rem; }
+        .summ-item { background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 2px; padding: 0.6rem 0.8rem; transition: border-color 0.2s, background 0.2s; }
+        .summ-item.s-ok   { border-color: rgba(6,255,165,0.4);   background: rgba(6,255,165,0.06); }
+        .summ-item.s-err  { border-color: rgba(239,68,68,0.6);   background: rgba(239,68,68,0.12); }
+        .summ-item.s-warn { border-color: rgba(251,191,36,0.5);  background: rgba(251,191,36,0.08); }
+        .summ-item.s-info { border-color: var(--glass-border);   background: rgba(255,255,255,0.02); }
         .summ-k { font-size: 0.67rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
-        .summ-v { font-size: 0.9rem; color: var(--text-light); }
+        .summ-v { font-size: 0.88rem; color: var(--text-light); font-weight: 600; }
+        .summ-item.s-ok   .summ-v { color: #06ffa5; }
+        .summ-item.s-err  .summ-v { color: #ef5350; }
+        .summ-item.s-warn .summ-v { color: #fbbf24; }
+        /* Check banner */
+        .check-banner { border-radius: 2px; padding: 0.85rem 1.2rem; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; text-align: center; letter-spacing: 0.02em; }
+        .check-banner.b-err  { background: rgba(239,68,68,0.15);  border: 2px solid rgba(239,68,68,0.55);  color: #ef5350; }
+        .check-banner.b-warn { background: rgba(251,191,36,0.1);  border: 2px solid rgba(251,191,36,0.45); color: #fbbf24; }
+        .check-banner.b-ok   { background: rgba(6,255,165,0.1);   border: 2px solid rgba(6,255,165,0.4);   color: #06ffa5; }
+        /* Path preview */
+        .path-preview { display: flex; align-items: center; gap: 0.8rem; background: rgba(0,0,0,0.28); border: 1px solid var(--glass-border); border-radius: 2px; padding: 0.55rem 0.9rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .path-label { font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); white-space: nowrap; font-weight: 700; }
+        .path-value { font-family: 'Courier New', monospace; font-size: 0.8rem; color: #a5b4fc; word-break: break-all; }
+        /* Files list */
+        .files-section { margin-bottom: 1.2rem; }
+        .files-title { font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700; margin-bottom: 0.45rem; }
+        .files-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.18rem; }
+        .file-item { font-size: 0.77rem; padding: 0.28rem 0.65rem; border-radius: 2px; border: 1px solid transparent; display: flex; align-items: center; gap: 0.5rem; }
+        .file-item code { font-family: 'Courier New', monospace; font-size: 0.75rem; color: var(--text-muted); }
+        .file-item.f-ok      { color: var(--text-muted); }
+        .file-item.f-ok code { color: var(--text-muted); }
+        .file-item.f-miss    { border-color: rgba(251,191,36,0.25); background: rgba(251,191,36,0.06); color: #fbbf24; }
+        .file-item.f-miss code { color: #fbbf24; }
+        .file-item.f-mod     { color: #818cf8; }
+        .file-item.f-mod code { color: #818cf8; }
+        .file-note { font-size: 0.68rem; font-style: italic; margin-left: 0.2rem; opacity: 0.8; }
 
         /* ── Responsive ──────────────────────────────── */
         @media (max-width: 640px) {
@@ -773,9 +802,11 @@
     ══════════════════════════════════════ -->
     <div class="tab-panel panel" id="t-publish">
 
-        <div class="section-title">Récapitulatif</div>
+        <div class="section-title">Récapitulatif &amp; Vérification</div>
+        <div id="checkBanner"></div>
         <div class="summary-grid" id="summaryGrid"></div>
-        <div id="filesList" style="color:var(--text-muted);font-size:0.78rem;margin-bottom:1rem"></div>
+        <div id="pathPreview"></div>
+        <div id="filesList"></div>
 
         <div class="publish-center">
             <button class="btn-publish" id="publishBtn" onclick="doPublish()">🚀 Publier le Champion</button>
@@ -877,7 +908,7 @@ document.addEventListener('DOMContentLoaded', function() {
   buildToolbar('auraToolbar', 'auraDesc');
   document.getElementById('auraDescWrap').style.display = 'none';
   var draftLoaded = loadDraft();
-  if (!draftLoaded) addSpell(1);
+  if (!draftLoaded) { applyLastMeta(); addSpell(1); }
   spawnParticles();
   setInterval(saveDraft, 5000);
 });
@@ -1380,7 +1411,37 @@ function onPortrait(input) {
 }
 
 // ── LocalStorage draft ───────────────────────────────────
-var DRAFT_KEY = 'champ_creator_draft';
+var DRAFT_KEY      = 'champ_creator_draft';
+var LAST_META_KEY  = 'champ_creator_last_meta';
+
+function saveLastMeta() {
+  try {
+    localStorage.setItem(LAST_META_KEY, JSON.stringify({
+      faction: document.getElementById('faction').value,
+      rarity:  document.getElementById('rarity').value,
+      selAff:  selAff
+    }));
+  } catch(e) {}
+}
+
+function applyLastMeta() {
+  try {
+    var raw = localStorage.getItem(LAST_META_KEY);
+    if (!raw) return;
+    var m = JSON.parse(raw);
+    if (m.faction) document.getElementById('faction').value = m.faction;
+    if (m.rarity) {
+      document.getElementById('rarity').value = m.rarity;
+      onRarity(m.rarity);
+    }
+    if (m.selAff) {
+      selAff = m.selAff;
+      document.querySelectorAll('.aff-tile').forEach(function(t) {
+        t.classList.toggle('on', t.getAttribute('data-aff') === selAff);
+      });
+    }
+  } catch(e) {}
+}
 
 function saveDraft() {
   try {
@@ -1498,36 +1559,91 @@ function buildSummary() {
   var faction  = document.getElementById('faction').value;
   var rarity   = document.getElementById('rarity').value;
   var fmeta    = FMETA[faction] || {};
+  var isMyt    = (rarity === 'mythical');
+  var rarLabels = { legendary:'Légendaire', mythical:'Mythique', epic:'Épique', rare:'Rare', uncommon:'Peu commun', common:'Commun' };
 
-  var grid = document.getElementById('summaryGrid');
+  var spells1HasBlank = spells1.some(function(s){ return !s.name.trim(); });
+  var spells2HasBlank = spells2.some(function(s){ return !s.name.trim(); });
+
+  // [label, valeur affichée, statut: 's-ok'|'s-err'|'s-warn'|'s-info']
   var items = [
-    ['Slug',       slug || '—'],
-    ['Nom',        fullName || '—'],
-    ['Faction',    fmeta.name || faction],
-    ['Rarete',     { legendary:'Légendaire', mythical:'Mythique', epic:'Épique', rare:'Rare', uncommon:'Peu commun', common:'Commun' }[rarity] || rarity],
-    ['Affinite',   selAff],
-    ['Type',       document.getElementById('champType').value],
-    ['Sorts F1',   spells1.length],
-    ['Aura',       selAura || 'Aucune'],
-    ['Portrait',   portraitB64 ? 'Charge' : 'Manquant']
+    ['Slug',     slug     || '⚠ Manquant',  slug     ? 's-ok' : 's-err'],
+    ['Nom',      fullName || '⚠ Manquant',  fullName ? 's-ok' : 's-err'],
+    ['Faction',  fmeta.name || faction,      's-ok'],
+    ['Rareté',   rarLabels[rarity] || rarity,'s-ok'],
+    ['Affinité', selAff || '—',              selAff   ? 's-ok' : 's-warn'],
+    ['Type',     document.getElementById('champType').value, 's-info'],
+    ['Sorts F1', spells1.length + ' sort(s)', spells1.length === 0 ? 's-err' : spells1HasBlank ? 's-warn' : 's-ok'],
+    ['Aura',     selAura || 'Aucune',         's-info'],
+    ['Portrait', portraitB64 ? '✓ Chargé'    : '⚠ Manquant', portraitB64 ? 's-ok' : 's-err'],
   ];
-  grid.innerHTML = items.map(function(it) {
-    return '<div class="summ-item"><div class="summ-k">' + it[0] + '</div><div class="summ-v">' + it[1] + '</div></div>';
+  if (isMyt) {
+    items.push(['Sorts F2', spells2.length + ' sort(s)', spells2.length === 0 ? 's-err' : spells2HasBlank ? 's-warn' : 's-ok']);
+    items.push(['Labels formes', document.getElementById('form1lbl').value + ' / ' + document.getElementById('form2lbl').value, 's-info']);
+  }
+  if (spells1HasBlank) items[6][1] += ' ⚠ nom(s) vide(s)';
+  if (isMyt && spells2HasBlank) items[9][1] += ' ⚠ nom(s) vide(s)';
+
+  var errCount  = items.filter(function(i){ return i[2] === 's-err';  }).length;
+  var warnCount = items.filter(function(i){ return i[2] === 's-warn'; }).length;
+
+  // ── Bannière ──
+  var bannerCls, bannerTxt;
+  if (errCount > 0) {
+    bannerCls = 'b-err';
+    bannerTxt = '✗ ' + errCount + ' erreur' + (errCount > 1 ? 's' : '') + ' à corriger avant de publier';
+    if (warnCount) bannerTxt += '  ·  ⚠ ' + warnCount + ' avertissement' + (warnCount > 1 ? 's' : '');
+  } else if (warnCount > 0) {
+    bannerCls = 'b-warn';
+    bannerTxt = '⚠ ' + warnCount + ' avertissement' + (warnCount > 1 ? 's' : '') + ' — vérifiez avant de publier';
+  } else {
+    bannerCls = 'b-ok';
+    bannerTxt = '✓ Tout est en ordre — prêt à publier';
+  }
+  document.getElementById('checkBanner').innerHTML = '<div class="check-banner ' + bannerCls + '">' + bannerTxt + '</div>';
+
+  // ── Grille ──
+  document.getElementById('summaryGrid').innerHTML = items.map(function(it) {
+    return '<div class="summ-item ' + it[2] + '"><div class="summ-k">' + it[0] + '</div><div class="summ-v">' + it[1] + '</div></div>';
   }).join('');
 
+  // ── Chemin de publication ──
   var base = 'pages/factions/' + faction + '/' + rarity + '/' + (slug||'?') + '/';
-  var files = [base + (slug||'?') + '.html', base + (slug||'?') + '.js'];
-  if (portraitB64)  files.push(base + 'assets/' + (slug||'?') + '.png');
-  spells1.forEach(function(_, i) { if (imgs1[i]) files.push(base + 'assets/sort' + (i+1) + '.png'); });
-  if (rarity === 'mythical')
-    spells2.forEach(function(_, i) { if (imgs2[i]) files.push(base + 'assets/sort_f2_' + (i+1) + '.png'); });
-  files.push('assets/js/champions-index.js (mise a jour)');
+  document.getElementById('pathPreview').innerHTML =
+    '<div class="path-preview"><span class="path-label">Chemin</span><code class="path-value">' + base + (slug||'?') + '.html</code></div>';
 
+  // ── Liste de fichiers ──
+  var files = [
+    { path: base + (slug||'?') + '.html',    cls: 'f-ok',  note: '' },
+    { path: base + (slug||'?') + '.js',      cls: 'f-ok',  note: '' },
+    { path: base + 'assets/' + (slug||'?') + '.png', cls: portraitB64 ? 'f-ok' : 'f-miss', note: portraitB64 ? '' : 'portrait manquant' },
+  ];
+  spells1.forEach(function(_, i) {
+    files.push({ path: base + 'assets/sort' + (i+1) + '.png', cls: imgs1[i] ? 'f-ok' : 'f-miss', note: imgs1[i] ? '' : 'image sort ' + (i+1) + ' manquante' });
+  });
+  if (isMyt) {
+    spells2.forEach(function(_, i) {
+      files.push({ path: base + 'assets/sort_f2_' + (i+1) + '.png', cls: imgs2[i] ? 'f-ok' : 'f-miss', note: imgs2[i] ? '' : 'image sort F2-' + (i+1) + ' manquante' });
+    });
+  }
+  files.push({ path: 'pages/factions/' + faction + '/hub.html', cls: 'f-mod', note: 'mis à jour' });
+  files.push({ path: 'assets/js/champions-index.js',            cls: 'f-mod', note: 'mis à jour' });
+
+  var icon = { 'f-ok': '✓', 'f-miss': '⚠', 'f-mod': '✎' };
   document.getElementById('filesList').innerHTML =
-    '<strong style="text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem">Fichiers a creer :</strong>' +
-    '<ul style="margin-top:0.4rem;padding-left:1.1rem;list-style:disc">' +
-    files.map(function(f) { return '<li style="margin-bottom:0.15rem">' + f + '</li>'; }).join('') +
-    '</ul>';
+    '<div class="files-section"><div class="files-title">Fichiers créés / modifiés</div>' +
+    '<ul class="files-list">' +
+    files.map(function(f) {
+      return '<li class="file-item ' + f.cls + '">' + icon[f.cls] + ' <code>' + f.path + '</code>' +
+        (f.note ? '<span class="file-note">— ' + f.note + '</span>' : '') + '</li>';
+    }).join('') + '</ul></div>';
+
+  // ── Bouton publish ──
+  var btn = document.getElementById('publishBtn');
+  if (btn) {
+    btn.disabled = errCount > 0;
+    btn.title = errCount > 0 ? 'Corrigez les ' + errCount + ' erreur(s) avant de publier' : '';
+  }
 }
 
 // ── JS code generators ────────────────────────────────────
@@ -1857,6 +1973,7 @@ async function doPublish() {
     // Sauvegarder les stats dans l'historique d'autocomplétion
     saveAllStatsToHistory(stats1);
     if (rarity === 'mythical') saveAllStatsToHistory(stats2);
+    saveLastMeta();
     btn.textContent = 'Publié !';
     btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';
 

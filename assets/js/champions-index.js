@@ -193,6 +193,7 @@ const CHAMPIONS = [
     { name: "Sydax Tueur-de-roi", faction: 'faction11', rarity: 'legendary', folder: 'sydax' },
     { name: "Prophetesse Aveugle", faction: 'faction11', rarity: 'legendary', folder: 'prophetesse_aveugle' },
     { name: "Lydia Sirene de Mort", faction: 'faction11', rarity: 'legendary', folder: 'lydia' },
+    { name: "Visix l'Insoumise", faction: 'faction11', rarity: 'legendary', folder: 'visix' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

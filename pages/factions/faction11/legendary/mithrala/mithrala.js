@@ -1,0 +1,50 @@
+const championData = {
+  type: "Soutien",
+  spells: [
+        {
+          img: "assets/sort1.png",
+          name: "Libation de Douleur",
+          description: `Attaque 2 fois de facon aleatoire. Chaque frappe possede 80% de chances de placer un debuff ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
+          damage: "2*DEF",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
+        },
+        {
+          img: "assets/sort2.png",
+          name: "Sceau de Gloire nocive",
+          description: `Attaque tous les ennemis. Place un debuff ${DEBUFFS.HEX} pendant 2 tours. Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.ATK} de 50% sur tous les allies pendant 2 tours.`,
+          damage: "4*DEF",
+          cooldown: 5,
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
+        },
+        {
+          img: "assets/sort3.png",
+          name: "Calice debordant",
+          description: `Retire tous les debuffs sur tous les allies, puis place un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.SHIELD} equivalent a 30% des PV MAX de cette Championne pendant 2 tours.`,
+          cooldown: 5,
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
+        },
+        {
+          img: "assets/sort4.png",
+          name: "Regard de Pierre [P]",
+          description: `Des que cette Championne est attaquée par un ennemi sous debuff ${DEBUFFS.HEX}, possède 50% de chances d'appliquer un debuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
+Des qu'un allie est attaque par un ennemi sous debuff ${DEBUFFS.HEX}, possède 30% de chances d'appliquer un debuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
+Augmente également la RES de cette Championne. La quantité dont elle est augmentée est égale a la quantité de PRE que possède cette Championne.`,
+          isPassive: true,
+        }
+  ],
+  stats: {
+        "PV": "20 310",
+        "ATQ": "870",
+        "DEF": "1 354",
+        "VIT": "109",
+        "TAUX C.": "15%",
+        "DEG C.": "50%",
+        "RES": "30",
+        "PRE": "10"
+  }
+};
+
+const aura = {
+  img: "../../../../../assets/images/auras/acc.png",
+  description: `Augmente la statistique PRE des Allies lors de toutes les Batailles de 80.`
+};

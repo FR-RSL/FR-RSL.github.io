@@ -480,7 +480,7 @@ function updateSpells(spells) {
   spells.forEach((spell, index) => {
     // Créer le container pour mobile
     const spellContainer = document.createElement('div');
-    spellContainer.className = 'spell-container';
+    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}`;
 
     // Créer l'élément sort
     const spellDiv = document.createElement('div');
@@ -494,21 +494,9 @@ function updateSpells(spells) {
     img.style.pointerEvents = 'none';
     spellDiv.appendChild(img);
 
-    // Event listeners pour les sorts (desktop seulement)
-    spellDiv.addEventListener('mouseenter', (e) => {
-      console.log('Mouse ENTER on spell', index);
-      showTooltip(e, index);
-    });
-    spellDiv.addEventListener('mouseleave', (e) => {
-      console.log('Mouse LEAVE from spell', index);
-      // Fermer immédiatement le tooltip quand on quitte le sort
-      hideTooltip();
-    });
-    spellDiv.addEventListener('touchstart', (e) => handleTouch(e, index));
-
     spellContainer.appendChild(spellDiv);
 
-    // Créer la description mobile
+    // Description toujours visible
     const mobileDescription = document.createElement('div');
     mobileDescription.className = 'mobile-spell-description';
     mobileDescription.innerHTML = createSpellDescriptionHTML(spell, index);
@@ -690,33 +678,43 @@ function animateStatValue(element, oldValue, newValue, animationType) {
   }
 }
 
-// Fonction pour mettre à jour l'aura - identique à Arashi
+// Fonction pour mettre à jour l'aura — affichée comme une ligne de sort
 function updateAura() {
   const auraImg = document.getElementById("aura-img");
   if (!auraImg) return;
 
   auraImg.src = aura.img;
-  const auraElement = auraImg.parentElement;
 
-  // Event listeners pour l'aura (desktop seulement)
-  auraElement.addEventListener('mouseenter', showAuraTooltip);
-  auraElement.addEventListener('mouseleave', () => {
-    // Fermer immédiatement le tooltip quand on quitte l'aura
-    hideTooltip();
-  });
-  auraElement.addEventListener('touchstart', (e) => handleTouch(e, 0, true));
-  auraElement.setAttribute('aria-label', 'Aura');
-
-  // Créer la description mobile pour l'aura
-  const mobileAuraDescription = document.createElement('div');
-  mobileAuraDescription.className = 'mobile-aura-description';
-  mobileAuraDescription.innerHTML = createAuraDescriptionHTML();
-
-  // Ajouter la description après le container de l'aura
   const auraContainer = document.querySelector('.aura-container');
-  if (auraContainer) {
-    auraContainer.appendChild(mobileAuraDescription);
+  if (!auraContainer) return;
+
+  // Enlever description précédente si on switche de forme
+  const old = auraContainer.querySelector('.mobile-spell-description');
+  if (old) old.remove();
+
+  // Style spell-container en flex row
+  const auraBubble = auraImg.closest('.aura');
+  if (auraBubble) {
+    auraContainer.style.flexDirection = 'row';
+    auraContainer.style.alignItems = 'flex-start';
+    auraContainer.style.gap = '1rem';
+    auraContainer.style.marginTop = '0.5rem';
+    auraContainer.style.padding = '0.9rem';
+    auraContainer.style.background = 'rgba(255,255,255,0.03)';
+    auraContainer.style.border = '1px solid var(--glass-border)';
+    auraContainer.style.borderRadius = '2px';
+    auraBubble.style.flexShrink = '0';
+    auraBubble.style.width = '60px';
+    auraBubble.style.height = '60px';
   }
+
+  const mobileAuraDescription = document.createElement('div');
+  mobileAuraDescription.className = 'mobile-spell-description';
+  mobileAuraDescription.innerHTML = `
+    <div class="spell-header"><span class="spell-name" style="background:linear-gradient(135deg,#ffb700,#e8790e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Aura</span></div>
+    <div>${aura.description}</div>
+  `;
+  auraContainer.appendChild(mobileAuraDescription);
 }
 
 // Fonction principale d'initialisation
@@ -757,8 +755,33 @@ function handleResize() {
   hideTooltip();
 }
 
+// Injection d'un second sélecteur de forme en bas de page (mobile uniquement)
+function injectBottomFormSelector() {
+  const topSelector = document.querySelector('.form-selector');
+  if (!topSelector) return;
+
+  const bottom = topSelector.cloneNode(true);
+  bottom.classList.add('form-selector-bottom');
+
+  // Insérer avant le footer (ou à la fin du body si pas de footer)
+  const footer = document.querySelector('footer');
+  if (footer) {
+    footer.parentNode.insertBefore(bottom, footer);
+  } else {
+    document.body.appendChild(bottom);
+  }
+
+  // Les boutons clonés doivent aussi déclencher switchForm
+  bottom.querySelectorAll('.form-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchForm(btn.dataset.form));
+  });
+}
+
 // Initialisation quand le DOM est chargé
-document.addEventListener('DOMContentLoaded', initializeChampionPage);
+document.addEventListener('DOMContentLoaded', () => {
+  initializeChampionPage();
+  injectBottomFormSelector();
+});
 window.addEventListener('resize', handleResize);
 
 // Fermer le tooltip si on clique ailleurs

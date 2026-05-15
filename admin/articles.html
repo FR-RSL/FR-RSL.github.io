@@ -14,7 +14,7 @@
         .admin-topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
         .admin-topbar h1 { font-size: 1.6rem; margin: 0; background: linear-gradient(135deg, var(--text-light), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .topbar-actions { display: flex; gap: 0.7rem; align-items: center; }
-        .btn { padding: 0.55rem 1.2rem; border-radius: 10px; border: none; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; font-family: inherit; }
+        .btn { padding: 0.55rem 1.2rem; border-radius: 2px; border: none; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; font-family: inherit; }
         .btn-primary { background: var(--primary); color: #fff; }
         .btn-primary:hover { background: var(--primary-dark); }
         .btn-danger { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
@@ -24,37 +24,37 @@
         .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
         .btn-success { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
         .btn-success:hover { background: rgba(6,255,165,0.25); }
-        .status-bar { padding: 0.65rem 1.2rem; border-radius: 10px; font-size: 0.85rem; font-weight: 500; margin-bottom: 1.5rem; display: none; }
+        .status-bar { padding: 0.65rem 1.2rem; border-radius: 2px; font-size: 0.85rem; font-weight: 500; margin-bottom: 1.5rem; display: none; }
         .status-bar.info    { background: rgba(68,96,255,0.15);  color: #818cf8; border: 1px solid rgba(68,96,255,0.3);  display: flex; align-items: center; gap: 0.5rem; }
         .status-bar.success { background: rgba(6,255,165,0.12);  color: #06ffa5; border: 1px solid rgba(6,255,165,0.3);  display: flex; align-items: center; gap: 0.5rem; }
         .status-bar.error   { background: rgba(229,57,53,0.15);  color: #ef5350; border: 1px solid rgba(229,57,53,0.3);  display: flex; align-items: center; gap: 0.5rem; }
         .admin-layout { display: grid; grid-template-columns: 1fr 380px; gap: 1.5rem; align-items: start; }
-        .articles-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; backdrop-filter: blur(12px); }
+        .articles-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; backdrop-filter: blur(12px); }
         .panel-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--glass-border); }
         .panel-header h2 { font-size: 1rem; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
-        .article-count { background: rgba(68,96,255,0.2); color: #818cf8; border-radius: 8px; padding: 0.1rem 0.55rem; font-size: 0.75rem; font-weight: 700; }
+        .article-count { background: rgba(68,96,255,0.2); color: #818cf8; border-radius: 2px; padding: 0.1rem 0.55rem; font-size: 0.75rem; font-weight: 700; }
         .article-list { padding: 0.8rem; }
-        .article-item { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; border-radius: 12px; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; }
+        .article-item { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; border-radius: 2px; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; }
         .article-item:hover { background: rgba(255,255,255,0.04); border-color: var(--glass-border); }
         .article-item.selected { background: rgba(68,96,255,0.1); border-color: rgba(68,96,255,0.3); }
         .article-item-info { flex: 1; min-width: 0; }
         .article-item-title { font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .article-item-meta { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem; }
         .article-item-date { font-size: 0.75rem; color: var(--text-muted); }
-        .article-cat-badge { font-size: 0.67rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 6px; text-transform: uppercase; }
+        .article-cat-badge { font-size: 0.67rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 2px; text-transform: uppercase; }
         .cat-Champions    { background: rgba(255,183,0,0.15);  color: #ffb700; }
         .cat-Factions     { background: rgba(68,96,255,0.15);  color: #818cf8; }
         .cat-Equipement   { background: rgba(16,185,129,0.15); color: #34d399; }
         .cat-Guide        { background: rgba(139,92,246,0.15); color: #a78bfa; }
         .cat-Mise-a-jour  { background: rgba(245,158,11,0.15); color: #f59e0b; }
         .article-item-actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
-        .form-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; overflow: hidden; backdrop-filter: blur(12px); position: sticky; top: 1rem; }
+        .form-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; backdrop-filter: blur(12px); position: sticky; top: 1rem; }
         .form-panel-header { padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--glass-border); }
         .form-panel-header h2 { font-size: 1rem; font-weight: 700; margin: 0; }
         .form-body { padding: 1.2rem 1.5rem; }
         .field { margin-bottom: 1rem; }
         .field label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.45rem; }
-        .field input, .field select, .field textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.9rem; border-radius: 9px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.25s; }
+        .field input, .field select, .field textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.9rem; border-radius: 2px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.25s; }
         .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--primary); }
         .field select option { background: #1a1d2e; }
         .field textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
@@ -133,7 +133,7 @@
         </div>
     </div>
     <div id="commitModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
-        <div style="background:#1a1d2e; border:1px solid var(--glass-border); border-radius:16px; padding:2rem; max-width:440px; width:90%; text-align:center;">
+        <div style="background:#1a1d2e; border:1px solid var(--glass-border); border-radius: 2px; padding:2rem; max-width:440px; width:90%; text-align:center;">
             <div style="font-size:2rem; margin-bottom:1rem;">⏳</div>
             <h3 style="margin:0 0 0.5rem;">Publication en cours…</h3>
             <p style="color:var(--text-muted); font-size:0.9rem;" id="commitMsg">Mise à jour du fichier articles.js sur GitHub</p>

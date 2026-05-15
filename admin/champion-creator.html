@@ -41,7 +41,7 @@
         /* ── Buttons ─────────────────────────────────── */
         .btn {
             padding: 0.55rem 1.2rem;
-            border-radius: 10px;
+            border-radius: 2px;
             border: none;
             font-weight: 600;
             font-size: 0.88rem;
@@ -67,7 +67,7 @@
             display: flex;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 14px 14px 0 0;
+            border-radius: 2px 2px 0 0;
             overflow: hidden;
             margin-bottom: 0;
         }
@@ -112,7 +112,7 @@
         .sub-panel {
             background: rgba(255,255,255,0.025);
             border: 1px solid var(--glass-border);
-            border-radius: 12px;
+            border-radius: 2px;
             padding: 1.2rem;
             margin-bottom: 1rem;
         }
@@ -141,7 +141,7 @@
             width: 100%;
             box-sizing: border-box;
             padding: 0.65rem 0.9rem;
-            border-radius: 9px;
+            border-radius: 2px;
             border: 2px solid var(--glass-border);
             background: rgba(255,255,255,0.04);
             color: var(--text-light);
@@ -169,7 +169,7 @@
             align-items: center;
             gap: 0.4rem;
             padding: 0.7rem 0.5rem;
-            border-radius: 10px;
+            border-radius: 2px;
             border: 2px solid var(--glass-border);
             background: rgba(255,255,255,0.03);
             cursor: pointer;
@@ -196,7 +196,7 @@
         .toggle-track {
             position: absolute;
             inset: 0;
-            border-radius: 12px;
+            border-radius: 2px;
             background: rgba(255,255,255,0.1);
             border: 1px solid var(--glass-border);
             transition: all 0.2s;
@@ -218,7 +218,7 @@
         .spell-card {
             background: rgba(255,255,255,0.025);
             border: 1px solid var(--glass-border);
-            border-radius: 12px;
+            border-radius: 2px;
             padding: 1rem;
         }
         .spell-head {
@@ -253,7 +253,7 @@
         .spell-name-input {
             flex: 1;
             padding: 0.5rem 0.75rem;
-            border-radius: 8px;
+            border-radius: 2px;
             border: 2px solid var(--glass-border);
             background: rgba(255,255,255,0.04);
             color: var(--text-light);
@@ -269,7 +269,7 @@
             background: rgba(229,57,53,0.12);
             border: 1px solid rgba(229,57,53,0.3);
             color: #ef5350;
-            border-radius: 6px;
+            border-radius: 2px;
             padding: 0.2rem 0.55rem;
             font-size: 0.75rem;
             cursor: pointer;
@@ -281,7 +281,7 @@
             background: rgba(255,255,255,0.02);
             border: 2px dashed rgba(68,96,255,0.35);
             color: var(--primary);
-            border-radius: 10px;
+            border-radius: 2px;
             padding: 0.7rem;
             cursor: pointer;
             font-size: 0.88rem;
@@ -292,7 +292,7 @@
         .btn-add-spell:hover { border-color: var(--primary); background: rgba(68,96,255,0.05); }
 
         /* ── Desc toolbar ────────────────────────────── */
-        .desc-wrap { border: 2px solid var(--glass-border); border-radius: 9px; overflow: hidden; transition: border-color 0.2s; }
+        .desc-wrap { border: 2px solid var(--glass-border); border-radius: 2px; overflow: hidden; transition: border-color 0.2s; }
         .desc-wrap:focus-within { border-color: var(--primary); }
         .desc-toolbar {
             display: flex;
@@ -339,9 +339,9 @@
         /* ── Level info ──────────────────────────────── */
         .lvl-list { display: flex; flex-direction: column; gap: 0.35rem; }
         .lvl-row { display: flex; gap: 0.35rem; align-items: center; }
-        .lvl-row select { flex: 1; padding: 0.45rem 0.7rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(20,20,35,0.9); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; cursor: pointer; }
+        .lvl-row select { flex: 1; padding: 0.45rem 0.7rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(20,20,35,0.9); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; cursor: pointer; }
         .lvl-row select:focus { border-color: var(--primary); }
-        .lvl-row input[type=number] { width: 68px; flex: none; padding: 0.45rem 0.55rem; border-radius: 7px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; text-align: center; }
+        .lvl-row input[type=number] { width: 68px; flex: none; padding: 0.45rem 0.55rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; text-align: center; }
         .lvl-row input[type=number]:focus { border-color: var(--primary); }
         .lvl-row .lvl-unit { font-size: 0.78rem; color: var(--text-muted); min-width: 16px; text-align: left; }
 
@@ -351,7 +351,7 @@
             padding: 0.85rem 0.9rem;
             background: rgba(230,184,0,0.04);
             border: 1px solid rgba(230,184,0,0.2);
-            border-radius: 9px;
+            border-radius: 2px;
         }
         .faction-block-title { font-size: 0.7rem; text-transform: uppercase; color: #e6b800; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: 0.05em; }
 
@@ -359,7 +359,7 @@
         .form-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
         .form-tab {
             padding: 0.4rem 1.1rem;
-            border-radius: 20px;
+            border-radius: 2px;
             border: 1px solid var(--glass-border);
             background: var(--glass-bg);
             color: var(--text-muted);
@@ -378,7 +378,7 @@
             align-items: center;
             gap: 0.3rem;
             padding: 0.5rem;
-            border-radius: 8px;
+            border-radius: 2px;
             border: 2px solid var(--glass-border);
             background: rgba(255,255,255,0.02);
             cursor: pointer;
@@ -396,14 +396,14 @@
         /* ── Portrait ────────────────────────────────── */
         .portrait-drop {
             border: 2px dashed var(--glass-border);
-            border-radius: 14px;
+            border-radius: 2px;
             padding: 2.5rem 2rem;
             text-align: center;
             cursor: pointer;
             transition: border-color 0.2s;
         }
         .portrait-drop:hover { border-color: var(--primary); }
-        .portrait-preview { max-width: 200px; border-radius: 10px; margin: 0 auto; display: block; }
+        .portrait-preview { max-width: 200px; border-radius: 2px; margin: 0 auto; display: block; }
 
         /* ── Publish / log ───────────────────────────── */
         .publish-center { text-align: center; padding: 1.5rem 0; }
@@ -411,7 +411,7 @@
             background: linear-gradient(135deg, var(--primary), #6677ff);
             border: none;
             color: #fff;
-            border-radius: 14px;
+            border-radius: 2px;
             padding: 0.9rem 2.5rem;
             font-size: 1.05rem;
             font-weight: 700;
@@ -427,7 +427,7 @@
             margin-top: 1rem;
             background: rgba(0,0,0,0.4);
             border: 1px solid var(--glass-border);
-            border-radius: 10px;
+            border-radius: 2px;
             padding: 1rem 1.2rem;
             text-align: left;
             font-family: 'Courier New', monospace;
@@ -443,7 +443,7 @@
 
         /* ── Summary ─────────────────────────────────── */
         .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px,1fr)); gap: 0.5rem; margin-bottom: 1rem; }
-        .summ-item { background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.6rem 0.8rem; }
+        .summ-item { background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 2px; padding: 0.6rem 0.8rem; }
         .summ-k { font-size: 0.67rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
         .summ-v { font-size: 0.9rem; color: var(--text-light); }
 
@@ -603,7 +603,7 @@
 
         <div class="section-title" style="margin-top:1.2rem">Portrait du Champion</div>
         <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem">
-            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius:4px">assets/</code>.
+            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">assets/</code>.
         </p>
         <div class="portrait-drop" onclick="document.getElementById('portraitInput').click()">
             <div id="portraitPh">
@@ -643,7 +643,7 @@
         </div>
 
         <div style="margin-top:0.75rem;color:var(--text-muted);font-size:0.8rem">
-            💡 Utilise les boutons dans les descriptions pour insérer <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius:3px">${BUFFS.XXX}</code> / <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius:3px">${DEBUFFS.XXX}</code>
+            💡 Utilise les boutons dans les descriptions pour insérer <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius: 3px">${BUFFS.XXX}</code> / <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.3rem;border-radius: 3px">${DEBUFFS.XXX}</code>
         </div>
 
     </div><!--/t-spells-->
@@ -1393,10 +1393,24 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
     '  <title>' + esc(fullName) + '</title>\n' +
     '  <link rel="shortcut icon" href="../../../../../assets/images/factions/' + fmeta.img + '">\n' +
+    '  <link rel="stylesheet" href="../../../../../assets/css/main.css">\n' +
     '  <link rel="stylesheet" href="../../../../../assets/css/' + css + '.css">\n' +
     '  <script src="../../../../../assets/js/faction-theme-registry.js"><\/script>\n' +
     '</head>\n<body>\n' +
-    '  <a href="../../hub.html" class="back-to-hub">\u2190 Retour au Hub</a>' + formSel + '\n' +
+    '  <header>\n' +
+    '    <div class="logo-section">\n' +
+    '      <a href="../../../../../index.html" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;color:inherit;">\n' +
+    '        <img src="../../../../../assets/images/logos/logo.png" alt="Logo FR RSL">\n' +
+    '        <h1>FR RSL</h1>\n' +
+    '      </a>\n' +
+    '    </div>\n' +
+    '    <nav class="quick-nav" style="margin:0;">\n' +
+    '      <a href="../../hub.html" class="nav-pill">\u2190 Hub</a>\n' +
+    '      <a href="../../../../../pages/search/index.html" class="nav-pill">\uD83D\uDD0D Recherche</a>\n' +
+    '      <a href="https://pgbmax.github.io" class="nav-pill" target="_blank" rel="noopener">\uD83D\uDCCA Tier List \u2197</a>\n' +
+    '    </nav>\n' +
+    '  </header>\n' +
+    formSel + '\n' +
     '  <div class="container">\n' +
     '    <div class="left-panel panel">\n' +
     '      <h2 class="champion-name rarity-' + rarity + '">' + esc(fullName) + '</h2>\n' +
@@ -1412,20 +1426,43 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '      <div class="champion-image-container">\n' +
     '        <img src="assets/' + esc(slug) + '.png" alt="' + esc(fullName) + '" class="champion-img">\n' +
     '      </div>\n' +
+    '      <div class="stats">\n' +
+    '        <h3>Statistiques</h3>\n' +
+    '        <div class="stat-block" id="stats-content"></div>\n' +
+    '      </div>\n' +
     '    </div>\n' +
     '    <div class="middle-panel panel">\n' +
-    '      <h3 style="text-align:center;color:#e6b800;margin-bottom:1.5rem">Comp\u00e9tences</h3>\n' +
+    '      <h3 class="section-heading">Comp\u00e9tences</h3>\n' +
     '      <div class="spells-container" id="spells-section"></div>\n' +
     '      <div class="aura-container"><div class="aura"><img src="" alt="Aura" class="aura-img" id="aura-img"></div></div>\n' +
     '    </div>\n' +
-    '    <div class="right-panel panel">\n' +
-    '      <div class="stats"><h3>Statistiques</h3><div class="stat-block" id="stats-content"></div></div>\n' +
-    '    </div>\n' +
     '  </div>\n' +
-    '  <div id="tooltip" class="tooltip"></div>\n' +
     '  <script src="../../../../../assets/js/constant.js"><\/script>\n' +
     '  <script src="' + esc(slug) + '.js"><\/script>\n' +
     '  <script src="../../../../../assets/js/' + runtime + '.js"><\/script>\n' +
+    '  <footer>\n' +
+    '    <div class="footer-content">\n' +
+    '      <div class="footer-sections">\n' +
+    '        <div class="footer-section">\n' +
+    '          <h4>Navigation</h4>\n' +
+    '          <div class="footer-links">\n' +
+    '            <a href="../../../../../index.html">Accueil</a>\n' +
+    '            <a href="../../hub.html">Hub de la Faction</a>\n' +
+    '            <a href="../../../../../pages/search/index.html">Recherche</a>\n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '        <div class="footer-section">\n' +
+    '          <h4>Ressources</h4>\n' +
+    '          <div class="footer-links">\n' +
+    '            <a href="https://pgbmax.github.io">Tier Lists</a>\n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '      <div class="footer-bottom">\n' +
+    '        <p>\u00a9 2026 FR RSL &mdash; <small>Site non-officiel, non affili\u00e9 \u00e0 Plarium Games.</small></p>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '  </footer>\n' +
     '</' + 'body>\n</' + 'html>';
 }
 

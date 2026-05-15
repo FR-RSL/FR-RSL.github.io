@@ -54,7 +54,7 @@ const championData = {
       img: "assets/passif1.png",
       name: "Heros en semi-carapace [P]",
       description: `
-        Place un buff ${BUFFS.STONE_SKIN} sur ce Champion pendant 1 tour à chaque fois que les PV de ce Champion tombent sous 50%. Se produit une fois par compétence.<br><br>Des que <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> ou <span class='gold-t'>Raphael</span> attaque, ce Champion se joint a cette attaque.
+        Place un buff ${BUFFS.STONE_SKIN} sur ce Champion pendant 1 tour à chaque fois que des frappes d'ennemis font passer ses PV sous 50%. Se produit une fois par compétence.<br><br>Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.
       `,
       isPassive: true,
     },

@@ -56,7 +56,7 @@ const championData = {
           img: "assets/passif1.png",
           name: "Tabassage de NYC [P]",
           description: `
-            Des que <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> ou <span class='gold-t'>Raphael</span> attaque, ce Champion se joint a cette attaque.<br><br>
+            Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.<br><br>
 			Place un debuff ${DEBUFFS.BERSERK} sur ce Champion pendant 1 tour des qu'un Champion meurt.<br><br>
 			A 20% de chances d'accorder un Tour supplementaire lors d'une attaque sous debuff ${DEBUFFS.BERSERK} place par ce Champion.
           `,

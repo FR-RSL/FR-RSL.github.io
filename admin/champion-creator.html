@@ -263,8 +263,63 @@
             transition: border-color 0.2s;
         }
         .spell-name-input:focus { border-color: var(--primary); }
-        .passive-check { display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; }
-        .passive-check input { cursor: pointer; }
+        .passive-check { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; }
+        .passive-check input[type=checkbox] { display: none; }
+        .passive-toggle {
+            width: 34px; height: 18px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 9px;
+            position: relative;
+            transition: background 0.2s, border-color 0.2s;
+            flex-shrink: 0;
+        }
+        .passive-toggle::after {
+            content: '';
+            position: absolute;
+            width: 12px; height: 12px;
+            top: 2px; left: 2px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            transition: transform 0.2s, background 0.2s;
+        }
+        .passive-check input:checked ~ .passive-toggle {
+            background: rgba(6,182,212,0.25);
+            border-color: #06b6d4;
+        }
+        .passive-check input:checked ~ .passive-toggle::after {
+            transform: translateX(16px);
+            background: #06b6d4;
+        }
+        .passive-check .passive-label { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
+        .passive-check input:checked ~ .passive-label { color: #06b6d4; }
+
+        /* ── Number spinner custom ───────────────────── */
+        .num-spin { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; }
+        .num-spin input[type=number] {
+            -moz-appearance: textfield;
+            width: 48px !important; flex: none;
+            padding: 0.45rem 0.3rem !important;
+            border: none !important;
+            border-left: 1px solid var(--glass-border) !important;
+            border-right: 1px solid var(--glass-border) !important;
+            border-radius: 0 !important;
+            text-align: center;
+        }
+        .num-spin input[type=number]::-webkit-inner-spin-button,
+        .num-spin input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .num-spin-btn {
+            width: 24px; height: 100%;
+            background: rgba(255,255,255,0.03);
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.15s, color 0.15s;
+            padding: 0; line-height: 1;
+        }
+        .num-spin-btn:hover { background: rgba(232,121,14,0.15); color: var(--primary); }
         .btn-rm-spell {
             background: rgba(229,57,53,0.12);
             border: 1px solid rgba(229,57,53,0.3);
@@ -341,8 +396,8 @@
         .lvl-row { display: flex; gap: 0.35rem; align-items: center; }
         .lvl-row select { flex: 1; padding: 0.45rem 0.7rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(20,20,35,0.9); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; cursor: pointer; }
         .lvl-row select:focus { border-color: var(--primary); }
-        .lvl-row input[type=number] { width: 68px; flex: none; padding: 0.45rem 0.55rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.82rem; font-family: inherit; outline: none; text-align: center; }
-        .lvl-row input[type=number]:focus { border-color: var(--primary); }
+        .lvl-row .num-spin input[type=number] { width: 48px; flex: none; padding: 0.45rem 0.3rem; font-size: 0.82rem; font-family: inherit; outline: none; background: rgba(255,255,255,0.04); color: var(--text-light); }
+        .lvl-row .num-spin input[type=number]:focus { border-color: var(--primary); }
         .lvl-row .lvl-unit { font-size: 0.78rem; color: var(--text-muted); min-width: 16px; text-align: left; }
 
         /* ── Faction effects ─────────────────────────── */
@@ -392,6 +447,46 @@
 
         /* ── Stats ───────────────────────────────────── */
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 0.75rem; }
+
+        /* ── Stats autocomplete ──────────────────────── */
+        .stat-input-wrap { position: relative; }
+        .stat-input-wrap input { width: 100%; box-sizing: border-box; }
+        .stat-suggestions {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            background: #1a1208;
+            border: 1px solid var(--glass-border);
+            border-top: none;
+            border-radius: 0 0 2px 2px;
+            max-height: 140px;
+            overflow-y: auto;
+        }
+        .stat-suggestions.open { display: block; }
+        .stat-suggestion-item {
+            padding: 0.35rem 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .stat-suggestion-item:hover, .stat-suggestion-item.focused {
+            background: rgba(232,121,14,0.12);
+            color: var(--text-light);
+        }
+        .stat-suggestion-del {
+            opacity: 0;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            padding: 0 0.2rem;
+            line-height: 1;
+        }
+        .stat-suggestion-item:hover .stat-suggestion-del { opacity: 1; }
 
         /* ── Portrait ────────────────────────────────── */
         .portrait-drop {
@@ -865,8 +960,125 @@ function buildStatsGrid(gridId) {
   if (!g) return;
   g.innerHTML = STAT_KEYS.map(function(k) {
     var id = gridId + '_' + k.replace(/\s/g,'_').replace(/\./g,'');
-    return '<div class="field"><label>' + k + '</label><input type="text" id="' + id + '" placeholder="—"></div>';
+    var listId = id + '_list';
+    return '<div class="field"><label>' + k + '</label>' +
+      '<div class="stat-input-wrap">' +
+        '<input type="text" id="' + id + '" placeholder="—" autocomplete="off"' +
+          ' data-stat-key="' + k + '"' +
+          ' oninput="statOnInput(this)"' +
+          ' onfocus="statOnFocus(this)"' +
+          ' onblur="statOnBlur(this)"' +
+          ' onkeydown="statOnKeydown(event,this)">' +
+        '<div class="stat-suggestions" id="' + listId + '"></div>' +
+      '</div>' +
+    '</div>';
   }).join('');
+}
+
+// ── Stat autocomplete ─────────────────────────────────────
+var STAT_HISTORY_KEY = 'rsl_stat_history';
+
+function getStatHistory() {
+  try { return JSON.parse(localStorage.getItem(STAT_HISTORY_KEY) || '{}'); } catch(e) { return {}; }
+}
+
+function saveStatValue(statKey, value) {
+  if (!value || !value.trim()) return;
+  var h = getStatHistory();
+  if (!h[statKey]) h[statKey] = [];
+  var v = value.trim();
+  // Remove if already present (move to front)
+  h[statKey] = h[statKey].filter(function(x) { return x !== v; });
+  h[statKey].unshift(v);
+  // Keep max 15 suggestions per stat
+  h[statKey] = h[statKey].slice(0, 15);
+  localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
+}
+
+function deleteStatSuggestion(statKey, value, event) {
+  event.stopPropagation();
+  var h = getStatHistory();
+  if (h[statKey]) h[statKey] = h[statKey].filter(function(x) { return x !== value; });
+  localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
+}
+
+function getListEl(input) {
+  return document.getElementById(input.id + '_list');
+}
+
+function renderStatSuggestions(input, filter) {
+  var list = getListEl(input);
+  if (!list) return;
+  var statKey = input.getAttribute('data-stat-key');
+  var h = getStatHistory();
+  var all = h[statKey] || [];
+  var f = (filter || '').trim().toLowerCase();
+  var matches = f ? all.filter(function(v) { return v.toLowerCase().includes(f); }) : all;
+  if (!matches.length) { list.classList.remove('open'); return; }
+  list.innerHTML = matches.map(function(v) {
+    return '<div class="stat-suggestion-item" onmousedown="statPickSuggestion(event,\'' +
+      input.id + '\',\'' + escAttr(v) + '\',\'' + escAttr(statKey) + '\')">' +
+      '<span>' + esc(v) + '</span>' +
+      '<span class="stat-suggestion-del" onmousedown="deleteStatSuggestion(\'' + escAttr(statKey) + '\',\'' + escAttr(v) + '\',event);statOnInput(document.getElementById(\'' + input.id + '\'))" title="Supprimer">✕</span>' +
+    '</div>';
+  }).join('');
+  list.classList.add('open');
+}
+
+function statOnInput(input) {
+  renderStatSuggestions(input, input.value);
+}
+
+function statOnFocus(input) {
+  renderStatSuggestions(input, input.value);
+}
+
+function statOnBlur(input) {
+  var list = getListEl(input);
+  if (list) setTimeout(function() { list.classList.remove('open'); }, 150);
+}
+
+function statOnKeydown(e, input) {
+  var list = getListEl(input);
+  if (!list || !list.classList.contains('open')) return;
+  var items = list.querySelectorAll('.stat-suggestion-item');
+  var focused = list.querySelector('.stat-suggestion-item.focused');
+  var idx = focused ? Array.from(items).indexOf(focused) : -1;
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    if (focused) focused.classList.remove('focused');
+    var next = items[idx + 1] || items[0];
+    if (next) next.classList.add('focused');
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (focused) focused.classList.remove('focused');
+    var prev = items[idx - 1] || items[items.length - 1];
+    if (prev) prev.classList.add('focused');
+  } else if (e.key === 'Enter' && focused) {
+    e.preventDefault();
+    input.value = focused.querySelector('span').textContent;
+    list.classList.remove('open');
+  } else if (e.key === 'Escape') {
+    list.classList.remove('open');
+  }
+}
+
+function statPickSuggestion(e, inputId, value, statKey) {
+  e.preventDefault();
+  var input = document.getElementById(inputId);
+  if (input) { input.value = value; input.focus(); }
+  var list = getListEl(input);
+  if (list) list.classList.remove('open');
+}
+
+function escAttr(s) {
+  return String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+}
+
+function saveAllStatsToHistory(stats) {
+  Object.keys(stats).forEach(function(k) {
+    saveStatValue(k, stats[k]);
+  });
 }
 
 function getStats(gridId) {
@@ -1010,8 +1222,12 @@ function renderSpellList(form) {
       var curVal  = isCd ? 1 : (li.val || 10);
       var inputHtml = isCd
         ? '<span style="font-size:0.8rem;color:var(--text-muted);padding:0 0.3rem">−1</span>'
-        : '<input type="number" min="' + curStep + '" max="99" step="' + curStep + '" value="' + curVal + '"' +
-          ' oninput="updateLvlVal(' + form + ',' + i + ',' + li_i + ',this.value)">';
+        : '<div class="num-spin">' +
+            '<button type="button" class="num-spin-btn" onclick="stepLvlVal(' + form + ',' + i + ',' + li_i + ',-' + curStep + ')">−</button>' +
+            '<input type="number" min="' + curStep + '" max="99" step="' + curStep + '" value="' + curVal + '"' +
+            ' oninput="updateLvlVal(' + form + ',' + i + ',' + li_i + ',this.value)">' +
+            '<button type="button" class="num-spin-btn" onclick="stepLvlVal(' + form + ',' + i + ',' + li_i + ',' + curStep + ')">+</button>' +
+          '</div>';
       return '<div class="lvl-row">' +
         '<span style="font-size:0.75rem;color:var(--text-muted);white-space:nowrap">Niv.' + (li_i+2) + '</span>' +
         '<select onchange="updateLvlType(' + form + ',' + i + ',' + li_i + ',this.value)">' + selOpts + '</select>' +
@@ -1038,7 +1254,7 @@ function renderSpellList(form) {
         '<div class="spell-img-btn" onclick="triggerSpImg(' + form + ',' + i + ')">' + imgHtml + '</div>' +
         '<input class="spell-name-input" type="text" value="' + esc(sp.name) + '"' +
                ' placeholder="Nom de la compétence" oninput="setSp(' + form + ',' + i + ',\'name\',this.value)">' +
-        '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="togglePassive(' + form + ',' + i + ',this.checked)"> Passif</label>' +
+        '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="togglePassive(' + form + ',' + i + ',this.checked)"><span class="passive-toggle"></span><span class="passive-label">Passif</span></label>' +
         '<button class="btn-rm-spell" onclick="removeSpell(' + form + ',' + i + ')">✕</button>' +
       '</div>' +
       '<div class="field" style="margin-bottom:0.6rem">' +
@@ -1112,7 +1328,7 @@ function togglePassive(form, idx, checked) {
   if (!list[idx]) return;
   list[idx].isPassive = checked;
   var name = (list[idx].name || '').replace(/\s*\[P\]$/i, '').trim();
-  list[idx].name = checked ? (name ? name + ' [P]' : '[P]') : name;
+  list[idx].name = checked ? (name ? name + ' [P]' : ' [P]') : name;
   renderSpellList(form);
 }
 function updateLvlType(form, idx, li, type) {
@@ -1126,6 +1342,14 @@ function updateLvlType(form, idx, li, type) {
 function updateLvlVal(form, idx, li, val) {
   var list = (form === 1) ? spells1 : spells2;
   if (list[idx] && list[idx].levelInfo[li]) list[idx].levelInfo[li].val = parseInt(val) || 0;
+}
+function stepLvlVal(form, idx, li, step) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (!list[idx] || !list[idx].levelInfo[li]) return;
+  var cur = list[idx].levelInfo[li].val || 0;
+  var next = Math.max(1, cur + step);
+  list[idx].levelInfo[li].val = next;
+  renderSpellList(form);
 }
 function addLvl(form, idx) {
   var list = (form === 1) ? spells1 : spells2;
@@ -1630,6 +1854,9 @@ async function doPublish() {
     plog('ok', '');
     plog('ok', files.length + ' fichiers publiés en 1 seul commit !');
     plog('inf', 'URL : ' + base + slug + '.html');
+    // Sauvegarder les stats dans l'historique d'autocomplétion
+    saveAllStatsToHistory(stats1);
+    if (rarity === 'mythical') saveAllStatsToHistory(stats2);
     btn.textContent = 'Publié !';
     btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';
 

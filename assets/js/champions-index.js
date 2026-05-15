@@ -191,6 +191,7 @@ const CHAMPIONS = [
     { name: "Ruel Maitre-chasseur", faction: 'faction11', rarity: 'legendary', folder: 'ruel' },
     { name: "Ultan la Carapace", faction: 'faction11', rarity: 'legendary', folder: 'ultan' },
     { name: "Sydax Tueur-de-roi", faction: 'faction11', rarity: 'legendary', folder: 'sydax' },
+    { name: "Prophetesse Aveugle", faction: 'faction11', rarity: 'legendary', folder: 'prophetesse_aveugle' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

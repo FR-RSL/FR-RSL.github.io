@@ -58,7 +58,7 @@ const championData = {
             <span class='gbt'>Effet Passif</span><br><br>
 			A 15% de chances d'<span class='gt'>Esquiver</span> une competence ennemie et tous les effets qui l'accompagnent.
 			Si ce Champion est sous buff ${BUFFS.TAUNT}, les chances d'<span class='gt'>Esquive</span> passent a 30%.<br><br>
-			Des que <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> ou <span class='gold-t'>Raphael</span> attaque, ce Champion se joint a cette attaque.<br><br>
+			Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.<br><br>
 			<span class='gbt'>Effet Actif</span><br><br>
 			Place sur ce Champion un buff ${BUFFS.SHIELD} equivalent a 300% de son ATQ pendant 1 tour lorsqu'il est frappe.
           `,

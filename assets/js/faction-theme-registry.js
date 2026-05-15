@@ -216,24 +216,18 @@ function applyFactionTheme(factionId = null) {
         return;
     }
     
-    // Appliquer le gradient de fond
-    document.body.style.background = theme.background;
-    
-    // Mettre à jour les particules si elles existent
-    const particles = document.body.querySelector('::before');
-    if (particles) {
-        // Créer un nouveau SVG avec les bonnes couleurs
-        const particleSvg = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <circle cx="20" cy="20" r="2" fill="${theme.particles}40"/>
-            <circle cx="80" cy="40" r="1" fill="${theme.particles}60"/>
-            <circle cx="40" cy="80" r="1.5" fill="${theme.particles}50"/>
-        </svg>`;
-        
-        document.documentElement.style.setProperty('--faction-particles', `url('${particleSvg}')`);
-    }
-    
-    // Optionnel: Mettre à jour les couleurs d'accent
-    document.documentElement.style.setProperty('--faction-accent', theme.accent);
+    const c = theme.accent;
+
+    // Définir la couleur de faction comme variable CSS (utilisée par le CSS des champions)
+    document.documentElement.style.setProperty('--faction-primary', c);
+    document.documentElement.style.setProperty('--faction-accent', c);
+
+    // Fond : base sombre + halo de couleur faction bien visible en haut + reflet en bas
+    document.body.style.background = `
+        radial-gradient(ellipse 100% 50% at 50% -5%, ${c}48 0%, transparent 65%),
+        radial-gradient(ellipse 45% 30% at 95% 95%, ${c}28 0%, transparent 55%),
+        #090807
+    `;
     
     console.log(`Thème appliqué: ${theme.name} (${faction})`);
 }

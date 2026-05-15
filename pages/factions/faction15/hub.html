@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../../../assets/images/logos/logo.png">
     <link rel="stylesheet" href="../../../assets/css/main.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
         /* Variables spécifiques à Gardes Sylvains */
         :root {
             --faction-primary: #2d8f47;
@@ -30,23 +31,13 @@
             padding: 3rem 2rem;
             text-align: center;
             margin-bottom: 2rem;
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
+            
+            border-radius: 2px;
             position: relative;
             overflow: hidden;
         }
 
-        .faction-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(45, 143, 71,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(76, 175, 80,0.2)"/><circle cx="40" cy="80" r="1.5" fill="rgba(45, 143, 71,0.15)"/></svg>');
-            animation: float 6s ease-in-out infinite;
-            pointer-events: none;
-        }
+        
 
         .faction-header {
             display: flex;
@@ -65,19 +56,17 @@
         }
 
         .faction-logo:hover {
-            transform: scale(1.05) rotate(5deg);
+            transform: scale(1.04);
             filter: drop-shadow(0 0 40px rgba(45, 143, 71, 0.8));
         }
 
         .faction-title {
-            font-size: 3rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 2.2rem;
             font-weight: 700;
             margin: 0;
-            background: linear-gradient(135deg, var(--faction-primary), var(--faction-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(45, 143, 71, 0.5);
+            color: var(--faction-primary);
+            letter-spacing: 2px;
         }
 
         .faction-description {
@@ -88,36 +77,13 @@
             line-height: 1.6;
         }
 
-        .faction-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        
 
-        .faction-stat {
-            background: var(--glass-bg);
-            border: 1px solid rgba(45, 143, 71, 0.3);
-            border-radius: 15px;
-            padding: 1rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
+        
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--faction-primary);
-            display: block;
-        }
+        
 
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        
 
         /* Sections de rareté */
         .rarity-section {
@@ -125,20 +91,21 @@
             scroll-margin-top: 6rem;
         }
 
-
         .rarity-header {
             display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--glass-border);
         }
 
-
         .rarity-label {
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.12em;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            opacity: 0.75;
             white-space: nowrap;
         }
 
@@ -166,12 +133,12 @@
         .champion-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: 2px;
             padding: 0.5rem 0.8rem 0.8rem 0.8rem;
             text-align: center;
             text-decoration: none;
             color: var(--text-light);
-            backdrop-filter: blur(20px);
+            
             box-shadow: var(--card-shadow);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
@@ -184,23 +151,12 @@
             justify-content: flex-start;
         }
 
-        .champion-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
+        
 
-        .champion-card:hover::before {
-            left: 100%;
-        }
+        
 
         .champion-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-4px);
             box-shadow: 0 20px 50px rgba(22, 163, 74, 0.3);
         }
 
@@ -233,7 +189,7 @@
         .champion-image {
             width: calc(100% - 0.5rem);
             height: 110px;
-            border-radius: 15px;
+            border-radius: 2px;
             overflow: hidden;
             margin: 0.25rem;
             margin-bottom: 0.6rem;
@@ -251,7 +207,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center top;
-            border-radius: 15px;
+            border-radius: 2px;
             display: block;
             transition: transform 0.3s ease;
         }
@@ -277,56 +233,25 @@
             transform: translateY(-2px);
         }
 
-        /* Navigation rapide */
-        .quick-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
+        
 
-        .nav-pill {
-            padding: 0.75rem 1.5rem;
-            background: var(--glass-bg);
+                .back-to-home {
+            background: transparent;
             border: 1px solid var(--glass-border);
-            border-radius: 25px;
-            color: var(--text-light);
+            border-radius: 2px;
+            padding: 0.5rem 1rem;
+            color: var(--text-muted);
             text-decoration: none;
+            font-size: 0.85rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            cursor: pointer;
-        }
-
-        .nav-pill:hover, .nav-pill.active {
-            background: var(--faction-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(45, 143, 71, 0.3);
-        }
-
-        /* Bouton retour à l'accueil dans le header */
-        .back-to-home {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 0.6rem 1.2rem;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            margin-right: 1.5rem;
+            transition: color 0.2s, border-color 0.2s;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-
         .back-to-home:hover {
-            background: var(--faction-primary);
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(45, 143, 71, 0.3);
+            color: var(--text-light);
+            border-color: var(--primary);
         }
 
         .logo-section {
@@ -382,12 +307,15 @@
             }
 
             .faction-title {
-                font-size: 2.5rem;
-            }
+            font-family: 'Space Mono', monospace;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--faction-primary);
+            letter-spacing: 2px;
+        }
 
-            .faction-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            
 
             .champion-name {
                 font-size: 0.85rem;
@@ -422,8 +350,13 @@
             }
 
             .faction-title {
-                font-size: 2rem;
-            }
+            font-family: 'Space Mono', monospace;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--faction-primary);
+            letter-spacing: 2px;
+        }
         }
 
         /* Très petits écrans */
@@ -460,17 +393,22 @@
 
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(var(--faction-primary), var(--faction-accent));
-            border-radius: 10px;
+            border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(var(--faction-secondary), var(--faction-primary));
         }
+    
+        .rarity-line {
+            flex: 1;
+            height: 1px;
+            background: var(--glass-border);
+        }
     </style>
 </head>
 <body>
     <!-- Particules d'arrière-plan -->
-    <div class="particles"></div>
 
     <!-- Header -->
     <header>
@@ -478,11 +416,6 @@
             <a href="../../../index.html" class="back-to-home">← Accueil</a>
             <img src="../../../assets/images/logos/logo.png" alt="Logo FR RSL">
             <h1>FR RSL</h1>
-        </div>
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Rechercher un champion...">
-            </div>
         </div>
     </header>
 
@@ -498,36 +431,7 @@
             et les relie au Bois de Brume, et les uns aux autres.
         </p>
         
-        <!-- Navigation rapide -->
-        <div class="quick-nav">
-            <a href="#mythiques" class="nav-pill active">🔥 Mythiques</a>
-            <a href="#legendaires" class="nav-pill">👑 Légendaires</a>
-            <a href="#epiques" class="nav-pill">💎 Épiques</a>
-            <a href="#rares" class="nav-pill">⚡ Rares</a>
-            <a href="#peu-communes" class="nav-pill">🌿 Peu Communs</a>
-            <a href="#communes" class="nav-pill">⚪ Communs</a>
         </div>
-
-        <!-- Stats de la faction -->
-        <div class="faction-stats">
-            <div class="faction-stat">
-                <span class="stat-number">3</span>
-                <span class="stat-label">Mythiques</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">20</span>
-                <span class="stat-label">Légendaires</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Épiques</span>
-            </div>
-            <div class="faction-stat">
-                <span class="stat-number">23</span>
-                <span class="stat-label">Total</span>
-            </div>
-    </div>
-    </div>
     
         </div>
     </div>
@@ -535,11 +439,9 @@
     <div class="main-content">
         <!-- Section Mythiques -->
         <section class="rarity-section" id="mythiques">
-            <div class="rarity-header">
-                <span class="rarity-label mythic-label">
+            <div class="rarity-header"><span class="rarity-label mythic-label">
                     ✨ Champions Mythiques
-                </span>
-            </div>
+                </span><span class="rarity-line"></span></div>
             <div class="champions-grid" id="mythicalContainer">
                 <a href="mythical/nais/nais.html" class="champion-card" data-name="Nais" data-rarity="mythic">
                     <div class="champion-image">
@@ -564,11 +466,9 @@
 
         <!-- Section Légendaires -->
         <section class="rarity-section" id="legendaires">
-            <div class="rarity-header">
-                <span class="rarity-label legendary-label">
+            <div class="rarity-header"><span class="rarity-label legendary-label">
                     👑 Champions Légendaires
-                </span>
-            </div>
+                </span><span class="rarity-line"></span></div>
             <div class="champions-grid" id="legendaryContainer">
                 <a href="legendary/elva/elva.html" class="champion-card" data-name="Elva" data-rarity="legendary">
                     <div class="champion-image">
@@ -706,52 +606,16 @@
         </section>
 
         <!-- Section Épiques -->
-        <section class="rarity-section" id="epiques">
-            <div class="rarity-header">
-                <span class="rarity-label epic-label">
-                    💎 Champions Épiques
-                </span>
-            </div>
-            <div class="champions-grid" id="epicContainer">
-                <!-- Champions epic à ajouter -->
-            </div>
-        </section>
+        
 
         <!-- Section Rares -->
-        <section class="rarity-section" id="rares">
-            <div class="rarity-header">
-                <span class="rarity-label rare-label">
-                    ⚡ Champions Rares
-                </span>
-            </div>
-            <div class="champions-grid" id="rareContainer">
-                <!-- Champions rares à ajouter -->
-            </div>
-        </section>
+        
 
         <!-- Section Peu Communes -->
-        <section class="rarity-section" id="peu-communes">
-            <div class="rarity-header">
-                <span class="rarity-label uncommon-label">
-                    🌿 Champions Peu Communs
-                </span>
-            </div>
-            <div class="champions-grid" id="uncommonContainer">
-                <!-- Champions peu communs à ajouter -->
-            </div>
-        </section>
+        
 
         <!-- Section Communes -->
-        <section class="rarity-section" id="communes">
-            <div class="rarity-header">
-                <span class="rarity-label common-label">
-                    ⚪ Champions Communs
-                </span>
-            </div>
-            <div class="champions-grid" id="commonContainer">
-                <!-- Champions communs à ajouter -->
-            </div>
-        </section>
+        
 
     </div>
 
@@ -807,103 +671,6 @@
 
     <script src="../../../assets/js/main.js"></script>
     <script>
-        // Génération des particules spécifiques à la faction
-        function createFactionParticles() {
-            const particles = document.querySelector('.particles');
-            if (!particles) return;
-            
-            const particleCount = 30;
-            const colors = ['#2d8f47', '#4caf50', '#81c784'];
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                particles.appendChild(particle);
-            }
-        }
-
-        // Recherche améliorée pour les champions
-        function initChampionSearch() {
-            const searchInput = document.getElementById('searchInput');
-            if (!searchInput) return;
-
-            searchInput.addEventListener('input', function() {
-                const query = this.value.toLowerCase();
-                document.querySelectorAll('.champion-card').forEach(card => {
-                    const name = card.getAttribute('data-name').toLowerCase();
-                    const isVisible = name.includes(query);
-                    card.style.display = isVisible ? '' : 'none';
-                    
-                    if (isVisible) {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(-20px)';
-                    }
-                });
-            });
-        }
-
-
-        // Navigation fluide vers les sections
-        function initSmoothNavigation() {
-            const navPills = document.querySelectorAll('.nav-pill');
-            
-            navPills.forEach(pill => {
-                pill.addEventListener('click', (e) => {
-                    const href = pill.getAttribute('href');
-                    if (href && href.startsWith('#')) {
-                        e.preventDefault();
-                        
-                        navPills.forEach(p => p.classList.remove('active'));
-                        pill.classList.add('active');
-                        
-                        const section = document.querySelector(href);
-                        if (section) {
-                            section.scrollIntoView({
-                                behavior: 'smooth',
-                                block: "center"
-                            });
-                        }
-                    }
-                });
-            });
-        }
-
-        // Animation des statistiques
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            
-            statNumbers.forEach(stat => {
-                const finalValue = stat.textContent;
-                const isNumeric = /^\d+/.test(finalValue);
-                
-                if (isNumeric) {
-                    const targetNumber = parseInt(finalValue);
-                    let currentNumber = 0;
-                    const increment = Math.ceil(targetNumber / 30);
-                    
-                    const timer = setInterval(() => {
-                        currentNumber += increment;
-                        if (currentNumber >= targetNumber) {
-                            currentNumber = targetNumber;
-                            clearInterval(timer);
-                        }
-                        stat.textContent = currentNumber + (finalValue.includes('+') ? '+' : '');
-                    }, 50);
-                }
-            });
-        }
-
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            createFactionParticles();
             initChampionSearch();
             initSmoothNavigation();
             

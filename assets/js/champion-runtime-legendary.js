@@ -249,7 +249,7 @@ function initPage() {
 
   championData.spells.forEach((spell, index) => {
     const spellContainer = document.createElement('div');
-    spellContainer.className = 'spell-container';
+    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}`;
 
     const spellDiv = document.createElement('div');
     spellDiv.className = `spell ${spell.isPassive ? 'passive' : ''}`;
@@ -258,15 +258,9 @@ function initPage() {
     spellImg.src = spell.img;
     spellImg.alt = spell.name;
     spellDiv.appendChild(spellImg);
-
-    // Événements pour desktop
-    spellDiv.addEventListener('mouseenter', (e) => showTooltip(e, index));
-    spellDiv.addEventListener('mouseleave', hideTooltip);
-    spellDiv.addEventListener('touchstart', (e) => handleTouch(e, index));
-
     spellContainer.appendChild(spellDiv);
 
-    // Créer la description mobile (toujours, le CSS gère l'affichage)
+    // Description toujours visible
     const mobileDescription = document.createElement('div');
     mobileDescription.className = 'mobile-spell-description';
     mobileDescription.innerHTML = createSpellDescriptionHTML(spell, index);
@@ -277,7 +271,7 @@ function initPage() {
 
   // Mettre à jour les statistiques
   const statsContent = document.getElementById("stats-content");
-  if (statsContent) {
+  if (statsContent && championData.stats) {
     const statsHTML = Object.entries(championData.stats)
       .map(([key, value]) => `
         <div class="stat-row">
@@ -289,20 +283,34 @@ function initPage() {
     statsContent.innerHTML = statsHTML;
   }
 
-  // Mettre à jour l'aura
+  // Mettre à jour l'aura — affichée comme une ligne de sort (icône + description)
   const auraImg = document.getElementById("aura-img");
   const auraContainer = auraImg ? auraImg.closest('.aura-container') : null;
   if (aura && auraImg) {
     auraImg.src = aura.img;
-    auraImg.addEventListener('mouseenter', showAuraTooltip);
-    auraImg.addEventListener('mouseleave', hideTooltip);
-    auraImg.addEventListener('touchstart', (e) => handleTouch(e, 0, true));
 
+    // Restructurer le conteneur en style spell-container
     if (auraContainer) {
+      // Récupérer le .aura parent de auraImg
+      const auraBubble = auraImg.closest('.aura');
+      if (auraBubble) {
+        // Déplacer .aura au même niveau que description (flex row)
+        auraContainer.style.flexDirection = 'row';
+        auraContainer.style.alignItems = 'flex-start';
+        auraContainer.style.gap = '1rem';
+        auraContainer.style.marginTop = '0.5rem';
+        auraContainer.style.padding = '0.9rem';
+        auraContainer.style.background = 'rgba(255,255,255,0.03)';
+        auraContainer.style.border = '1px solid var(--glass-border)';
+        auraContainer.style.borderRadius = '2px';
+        auraBubble.style.flexShrink = '0';
+        auraBubble.style.width = '60px';
+        auraBubble.style.height = '60px';
+      }
       const mobileAuraDesc = document.createElement('div');
-      mobileAuraDesc.className = 'mobile-aura-description';
+      mobileAuraDesc.className = 'mobile-spell-description';
       mobileAuraDesc.innerHTML = `
-        <h4 class="gold-t">Aura de Lead Faction</h4>
+        <div class="spell-header"><span class="spell-name" style="background:linear-gradient(135deg,#ffb700,#ff8f00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Aura</span></div>
         <p>${aura.description}</p>
       `;
       auraContainer.appendChild(mobileAuraDesc);

@@ -270,7 +270,7 @@
         /* ── Grille des factions ─────────────────────── */
         .faction-grid-home {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 0.8rem;
         }
 
@@ -414,7 +414,6 @@
     <script src="assets/js/cookies.js"></script>
 </head>
 <body>
-    <div class="particles"></div>
 
     <!--──Header──-->
     <header>
@@ -423,30 +422,23 @@
             <h1>FR RSL</h1>
         </div>
         <nav class="quick-nav" style="margin:0;">
-            <a href="#news"       class="nav-pill">🗞️ Mises à jour</a>
-            <a href="#categories" class="nav-pill">Catégories</a>
-            <a href="#factions"   class="nav-pill">Factions</a>
-            <a href="pages/search/index.html" class="nav-pill active">🔍 Recherche</a>
+            <a href="#news"       class="nav-pill">🗞 Actus</a>
+            <a href="#factions"   class="nav-pill">⚔️ Factions</a>
+            <a href="#equipement" class="nav-pill">🛡️ Équipement</a>
+            <a href="pages/search/index.html" class="nav-pill">🔍 Recherche</a>
+            <a href="https://pgbmax.github.io" class="nav-pill" target="_blank" rel="noopener">📊 Tier List ↗</a>
         </nav>
     </header>
 
     <!--──Hero──-->
     <div class="hero">
-        <div class="hero-eyebrow">✦ Guide communautaire · Fan Site</div>
-        <h2>Guide &amp; Wiki FR <br>| Raid: Shadow Legends</h2>
+        <div class="hero-eyebrow">⚔️ Guide communautaire · Fan Site</div>
+        <h2>Guide &amp; Wiki FR<br>Raid: Shadow Legends</h2>
         <p>Fiches de champions, builds et stratégies — créés par la communauté française.</p>
-
-        <!--Recherchechampions→pagedédiée-->
         <form class="hero-search" action="pages/search/index.html" method="get" role="search">
             <input type="text" name="q" placeholder="Rechercher un champion…" autocomplete="off" aria-label="Rechercher un champion">
-            <button type="submit">🔍 Chercher</button>
+            <button type="submit">Chercher</button>
         </form>
-
-        <div class="quick-nav" style="justify-content:center; margin:0;">
-            <a href="#news"       class="nav-pill active">🗞️ Mises à jour</a>
-            <a href="#categories" class="nav-pill">📂 Catégories</a>
-            <a href="#factions"   class="nav-pill">⚔️ Factions</a>
-        </div>
     </div>
 
     <!--──Contenuprincipal──-->
@@ -456,56 +448,9 @@
         <section class="section" id="news">
             <div class="section-header">
                 <h2 class="section-title">Dernières mises à jour</h2>
-                <p class="section-subtitle">Suivez les ajouts et changements sur le site</p>
             </div>
             <div class="articles-grid" id="articlesContainer">
                 <!--Remplidynamiquementpararticles.js-->
-            </div>
-        </section>
-
-        <!--──Catégories──-->
-        <section class="section" id="categories">
-            <div class="section-header">
-                <h2 class="section-title">Catégories</h2>
-                <p class="section-subtitle">Toutes les sections du guide</p>
-            </div>
-
-            <div class="categories-grid">
-                <a href="#factions" class="category-card">
-                    <span class="category-icon">⚔️</span>
-                    <div class="category-info">
-                        <h3>Champions</h3>
-                        <p>Fiches détaillées, sorts et builds</p>
-                    </div>
-                    <span class="category-badge">118 fiches</span>
-                </a>
-
-                <a href="pages/equipment/index.html" class="category-card">
-                    <span class="category-icon">🛡️</span>
-                    <div class="category-info">
-                        <h3>Équipement</h3>
-                        <p>Artefacts, accessoires, bénédictions</p>
-                    </div>
-                    <span class="category-badge">4 sections</span>
-                </a>
-
-                <a href="#" class="category-card disabled">
-                    <span class="category-icon">🏰</span>
-                    <div class="category-info">
-                        <h3>Donjons</h3>
-                        <p>Stratégies et compositions</p>
-                    </div>
-                    <span class="category-badge soon">Bientôt</span>
-                </a>
-
-                <a href="https://pgbmax.github.io" class="category-card" target="_blank" rel="noopener">
-                    <span class="category-icon">📊</span>
-                    <div class="category-info">
-                        <h3>Tier List</h3>
-                        <p>Classement des meilleurs champions</p>
-                    </div>
-                    <span class="category-badge">↗ Externe</span>
-                </a>
             </div>
         </section>
 
@@ -513,7 +458,6 @@
         <section class="section" id="factions">
             <div class="section-header">
                 <h2 class="section-title">Les Factions de Teleria</h2>
-                <p class="section-subtitle">Explorez les 15 factions et leurs champions légendaires &amp; mythiques</p>
             </div>
 
             <div class="faction-grid-home">
@@ -588,7 +532,6 @@
         <section class="section" id="equipement">
             <div class="section-header">
                 <h2 class="section-title">Équipement</h2>
-                <p class="section-subtitle">Guides de référence pour optimiser vos champions</p>
             </div>
 
             <div class="card-grid equipment-grid">

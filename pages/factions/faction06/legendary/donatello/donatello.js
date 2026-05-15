@@ -53,7 +53,7 @@ const championData = {
           name: "Je te couvre, frerot ! [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
-			Des que <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> ou <span class='gold-t'>Raphael</span> attaque, ce Champion se joint a cette attaque.<br><br>
+			Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.<br><br>
 			<span class='gbt'>Effet Actif</span><br><br>
 			Des qu'un allie est sur le point de recevoir un coup fatal, ce Champion empeche la mort de cet allie et le garde en vie avec 1 PV. Egalise ensuite les PV de cet allie.
 			Le niveau de PV de cet allie sera ramene au niveau de PV moyen de l'equipe.

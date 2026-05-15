@@ -103,7 +103,7 @@ Cette Championne ne peut pas non plus recevoir de frappes critiques lorsqu'elle 
     ],
     stats: {
           "PV": "18 825",
-          "ATQ": "1 489",
+          "ATQ": "1 498",
           "DEF": "1 101",
           "VIT": "105",
           "TAUX C.": "15%",

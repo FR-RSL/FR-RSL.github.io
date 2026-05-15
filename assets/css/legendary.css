@@ -1,13 +1,13 @@
 /* Variables universelles pour toutes les factions */
 :root {
-    --glass-bg: rgba(30, 35, 50, 0.85);
-    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-bg: rgba(20, 14, 8, 0.88);
+    --glass-border: rgba(180, 100, 30, 0.18);
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     --text-light: #f8fafc;
     --text-muted: #cbd5e1;
-    --background: #0f172a;
-    --tooltip-bg: rgba(20, 25, 40, 0.95);
-    --tooltip-border: rgba(255, 255, 255, 0.2);
+    --background: #090807;
+    --tooltip-bg: rgba(14, 10, 6, 0.97);
+    --tooltip-border: rgba(180, 100, 30, 0.25);
     --mythic: #e53935;
     --legendary: #ffb700;
     --epic: #a259e6;
@@ -18,10 +18,7 @@
 body {
     margin: 0;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg,
-        var(--background) 0%,
-        rgba(31, 41, 55, 0.9) 50%,
-        var(--background) 100%);
+    background: var(--background);
     color: var(--text-light);
     min-height: 100vh;
     padding: 0;
@@ -56,7 +53,7 @@ body::before {
     border: 1px solid var(--glass-border);
     color: var(--text-light);
     padding: 0.8rem 1.5rem;
-    border-radius: 20px;
+    border-radius: 2px;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -150,7 +147,7 @@ body::before {
 .panel {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 2rem;
     backdrop-filter: blur(20px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -178,7 +175,7 @@ body::before {
 
 .panel:hover {
     border-color: var(--faction-primary);
-    box-shadow: 0 20px 60px rgba(55, 65, 81, 0.3);
+    box-shadow: 0 20px 60px rgba(180, 80, 10, 0.2);
     transform: translateY(-5px);
 }
 
@@ -238,7 +235,7 @@ body::before {
     background: linear-gradient(135deg, var(--legendary), #ff8f00);
     color: #1a1a1a;
     padding: 0.8rem 1.5rem;
-    border-radius: 15px;
+    border-radius: 2px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
@@ -257,7 +254,7 @@ body::before {
 .type-badge {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 15px;
+    border-radius: 2px;
     padding: 0.6rem 1.2rem;
     font-weight: 600;
     color: var(--text-light);
@@ -292,7 +289,7 @@ body::before {
 .champion-img {
     max-width: 280px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 2px;
     transition: all 0.3s ease;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
@@ -300,7 +297,7 @@ body::before {
 .champion-img:hover {
     transform: scale(1.02);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 20px rgba(68, 96, 255, 0.4);
+  box-shadow: 0 0 20px rgba(232, 121, 14, 0.35);
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -493,7 +490,7 @@ body::before {
 }
 
 .aura {
-  border-radius: 12px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +531,7 @@ body::before {
 
 .aura-img {
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 2px;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 0 2px #ffb700) drop-shadow(0 0 8px rgba(255, 183, 0, 0.4));
 }
@@ -582,7 +579,7 @@ body::before {
 .stats {
   background-color: rgba(24, 26, 36, 0.6);
   color: #e6b800;
-  border-radius: 12px;
+  border-radius: 2px;
   padding: 1.5rem;
   font-size: 1.1rem;
   backdrop-filter: blur(5px);
@@ -624,7 +621,7 @@ body::before {
     align-items: center;
     padding: 0.8rem 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
@@ -654,7 +651,7 @@ body::before {
     border: 1px solid var(--tooltip-border);
     color: var(--text-light);
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 2px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     max-width: 90vw;
     z-index: 1000;
@@ -679,7 +676,7 @@ body::before {
     display: none;
     background: var(--tooltip-bg);
     border: 1px solid var(--tooltip-border);
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 1.5rem;
     margin-top: 1.5rem;
     color: var(--text-light);
@@ -703,7 +700,7 @@ body::before {
     display: none;
     background: var(--tooltip-bg);
     border: 1px solid var(--tooltip-border);
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 1.5rem;
     margin-top: 1.5rem;
     color: var(--text-light);
@@ -819,7 +816,7 @@ body::before {
     font-weight: 600;
     background: rgba(6, 182, 212, 0.1);
     padding: 0.2rem 0.5rem;
-    border-radius: 8px;
+    border-radius: 2px;
     border: 1px solid rgba(6, 182, 212, 0.3);
 }
 

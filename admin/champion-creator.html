@@ -628,7 +628,7 @@
             </div>
             <div class="field">
                 <label>Nom complet</label>
-                <input type="text" id="fullName" placeholder="ex: Acelin le Vaillant">
+                <input type="text" id="fullName" placeholder="ex: Acelin le Vaillant" oninput="onFullName(this.value)">
             </div>
             <div class="field">
                 <label>Faction</label>
@@ -890,8 +890,9 @@ function lvlToString(li) {
 }
 
 // ── State ──────────────────────────────────────────────────
-var ghTok       = null;
-var selAff      = 'force';
+var ghTok              = null;
+var selAff             = 'force';
+var slugManuallyEdited = false;
 var selAura     = null;
 var portraitB64 = null;
 var curFt       = 1;    // current form tab (1 or 2)
@@ -914,6 +915,7 @@ document.addEventListener('DOMContentLoaded', function() {
   buildToolbar('auraToolbar', 'auraDesc');
   document.getElementById('auraDescWrap').style.display = 'none';
   var draftLoaded = loadDraft();
+  if (draftLoaded && document.getElementById('slug').value) slugManuallyEdited = true;
   if (!draftLoaded) { applyLastMeta(); addSpell(1); }
   spawnParticles();
   setInterval(saveDraft, 5000);
@@ -964,7 +966,22 @@ function onRarity(val) {
 }
 
 // ── Slug sync ─────────────────────────────────────────────
+function slugify(v) {
+  return v.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g,'_')
+    .replace(/[^a-z0-9_]/g,'');
+}
+function onFullName(v) {
+  if (!v.trim()) slugManuallyEdited = false;
+  if (!slugManuallyEdited) {
+    var s = slugify(v);
+    document.getElementById('slug').value = s;
+    document.getElementById('portraitName').textContent = (s || 'champion') + '.png';
+  }
+}
 function onSlug(v) {
+  slugManuallyEdited = true;
   var s = v.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
   if (document.getElementById('slug').value !== s) document.getElementById('slug').value = s;
   document.getElementById('portraitName').textContent = (s || 'champion') + '.png';
@@ -1015,27 +1032,30 @@ function buildStatsGrid(gridId) {
 // ── Stat autocomplete ─────────────────────────────────────
 var STAT_HISTORY_KEY = 'rsl_stat_history';
 
+// ATQ et DEF partagent le même historique de suggestions
+function sharedStatKey(k) { return (k === 'DEF') ? 'ATQ' : k; }
+
 function getStatHistory() {
   try { return JSON.parse(localStorage.getItem(STAT_HISTORY_KEY) || '{}'); } catch(e) { return {}; }
 }
 
 function saveStatValue(statKey, value) {
   if (!value || !value.trim()) return;
+  var k = sharedStatKey(statKey);
   var h = getStatHistory();
-  if (!h[statKey]) h[statKey] = [];
+  if (!h[k]) h[k] = [];
   var v = value.trim();
-  // Remove if already present (move to front)
-  h[statKey] = h[statKey].filter(function(x) { return x !== v; });
-  h[statKey].unshift(v);
-  // Keep max 15 suggestions per stat
-  h[statKey] = h[statKey].slice(0, 15);
+  h[k] = h[k].filter(function(x) { return x !== v; });
+  h[k].unshift(v);
+  h[k] = h[k].slice(0, 15);
   localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
 }
 
 function deleteStatSuggestion(statKey, value, event) {
   event.stopPropagation();
+  var k = sharedStatKey(statKey);
   var h = getStatHistory();
-  if (h[statKey]) h[statKey] = h[statKey].filter(function(x) { return x !== value; });
+  if (h[k]) h[k] = h[k].filter(function(x) { return x !== value; });
   localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
 }
 
@@ -1048,7 +1068,7 @@ function renderStatSuggestions(input, filter) {
   if (!list) return;
   var statKey = input.getAttribute('data-stat-key');
   var h = getStatHistory();
-  var all = h[statKey] || [];
+  var all = h[sharedStatKey(statKey)] || [];
   var f = (filter || '').trim().toLowerCase();
   var matches = f ? all.filter(function(v) { return v.toLowerCase().includes(f); }) : all;
   if (!matches.length) { list.classList.remove('open'); return; }
@@ -1151,7 +1171,11 @@ function pickAura(el) {
   document.getElementById('auraDescWrap').style.display = selAura ? 'block' : 'none';
   if (selAura) {
     var ta = document.getElementById('auraDesc');
-    if (!ta.value.trim()) ta.value = 'Augmente la statistique ';
+    if (!ta.value.trim()) {
+      var auraObj = AURAS.find(function(a) { return a.key === selAura; });
+      var statLbl = auraObj ? auraObj.lbl : selAura;
+      ta.value = 'Augmente la statistique ' + statLbl + ' des Alliés';
+    }
   }
 }
 

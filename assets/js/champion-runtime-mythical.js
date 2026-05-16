@@ -480,9 +480,7 @@ function updateSpells(spells) {
   spells.forEach((spell, index) => {
     // Créer le container pour mobile
     const spellContainer = document.createElement('div');
-    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}`;
-
-    // Créer l'élément sort
+    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}${!spell.isPassive && spell.name === 'Metamorphe' ? ' metamorphe-container' : ''}`;
     const spellDiv = document.createElement('div');
     spellDiv.className = `spell ${spell.isPassive ? "passive" : ""}`;
     spellDiv.setAttribute('aria-label', spell.name);

@@ -249,7 +249,7 @@ function initPage() {
 
   championData.spells.forEach((spell, index) => {
     const spellContainer = document.createElement('div');
-    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}`;
+    spellContainer.className = `spell-container${spell.isPassive ? ' passive-container' : ''}${!spell.isPassive && spell.name === 'Metamorphe' ? ' metamorphe-container' : ''}`;
 
     const spellDiv = document.createElement('div');
     spellDiv.className = `spell ${spell.isPassive ? 'passive' : ''}`;

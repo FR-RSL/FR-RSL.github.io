@@ -26,13 +26,13 @@ const championForms = {
               Attaque 4 fois un ennemi. Chaque frappe a 20% de chances
               supplémentaires de porter un coup critique.<br><br>
               La premiere frappe ignorera 10% de la DEF de la cible.
-              Chaque frappe suivante ignorera 5% supplémentaires de la DEF de la cible.<br>
+              Chaque frappe suivante ignorera 5% supplémentaires de la DEF de la cible.<br><br>
               La premiere frappe place un débuff 
-              <span class='gbt'>Blocage des Buffs</span> pendant 2 tours.<br>
+              <span class='gbt'>Blocage des Buffs</span> pendant 2 tours.<br><br>
               La deuxieme frappe place un débuff 
-              <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br>
+              <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br><br>
               La troisieme frappe place un débuff 
-              <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br>
+              <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
               La quatrieme frappe place un débuff 
               <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours.
             `,

@@ -294,6 +294,33 @@
         .passive-check .passive-label { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
         .passive-check input:checked ~ .passive-label { color: #06b6d4; }
 
+        /* ── Metamorphe checkbox ─────────────────────── */
+        .meta-check { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; user-select: none; }
+        .meta-check input[type=checkbox] { display: none; }
+        .meta-toggle {
+            width: 34px; height: 18px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 9px;
+            position: relative;
+            transition: background 0.2s, border-color 0.2s;
+            flex-shrink: 0;
+        }
+        .meta-toggle::after {
+            content: '';
+            position: absolute;
+            width: 12px; height: 12px;
+            top: 2px; left: 2px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            transition: transform 0.2s, background 0.2s;
+        }
+        .meta-check input:checked ~ .meta-toggle { background: rgba(220,38,38,0.25); border-color: #ef4444; }
+        .meta-check input:checked ~ .meta-toggle::after { transform: translateX(16px); background: #ef4444; }
+        .meta-check .meta-label { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
+        .meta-check input:checked ~ .meta-label { color: #ef4444; }
+        .spell-card.is-metamorph { border-color: rgba(220,38,38,0.5); box-shadow: 0 0 12px rgba(220,38,38,0.2); }
+
         /* ── Number spinner custom ───────────────────── */
         .num-spin { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; }
         .num-spin input[type=number] {
@@ -1254,7 +1281,7 @@ function insertCloseTag(taId) { insertRaw(taId, '</' + 'span>'); }
 function addSpell(form) {
   var list = (form === 1) ? spells1 : spells2;
   var imgs = (form === 1) ? imgs1   : imgs2;
-  list.push({ name:'', desc:'', damage:'', cooldown:'', levelInfo:[], factions:['','',''], isPassive:false });
+  list.push({ name:'', desc:'', damage:'', cooldown:'', levelInfo:[], factions:['','',''], isPassive:false, isMetamorph:false });
   imgs.push(null);
   renderSpellList(form);
 }
@@ -1319,8 +1346,9 @@ function renderSpellList(form) {
         }).join('') + '</div>'
       : '';
 
+    var isMyt = document.getElementById('rarity').value === 'mythical';
     var card = document.createElement('div');
-    card.className = 'spell-card';
+    card.className = 'spell-card' + (sp.isMetamorph ? ' is-metamorph' : '');
     var descTaId = 'spDesc_' + form + '_' + i;
     var tbId     = 'spTb_'   + form + '_' + i;
     card.innerHTML =
@@ -1334,6 +1362,7 @@ function renderSpellList(form) {
         '<input class="spell-name-input" type="text" value="' + esc(sp.name) + '"' +
                ' placeholder="Nom de la compétence" oninput="setSp(' + form + ',' + i + ',\'name\',this.value)">' +
         '<label class="passive-check"><input type="checkbox"' + (sp.isPassive?' checked':'') + ' onchange="togglePassive(' + form + ',' + i + ',this.checked)"><span class="passive-toggle"></span><span class="passive-label">Passif</span></label>' +
+        (isMyt ? '<label class="meta-check"><input type="checkbox"' + (sp.isMetamorph?' checked':'') + ' onchange="toggleMetamorph(' + form + ',' + i + ',this.checked)"><span class="meta-toggle"></span><span class="meta-label">Méta</span></label>' : '') +
         '<button class="btn-rm-spell" onclick="removeSpell(' + form + ',' + i + ')">✕</button>' +
       '</div>' +
       '<div class="field" style="margin-bottom:0.6rem">' +
@@ -1408,6 +1437,19 @@ function togglePassive(form, idx, checked) {
   list[idx].isPassive = checked;
   var name = (list[idx].name || '').replace(/\s*\[P\]$/i, '').trim();
   list[idx].name = checked ? (name ? name + ' [P]' : ' [P]') : name;
+  renderSpellList(form);
+}
+function toggleMetamorph(form, idx, checked) {
+  var list = (form === 1) ? spells1 : spells2;
+  if (!list[idx]) return;
+  list[idx].isMetamorph = checked;
+  if (checked) {
+    list[idx].name     = 'Metamorphe';
+    list[idx].cooldown = 4;
+    list[idx].desc     = form === 1
+      ? 'Fait passer ce Champion a sa Forme alternative. Accorde ensuite un Tour supplémentaire.'
+      : 'Fait passer ce Champion a sa Forme de base. Accorde ensuite un Tour supplémentaire.';
+  }
   renderSpellList(form);
 }
 function updateLvlType(form, idx, li, type) {

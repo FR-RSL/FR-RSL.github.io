@@ -3,7 +3,6 @@
 // ATQ et DEF partagent le même pool. PRE et RES partagent le même pool.
 var STAT_POOL = {
   "ATQ_DEF": [
-    "540",
     "672",
     "705",
     "716",
@@ -99,6 +98,7 @@ var STAT_POOL = {
     "1960"
   ],
   "PV": [
+    "8265",
     "10740",
     "12060",
     "12225",
@@ -176,7 +176,6 @@ var STAT_POOL = {
     "85",
     "88",
     "91",
-    "92",
     "94",
     "95",
     "96",

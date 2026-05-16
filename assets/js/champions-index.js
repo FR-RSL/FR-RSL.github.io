@@ -211,6 +211,7 @@ const CHAMPIONS = [
     { name: "Sniper", faction: 'faction11', rarity: 'uncommon', folder: 'sniper' },
     { name: "Redemptrice", faction: 'faction11', rarity: 'uncommon', folder: 'redemptrice' },
     { name: "Perce-coeur", faction: 'faction11', rarity: 'uncommon', folder: 'percecoeur' },
+    { name: "Rodeur", faction: 'faction11', rarity: 'common', folder: 'rodeur' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

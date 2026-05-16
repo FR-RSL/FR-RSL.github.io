@@ -175,6 +175,7 @@ const CHAMPIONS = [
     { name: "Acolyte du Rampant", faction: "faction16", rarity: "rare", folder: "rampant" },
     { name: "Sentinelle engloutie", faction: "faction16", rarity: "rare", folder: "sentinelle" },
     { name: "Capitaine Temila", faction: 'faction11', rarity: 'epic', folder: 'capitaine_temila' },
+    { name: "Kaiden", faction: 'faction11', rarity: 'epic', folder: 'kaiden' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

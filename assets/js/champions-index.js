@@ -192,6 +192,7 @@ const CHAMPIONS = [
     { name: "Pelagus Marchevagues", faction: 'faction16', rarity: 'legendary', folder: 'pelagus_marchevagues' },
     { name: "Visionnaire", faction: 'faction11', rarity: 'epic', folder: 'visionnaire' },
     { name: "Lua", faction: 'faction11', rarity: 'epic', folder: 'lua' },
+    { name: "Psylar", faction: 'faction11', rarity: 'epic', folder: 'psylar' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

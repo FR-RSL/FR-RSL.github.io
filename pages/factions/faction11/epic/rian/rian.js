@@ -19,8 +19,8 @@ const championData = {
           img: "assets/sort3.png",
           name: "Maitre des Invocations",
           description: `Ranime un allie avec 50% de PV et 50% de Compteur de Tour. Place un buff ${BUFFS.BLOCK_DEBUFFS} sur cet allie pendant 2 tours.${RETURN}${RETURN}
-Ranimera egalement <span class="style:purple">Akoth le Brule</span> et <span class="gold-t">Urost Capturame</span> avec 30% de PV et 30% de Compteur de Tour s'ils se trouvent dans la meme equipe et ne sont pas la cible de la competence.${RETURN}${RETURN}
-Si <span class="style:purple">Akoth le Brule</span> ou <span class="gold-t">Urost Capturame</span> sont la cible de la competence, ce Champion sera ranime avec 50% de PV et 50% de Compteur de Tour. ainsi qu'avec un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours.`,
+Ranimera egalement <span style="color:purple">Akoth le Brule</span> et <span class="gold-t">Urost Capturame</span> avec 30% de PV et 30% de Compteur de Tour s'ils se trouvent dans la meme equipe et ne sont pas la cible de la competence.${RETURN}${RETURN}
+Si <span style="color:purple">Akoth le Brule</span> ou <span class="gold-t">Urost Capturame</span> sont la cible de la competence, ce Champion sera ranime avec 50% de PV et 50% de Compteur de Tour. ainsi qu'avec un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         }

@@ -280,6 +280,27 @@ function spawnParticles() {
   }
 }
 
+/* ── Parse champions-index.js without eval ── */
+function parseChampionsIndex(src) {
+  // Extract the array literal body between "const CHAMPIONS = [" and "].map("
+  var m = src.match(/const\s+CHAMPIONS\s*=\s*\[([\s\S]*?)\]\.map\s*\(/);
+  if (!m) m = src.match(/const\s+CHAMPIONS\s*=\s*\[([\s\S]*?)\]/);
+  if (!m) return [];
+  var body = m[1];
+  var result = [];
+  var entryRe = /\{([^}]+)\}/g;
+  var em;
+  while ((em = entryRe.exec(body)) !== null) {
+    var entry = em[1];
+    var obj = {};
+    var kvRe = /(\w+)\s*:\s*["']([^"']*)["']/g;
+    var kv;
+    while ((kv = kvRe.exec(entry)) !== null) obj[kv[1]] = kv[2];
+    if (obj.name && obj.faction && obj.rarity && obj.folder) result.push(obj);
+  }
+  return result;
+}
+
 /* ── Load champion list via GitHub API ── */
 async function loadChampionsList() {
   try {
@@ -289,9 +310,7 @@ async function loadChampionsList() {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     var data = await r.json();
     var src = atob(data.content.replace(/\n/g,''));
-    // Execute to get CHAMPIONS array
-    var mod = new Function(src + '; return typeof CHAMPIONS !== "undefined" ? CHAMPIONS : [];');
-    allChamps = mod();
+    allChamps = parseChampionsIndex(src);
     document.getElementById('champCount').textContent = allChamps.length;
     renderList();
   } catch(e) {

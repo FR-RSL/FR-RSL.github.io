@@ -25,10 +25,8 @@ const championData = {
             Place un buff <span class='gbt'>Augmentation de DEF</span> de 60% 
 			sur tous les alliés pendant 2 tours.<br><br>
 			Place également un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
-			La valeur du <span class='gbt'>Bouclier</span> est proportionnelle a la DEF de ce Champion
-			et aux PV MAX de chaque cible.
+			La valeur du ${BUFFS.SHIELD} est equivalent a 250% de la DEF de cette Championne et a 10% des PV MAX de chaque cible.
           `,
-          damage: "2.5*DEF + 0.1*(PV MAX) (Bouclier)",
           cooldown: 4,
           levelInfo: [
             "Bouclier +10%",

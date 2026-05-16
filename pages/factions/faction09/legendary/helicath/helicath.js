@@ -24,9 +24,9 @@ const championData = {
 			description: `
 				Attaque tous les ennemis.
 				Place un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
-				La valeur du <span class='gbt'>Bouclier</span> est proportionnelle a la DEF de ce Champion.
+				La valeur du ${BUFFS.SHIELD} est equivalent a 350% de la DEF de ce Champion.
 			`,
-			damage: "3.8*DEF | 3.5*DEF (Bouclier)",
+			damage: "3.8*DEF",
 			levelInfo: [
 				"Dégâts +5%",
 				"Dégâts +5%",

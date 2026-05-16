@@ -27,11 +27,10 @@ const championData = {
 			Place un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
 			La valeur du <span class='gbt'>Bouclier</span> est egale a la difference entre les PV actuels
 			de la cible et les PV MAX de la cible.
-			Si la cible est un Boss, la valeur du <span class='gbt'>Bouclier</span> 
-			est proportionnelle a la DEF de cette Championne.<br><br>
+			Si la cible est un Boss, La valeur du ${BUFFS.SHIELD} est equivalent a 400% de la DEF de cette Championne.${RETURN}${RETURN}
 			Si la cible est tuee, reduit également de 2 tours les temps de recharge de toutes les compétences alliées.
           `,
-          damage: "5.4*DEF<br>4*DEF (Bouclier)",
+          damage: "5.4*DEF",
           cooldown: 5,
           levelInfo: [
             "Dégâts +10%",
@@ -44,11 +43,10 @@ const championData = {
           name: "Feuille ornee",
           description: `
             Soigne tous les alliés.
-			La valeur du soin est proportionnelle a la DEF de cette Championne.<br><br>
+			La valeur est equivalent a 400% de la DEF de cette Championne.<br><br>
 			Place également un buff <span class='gbt'>Blocage des débuffs</span> et un buff <span class='gbt'>Protection d'allié</span>
 			de 50% sur tous les alliés pendant 2 tours.
           `,
-          damage: "4*DEF (Soin)",
           cooldown: 4,
           levelInfo: [
             "Soins +15%",

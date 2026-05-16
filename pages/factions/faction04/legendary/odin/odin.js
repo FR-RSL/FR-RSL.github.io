@@ -38,14 +38,13 @@ const championData = {
             Attaque un ennemi.
 			Avant d'attaquer, vole tous les buffs de la cible.
 			Les degats infliges par cette compétence dependent du Type de la cible :<br><br>
-			ATQ : Infligera des degats bases sur l'ATQ de la cible.<br><br>
-			DEF : Infligera des degats bases sur la DEF de la cible.<br><br>
-			PV/Soutien/Boss : Infligera des degats bases sur les PV MAX de la cible.<br><br>
+			ATQ : Infligera des degats bases sur 500% de l'ATQ de la cible.<br><br>
+			DEF : Infligera des degats bases sur 500% de la DEF de la cible.<br><br>
+			PV/Soutien/Boss : Infligera des degats bases sur 35% des PV MAX de la cible.<br>10% des PV MAX contre les Boss<br><br>
 			Cette attaque ignorera également 100% de la DEF de la cible.<br><br>
 			Si la cible a ete tuee par cette compétence, ranime un allié mort aleatoire
 			avec 50% de PV et 50% de Compteur de Tour.
           `,
-		  damage: "5*(ATQ Ennemie) | 5*(DEF Ennemie) | 0.35*(PV MAX Ennemie) | 0.1*(PV MAX Ennemie) (Boss)",
           cooldown: 4,
           levelInfo: [
             "Dégâts +10%",

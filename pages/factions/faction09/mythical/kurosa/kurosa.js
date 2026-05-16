@@ -8,9 +8,9 @@ const championForms = {
             name: "Déferlement de chaos",
             description: `
               Attaque tous les ennemis.<br><br>
-			  Soigne tous les alliés. La valeur du soin est proportionnelle a l'ATQ de cette Championne.
+			  Soigne tous les alliés a hauteur de 200% de l'ATQ de cette Championne.
             `,
-            damage: "3*ATQ | 2*ATQ (Soin)",
+            damage: "3*ATQ",
             levelInfo: [
               "Dégâts +10%",
               "Dégâts +10%",
@@ -23,7 +23,7 @@ const championForms = {
               Retire tous les débuffs sur tous les alliés.<br><br>
               Ensuite, place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% 
               et un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.<br>
-			  La valeur du <span class='gbt'>Bouclier</span> est proportionnelle a l'ATQ de cette Championne.
+			  La valeur du ${BUFFS.SHIELD} est equivalent a 300% de l'ATQ de cette Championne.
             `,
             cooldown: 4,
             levelInfo: [

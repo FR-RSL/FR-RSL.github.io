@@ -6,11 +6,10 @@ const championData = {
           name: "Epines malignes",
           description: `
             Attaque un ennemi. Avant d'attaquer, place un buff <span class='gbt'>Bouclier</span>
-			sur ce Champion pendant 2 tours. La valeur du <span class='gbt'>Bouclier</span> est proportionnelle
-			a l'ATQ de ce Champion.<br><br>
+			sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est equivalent a 400% de l'ATQ de ce Champion.${RETURN}${RETURN}
 			A 50% de chances de placer un débuff <span class='gbt'>Sensibilite au Poison</span> de 25% pendant 2 tours.
           `,
-          damage: "3.8*ATQ | 4*ATQ (Bouclier)",
+          damage: "3.8*ATQ",
           levelInfo: [
             "Dégâts +10%",
             "Chance de Buff/débuff +10%",

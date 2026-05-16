@@ -113,9 +113,8 @@ const championForms = {
               sur tous les alliés sauf ce Champion pendant 2 tours.
               Place également un buff <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.<br><br>
               Place ensuite un buff <span class='gbt'>Bouclier</span> de 2 tours sur les alliés
-              ayant moins de 50% de PV. La valeur du bouclier est proportionnelle a la DEF de ce Champion.
+              ayant moins de 50% de PV. La valeur du ${BUFFS.SHIELD} est equivalent a 350% de la DEF de ce Champion.
             `,
-            damage: "3.5*DEF (Bouclier)",
             cooldown: 5,
             levelInfo: [
               "Temps de recharge -1",

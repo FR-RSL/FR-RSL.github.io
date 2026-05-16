@@ -826,6 +826,7 @@
 <!--Hiddenfileinputsforspellimages(injectedbyJS)-->
 <div id="fileInputs" style="display:none"></div>
 
+ev<script src="../assets/js/stats.js"></script>
 <script src="../assets/js/security.js"></script>
 <script>
 // ── Config ─────────────────────────────────────────────────
@@ -914,6 +915,20 @@ document.addEventListener('DOMContentLoaded', function() {
   buildAuraGrid();
   buildToolbar('auraToolbar', 'auraDesc');
   document.getElementById('auraDescWrap').style.display = 'none';
+  // Fusionner les valeurs locales (non encore commitées) dans STAT_POOL
+  try {
+    var _local = JSON.parse(localStorage.getItem('rsl_stat_local') || '{}');
+    Object.keys(_local).forEach(function(pk) {
+      if (!STAT_POOL[pk]) STAT_POOL[pk] = [];
+      _local[pk].forEach(function(v) {
+        if (STAT_POOL[pk].indexOf(v) === -1) STAT_POOL[pk].push(v);
+      });
+      STAT_POOL[pk].sort(function(a, b) {
+        return parseFloat(a.replace(/[\s\u00a0]/g,'').replace('%','')) -
+               parseFloat(b.replace(/[\s\u00a0]/g,'').replace('%',''));
+      });
+    });
+  } catch(e) {}
   var draftLoaded = loadDraft();
   if (draftLoaded && document.getElementById('slug').value) slugManuallyEdited = true;
   if (!draftLoaded) { applyLastMeta(); addSpell(1); }
@@ -1030,33 +1045,14 @@ function buildStatsGrid(gridId) {
 }
 
 // ── Stat autocomplete ─────────────────────────────────────
-var STAT_HISTORY_KEY = 'rsl_stat_history';
-
-// ATQ et DEF partagent le même historique de suggestions
-function sharedStatKey(k) { return (k === 'DEF') ? 'ATQ' : k; }
-
-function getStatHistory() {
-  try { return JSON.parse(localStorage.getItem(STAT_HISTORY_KEY) || '{}'); } catch(e) { return {}; }
-}
-
-function saveStatValue(statKey, value) {
-  if (!value || !value.trim()) return;
-  var k = sharedStatKey(statKey);
-  var h = getStatHistory();
-  if (!h[k]) h[k] = [];
-  var v = value.trim();
-  h[k] = h[k].filter(function(x) { return x !== v; });
-  h[k].unshift(v);
-  h[k] = h[k].slice(0, 15);
-  localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
-}
-
-function deleteStatSuggestion(statKey, value, event) {
-  event.stopPropagation();
-  var k = sharedStatKey(statKey);
-  var h = getStatHistory();
-  if (h[k]) h[k] = h[k].filter(function(x) { return x !== value; });
-  localStorage.setItem(STAT_HISTORY_KEY, JSON.stringify(h));
+// Correspondance clé de stat → clé de pool (ATQ+DEF partagés, PRE+RES partagés)
+function getStatPoolKey(k) {
+  if (k === 'ATQ' || k === 'DEF')    return 'ATQ_DEF';
+  if (k === 'RES' || k === 'PRE')    return 'RES_PRE';
+  if (k === 'TAUX C.')               return 'TAUX_C';
+  if (k === 'DEG C.')                return 'DEG_C';
+  if (k === 'PV'  || k === 'VIT')    return k;
+  return null;
 }
 
 function getListEl(input) {
@@ -1067,8 +1063,8 @@ function renderStatSuggestions(input, filter) {
   var list = getListEl(input);
   if (!list) return;
   var statKey = input.getAttribute('data-stat-key');
-  var h = getStatHistory();
-  var all = h[sharedStatKey(statKey)] || [];
+  var poolKey = getStatPoolKey(statKey);
+  var all = (typeof STAT_POOL !== 'undefined' && poolKey && STAT_POOL[poolKey]) ? STAT_POOL[poolKey].slice() : [];
   var f = (filter || '').trim().toLowerCase();
   var matches = f ? all.filter(function(v) { return v.toLowerCase().includes(f); }) : all;
   if (!matches.length) { list.classList.remove('open'); return; }
@@ -1076,7 +1072,6 @@ function renderStatSuggestions(input, filter) {
     return '<div class="stat-suggestion-item" onmousedown="statPickSuggestion(event,\'' +
       input.id + '\',\'' + escAttr(v) + '\',\'' + escAttr(statKey) + '\')">' +
       '<span>' + esc(v) + '</span>' +
-      '<span class="stat-suggestion-del" onmousedown="deleteStatSuggestion(\'' + escAttr(statKey) + '\',\'' + escAttr(v) + '\',event);statOnInput(document.getElementById(\'' + input.id + '\'))" title="Supprimer">✕</span>' +
     '</div>';
   }).join('');
   list.classList.add('open');
@@ -1093,6 +1088,31 @@ function statOnFocus(input) {
 function statOnBlur(input) {
   var list = getListEl(input);
   if (list) setTimeout(function() { list.classList.remove('open'); }, 150);
+  addLocalStat(input.getAttribute('data-stat-key'), input.value);
+}
+
+var LOCAL_STAT_KEY = 'rsl_stat_local';
+
+function addLocalStat(statKey, value) {
+  var val = (value || '').trim().replace(/\u00a0/g, ' ').replace(/\u202f/g, ' ');
+  if (!val || val === '0') return;
+  var pk = getStatPoolKey(statKey);
+  if (!pk) return;
+  if (!STAT_POOL[pk]) STAT_POOL[pk] = [];
+  if (STAT_POOL[pk].indexOf(val) !== -1) return; // déjà présent
+  STAT_POOL[pk].push(val);
+  STAT_POOL[pk].sort(function(a, b) {
+    return parseFloat(a.replace(/[\s\u00a0]/g,'').replace('%','')) -
+           parseFloat(b.replace(/[\s\u00a0]/g,'').replace('%',''));
+  });
+  try {
+    var local = JSON.parse(localStorage.getItem(LOCAL_STAT_KEY) || '{}');
+    if (!local[pk]) local[pk] = [];
+    if (local[pk].indexOf(val) === -1) {
+      local[pk].push(val);
+      localStorage.setItem(LOCAL_STAT_KEY, JSON.stringify(local));
+    }
+  } catch(e) {}
 }
 
 function statOnKeydown(e, input) {
@@ -1130,12 +1150,6 @@ function statPickSuggestion(e, inputId, value, statKey) {
 
 function escAttr(s) {
   return String(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-}
-
-function saveAllStatsToHistory(stats) {
-  Object.keys(stats).forEach(function(k) {
-    saveStatValue(k, stats[k]);
-  });
 }
 
 function getStats(gridId) {
@@ -1699,6 +1713,7 @@ function buildSummary() {
   }
   files.push({ path: 'pages/factions/' + faction + '/hub.html', cls: 'f-mod', note: 'mis à jour' });
   files.push({ path: 'assets/js/champions-index.js',            cls: 'f-mod', note: 'mis à jour' });
+  files.push({ path: 'assets/js/stats.js',                      cls: 'f-mod', note: 'pool stats mis à jour' });
 
   var icon = { 'f-ok': '✓', 'f-miss': '⚠', 'f-mod': '✎' };
   document.getElementById('filesList').innerHTML =
@@ -2011,6 +2026,34 @@ async function doPublish() {
     var idxNew = idxCur.slice(0, markerIdx) + entry + idxCur.slice(markerIdx);
     files.push({ path: 'assets/js/champions-index.js', content: btoa(unescape(encodeURIComponent(idxNew))) });
 
+    // stats.js — Mise à jour du pool de statistiques
+    var poolCopy = JSON.parse(JSON.stringify(STAT_POOL));
+    [stats1].concat(rarity === 'mythical' ? [stats2] : []).forEach(function(statsObj) {
+      Object.keys(statsObj).forEach(function(k) {
+        var val = (statsObj[k] || '').trim().replace(/\u00a0/g, ' ').replace(/\u202f/g, ' ');
+        if (!val || val === '0') return;
+        var pk = getStatPoolKey(k);
+        if (!pk) return;
+        if (!poolCopy[pk]) poolCopy[pk] = [];
+        if (poolCopy[pk].indexOf(val) === -1) {
+          poolCopy[pk].push(val);
+          poolCopy[pk].sort(function(a, b) {
+            return parseFloat(a.replace(/[\s\u00a0]/g,'').replace('%','')) -
+                   parseFloat(b.replace(/[\s\u00a0]/g,'').replace('%',''));
+          });
+        }
+      });
+    });
+    Object.keys(poolCopy).forEach(function(k) { STAT_POOL[k] = poolCopy[k]; });
+    try { localStorage.removeItem(LOCAL_STAT_KEY); } catch(e) {} // stats.js est à jour
+    var statsJsContent =
+      '// Pool de statistiques extrait de tous les champions existants.\n' +
+      '// Ce fichier est mis \u00e0 jour automatiquement lors de la publication d\'un nouveau champion.\n' +
+      '// ATQ et DEF partagent le m\u00eame pool. PRE et RES partagent le m\u00eame pool.\n' +
+      'var STAT_POOL = ' + JSON.stringify(poolCopy, null, 2) + ';\n';
+    files.push({ path: 'assets/js/stats.js', content: btoa(unescape(encodeURIComponent(statsJsContent))) });
+    plog('ok', 'stats.js mis à jour');
+
     plog('inf', files.length + ' fichiers prêts — création du commit...');
 
     // ── 2. HEAD actuel ────────────────────────────────────
@@ -2041,9 +2084,6 @@ async function doPublish() {
     plog('ok', '');
     plog('ok', files.length + ' fichiers publiés en 1 seul commit !');
     plog('inf', 'URL : ' + base + slug + '.html');
-    // Sauvegarder les stats dans l'historique d'autocomplétion
-    saveAllStatsToHistory(stats1);
-    if (rarity === 'mythical') saveAllStatsToHistory(stats2);
     saveLastMeta();
     btn.textContent = 'Publié !';
     btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';

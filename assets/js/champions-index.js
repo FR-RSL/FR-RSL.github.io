@@ -183,6 +183,7 @@ const CHAMPIONS = [
     { name: "Rian l'Illusionniste", faction: 'faction11', rarity: 'epic', folder: 'rian' },
     { name: "Theresc", faction: 'faction11', rarity: 'epic', folder: 'theresc' },
     { name: "Krakarth", faction: 'faction11', rarity: 'epic', folder: 'krakarth' },
+    { name: "Luria", faction: 'faction11', rarity: 'epic', folder: 'luria' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

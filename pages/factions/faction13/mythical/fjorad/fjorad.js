@@ -62,7 +62,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
             name: "Se mange froid [P]",
             description: `
             Des que ce Champion ou un allie recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
-            <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour.
+            <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour.${RETURN}${RETURN}
             Ces chances augmentent jusqu'a 100%, et il est impossible de bloquer ce debuff et d'y resister si la cible appartient au Pacte Gaellen.
             `,
             isPassive: true,

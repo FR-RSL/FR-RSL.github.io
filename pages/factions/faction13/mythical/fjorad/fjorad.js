@@ -8,7 +8,7 @@ const championForms = {
             name: "Morsure du loup",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe a 50% de chances de placer un débuff 
-              <span class='gbt'>Gel</span> pendant 1 tour.<br><br>
+              <span class='gbt'>Gel</span> pendant 1 tour. Il est impossible de resister a ce debuff et de le bloquer si le Champion cible fait partie du Pacte Gaellen.<br><br>
               Si la cible ne se trouve pas sous débuff <span class='gbt'>Gel</span>, 
               repetera une fois l'attaque.
             `,
@@ -37,7 +37,8 @@ const championForms = {
               Place un débuff <span class='gbt'>Gel</span> sur tous les ennemis
               pendant 1 tour et un débuff <span class='gbt'>Réduction de la VIT</span> de 30%
               sur tous les ennemis pendant 2 tours. Si un ennemi appartient au Pacte Gaellen, place au lieu
-              de ca un débuff <span class='gbt'>Gel</span> de 2 tours.<br><br>
+              de ca un débuff <span class='gbt'>Gel</span> de 2 tours, et il est impossible de bloquer ce debuff et d'y resister.<br><br>
+Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie du Pacte Gaellen, reduit son Compteur de Tour de 50%.${RETURN}${RETURN}
               Accorde un Tour supplémentaire.
             `,
             damage: "5.6*ATQ",
@@ -60,9 +61,9 @@ const championForms = {
             img: "assets/passif1.png",
             name: "Se mange froid [P]",
             description: `
-            Des que ce Champion recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
-            <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour. Se produit une fois par tour.
-            Ces chances passent a 100% si la cible appartient au Pacte Gaellen.
+            Des que ce Champion ou un allie recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
+            <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour.
+            Ces chances augmentent jusqu'a 100%, et il est impossible de bloquer ce debuff et d'y resister si la cible appartient au Pacte Gaellen.
             `,
             isPassive: true,
           },
@@ -71,7 +72,7 @@ const championForms = {
           "PV": "22 635",
           "ATQ": "1 068",
           "DEF": "1 277",
-          "VIT": "100",
+          "VIT": "105",
           "TAUX C.": "15%",
           "DÉG C.": "50%",
           "RÉS": "50",
@@ -85,7 +86,8 @@ const championForms = {
             img: "assets/sort4.png",
             name: "Fente de givre",
             description: `
-              Attaque un ennemi.<br><br>
+              Attaque un ennemi.${RETURN}${RETURN}
+              Ignorera 15% de la DEF de la cible. Si la cible se trouve sous debuff ${DEBUFFS.GEL}, ignorera au lieu de cela 35% de la DEF de la cible.${RETURN}${RETURN}
               Si cette attaque tue un ennemi, reinitialise le temps de recharge d'une compétence aleatoire de ce Champion.
             `,
             damage: "0.28*PV",
@@ -115,7 +117,7 @@ const championForms = {
               <span class='gbt'>Provocation</span> ou
               <span class='gbt'>Petrification</span>.
             `,
-            damage: "0.28*PV",
+            damage: "0.3*PV",
             cooldown: 3,
             levelInfo: [
               "Dégâts +20%",
@@ -128,9 +130,10 @@ const championForms = {
             description: `
               Attaque un ennemi.<br><br>
               Ignorera 50% de la DEF de la cible. Si la cible se trouve sous débuff
-              <span class='gbt'>Gel</span>, Ignorera au lieu de ca 100% de la DEF de la cible.<br><br>
+              <span class='gbt'>Gel</span>, Ignorera au lieu de ca 100% de la DEF de la cible et les buffs ${BUFFS.BLOCK_DAMAGE}.<br><br>
               Si la cible est tuee lorsqu'elle se trouve sous débuff
-              <span class='gbt'>Gel</span>, place également un débuff <span class='gbt'>Blocage de reanimation</span>.
+              <span class='gbt'>Gel</span>, place également un débuff <span class='gbt'>Blocage de reanimation</span> sur elle et place un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
+Il est impossible pour les ennemis du Pacte Gaellen de bloquer le debuff ${DEBUFFS.GEL} et d'y resister.
             `,
             damage: "0.33*PV",
             cooldown: 4,
@@ -153,7 +156,8 @@ const championForms = {
           name: "Resolution glaciale [P]",
           description: `
             Contre-attaque avec la compétence <span class='gt'>Fente de givre</span>
-            des qu'un ennemi augmente le temps de recharge d'une des compétences de ce Champion.
+            des qu'un ennemi augmente le temps de recharge d'une des compétences de ce Champion.${RETURN}${RETURN}
+Lorsqu'un allie est tue, a 50% de chances de placer un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Ces changes augmentent jusqu'a 100% et il est impossible pour les ennemis du Pacte Gaellen de le bloquer ou d'y resister.
             `,
             isPassive: true,
           },

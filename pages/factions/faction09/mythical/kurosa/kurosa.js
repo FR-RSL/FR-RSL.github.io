@@ -121,6 +121,7 @@ const championForms = {
             `,
             cooldown: 5,
             levelInfo: [
+              "Ignorer la RES +20%",
               "Temps de recharge -1"
             ]
           },

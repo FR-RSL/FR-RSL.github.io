@@ -135,7 +135,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
               <span class='gbt'>Gel</span>, place également un débuff <span class='gbt'>Blocage de reanimation</span> sur elle et place un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 Il est impossible pour les ennemis du Pacte Gaellen de bloquer le debuff ${DEBUFFS.GEL} et d'y resister.
             `,
-            damage: "0.33*PV",
+            damage: "0.37*PV",
             cooldown: 4,
             levelInfo: [
               "Dégâts +20%",

@@ -173,7 +173,7 @@ function detectFaction() {
     // Fallback: essayer de détecter depuis l'icône de favicon
     const favicon = document.querySelector('link[rel="shortcut icon"]');
     if (favicon && favicon.href) {
-        const iconMatch = favicon.href.match(/faction(\d{2})|(\w+)\.png/);
+        const iconMatch = favicon.href.match(/faction(\d{2})|(\w+)\.webp/);
         if (iconMatch) {
             // Mapping des noms d'icônes vers les IDs de faction
             const iconToFaction = {

@@ -2,7 +2,7 @@ const championData = {
 type: "Defense",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Lame en fusion",
 			description: `
             	Attaque un ennemi.<br><br>
@@ -18,7 +18,7 @@ type: "Defense",
           	],
         },
         {
-          	img: "assets/sort2.png",
+          	img: "assets/sort2.webp",
           	name: "Terreur ardente",
           	description: `
             	Attaque tous les ennemis.<br><br>
@@ -34,7 +34,7 @@ type: "Defense",
           	],
         },
         {
-          	img: "assets/sort3.png",
+          	img: "assets/sort3.webp",
           	name: "Brulure de demolition",
           	description: `
             	Attaque 2 fois un ennemi.<br><br>
@@ -64,7 +64,7 @@ type: "Defense",
           	],
         },
         {
-          	img: "assets/passif1.png",
+          	img: "assets/passif1.webp",
           	name: "Feu demoniaque deferlant [P]",
           	description: `
             	Des qu'un ennemi recoit un buff ou que son Compteur de Tour est augmente, a 50% de chances
@@ -107,7 +107,7 @@ type: "Defense",
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/sup-defence.png",
+    img: "../../../../../../assets/images/auras/sup-defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%.<br><br>
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%<br>

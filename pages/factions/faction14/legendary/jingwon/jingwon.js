@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Echange tragique",
           description: `
             Attaque un ennemi.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Calamite aggravee",
           description: `
             Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Eclat de puissance",
           description: `
             Attaque 2 fois tous les ennemis.<br><br>
@@ -54,7 +54,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Dechaine [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -96,7 +96,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%.
     `,

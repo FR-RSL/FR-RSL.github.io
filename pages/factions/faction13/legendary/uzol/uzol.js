@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Maitre-hache impitoyable",
           description: `
             Attaque un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Coeur de pierre",
           description: `
             Attaque tous les ennemis.
@@ -40,7 +40,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Fureur royale",
           description: `
             Attaque ennemi.
@@ -60,7 +60,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Roi de jade [P]",
           description: `
             Augmente de 5% les chances qu'ont tous les alliés d'obtenir un Tour supplémentaire.
@@ -83,7 +83,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés dans les batailles d'Arene de 33%.
     `,

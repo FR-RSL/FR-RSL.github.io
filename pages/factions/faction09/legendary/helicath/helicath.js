@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Griffe Pyroclastique",
 			description: `
 				Attaque deux fois un ennemi.
@@ -19,7 +19,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Vents de la fosse",
 			description: `
 				Attaque tous les ennemis.
@@ -37,7 +37,7 @@ const championData = {
 			cooldown: 4,
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Fervents serviteurs",
 			description: `
 				<span class='gbt'>Effet Actif</span><br><br>
@@ -53,7 +53,7 @@ const championData = {
 			cooldown: 6,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Festin d'agonie [P]",
         	description: `
 				Augmente la DEF de ce Champion de 5% pour chaque allié sous buff <span class='gbt'>Blocage des Degats</span>.<br><br>
@@ -76,7 +76,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%.
     `,

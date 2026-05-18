@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Puissance de Nain",
           description: `
             Attaque 3 fois un ennemi.<br><br>
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Furie du Roi",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -38,7 +38,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Coup beni",
           description: `
             Attaque 3 fois un ennemi. Chaque frappe reduit la DEF de la cible de 3%
@@ -54,7 +54,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Aucune retenue [P]",
           description: `
             Lors d'une contre-attaque, inflige 100% des degats au lieu de 75%.
@@ -75,7 +75,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés dans les Donjons de 80.
     `,

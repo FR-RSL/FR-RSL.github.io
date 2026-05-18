@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Tron cogneur",
           description: `
             Attaque un ennemi.
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Croissance boreale",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de placer un débuff
@@ -38,7 +38,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Cape d'aurore",
           description: `
             Place un buff <span class='gbt'>Augmentation de RES</span> de 50%
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Esprit du nord [P]",
           description: `
             Si un allié Possède 2 buffs ou plus,
@@ -81,7 +81,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/res.png",
+    img: "../../../../../../assets/images/auras/res.webp",
     description: `
       Augmente la statistique RES des Alliés lors de toutes les Batailles de 60.
     `,

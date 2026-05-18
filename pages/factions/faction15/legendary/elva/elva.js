@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Sceptre de prospérité",
           description: `
             Attaque un ennemi. 
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Chemins de la nature",
           description: `
             Possède 75% de chances de retirer tous les débuffs
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Saison de pousse",
           description: `
             Ranime une cible alliée avec 40% de PV et un Compteur de Tour
@@ -49,7 +49,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Voile de feuilles [P]",
           description: `
             Soigne tous les alliés de 10% de leurs PV max au debut de leur tour.<br><br>
@@ -72,7 +72,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.
     `,

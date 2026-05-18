@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Déferlement de chaos",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -17,7 +17,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Tout pour Siroth",
             description: `
               Retire tous les débuffs sur tous les alliés.<br><br>
@@ -31,7 +31,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Propagation",
             description: `
               Place un buff <span class='gbt'>Raillerie</span> et un buff <span class='gbt'>Fortification</span> de 25% 
@@ -44,7 +44,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -53,7 +53,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Collectrice de Pions [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
@@ -80,7 +80,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Destructrice de tout",
             description: `
               Attaque 3 fois un ennemi.<br><br>
@@ -94,7 +94,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Icône de devastation",
             description: `
               Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.
@@ -110,7 +110,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Agent impitoyable",
             description: `
               Place un buff <span class='gbt'>Fracas</span> de 15% et un buff <span class='gbt'>Augmentation du TAUX C.</span> de 30%
@@ -126,7 +126,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -135,7 +135,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Vile meurtriere [P]",
           description: `
               Inflige 15% de degats supplémentaires pour chaque allié mort.
@@ -158,7 +158,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/attack.png",
+      img: "../../../../../../assets/images/auras/attack.webp",
       description: `
         Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.
       `,

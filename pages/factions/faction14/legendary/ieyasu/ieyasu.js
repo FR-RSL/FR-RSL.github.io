@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Briseur d'exorcisme",
           description: `
             Attaque 2 fois un ennemi.
@@ -21,7 +21,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Purification violente",
           description: `
             Attaque 2 fois un ennemi.
@@ -41,7 +41,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Vengeance finale",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -59,7 +59,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Devoir d'Onryo [P]",
           description: `
             Des que ce Champion attaque, tous les ennemis, sauf la cible initiale,
@@ -84,7 +84,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés dans les batailles d'Arene de 35%.
     `,

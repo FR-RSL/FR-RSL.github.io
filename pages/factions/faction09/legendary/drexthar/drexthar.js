@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Flammes Mysterieuses",
 			description: `
 				Attaque 3 fois un ennemi.
@@ -18,7 +18,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Fouet Brulant",
 			description: `
 				Attaque tous les ennemis. Possède 40% de chances de placer un débuff
@@ -38,7 +38,7 @@ const championData = {
 			],
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Sang de Feu [P]",
         	description: `
 				Possède 55% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> pendant 2 tours
@@ -66,7 +66,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 70.
     `,

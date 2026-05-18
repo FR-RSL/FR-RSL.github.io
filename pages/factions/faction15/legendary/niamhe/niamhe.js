@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lance en bois",
           description: `
             Attaque un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Gardienne ceruleenne",
           description: `
             Attaque un ennemi.
@@ -39,7 +39,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Feuille ornee",
           description: `
             Soigne tous les alliés.
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Maitresse-bouclier [P]",
           description: `
             Place un buff <span class='gbt'>Blocage des Degats</span> sur tous les alliés pendant 1 tour
@@ -78,7 +78,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
     `,

@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Croche-pied",
           description: `
             Attaque 2 fois un ennemi. Chaque frappe possede 35% de chances de placer un debuff ${DEBUFFS.SPD} de 30% pendant 2 tours.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Coup de Malchance",
           description: `
             Attaque tous les ennemis.
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Sonne-tete",
           description: `
             Attaque un ennemi. Possede 75% de chances de placer un debuff ${DEBUFFS.STUN} pendant 2 tours et de voler 50% du Compteur de Tour actuel de la cible.
@@ -52,7 +52,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Vie Bienheureuse [P]",
           description: `
             Au debut de chaque tour, place deux des buffs suivants sur ce Champion pendant 2 tours :
@@ -79,7 +79,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 25%.
     `,

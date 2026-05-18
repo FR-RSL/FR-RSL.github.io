@@ -4,7 +4,7 @@ const championForms = {
         type: "Defense",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Morsure de la meute",
             description: `
               Attaque un ennemi. Place un buff ${BUFFS.DEF} de 60% sur tous les allies pendant 1 tour.
@@ -15,7 +15,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Griffe rayonnante",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -29,7 +29,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Rocher de Werinbur",
             description: `
               Place un buff ${BUFFS.RES} de 50%, un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.HEALS} de 15% sur tous les allies pendant 2 tours.<br><br>
@@ -43,7 +43,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -52,7 +52,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Sauveur etincelant [P]",
             description: `
               Augmente la RES de chaque allie de 10 pour chaque buff sur tous les allies.<br><br>
@@ -77,7 +77,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Assaut d'Epine-doree",
             description: `
               Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 1 tour.
@@ -88,7 +88,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Brise-palissade",
             description: `
               Attaque tous les ennemis. Place un debuff ${DEBUFFS.RES} de 50%, un debuff ${DEBUFFS.WEAKEN} de 25% et un debuff ${DEBUFFS.UNFEEBLE} sur tous les ennemis pendant 2 tours.<br><br>
@@ -103,7 +103,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Rugissement de Kitherus",
             description: `
               Attaque tous les ennemis.
@@ -118,7 +118,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -127,7 +127,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Coeur-de-lion [P]",
             description: `
               Augmente la PRE de chaque allie de 10 pour chaque buff sur tous les ennemis.<br><br>
@@ -151,7 +151,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/defence.png",
+      img: "../../../../../../assets/images/auras/defence.webp",
       description: `
         Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
       `,

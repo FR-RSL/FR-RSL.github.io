@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Toucher de Dame",
           description: `
             Attaque un ennemi, puis attaque l'ennemi ayant le Compteur de Tour le plus eleve.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Bourrasque de Petales",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de placer un débuff <span class='gbt'>Reduction de PRE</span> de 50%
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Flux Spirituel",
           description: `
             Retire un buff aleatoire a chaque ennemi, puis Possède 75% de chances de placer un débuff <span class='gbt'>Blocage des Buffs</span> pendant 2 tours
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Imperieuse [P]",
           description: `
             Des que cette Championne place un débuff sur un ennemi, reduit également le Compteur de Tour de cet ennemi de 5% pour chaque débuff place.<br><br>
@@ -75,7 +75,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans la Tour du Malheur de 30%.
     `,

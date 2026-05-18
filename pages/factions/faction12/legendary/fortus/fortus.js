@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Avant-gout d'oubli",
           description: `
             Attaque un ennemi.
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Horreurs de l'au-dela",
           description: `
             Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Terreurs astrales",
           description: `
             Attaque tous les ennemis.
@@ -57,7 +57,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Etoiles alignees [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -88,7 +88,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/crit.png",
+    img: "../../../../../../assets/images/auras/crit.webp",
     description: `
       Augmente la statistique TAUX C. des Alliés dans les batailles d'Arene de 25%.
     `,

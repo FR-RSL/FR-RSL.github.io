@@ -2,21 +2,21 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Crocs Conduits",
           description: `Attaque un ennemi. Possede 75% de chances de transferer sur la cible un debuff aleatoire de ce Champion.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Sombres Benedictions",
           description: `Soigne un allie a hauteur de 20% des PV MAX de ce Champion. Remplit egalement le Compteur de Tour de la cible de 30% si cette Competence la soigne entierement. Place un buff ${BUFFS.VEIL} sur la cible pendant 1 tour si cette Competence ne la soigne pas entierement.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Retour dans les Rangs",
           description: `Ranime un allie avec 30% de PV et 30% de Compteur de Tour.${RETURN}${RETURN}
 Place un buff ${BUFFS.UNKILLABLE} pendant 1 tour et un buff ${BUFFS.HEALS} de 15% pendant 2 tours sur l'allie ranime.`,
@@ -37,6 +37,6 @@ Place un buff ${BUFFS.UNKILLABLE} pendant 1 tour et un buff ${BUFFS.HEALS} de 15
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%.`
 };

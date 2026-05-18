@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lance heitt",
           description: `
             Attaque tous les ennemis. Possède 25% de chances de placer un 
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Egide prismatique",
           description: `
             Place un buff <span class='gbt'>Augmentation de DEF</span> de 60% 
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Tresse d'or",
           description: `
             Retire tous les débuffs sur tous les alliés et leur accorde un buff
@@ -49,7 +49,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Prescience divine [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -80,7 +80,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%.
     `,

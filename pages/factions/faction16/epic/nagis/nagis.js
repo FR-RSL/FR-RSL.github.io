@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Attraper une proie",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 40% de chances de placer un debuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
@@ -10,7 +10,7 @@ A 40% de chances de placer un debuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Purifications des marees",
           description: `Retire tous les debuffs de ce Champion et d'une seule cible allie.${RETURN}${RETURN}
 Place un buff ${BUFFS.ALLY_PROTECT} de 50%, un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.ATK} de 50% sur cette cible pendant 2 tours.${RETURN}${RETURN}
@@ -19,7 +19,7 @@ Remplit ensuite de 15% les Compteurs de Tour de ce Champion et de la cible allie
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Vague du serpent de mer",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 A 80% de chances de placer un debuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. A egalement 40% de chances de placer un debuff ${DEBUFFS.STUN} pendant 1 tour.`,
@@ -28,7 +28,7 @@ A 80% de chances de placer un debuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. A
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Pouvoir tritoneen [P]",
           description: `Des qu'un ennemi attaque ce Champion, soigne tous les allies de 10% de leurs PV MAX, puis remplit leurs Compteurs de Tour de 10%.${RETURN}
 Des qu'un ennemi attaque ce Champion, place egalement sur tous les allies un buff ${BUFFS.SPD} de 30% pendant 1 tour.`,
@@ -50,6 +50,6 @@ Des qu'un ennemi attaque ce Champion, place egalement sur tous les allies un buf
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/sup-defence.png",
+  img: "../../../../../assets/images/auras/sup-defence.webp",
   description: `Augmente la statistique DEF des Allies lors de toutes les Batailles de 25%.`
 };

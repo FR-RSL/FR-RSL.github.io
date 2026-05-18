@@ -4,7 +4,7 @@ const championForms = {
     type: "Attaque",
     spells: [
       {
-        img: "assets/sort1.png",
+        img: "assets/sort1.webp",
         name: "Saignée rapide",
         description: `
           Attaque un ennemi. Possède 50% de chances d'attaquer
@@ -17,7 +17,7 @@ const championForms = {
         ]
       },
       {
-        img: "assets/sort2.png",
+        img: "assets/sort2.webp",
         name: "Fléchettes sanguines",
         description: `
           Attaque 4 fois de façon aléatoire. Chaque frappe augmente l'ATQ et les PV
@@ -35,7 +35,7 @@ const championForms = {
         ],
       },
       {
-        img: "assets/sort3.png",
+        img: "assets/sort3.webp",
         name: "Typhon sanglant",
         description: `
           Attaque tous les ennemis.<br><br>
@@ -51,7 +51,7 @@ const championForms = {
         ]
       },
       {
-        img: "assets/meta1.png",
+        img: "assets/meta1.webp",
         name: "Métamorphe",
         description: `
           Fait passer ce Champion à sa Forme alternative.
@@ -60,7 +60,7 @@ const championForms = {
         cooldown: 4,
       },
       {
-        img: "assets/passif1.png",
+        img: "assets/passif1.webp",
         name: "Faim de Vornspore [P]",
         description: `
           Remplit le Compteur de Tour de ce Champion de 5% chaque fois 
@@ -85,7 +85,7 @@ const championForms = {
     type: "PV",
     spells: [
       {
-        img: "assets/sort4.png",
+        img: "assets/sort4.webp",
         name: "Entaille d'iaito",
         description: `
           Attaque tous les ennemis.
@@ -97,7 +97,7 @@ const championForms = {
         ]
       },
       {
-        img: "assets/sort5.png",
+        img: "assets/sort5.webp",
         name: "Dessine dans le sang",
         description: `
           Attaque tous les ennemis.<br><br>
@@ -113,7 +113,7 @@ const championForms = {
         ]
       },
       {
-        img: "assets/sort6.png",
+        img: "assets/sort6.webp",
         name: "Massacre cinglant",
         description: `
           Attaque tous les ennemis.
@@ -129,7 +129,7 @@ const championForms = {
         ]
       },
       {
-        img: "assets/meta2.png",
+        img: "assets/meta2.webp",
         name: "Métamorphe",
         description: `
           Fait passer ce Champion à sa Forme de base.
@@ -138,7 +138,7 @@ const championForms = {
         cooldown: 4,
       },
       {
-        img: "assets/passif2.png",
+        img: "assets/passif2.webp",
         name: "Enrobé de carnage [P]",
         description: `
           Double la quantité de soin reçue par ce Champion lorsqu'il attaque 
@@ -164,6 +164,6 @@ const championForms = {
 
 // Aura commune aux deux formes
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.`,
 };

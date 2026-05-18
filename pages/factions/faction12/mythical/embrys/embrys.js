@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Glaive fetide",
             description: `
               Attaque tous les ennemis. Detruit les PV MAX de chaque cible de 3% (s'accumule jusqu'a 30%).<br><br>
@@ -19,7 +19,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Regard vide",
             description: `
               Place un débuff <span class='gbt'>Peur Absolue</span> sur tous les ennemis pendant 1 tour
@@ -34,7 +34,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "La demolition",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -57,7 +57,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -66,7 +66,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Existence injustifiee [P]",
             description: `
               Des qu'un ennemi est tue, place une pile de <span class='gbt'>Necrose</span>
@@ -95,7 +95,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Lame du demolisseur",
             description: `
               Attaque un ennemi. Place une frappe supplémentaire si la cible est
@@ -110,7 +110,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Atomiser",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -125,7 +125,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Ta vie est perdue !",
             description: `
               Echange ses PV avec un ennemi. 
@@ -141,7 +141,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -150,7 +150,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Degenerateur [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
@@ -184,7 +184,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/hp.png",
+      img: "../../../../../../assets/images/auras/hp.webp",
       description: `
         Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
       `,

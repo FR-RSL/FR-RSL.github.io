@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Coupeur de chitine",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Possede 75% de chances de voler un buff aleatoire a la cible. Il est impossible de resister a cet effet et de le bloquer.`,
@@ -10,7 +10,7 @@ Possede 75% de chances de voler un buff aleatoire a la cible. Il est impossible 
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +15%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Multitude affamee",
           description: `Attaque un ennemi. Accorde un Tour supplementaire si cette attaque tue un ennemi.${RETURN}${RETURN}
 Si la cible survit, place une frappe supplementaire sur tous les ennemis.`,
@@ -19,7 +19,7 @@ Si la cible survit, place une frappe supplementaire sur tous les ennemis.`,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Festin insectoide",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 Les degats infliges par cette competence augmentent de 10% chaque fois qu'un ennemi recoit un debuff. L'augmentation des degats se reinitialise chaque fois que cette competence est utilisee.`,
@@ -33,7 +33,7 @@ Les degats infliges par cette competence augmentent de 10% chaque fois qu'un enn
           ],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Conducteur de nuee [P]",
           description: `Ignorera 12% de la DEF de chaque cible si elle ne dispose d'aucun buff actif.`,
           factions: [
@@ -58,7 +58,7 @@ Les allies recoivent 30% de degats en moins de la part des ennemis qui n'ont auc
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/sup-speed.png",
+  img: "../../../../../assets/images/auras/sup-speed.webp",
   description: `Augmente la statistique VIT des Allies lors de toutes les Batailles de 19%.${RETURN}${RETURN}
 Augmente la statistique PRE des Allies lors de toutes les Batailles de 60 (ne s'applique qu'a la Faction des Elfes Noirs).`
 };

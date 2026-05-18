@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Combo de lames",
           description: `
             Attaque 3 fois un ennemi.
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Frappe de lames",
           description: `
             Attaque 4 fois un ennemi.
@@ -33,7 +33,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Tournoiement de lames",
           description: `
             Attaque 4 fois un ennemi.
@@ -56,7 +56,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Essence de Zinogre [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -87,7 +87,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans les Donjons de 30%.
     `,

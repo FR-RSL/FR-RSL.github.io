@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Balafre vivifiante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Place une frappe supplementaire si la cible se trouve sous debuff ${DEBUFFS.DEF}.`,
@@ -10,7 +10,7 @@ Place une frappe supplementaire si la cible se trouve sous debuff ${DEBUFFS.DEF}
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Epees englouties",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 A 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Les chances augmentent de 5% pour chaque ennemi vivant.`,
@@ -19,7 +19,7 @@ A 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Les 
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Defenseur d'Agaris",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Soigne ce Champion a hauteur de 20% des degats infliges. Soigne au lieu de cela ce Champion de 30% si la cible se trouve sous debuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
@@ -42,6 +42,6 @@ Detruit les PV MAX de la cible de 20% des degats infliges. Detruit au lieu de ce
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/attack.png",
+  img: "../../../../../assets/images/auras/attack.webp",
   description: `Augmente la statistique ATQ des Allies lors de toutes les Batailles de 15%.`
 };

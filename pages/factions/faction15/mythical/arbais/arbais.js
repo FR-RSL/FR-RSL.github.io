@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Lame-ouragan",
             description: `
               Attaque tous les ennemis.
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Renaissance verdoyante",
             description: `
               Retire tous les buffs dont disposent les ennemis.
@@ -33,7 +33,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Murmure harmonieux",
             description: `
               Remplit le Compteur de Tour de tous les alliés de 30%,
@@ -47,7 +47,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -56,7 +56,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Etreinte de Pierrepine [P]",
             description: `
               Des qu'un allié disposant d'un buff <span class='gbt'>Ranimer apres la Mort</span>
@@ -82,7 +82,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Lance-rocher",
             description: `
               Attaque un ennemi. Reduit le Compteur de Tour de la cible de 30%.<br><br>
@@ -98,7 +98,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Bruleronce",
             description: `
               Attaque tous les ennemis. 
@@ -113,7 +113,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Clameur du Bois de Brume",
             description: `
               Place deux buffs <span class='gbt'>Soins continus</span> de 15%
@@ -128,7 +128,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -137,7 +137,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Fouillis d'epine [P]",
           description: `
               Lorsqu'elle est attaquee, place un débuff
@@ -163,7 +163,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/speed.png",
+      img: "../../../../../../assets/images/auras/speed.webp",
       description: `
         Augmente la statistique VIT des Alliés lors de toutes les Batailles de 25%.
       `,

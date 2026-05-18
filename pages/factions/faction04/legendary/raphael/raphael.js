@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Brochette d'egout",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Ricochet fulminant",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Pas aujourd'hui, cretin !",
           description: `
             Attaque 3 fois un ennemi.<br><br>
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Tabassage de NYC [P]",
           description: `
             Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.<br><br>
@@ -76,7 +76,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%.
     `,

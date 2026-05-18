@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Volute de sommeil",
           description: `
             Attaque un ennemi.<br><br>
@@ -23,7 +23,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Eclat printanier",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -42,7 +42,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Chant-reve beni",
           description: `
             Place un buff <span class='gbt'>Augmentation de VIT</span> de 30%
@@ -58,7 +58,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Floraison de vie [P]",
           description: `
             Des que cette Championne ou un allié voit son Compteur de Tour augmente,
@@ -83,7 +83,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans les batailles d'Arene de 28%.
     `,

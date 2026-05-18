@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Liens brulants",
           description: `
             Attaque un ennemi.
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Terrible volute",
           description: `
             Attaque tous les ennemis. Possede 75% de chances de placer un debuff <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.
@@ -33,7 +33,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Double depravation",
           description: `
             Attaque 2 fois tous les ennemis. La premiere frappe retire tous les buffs de chaque cible.
@@ -47,7 +47,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Chasseur de fleaux [P]",
           description: `
             Des qu'un allie attaque un ennemi sous debuff <span class='gbt'>Malediction</span>, ce Champion possede 50% de chances de faire equipe
@@ -69,7 +69,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%.
     `,

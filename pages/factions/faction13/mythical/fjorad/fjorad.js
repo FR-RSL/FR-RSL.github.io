@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Morsure du loup",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe a 50% de chances de placer un débuff 
@@ -19,7 +19,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Grand Capitaine",
             description: `
               Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
@@ -30,7 +30,7 @@ const championForms = {
             levelInfo: ["Temps de recharge -1"]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Rage du Coeur-de-loup",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -49,7 +49,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -58,7 +58,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Se mange froid [P]",
             description: `
             Des que ce Champion ou un allie recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
@@ -83,7 +83,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Fente de givre",
             description: `
               Attaque un ennemi.${RETURN}${RETURN}
@@ -96,7 +96,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Seisme de glacier",
             description: `
               Attaque tous les ennemis. Inflige une frappe supplémentaire aux ennemis sous débuffs
@@ -125,7 +125,7 @@ Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Disciple de Tormin",
             description: `
               Attaque un ennemi.<br><br>
@@ -143,7 +143,7 @@ Il est impossible pour les ennemis du Pacte Gaellen de bloquer le debuff ${DEBUF
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -152,7 +152,7 @@ Il est impossible pour les ennemis du Pacte Gaellen de bloquer le debuff ${DEBUF
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Resolution glaciale [P]",
           description: `
             Contre-attaque avec la compétence <span class='gt'>Fente de givre</span>
@@ -176,7 +176,7 @@ Lorsqu'un allie est tue, a 50% de chances de placer un debuff ${DEBUFFS.GEL} sur
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/acc.png",
+      img: "../../../../../../assets/images/auras/acc.webp",
       description: `
         Augmente la statistique PRE des Alliés lors de toutes les Batailles de 80.
       `,

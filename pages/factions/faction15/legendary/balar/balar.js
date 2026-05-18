@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Epines malignes",
           description: `
             Attaque un ennemi. Avant d'attaquer, place un buff <span class='gbt'>Bouclier</span>
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Tornade de vie",
           description: `
             Attaque un ennemi.<br><br>
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Croissance monstrueuse",
           description: `
             Attaque un ennemi.
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Abandonne au chaos [P]",
           description: `
             Augmente l'effet Ignorer la DEF de ce Champion de 1% pour chaque débuff <span class='gbt'>Poison</span> active instantanement par ce Champion (s'accumule jusqu'a 20%).<br><br>
@@ -77,7 +77,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.
     `,

@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Buveur d'Ames",
           description: `
             Attaque un ennemi.
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Gel du Sang",
           description: `
             Attaque un ennemi. Vole 100% du Compteur de Tour de la cible.<br><br>
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Rage d'Oni",
           description: `
             Attaque un ennemi. Place un débuff
@@ -51,7 +51,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Vigoureux [P]",
           description: `
             Tous les effets d'augmentation de Compteur de Tour sont augmentes de 50% lorsqu'ils sont utilises sur ce Champion.
@@ -72,7 +72,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés de toutes les Batailles de 29%.
     `,

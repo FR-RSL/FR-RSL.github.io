@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Massacre faucheur",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe a 20% de chances
@@ -20,7 +20,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Horde de calamite",
             description: `
               Attaque 4 fois un ennemi. Chaque frappe a 20% de chances
@@ -44,7 +44,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Necroclysme",
             description: `
               Attaque tous les ennemis. Cette attaque est toujours critique
@@ -62,7 +62,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -71,7 +71,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Creation immortelle [P]",
             description: `
               Au debut du tour de ce Champion, lui accorde un buff
@@ -97,7 +97,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Faux cruelle",
             description: `
               Attaque un ennemi. Possède 20% de chances supplémentaires de porter un coup critique.<br><br>
@@ -111,7 +111,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Ultime testament",
             description: `
               Attaque tous les ennemis. Possède 20% de chances supplémentaires de porter un coup critique. 
@@ -129,7 +129,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Extinction",
             description: `
               Attaque tous les ennemis. Possède 20% de chances supplémentaires de porter un coup critique.
@@ -147,7 +147,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -156,7 +156,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Banquet de la mort [P]",
           description: `
             Des que ce Champion attaque un ennemi sous débuff <span class='gbt'>Malediction</span>,
@@ -181,7 +181,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/attack.png",
+      img: "../../../../../../assets/images/auras/attack.webp",
       description: `
         Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.
       `,

@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Annihilation",
           description: `
             Attaque un ennemi. Offre 45% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours.
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Trembleterre",
           description: `
             Attaque tous les ennemis.
@@ -32,7 +32,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Spherepine [P]",
           description: `
             Au debut de chaque tour, place sur ce Champion un buff ${BUFFS.SHIELD} equivalent a 20% de ses PV MAX pendant 2 tours.
@@ -58,7 +58,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés dans les Donjons de 50%.
     `,

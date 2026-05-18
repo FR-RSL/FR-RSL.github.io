@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Perce-tout",
             description: `
               Attaque un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Barrage de plumes noires",
             description: `
               Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Presage du voleur",
             description: `
               Attaque un ennemi. Inflige deux fois plus de degats aux Boss.<br><br>
@@ -57,7 +57,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -66,7 +66,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Sauveur etincelant [P]",
             description: `
               Inflige 5% de degats en plus par tranche de 10% de PV que la cible a perdus.<br><br>
@@ -92,7 +92,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Serres d'Etre feerique",
             description: `
               Attaque 2 fois un ennemi.
@@ -106,7 +106,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Nuee de corbeaux",
             description: `
               Attaque tous les ennemis.
@@ -123,7 +123,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Bouclier de plumes",
             description: `
               Retire tous les débuffs dont ce Champion est afflige.
@@ -140,7 +140,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -149,7 +149,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Intervention feerique [P]",
             description: `
               Augmente les PV MAX, la DEF, la VIT, la RES et la PRE de ce Champion
@@ -175,7 +175,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/hp.png",
+      img: "../../../../../../assets/images/auras/hp.webp",
       description: `
         Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
       `,

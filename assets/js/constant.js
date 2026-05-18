@@ -7,7 +7,7 @@ const BUFFS = {
 	CRATE: `<span class='gbt'>Augmentation du TAUX DE C.</span>`,
 	CDAM: `<span class='gbt'>Augmentation des DEG C.</span>`,
 
-	BLOCK_DEBUFFS: `<span class='gbt'>Bloquer les Debuffs</span>`,
+	BLOCK_DEBUFFS: `<span class='gbt'>Blocage des Debuffs</span>`,
 	SHIELD: `<span class='gbt'>Bouclier</span>`,
 	SHIELD_MAGMA: `<span class='gbt'>Bouclier de magma</span>`,
 

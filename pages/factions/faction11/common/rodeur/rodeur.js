@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Fleche Vitale",
           description: `Attaque un ennemi. Possede 15% de chances de placer un debuff ${DEBUFFS.POISON} de 2.5% pendant 2 tours.`,
           damage: "3.1*ATQ",

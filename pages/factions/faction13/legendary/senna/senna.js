@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Poussee d'ambre",
           description: `
             Attaque un ennemi.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Touche d'or",
           description: `
             Place un buff <span class='gbt'>Augmentation de VIT</span> de 30% 
@@ -33,7 +33,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Oree de la mort",
           description: `
             Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.<br><br>
@@ -48,7 +48,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Lueur curative [P]",
           description: `
             Des qu'un buff <span class='gbt'>Soins continus</span> s'active
@@ -72,7 +72,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.
     `,

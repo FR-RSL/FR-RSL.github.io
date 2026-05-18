@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Entaille éclair",
             description: `
               Attaque un ennemi. Place un débuff
@@ -15,7 +15,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%"],
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Sombres dards",
             description: `
               Attaque tous les ennemis. Avant d'attaquer, place un buff
@@ -35,7 +35,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Horde de bêtes-cloques",
             description: `
               Attaque tous les ennemis.
@@ -52,7 +52,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion à sa Forme alternative.
@@ -61,7 +61,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Brûle-chair [P]",
             description: `
               Chaque fois que ce Champion place un débuff <span class='gbt'>Brûlure de PV</span>, réduit la DÉF de la cible de 3% (s'accumule jusqu'à 30%).<br><br>
@@ -87,7 +87,7 @@ const championForms = {
         type: "Defense",
         spells: [
           {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Pinces écrasantes",
             description: `
               Attaque un ennemi. Place un buff <span class='gbt'>Augmentation de PRÉ</span> de 50% 
@@ -98,7 +98,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%"],
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Cocon putride",
             description: `
               Attaque tous les ennemis. Place un débuff <span class='gbt'>Étourdissement</span> 
@@ -115,7 +115,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Et voici la Bête",
             description: `
               Place un débuff <span class='gbt'>Provocation</span> sur tous les ennemis pendant 1 tour.<br><br>
@@ -130,7 +130,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -139,7 +139,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Entomophobie [P]",
             description: `
               Lorsque le Champion est attaqué, 
@@ -163,7 +163,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/attack.png",
+      img: "../../../../../../assets/images/auras/attack.webp",
       description: `
         Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.
       `,

@@ -2,13 +2,13 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Double Tir",
           description: `Attaque 2 fois un ennemi. Possede 15% de chances supplementaires de porter un coup critique. Remplit de 15% le Compteur de Tour de ce Champion lors de chaque coup critique.`,
           damage: "2.2*ATQ",
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Pluie de Fleches",
           description: `Attaque 2 fois tous les ennemis. Possede 10% de chances de placer un debuff ${DEBUFFS.SPD} de 15% pendant 1 tour.`,
           damage: "1.9*ATQ",

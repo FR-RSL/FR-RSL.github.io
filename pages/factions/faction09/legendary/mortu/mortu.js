@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Stigmates",
 			description: `
 				Attaque 1 ennemi.
@@ -18,7 +18,7 @@ const championData = {
           	],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Tombe en Disgrace",
 			description: `
 				Attaque 2 fois tous les ennemis. Chaque frappe Possède 90% de chances de placer un débuff <span class='gbt'>Blocage des Buffs</span> de 2 tours.<br><br>
@@ -36,7 +36,7 @@ const championData = {
 			cooldown: 5,
         },
 		{
-			img: "assets/passif1.png",
+			img: "assets/passif1.webp",
 			name: "Rage Ardente [P]",
 			description: `
 				Possède 20% de chances de debloquer une compétence secrete, Peril, pendant 1 tour lorsque ce Champion se fait attaquer.
@@ -45,7 +45,7 @@ const championData = {
 			  isPassive: true,
 		},
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Peril",
 			description: `
 				Attaque 2 fois 1 ennemi.
@@ -68,7 +68,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 24%.
     `,

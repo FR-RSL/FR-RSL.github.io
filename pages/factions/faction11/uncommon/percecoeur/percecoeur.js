@@ -2,14 +2,14 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Perforer",
           description: `Attaque un ennemi.`,
           damage: "4.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Regle la Visee",
           description: `Attaque un ennemi. Place un buff ${BUFFS.ATK} de 25% sur cette Championne pendant 2 tours si cette attaque passe en critique.`,
           damage: "7.6*ATQ",

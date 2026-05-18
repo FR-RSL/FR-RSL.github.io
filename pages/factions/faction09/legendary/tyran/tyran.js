@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       	spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Festin des Flammes",
           description: `
             Attaque un ennemi. Soigne ce Champion a hauteur de 25% des dégats infligés. Soigne, a la place, ce
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Torrent Feu de l'enfer",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de placer un débuff de
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Sbires Infernaux",
           description: `
             Place, pendant 2 tours, un buff de <span class='gbt'>Protection d'Allié</span> de 50% sur tous les
@@ -46,7 +46,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Feux de Ruine [P]",
           description: `           
 		  Réduit de 10% les dégats infligés par les ennemis affligés de débuffs
@@ -68,7 +68,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%.
     `,

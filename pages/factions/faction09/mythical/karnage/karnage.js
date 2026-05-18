@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Entaille de souffrance",
             description: `
             	Attaque 2 fois un ennemi. Possède 50% de chances de retirer 1 buff aleatoire sur la cible.<br><br>
@@ -19,7 +19,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Accord diabolique",
             description: `
             	Attaque 2 fois un ennemi.<br><br>
@@ -35,7 +35,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Trinité de douleur",
             description: `
             	Attaque 3 fois un ennemi. La premiere frappe place un débuff <span class='gbt'>Blocage des Compétences Passives</span> pendant 2 tours. 
@@ -52,7 +52,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -61,7 +61,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Avatar d'anarchie [P]",
             description: `
             	Chaque frappe infligée par ce Champion possède 50% de chances d'appliquer un effet de 
@@ -87,7 +87,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Dard de démon",
             description: `
             	Attaque 2 fois un ennemi. Soigne ce Champion à hauteur de 20% des dégâts infligés.<br><br>
@@ -102,7 +102,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Douleur singulière",
             description: `
 				Attaque tous les ennemis. Ignorera les buffs <span class='gbt'>Bouclier</span>.<br><br>
@@ -119,7 +119,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Etoiles infernales",
             description: `
 				Attaque 2 fois tous les ennemis.<br><br>
@@ -136,7 +136,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -145,7 +145,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Karnage éternel [P]",
             description: `
 				Les DEG C. de ce Champion augmentent de 1% par tranche de 3 points de PRE qu'il possède.<br><br>
@@ -168,7 +168,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/speed.png",
+      img: "../../../../../../assets/images/auras/speed.webp",
       description: `
         Augmente la statistique VIT des Alliés dans les batailles d'Arene de 33%.
       `,

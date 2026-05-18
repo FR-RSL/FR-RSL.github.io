@@ -4,7 +4,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Arc d'ignition",
             description: `
               Attaque 3 fois un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Tempete pyroclaste",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -37,7 +37,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Couronne de flammes",
             description: `
               Place un débuff <span class='gbt'>Affaiblissement</span> de 25% 
@@ -52,7 +52,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -61,7 +61,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Que le feu te soigne [P]",
             description: `
               Chaque débuff <span class='gbt'>Brulure de PV</span> place par ce Champion sous sa Forme de base augmente
@@ -88,7 +88,7 @@ const championForms = {
         type: "Defense",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Etoile de tonnerre",
             description: `
               Attaque 2 fois un ennemi. A 25% de chances de repeter chaque frappe.<br><br>
@@ -101,7 +101,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Geyser de magma",
             description: `
               Attaque un ennemi.<br><br>
@@ -119,7 +119,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Ecrasement de cataclysme",
             description: `
               Attaque tous les ennemis. Avant d'attaquer, place un buff <span class='gbt'>Augmentation de DEF</span> de 60%
@@ -137,7 +137,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -146,7 +146,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Que le feu te brise [P]",
             description: `
               Chaque débuff <span class='gbt'>Brulure de PV</span> place par ce Champion sous sa Forme de base augmente
@@ -171,7 +171,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/hp.png",
+      img: "../../../../../../assets/images/auras/hp.webp",
       description: `
         Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
       `,

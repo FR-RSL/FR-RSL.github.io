@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Brise-demon",
           description: `
             Attaque tous les ennemis.
@@ -24,7 +24,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Retour dans l'abime",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -43,7 +43,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Fureur enragee",
           description: `
             Attaque 2 fois tous les ennemis.
@@ -61,7 +61,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Cauchemar du Mal [P]",
           description: `
             Active la compétence <span class='gt'>Brise-demon</span> tous les cinq tours joues par ce Champion.<br><br>
@@ -83,7 +83,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%.
     `,

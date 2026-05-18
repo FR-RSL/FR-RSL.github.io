@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Passer a la Flamme",
           description: `
             Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.BURN} de 2 tours.
@@ -15,7 +15,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Etreinte Seigneuriale",
           description: `
             Retire tous les debuffs sur une cible alliee, puis place un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours, avant de soigner cet allie de 75% de ses PV MAX.<br><br>
@@ -29,7 +29,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Agresser",
           description: `
             Possede 75% de chances de retirer tous les buffs sur tous les ennemis, puis reduit de 10% le Compteur de Tour de tous les ennemis et remplit de 10% le Compteur de Tour de tous les allies.<br><br>
@@ -57,7 +57,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique RES des Alliés de Magie lors de toutes les Batailles de 50.
     `,

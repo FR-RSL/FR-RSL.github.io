@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Frappe Audacieuse",
           description: `
             Attaque un ennemi.<br><br>
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Traumatisant",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Les heros sont de retour",
           description: `
             Retire tous les debuffs sur tous les allies.<br><br>
@@ -49,7 +49,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Je te couvre, frerot ! [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -80,7 +80,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%.
     `,

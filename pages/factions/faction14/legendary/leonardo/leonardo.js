@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
   spells: [
     {
-      img: "assets/sort1.png",
+      img: "assets/sort1.webp",
       name: "Part de New York",
       description: `
         Attaque 2 fois un ennemi. Lors d'une contre-attaque, répètera cette attaque sur un ennemi aleatoire.<br><br>
@@ -16,7 +16,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort2.png",
+      img: "assets/sort2.webp",
       name: "Carap-As !",
       description: `
         Place un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours et un buff ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés sauf ce Champion pendant 2 tours.<br><br>
@@ -29,7 +29,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort3.png",
+      img: "assets/sort3.webp",
       name: "Tortues ensembles",
       description: `
         Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 5% pour chaque buff sur tous les alliés et ennemis.<br><br>
@@ -51,7 +51,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/passif1.png",
+      img: "assets/passif1.webp",
       name: "Heros en semi-carapace [P]",
       description: `
         Place un buff ${BUFFS.STONE_SKIN} sur ce Champion pendant 1 tour à chaque fois que des frappes d'ennemis font passer ses PV sous 50%. Se produit une fois par compétence.<br><br>Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.
@@ -72,7 +72,7 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../../assets/images/auras/defence.png",
+  img: "../../../../../../assets/images/auras/defence.webp",
   description: `
     Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%.
   `,

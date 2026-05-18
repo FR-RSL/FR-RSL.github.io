@@ -2,14 +2,14 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Enferrer",
           description: `Attaque 3 fois un ennemi. Chaque frappe possede 40% de chances de placer un debuff ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "1.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Pluie de Poison",
           description: `Attaque 2 fois tous les ennemis. Chaque frappe possede 50% de chances de placer un debuff ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "2*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Catalyseur Mortel",
           description: `Attaque tous les ennemis. Active instantanement tous les debuffs ${DEBUFFS.POISON} sur tous les ennemis.${RETURN}${RETURN}
 Place un debuff ${DEBUFFS.BLOCK_REA} sur les ennemis tues.`,
@@ -26,7 +26,7 @@ Place un debuff ${DEBUFFS.BLOCK_REA} sur les ennemis tues.`,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Partenaire Calamiteux",
           description: `Attaque un ennemi. Applique un effet de <span class="grn-t">Propagation de Debuff</span>, prenant 4 debuffs aleatoires sur la cible pour les placer sur tous les ennemis.${RETURN}${RETURN}
 [Uniquement Disponible lorsque <span class="gold-t">Belanor</span> se trouve dans la meme equipe.]`,
@@ -47,6 +47,6 @@ Place un debuff ${DEBUFFS.BLOCK_REA} sur les ennemis tues.`,
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/attack.png",
+  img: "../../../../../assets/images/auras/attack.webp",
   description: `Augmente la statistique ATQ des Allies lors de toutes les Batailles de 33%`
 };

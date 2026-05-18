@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Force de Lakon",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Detruit 10% des PV MAX de la cible. Detruit au lieu de cela 20% des PV MAX de la cible si elle se trouve sous debuff ${DEBUFFS.PROVOKE} (s'accumule jusqu'a 50%).${RETURN}${RETURN}
@@ -12,7 +12,7 @@ Augmente au lieu de cela le Compteur de Tour de 40% si la cible est affligee d'u
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Par les cornes",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Ignorera 50% de la DEF de la cible et les buffs ${BUFFS.STONE_SKIN} si les PV MAX de ce Champion sont plus eleves que ceux de la cible.${RETURN}${RETURN}
@@ -23,7 +23,7 @@ Si la cible survit, soigne tous les allies d'une quantite egale a la difference 
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +15%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Confiance durement gagnee",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 A 80% de chances de placer un debuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Ignorera 50% de la RES contre les cibles dont les PV MAX sont inferieurs a ceux de ce Champion.${RETURN}${RETURN}
@@ -33,7 +33,7 @@ Place un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "C'est tout ce que t'as ? [P]",
           description: `Les ennemis sous debuff ${DEBUFFS.PROVOKE} infligent 50% de degats en moins.${RETURN}${RETURN}
 Les allies infligent 20% de degats supplementaires contre les ennemis sous debuffs ${DEBUFFS.PROVOKE}.${RETURN}${RETURN}
@@ -54,6 +54,6 @@ Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/acc.png",
+  img: "../../../../../assets/images/auras/acc.webp",
   description: `Augmente la statistique PRE des Allies dans les batailles d'Arene de 80.`
 };

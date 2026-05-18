@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Baton emmele",
           description: `
             Attaque un ennemi.
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Epines vitrioliques",
           description: `
             Attaque tous les ennemis.
@@ -40,7 +40,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Hypertrophie",
           description: `
             Retire tous les débuffs sur tous les alliés.
@@ -58,7 +58,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Chamane des ronces [P]",
           description: `
             Des qu'un ennemi sous débuff <span class='gbt'>Poison</span>

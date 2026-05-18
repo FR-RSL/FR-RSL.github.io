@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Entaille de lance-epee",
             description: `
               Attaque 2 fois un ennemi.
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Lanterne de ruine",
             description: `
               Place un débuff <span class='gbt'>Reduction de RES</span> de 50%
@@ -32,7 +32,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Apparition mortelle",
             description: `
               Attaque tous les ennemis.
@@ -47,7 +47,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -56,7 +56,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Sombre vigile [P]",
             description: `
               Immunisee contre les débuffs <span class='gbt'>Etourdissement</span>.
@@ -80,7 +80,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Aile-lame",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe Possède 50% de chances 
@@ -93,7 +93,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Pluie de damnation",
             description: `
               Attaque tous les ennemis. Place un buff
@@ -110,7 +110,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Purge nocturne",
             description: `
               Retire tous les débuffs sur tous les alliés, puis
@@ -123,7 +123,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -132,7 +132,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Reine des Tenebres [P]",
           description: `
               Immunisee contre les débuffs <span class='gbt'>Sommeil</span>.
@@ -156,7 +156,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/res.png",
+      img: "../../../../../../assets/images/auras/res.webp",
       description: `
         Augmente la statistique RES des Alliés lors de toutes les Batailles de 80.
       `,

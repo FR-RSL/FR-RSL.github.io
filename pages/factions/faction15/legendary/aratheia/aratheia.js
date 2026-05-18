@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Fleur maudite",
           description: `
             Attaque un ennemi.<br><br>
@@ -22,7 +22,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Depit capricieux",
           description: `
             Attaque 2 fois tous les ennemis.<br><br>
@@ -44,7 +44,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Nuage attrape-esprit",
           description: `
             Place un buff <span class='gbt'>Augmentation de PRE</span> de 50% sur tous les alliés pendant 2 tours.<br><br>
@@ -67,7 +67,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Frenesie de Lilas-croc [P]",
           description: `
             Si cette Championne tue un ou plusieurs ennemis lors d'une bataille,
@@ -95,7 +95,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%.
     `,

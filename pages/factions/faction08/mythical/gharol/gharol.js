@@ -4,7 +4,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Ecrase-ennemi",
             description: `
               Attaque un ennemi.
@@ -19,7 +19,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Marteau-seisme",
             description: `
               Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championForms = {
             ]
 		},
 		{
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
             name: "Lies par le sang",
             description: `
 			Retire les débuffs <span class='gbt'>Blocage des Buffs</span> sur tous les alliés et place
@@ -52,7 +52,7 @@ const championForms = {
 			],
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -61,7 +61,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Tuer ou soigner [P]",
             description: `
               Lorsqu'elle est attaquee, reduit d'1 tour la durée de tous les buffs
@@ -88,7 +88,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Cognement de magma",
             description: `
               Attaque tous les ennemis. Possède 20% de chances de repeter l'attaque.
@@ -100,7 +100,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Massue calamiteuse",
             description: `
               Attaque tous les ennemis. Les degats augmentent de cette 
@@ -115,7 +115,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -124,7 +124,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Brume pourpre [P]",
             description: `
               Des qu'un allié attaque, cette Championne Possède 25% de chances de faire
@@ -149,7 +149,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/hp.png",
+      img: "../../../../../../assets/images/auras/hp.webp",
       description: `
         Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
       `,

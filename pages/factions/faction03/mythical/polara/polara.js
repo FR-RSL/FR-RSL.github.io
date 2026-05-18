@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Zele brulant",
             description: `
               Attaque un ennemi.
@@ -15,7 +15,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%"],
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Conflagration fidele",
             description: `
               Attaque 3 fois un ennemi.<br><br>
@@ -33,7 +33,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Pyro Maxima",
             description: `
               Attaque tous les ennemis.
@@ -49,7 +49,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe [P]",
             description: `
               Fait passer ce Champion à sa Forme alternative.
@@ -58,7 +58,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Maitresse elementaire [P]",
             description: `
               Cette Championne inflige 25% de degats en plus aux ennemis 
@@ -85,7 +85,7 @@ const championForms = {
         type: "Defense",
         spells: [
           {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Decoupe glaciale",
             description: `
               Attaque un ennemi.<br><br>
@@ -102,7 +102,7 @@ const championForms = {
 			],
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Vrilles gelees",
             description: `
               Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
@@ -115,7 +115,7 @@ const championForms = {
             levelInfo: ["Temps de recharge -1"],
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Tempete de lame-glace",
             description: `
               Attaque tous les ennemis. Avant d'attaquer, place une pile
@@ -128,7 +128,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -137,7 +137,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Reveil cryomantique [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
@@ -165,7 +165,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/attack.png",
+      img: "../../../../../../assets/images/auras/attack.webp",
       description: `
         Augmente la statistique ATQ des Alliés dans les batailles d'Arene de 40%.
       `,

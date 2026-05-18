@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Corruption",
           description: `
             Attaque un ennemi. Possède 50 % de chances de placer un débuff <span class='gbt'>Réduction d’ATQ</span> de 50 % pendant 2 tours. Possède également 25 % de chances de placer un débuff <span class='gbt'>Réduction d’ATQ</span> de 50 % sur tous les ennemis pendant 2 tours si cette attaque passe en critique.
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Punition purgative",
           description: `
             Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 5 % (s’accumule jusqu’à 30 %). Chaque frappe augmente également la DÉF de cette Championne de 5 % (s’accumule jusqu’à 100 %).<br><br>
@@ -32,7 +32,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Terreur céleste",
           description: `
             Attaque tous les ennemis. Place un débuff <span class='gbt'>Provocation</span> pendant 1 tour. Il est impossible de bloquer ou de résister à ce débuff si le Champion ciblé fait partie de la Faction des Rejetons Démoniaques.
@@ -46,7 +46,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Tueuse de demons [P]",
           description: `
             Les effets Ignorer la DÉF de l’ennemi sont réduits de 50 %.<br><br>
@@ -69,7 +69,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique RES des Alliés dans les batailles d'Arene de 80.
     `,

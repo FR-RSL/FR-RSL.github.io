@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Alcool Puissant",
           description: `
             Attaque un ennemi. Possède 30 % de chances de placer un débuff <span class='gbt'>Étourdissement</span> pendant 1 tour.`,
@@ -15,7 +15,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Spiritueux Brulants",
           description: `
             Attaque 2 fois au hasard. Possède 75 % de chances de placer un débuff <span class='gbt'>Réduction de PRÉ</span> de 50 % et un débuff <span class='gbt'>Brûlure de PV</span> pendant 2 tours.
@@ -32,7 +32,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Toast au Combat",
           description: `
             Place un buff <span class='gbt'>Augmentation d’ATQ</span> de 50 % et un buff <span class='gbt'>Augmentation de PRÉ</span> de 50 % sur tous les alliés pendant 2 tours.<br><br>
@@ -47,7 +47,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Fetard [P]",
           description: `
             Remplit le Compteur de Tour de ce Champion de 4% chaque fois qu'un ennemi reçoit un buff.
@@ -68,7 +68,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.
     `,

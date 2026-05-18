@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Tempete de Serpentia",
             description: `
               Attaque un ennemi.<br><br>
@@ -19,7 +19,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Fortitude derangee",
             description: `
               Retire tous les débuffs sur tous les alliés,
@@ -33,7 +33,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Regeneration anormale",
             description: `
               Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.<br><br>
@@ -46,7 +46,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -55,7 +55,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Protection haineuse [P]",
             description: `
               Tous les 7 tours, equilibre les PV de tous les alliés.
@@ -81,7 +81,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Je te trouverai...",
 			description: `
               Attaque un ennemi.<br><br>
@@ -95,7 +95,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Sinistre massacre",
 			description: `
               Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.<br><br>
@@ -111,7 +111,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Murmure somnolent",
 			description: `
               Place un débuff <span class='gbt'>Sommeil</span> pendant 1 tour
@@ -127,7 +127,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -136,7 +136,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Ils sont inferieurs [P]",
           description: `
             Cette Championne est immunisee contre les débuffs <span class='gbt'>Blocage des compétences Actives</span>.<br><br>
@@ -160,7 +160,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/speed.png",
+      img: "../../../../../../assets/images/auras/speed.webp",
       description: `
         Augmente la statistique VIT des Alliés lors de toutes les Batailles de 25%.
       `,

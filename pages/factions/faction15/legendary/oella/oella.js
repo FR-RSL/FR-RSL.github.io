@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Volettement agite",
           description: `
             Attaque un ennemi. 
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Main printaniere",
           description: `
             Soigne tous tes alliés a hauteur de 30% de leurs PV MAX.<br><br>
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Morphose",
           description: `
             Remplit le Compteur de Tour de tous les alliés de 30%.<br><br>
@@ -49,7 +49,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Sans entraves [P]",
           description: `
             Des qu'un allié perd 15% ou plus de ses PV MAX
@@ -74,7 +74,7 @@ const championData = {
     };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/res.png",
+    img: "../../../../../../assets/images/auras/res.webp",
     description: `
       Augmente la statistique RES des Alliés dans les Donjons de 75.
     `,

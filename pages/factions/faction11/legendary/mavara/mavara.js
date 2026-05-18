@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Frappe a mon signal",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Place un buff ${BUFFS.FERVEUR} de 2 tours sur un allie aleatoire qui n'est pas cette Championne. Si l'allie selectionne aleatoirement se trouve deja sous buff ${BUFFS.FERVEUR}, le place sur un autre allie selectionne aleatoirement.${RETURN}${RETURN}${PASSIVE}
@@ -11,7 +11,7 @@ Les allies sous buff ${BUFFS.FERVEUR} ont 50% de chances de rejoindre les attaqu
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Nexus de soie",
           description: `Place un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.RES} de 50% sur tous les allies pendant 2 tours.${RETURN}${RETURN}
 Equilibre egalement les niveaux des PV de tous les allies. Les niveaux de PV de tous les allies seront amenes au niveau de l'allie qui a le plus de PV.`,
@@ -19,7 +19,7 @@ Equilibre egalement les niveaux des PV de tous les allies. Les niveaux de PV de 
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Les toiles murmurent",
           description: `Ranime un allie avec 50% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
 Place ensuite un buff ${BUFFS.PERFECT_VEIL} sur tous les allies sauf cette Championne pendant 2 tours. Place egalement un buff ${BUFFS.UNKILLABLE} sur cette Championne pendant 2 tours. Ces buffs seront places meme si aucun allie n'a ete ranime.`,
@@ -27,7 +27,7 @@ Place ensuite un buff ${BUFFS.PERFECT_VEIL} sur tous les allies sauf cette Champ
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Visions theridines [P]",
           description: `Pour tous les 8 buffs recus par l'equipe ennemie, augmente de 20% les Compteurs de Tour de tous les allies.${RETURN}${RETURN}
 Pour tous les 16 buffs recus par cette Championne et ses allies, soigne tous les allies de 20% de leurs PV MAX.`,
@@ -47,6 +47,6 @@ Pour tous les 16 buffs recus par cette Championne et ses allies, soigne tous les
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Allies dans les batailles d'Arene de 28%.`
 };

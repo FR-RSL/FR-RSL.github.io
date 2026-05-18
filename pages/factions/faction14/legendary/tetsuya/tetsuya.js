@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
     {
-      img: "assets/sort1.png",
+      img: "assets/sort1.webp",
       name: "Laceration rapide",
       description: `
         Attaque un ennemi.<br><br>
@@ -16,7 +16,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort2.png",
+      img: "assets/sort2.webp",
       name: "Tacticien surnaturel",
       description: `
         Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires
@@ -35,7 +35,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort3.png",
+      img: "assets/sort3.webp",
       name: "Premonition decisive",
       description: `
         Attaque un ennemi.<br><br>
@@ -60,7 +60,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/passif1.png",
+      img: "assets/passif1.webp",
       name: "Fleau du Mikage [P]",
       description: `
         Remplit le Compteur de Tour de ce Champion de 15% des qu'un Champion
@@ -98,7 +98,7 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../../assets/images/auras/sup-speed.png",
+  img: "../../../../../../assets/images/auras/sup-speed.webp",
   description: `
     Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.<br><br>
     Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 15%.<br>

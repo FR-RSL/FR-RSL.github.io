@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Fil ecorchant",
             description: `
               Attaque 2 fois un ennemi.<br><br>
@@ -15,7 +15,7 @@ const championForms = {
             levelInfo: ["Dégâts +10%"],
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Vague seraphique",
             description: `
               Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25%.<br><br>
@@ -27,7 +27,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Rage du Nephel",
             description: `
               Attaque un ennemi. Ignore 50% de la DEF de la cibe.
@@ -39,7 +39,7 @@ const championForms = {
             levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe [P]",
             description: `
               Fait passer ce Champion à sa Forme alternative dès que son dernier allié vivant est tué.
@@ -49,7 +49,7 @@ const championForms = {
             isPassive: true,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Stopper la lame [P]",
             description: `
               Si ce Champion est sur le point de se faire tuer par un coup fatal,
@@ -75,7 +75,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Consumer",
             description: `
               Attaque tous les ennemis. Soigne tous les alliés de 30% des dégâts infligés.
@@ -84,7 +84,7 @@ const championForms = {
             levelInfo: ["Dégâts +10%"],
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Parade nephelique",
             description: `
               Retire tous les débuffs sur tous les alliés.<br><br>
@@ -95,7 +95,7 @@ const championForms = {
             levelInfo: ["Temps de recharge -1"],
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Lumiere de l'au-delà",
             description: `
               Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour, puis place un buff
@@ -105,7 +105,7 @@ const championForms = {
             levelInfo: ["Temps de recharge -1","Temps de recharge -1"],
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -114,7 +114,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Bouclier de defi [P]",
             description: `
               Reduit les degats infliges par des compétences de 20%.
@@ -136,7 +136,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/attack.png",
+      img: "../../../../../../assets/images/auras/attack.webp",
       description: `
         Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.
       `,

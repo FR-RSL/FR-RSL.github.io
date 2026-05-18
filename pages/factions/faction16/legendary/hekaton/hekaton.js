@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Rupture fulminante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 75% de chances de placer un debuff ${DEBUFFS.PROVOKE} et un debuff ${DEBUFFS.UNFEEBLE} sur la cible pendant 1 tour.
@@ -15,7 +15,7 @@ A egalement 25% de chances qu'il soit impossible de resister a ces debuffs.`,
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Oeil de la tempete",
           description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.DEF} de 60% pendant 2 tours et 1 pile d'${BUFFS.STORMBREAKER} sur tous les allies. Cette attaque est toujours critique si le nombre de buffs de la cible est inferieur ou egal a ceux de ce Champion.${RETURN}${RETURN}
 
@@ -27,7 +27,7 @@ Si l'attaque tue la cible, reduit les Compteurs de Tour de tous les autres ennem
           levelInfo: ["Dégâts +20%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Faveur du Pere-ciel",
           description: `Place un buff ${BUFFS.CRATE} de 30%, un buff ${BUFFS.BLOCK_DAMAGE} et un buff ${BUFFS.COUNTER} sur un allie cible pendant 2 tours.${RETURN}${RETURN}
 Remplit les Compteurs de Tour de tous les allies de 25%.`,
@@ -35,7 +35,7 @@ Remplit les Compteurs de Tour de tous les allies de 25%.`,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Maitre de la foudre [P]",
           description: `Des qu'un allie sous pile d'${BUFFS.STORMBREAKER} place par ce Champion porte un coup critique, ce Champion inflige des degats bruts supplementaires a la cible.
 Si la cible n'est pas un Boss ni un sbire, les degats bruts infliges sont egaux a 2% des PV MAX de la cible pour chaque buff sur ce Champion (s'accumule jusqu'a 10%).${RETURN}
@@ -62,6 +62,6 @@ Cette competence ne s'activera pas sur les copies en double de ce Champion si ce
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Allies lors de toutes les Batailles de 24%.`
 };

@@ -4,7 +4,7 @@ const championForms = {
         type: "Attaque",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Griffe-lune",
             description: `
               Attaque un ennemi. Place un débuff
@@ -17,7 +17,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Croissant ecarlate",
             description: `
               Attaque 2 fois un ennemi.<br><br>
@@ -37,7 +37,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Cadeau de clair de lune",
             description: `
               Place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%,
@@ -53,7 +53,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -62,7 +62,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Chasse implacable [P]",
             description: `
               Soigne cette Championne a hauteur de 20% des degats infliges.
@@ -87,7 +87,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Esprit de la meute",
             description: `
               Attaque tous les ennemis.
@@ -102,7 +102,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Dechiquette-vie",
             description: `
               Attaque tous les ennemis.
@@ -120,7 +120,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -129,7 +129,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Etreindre la bete [P]",
             description: `
               Augmente l'ATQ et les DEG C. de cette Championne de 20%
@@ -152,7 +152,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/crit.png",
+      img: "../../../../../../assets/images/auras/crit.webp",
       description: `
         Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 27%.
       `,

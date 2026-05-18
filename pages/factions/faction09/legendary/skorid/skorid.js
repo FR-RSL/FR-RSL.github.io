@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Bucher sortilege",
           description: `
             Attaque un ennemi.<br><br>
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Salves d'anathemes",
           description: `
             Attaque un ennemi.<br><br>
@@ -38,7 +38,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Malediction infernale",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -57,7 +57,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Semi-engendre [P]",
           description: `
             Remplit le Compteur de Tour de ce Champion de 10% lorsqu’il attaque des cibles sans débuff

@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Presser",
           description: `Attaque un ennemi. Possede 10% de chances de placer les competences de la cible en recharge`,
           damage: "3*ATQ",

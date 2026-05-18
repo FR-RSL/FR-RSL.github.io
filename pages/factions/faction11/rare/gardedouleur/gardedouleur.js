@@ -2,14 +2,14 @@ const championData = {
   type: "PV",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Avancee Infatigable",
           description: `Attaque 2 fois un ennemi. Remplit de 10% le Compteur de Tour de cette Championne.`,
           damage: "1*DEF + 1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Balayage Spectaculaire",
           description: `Attaque tous les ennemis. Soigne tous les allies a hauteur de 15% des PV MAX de cette Championne.`,
           damage: "0.12*PV + 2*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Soins +5%", "Soins +5%", "Dégâts +5%", "Soins +10%", "Soins +15%", "Dégâts +15%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Tactiques de Combat",
           description: `Réduit d'1 tour les temps de recharge de toutes les compétences alliées.`,
           cooldown: 7,
@@ -37,6 +37,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Alliés dans les Cryptes de Faction de 21%.`
 };

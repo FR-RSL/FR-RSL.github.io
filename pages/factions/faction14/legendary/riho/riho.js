@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Absorption",
           description: `
             Attaque un ennemi.<br><br>
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Points de Pression",
           description: `
             Place un débuff <span class='gbt'>Etourdissement</span>
@@ -43,7 +43,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Corps Parfait",
           description: `
             Retire tous les débuffs sur tous les alliés,
@@ -62,7 +62,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Renvoi [P]",
           description: `
             Lors de la reception d'un débuff,
@@ -86,7 +86,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés dans les Cryptes de Faction de 42%.
     `,

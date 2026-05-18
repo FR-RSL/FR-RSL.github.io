@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Attiser l'angoisse",
             description: `
               Attaque 2 fois un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Agonie accablante",
             description: `
               Attaque tous les ennemis.
@@ -35,7 +35,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Voleur de joie",
             description: `
               Attaque un ennemi. Vole 100% du Compteur de Tour de la cible.<br><br>
@@ -50,7 +50,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -59,7 +59,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Dramatis Miserae [P]",
             description: `
               Des que ce Champion perd 30% de PV ou plus lors d'un seul tour, inflige des degats equivalents
@@ -85,7 +85,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Artiste instable",
             description: `
               Attaque 2 fois un ennemi.<br><br>
@@ -101,7 +101,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Clou du spectacle explosif",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -120,7 +120,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Rappel mortel",
             description: `
               Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
@@ -134,7 +134,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -143,7 +143,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Rira bien [P]",
             description: `
               Possède 100% de chances de renvoyer sur un assaillant tous les débuffs
@@ -169,7 +169,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/acc.png",
+      img: "../../../../../../assets/images/auras/acc.webp",
       description: `
         Augmente la statistique PRE des Alliés lors de toutes les Batailles de 80.
       `,

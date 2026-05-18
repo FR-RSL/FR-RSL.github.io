@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       	spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Immense Brasier",
 			description: `
 				Attaque 3 fois un ennemi.
@@ -18,7 +18,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Eruption de Flammes",
 			description: `
 				Attaque tous les ennemis.
@@ -39,7 +39,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Rite Tempete de Feu",
 			description: `
 				Place un débuff <span class='gbt'>Brulure de PV</span> sur ce Champion pendant 3 tours, puis attaque tous les ennemis.
@@ -57,7 +57,7 @@ const championData = {
 			cooldown: 5,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Metaphysique [P]",
         	description: `
 				Augmente la VIT de ce Champion de 3 et les degats infliges de 3% pour chaque allié et ennemi se trouvant sous débuff <span class='gbt'>Brulure de PV</span>.
@@ -80,7 +80,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.
     `,

@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Vrille de racine",
           description: `
             Attaque un ennemi.<br><br>
@@ -22,7 +22,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Tremble-vigne",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -40,7 +40,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Sanctuaire du Coeur-Tronc",
           description: `
             Place un buff <span class='gbt'>Invincible</span> sur tous
@@ -57,7 +57,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Enchevetrement [P]",
           description: `
             Lorsque le Champion est attaque alors qu'il beneficie d'un buff
@@ -87,7 +87,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%.
     `,

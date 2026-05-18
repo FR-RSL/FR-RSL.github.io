@@ -4,7 +4,7 @@ const championForms = {
         type: "Defense",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Hache a photons",
             description: `
               Attaque 2 fois un ennemi.
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Tonnerre retentissant",
             description: `
               Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Regard argent",
             description: `
               Place un débuff <span class='gbt'>Provocation</span> sur l'ennemi cible pendant 2 tours.
@@ -51,7 +51,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -60,7 +60,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Cuirasse du soleil [P]",
             description: `
               Augmente la DEF de ce Champion de 5% chaque fois qu'il contre-attaque
@@ -84,7 +84,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Secousse d'eclair",
             description: `
               Attaque tous les ennemis.
@@ -97,7 +97,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Eruption solaire",
             description: `
               Attaque tous les ennemis.
@@ -115,7 +115,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Rayon regenerant",
             description: `
               Restaure totalement tous les PV MAX detruits des alliés,
@@ -129,7 +129,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -138,7 +138,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Coeur de cieux [P]",
             description: `
               Augmente les PV de ce Champion de 6 points par tranche de 1 point de DEF
@@ -164,7 +164,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/defence.png",
+      img: "../../../../../../assets/images/auras/defence.webp",
       description: `
         Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
       `,

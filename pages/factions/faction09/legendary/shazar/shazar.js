@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Damnation",
 			description: `
 				Attaque 3 fois 1 ennemi.
@@ -17,7 +17,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Fureur Eternelle",
 			description: `
 				Place un buff d'<span class='gbt'>Augmentation d'ATQ</span> de 50% sur ce Champion pendant 2 tours.
@@ -30,7 +30,7 @@ const championData = {
 			cooldown: 4,
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Destin Cruel",
 			description: `
 				Attaque tous les ennemis. Possède 75% de chances de placer deux débuffs de <span class='gbt'>Bombes</span>
@@ -60,7 +60,7 @@ const championData = {
   };
 
   const aura = {
-      img: "../../../../../../assets/images/auras/speed.png",
+      img: "../../../../../../assets/images/auras/speed.webp",
       description: `
         Augmente la statistique VIT des Alliés dans les batailles d'Arene de 32%.
     `,

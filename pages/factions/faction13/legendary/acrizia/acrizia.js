@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Assaut infatigable",
           description: `
             Attaque un ennemi. Possède 45% de chances de placer un débuff
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Dominer le terrain",
           description: `
             Attaque 2 fois tous les ennemis.
@@ -37,7 +37,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Demanteler",
           description: `
             Attaque 2 fois un ennemi.
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Grandeur [P]",
           description: `
             Reduit les degats subis de 50% lors des attaques de zone.<br><br>
@@ -79,7 +79,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/crit.png",
+    img: "../../../../../../assets/images/auras/crit.webp",
     description: `
       Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 19%.
     `,

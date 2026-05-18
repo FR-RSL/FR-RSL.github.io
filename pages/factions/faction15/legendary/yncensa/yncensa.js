@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Catalyseur de bataille",
           description: `
             Attaque tous les ennemis.
@@ -22,7 +22,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Fumees du graal",
           description: `
             Place un buff <span class='gbt'>Nuage de poison</span>, un buff
@@ -37,7 +37,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Tumeur maligne",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de placer un
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Yncensee [P]",
           description: `
             Augmente la PRE de cette Championne de 10 points 
@@ -78,7 +78,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 70.
     `,

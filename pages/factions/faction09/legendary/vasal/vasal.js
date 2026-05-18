@@ -2,7 +2,7 @@ const championData = {
    	type: "PV",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Sceau Abyssal",
 			description: `
 				Attaque un ennemi. Place un débuff <span class='gbt'>Brulure de PV</span>
@@ -19,7 +19,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Tenebres Infernales",
 			description: `
 				Attaque tous les ennemis. Possède 75% de chances de placer un débuff <span class='gbt'>Peur Absolue</span>
@@ -37,7 +37,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Possession Demoniaque",
 			description: `
 				Equilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront amenes au niveau de l'allié ayant le plus de PV.
@@ -50,7 +50,7 @@ const championData = {
 			cooldown: 6,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Legion de Ruine [P]",
         	description: `
 				Recoit 20% de degats en moins de la part des Champions des Factions des Grands Seigneurs, des Hauts Elfes et de l'ordre Sacre.<br><br>
@@ -74,7 +74,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%.
     `,

@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Foudre boreale",
           description: `
             Attaque 2 fois un ennemi.
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Voile d'eau de fonte",
           description: `
             Place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
@@ -37,7 +37,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Ruisseau de vie",
           description: `
             Ranime tous les alliés morts avec 40% de PV et 25% de Compteur de Tour.<br><br>
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Force du degel [P]",
           description: `
             Les alliés sous buff <span class='gbt'>Voile parfait</span> place
@@ -80,7 +80,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.
     `,

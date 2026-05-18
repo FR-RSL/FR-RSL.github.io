@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Eclair Fracassant",
           description: `
             Attaque un ennemi. Possède 45% de chances placer un débuff <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br><br>
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Deluge Brulant",
           description: `
             Attaque 3 fois au hasard. Chaque frappe Possède 75% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> pendant 3 tours.
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Entaille Cyan",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de placer un débuff <span class='gbt'>Gel</span> pendant 1 tour.<br><br>
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Escalade [P]",
           description: `
             Augmente l'ATQ de Ninja de 10% (jusqu'a 100%) et ses DEG C. de 5% (jusqu'a 25%) chaque fois qu'un seul ennemi se fait frapper par les trois

@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Caresse Pourrissante",
           description: `
             Attaque 2 fois un ennemi.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Fange de Misere",
           description: `
             Attaque 3 fois tous les ennemis. Chaque frappe posséde 75% de chances de placer un débuff 
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Dilatation du Temps",
           description: `
             Attaque tous les
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Damnee [P]",
           description: `
             Au début de chaque tour,
@@ -66,7 +66,7 @@ const championData = {
           isPassive: true,
         },
         {
-          img: "assets/passif2.png",
+          img: "assets/passif2.webp",
           name: "Malheur Canalise [P]",
           description: `
             Remplit le Compteur de Tour

@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
   spells: [
     {
-      img: "assets/sort1.png",
+      img: "assets/sort1.webp",
       name: "Lames dissimulées",
       description: `
         Attaque 2 fois un ennemi.<br><br>
@@ -19,7 +19,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort2.png",
+      img: "assets/sort2.webp",
       name: "Assassin nautique",
       description: `
         Attaque un ennemi.<br><br>
@@ -39,7 +39,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/sort3.png",
+      img: "assets/sort3.webp",
       name: "Assaut du Ressac",
       description: `
         Attaque tous les ennemis.
@@ -64,7 +64,7 @@ const championData = {
       ],
     },
     {
-      img: "assets/passif1.png",
+      img: "assets/passif1.webp",
       name: "Seigneur pirate [P]",
       description: `
         <span class='gbt'>Effet Passif</span><br><br>
@@ -99,7 +99,7 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras//speed.png",
+  img: "../../../../../assets/images/auras//speed.webp",
   description: `Augmente la statistique VIT des Alliés dans les batailles d'Arène de 28%.`,
 };
 

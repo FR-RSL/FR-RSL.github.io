@@ -2,14 +2,14 @@ const championData = {
   type: "Defense",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Sous la Ceinture",
           description: `Attaque un ennemi. Possede 30% de chances de placer un debuff ${DEBUFFS.ATK} de 50% pendant 1 tour.`,
           damage: "2.7*ATQ + 2*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Langue Infecte",
           description: `Attaque 4 fois de facon aleatoire. Chaque frappe possede 75% de chances de placer un debuff ${DEBUFFS.PROVOKE} pendant 1 tour. Place un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
           damage: "1.4*DEF",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "En Garde !",
           description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} et un buff ${BUFFS.DEF} de 60% sur tous les allies pendant 2 tours.`,
           cooldown: 6,
@@ -37,6 +37,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Alliés dans les Donjons de 33%.`
 };

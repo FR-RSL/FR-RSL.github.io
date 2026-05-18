@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Riviere en crue",
           description: `Attaque 2 fois un ennemi. Avant d'attaquer, a 50% de chances de retirer tous les buffs de la cible. Sinon, a 100% de chances de voler tous les buffs si cette competence est utilisee en dehors du tour de cette Championne.${RETURN}
 Les cibles dont l'ATQ est inferieure ou egale a l'ATQ de cette Championne ne peuvent pas resister a cet effet.${RETURN}${RETURN}
@@ -11,7 +11,7 @@ Ignorera 5% de la DEF de la cible pour chaque buff dont beneficie cette Champion
           levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Force erosive",
           description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.SHATTER} de 15% sur cette Championne pendant 2 tours. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.STONE_SKIN}.${RETURN}${RETURN}
 Accorde un Tour supplementaire si cette attaque tue un ennemi. Si la cible survit, remplit au lieu de cela le Compteur de Tour de tous les allies de 30%.`,
@@ -20,7 +20,7 @@ Accorde un Tour supplementaire si cette attaque tue un ennemi. Si la cible survi
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Crue d'eau de fonte",
           description: `Attaque tous les ennemis. Avant d'attaquer, a 75% de chances de placer un debuff ${DEBUFFS.WEAKEN} de 25% sur tous les ennemis pendant 2 tours. Les cibles dont l'ATQ est inferieure ou egale a l'ATQ de cette Championne ne peuvent pas resister a ce debuff. 
 Ignorera 25% de la DEF de chaque cible.${RETURN}${RETURN}
@@ -31,7 +31,7 @@ Place egalement un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.COUNTER} sur cett
           levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Eleve de Glaicad [P]",
           description: `A 50% de chances d'infliger 100% de degats supplementaires contre les ennemis dont l'ATQ est inferieure ou egale a l'ATQ de cette Championne.${RETURN}${RETURN}
 Cette Championne recoit 30% de degats en moins de la part des ennemis dont l'ATQ est inferieure ou egale a son ATQ.`,
@@ -51,6 +51,6 @@ Cette Championne recoit 30% de degats en moins de la part des ennemis dont l'ATQ
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/attack.png",
+  img: "../../../../../assets/images/auras/attack.webp",
   description: `Augmente la statistique ATQ des Allies dans les Batailles d'Arene de 30%.`
 };

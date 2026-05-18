@@ -2,14 +2,14 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Visions de Mort",
           description: `Attaque 3 fois de facon aleatoire. Chaque frappe a 80% de chances de reduire le Compteur de Tour de 10%.`,
           damage: "1.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Sombre Linceul",
           description: `Soigne tous les allies a hauteur de 20% des PV MAX de cette Championne.${RETURN}${RETURN}
 Place egalement un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les allies pendant 2 tours, puis place un buff ${BUFFS.SHIELD} egal a 30% des PV MAX de cette Championne sur tous les allies pendant 2 tours.`,
@@ -17,7 +17,7 @@ Place egalement un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les allies pendant 2 tou
           levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Don de Soi",
           description: `Ranime tous les allies morts avec 50% de PV et 30% de Compteur de Tour.${RETURN}${RETURN}
 Place egalement un buff ${BUFFS.BLOCK_DAMAGE} sur tous les allies sauf cette Championne pendant 1 tour.`,
@@ -38,6 +38,6 @@ Place egalement un buff ${BUFFS.BLOCK_DAMAGE} sur tous les allies sauf cette Cha
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/defence.png",
+  img: "../../../../../assets/images/auras/defence.webp",
   description: `Augmente la statistique DEF des Allies lors de toutes les Batailles de 34%.`
 };

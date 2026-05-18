@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Coup triomphal",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 75% de chances de placer un debuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Il est impossible de resister a ce debuff et de le bloquer si la cible se trouve sous debuff ${DEBUFFS.BURN}.`,
@@ -10,7 +10,7 @@ A 75% de chances de placer un debuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Il e
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +15%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Fleau de Gorgoa",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Ignorera 50% de la DEF de la cible si la cible est afflige d'un debuff ${DEBUFFS.BURN}.
@@ -21,7 +21,7 @@ Si les degats infliges par cette competente sous inferieurs a 50% des PV MAX de 
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Butin du vainqueur",
           description: `${ACTIVE}
 Place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.SHIELD_MAGMA} sur tous les allies pendant 2 tours.
@@ -32,7 +32,7 @@ Reduit de 20% les degats que recoivent tous les allies lorsque ce Champion ne se
           levelInfo: ["Bouclier +10%", "Bouclier +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Maitre des Jeux [P]",
           description: `Ce Champion est immunise contre les debuffs ${DEBUFFS.STUN}, ${DEBUFFS.BURN} et ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 Des qu'un ennemi attaque ce Champion, a 100% de chances de placer un debuff ${DEBUFFS.BURN} sur cet ennemi pendant 2 tours.
@@ -55,6 +55,6 @@ Des qu'un ennemi attaque ce Champion, a egalement 50% de chances de placer un de
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/res.png",
+  img: "../../../../../assets/images/auras/res.webp",
   description: `Augmente la statistique RES des Allies lors de toutes les Batailles de 60.`
 };

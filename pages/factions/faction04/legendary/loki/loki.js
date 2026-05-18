@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Flammes de malice",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Stratageme de trompeur",
           description: `
             Selectionne une cible.<br><br>
@@ -43,7 +43,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Eclair de bandit",
           description: `
             Possède 75% de chances de voler tous les buffs d'une cible ennemi
@@ -61,7 +61,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Pas brumeux [P]",
           description: `
             <span class='gbt'>Effet Passif</span><br><br>
@@ -96,7 +96,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/acc.png",
+    img: "../../../../../../assets/images/auras/acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.
     `,

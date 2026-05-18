@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Hache de Defense-noire",
           description: `
             Attaque un ennemi.
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Ordres de l'Amiral",
           description: `
             Retire tous les débuffs sur tous les alliés.<br><br>
@@ -35,7 +35,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Defense de Fer celeste",
           description: `
             Retires tous les buffs d'une cible ennemie. puis lui inflige un débuff
@@ -56,7 +56,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Rassembleur des Nains [P]",
           description: `
             Les alliés contre-attaqueront des qu'ils perdent 10% ou plus de leurs PV MAX lors d'une seule frappe.
@@ -104,7 +104,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/sup-acc.png",
+    img: "../../../../../../assets/images/auras/sup-acc.webp",
     description: `
       Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.<br><br>
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%<br>

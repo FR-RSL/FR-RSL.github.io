@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Invocation Abyssale",
 			description: `
 				Attaque deux fois un ennemi, puis place sur ce Champion et sur l'allié ayant le moins de PV,
@@ -15,7 +15,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Linceul d'Ames",
 			description: `
 				Place un buff <span class='gbt'>Blocage de débuffs</span> et un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% sur tous les alliés pendant 2 tours.<br><br>
@@ -27,7 +27,7 @@ const championData = {
 			cooldown: 5,
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Renaissance Spectrale",
 			description: `
 				Ranime tous alliés tombes avec 70% de leurs PV.<br><br>
@@ -41,7 +41,7 @@ const championData = {
 			cooldown: 6,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Chemins Etheres [P]",
         	description: `
 				Reduit de 25% les degats recus par tous les alliés lors des attaques de zone (15% contre les Boss).
@@ -62,7 +62,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.
     `,

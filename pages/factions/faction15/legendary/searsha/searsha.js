@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Embraser",
           description: `
             Attaque 3 fois un ennemi. 
@@ -23,7 +23,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Incendie de foret",
           description: `
             Possède 80% de chances de placer un débuff 
@@ -38,7 +38,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Panique ardente",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -56,7 +56,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Attiser [P]",
           description: `
             Des que cette Championne est attaquee par un ennemi

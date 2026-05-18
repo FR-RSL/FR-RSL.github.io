@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Dard de Gungnir",
           description: `
             Attaque un ennemi.
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Tempete de familiers",
           description: `
             Retire tous les buffs dont disposent les ennemis.<br><br>
@@ -32,7 +32,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Jugement asgardien",
           description: `
             Attaque un ennemi.
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Sagesse d'Odin [P]",
           description: `
             Tous les 9 tours, place un buff <span class='gbt'>Blocage des Degats</span>
@@ -77,7 +77,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés du Neant dans les batailles d'Arene de 40%.
     `,

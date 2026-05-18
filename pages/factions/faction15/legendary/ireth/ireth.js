@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Eclair de Fee",
           description: `
             Attaque un ennemi.<br><br>
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Soin du Bois de Brume",
           description: `
             Retire tous les débuffs sur un allié cible, puis soigne cet allié de 50%
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Force rythmique",
           description: `
             Place un buff <span class='gbt'>Renforcer</span> de 25%
@@ -50,7 +50,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Egide de la Foret [P]",
           description: `
             Place pendant 2 tours un buff <span class='gbt'>Bouclier</span>
@@ -78,7 +78,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%.
     `,

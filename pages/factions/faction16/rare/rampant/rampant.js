@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lances de sombre-lumiere",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe a 35% de chances de reduire le Compteur de Tour de la cible de 5%. Si la cible se trouve sous un debuff ${DEBUFFS.SPD}, chaque frappe a au lieu de cela 35% de chances de reduire le Compteur de Tour de 10%.`,
@@ -10,7 +10,7 @@ Chaque frappe a 35% de chances de reduire le Compteur de Tour de la cible de 5%.
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Reduire en cendres",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 A 50% de chances de placer un debuff ${DEBUFFS.SPD} de 15% pendant 2 tours.${RETURN}${RETURN}
@@ -20,7 +20,7 @@ Soigne tous les allies a hauteur de 15% de leurs PV MAX.`,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Rite de flamme",
           description: `Place un buff ${BUFFS.SPD} de 30% sur tous les allies pendant 2 tours.${RETURN}${RETURN}
 Remplit le Compteur de Tour de tous les allies de 15%.`,
@@ -41,6 +41,6 @@ Remplit le Compteur de Tour de tous les allies de 15%.`,
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Allies dans les Donjons de 16%.`
 };

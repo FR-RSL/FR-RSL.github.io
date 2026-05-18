@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Racine-serpent",
           description: `
             Attaque un ennemi.
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Spores de destinee",
           description: `
             Fait equipe avec tous les alliés pour attaquer un seul ennemi.
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Rythme exaltant",
           description: `
             Remplit le Compteur de Tour de tous les alliés de 20%.<br><br>
@@ -48,7 +48,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Magie du Grand Chene [P]",
           description: `
             Au debut du tour de ce Champion, place un buff sur chaque allié
@@ -75,7 +75,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans les Donjons de 25%.
     `,

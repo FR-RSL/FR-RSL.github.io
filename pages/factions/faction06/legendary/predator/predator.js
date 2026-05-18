@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lames de poignet",
           description: `Attaque un ennemi. Soigne ce Champion a hauteur de 30% des degats infliges.${RETURN}${RETURN}
 ${PASSIVE}
@@ -12,7 +12,7 @@ Ne peut pas produire qu'une fois par tour`,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Disque intelligent",
           description: `Attaque 2 fois tous les ennemis. Apres avoir frappe l'ennemi selectionne initialement, tous les autres ennenis seront frappes dans un ordre aleatoire.${RETURN}${RETURN}
 Pour la premiere frappe, les degats recus par l'ennemi selectionne initialement augmenteront de 75%.
@@ -25,7 +25,7 @@ Cette attaque ignore 15% de la DEF de chaque cible si ce Champion se trouve sous
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Lancer de combi-baton",
           description: `Attaque un ennemi. Avant d'attaquer, place un debuff ${DEBUFFS.HUNTER} pendant 1 tour. Il est impossible de resister a ce debuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
@@ -37,7 +37,7 @@ Si cette attaque ne tue pas un ennemi, place un buff ${BUFFS.PERFECT_VEIL} sur c
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Voile de Yautja [P]",
           description: `Au debut de chaque Round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
 
@@ -60,6 +60,6 @@ Des que ce Champion tue un ennemi, accorde a ce Champion 20% de chances d'Esquiv
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Allies dans les batailles d'Arene de 35%.`
 };

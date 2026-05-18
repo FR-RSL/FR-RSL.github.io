@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Eclair d'affliction",
 			description: `
 				Attaque un ennemi.<br><br>
@@ -16,7 +16,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Energie maligne",
 			description: `
 				Soigne tous les alliés a hauteur de 25% des PV MAX de cette Championne.<br><br>
@@ -32,7 +32,7 @@ const championData = {
 			cooldown: 5,
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Graine de corruption",
 			description: `
 				Ranime un seul allié avec 100% de PV et 50% de Compteur de Tour.
@@ -45,7 +45,7 @@ const championData = {
 			cooldown: 6,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Servante sacrificielle [P]",
         	description: `
 				Au debut du tour de cette Championne, transfere 1 débuff de chaque allié sur cette Championne.
@@ -79,7 +79,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%.
     `,

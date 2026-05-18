@@ -2,14 +2,14 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Deferlement",
           description: `Attaque tous les ennemis.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Nuage Toxique",
           description: `Attaque tous les ennemis. Possede 80% de chances de placer un debuff ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
           damage: "3.8*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Jambes de Plomb",
           description: `Place un debuff ${DEBUFFS.SPD} de 30% sur tous les ennemis pendant 2 tours. Reduit egalement de 40% le Compteur de Tour de tous les ennemis.`,
           cooldown: 6,
@@ -37,6 +37,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Alliés dans les Cryptes de Faction de 22%.`
 };

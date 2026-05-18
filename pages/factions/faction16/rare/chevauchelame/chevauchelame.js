@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Double balafre",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe critique Ignorera 5% de la DEF de la cible.`,
@@ -10,7 +10,7 @@ Chaque frappe critique Ignorera 5% de la DEF de la cible.`,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Plongeon d'epee",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 50% de chances de placer un debuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
@@ -20,7 +20,7 @@ Repetera l'attaque contre tous les autres ennemis si ce Champion se trouve sous 
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Barrage empetrant",
           description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 25% et un buff ${BUFFS.CDAM} de 15% sur tous les allies pendant 2 tours.${RETURN}${RETURN}
 Chaque coup critique remplit le Compteur de Tour de ce Champion de 5%.`,
@@ -42,6 +42,6 @@ Chaque coup critique remplit le Compteur de Tour de ce Champion de 5%.`,
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/attack.png",
+  img: "../../../../../assets/images/auras/attack.webp",
   description: `Augmente la statistique ATQ des Allies dans les Cryptes de Faction de 21%.`
 };

@@ -6,7 +6,7 @@
     <title>Créer un Champion — FR RSL Admin</title>
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' https://raw.githubusercontent.com data: blob:; font-src 'self'">
-    <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logos/logo.webp">
     <link rel="stylesheet" href="../assets/css/main.css">
     <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
     <style>
@@ -615,7 +615,7 @@
 
 <header>
     <div class="logo-section">
-        <img src="../assets/images/logos/logo.png" alt="FR RSL">
+        <img src="../assets/images/logos/logo.webp" alt="FR RSL">
         <h1>FR RSL</h1>
     </div>
 </header>
@@ -703,19 +703,19 @@
         <div class="section-title">Affinité</div>
         <div class="affinity-row" style="margin-bottom:1.2rem">
             <div class="aff-tile on" data-aff="force"  onclick="pickAff(this)">
-                <img src="../assets/images/affinity/force.png" alt="Force">
+                <img src="../assets/images/affinity/force.webp" alt="Force">
                 <span>Force</span>
             </div>
             <div class="aff-tile" data-aff="magic"  onclick="pickAff(this)">
-                <img src="../assets/images/affinity/magic.png" alt="Magie">
+                <img src="../assets/images/affinity/magic.webp" alt="Magie">
                 <span>Magie</span>
             </div>
             <div class="aff-tile" data-aff="spirit" onclick="pickAff(this)">
-                <img src="../assets/images/affinity/spirit.png" alt="Esprit">
+                <img src="../assets/images/affinity/spirit.webp" alt="Esprit">
                 <span>Esprit</span>
             </div>
             <div class="aff-tile" data-aff="void"   onclick="pickAff(this)">
-                <img src="../assets/images/affinity/void.png" alt="Vide">
+                <img src="../assets/images/affinity/void.webp" alt="Vide">
                 <span>Vide</span>
             </div>
         </div>
@@ -756,7 +756,7 @@
 
         <div class="section-title" style="margin-top:1.2rem">Portrait du Champion</div>
         <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem">
-            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">champion.png</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">assets/</code>.
+            L'image sera enregistrée sous <code id="portraitName" style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">champion.webp</code> dans le dossier <code style="background:rgba(255,255,255,0.07);padding:0.1rem 0.4rem;border-radius: 4px">assets/</code>.
         </p>
         <div class="portrait-drop"
              onclick="document.getElementById('portraitInput').click()"
@@ -863,22 +863,22 @@ var GH_BRANCH = 'main';
 
 // ── Faction metadata ───────────────────────────────────────
 var FMETA = {
-  faction01: { name: 'Seigneurs',              img: 'bannerlords.png' },
-  faction02: { name: 'Haut Elfes',             img: 'high-elves.png' },
-  faction03: { name: 'Ordre Sacre',            img: 'sacred-order.png' },
-  faction04: { name: 'Barbares',               img: 'barbarians.png' },
-  faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.png' },
-  faction06: { name: 'Homme Lezards',          img: 'lizardmen.png' },
-  faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.png' },
-  faction08: { name: 'Orcs',                   img: 'orcs.png' },
-  faction09: { name: 'Rejetons Demoniaques',   img: 'demonspawn.png' },
-  faction10: { name: 'Morts-vivants',          img: 'undead-hordes.png' },
-  faction11: { name: 'Elfes Noirs',            img: 'dark-elves.png' },
-  faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.png' },
-  faction13: { name: 'Nains',                  img: 'dwarves.png' },
-  faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.png' },
-  faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.png' },
-  faction16: { name: 'Argonites',              img: 'argonites.png' }
+  faction01: { name: 'Seigneurs',              img: 'bannerlords.webp' },
+  faction02: { name: 'Haut Elfes',             img: 'high-elves.webp' },
+  faction03: { name: 'Ordre Sacre',            img: 'sacred-order.webp' },
+  faction04: { name: 'Barbares',               img: 'barbarians.webp' },
+  faction05: { name: 'Tribus Ogryn',           img: 'ogryn-tribes.webp' },
+  faction06: { name: 'Homme Lezards',          img: 'lizardmen.webp' },
+  faction07: { name: 'Marcheurs de Peau',      img: 'skinwalkers.webp' },
+  faction08: { name: 'Orcs',                   img: 'orcs.webp' },
+  faction09: { name: 'Rejetons Demoniaques',   img: 'demonspawn.webp' },
+  faction10: { name: 'Morts-vivants',          img: 'undead-hordes.webp' },
+  faction11: { name: 'Elfes Noirs',            img: 'dark-elves.webp' },
+  faction12: { name: 'Revenants Chevaliers',   img: 'knight-revenant.webp' },
+  faction13: { name: 'Nains',                  img: 'dwarves.webp' },
+  faction14: { name: "Clan de l'Ombre",        img: 'shadowkin.webp' },
+  faction15: { name: 'Gardes Sylvains',        img: 'sylvan-watchers.webp' },
+  faction16: { name: 'Argonites',              img: 'argonites.webp' }
 };
 
 // ── Auras ──────────────────────────────────────────────────
@@ -1019,14 +1019,14 @@ function onFullName(v) {
   if (!slugManuallyEdited) {
     var s = slugify(v);
     document.getElementById('slug').value = s;
-    document.getElementById('portraitName').textContent = (s || 'champion') + '.png';
+    document.getElementById('portraitName').textContent = (s || 'champion') + '.webp';
   }
 }
 function onSlug(v) {
   slugManuallyEdited = true;
   var s = v.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
   if (document.getElementById('slug').value !== s) document.getElementById('slug').value = s;
-  document.getElementById('portraitName').textContent = (s || 'champion') + '.png';
+  document.getElementById('portraitName').textContent = (s || 'champion') + '.webp';
 }
 
 // ── Form tabs (mythical) ──────────────────────────────────
@@ -1197,7 +1197,7 @@ function buildAuraGrid() {
     '<span>Aucune</span></div>';
   g.innerHTML = noneHtml + AURAS.map(function(a) {
     return '<div class="aura-tile' + (a.key === selAura ? ' on' : '') + '" data-akey="' + a.key + '" onclick="pickAura(this)">' +
-           '<img src="../assets/images/auras/' + a.key + '.png" alt="' + a.lbl + '">' +
+           '<img src="../assets/images/auras/' + a.key + '.webp" alt="' + a.lbl + '">' +
            '<span>' + a.lbl + '</span></div>';
   }).join('');
 }
@@ -1417,14 +1417,12 @@ function triggerSpImg(form, idx) {
 
 function onSpImg(form, idx, input) {
   var file = input.files[0];
-  if (!file)return;
+  if (!file) return;
   var imgs = (form === 1) ? imgs1 : imgs2;
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    imgs[idx] = { base64: e.target.result.split(',')[1], dataUrl: e.target.result };
+  convertToWebP(file, function(dataUrl) {
+    imgs[idx] = { base64: dataUrl.split(',')[1], dataUrl: dataUrl };
     renderSpellList(form);
-  };
-  reader.readAsDataURL(file);
+  });
 }
 
 function setSp(form, idx, field, val) {
@@ -1485,17 +1483,30 @@ function updateFact(form, idx, fi, val) {
   if (list[idx]) { if (!list[idx].factions)list[idx].factions=['','',''];list[idx].factions[fi]=val;}
 }
 
+// ── Conversion WebP via Canvas ────────────────────────────
+function convertToWebP(file, callback) {
+  var url = URL.createObjectURL(file);
+  var tmp = new Image();
+  tmp.onload = function() {
+    var canvas = document.createElement('canvas');
+    canvas.width  = tmp.naturalWidth;
+    canvas.height = tmp.naturalHeight;
+    canvas.getContext('2d').drawImage(tmp, 0, 0);
+    URL.revokeObjectURL(url);
+    callback(canvas.toDataURL('image/webp', 0.9));
+  };
+  tmp.src = url;
+}
+
 // ── Portrait ──────────────────────────────────────────────
 function handlePortraitFile(file) {
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    portraitB64 = e.target.result.split(',')[1];
+  convertToWebP(file, function(dataUrl) {
+    portraitB64 = dataUrl.split(',')[1];
     document.getElementById('portraitPh').style.display = 'none';
     var img = document.getElementById('portraitPreview');
-    img.src = e.target.result;
+    img.src = dataUrl;
     img.style.display = 'block';
-  };
-  reader.readAsDataURL(file);
+  });
 }
 function onPortrait(input) {
   var file = input.files[0];
@@ -1529,12 +1540,10 @@ function spImgDrop(e, form, idx) {
   var file = e.dataTransfer.files[0];
   if (!file || !file.type.startsWith('image/')) return;
   var imgs = (form === 1) ? imgs1 : imgs2;
-  var reader = new FileReader();
-  reader.onload = function(ev) {
-    imgs[idx] = { base64: ev.target.result.split(',')[1], dataUrl: ev.target.result };
+  convertToWebP(file, function(dataUrl) {
+    imgs[idx] = { base64: dataUrl.split(',')[1], dataUrl: dataUrl };
     renderSpellList(form);
-  };
-  reader.readAsDataURL(file);
+  });
 }
 
 // ── LocalStorage draft ───────────────────────────────────
@@ -1743,14 +1752,14 @@ function buildSummary() {
   var files = [
     { path: base + (slug||'?') + '.html',    cls: 'f-ok',  note: '' },
     { path: base + (slug||'?') + '.js',      cls: 'f-ok',  note: '' },
-    { path: base + 'assets/' + (slug||'?') + '.png', cls: portraitB64 ? 'f-ok' : 'f-miss', note: portraitB64 ? '' : 'portrait manquant' },
+    { path: base + 'assets/' + (slug||'?') + '.webp', cls: portraitB64 ? 'f-ok' : 'f-miss', note: portraitB64 ? '' : 'portrait manquant' },
   ];
   spells1.forEach(function(_, i) {
-    files.push({ path: base + 'assets/sort' + (i+1) + '.png', cls: imgs1[i] ? 'f-ok' : 'f-miss', note: imgs1[i] ? '' : 'image sort ' + (i+1) + ' manquante' });
+    files.push({ path: base + 'assets/sort' + (i+1) + '.webp', cls: imgs1[i] ? 'f-ok' : 'f-miss', note: imgs1[i] ? '' : 'image sort ' + (i+1) + ' manquante' });
   });
   if (isMyt) {
     spells2.forEach(function(_, i) {
-      files.push({ path: base + 'assets/sort_f2_' + (i+1) + '.png', cls: imgs2[i] ? 'f-ok' : 'f-miss', note: imgs2[i] ? '' : 'image sort F2-' + (i+1) + ' manquante' });
+      files.push({ path: base + 'assets/sort_f2_' + (i+1) + '.webp', cls: imgs2[i] ? 'f-ok' : 'f-miss', note: imgs2[i] ? '' : 'image sort F2-' + (i+1) + ' manquante' });
     });
   }
   files.push({ path: 'pages/factions/' + faction + '/hub.html', cls: 'f-mod', note: 'mis à jour' });
@@ -1777,7 +1786,7 @@ function buildSummary() {
 // ── JS code generators ────────────────────────────────────
 function spellsToObj(list, imgs_arr, suffix) {
   return list.map(function(sp, i) {
-    var imgPath = 'assets/' + (suffix ? 'sort_f2_' : 'sort') + (i+1) + '.png';
+    var imgPath = 'assets/' + (suffix ? 'sort_f2_' : 'sort') + (i+1) + '.webp';
     var o = '        {\n';
     o += '          img: "' + imgPath + '",\n';
     o += '          name: "' + escJs(sp.name || ('Competence ' + (i+1))) + '",\n';
@@ -1801,7 +1810,7 @@ function buildLegJs(slug, type, stats, aura_key, aura_desc) {
   }).join(',\n');
   var auraBlock = '';
   if (aura_key) {
-    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.webp';
     auraBlock = '\nconst aura = {\n' +
       '  img: "' + auraPath + '",\n' +
       '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
@@ -1822,7 +1831,7 @@ function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
   }
   var auraBlock = '';
   if (aura_key) {
-    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.png';
+    var auraPath = '../../../../../assets/images/auras/' + aura_key + '.webp';
     auraBlock = '\nconst aura = {\n' +
       '  img: "' + auraPath + '",\n' +
       '  description: `' + aura_desc.replace(/`/g,'\\`') + '`\n};\n';
@@ -1841,7 +1850,7 @@ function buildMytJs(slug, type1, type2, stats1, stats2, aura_key, aura_desc) {
 }
 
 function buildHtmlContent(slug, fullName, rarity, faction) {
-  var fmeta    = FMETA[faction] || { img: 'bannerlords.png' };
+  var fmeta    = FMETA[faction] || { img: 'bannerlords.webp' };
   var css      = (rarity === 'mythical') ? 'mythical' : 'legendary';
   var runtime  = (rarity === 'mythical') ? 'champion-runtime-mythical' : 'champion-runtime-legendary';
   var rarLabels = { legendary:'Legendaire', mythical:'Mythique', epic:'Epique', rare:'Rare', uncommon:'Peu commun', common:'Commun' };
@@ -1860,7 +1869,7 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
     '  <title>' + esc(fullName) + '</title>\n' +
-    '  <link rel="shortcut icon" href="../assets/images/logos/logo.png">\n' +
+    '  <link rel="shortcut icon" href="../assets/images/logos/logo.webp">\n' +
     '  <link rel="stylesheet" href="../../../../../assets/css/main.css">\n' +
     '  <link rel="stylesheet" href="../../../../../assets/css/' + css + '.css">\n' +
     '  <script src="../../../../../assets/js/faction-theme-registry.js"><\/script>\n' +
@@ -1868,7 +1877,7 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '  <header>\n' +
     '    <div class="logo-section">\n' +
     '      <a href="../../../../../index.html" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;color:inherit;">\n' +
-    '        <img src="../../../../../assets/images/logos/logo.png" alt="Logo FR RSL">\n' +
+    '        <img src="../../../../../assets/images/logos/logo.webp" alt="Logo FR RSL">\n' +
     '        <h1>FR RSL</h1>\n' +
     '      </a>\n' +
     '    </div>\n' +
@@ -1888,11 +1897,11 @@ function buildHtmlContent(slug, fullName, rarity, faction) {
     '          <div class="type-badge" id="champion-type">' + esc(type) + '</div>\n' +
     '        </div>\n' +
     '        <div class="info-group">\n' +
-    '          <img src="../../../../../assets/images/affinity/' + selAff + '.png" alt="' + selAff + '" class="affinity-img">\n' +
+    '          <img src="../../../../../assets/images/affinity/' + selAff + '.webp" alt="' + selAff + '" class="affinity-img">\n' +
     '        </div>\n' +
     '      </div>\n' +
     '      <div class="champion-image-container">\n' +
-    '        <img src="assets/' + esc(slug) + '.png" alt="' + esc(fullName) + '" class="champion-img">\n' +
+    '        <img src="assets/' + esc(slug) + '.webp" alt="' + esc(fullName) + '" class="champion-img">\n' +
     '      </div>\n' +
     '      <div class="stats">\n' +
     '        <h3>Statistiques</h3>\n' +
@@ -2000,20 +2009,20 @@ async function doPublish() {
 
     // Portrait
     if (portraitB64) {
-      files.push({ path: base + 'assets/' + slug + '.png', content: portraitB64 });
+      files.push({ path: base + 'assets/' + slug + '.webp', content: portraitB64 });
     } else {
       plog('wrn', 'Portrait non chargé — à ajouter manuellement');
     }
 
     // Images de sorts — Forme 1
     for (var i = 0; i < spells1.length; i++) {
-      if (imgs1[i]) files.push({ path: base + 'assets/sort' + (i+1) + '.png', content: imgs1[i].base64 });
+      if (imgs1[i]) files.push({ path: base + 'assets/sort' + (i+1) + '.webp', content: imgs1[i].base64 });
     }
 
     // Images de sorts — Forme 2 (mythique)
     if (rarity === 'mythical') {
       for (var j = 0; j < spells2.length; j++) {
-        if (imgs2[j]) files.push({ path: base + 'assets/sort_f2_' + (j+1) + '.png', content: imgs2[j].base64 });
+        if (imgs2[j]) files.push({ path: base + 'assets/sort_f2_' + (j+1) + '.webp', content: imgs2[j].base64 });
       }
     }
 
@@ -2036,7 +2045,7 @@ async function doPublish() {
           var card =
             '\n                <a href="' + rarity + '/' + slug + '/' + slug + '.html" class="champion-card" data-name="' + escHtml(fullName) + '" data-rarity="' + dAttr + '">' +
             '\n                    <div class="champion-image">' +
-            '\n                        <img src="' + rarity + '/' + slug + '/assets/' + slug + '.png" alt="' + escHtml(fullName) + '">' +
+            '\n                        <img src="' + rarity + '/' + slug + '/assets/' + slug + '.webp" alt="' + escHtml(fullName) + '">' +
             '\n                    </div>' +
             '\n                    <span class="champion-name">' + escHtml(fullName) + '</span>' +
             '\n                </a>';

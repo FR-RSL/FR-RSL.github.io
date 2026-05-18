@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Sourire d'Hephraak",
           description: `
             Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique.
@@ -16,7 +16,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Mepris d'Hephraak",
           description: `
             Attaque tous les ennemis. Place une frappe supplémentaire sur les cibles ayant moins de 50% de PV
@@ -31,7 +31,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Megalomanie",
           description: `
             Place un buff <span class='gbt'>Augmentation d’ATQ</span> de 50% et un buff 
@@ -45,7 +45,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Prince de fierte [P]",
           description: `
             Dés qu'un allié est tué par un ennemi, active instantanément la compétence

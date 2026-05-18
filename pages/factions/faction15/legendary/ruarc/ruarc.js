@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Epee des clairieres",
           description: `
             Attaque un ennemi. 
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "La rouille te consume",
           description: `
         	Attaque tous les ennemis.
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Appel de la nature",
           description: `
             Place un buff <span class='gbt'>Raillerie</span>,
@@ -51,7 +51,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Preux de vignes [P]",
           description: `
             Des qu'un allié perd 10% ou plus de ses PV MAX suite a une seule frappe,
@@ -78,7 +78,7 @@ const championData = {
   	};
 
   const aura = {
-    img: "../../../../../../assets/images/auras/defence.png",
+    img: "../../../../../../assets/images/auras/defence.webp",
     description: `
       Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%.
     `,

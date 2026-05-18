@@ -2,7 +2,7 @@ const championData = {
 type: "Defense",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Marteau de Kaerok",
           description: `
             Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. <br><br>
@@ -17,7 +17,7 @@ type: "Defense",
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Ecrasement de bouclier",
           description: `
             Soigne tous les alliés de la valeur totale des ${BUFFS.SHIELD}s sur tous les alliés.<br><br>
@@ -32,7 +32,7 @@ type: "Defense",
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Admirez la bannière",
           description: `
             Place un buff ${BUFFS.SHIELD} équivalent à 30% des PV MAX de ce Champion sur tous les alliés pendant 2 tours et un buff ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés sauf ce Champion pendant 2 tours.
@@ -50,7 +50,7 @@ type: "Defense",
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Chevalier ultime [P]",
           description: `
             Les alliés sous buff ${BUFFS.SHIELD} reçoivent 10% de dégâts en moins. Si plusieurs Champions de l’équipe disposent de cette Compétence, une seule sera activée.
@@ -76,7 +76,7 @@ type: "Defense",
   };
 
   const aura = {
-  img: "../../../../../../assets/images/auras/sup-defence.png",
+  img: "../../../../../../assets/images/auras/sup-defence.webp",
   description: `
     Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%.<br><br>
     Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%.

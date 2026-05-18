@@ -2,14 +2,14 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Corrosion",
           description: `Attaque tous les ennemis. Possede 30% de chances de placer un debuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 2 tours.`,
           damage: "2.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Vagues Arcaniques",
           description: `Attaque tous les ennemis. Inflige 50% de degats supplementaires contre les cibles affligees de debuffs.`,
           damage: "4.3*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Bannissement",
           description: `Attaque tous les ennemis. Retire tous les buffs dont disposent les ennemis.${RETURN}${RETURN}
 Possede 50% de chances de placer un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.`,
@@ -39,6 +39,6 @@ Possede 50% de chances de placer un debuff ${DEBUFFS.GEL} sur tous les ennemis p
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Allies dans les Donjons de 33%.`
 };

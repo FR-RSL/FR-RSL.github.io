@@ -2,14 +2,14 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Double Debilite",
           description: `Attaque 2 fois un ennemi. Chaque frappe possede 25% de chances d'augmenter d'1 tour la duree d'un debuff aleatoire de la cible.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Passer un savon",
           description: `Attaque 3 fois un ennemi. Chaque frappe possede 40% de chances de retirer un buff aleatoire de la cible.`,
           damage: "1.8*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Fleurs de Haine",
           description: `Attaque tous les ennemis. Possede 50% de chances de placer un debuff ${DEBUFFS.RES} de 50% pendant 2 tours.`,
           damage: "3.9*ATQ",
@@ -25,7 +25,7 @@ const championData = {
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Impitoyable [P]",
           description: `Inflige 10% de degats en plus contre les cibles dont la RES est inferieure a la PRE de cette Championne.`,
           isPassive: true,
@@ -44,6 +44,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/crit.png",
+  img: "../../../../../assets/images/auras/crit.webp",
   description: `Augmente la statistique TAUX C. des Allies lors de toutes les Batailles de 12%.`
 };

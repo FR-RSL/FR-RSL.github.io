@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Serres auriques",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -18,7 +18,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Intercepter la menace",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Guerriere veneree",
           description: `
             Attaque 2 fois tous les ennemis.<br><br>
@@ -54,7 +54,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Fleau du mal [P]",
           description: `
             Recoit 15% de degats en moins de la part des ennemis sous débuff <span class='gbt'>Reduction des Soins</span>.<br><br>
@@ -76,7 +76,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 25%.
     `,

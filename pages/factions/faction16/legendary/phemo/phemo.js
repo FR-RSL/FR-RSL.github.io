@@ -2,7 +2,7 @@ const championData = {
   type: "Defense",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Marteau de pierre",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 80% de chances de reduire le Compteur de Tour de la cible de 15%.`,
@@ -10,7 +10,7 @@ A 80% de chances de reduire le Compteur de Tour de la cible de 15%.`,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Bon patre",
           description: `${ACTIVE}
 Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.SHIELD} sur tous les allies pendant 2 tours.
@@ -25,7 +25,7 @@ Cette competence ne s'activera pas sur les copies en double de ce Champion si ce
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Fracasser et ecraser",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
@@ -37,7 +37,7 @@ A 75% de chances de placer un debuff ${DEBUFFS.STUN} sur tous les ennemis pendan
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Quete vengeresse [P]",
           description: `Augmente la DEF de ce Champion de 3% (s'accumule jusqu'a 30%) et ses PV MAX de 5% (s'accumule jusqu'a 50%) pour chaque debuff ${DEBUFFS.STUN} place par ce Champion.${RETURN}${RETURN}
 Les allies sont immunises contre les debuffs ${DEBUFFS.STUN} lorsqu'ils se trouvent sous buff ${BUFFS.SHIELD} places par la competence <span class="grn-t">Bon patre</span> de ce Champion.`,
@@ -57,6 +57,6 @@ Les allies sont immunises contre les debuffs ${DEBUFFS.STUN} lorsqu'ils se trouv
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/defence.png",
+  img: "../../../../../assets/images/auras/defence.webp",
   description: `Augmente la statistique DEF des Allies lors de toutes les Batailles de 30%.`
 };

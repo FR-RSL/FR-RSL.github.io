@@ -2,14 +2,14 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Sombre Eclair",
           description: `Attaque un ennemi. Possede 80% de chances de placer un debuff ${DEBUFFS.POISON} de 2.5% pendant 2 tours.`,
           damage: "3.5*ATQ + 100",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Pluie Acide",
           description: `Attaque tous les ennemis. Possede 15% de chances supplementaire de porter un coup critique. Remplit de 25% le Compteur de Tour de ce Champion pour chaque ennemi tue.`,
           damage: "4.65*ATQ",
@@ -17,7 +17,7 @@ const championData = {
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Desintegrer",
           description: `Attaque 4 fois de facon aleatoire. Possede 40% de chances de placer un debuff ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "1.5*ATQ",
@@ -38,6 +38,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%.`
 };

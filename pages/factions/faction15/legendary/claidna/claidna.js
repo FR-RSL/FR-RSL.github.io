@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Touche de sommeil",
           description: `
             Attaque un ennemi.
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Perdue dans les bois",
           description: `
             Possède 75% de chances de placer un débuff
@@ -37,7 +37,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Infusion d'outre-tombe",
           description: `
             Retire tous les débuffs de tous les alliés,
@@ -52,7 +52,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Monarque fee [P]",
           description: `
             Possède 30% de chances de totalement bloquer les degats en approche
@@ -80,7 +80,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés dans les Donjons de 40%.
     `,

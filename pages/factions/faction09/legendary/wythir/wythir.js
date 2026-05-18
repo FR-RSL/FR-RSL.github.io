@@ -2,7 +2,7 @@ const championData = {
    	type: "Soutien",
       spells: [
         {
-			img: "assets/sort1.png",
+			img: "assets/sort1.webp",
 			name: "Empalement d'Ame",
 			description: `
 				Attaque tous les ennemis. Possède 50% de chances de placer un débuff
@@ -18,7 +18,7 @@ const championData = {
 			],
         },
         {
-			img: "assets/sort2.png",
+			img: "assets/sort2.webp",
 			name: "Ignorer la Douleur",
 			description: `
 				Place un buff <span class='gbt'>Augmentation de DEF</span> de 60% sur tous les alliés pendant 2 tours.
@@ -32,7 +32,7 @@ const championData = {
 			cooldown: 5,
         },
         {
-			img: "assets/sort3.png",
+			img: "assets/sort3.webp",
 			name: "Redemptrice azuree",
 			description: `
 				Retire tous les débuffs sur tous les alliés, puis soigne a hauteur de 30% des PV MAX de ce Champion.
@@ -44,7 +44,7 @@ const championData = {
 			cooldown: 5,
         },
         {
-        	img: "assets/passif1.png",
+        	img: "assets/passif1.webp",
         	name: "Flamme eternelle [P]",
         	description: `
 				Au debut de chaque tour, place un buff <span class='gbt'>Soins Continus</span> de 15% pendant 1 tour sur l'allié ayant le moins de PV.
@@ -65,7 +65,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/res.png",
+    img: "../../../../../../assets/images/auras/res.webp",
     description: `
       Augmente la statistique RES des Alliés lors de toutes les Batailles de 50.
     `,

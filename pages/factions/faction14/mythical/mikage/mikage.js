@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
           {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Fouet fantome",
             description: `
               Attaque un ennemi avec un allié aleatoire de la Faction du Clan de l'Ombre
@@ -18,7 +18,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Piege de soie",
             description: `
               Attaque tous les ennemis. Reduit d'1 tour la durée de tous 
@@ -34,7 +34,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Decret imperial",
             description: `
               Place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
@@ -48,7 +48,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -57,7 +57,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Volonte de Mikage [P]",
             description: `
               Au debut du tour de cette Championne,
@@ -81,7 +81,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Araignee de cauchemar",
             description: `
               Attaque un ennemi.
@@ -95,7 +95,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Mort fuyante",
             description: `
               Attaque tous les ennemis. 
@@ -109,7 +109,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Ruine de Yakai",
             description: `
               Place un buff <span class='gbt'>Augmentation de PRE</span> de 50% 
@@ -125,7 +125,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -134,7 +134,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
           name: "Regarde demoniaque [P]",
           description: `
               Au debut du tour de cette Championne, reduit de 15%
@@ -160,7 +160,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../assets/images/auras/acc.png",
+      img: "../../../../../assets/images/auras/acc.webp",
       description: `
         Augmente la statistique PRE des Alliés lors de toutes les Batailles de 80.
       `,

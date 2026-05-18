@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Feu Fantome",
           description: `
             Attaque tous les ennemis. Place un débuff de <span class='gbt'>Poison</span> de 5% pendant 1 tour
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Regard Abyssal",
           description: `
             Attaque tous les ennemis. Retire tous les buffs. Place un débuff de
@@ -33,7 +33,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Sceau de Magie",
           description: `
             Réinitialise tous les temps de recharge de toutes les compétences alliées. Remplit de 20% le
@@ -61,7 +61,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans les batailles d'Arene de 30%.
     `,

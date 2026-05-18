@@ -4,7 +4,7 @@ const championForms = {
         type: "Soutien",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Capture",
             description: `
               Attaque un ennemi.<br><br>
@@ -20,7 +20,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Musc soporifique",
             description: `
               Vole tous les buffs dont beneficient les ennemis.<br><br>
@@ -38,7 +38,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Faucille de corruption",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -54,7 +54,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -63,7 +63,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Buffet de Dents-noires [P]",
             description: `
               Des qu'un ennemi recoit un buff, est soigne ou voit son Compteur de Tour
@@ -90,7 +90,7 @@ const championForms = {
         type: "Attaque",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Coupe-ventre",
             description: `
               Attaque 4 fois un ennemi.
@@ -107,7 +107,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Decoupage",
             description: `
               Attaque 2 fois un ennemi.
@@ -130,7 +130,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Festin de terreur",
             description: `
               Attaque tous les ennemis.<br><br>
@@ -145,7 +145,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -154,7 +154,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Faim de loup [P]",
             description: `
               Des que cette Championne tue un ennemi a l'aide d'une
@@ -183,7 +183,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/acc.png",
+      img: "../../../../../../assets/images/auras/acc.webp",
       description: `
         Augmente la statistique PRE des Alliés dans les batailles d'Arene de 100.
       `,

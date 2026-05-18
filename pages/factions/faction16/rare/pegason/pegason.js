@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Frappe stupefiante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 A 15% de chances de placer un debuff ${DEBUFFS.STUN} pendant 1 tour.`,
@@ -10,7 +10,7 @@ A 15% de chances de placer un debuff ${DEBUFFS.STUN} pendant 1 tour.`,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Position de l'acier",
           description: `Place un buff ${BUFFS.TAUNT} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
 Place egalement sur tous les allies un buff ${BUFFS.SHIELD} pendant 2 tours, equivalent a 15% des PV MAX de ce Champion.`,
@@ -18,7 +18,7 @@ Place egalement sur tous les allies un buff ${BUFFS.SHIELD} pendant 2 tours, equ
           levelInfo: ["Bouclier +10%", "Bouclier +10%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Disciple militaire",
           description: `Des que ce Champion est attaque, a 5% de chances de reduire a zero tous les degats en approche.`,
           cooldown: 1,
@@ -39,6 +39,6 @@ Place egalement sur tous les allies un buff ${BUFFS.SHIELD} pendant 2 tours, equ
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/hp.png",
+  img: "../../../../../assets/images/auras/hp.webp",
   description: `Augmente la statistique PV des Allies lors de toutes les Batailles de 15%.`
 };

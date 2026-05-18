@@ -4,7 +4,7 @@ const championForms = {
         type: "PV",
         spells: [
         {
-            img: "assets/sort1.png",
+            img: "assets/sort1.webp",
             name: "Choc sismique",
             description: `
               Attaque un ennemi.
@@ -15,7 +15,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort2.png",
+            img: "assets/sort2.webp",
             name: "Larcin sanglant",
             description: `
               Attaque un ennemi. Vole 2 buffs a une cible ennemie.
@@ -29,7 +29,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/sort3.png",
+            img: "assets/sort3.webp",
             name: "Exterminer les faibles",
             description: `
               Attaque tous les ennemis. Les degats de cette
@@ -44,7 +44,7 @@ const championForms = {
             ],
           },
           {
-            img: "assets/meta1.png",
+            img: "assets/meta1.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme alternative.
@@ -53,7 +53,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif1.png",
+            img: "assets/passif1.webp",
             name: "Science infinie [P]",
             description: `
               Les DEG C. de ce Champion sont augmentes de 1% par tranche de
@@ -79,7 +79,7 @@ const championForms = {
         type: "Defense",
         spells: [
         {
-            img: "assets/sort4.png",
+            img: "assets/sort4.webp",
             name: "Arcs de douleur",
             description: `
               Attaque 2 fois un ennemi. Chaque frappe augmente 
@@ -91,7 +91,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort5.png",
+            img: "assets/sort5.webp",
             name: "Procedure de broyage",
             description: `
               Attaque un ennemi. Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
@@ -106,7 +106,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/sort6.png",
+            img: "assets/sort6.webp",
             name: "Moteur de guerre",
             description: `
               Place un buff <span class='gbt'>Protection d'allié</span> de 50%
@@ -122,7 +122,7 @@ const championForms = {
             ]
           },
           {
-            img: "assets/meta2.png",
+            img: "assets/meta2.webp",
             name: "Metamorphe",
             description: `
               Fait passer ce Champion a sa Forme de base.
@@ -131,7 +131,7 @@ const championForms = {
             cooldown: 4,
           },
           {
-            img: "assets/passif2.png",
+            img: "assets/passif2.webp",
             name: "Armure ensorcelee [P]",
             description: `
               Lorsqu'il est attaqué, renvoie sur l'assaillant 80% des degats recus par ce Champion.
@@ -155,7 +155,7 @@ const championForms = {
     };
 
     const aura = {
-      img: "../../../../../../assets/images/auras/hp.png",
+      img: "../../../../../../assets/images/auras/hp.webp",
       description: `
         Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
       `,

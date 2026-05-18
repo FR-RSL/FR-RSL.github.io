@@ -2,7 +2,7 @@ const championData = {
   type: "PV",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Comete ardente",
           description: `
             Attaque 2 fois un ennemi.<br><br>
@@ -21,7 +21,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Salve calculee",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -43,7 +43,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Finis-les",
           description: `
             Attaque un ennemi. Ignorera 25% de la DEF de la cible.
@@ -61,7 +61,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "L'inflexible [P]",
           description: `
             Des qu'un ennemi resiste a une tentative de débuffs de ce Champion
@@ -85,7 +85,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/hp.png",
+    img: "../../../../../../assets/images/auras/hp.webp",
     description: `
       Augmente la statistique PV des Alliés lors de toutes les Batailles de 28%.
     `,

@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Maillet Dore",
           description: `
             Attaque 2 fois un ennemi.
@@ -17,7 +17,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Voile Seculaire",
           description: `
             Attaque un ennemi. puis attaque tous les autres ennemis avec une seconde frappe,
@@ -34,7 +34,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Rythme de Forge",
           description: `
             Attaque tous les ennemis.
@@ -53,7 +53,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Justice Expeditive [P]",
           description: `
             L'ATQ de cette Championne augmente de 10% pour chaque débuff
@@ -79,7 +79,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés de Magie lors de toutes les Batailles de 36%.
     `,

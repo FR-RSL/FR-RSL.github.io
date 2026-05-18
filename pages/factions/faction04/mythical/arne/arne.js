@@ -3,7 +3,7 @@ const championForms = {
     type: "Attaque",
     spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Chant d'acier",
           description: `Attaque un ennemi. Place une frappe supplementaire si la cible se trouve sous debuff ${DEBUFFS.DEATHBRAND}.<br><br>
 
@@ -13,7 +13,7 @@ Cet effet ne fonctionne pas contre les Boss.`,
           levelInfo: ["Degats +20%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Rage incandescente",
           description: `Attaque un ennemi. Avant d'attaquer, place un debuff ${DEBUFFS.LOCK_PASSIF} pendant 1 tour. Ignorera 50% de la DEF de la cible, ainsi que les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}.<br><br>
 
@@ -24,7 +24,7 @@ Reduira egalement de 2 tours le temps de recharge de la competence <span class='
           levelInfo: ["Degats +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Hurlement polaire",
           description: `Place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.PRE} de 50% sur tous les allies pendant 3 tours.<br><br>
 
@@ -35,13 +35,13 @@ Accorde ensuite un Tour supplementaire.`,
           levelInfo: ["Ignorer la Res +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Metamorphe",
           description: `Fait passer ce Champion a sa Forme alternative. Accorde ensuite un Tour supplementaire.`,
           cooldown: 4,
         },
         {
-          img: "assets/sort5.png",
+          img: "assets/sort5.webp",
           name: "Volonte de la toundra [P]",
           description: `${PASSIVE}
 
@@ -72,7 +72,7 @@ Des que ce Champion est tue, le ranime avec 50% de PV et 100% de Compteur de Tou
     type: "PV",
     spells: [
         {
-          img: "assets/sort_f2_1.png",
+          img: "assets/sort_f2_1.webp",
           name: "Tempete d'epees",
           description: `Attaque 2 fois un ennemi. Place un debuff ${DEBUFFS.STUN} pendant 1 tour.<br><br>
 
@@ -81,7 +81,7 @@ Si les PV MAX de ce Champion sont superieurs ou egaux a ceux de la cible, il est
           levelInfo: ["Degats +20%"],
         },
         {
-          img: "assets/sort_f2_2.png",
+          img: "assets/sort_f2_2.webp",
           name: "Rugissement provoquant",
           description: `Place un debuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Si la cible est un Boss, place au lieu de ca un debuff ${DEBUFFS.PROVOKE} pendant 2 tours. Si les PV MAX de ce Champion sont superieurs ou egaux a ceux de la cible, il est impossible de resister a ces debuffs.<br><br>
 
@@ -90,7 +90,7 @@ Place un buff ${BUFFS.STRENGTHEN} de 25% sur tous les allies pendant 2 tours. Pl
           levelInfo: ["Ignorer la RES +20%", "Temps de rechare -1"],
         },
         {
-          img: "assets/sort_f2_3.png",
+          img: "assets/sort_f2_3.webp",
           name: "Rupture glaciale",
           description: `Attaque tous les ennemis. Avant d'attaquer, place un debuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 2 tours. Si les PV MAX de ce Champion sont superieurs ou egaux a ceux de la cible, il est impossible de resister a ce debuff.<br><br>
 
@@ -102,13 +102,13 @@ Si une cible est un Boss, ou se trouve sous debuffs ${DEBUFFS.STUN} ou ${DEBUFFS
           levelInfo: ["Degats +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort_f2_4.png",
+          img: "assets/sort_f2_4.webp",
           name: "Metamorphe",
           description: `Fait passer ce Champion a sa Forme alternative. Accorde ensuite un Tour supplementaire.`,
           cooldown: 4,
         },
         {
-          img: "assets/sort_f2_5.png",
+          img: "assets/sort_f2_5.webp",
           name: "Coeur d'ours [P]",
           description: `${PASSIVE}
 
@@ -138,6 +138,6 @@ Ceci ne placera pas la competence <span class='gt'>Rupture Glaciale</span> en te
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/acc.png",
+  img: "../../../../../assets/images/auras/acc.webp",
   description: `Augmente la statistique PRE des Allies lors de toutes les Batailles de 80.`
 };

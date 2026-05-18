@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lance de providence",
           description: `
             Attaque un ennemi. Possède 30% de chance de placer un débuff
@@ -20,7 +20,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Petales de purge",
           description: `
             Cible un allié.
@@ -38,7 +38,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Charge de la Brave",
           description: `
             Remplit le Compteur de Tour de tous les alliés de 20% et leur accorde un buff
@@ -54,7 +54,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Vue souveraine [P]",
           description: `
             Augmente la PRE de cette Championne a hauteur de la quantite de VIT qu'elle Possède.
@@ -75,7 +75,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/speed.png",
+    img: "../../../../../../assets/images/auras/speed.webp",
     description: `
       Augmente la statistique VIT des Alliés dans les batailles d'Arene de 30%.
     `,

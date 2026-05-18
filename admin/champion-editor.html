@@ -6,7 +6,7 @@
   <title>Modifier un Champion — FR RSL Admin</title>
   <meta name="robots" content="noindex, nofollow">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' https://raw.githubusercontent.com data: blob:; font-src 'self'">
-  <link rel="shortcut icon" href="../assets/images/logos/logo.png">
+  <link rel="shortcut icon" href="../assets/images/logos/logo.webp">
   <link rel="stylesheet" href="../assets/css/main.css">
   <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
   <style>
@@ -93,7 +93,7 @@
 <div class="particles"></div>
 <header>
   <div class="logo-section">
-    <img src="../assets/images/logos/logo.png" alt="FR RSL">
+    <img src="../assets/images/logos/logo.webp" alt="FR RSL">
     <h1>FR RSL</h1>
   </div>
 </header>
@@ -341,7 +341,7 @@ function renderList() {
     var c = item.c;
     var isActive = currentChamp && currentChamp.folder === c.folder && currentChamp.faction === c.faction ? ' active' : '';
     var imgPath = 'https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+
-      '/pages/factions/'+c.faction+'/'+c.rarity+'/'+c.folder+'/assets/'+c.folder+'.png';
+      '/pages/factions/'+c.faction+'/'+c.rarity+'/'+c.folder+'/assets/'+c.folder+'.webp';
     var bm = BADGE_MAP[c.rarity] || ['badge-com', c.rarity];
     var badge = '<span class="badge '+bm[0]+'">'+bm[1]+'</span>';
     return '<div class="champ-item'+isActive+'" onclick="selectChamp('+item.i+')">' +
@@ -601,7 +601,7 @@ async function doTransfer() {
       var newHubData = await newHubResp.json();
       var newHubSrc  = decodeURIComponent(escape(atob(newHubData.content.replace(/\n/g,''))));
       var card = '\n          <a class="champion-card" data-rarity="'+c.rarity+'" href="'+c.rarity+'/'+c.folder+'/'+c.folder+'.html">\n' +
-        '            <img src="'+c.rarity+'/'+c.folder+'/assets/'+c.folder+'.png" alt="'+c.name+'" onerror="this.style.display=\'none\'">\n' +
+        '            <img src="'+c.rarity+'/'+c.folder+'/assets/'+c.folder+'.webp" alt="'+c.name+'" onerror="this.style.display=\'none\'">\n' +
         '            <p>'+c.name+'</p>\n          </a>';
       var containerMarker = 'id="'+c.rarity+'Container"';
       if (newHubSrc.includes(containerMarker)) {

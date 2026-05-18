@@ -3,7 +3,7 @@ const championForms = {
     type: "Soutien",
     spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Crocs hypnotiques",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe reduit le Compteur de Tour de la cible de 5%. Chaque frappe reduit le Compteur de Tour de la cible de 5% supplementaires si la cible est affligee de debuffs places par cette Championne.`,
@@ -11,7 +11,7 @@ Chaque frappe reduit le Compteur de Tour de la cible de 5%. Chaque frappe reduit
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Machoire d'araignee-lune",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 Reduit les Compteurs de Tour de tous les ennemis de 50%. Reduit au lieu de cela les Compteurs de Tour de tous les ennemis de 100% si cette competence est utilisee lors d'un Tour supplementaire ou d'un Tour instantane.${RETURN}${RETURN}
@@ -21,7 +21,7 @@ Place un debuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Place au lieu de cela un de
           levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Sombre transe",
           description: `Retire tous les buffs dont disposent les ennemis.${RETURN}${RETURN}
 Place un debuff ${DEBUFFS.DEF} de 60% et un debuff ${DEBUFFS.LOCK_ACTIVE} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
@@ -30,13 +30,13 @@ Accorde un Tour supplementaire si 8 debuffs ou plus ont ete places par cette com
           levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Metamorphe",
           description: `Fait passer cette Championne a sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
         },
         {
-          img: "assets/sort5.png",
+          img: "assets/sort5.webp",
           name: "Fuite d'araignee [P]",
           description: `Augmente la VIT de cette Championne de 4 points pour chaque debuff place par cette Championne et de 2 points pour chaque debuff auquel l'ennemi resiste lorsque cette Championne essaie de placer des debuffs (s'accumule jusqu'a 100).
 Ne comptabilise que les debuffs places par les competences de cette Championne.`,
@@ -58,7 +58,7 @@ Ne comptabilise que les debuffs places par les competences de cette Championne.`
     type: "Attaque",
     spells: [
         {
-          img: "assets/sort_f2_1.png",
+          img: "assets/sort_f2_1.webp",
           name: "Ravage astral",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 Remplit le Compteur de Tour de cette Championne de 5% pour chaque frappe critique. Remplit le Compteur de Tour de cette Championne de 5% supplementaire si la cible se trouve sous debuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
@@ -67,7 +67,7 @@ Si cette attaque tue un ennemi, accorde un Tour supplementaire.`,
           levelInfo: ["Dégâts +20%"],
         },
         {
-          img: "assets/sort_f2_2.png",
+          img: "assets/sort_f2_2.webp",
           name: "Tissage de fil mortel",
           description: `Attaque 3 fois un ennemi. Utilisera toujours cette competence au lieu de la competence par defaut lors d'une contre-attaque. Cette competence ne peut pas etre bloquee par les debuffs ${DEBUFFS.LOCK_ACTIVE}.${RETURN}${RETURN}
 Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. De plus, ignore les buffs ${BUFFS.UNKILLABLE} si la cible se trouve sous debuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
@@ -77,7 +77,7 @@ Remplit le Compteur de Tour de cette Championne de 15% pour chaque frappe critiq
           levelInfo: ["Dégâts +20%"],
         },
         {
-          img: "assets/sort_f2_3.png",
+          img: "assets/sort_f2_3.webp",
           name: "Execution arachneenne",
           description: `Attaque 4 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe ignorera 15% de la DEF de la cible. Chaque frappe ignorera 30% de la DEF si la cible se trouve sous debuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
@@ -88,13 +88,13 @@ Ensuite, place un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tour
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort_f2_4.png",
+          img: "assets/sort_f2_4.webp",
           name: "Metamorphe",
           description: `Fait passer cette Championne a sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
         },
         {
-          img: "assets/sort_f2_5.png",
+          img: "assets/sort_f2_5.webp",
           name: "Maitresse de la toile [P]",
           description: `Cette Championne est immunisee contre les debuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.GEL} et ${DEBUFFS.PETRIFICATION} lorsqu'elle se trouve sous buff ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 Cette Championne ne peut pas non plus recevoir de frappes critiques lorsqu'elle se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
@@ -115,6 +115,6 @@ Cette Championne ne peut pas non plus recevoir de frappes critiques lorsqu'elle 
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/acc.png",
+  img: "../../../../../assets/images/auras/acc.webp",
   description: `Augmente la statistique PRE des Allies lors de toutes les Batailles de 80.`
 };

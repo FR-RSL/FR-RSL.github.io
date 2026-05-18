@@ -3,22 +3,22 @@
  */
 
 const FACTION_META = {
-  faction01: { name: "Seigneurs",              img: "bannerlords.png"    },
-  faction02: { name: "Haut Elfes",             img: "high-elves.png"     },
-  faction03: { name: "Ordre Sacré",            img: "sacred-order.png"   },
-  faction04: { name: "Barbares",               img: "barbarians.png"     },
-  faction05: { name: "Tribus Ogryn",           img: "ogryn-tribes.png"   },
-  faction06: { name: "Homme Lézards",          img: "lizardmen.png"      },
-  faction07: { name: "Marcheurs de Peau",      img: "skinwalkers.png"    },
-  faction08: { name: "Orcs",                   img: "orcs.png"           },
-  faction09: { name: "Rejetons Démoniaques",   img: "demonspawn.png"     },
-  faction10: { name: "Morts-vivants",          img: "undead-hordes.png"  },
-  faction11: { name: "Elfes Noirs",            img: "dark-elves.png"     },
-  faction12: { name: "Revenants Chevaliers",   img: "knight-revenant.png"},
-  faction13: { name: "Nains",                  img: "dwarves.png"        },
-  faction14: { name: "Clan de l'Ombre",        img: "shadowkin.png"      },
-  faction15: { name: "Gardes Sylvains",        img: "sylvan-watchers.png"},
-  faction16: { name: "Argonites",              img: "argonites.png"      },
+  faction01: { name: "Seigneurs",              img: "bannerlords.webp"    },
+  faction02: { name: "Haut Elfes",             img: "high-elves.webp"     },
+  faction03: { name: "Ordre Sacré",            img: "sacred-order.webp"   },
+  faction04: { name: "Barbares",               img: "barbarians.webp"     },
+  faction05: { name: "Tribus Ogryn",           img: "ogryn-tribes.webp"   },
+  faction06: { name: "Homme Lézards",          img: "lizardmen.webp"      },
+  faction07: { name: "Marcheurs de Peau",      img: "skinwalkers.webp"    },
+  faction08: { name: "Orcs",                   img: "orcs.webp"           },
+  faction09: { name: "Rejetons Démoniaques",   img: "demonspawn.webp"     },
+  faction10: { name: "Morts-vivants",          img: "undead-hordes.webp"  },
+  faction11: { name: "Elfes Noirs",            img: "dark-elves.webp"     },
+  faction12: { name: "Revenants Chevaliers",   img: "knight-revenant.webp"},
+  faction13: { name: "Nains",                  img: "dwarves.webp"        },
+  faction14: { name: "Clan de l'Ombre",        img: "shadowkin.webp"      },
+  faction15: { name: "Gardes Sylvains",        img: "sylvan-watchers.webp"},
+  faction16: { name: "Argonites",              img: "argonites.webp"      },
 };
 
 const CHAMPIONS = [
@@ -219,7 +219,7 @@ const CHAMPIONS = [
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,
-  img: c.noImg ? null : `pages/factions/${c.faction}/${c.rarity}/${c.folder}/assets/${c.folder}.png`,
+  img: c.noImg ? null : `pages/factions/${c.faction}/${c.rarity}/${c.folder}/assets/${c.folder}.webp`,
   factionName: FACTION_META[c.faction]?.name ?? c.faction,
   factionImg:  `assets/images/factions/${FACTION_META[c.faction]?.img ?? ''}`,
 }));

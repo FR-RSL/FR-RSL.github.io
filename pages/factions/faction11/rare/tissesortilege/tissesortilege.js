@@ -2,21 +2,21 @@ const championData = {
   type: "Soutien",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Imprecation",
           description: `Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.PRE} de 25% pendant 2 tours.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Sombre Etreinte",
           description: `Soigne tous les allies a hauteur de 15% de leurs PV MAX.`,
           cooldown: 4,
           levelInfo: ["Soins +10%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Ailes de Ruine",
           description: `Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.SPD} de 15% sur tous les allies pendant 2 tours.`,
           cooldown: 5,
@@ -36,6 +36,6 @@ const championData = {
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/speed.png",
+  img: "../../../../../assets/images/auras/speed.webp",
   description: `Augmente la statistique VIT des Alliés dans les Cryptes de Faction de 13%.`
 };

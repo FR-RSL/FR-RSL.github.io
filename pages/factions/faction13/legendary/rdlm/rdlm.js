@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Fente Fracassante",
           description: `
             Attaque un ennemi.<br><br>
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Hache Enchantee",
           description: `
             Attaque un ennemi.<br><br>
@@ -36,7 +36,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Force Royale",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -56,7 +56,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Habilete Fabuleuse [P]",
           description: `
             Augmente de 50% l'ATQ de ce Champion a chaque fois que ce Champion tue un ennemi.
@@ -79,7 +79,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 25%.
     `,

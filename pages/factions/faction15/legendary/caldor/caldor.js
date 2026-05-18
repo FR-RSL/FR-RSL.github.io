@@ -2,7 +2,7 @@ const championData = {
 type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Chant de dague",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -19,7 +19,7 @@ type: "Attaque",
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Orchestre de Guerre",
           description: `
             Selectionne une cible.<br><br>
@@ -46,7 +46,7 @@ type: "Attaque",
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Crescendo rythmique",
           description: `
             Attaque un ennemi.
@@ -79,7 +79,7 @@ type: "Attaque",
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Symphonie de Sylvains [P]",
           description: `
             Ignore 15% de la DEF de la cible lorsque ce Champion attaque en se trouvant
@@ -112,7 +112,7 @@ type: "Attaque",
   };
 
   const aura = {
-  img: "../../../../../../assets/images/auras/sup-crit.png",
+  img: "../../../../../../assets/images/auras/sup-crit.webp",
   description: `
     Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 25%.<br><br>
     Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%.<br>

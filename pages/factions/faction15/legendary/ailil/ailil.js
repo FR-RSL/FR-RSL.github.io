@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Faux Tordue",
           description: `
             Attaque un ennemi. 
@@ -23,7 +23,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Percer la carapace",
           description: `
             Attaque un ennemi. 
@@ -44,7 +44,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Vent frais d'automne",
           description: `
             Attaque tous les ennemis.<br><br>
@@ -68,7 +68,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Force de la nature [P]",
           description: `
             Augmente les PV de ce Champion de 2 000 et sa DÉF de 100 
@@ -92,7 +92,7 @@ const championData = {
     };
 
   	const aura = {
-    img: "../../../../../../assets/images/auras/attack.png",
+    img: "../../../../../../assets/images/auras/attack.webp",
     description: `
       Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%.
     `,

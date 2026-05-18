@@ -2,7 +2,7 @@ const championData = {
   type: "Soutien",
       spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Fleau de Crystal",
           description: `
             Attaque un ennemi.
@@ -19,7 +19,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Poigne de Caverne",
           description: `
             Attaque tous les ennemis. Possède 75% de chances de retirer
@@ -39,7 +39,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Lueur Tenace",
           description: `
             Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff <span class='gbt'>Augmentation d'ATQ</span>
@@ -55,7 +55,7 @@ const championData = {
           ],
         },
         {
-          img: "assets/passif1.png",
+          img: "assets/passif1.webp",
           name: "Redoute [P]",
           description: `
             Lorsqu'un allié se trouvant sous buff <span class='gbt'>Bouclier</span>
@@ -79,7 +79,7 @@ const championData = {
   };
 
   const aura = {
-    img: "../../../../../../assets/images/auras/res.png",
+    img: "../../../../../../assets/images/auras/res.webp",
     description: `
       Augmente la statistique RES des Alliés dans la Tour du Malheur de 60.
     `,

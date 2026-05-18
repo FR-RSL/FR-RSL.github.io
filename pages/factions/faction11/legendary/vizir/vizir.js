@@ -2,7 +2,7 @@ const championData = {
   type: "Attaque",
   spells: [
         {
-          img: "assets/sort1.png",
+          img: "assets/sort1.webp",
           name: "Lames Maudites",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe possede 35% de chances d'augmenter d'1 tour la duree de tous les debuffs.`,
@@ -10,7 +10,7 @@ Chaque frappe possede 35% de chances d'augmenter d'1 tour la duree de tous les d
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
-          img: "assets/sort2.png",
+          img: "assets/sort2.webp",
           name: "Maitre de la Detresse",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 Chaque frappe possede 50% de chances de placer un debuff ${DEBUFFS.BLOCK_BUFFS}, un debuff ${DEBUFFS.ATK} de 50% et un debuff ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
@@ -19,7 +19,7 @@ Chaque frappe possede 50% de chances de placer un debuff ${DEBUFFS.BLOCK_BUFFS},
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
         },
         {
-          img: "assets/sort3.png",
+          img: "assets/sort3.webp",
           name: "Vizir des Poisons",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Applique un effet de <span class="grn-t">[Propagation de Debuff]</span>, prenant 2 debuffs aleatoires sur la cible pour les placer sur tous les ennemis.${RETURN}${RETURN}
@@ -29,7 +29,7 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours si la cible 
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
         },
         {
-          img: "assets/sort4.png",
+          img: "assets/sort4.webp",
           name: "Assassin Invisible [P]",
           description: `Au debut de chaque Round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           isPassive: true,
@@ -48,6 +48,6 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours si la cible 
 };
 
 const aura = {
-  img: "../../../../../assets/images/auras/attack.png",
+  img: "../../../../../assets/images/auras/attack.webp",
   description: `Augmente la statistique ATQ des Allies dans les Donjons de 34%.`
 };

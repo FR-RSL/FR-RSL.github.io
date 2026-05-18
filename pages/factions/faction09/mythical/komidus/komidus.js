@@ -90,7 +90,7 @@ const championForms = {
             description: `
               Attaque 2 fois un ennemi.<br><br>
 			  Chaque frappe Possède 50% de chances de placer un débuff
-			  <span class='gbt'>Bombe</span> pendant 2 tours.<br><br>
+			  <span class='gbt'>Bombe</span> equivalent a 15% Des PV MAX de ce Champion pendant 2 tours.<br><br>
 			  Soigne ce Champion de 10% de ses PV MAX pour chaque débuff <span class='gbt'>Bombe</span>
 			  place.
             `,
@@ -105,14 +105,14 @@ const championForms = {
             name: "Clou du spectacle explosif",
             description: `
               Attaque tous les ennemis.<br><br>
-			  Place 2 débuffs <span class='gbt'>Bombe</span> sur tous les ennemis pendant 2 tours.<br><br>
+			  Place 2 débuffs <span class='gbt'>Bombe</span> equivalent a 33% des PV MAX de ce Champion sur tous les ennemis pendant 2 tours.<br><br>
 			  Fait exploser instantanement tous les débuffs <span class='gbt'>Bombe</span> sur les ennemis
 			  dotes de buffs <span class='gbt'>Peau de Pierre</span> ou les ennemis 
 			  dont les PV sont inferieurs aux PV de ce Champion.<br><br>
 			  Ensuite, place un débuff <span class='gbt'>Etourdissement</span> pendant 1 tour sur tous les ennemis
 			  dont les débuffs <span class='gbt'>Bombe</span> ont explose a cause de cette compétence.
             `,
-            damage: "0.25*PV | 0.33*PV (Bombe)",
+            damage: "0.25*PV",
             cooldown: 3,
             levelInfo: [
               "Dégâts +20%",

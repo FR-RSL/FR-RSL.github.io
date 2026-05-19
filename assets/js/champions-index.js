@@ -219,6 +219,7 @@ const CHAMPIONS = [
     { name: "Mina Marquise de Sang", faction: 'faction10', rarity: 'mythical', folder: 'mina' },
     { name: "Narma la Ressucitee", faction: 'faction12', rarity: 'legendary', folder: 'narma' },
     { name: "Gaius le Joyeux", faction: 'faction12', rarity: 'legendary', folder: 'gaius_le_joyeux' },
+    { name: "Shemnath", faction: 'faction12', rarity: 'legendary', folder: 'shemnath' },
   ].map(c => ({
   ...c,
   url: `pages/factions/${c.faction}/${c.rarity}/${c.folder}/${c.folder}.html`,

@@ -60,7 +60,7 @@ const championData = {
           name: "Rassembleur des Nains [P]",
           description: `
             Les alliés contre-attaqueront des qu'ils perdent 10% ou plus de leurs PV MAX lors d'une seule frappe.
-            Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+            Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           `,
           factions: [
             `Des qu'un allié place un débuff <span class='gbt'>Peur</span>,
@@ -72,7 +72,7 @@ const championData = {
             <span class='gbt'>Petrification</span>,
             remplit le Compteur de TOur de ce Champion de 20%.
             Se produit une fois par compétence. Si plusieurs Champions de l'equipe
-            disposent de cette compétence, une seule sera activee.`,
+            disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
             `Lorsqu'un allié est attaque, a 50% de chances de placer un débuff
             <span class='gbt'>Reduction de RES</span> de 50% et un débuff
             <span class='gbt'>Reduction de VIT</span> de 30% sur l'assaillant pendant 1 tour.
@@ -82,11 +82,11 @@ const championData = {
             <span class='gbt'>Protection d'allié</span> ou
             <span class='gbt'>Peau de Pierre</span>, les chances passent a 100%.
             Si plusieurs Champions de l'equipe
-            disposent de cette compétence, une seule sera activee.`,
+            disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
             `Au debut de chaque manche, place un buff
             <span class='gbt'>Peau de Pierre</span> sur tous les alliés pendant 1 tour.
             Si plusieurs Champions de l'equipe
-            disposent de cette compétence, une seule sera activee.`,
+            disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
           ],
           isPassive: true,
         },

@@ -50,7 +50,7 @@ const championData = {
           description: `
             Dés qu'un allié est tué par un ennemi, active instantanément la compétence
 			<span class='gt'>Mépris d’Héphraak</span>. Ne placera pas cette compétence en temps de recharge.<br><br>
-			Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée.
+			Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           `,
 		  cooldown: 5,
           levelInfo: [

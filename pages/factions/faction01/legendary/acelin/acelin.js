@@ -39,7 +39,7 @@ type: "Defense",
           `,
           cooldown: 5,
           factions: [
-            `Active instantanément cette compétence  dès qu’un allié est ranimé. Ne placera pas cette compétence en temps de recharge. Si plusieurs Champion de l’équipe disposent de cette Compétence, une seule sera activée.`,
+            `Active instantanément cette compétence  dès qu’un allié est ranimé. Ne placera pas cette compétence en temps de recharge. Si plusieurs Champion de l’équipe disposent de cette Compétence, une seule sera activée. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
             `Place également un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours.`,
             `Les buffs placés par cette compétence ne peuvent pas être retirés.`,
           ],
@@ -53,7 +53,7 @@ type: "Defense",
           img: "assets/passif1.webp",
           name: "Chevalier ultime [P]",
           description: `
-            Les alliés sous buff ${BUFFS.SHIELD} reçoivent 10% de dégâts en moins. Si plusieurs Champions de l’équipe disposent de cette Compétence, une seule sera activée.
+            Les alliés sous buff ${BUFFS.SHIELD} reçoivent 10% de dégâts en moins. Si plusieurs Champions de l’équipe disposent de cette Compétence, une seule sera activée. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           `,
           factions: [
             `Les alliés sous buff ${BUFFS.SHIELD} sont immunisés contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} et ${DEBUFFS.PETRIFICATION}`,

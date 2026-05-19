@@ -45,7 +45,7 @@ const championData = {
             (s'accumule jusqu'a 30%).<br><br>
             Chaque frappe soigne également ce Champion a hauteur de 30% des degats infliges.
           `,
-          damage: "1.5*DEF + 0.1*(PV MAX ennemis)",
+          damage: "1.5*DEF + 0.1*PV MAX Ennemi",
           cooldown: 5,
           levelInfo: [
             "Dégâts +10%",

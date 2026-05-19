@@ -57,7 +57,7 @@ const championData = {
 			<span class='gbt'>Effet Actif</span><br><br>
 			Des qu'un allie est sur le point de recevoir un coup fatal, ce Champion empeche la mort de cet allie et le garde en vie avec 1 PV. Egalise ensuite les PV de cet allie.
 			Le niveau de PV de cet allie sera ramene au niveau de PV moyen de l'equipe.
-			Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+			Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           `,
           isPassive: true,
           cooldown: 6,

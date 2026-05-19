@@ -32,7 +32,7 @@ Remplit le Compteur de Tour de tous les allies de 20%.`,
           img: "assets/sort4.webp",
           name: "Heritiere de la Gorgone [P]",
           description: `Les allies infligent 10% de degats supplementaires aux ennemis affliges de debuffs places par cette Championne.${RETURN}
-Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Championne si ce Championne specifique est mort.`,
+Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.`,
           isPassive: true,
         }
   ],

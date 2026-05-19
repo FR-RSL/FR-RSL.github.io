@@ -72,7 +72,7 @@ Si cette attaque tue un ennemi, accorde un Tour supplementaire.`,
           description: `Attaque 3 fois un ennemi. Utilisera toujours cette competence au lieu de la competence par defaut lors d'une contre-attaque. Cette competence ne peut pas etre bloquee par les debuffs ${DEBUFFS.LOCK_ACTIVE}.${RETURN}${RETURN}
 Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. De plus, ignore les buffs ${BUFFS.UNKILLABLE} si la cible se trouve sous debuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
 Remplit le Compteur de Tour de cette Championne de 15% pour chaque frappe critique.`,
-          damage: "1.7*ATQ +  (0.05*PV MAX ennemi)",
+          damage: "1.7*ATQ + 0.05*PV MAX Ennemi",
           cooldown: 3,
           levelInfo: ["Dégâts +20%"],
         },

@@ -58,10 +58,10 @@ const championData = {
 				<span class='gbt'>Petrification</span> ou
 				<span class='gbt'>Mouton</span>.
 				Il est impossible de resister a cet effet et de le bloquer.
-				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
+				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.  Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.<br><br>
 				A la fin du tour de cette Championne, remplit les Compteurs de Tour de tous les alliés de 10% et de 2%
 				supplémentaires pour chaque débuff sur cette Championne.
-				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.  Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
         	`,
           	isPassive: true,
         },

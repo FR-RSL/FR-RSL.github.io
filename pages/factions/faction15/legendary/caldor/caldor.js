@@ -56,7 +56,7 @@ type: "Attaque",
             Ignorera 20% de la RES de la cible pour chaque buff <span class='gbt'>Soins continus</span>
             sur ce Champion.
           `,
-          damage: "5*ATQ | PV MAX ennemis*(0.2 + 0.1*Poisons)",
+          damage: "5*ATQ | PV MAX Ennemi*(0.2 + 0.1*Poisons)",
           cooldown: 4,
           factions: [
             `Retire tous les buffs de tous les ennemis si la cible initiale est tuee.

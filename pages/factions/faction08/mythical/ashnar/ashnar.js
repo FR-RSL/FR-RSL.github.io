@@ -68,7 +68,7 @@ const championForms = {
               ses PV MAX et sa DEF de 5% (s'accumule jusqu'a 25% pour les deux Formes et ne se reinitialisera pas).<br><br>
               Les débuffs <span class='gbt'>Brulure de PV</span> places sur les alliés les soignent au lieu de leur infliger des degats.<br><br>
               Les alliés infligent 3% de degats en plus pour chaque débuff <span class='gbt'>Brulure de PV</span> actif.
-              Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+              Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
            `,
             isPassive: true,
           },

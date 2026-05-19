@@ -41,7 +41,7 @@ const championData = {
         `Ignorera 15% de la DEF de la cible pour chaque <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> dans l'équipe. Ne compte pas ce Champion.`,
         `Augmente les dégâts infligés par cette compétence proportionnellement aux PV manquants de ce Champion.`,
         `Active cette compétence dès que les PV d'un allié tombent sous 50%. Se produit une fois par compétence.
-        Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée`
+        Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`
       ],
       levelInfo: [
         "Dégâts +10%",

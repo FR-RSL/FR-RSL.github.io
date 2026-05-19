@@ -71,7 +71,7 @@ type: "Defense",
 				de placer un débuff <span class='gbt'>Brulure de PV</span> sur cet ennemi pendant 2 tours.<br><br>
 				Si un ennemi est deja afflige d'un débuff <span class='gbt'>Brulure de PV</span>, a au lieu de ca 50%
 				de chances de l'activer instantanement.<br><br>
-				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           	`,
           	factions: [
             `
@@ -80,7 +80,7 @@ type: "Defense",
             `,
             `
             	Chaque fois qu'un débuff <span class='gbt'>Brulure de PV</span> s'active sur un ennemi,
-				ce Champion gagne 5% d'Ignorer la DEF (s'accumule jusqu'a 100%).
+				ce Champion gagne 5% d'Ignorer la DEF (s'accumule jusqu'a 100%).<br>Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
             `,
             `
             	Place un débuff <span class='gbt'>Blocage de reanimation</span> sur les ennemis tues alors qu'ils etaient

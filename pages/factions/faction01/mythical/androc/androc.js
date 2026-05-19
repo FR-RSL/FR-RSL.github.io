@@ -57,7 +57,7 @@ const championForms = {
             description: `
               Augmente la RES de chaque allie de 10 pour chaque buff sur tous les allies.<br><br>
 			  Les coups critiques infliges par les allies remplissent les Compteurs de Tour de tous les allies de 5%. Se produit une fois par competence.<br><br>
-			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
             `,
             isPassive: true,
           },
@@ -132,7 +132,7 @@ const championForms = {
             description: `
               Augmente la PRE de chaque allie de 10 pour chaque buff sur tous les ennemis.<br><br>
 			  Chaque coup critique inflige par les allies reduit les Compteurs de Tour de tous les ennemis de 5%.<br><br>
-			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
             `,
             isPassive: true,
           },

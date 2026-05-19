@@ -63,9 +63,7 @@ const championData = {
           img: "assets/passif1.webp",
           name: "Roi de jade [P]",
           description: `
-            Augmente de 5% les chances qu'ont tous les alliés d'obtenir un Tour supplémentaire.
-			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
-			Ce Champion inflige 25% de degats en plus lors de Tours supplémentaires.
+            Si un allie a des chances de gagner un Tour supplementaire, augmente ces chances de 5%. Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
           `,
           isPassive: true,
         },

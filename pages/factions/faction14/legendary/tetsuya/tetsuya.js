@@ -65,18 +65,18 @@ const championData = {
       description: `
         Remplit le Compteur de Tour de ce Champion de 15% des qu'un Champion
         ennemi joue un tour. Si plusieurs Champions de l'equipe disposent de
-        cette compétence, une seule sera activee.
+        cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
       `,
       factions: [
         `
         Les effets d'augmentation du Compteur de Tour sur les alliés sont 20% plus efficaces.
         Les effets d'augmentation du Compteur de Tour utilises sur les ennemis sont 20% moins efficaces.
-        Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+        Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
         `,
         `
         Des que ce Champion voit son Compteur de Tour rempli, augmente de 5% les degats
         de sa prochaine attaque. Se reinitialise apres qu'une compétence est utilisee.
-        Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+        Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
         `,
         `
         Tous les alliés sont immunises contre les effets de reduction du Compteur de TOur utilises par les ennemis.

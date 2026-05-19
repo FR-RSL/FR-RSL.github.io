@@ -60,7 +60,7 @@ const championData = {
           description: `
             Place un buff <span class='gbt'>Blocage des Degats</span> sur tous les alliés pendant 1 tour
 			au debut de la Manche et chaque fois que les PV de cette Championne tombent sous 50%.<br><br>
-			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
           `,
           isPassive: true,
         },

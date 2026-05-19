@@ -30,7 +30,7 @@ Place sur tous les allies un buff ${BUFFS.SHIELD} equivalent a 30% des PV MAX de
           img: "assets/sort4.webp",
           name: "Specialiste des ombres [P]",
           description: `Tous les effets de remplissage du Compteur de Tour utilises par les ennemis sont 30% moins efficaces. Si <span class="gold-t">Solanar l'etincelant</span> se trouve dans la meme equipe, remplit le Compteur de Tour de cette Championne de 30% de l'effet de remplissage du Compteur de Tour utilise par l'ennemi. Ne compte que les effets de remplissage du Compteur de Tour appliques par des competences.${RETURN}${RETURN}
- Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Championne si ce Championne specifique est mort.`,
+ Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.`,
           isPassive: true,
         }
   ],

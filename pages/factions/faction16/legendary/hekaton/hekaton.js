@@ -45,7 +45,6 @@ Ces degats bruts ignorent les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${
 
 Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
 Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
-          damage: "(0.02*PV MAX ennemi * Nombre de buffs) | 0.03*PV MAX ennemi",
           isPassive: true,
         }
   ],

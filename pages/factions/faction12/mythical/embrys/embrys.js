@@ -160,7 +160,7 @@ const championForms = {
               sur tous les autres ennemis. Il est impossible de resister aux piles de <span class='gbt'>Necrose</span>
               et de les bloquer. Les piles de <span class='gbt'>Necrose</span> ne peuvent etre retirees qu'en ranimant des alliés morts.
               Cet effet ne fonctionne pas contre les Boss et leurs sbires.<br><br>
-              Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
+              Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.<br><br>
               <span class='gbt'>Effet Actif</span><br><br>
               Si ce Champion est en passe d'etre tue par un coup fatal, anticipe ce Coup
               et place instantanement un buff <span class='gbt'>Ranimation apres la Mort</span> d'1 tour 

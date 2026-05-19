@@ -141,8 +141,7 @@ const championForms = {
             name: "Reveil cryomantique [P]",
             description: `
               <span class='gbt'>Effet Passif</span><br><br>
-			  Les alliés affliges d'un débuff <span class='gbt'>Gel</span> recoivent 90% de degats en mois.
-			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.<br><br>
+			  Les alliés affliges d'un débuff <span class='gbt'>Gel</span> recoivent 90% de degats en moins.<br><br>
 			  <span class='gbt'>Effet Actif</span><br><br>
 			  Une fois par Manche, ranime chaque allié, dont cette Championne, avec 100% de PV.
 			  Place un débuff <span class='gbt'>Gel</span> sur l'allié ranime pendant 1 tour.

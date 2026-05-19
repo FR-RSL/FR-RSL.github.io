@@ -61,7 +61,7 @@ const championForms = {
               Tous les 7 tours, equilibre les PV de tous les alliés.
 			  Le niveau de PV ce cette Championne sera ramene au niveau de PV moyen de l'equipe.<br><br>
 			  Les alliés recevront 1% de degats en moins par tranche de 2% de PV perdus (s'accumule jusqu'a 25%).
-			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
             `,
             isPassive: true,
           },
@@ -141,7 +141,7 @@ const championForms = {
           description: `
             Cette Championne est immunisee contre les débuffs <span class='gbt'>Blocage des compétences Actives</span>.<br><br>
 			Lorsque les alliés attaquent, leurs degats seront augmentes de 25% du Compteur de Tour actuel de leur cible.
-			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
+			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
           `,
             isPassive: true,
           },

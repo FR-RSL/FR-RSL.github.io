@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <script>if(!sessionStorage.getItem('admin_token')){window.location.replace('index.html')}</script>
     <style>
+        /* ── Base ── */
         .admin-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem; position: relative; z-index: 10; }
         .admin-topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
         .admin-topbar h1 { font-size: 1.6rem; margin: 0; background: linear-gradient(135deg, var(--text-light), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -17,78 +18,86 @@
         .btn { padding: 0.55rem 1.2rem; border-radius: 2px; border: none; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; font-family: inherit; }
         .btn-primary { background: var(--primary); color: #fff; }
         .btn-primary:hover { background: var(--primary-dark); }
-        .btn-danger { background: rgba(229,57,53,0.2); color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
-        .btn-danger:hover { background: rgba(229,57,53,0.35); }
-        .btn-ghost { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
-        .btn-ghost:hover { color: var(--text-light); }
-        .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
+        .btn-danger  { background: rgba(229,57,53,0.2);  color: #ef5350; border: 1px solid rgba(229,57,53,0.3); }
+        .btn-danger:hover  { background: rgba(229,57,53,0.35); }
+        .btn-ghost   { background: var(--glass-bg); color: var(--text-muted); border: 1px solid var(--glass-border); }
+        .btn-ghost:hover   { color: var(--text-light); }
         .btn-success { background: rgba(6,255,165,0.15); color: #06ffa5; border: 1px solid rgba(6,255,165,0.3); }
         .btn-success:hover { background: rgba(6,255,165,0.25); }
+        .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
         .status-bar { padding: 0.65rem 1.2rem; border-radius: 2px; font-size: 0.85rem; font-weight: 500; margin-bottom: 1.5rem; display: none; }
         .status-bar.info    { background: rgba(68,96,255,0.15);  color: #818cf8; border: 1px solid rgba(68,96,255,0.3);  display: flex; align-items: center; gap: 0.5rem; }
         .status-bar.success { background: rgba(6,255,165,0.12);  color: #06ffa5; border: 1px solid rgba(6,255,165,0.3);  display: flex; align-items: center; gap: 0.5rem; }
         .status-bar.error   { background: rgba(229,57,53,0.15);  color: #ef5350; border: 1px solid rgba(229,57,53,0.3);  display: flex; align-items: center; gap: 0.5rem; }
-        .admin-layout { display: grid; grid-template-columns: 1fr 380px; gap: 1.5rem; align-items: start; }
+        /* ── Category badges ── */
+        .article-cat-badge { font-size: 0.67rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 2px; text-transform: uppercase; }
+        .cat-Champions   { background: rgba(255,183,0,0.15);  color: #ffb700; }
+        .cat-Factions    { background: rgba(68,96,255,0.15);  color: #818cf8; }
+        .cat-Equipement  { background: rgba(16,185,129,0.15); color: #34d399; }
+        .cat-Guide       { background: rgba(139,92,246,0.15); color: #a78bfa; }
+        .cat-Mise-a-jour { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        /* ── Vue liste ── */
         .articles-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; backdrop-filter: blur(12px); }
         .panel-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--glass-border); }
         .panel-header h2 { font-size: 1rem; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 0.5rem; }
         .article-count { background: rgba(68,96,255,0.2); color: #818cf8; border-radius: 2px; padding: 0.1rem 0.55rem; font-size: 0.75rem; font-weight: 700; }
         .article-list { padding: 0.8rem; }
-        .article-item { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1rem; border-radius: 2px; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; }
+        .article-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border-radius: 2px; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; }
         .article-item:hover { background: rgba(255,255,255,0.04); border-color: var(--glass-border); }
-        .article-item.selected { background: rgba(68,96,255,0.1); border-color: rgba(68,96,255,0.3); }
         .article-item-info { flex: 1; min-width: 0; }
-        .article-item-title { font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .article-item-meta { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem; }
+        .article-item-title { font-size: 0.95rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .article-item-meta { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.25rem; flex-wrap: wrap; }
         .article-item-date { font-size: 0.75rem; color: var(--text-muted); }
-        .article-cat-badge { font-size: 0.67rem; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: 2px; text-transform: uppercase; }
-        .cat-Champions    { background: rgba(255,183,0,0.15);  color: #ffb700; }
-        .cat-Factions     { background: rgba(68,96,255,0.15);  color: #818cf8; }
-        .cat-Equipement   { background: rgba(16,185,129,0.15); color: #34d399; }
-        .cat-Guide        { background: rgba(139,92,246,0.15); color: #a78bfa; }
-        .cat-Mise-a-jour  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .article-item-slug { font-size: 0.71rem; color: var(--text-muted); margin-top: 0.15rem; opacity: 0.55; font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .article-item-actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
-        .form-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; backdrop-filter: blur(12px); position: sticky; top: 1rem; }
-        .form-panel-header { padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--glass-border); }
-        .form-panel-header h2 { font-size: 1rem; font-weight: 700; margin: 0; }
-        .form-body { padding: 1.2rem 1.5rem; }
-        .field { margin-bottom: 1rem; }
-        .field label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.45rem; }
-        .field input, .field select, .field textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.9rem; border-radius: 2px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.25s; }
-        .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--primary); }
-        .field select option { background: #1a1d2e; }
-        .field textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
-        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-        .form-actions { display: flex; gap: 0.7rem; padding: 1rem 1.5rem 1.5rem; }
-        @media (max-width: 900px) { .admin-layout { grid-template-columns: 1fr; } .form-panel { position: static; } }
-        @media (max-width: 600px) { .article-item-actions { display: none; } .field-row { grid-template-columns: 1fr; } }
+        /* ── Vue éditeur ── */
+        .editor-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; backdrop-filter: blur(12px); overflow: hidden; }
+        .editor-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--glass-border); flex-wrap: wrap; gap: 0.75rem; }
+        .editor-header h2 { font-size: 1.05rem; font-weight: 700; margin: 0; }
+        .editor-header-actions { display: flex; gap: 0.7rem; align-items: center; }
+        .editor-meta { padding: 1.5rem; border-bottom: 1px solid var(--glass-border); display: flex; flex-direction: column; gap: 1.1rem; }
+        .editor-row { display: flex; gap: 1rem; align-items: flex-start; }
+        .editor-field { display: flex; flex-direction: column; gap: 0.4rem; }
+        .editor-field.grow { flex: 1; min-width: 0; }
+        .editor-field.w240 { width: 240px; flex-shrink: 0; }
+        .editor-field.w200 { width: 200px; flex-shrink: 0; }
+        .editor-field label { font-size: 0.77rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+        .editor-field label small { font-size: 0.72rem; color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; opacity: 0.8; }
+        .editor-field input, .editor-field select, .editor-field textarea { width: 100%; box-sizing: border-box; padding: 0.7rem 0.9rem; border-radius: 2px; border: 2px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.25s; }
+        .editor-field input:focus, .editor-field select:focus, .editor-field textarea:focus { border-color: var(--primary); }
+        .editor-field select option { background: #1a1d2e; }
+        .editor-field textarea { resize: vertical; min-height: 100px; line-height: 1.55; }
+        .slug-preview { font-size: 0.72rem; color: var(--primary); font-family: monospace; padding: 0.3rem 0.6rem; background: rgba(68,96,255,0.07); border-radius: 2px; border: 1px solid rgba(68,96,255,0.2); word-break: break-all; display: none; }
         /* ── Blocks editor ── */
-        .form-body { overflow-y: auto; max-height: calc(100vh - 200px); }
-        .blocks-section { border-top: 1px solid var(--glass-border); padding-top: 1rem; margin-top: 0.25rem; }
-        .blocks-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
-        .blocks-section-title { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; }
-        .add-block-btns { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-        .btn-block-type { font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-muted); cursor: pointer; transition: all 0.2s; font-family: inherit; }
-        .btn-block-type:hover { color: var(--text-light); border-color: var(--primary); }
-        .blocks-list { display: flex; flex-direction: column; gap: 0.55rem; max-height: 320px; overflow-y: auto; padding-right: 2px; }
-        .block-item { border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; }
-        .block-item-header { display: flex; align-items: center; justify-content: space-between; padding: 0.38rem 0.7rem; background: rgba(255,255,255,0.03); }
-        .block-type-pill { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; padding: 0.12rem 0.48rem; border-radius: 2px; }
+        .editor-blocks { padding: 1.5rem; }
+        .editor-blocks-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.6rem; }
+        .editor-blocks-title { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; }
+        .add-block-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .btn-block-type { font-size: 0.82rem; padding: 0.4rem 0.95rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-muted); cursor: pointer; transition: all 0.2s; font-family: inherit; font-weight: 600; }
+        .btn-block-type:hover { color: var(--text-light); border-color: var(--primary); background: rgba(68,96,255,0.08); }
+        .blocks-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .block-item { border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; transition: border-color 0.2s; }
+        .block-item:focus-within { border-color: rgba(68,96,255,0.45); }
+        .block-item-header { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 1rem; background: rgba(255,255,255,0.035); }
+        .block-type-pill { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 2px; }
         .type-text     { background: rgba(255,255,255,0.1);  color: var(--text-muted); }
         .type-heading  { background: rgba(68,96,255,0.2);    color: #818cf8; }
         .type-champion { background: rgba(255,183,0,0.2);    color: #ffb700; }
         .type-kit      { background: rgba(16,185,129,0.2);   color: #34d399; }
-        .block-btns { display: flex; align-items: center; gap: 0.15rem; }
-        .block-btns button { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.82rem; padding: 0.15rem 0.35rem; border-radius: 2px; transition: all 0.15s; }
+        .block-btns { display: flex; align-items: center; gap: 0.2rem; }
+        .block-btns button { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.88rem; padding: 0.2rem 0.45rem; border-radius: 2px; transition: all 0.15s; }
         .block-btns button:hover:not(:disabled) { color: var(--text-light); background: rgba(255,255,255,0.08); }
-        .block-btns button:disabled { opacity: 0.25; cursor: default; }
+        .block-btns button:disabled { opacity: 0.2; cursor: default; }
         .block-btn-del:hover:not(:disabled) { color: #ef5350 !important; background: rgba(229,57,53,0.1) !important; }
-        .block-item-body { padding: 0.6rem 0.7rem; display: flex; flex-direction: column; gap: 0.3rem; }
-        .block-item-body input, .block-item-body textarea { width: 100%; box-sizing: border-box; padding: 0.42rem 0.65rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.83rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+        .block-item-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+        .block-item-body input, .block-item-body textarea { width: 100%; box-sizing: border-box; padding: 0.65rem 0.9rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
         .block-item-body input:focus, .block-item-body textarea:focus { border-color: var(--primary); }
-        .block-item-body textarea { min-height: 72px; resize: vertical; line-height: 1.5; }
-        .block-label { font-size: 0.69rem; color: var(--text-muted); }
-        .blocks-empty { text-align: center; color: var(--text-muted); font-size: 0.83rem; padding: 1.2rem; border: 1px dashed var(--glass-border); border-radius: 2px; }
+        .block-item-body textarea { min-height: 120px; resize: vertical; line-height: 1.65; }
+        .block-label { font-size: 0.73rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.3px; }
+        .block-champ-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .blocks-empty { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding: 3rem 1rem; border: 1px dashed var(--glass-border); border-radius: 2px; line-height: 2.2; }
+        @media (max-width: 860px) { .editor-row { flex-direction: column; } .editor-field.w240, .editor-field.w200 { width: 100%; } .block-champ-row { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .article-item-actions { display: none; } }
     </style>
 </head>
 <body>
@@ -109,31 +118,37 @@
             </div>
         </div>
         <div class="status-bar" id="statusBar"></div>
-        <div class="admin-layout">
+
+        <!-- ── Vue : liste ── -->
+        <div id="viewList">
             <div class="articles-panel">
                 <div class="panel-header">
                     <h2>Articles <span class="article-count" id="articleCount">0</span></h2>
-                    <span style="font-size:0.8rem; color:var(--text-muted);">Plus récent en premier</span>
+                    <span style="font-size:0.8rem;color:var(--text-muted);">Plus récent en premier</span>
                 </div>
                 <div class="article-list" id="articleList"></div>
             </div>
-            <div class="form-panel" id="formPanel">
-                <div class="form-panel-header">
+        </div>
+
+        <!-- ── Vue : éditeur ── -->
+        <div id="viewEditor" style="display:none">
+            <div class="editor-panel">
+                <div class="editor-header">
                     <h2 id="formTitle">Nouvel article</h2>
+                    <div class="editor-header-actions">
+                        <button class="btn btn-primary" id="btnSave">💾 Sauvegarder</button>
+                        <button class="btn btn-ghost" id="btnCancel">← Retour à la liste</button>
+                    </div>
                 </div>
-                <div class="form-body">
-                    <input type="hidden" id="editId">
-                    <div class="field">
-                        <label for="fTitle">Titre *</label>
-                        <input type="text" id="fTitle" placeholder="Titre de l'article" maxlength="120">
-                    </div>
-                    <div class="field">
-                        <label for="fExcerpt">Extrait *</label>
-                        <textarea id="fExcerpt" placeholder="Description courte (1-2 phrases)…" maxlength="280"></textarea>
-                    </div>
-                    <div class="field-row">
-                        <div class="field">
-                            <label for="fCategory">Catégorie *</label>
+                <input type="hidden" id="editId">
+                <div class="editor-meta">
+                    <div class="editor-row">
+                        <div class="editor-field grow">
+                            <label for="fTitle">Titre *</label>
+                            <input type="text" id="fTitle" placeholder="Titre de l'article" maxlength="120">
+                        </div>
+                        <div class="editor-field w240">
+                            <label for="fCategory">Catégorie</label>
                             <select id="fCategory">
                                 <option value="Champions">Champions</option>
                                 <option value="Factions">Factions</option>
@@ -142,36 +157,40 @@
                                 <option value="Mise à jour">Mise à jour</option>
                             </select>
                         </div>
-                        <div class="field">
-                            <label for="fDate">Date *</label>
+                        <div class="editor-field w200">
+                            <label for="fDate">Date</label>
                             <input type="date" id="fDate">
                         </div>
                     </div>
-                    <div class="field">
-                        <label for="fSlug">Slug de l'article (page dédiée)</label>
-                        <input type="text" id="fSlug" placeholder="mon-article-2026" maxlength="80">
-                        <small style="font-size:0.72rem;color:var(--text-muted);margin-top:0.3rem;display:block;">Génère automatiquement <code style="font-size:0.85em;">pages/articles/{slug}.html</code>. Laissez vide pour un lien manuel.</small>
-                    </div>
-                    <div class="field" id="fieldLink">
-                        <label for="fLink">Lien manuel <span style="font-weight:400;opacity:0.6;">(si pas de slug)</span></label>
-                        <input type="text" id="fLink" placeholder="pages/factions/faction01/hub.html">
-                    </div>
-                    <div class="blocks-section">
-                        <div class="blocks-section-header">
-                            <span class="blocks-section-title">Contenu de l'article</span>
-                            <div class="add-block-btns">
-                                <button type="button" class="btn-block-type" data-block-type="text">+ Texte</button>
-                                <button type="button" class="btn-block-type" data-block-type="heading">+ Titre</button>
-                                <button type="button" class="btn-block-type" data-block-type="champion">+ Champion</button>
-                                <button type="button" class="btn-block-type" data-block-type="kit">+ Image kit</button>
+                    <div class="editor-row">
+                        <div class="editor-field grow">
+                            <label for="fExcerpt">Extrait * <small>— affiché sur la homepage</small></label>
+                            <textarea id="fExcerpt" placeholder="Description courte visible sur la homepage (1-2 phrases)…" maxlength="280"></textarea>
+                        </div>
+                        <div class="editor-field w240" style="display:flex;flex-direction:column;gap:0.8rem;">
+                            <div class="editor-field">
+                                <label for="fSlug">Slug <small>— génère pages/articles/{slug}.html</small></label>
+                                <input type="text" id="fSlug" placeholder="mon-article-2026" maxlength="80">
+                                <div class="slug-preview" id="slugPreview"></div>
+                            </div>
+                            <div class="editor-field">
+                                <label for="fLink">Lien manuel <small>— si pas de slug</small></label>
+                                <input type="text" id="fLink" placeholder="pages/factions/...">
                             </div>
                         </div>
-                        <div class="blocks-list" id="blocksList"></div>
                     </div>
                 </div>
-                <div class="form-actions">
-                    <button class="btn btn-primary" id="btnSave" style="flex:1;">💾 Sauvegarder</button>
-                    <button class="btn btn-ghost" id="btnCancel">Annuler</button>
+                <div class="editor-blocks">
+                    <div class="editor-blocks-header">
+                        <span class="editor-blocks-title">Contenu de l'article</span>
+                        <div class="add-block-btns">
+                            <button type="button" class="btn-block-type" data-block-type="text">+ Paragraphe</button>
+                            <button type="button" class="btn-block-type" data-block-type="heading">+ Titre</button>
+                            <button type="button" class="btn-block-type" data-block-type="champion">+ Champion</button>
+                            <button type="button" class="btn-block-type" data-block-type="kit">+ Image kit</button>
+                        </div>
+                    </div>
+                    <div class="blocks-list" id="blocksList"></div>
                 </div>
             </div>
         </div>
@@ -202,6 +221,10 @@
         let editingId = null;
         let currentBlocks = [];
         let pendingHtmlFiles = {};
+        function showView(view) {
+            document.getElementById('viewList').style.display   = view === 'list'   ? '' : 'none';
+            document.getElementById('viewEditor').style.display = view === 'editor' ? '' : 'none';
+        }
         function showStatus(type, msg) {
             const el = document.getElementById('statusBar');
             el.className = 'status-bar ' + type;
@@ -231,6 +254,7 @@
                             <span class="article-cat-badge ${catClass(a.category)}">${escHtml(a.category)}</span>
                             <span class="article-item-date">${formatDate(a.date)}</span>
                         </div>
+                        ${a.slug ? `<div class="article-item-slug">pages/articles/${escHtml(a.slug)}.html</div>` : ''}
                     </div>
                     <div class="article-item-actions">
                         <button class="btn btn-ghost btn-sm" data-action="edit" data-id="${a.id}">✏️</button>
@@ -252,18 +276,25 @@
                 });
             });
         }
-        function clearForm() {
+        function clearFormFields() {
             editingId = null;
-            document.getElementById('editId').value = '';
-            document.getElementById('fTitle').value = '';
-            document.getElementById('fExcerpt').value = '';
+            document.getElementById('editId').value    = '';
+            document.getElementById('fTitle').value    = '';
+            document.getElementById('fExcerpt').value  = '';
             document.getElementById('fCategory').value = 'Champions';
-            document.getElementById('fDate').value = new Date().toISOString().split('T')[0];
-            document.getElementById('fSlug').value = '';
-            document.getElementById('fLink').value = '';
+            document.getElementById('fDate').value     = new Date().toISOString().split('T')[0];
+            document.getElementById('fSlug').value     = '';
+            document.getElementById('fLink').value     = '';
             document.getElementById('formTitle').textContent = 'Nouvel article';
+            const sp = document.getElementById('slugPreview');
+            if (sp) { sp.style.display = 'none'; sp.textContent = ''; }
+            delete document.getElementById('fSlug').dataset.manual;
             currentBlocks = [];
             renderBlockEditor();
+        }
+        function clearForm() {
+            clearFormFields();
+            showView('list');
             renderList();
         }
         function editArticle(id) {
@@ -278,9 +309,12 @@
             document.getElementById('fSlug').value    = a.slug || '';
             document.getElementById('fLink').value    = a.link || '';
             document.getElementById('formTitle').textContent = "Modifier l'article";
+            const sp = document.getElementById('slugPreview');
+            if (sp && a.slug) { sp.style.display = ''; sp.textContent = `→ pages/articles/${a.slug}.html`; }
+            else if (sp) { sp.style.display = 'none'; }
             currentBlocks = JSON.parse(JSON.stringify(a.blocks || []));
             renderBlockEditor();
-            renderList();
+            showView('editor');
         }
         function deleteArticle(id) {
             if (!confirm('Supprimer cet article ?')) return;
@@ -288,7 +322,7 @@
             if (editingId === id) clearForm();
             else renderList();
         }
-        document.getElementById('btnNew').addEventListener('click', clearForm);
+        document.getElementById('btnNew').addEventListener('click', () => { clearFormFields(); showView('editor'); });
         document.getElementById('btnCancel').addEventListener('click', clearForm);
         document.getElementById('btnSave').addEventListener('click', () => {
             const title      = SecurityUtils.sanitizeText(document.getElementById('fTitle').value);
@@ -437,10 +471,16 @@
                 } else if (b.type === 'champion') {
                     body = `<span class="block-label">Nom du champion</span>
                         <input type="text" placeholder="ex: Toshiro" value="${escHtml(b.name||'')}" data-block-update data-idx="${i}" data-key="name">
-                        <span class="block-label">URL de la fiche (depuis la racine)</span>
-                        <input type="text" placeholder="pages/factions/faction14/mythical/toshiro/toshiro.html" value="${escHtml(b.url||'')}" data-block-update data-idx="${i}" data-key="url">
-                        <span class="block-label">Image portrait (optionnel, depuis la racine)</span>
-                        <input type="text" placeholder="assets/images/..." value="${escHtml(b.image||'')}" data-block-update data-idx="${i}" data-key="image">`;
+                        <div class="block-champ-row">
+                            <div>
+                                <span class="block-label">URL de la fiche (depuis la racine du site)</span>
+                                <input type="text" placeholder="pages/factions/.../toshiro.html" value="${escHtml(b.url||'')}" data-block-update data-idx="${i}" data-key="url">
+                            </div>
+                            <div>
+                                <span class="block-label">Image portrait (optionnel)</span>
+                                <input type="text" placeholder="assets/images/..." value="${escHtml(b.image||'')}" data-block-update data-idx="${i}" data-key="image">
+                            </div>
+                        </div>`;
                 } else if (b.type === 'kit') {
                     body = `<span class="block-label">URL de l'image (depuis la racine)</span>
                         <input type="text" placeholder="assets/images/..." value="${escHtml(b.src||'')}" data-block-update data-idx="${i}" data-key="src">
@@ -460,6 +500,13 @@
                 </div>`;
             }).join('');
         }
+        function updateSlugPreview() {
+            const s  = document.getElementById('fSlug').value.trim();
+            const sp = document.getElementById('slugPreview');
+            if (!sp) return;
+            if (s) { sp.style.display = ''; sp.textContent = `→ pages/articles/${s}.html`; }
+            else   { sp.style.display = 'none'; sp.textContent = ''; }
+        }
         function initBlockEditor() {
             document.querySelectorAll('[data-block-type]').forEach(btn => {
                 btn.addEventListener('click', () => addBlock(btn.dataset.blockType));
@@ -478,25 +525,55 @@
                 if (!el) return;
                 updateBlock(parseInt(el.dataset.idx), el.dataset.key, el.value);
             });
+            /* Auto-slug depuis le titre */
+            const titleEl = document.getElementById('fTitle');
+            const slugEl  = document.getElementById('fSlug');
+            titleEl.addEventListener('input', () => {
+                if (!slugEl.dataset.manual) {
+                    slugEl.value = slugify(titleEl.value);
+                    updateSlugPreview();
+                }
+            });
+            slugEl.addEventListener('input', () => {
+                slugEl.dataset.manual = '1';
+                updateSlugPreview();
+            });
         }
         /* ── Génération HTML article ── */
         function buildArticleHtml(article) {
             const root = '../../';
             const dateStr = new Date(article.date + 'T00:00:00').toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
             const catSlug = article.category.replace(/\s+/g,'-').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+            const catColors = {
+                'Champions':   { rgb:'255,183,0',    hex:'#ffb700' },
+                'Factions':    { rgb:'232,121,14',   hex:'#e8790e' },
+                'Équipement':  { rgb:'16,185,129',   hex:'#34d399' },
+                'Guide':       { rgb:'139,92,246',   hex:'#a78bfa' },
+                'Mise à jour': { rgb:'245,158,11',   hex:'#f59e0b' },
+            };
+            const cc = catColors[article.category] || { rgb:'232,121,14', hex:'#e8790e' };
+            const words = (article.blocks||[]).reduce((n,b) => n + ((b.content||b.name||'').split(/\s+/).length), (article.excerpt||'').split(/\s+/).length);
+            const readMin = Math.max(1, Math.round(words / 200));
+
             const blocksHtml = (article.blocks||[]).map(b => {
-                if (b.type === 'text')    return `<p class="art-p">${escHtml(b.content)}</p>`;
-                if (b.type === 'heading') return `<h2 class="art-h2">${escHtml(b.content)}</h2>`;
+                if (b.type === 'text') {
+                    const html = escHtml(b.content).replace(/\n\n+/g, '</p>\n            <p class="art-p">').replace(/\n/g, '<br>');
+                    return `\n            <p class="art-p">${html}</p>`;
+                }
+                if (b.type === 'heading') return `\n            <h2 class="art-h2">${escHtml(b.content)}</h2>`;
                 if (b.type === 'champion') {
-                    const img = b.image ? `<img src="${root}${escHtml(b.image)}" alt="${escHtml(b.name)}" class="champ-img">` : '<div class="champ-img-ph"></div>';
-                    return `<a href="${root}${escHtml(b.url)}" class="art-champ">${img}<div class="champ-info"><span class="champ-name">${escHtml(b.name)}</span><span class="champ-cta">Voir la fiche →</span></div></a>`;
+                    const img = b.image
+                        ? `<img src="${root}${escHtml(b.image)}" alt="${escHtml(b.name)}" class="champ-av">`
+                        : `<div class="champ-av-ph"><span>${escHtml((b.name||'?').charAt(0).toUpperCase())}</span></div>`;
+                    return `\n            <a href="${root}${escHtml(b.url)}" class="art-champ">${img}<div class="champ-info"><span class="champ-name">${escHtml(b.name)}</span><span class="champ-sub">Voir la fiche complète</span></div><span class="champ-arr">\u2192</span></a>`;
                 }
                 if (b.type === 'kit') {
                     const cap = b.alt ? `<figcaption>${escHtml(b.alt)}</figcaption>` : '';
-                    return `<figure class="art-kit"><img src="${root}${escHtml(b.src)}" alt="${escHtml(b.alt||'')}" loading="lazy">${cap}</figure>`;
+                    return `\n            <figure class="art-kit"><img src="${root}${escHtml(b.src)}" alt="${escHtml(b.alt||'')}" loading="lazy">${cap}</figure>`;
                 }
                 return '';
-            }).join('\n        ');
+            }).join('');
+
             return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -507,67 +584,88 @@
     <link rel="shortcut icon" href="${root}assets/images/logos/logo.webp">
     <link rel="stylesheet" href="${root}assets/css/main.css">
     <style>
-        .art-container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; position: relative; z-index: 10; }
-        .art-breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
-        .art-breadcrumb a { color: var(--primary); text-decoration: none; }
-        .art-breadcrumb a:hover { text-decoration: underline; }
-        .art-header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 2rem; }
-        .art-cat { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; }
-        .cat-Champions   { background: rgba(255,183,0,0.15);  color: #ffb700; }
-        .cat-Factions    { background: rgba(68,96,255,0.15);  color: #818cf8; }
-        .cat-Equipement  { background: rgba(16,185,129,0.15); color: #34d399; }
-        .cat-Guide       { background: rgba(139,92,246,0.15); color: #a78bfa; }
-        .cat-Mise-a-jour { background: rgba(245,158,11,0.15); color: #f59e0b; }
-        .art-header h1 { font-size: 2rem; font-weight: 700; margin: 0 0 0.6rem; line-height: 1.25; }
-        .art-date { font-size: 0.85rem; color: var(--text-muted); margin: 0.4rem 0 0; }
-        .art-excerpt { font-size: 1.05rem; color: var(--text-muted); line-height: 1.65; margin: 1rem 0 0; }
-        .art-body { display: flex; flex-direction: column; gap: 1.5rem; }
-        .art-p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin: 0; white-space: pre-wrap; }
-        .art-h2 { font-size: 1.35rem; font-weight: 700; color: var(--text-light); margin: 0; border-left: 3px solid var(--primary); padding-left: 0.75rem; }
-        .art-champ { display: flex; align-items: center; gap: 1.2rem; padding: 1rem 1.25rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; text-decoration: none; transition: all 0.2s; backdrop-filter: blur(8px); }
-        .art-champ:hover { border-color: var(--primary); background: rgba(68,96,255,0.06); transform: translateX(4px); }
-        .champ-img { width: 64px; height: 64px; object-fit: cover; border-radius: 2px; flex-shrink: 0; }
-        .champ-img-ph { width: 64px; height: 64px; background: rgba(255,255,255,0.06); border-radius: 2px; flex-shrink: 0; }
-        .champ-info { display: flex; flex-direction: column; gap: 0.3rem; }
-        .champ-name { font-size: 1rem; font-weight: 700; color: var(--text-light); }
-        .champ-cta  { font-size: 0.82rem; color: var(--primary); }
-        .art-kit { margin: 0; }
-        .art-kit img { width: 100%; border-radius: 2px; border: 1px solid var(--glass-border); }
-        .art-kit figcaption { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem; }
-        .art-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); }
-        .btn-back { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
-        .btn-back:hover { color: var(--text-light); border-color: var(--primary); }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+        /* ── Hero ── */
+        .art-hero {
+            background: linear-gradient(160deg,
+                rgba(${cc.rgb},0.10) 0%,
+                rgba(${cc.rgb},0.18) 45%,
+                rgba(${cc.rgb},0.06) 100%);
+            border-bottom: 1px solid rgba(${cc.rgb},0.22);
+            padding: 3.5rem 1.5rem 3rem;
+            position: relative; z-index: 10;
+        }
+        .art-hero::after {
+            content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
+            background: linear-gradient(90deg, transparent, rgba(${cc.rgb},0.4), transparent);
+        }
+        .art-inner { max-width: 860px; margin: 0 auto; }
+        .art-breadcrumb { display:flex; align-items:center; gap:0.4rem; font-size:0.8rem; color:var(--text-muted); margin-bottom:1.5rem; flex-wrap:wrap; }
+        .art-breadcrumb a { color:var(--primary); text-decoration:none; }
+        .art-breadcrumb a:hover { text-decoration:underline; }
+        .art-cat { display:inline-block; font-size:0.71rem; font-weight:700; padding:0.22rem 0.7rem; border-radius:2px; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:1.1rem; background:rgba(${cc.rgb},0.15); color:${cc.hex}; border:1px solid rgba(${cc.rgb},0.3); }
+        .art-hero h1 { font-family:'Space Mono',monospace; font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:700; line-height:1.2; margin:0 0 1rem; letter-spacing:-0.5px; }
+        .art-meta { display:flex; align-items:center; gap:1rem; font-size:0.83rem; color:var(--text-muted); margin-bottom:1.25rem; flex-wrap:wrap; }
+        .art-meta-item { display:flex; align-items:center; gap:0.3rem; }
+        .art-excerpt { font-size:1.05rem; color:var(--text-muted); line-height:1.7; margin:0; max-width:680px; border-left:3px solid rgba(${cc.rgb},0.5); padding-left:1rem; }
+        /* ── Body ── */
+        .art-content { max-width:860px; margin:0 auto; padding:3rem 1.5rem 4rem; position:relative; z-index:10; }
+        .art-body { display:flex; flex-direction:column; gap:2rem; }
+        .art-p { font-size:1rem; color:var(--text-muted); line-height:1.85; margin:0; }
+        .art-h2 { font-family:'Space Mono',monospace; font-size:1.25rem; font-weight:700; color:var(--text-light); margin:0.5rem 0 0; padding:0.75rem 1rem; background:rgba(${cc.rgb},0.06); border-left:3px solid ${cc.hex}; border-radius:0 2px 2px 0; }
+        /* Champion card */
+        .art-champ { display:flex; align-items:center; gap:1.25rem; padding:1.1rem 1.25rem; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:2px; text-decoration:none; transition:all 0.2s; backdrop-filter:blur(8px); }
+        .art-champ:hover { border-color:rgba(${cc.rgb},0.5); background:rgba(${cc.rgb},0.07); transform:translateX(4px); }
+        .champ-av { width:72px; height:72px; object-fit:cover; border-radius:2px; flex-shrink:0; border:1px solid var(--glass-border); }
+        .champ-av-ph { width:72px; height:72px; background:rgba(${cc.rgb},0.12); border-radius:2px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:'Space Mono',monospace; font-size:1.6rem; font-weight:700; color:${cc.hex}; border:1px solid rgba(${cc.rgb},0.25); }
+        .champ-info { flex:1; display:flex; flex-direction:column; gap:0.3rem; min-width:0; }
+        .champ-name { font-family:'Space Mono',monospace; font-size:1rem; font-weight:700; color:var(--text-light); }
+        .champ-sub  { font-size:0.8rem; color:var(--text-muted); }
+        .champ-arr  { font-size:1.1rem; color:var(--text-muted); flex-shrink:0; transition:all 0.2s; }
+        .art-champ:hover .champ-arr { color:${cc.hex}; transform:translateX(3px); }
+        /* Kit image */
+        .art-kit { margin:0; }
+        .art-kit img { width:100%; border-radius:2px; border:1px solid var(--glass-border); display:block; }
+        .art-kit figcaption { text-align:center; font-size:0.82rem; color:var(--text-muted); margin-top:0.6rem; font-style:italic; }
+        /* Footer */
+        .art-footer { display:flex; align-items:center; justify-content:space-between; padding-top:2rem; border-top:1px solid var(--glass-border); flex-wrap:wrap; gap:1rem; margin-top:1rem; }
+        .btn-back { display:inline-flex; align-items:center; gap:0.5rem; padding:0.65rem 1.25rem; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:2px; color:var(--text-muted); text-decoration:none; font-size:0.88rem; font-weight:600; transition:all 0.2s; }
+        .btn-back:hover { color:var(--text-light); border-color:var(--primary); }
     </style>
 </head>
 <body>
     <div class="particles"></div>
     <header>
         <div class="logo-section">
-            <a href="${root}index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+            <a href="${root}index.html" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;color:inherit;">
                 <img src="${root}assets/images/logos/logo.webp" alt="FR RSL">
-                <h1>FR RSL</h1>
+                <span style="font-weight:700;font-size:1.05rem;letter-spacing:0.5px;">FR RSL</span>
             </a>
         </div>
     </header>
-    <div class="art-container">
-        <nav class="art-breadcrumb">
-            <a href="${root}index.html">Accueil</a>
-            <span>›</span>
-            <span>${escHtml(article.category)}</span>
-            <span>›</span>
-            <span>${escHtml(article.title)}</span>
-        </nav>
-        <header class="art-header">
-            <span class="art-cat cat-${catSlug}">${escHtml(article.category)}</span>
+    <section class="art-hero">
+        <div class="art-inner">
+            <nav class="art-breadcrumb">
+                <a href="${root}index.html">Accueil</a>
+                <span>\u203a</span>
+                <span>${escHtml(article.category)}</span>
+                <span>\u203a</span>
+                <span>${escHtml(article.title)}</span>
+            </nav>
+            <span class="art-cat">${escHtml(article.category)}</span>
             <h1>${escHtml(article.title)}</h1>
-            <p class="art-date">${dateStr}</p>
+            <div class="art-meta">
+                <span class="art-meta-item">\uD83D\uDCC5 ${dateStr}</span>
+                <span class="art-meta-item">\u23F1 ${readMin} min de lecture</span>
+            </div>
             <p class="art-excerpt">${escHtml(article.excerpt)}</p>
-        </header>
-        <div class="art-body">
-        ${blocksHtml}
+        </div>
+    </section>
+    <div class="art-content">
+        <div class="art-body">${blocksHtml}
         </div>
         <div class="art-footer">
-            <a href="${root}index.html" class="btn-back">← Retour à l'accueil</a>
+            <a href="${root}index.html" class="btn-back">\u2190 Retour \u00e0 l\u2019accueil</a>
         </div>
     </div>
     <script src="${root}assets/js/main.js"><\/script>

@@ -96,7 +96,29 @@
         .block-label { font-size: 0.73rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.3px; }
         .block-champ-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
         .blocks-empty { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding: 3rem 1rem; border: 1px dashed var(--glass-border); border-radius: 2px; line-height: 2.2; }
-        @media (max-width: 860px) { .editor-row { flex-direction: column; } .editor-field.w240, .editor-field.w200 { width: 100%; } .block-champ-row { grid-template-columns: 1fr; } }
+        /* ── Champion autocomplete ── */
+        .csearch-wrap { position: relative; }
+        .csearch-inp { width: 100%; box-sizing: border-box; padding: 0.7rem 0.9rem 0.7rem 2.5rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+        .csearch-inp:focus { border-color: var(--primary); }
+        .csearch-wrap::before { content: '🔍'; position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; pointer-events: none; }
+        .csearch-drop { position: absolute; top: calc(100% + 2px); left: 0; right: 0; background: #1a1d2e; border: 1px solid var(--glass-border); border-radius: 2px; z-index: 200; max-height: 280px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .champ-opt { display: flex; align-items: center; gap: 0.75rem; padding: 0.55rem 0.8rem; cursor: pointer; transition: background 0.12s; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .champ-opt:last-child { border-bottom: none; }
+        .champ-opt:hover, .champ-opt.focus { background: rgba(255,255,255,0.07); }
+        .champ-opt-img { width: 38px; height: 38px; object-fit: cover; border-radius: 2px; flex-shrink: 0; border: 1px solid var(--glass-border); }
+        .champ-opt-ph { width: 38px; height: 38px; background: rgba(232,121,14,0.12); border-radius: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--primary); border: 1px solid rgba(232,121,14,0.2); }
+        .champ-opt-info { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
+        .champ-opt-name { font-size: 0.88rem; font-weight: 600; color: var(--text-light); }
+        .champ-opt-faction { font-size: 0.73rem; color: var(--text-muted); }
+        .champ-opt-empty { padding: 0.75rem 1rem; font-size: 0.85rem; color: var(--text-muted); text-align: center; }
+        /* Selected champion card */
+        .csel { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 2px; }
+        .csel-img { width: 52px; height: 52px; object-fit: cover; border-radius: 2px; flex-shrink: 0; border: 1px solid var(--glass-border); }
+        .csel-ph { width: 52px; height: 52px; background: rgba(232,121,14,0.12); border-radius: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; color: var(--primary); border: 1px solid rgba(232,121,14,0.2); }
+        .csel-info { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+        .csel-name { font-size: 0.95rem; font-weight: 700; color: var(--text-light); }
+        .csel-url { font-size: 0.71rem; color: var(--text-muted); font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0.7; }
+        @media (max-width: 860px) { .editor-row { flex-direction: column; } .editor-field.w240, .editor-field.w200 { width: 100%; } }
         @media (max-width: 600px) { .article-item-actions { display: none; } }
     </style>
 </head>
@@ -204,6 +226,7 @@
     </div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/security.js"></script>
+    <script src="../assets/js/champions-index.js"></script>
     <script src="../assets/js/articles.js"></script>
     <script>
     (function () {
@@ -469,18 +492,14 @@
                 } else if (b.type === 'heading') {
                     body = `<input type="text" placeholder="Titre de section…" value="${escHtml(b.content||'')}" data-block-update data-idx="${i}" data-key="content">`;
                 } else if (b.type === 'champion') {
-                    body = `<span class="block-label">Nom du champion</span>
-                        <input type="text" placeholder="ex: Toshiro" value="${escHtml(b.name||'')}" data-block-update data-idx="${i}" data-key="name">
-                        <div class="block-champ-row">
-                            <div>
-                                <span class="block-label">URL de la fiche (depuis la racine du site)</span>
-                                <input type="text" placeholder="pages/factions/.../toshiro.html" value="${escHtml(b.url||'')}" data-block-update data-idx="${i}" data-key="url">
-                            </div>
-                            <div>
-                                <span class="block-label">Image portrait (optionnel)</span>
-                                <input type="text" placeholder="assets/images/..." value="${escHtml(b.image||'')}" data-block-update data-idx="${i}" data-key="image">
-                            </div>
-                        </div>`;
+                    if (b.name && b.url) {
+                        const av = b.image
+                            ? `<img src="${escHtml(b.image)}" class="csel-img" onerror="this.style.display='none'">`
+                            : `<div class="csel-ph">${escHtml(b.name.charAt(0).toUpperCase())}</div>`;
+                        body = `<div class="csel">${av}<div class="csel-info"><span class="csel-name">${escHtml(b.name)}</span><span class="csel-url">${escHtml(b.url)}</span></div><button type="button" class="btn btn-ghost btn-sm" data-block-action="clearchamp" data-idx="${i}">✕ Changer</button></div>`;
+                    } else {
+                        body = `<div class="csearch-wrap"><input type="text" class="csearch-inp" placeholder="Rechercher un champion par nom…" autocomplete="off" data-idx="${i}"><div class="csearch-drop" id="champDrop${i}" style="display:none"></div></div>`;
+                    }
                 } else if (b.type === 'kit') {
                     body = `<span class="block-label">URL de l'image (depuis la racine)</span>
                         <input type="text" placeholder="assets/images/..." value="${escHtml(b.src||'')}" data-block-update data-idx="${i}" data-key="src">
@@ -507,6 +526,40 @@
             if (s) { sp.style.display = ''; sp.textContent = `→ pages/articles/${s}.html`; }
             else   { sp.style.display = 'none'; sp.textContent = ''; }
         }
+        /* ── Champion autocomplete helpers ── */
+        function normStr(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+        function showChampDropdown(idx, query) {
+            const drop = document.getElementById('champDrop' + idx);
+            if (!drop) return;
+            const q = normStr(query.trim());
+            if (!q) { drop.style.display = 'none'; return; }
+            const results = (typeof CHAMPIONS !== 'undefined' ? CHAMPIONS : []).filter(c => normStr(c.name).includes(q)).slice(0, 10);
+            if (!results.length) {
+                drop.innerHTML = '<div class="champ-opt-empty">Aucun champion trouvé</div>';
+            } else {
+                drop.innerHTML = results.map(c => {
+                    const av = c.img
+                        ? `<img src="${escHtml(c.img)}" class="champ-opt-img" onerror="this.style.display='none'">`
+                        : `<div class="champ-opt-ph">${escHtml(c.name.charAt(0).toUpperCase())}</div>`;
+                    return `<div class="champ-opt" data-idx="${idx}" data-name="${escHtml(c.name)}" data-url="${escHtml(c.url)}" data-img="${escHtml(c.img||'')}">${av}<div class="champ-opt-info"><span class="champ-opt-name">${escHtml(c.name)}</span><span class="champ-opt-faction">${escHtml(c.factionName||'')}</span></div></div>`;
+                }).join('');
+            }
+            drop.style.display = '';
+        }
+        function selectChamp(idx, data) {
+            if (!currentBlocks[idx]) return;
+            currentBlocks[idx].name  = data.name  || '';
+            currentBlocks[idx].url   = data.url   || '';
+            currentBlocks[idx].image = data.img   || '';
+            renderBlockEditor();
+        }
+        function clearChampBlock(idx) {
+            if (!currentBlocks[idx]) return;
+            currentBlocks[idx].name  = '';
+            currentBlocks[idx].url   = '';
+            currentBlocks[idx].image = '';
+            renderBlockEditor();
+        }
         function initBlockEditor() {
             document.querySelectorAll('[data-block-type]').forEach(btn => {
                 btn.addEventListener('click', () => addBlock(btn.dataset.blockType));
@@ -519,11 +572,20 @@
                 if (btn.dataset.blockAction === 'delete')    deleteBlock(idx);
                 if (btn.dataset.blockAction === 'moveup')    moveBlock(idx, -1);
                 if (btn.dataset.blockAction === 'movedown')  moveBlock(idx, 1);
+                if (btn.dataset.blockAction === 'clearchamp') clearChampBlock(idx);
+            });
+            /* mousedown instead of click to fire before blur on search input */
+            list.addEventListener('mousedown', e => {
+                const opt = e.target.closest('.champ-opt');
+                if (!opt) return;
+                e.preventDefault();
+                selectChamp(parseInt(opt.dataset.idx), opt.dataset);
             });
             list.addEventListener('input', e => {
                 const el = e.target.closest('[data-block-update]');
-                if (!el) return;
-                updateBlock(parseInt(el.dataset.idx), el.dataset.key, el.value);
+                if (el) { updateBlock(parseInt(el.dataset.idx), el.dataset.key, el.value); return; }
+                const si = e.target.closest('.csearch-inp');
+                if (si) showChampDropdown(parseInt(si.dataset.idx), si.value);
             });
             /* Auto-slug depuis le titre */
             const titleEl = document.getElementById('fTitle');

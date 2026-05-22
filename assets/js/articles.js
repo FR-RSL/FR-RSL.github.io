@@ -29,7 +29,7 @@ const ARTICLES = [
         },
         {
               "type": "kit",
-              "src": "",
+              "src": "assets/images/buffs/skeletor_buff.png",
               "alt": ""
         }
   ],

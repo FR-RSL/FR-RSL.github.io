@@ -25,7 +25,12 @@ const ARTICLES = [
               "type": "champion",
               "name": "Musclor",
               "url": "pages/factions/faction03/legendary/musclor/musclor.html",
-              "image": ""
+              "image": "assets/factions/faction03/legendary/musclor/musclor.html"
+        },
+        {
+              "type": "kit",
+              "src": "",
+              "alt": ""
         }
   ],
   },

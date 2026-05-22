@@ -1,9 +1,34 @@
 /**
  * Système d'articles — FR RSL
- * Généré le 26/04/2026
+ * Généré le 23/05/2026
  */
 
 const ARTICLES = [
+  {
+    id: 6,
+    date: '2026-05-19',
+    title: "Le retour de Musclor & Skeletor",
+    excerpt: "La Collab RAID x MATTEL qui nous avez offert les Musclor et Skeletor est de retour avec un buff pour ce dernier !",
+    category: "Champions",
+    slug: "collabmotums",
+    link: "pages/articles/collabmotums.html",
+    blocks: [
+        {
+              "type": "heading",
+              "content": "test"
+        },
+        {
+              "type": "text",
+              "content": "Test"
+        },
+        {
+              "type": "champion",
+              "name": "Musclor",
+              "url": "pages/factions/faction03/legendary/musclor/musclor.html",
+              "image": ""
+        }
+  ],
+  },
   {
     id: 5,
     date: '2026-04-25',

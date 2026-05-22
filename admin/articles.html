@@ -62,6 +62,33 @@
         .form-actions { display: flex; gap: 0.7rem; padding: 1rem 1.5rem 1.5rem; }
         @media (max-width: 900px) { .admin-layout { grid-template-columns: 1fr; } .form-panel { position: static; } }
         @media (max-width: 600px) { .article-item-actions { display: none; } .field-row { grid-template-columns: 1fr; } }
+        /* ── Blocks editor ── */
+        .form-body { overflow-y: auto; max-height: calc(100vh - 200px); }
+        .blocks-section { border-top: 1px solid var(--glass-border); padding-top: 1rem; margin-top: 0.25rem; }
+        .blocks-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+        .blocks-section-title { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; }
+        .add-block-btns { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .btn-block-type { font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-muted); cursor: pointer; transition: all 0.2s; font-family: inherit; }
+        .btn-block-type:hover { color: var(--text-light); border-color: var(--primary); }
+        .blocks-list { display: flex; flex-direction: column; gap: 0.55rem; max-height: 320px; overflow-y: auto; padding-right: 2px; }
+        .block-item { border: 1px solid var(--glass-border); border-radius: 2px; overflow: hidden; }
+        .block-item-header { display: flex; align-items: center; justify-content: space-between; padding: 0.38rem 0.7rem; background: rgba(255,255,255,0.03); }
+        .block-type-pill { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; padding: 0.12rem 0.48rem; border-radius: 2px; }
+        .type-text     { background: rgba(255,255,255,0.1);  color: var(--text-muted); }
+        .type-heading  { background: rgba(68,96,255,0.2);    color: #818cf8; }
+        .type-champion { background: rgba(255,183,0,0.2);    color: #ffb700; }
+        .type-kit      { background: rgba(16,185,129,0.2);   color: #34d399; }
+        .block-btns { display: flex; align-items: center; gap: 0.15rem; }
+        .block-btns button { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.82rem; padding: 0.15rem 0.35rem; border-radius: 2px; transition: all 0.15s; }
+        .block-btns button:hover:not(:disabled) { color: var(--text-light); background: rgba(255,255,255,0.08); }
+        .block-btns button:disabled { opacity: 0.25; cursor: default; }
+        .block-btn-del:hover:not(:disabled) { color: #ef5350 !important; background: rgba(229,57,53,0.1) !important; }
+        .block-item-body { padding: 0.6rem 0.7rem; display: flex; flex-direction: column; gap: 0.3rem; }
+        .block-item-body input, .block-item-body textarea { width: 100%; box-sizing: border-box; padding: 0.42rem 0.65rem; border-radius: 2px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04); color: var(--text-light); font-size: 0.83rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
+        .block-item-body input:focus, .block-item-body textarea:focus { border-color: var(--primary); }
+        .block-item-body textarea { min-height: 72px; resize: vertical; line-height: 1.5; }
+        .block-label { font-size: 0.69rem; color: var(--text-muted); }
+        .blocks-empty { text-align: center; color: var(--text-muted); font-size: 0.83rem; padding: 1.2rem; border: 1px dashed var(--glass-border); border-radius: 2px; }
     </style>
 </head>
 <body>
@@ -121,8 +148,25 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label for="fLink">Lien (URL relative)</label>
+                        <label for="fSlug">Slug de l'article (page dédiée)</label>
+                        <input type="text" id="fSlug" placeholder="mon-article-2026" maxlength="80">
+                        <small style="font-size:0.72rem;color:var(--text-muted);margin-top:0.3rem;display:block;">Génère automatiquement <code style="font-size:0.85em;">pages/articles/{slug}.html</code>. Laissez vide pour un lien manuel.</small>
+                    </div>
+                    <div class="field" id="fieldLink">
+                        <label for="fLink">Lien manuel <span style="font-weight:400;opacity:0.6;">(si pas de slug)</span></label>
                         <input type="text" id="fLink" placeholder="pages/factions/faction01/hub.html">
+                    </div>
+                    <div class="blocks-section">
+                        <div class="blocks-section-header">
+                            <span class="blocks-section-title">Contenu de l'article</span>
+                            <div class="add-block-btns">
+                                <button type="button" class="btn-block-type" data-block-type="text">+ Texte</button>
+                                <button type="button" class="btn-block-type" data-block-type="heading">+ Titre</button>
+                                <button type="button" class="btn-block-type" data-block-type="champion">+ Champion</button>
+                                <button type="button" class="btn-block-type" data-block-type="kit">+ Image kit</button>
+                            </div>
+                        </div>
+                        <div class="blocks-list" id="blocksList"></div>
                     </div>
                 </div>
                 <div class="form-actions">
@@ -156,6 +200,8 @@
         });
         let articles = JSON.parse(JSON.stringify(ARTICLES));
         let editingId = null;
+        let currentBlocks = [];
+        let pendingHtmlFiles = {};
         function showStatus(type, msg) {
             const el = document.getElementById('statusBar');
             el.className = 'status-bar ' + type;
@@ -213,8 +259,11 @@
             document.getElementById('fExcerpt').value = '';
             document.getElementById('fCategory').value = 'Champions';
             document.getElementById('fDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('fSlug').value = '';
             document.getElementById('fLink').value = '';
             document.getElementById('formTitle').textContent = 'Nouvel article';
+            currentBlocks = [];
+            renderBlockEditor();
             renderList();
         }
         function editArticle(id) {
@@ -226,8 +275,11 @@
             document.getElementById('fExcerpt').value = a.excerpt;
             document.getElementById('fCategory').value= a.category;
             document.getElementById('fDate').value    = a.date;
+            document.getElementById('fSlug').value    = a.slug || '';
             document.getElementById('fLink').value    = a.link || '';
             document.getElementById('formTitle').textContent = "Modifier l'article";
+            currentBlocks = JSON.parse(JSON.stringify(a.blocks || []));
+            renderBlockEditor();
             renderList();
         }
         function deleteArticle(id) {
@@ -239,22 +291,35 @@
         document.getElementById('btnNew').addEventListener('click', clearForm);
         document.getElementById('btnCancel').addEventListener('click', clearForm);
         document.getElementById('btnSave').addEventListener('click', () => {
-            const title    = SecurityUtils.sanitizeText(document.getElementById('fTitle').value);
-            const excerpt  = SecurityUtils.sanitizeText(document.getElementById('fExcerpt').value);
-            const category = document.getElementById('fCategory').value;
-            const date     = document.getElementById('fDate').value;
-            const link     = SecurityUtils.sanitizeUrl(document.getElementById('fLink').value.trim() || '#');
+            const title      = SecurityUtils.sanitizeText(document.getElementById('fTitle').value);
+            const excerpt    = SecurityUtils.sanitizeText(document.getElementById('fExcerpt').value);
+            const category   = document.getElementById('fCategory').value;
+            const date       = document.getElementById('fDate').value;
+            const rawSlug    = document.getElementById('fSlug').value.trim();
+            const slug       = rawSlug ? slugify(rawSlug) : '';
+            const manualLink = SecurityUtils.sanitizeUrl(document.getElementById('fLink').value.trim() || '#');
+            const link       = slug ? `pages/articles/${slug}.html` : manualLink;
+            const blocks     = JSON.parse(JSON.stringify(currentBlocks));
             if (!title || !excerpt || !date) { showStatus('error', 'Veuillez remplir les champs obligatoires (*).'); return; }
+            const articleData = { date, title, excerpt, category, link };
+            if (slug)           { articleData.slug = slug; }
+            if (blocks.length)  { articleData.blocks = blocks; }
             if (editingId !== null) {
                 const idx = articles.findIndex(a => a.id === editingId);
-                if (idx !== -1) articles[idx] = { id: editingId, date, title, excerpt, category, link };
+                if (idx !== -1) articles[idx] = { id: editingId, ...articleData };
             } else {
                 const newId = articles.length > 0 ? Math.max(...articles.map(a => a.id)) + 1 : 1;
-                articles.unshift({ id: newId, date, title, excerpt, category, link });
+                articles.unshift({ id: newId, ...articleData });
+            }
+            if (slug) {
+                const saved = articles.find(a => a.link === link);
+                if (saved) pendingHtmlFiles[`pages/articles/${slug}.html`] = buildArticleHtml(saved);
             }
             articles.sort((a, b) => b.date.localeCompare(a.date));
             clearForm();
-            showStatus('info', 'Article enregistré localement. Cliquez sur « Publier » pour sauvegarder sur GitHub.');
+            showStatus('info', slug
+                ? 'Article enregistré. « Publier » créera la page HTML et mettra à jour articles.js.'
+                : 'Article enregistré localement. Cliquez sur « Publier » pour sauvegarder sur GitHub.');
             const topActions = document.querySelector('.topbar-actions');
             if (!topActions.querySelector('.publish-btn')){
                 const btn = document.createElement('button');
@@ -266,40 +331,63 @@
         });
         async function publishToGitHub() {
             const modal = document.getElementById('commitModal');
+            const msgEl = document.getElementById('commitMsg');
             modal.style.display = 'flex';
             try {
-                const getRes = await fetch(
-                    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}?ref=${GITHUB_BRANCH}`,
-                    { headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' } }
-                );
-                if (!getRes.ok) { const b = await getRes.json().catch(() => ({})); throw new Error(`GitHub (${getRes.status}) : ${b.message || 'Erreur lecture fichier'}`); }
-                const fileData = await getRes.json();
-                const putRes = await fetch(
-                    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FILE_PATH}`,
-                    {
-                        method: 'PUT',
-                        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
-                        body: JSON.stringify({
-                            message: `[Admin] Mise à jour articles — ${new Date().toISOString().split('T')[0]}`,
-                            content: btoa(unescape(encodeURIComponent(buildArticlesJs(articles)))),
-                            sha: fileData.sha,
-                            branch: GITHUB_BRANCH
-                        })
-                    }
-                );
-                if (!putRes.ok) { const err = await putRes.json(); throw new Error(err.message || 'Erreur lors du commit GitHub.'); }
+                msgEl.textContent = 'Mise à jour de articles.js…';
+                await commitFile(FILE_PATH, buildArticlesJs(articles),
+                    `[Admin] Mise à jour articles — ${new Date().toISOString().split('T')[0]}`);
+                const htmlEntries = Object.entries(pendingHtmlFiles);
+                for (const [path, content] of htmlEntries) {
+                    msgEl.textContent = `Génération de ${path.split('/').pop()}…`;
+                    await commitFile(path, content,
+                        `[Admin] Génération article — ${path.split('/').pop().replace('.html', '')}`);
+                }
+                pendingHtmlFiles = {};
                 modal.style.display = 'none';
                 document.querySelector('.publish-btn')?.remove();
-                showStatus('success', 'Articles publiés avec succès sur GitHub !');
+                showStatus('success', htmlEntries.length > 0
+                    ? `articles.js et ${htmlEntries.length} page(s) publiés avec succès !`
+                    : 'Articles publiés avec succès sur GitHub !');
             } catch (err) {
                 modal.style.display = 'none';
                 showStatus('error', err.message);
             }
         }
+        async function commitFile(path, content, message) {
+            const getRes = await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}?ref=${GITHUB_BRANCH}`,
+                { headers: { Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28' } }
+            );
+            let sha = null;
+            if (getRes.ok) {
+                sha = (await getRes.json()).sha;
+            } else if (getRes.status !== 404) {
+                const b = await getRes.json().catch(() => ({}));
+                throw new Error(`GitHub (${getRes.status}) : ${b.message || `Erreur lecture ${path}`}`);
+            }
+            const body = { message, content: btoa(unescape(encodeURIComponent(content))), branch: GITHUB_BRANCH };
+            if (sha) body.sha = sha;
+            const putRes = await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+                { method: 'PUT', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' }, body: JSON.stringify(body) }
+            );
+            if (!putRes.ok) { const err = await putRes.json().catch(() => ({})); throw new Error(err.message || `Erreur commit ${path}`); }
+        }
         function buildArticlesJs(arts) {
-            const rows = arts.map(a => '  {\n' +
-                `    id: ${a.id},\n    date: '${a.date}',\n    title: ${jsStr(a.title)},\n    excerpt: ${jsStr(a.excerpt)},\n    category: ${jsStr(a.category)},\n    link: ${jsStr(a.link)},\n` +
-                '  }');
+            const rows = arts.map(a => {
+                let obj = '  {\n';
+                obj += `    id: ${a.id},\n`;
+                obj += `    date: '${a.date}',\n`;
+                obj += `    title: ${jsStr(a.title)},\n`;
+                obj += `    excerpt: ${jsStr(a.excerpt)},\n`;
+                obj += `    category: ${jsStr(a.category)},\n`;
+                if (a.slug)                    obj += `    slug: ${jsStr(a.slug)},\n`;
+                obj += `    link: ${jsStr(a.link)},\n`;
+                if (a.blocks && a.blocks.length) obj += `    blocks: ${JSON.stringify(a.blocks, null, 6).replace(/\n/g, '\n  ')},\n`;
+                obj += '  }';
+                return obj;
+            });
             return `/**\n * Système d'articles — FR RSL\n * Généré le ${new Date().toLocaleDateString('fr-FR')}\n */\n\n` +
                 `const ARTICLES = [\n${rows.join(',\n')},\n];\n\n` +
                 `function getLatestArticles(n = 3) { return ARTICLES.slice(0, n); }\n` +
@@ -307,7 +395,188 @@
         }
         function jsStr(s){ return '"' + String(s).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\n/g,'\\n') + '"'; }
         function escHtml(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+        /* ── Slug ── */
+        function slugify(str) {
+            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+                .replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').replace(/-+/g,'-').substring(0,80);
+        }
+        /* ── Blocks editor ── */
+        function addBlock(type) {
+            const defaults = {
+                text:     { type:'text',     content:'' },
+                heading:  { type:'heading',  content:'' },
+                champion: { type:'champion', name:'', url:'', image:'' },
+                kit:      { type:'kit',      src:'', alt:'' }
+            };
+            currentBlocks.push({ ...defaults[type] });
+            renderBlockEditor();
+        }
+        function updateBlock(idx, key, value) { if (currentBlocks[idx]) currentBlocks[idx][key] = value; }
+        function deleteBlock(idx) { currentBlocks.splice(idx, 1); renderBlockEditor(); }
+        function moveBlock(idx, dir) {
+            const n = idx + dir;
+            if (n < 0 || n >= currentBlocks.length) return;
+            [currentBlocks[idx], currentBlocks[n]] = [currentBlocks[n], currentBlocks[idx]];
+            renderBlockEditor();
+        }
+        function renderBlockEditor() {
+            const container = document.getElementById('blocksList');
+            if (!container) return;
+            if (!currentBlocks.length) {
+                container.innerHTML = '<div class="blocks-empty">Aucun bloc — utilisez les boutons ci-dessus pour ajouter du contenu.</div>';
+                return;
+            }
+            const labels = { text:'Texte', heading:'Titre', champion:'Champion', kit:'Image kit' };
+            container.innerHTML = currentBlocks.map((b, i) => {
+                const first = i === 0, last = i === currentBlocks.length - 1;
+                let body = '';
+                if (b.type === 'text') {
+                    body = `<textarea placeholder="Contenu du paragraphe…" data-block-update data-idx="${i}" data-key="content">${escHtml(b.content||'')}</textarea>`;
+                } else if (b.type === 'heading') {
+                    body = `<input type="text" placeholder="Titre de section…" value="${escHtml(b.content||'')}" data-block-update data-idx="${i}" data-key="content">`;
+                } else if (b.type === 'champion') {
+                    body = `<span class="block-label">Nom du champion</span>
+                        <input type="text" placeholder="ex: Toshiro" value="${escHtml(b.name||'')}" data-block-update data-idx="${i}" data-key="name">
+                        <span class="block-label">URL de la fiche (depuis la racine)</span>
+                        <input type="text" placeholder="pages/factions/faction14/mythical/toshiro/toshiro.html" value="${escHtml(b.url||'')}" data-block-update data-idx="${i}" data-key="url">
+                        <span class="block-label">Image portrait (optionnel, depuis la racine)</span>
+                        <input type="text" placeholder="assets/images/..." value="${escHtml(b.image||'')}" data-block-update data-idx="${i}" data-key="image">`;
+                } else if (b.type === 'kit') {
+                    body = `<span class="block-label">URL de l'image (depuis la racine)</span>
+                        <input type="text" placeholder="assets/images/..." value="${escHtml(b.src||'')}" data-block-update data-idx="${i}" data-key="src">
+                        <span class="block-label">Légende (optionnel)</span>
+                        <input type="text" placeholder="Kit de compétences de..." value="${escHtml(b.alt||'')}" data-block-update data-idx="${i}" data-key="alt">`;
+                }
+                return `<div class="block-item">
+                    <div class="block-item-header">
+                        <span class="block-type-pill type-${b.type}">${labels[b.type]||b.type}</span>
+                        <div class="block-btns">
+                            <button type="button" ${first?'disabled':''} data-block-action="moveup" data-idx="${i}" title="Monter">↑</button>
+                            <button type="button" ${last?'disabled':''} data-block-action="movedown" data-idx="${i}" title="Descendre">↓</button>
+                            <button type="button" class="block-btn-del" data-block-action="delete" data-idx="${i}" title="Supprimer">🗑</button>
+                        </div>
+                    </div>
+                    <div class="block-item-body">${body}</div>
+                </div>`;
+            }).join('');
+        }
+        function initBlockEditor() {
+            document.querySelectorAll('[data-block-type]').forEach(btn => {
+                btn.addEventListener('click', () => addBlock(btn.dataset.blockType));
+            });
+            const list = document.getElementById('blocksList');
+            list.addEventListener('click', e => {
+                const btn = e.target.closest('[data-block-action]');
+                if (!btn) return;
+                const idx = parseInt(btn.dataset.idx);
+                if (btn.dataset.blockAction === 'delete')    deleteBlock(idx);
+                if (btn.dataset.blockAction === 'moveup')    moveBlock(idx, -1);
+                if (btn.dataset.blockAction === 'movedown')  moveBlock(idx, 1);
+            });
+            list.addEventListener('input', e => {
+                const el = e.target.closest('[data-block-update]');
+                if (!el) return;
+                updateBlock(parseInt(el.dataset.idx), el.dataset.key, el.value);
+            });
+        }
+        /* ── Génération HTML article ── */
+        function buildArticleHtml(article) {
+            const root = '../../';
+            const dateStr = new Date(article.date + 'T00:00:00').toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
+            const catSlug = article.category.replace(/\s+/g,'-').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+            const blocksHtml = (article.blocks||[]).map(b => {
+                if (b.type === 'text')    return `<p class="art-p">${escHtml(b.content)}</p>`;
+                if (b.type === 'heading') return `<h2 class="art-h2">${escHtml(b.content)}</h2>`;
+                if (b.type === 'champion') {
+                    const img = b.image ? `<img src="${root}${escHtml(b.image)}" alt="${escHtml(b.name)}" class="champ-img">` : '<div class="champ-img-ph"></div>';
+                    return `<a href="${root}${escHtml(b.url)}" class="art-champ">${img}<div class="champ-info"><span class="champ-name">${escHtml(b.name)}</span><span class="champ-cta">Voir la fiche →</span></div></a>`;
+                }
+                if (b.type === 'kit') {
+                    const cap = b.alt ? `<figcaption>${escHtml(b.alt)}</figcaption>` : '';
+                    return `<figure class="art-kit"><img src="${root}${escHtml(b.src)}" alt="${escHtml(b.alt||'')}" loading="lazy">${cap}</figure>`;
+                }
+                return '';
+            }).join('\n        ');
+            return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escHtml(article.title)} — FR RSL</title>
+    <meta name="description" content="${escHtml(article.excerpt)}">
+    <link rel="shortcut icon" href="${root}assets/images/logos/logo.webp">
+    <link rel="stylesheet" href="${root}assets/css/main.css">
+    <style>
+        .art-container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; position: relative; z-index: 10; }
+        .art-breadcrumb { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+        .art-breadcrumb a { color: var(--primary); text-decoration: none; }
+        .art-breadcrumb a:hover { text-decoration: underline; }
+        .art-header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 2rem; }
+        .art-cat { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; }
+        .cat-Champions   { background: rgba(255,183,0,0.15);  color: #ffb700; }
+        .cat-Factions    { background: rgba(68,96,255,0.15);  color: #818cf8; }
+        .cat-Equipement  { background: rgba(16,185,129,0.15); color: #34d399; }
+        .cat-Guide       { background: rgba(139,92,246,0.15); color: #a78bfa; }
+        .cat-Mise-a-jour { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .art-header h1 { font-size: 2rem; font-weight: 700; margin: 0 0 0.6rem; line-height: 1.25; }
+        .art-date { font-size: 0.85rem; color: var(--text-muted); margin: 0.4rem 0 0; }
+        .art-excerpt { font-size: 1.05rem; color: var(--text-muted); line-height: 1.65; margin: 1rem 0 0; }
+        .art-body { display: flex; flex-direction: column; gap: 1.5rem; }
+        .art-p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin: 0; white-space: pre-wrap; }
+        .art-h2 { font-size: 1.35rem; font-weight: 700; color: var(--text-light); margin: 0; border-left: 3px solid var(--primary); padding-left: 0.75rem; }
+        .art-champ { display: flex; align-items: center; gap: 1.2rem; padding: 1rem 1.25rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; text-decoration: none; transition: all 0.2s; backdrop-filter: blur(8px); }
+        .art-champ:hover { border-color: var(--primary); background: rgba(68,96,255,0.06); transform: translateX(4px); }
+        .champ-img { width: 64px; height: 64px; object-fit: cover; border-radius: 2px; flex-shrink: 0; }
+        .champ-img-ph { width: 64px; height: 64px; background: rgba(255,255,255,0.06); border-radius: 2px; flex-shrink: 0; }
+        .champ-info { display: flex; flex-direction: column; gap: 0.3rem; }
+        .champ-name { font-size: 1rem; font-weight: 700; color: var(--text-light); }
+        .champ-cta  { font-size: 0.82rem; color: var(--primary); }
+        .art-kit { margin: 0; }
+        .art-kit img { width: 100%; border-radius: 2px; border: 1px solid var(--glass-border); }
+        .art-kit figcaption { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.5rem; }
+        .art-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); }
+        .btn-back { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1.2rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 2px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
+        .btn-back:hover { color: var(--text-light); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    <header>
+        <div class="logo-section">
+            <a href="${root}index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+                <img src="${root}assets/images/logos/logo.webp" alt="FR RSL">
+                <h1>FR RSL</h1>
+            </a>
+        </div>
+    </header>
+    <div class="art-container">
+        <nav class="art-breadcrumb">
+            <a href="${root}index.html">Accueil</a>
+            <span>›</span>
+            <span>${escHtml(article.category)}</span>
+            <span>›</span>
+            <span>${escHtml(article.title)}</span>
+        </nav>
+        <header class="art-header">
+            <span class="art-cat cat-${catSlug}">${escHtml(article.category)}</span>
+            <h1>${escHtml(article.title)}</h1>
+            <p class="art-date">${dateStr}</p>
+            <p class="art-excerpt">${escHtml(article.excerpt)}</p>
+        </header>
+        <div class="art-body">
+        ${blocksHtml}
+        </div>
+        <div class="art-footer">
+            <a href="${root}index.html" class="btn-back">← Retour à l'accueil</a>
+        </div>
+    </div>
+    <script src="${root}assets/js/main.js"><\/script>
+</body>
+</html>`;
+        }
         document.getElementById('fDate').value = new Date().toISOString().split('T')[0];
+        initBlockEditor();
+        renderBlockEditor();
         renderList();
     })();
     </script>

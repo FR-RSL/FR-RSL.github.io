@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Talonrake",
-          description: `Attacks 1 enemy 3 times. Each hit has a 30% chance to extend the duration of all debuffs on the target by 1 turn.`,
-          damage: "1.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Serre-fourche",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
+          damage: "1.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sickle Boomerangs",
-          description: `Attacks all enemies. Has a 75% chance of placing a 30% [Decrease SPD] debuff and a [Leech] debuff on all enemies for 2 turns. <br><br>Also places a 50% [Decrease ACC] debuff on enemies under 2 or more debuffs for 2 turns.`,
-          damage: "3.5*ATK",
+          name: "Boomerangs faucilles",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. 
+
+Place également un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours sur les ennemis affligés de 2 débuffs ou plus.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Plumedart",
-          description: `Attacks all enemies. Before attacking, places a 50% [Increase ACC] buff on all allies for 2 turns.<br><br>Has a 75% chance of stealing all [Block Debuffs] buffs from all enemies. <br><br>If at least 1 [Block Debuffs] buff was stolen from the enemy, places a [Block Debuffs] buff on all allies for 1 turn.`,
-          damage: "4*ATK",
+          name: "Dard de plume",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.
+
+Possède 75 % de chances de voler tous les buffs ${BUFFS.BLOCK_DEBUFFS} dont disposent les ennemis. 
+
+Si au moins 1 buff ${BUFFS.BLOCK_DEBUFFS} a été volé à l'ennemi, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Bird of Prey [P]",
-          description: `This Champion’s C. DMG increases by 1% for every 10 points of ACC they have. <br><br>Grants an Extra Turn after this Champions uses any 3 skills.`,
+          name: "Oiseau de proie [P]",
+          description: `Les DÉG C. de ce Champion augmentent de 1 % par tranche de 10 points de PRÉ qu'il possède. 
+
+Accorde un Tour supplémentaire après que ce Champion utilise 3 compétences, quelles qu'elles soient.`,
           isPassive: true
         }
       ],
@@ -48,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

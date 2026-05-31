@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scar for Life",
-          description: `Attacks 1 enemy. Destroys their MAX HP by 30% of the damage inflicted.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Marqué à Vie",
+          description: `Attaque un ennemi. Détruit ses PV MAX de 30 % des dégâts infligés.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "No Quarter",
-          description: `Attacks 1 enemy 2 times. Damage increases as the target's HP decreases.`,
-          damage: "3*ATK+(1.5*ATK*(1-Current HP %))",
+          name: "Sans pitié",
+          description: `Attaque 2 fois un ennemi. Les dégâts augmentent à mesure que les PV de la cible baissent.`,
+          damage: "3*ATQ+(1.5*ATQ*(1-Current HP %))",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heavy Slam",
-          description: `Attacks 1 enemy. Will ignore 50% of the target's DEF. Destroys their MAX HP by 40% of the damage inflicted.`,
-          damage: "3.3*ATK",
+          name: "Frappe Lourde",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. Détruit ses PV MAX de 40 % des dégâts infligés.`,
+          damage: "3.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 19%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 19%`,
 };

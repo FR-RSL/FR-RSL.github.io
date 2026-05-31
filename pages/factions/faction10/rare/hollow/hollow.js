@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bleed Away",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a 2.5% [Poison] debuff for 2 turns.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          name: "Hémorragie",
+          description: `Attaque un ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Creeping Dark",
-          description: `Attacks 1 enemy 4 times. Each hit decreases the target's Turn Meter and fills this Champion's Turn Meter by 5%.`,
-          damage: "1.2*ATK",
+          name: "Ténèbres Rampantes",
+          description: `Attaque 4 fois un ennemi. Chaque frappe réduit le Compteur de Tours de la cible et remplit de 5 % le Compteur de Tours de ce Champion.`,
+          damage: "1.2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Aether Strike",
-          description: `Attacks 1 enemy. Will ignore 25% of the target's DEF.`,
-          damage: "4.5*ATK",
+          name: "Frappe d'Éther",
+          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible.`,
+          damage: "4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 21%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grab",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Grappin",
+          description: `Attaque 1 ennemi. Place un coup supplémentaire si cette attaque passe en critique.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stomp",
-          description: `Attacks all enemies. Places a 15% [Increase C. RATE] buff on all allies for 1 turn.`,
-          damage: "3.2*ATK",
+          name: "Fouler",
+          description: `Attaque tous les ennemis. Place un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés pendant 1 tour.`,
+          damage: "3.2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rabble",
-          description: `Attacks 1 enemy. Places a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "5.2*ATK",
+          name: "Cohue",
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "5.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

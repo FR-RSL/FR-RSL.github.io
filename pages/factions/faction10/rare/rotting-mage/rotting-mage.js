@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gelid Beam",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Rayon Glacial",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Frost Armaments",
-          description: `Places a 25% [Increase ATK] buff on all allies for 2 turns. Places a 30% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Armements Gelés",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 30 % sur ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mental Overload",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "4.4*ATK",
+          name: "Surcharge Mentale",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 13%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 13%`,
 };

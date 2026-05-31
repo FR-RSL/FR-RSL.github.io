@@ -3,34 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Jagged Knuckles",
-          description: `Attacks 1 enemy. Places a [Shield] buff on this Champion equal to 10% of this Champion's MAX HP for 2 turns. The [Shield]'s value increases by 1% for each [Poison] debuff on the target.<br><br><br>Shield Multiplier: 0.1*HP+(0.01*HP*EffectsAppliedOnRelationTargetCountOfKind(ContinuousDamage_KindId))`,
+          name: "Jointures Dentelées",
+          description: `Attaque un ennemi. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} augmente d'1 % pour chaque débuff ${DEBUFFS.POISON} dont est affligée la cible.`,
           damage: "0.22*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Shield +5%", "Level 4: Damage +10%", "Level 5: Shield +10%"],
+          levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +10%", "Bouclier +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fetid Eruption",
-          description: `Attacks all enemies. Has a 75% chance of decreasing the Turn Meters by 15% of enemies under 1 or more [Poison] debuffs. Also has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns on enemies under 2 or more [Poison] debuffs. Has a 75% chance of placing a [Stun] debuff for 1 turn on enemies under 3 or more [Poison] debuffs.<br><br>[Instantly activates this skill when this Champion is revived by Rian the Conjurer.]`,
+          name: "Éruption Fétide",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 15 % le Compteur de Tour des ennemis souffrant d'1 débuff ${DEBUFFS.POISON} ou plus. Possède également 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les ennemis souffrant de 2 débuffs ${DEBUFFS.POISON} ou plus. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis souffrant de 3 débuffs ${DEBUFFS.POISON} ou plus.
+
+[Active instantanément cette compétence lorsque ce Champion est ranimé par Rian l'Illusionniste.]`,
           damage: "0.24*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Soul Bounty",
-          description: `Places a 25% [Strengthen] buff on all allies for 2 turns and a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.`,
+          name: "Butin d'Âme",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés et un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Call of the Cage [P]",
-          description: `When attacked, has a 50% chance of placing a 5% [Poison] debuff on the attacker for 2 turns. <br><br>Whenever an ally is attacked while under a [Strengthen] buff, has a 50% chance of placing a [Provoke] debuff on the attacker for 1 turn.<br><br>Increases this Champion’s MAX HP by 5% whenever an enemy receives damage from a [Poison] debuff placed by this Champion.<br>Whenever an enemy receives damage from a [Poison] debuff placed by this Champion, also destroys their MAX HP by 5%.<br><br>[Cannot destroy a single Champion's MAX HP by more than 25% in one Battle. Will not destroy Bosses' MAX HP. Cannot increase this Champion's MAX HP by more than 50%.]`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Appel de la Cage [P]",
+          description: `Lorsque le Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours. 
+
+Lorsqu'un allié disposant d'un buff ${BUFFS.STRENGTHEN} se fait attaquer, possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.
+
+Augmente les PV MAX de ce Champion de 5 % dès qu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion.
+Lorsqu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion, détruit également les PV MAX de cet ennemi de 5 %.
+
+[Ne peut pas détruire les PV MAX d'un seul Champion de plus de 25 % lors d'une Bataille. Ne détruira pas les PV MAX d'un Boss. Ne peut pas augmenter les PV MAX de ce Champion de plus de 50 %.]`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -48,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 80`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
 };

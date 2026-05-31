@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hawkstrike",
-          description: `Attacks 1 enemy. Has a 75% chance of stealing 15% of the target’s Turn Meter. <br><br>Also has a 75% chance of applying a [Debuff Spread] effect, taking 2 random debuffs from the target and placing them on all enemies.`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Frappe du faucon",
+          description: `Attaque un ennemi. A 75 % de chances de voler 15 % du Compteur de Tour de la cible. 
+
+A également 75 % de chances d'appliquer un effet de [Propagation de Débuffs], qui prend 2 débuffs aléatoires de la cible et les place sur tous les ennemis.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "The Herald Speaks",
-          description: `Attacks 1 enemy. Before attacking, has a 75% chance of stealing all buffs from the target enemy. Then applies a [Buff Spread] effect, taking all buffs from this Champion and placing them on all allies. <br><br>Places a [Block Buffs] debuff and a [Block Active Skills] debuff on the target for 2 turns.`,
-          damage: "6.4*ATK",
+          name: "Le Chantre parle",
+          description: `Attaque un ennemi. Avant d'attaquer, a 75 % de chances de voler tous les buffs de la cible ennemie. Applique ensuite un effet de [Propagation de Buffs], qui prend tous les buffs sur ce Champion et les place sur tous les alliés. 
+
+Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.LOCK_ACTIVE} sur la cible pendant 2 tours.`,
+          damage: "6.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Booming Voice",
-          description: `Places 1 [Intercept] stack on a target ally. <br><br>Also places a [Block Debuffs] buff and a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Voix retentissante",
+          description: `Place 1 pile d'${BUFFS.INTERCEPT} sur un allié ciblé. 
+
+Place également un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Wings of Victory [P]",
-          description: `At the start of the round, places a 50% [Increase ACC] buff on all allies for 3 turns. <br><br>Whenever a debuff on an enemy is removed, expires, or has its duration decreased, fills this Champion’s Turn Meter by 5%.`,
+          name: "Ailes de victoire [P]",
+          description: `Au début de la manche, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 3 tours. 
+
+Dès qu'un débuff d'un ennemi est retiré, expire ou voit sa durée réduite, remplit le Compteur de Tour de ce Champion de 5 %.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

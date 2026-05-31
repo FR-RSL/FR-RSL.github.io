@@ -3,28 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hexdrinker Scimitar",
-          description: `Attacks 1 enemy. Steals 1 random buff from the target. Also has a 50% chance of stealing another random buff if the target is under 2 or more buffs.`,
+          name: "Cimeterre Avalesort",
+          description: `Attaque un ennemi. Vole 1 buff aléatoire à la cible. Possède également 50 % de chances de voler un autre buff aléatoire si la cible possède 2 buffs ou plus.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pyre Strike",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns. <br><br>Also places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Frappe Bûcher",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+
+Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           damage: "0.22*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +20%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Life Worm",
-          description: `Attacks all enemies. Has an 85% chance of increasing the duration of all [HP Burn] debuffs on all enemies by 1 turn.<br><br>Also has an 85% chance of placing a [Leech] debuff and a [Hex] debuff for 2 turns.`,
+          name: "Ver de Vie",
+          description: `Attaque tous les ennemis. Possède 85 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.
+
+Possède également 85 % de chances de placer un débuff ${DEBUFFS.LEECH} et un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 50`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 50`,
 };

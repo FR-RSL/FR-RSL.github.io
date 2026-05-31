@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Swift Blow",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Coup Véloce",
+          description: `Attaque 2 fois 1 ennemi.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cut Down To Size",
-          description: `Attacks 1 enemy. Removes 2 random buffs from the target.`,
-          damage: "5.2*ATK",
+          name: "Raccourcir",
+          description: `Attaque 1 ennemi. Retire 2 buffs aléatoires de la cible.`,
+          damage: "5.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Purge",
-          description: `Attacks 1 enemy. Enemies killed by this skill cannot be revived.`,
-          damage: "5.6*ATK",
+          description: `Attaque 1 ennemi. Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
+          damage: "5.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Damage +5%", "Level 6: Damage +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 18%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 18%`,
 };

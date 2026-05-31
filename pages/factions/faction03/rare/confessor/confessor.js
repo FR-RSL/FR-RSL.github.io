@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Stern Judgment",
-          description: `Attacks 1 enemy. Has a 15% chance of decreasing the target's Turn Meter by 15%.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Jugement Austère",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de réduire de 15 % le Compteur de Tours de la cible.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blinding Light",
-          description: `Attacks all enemies. Has a 70% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Lumière Aveuglante",
+          description: `Attaque tous les ennemis. Offre 70 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unyielding Fervor",
-          description: `Attacks 1 enemy. Has a 35% chance of granting an Extra Turn.`,
-          damage: "5.9*ATK",
+          name: "Ferveur Inflexible",
+          description: `Attaque 1 ennemi. Possède 35 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "5.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Dungeons by 16%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Donjons de 16%`,
 };

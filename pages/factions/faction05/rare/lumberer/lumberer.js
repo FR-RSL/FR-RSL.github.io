@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gigantic Pulverizers",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Decrease ATK] debuff for 2 turns. Also has a 20% chance of increasing the duration of any [Decrease DEF] debuffs by 1 turn.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Pulvérisateurs géants",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours. Possède également 20 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.DEF}.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flatten",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "6.45*ATK",
+          name: "Aplatir",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "6.45*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Massive Momentum",
-          description: `Places a 15% [Increase C. DMG] buff on this Champion for 2 turns, then attacks all enemies.`,
-          damage: "3.85*ATK",
+          name: "Élan massif",
+          description: `Place un buff ${BUFFS.CRATE} de 15 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis.`,
+          damage: "3.85*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

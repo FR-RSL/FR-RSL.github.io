@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Diabolical Hook",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Crochet Diabolique",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soul Shrivel",
-          description: `Attacks all enemies. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
+          name: "Dessèche Âme",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           damage: "3.2*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Demonic Possession",
-          description: `Places a 60% [Increase DEF] buff on all allies for 2 turns. Fills the Turn Meters of all allies by 20%.`,
+          name: "Possession Démoniaque",
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Remplit le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Back For More [P]",
-          description: `Places a 25% [Strengthen] buff on this Champion for 2 turns whenever their HP drops below 50%.`,
+          name: "Toujours Plus [P]",
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 50 %.`,
           cooldown: 4,
           isPassive: true
         }

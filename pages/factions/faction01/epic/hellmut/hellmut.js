@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Arcane Dynamo",
-          description: `Attacks 1 enemy. Fills this Champion's Turn Meter by 10%. Fills the Turn Meter by 20% if this attack is critical.`,
-          damage: "4.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Dynamo Ésotérique",
+          description: `Attaque un ennemi. Remplit le Compteur de Tour de ce Champion de 10 %. Remplit le Compteur de Tour de 20 % si cette attaque passe en critique.`,
+          damage: "4.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Timeslip",
-          description: `Attacks 1 enemy. Also attacks all other enemies if the first attack is critical. The second hit has a 50% chance of placing a [Stun] debuff for 1 turn. After attacking, decreases the Turn Meters of each enemy without a [Stun] debuff by 20%.`,
-          damage: "3.5*ATK",
+          name: "Saut dans le Temps",
+          description: `Attaque un ennemi. Attaque également tous les autres ennemis si la première attaque passe en critique. La seconde frappe possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Après l'attaque, réduit de 20 % le Compteur de Tour de chaque ennemi ne souffrant pas de débuff ${DEBUFFS.STUN}.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Psychic Guidance",
-          description: `Places a 30% [Increase SPD] buff, a 30% [Increase C. RATE] buff, and a 30% [Increase C. DMG] buff on all allies for 2 turns.`,
+          name: "Aide Psychique",
+          description: `Place un buff ${BUFFS.SPD} de 30 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 17%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 17%`,
 };

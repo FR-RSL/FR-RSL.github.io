@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lover's Barb",
-          description: `Attacks 1 enemy 3 times. Each critical hit will ignore 5% of the target's DEF.`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Pique de l'amoureux",
+          description: `Attaque 3 fois un ennemi. Chaque frappe critique ignorera 5 % de la DÉF de la cible.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rake's Flair",
-          description: `Attacks all enemies.<br><br>Has a 75% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "3.9*ATK",
+          name: "Élégance du ribaud",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "I Fight For Love!",
-          description: `Places a 25% [Increase ATK] and a 15% [Increase C. RATE] buff on this Champion for 2 turns.<br><br>Grants an Extra Turn.`,
+          description: `Places a 25% ${BUFFS.ATK} and a 15% ${BUFFS.CRATE} buff on this Champion for 2 turns.<br><br>Grants an Extra Turn.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vicious Rip",
-          description: `Attacks 1 enemy 2 times. Has a 20% chance of placing an extra hit.`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +5%"],
+          name: "Vicieuse Déchirure",
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de porter un coup supplémentaire.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cry For Blood",
-          description: `Places a 30% [Increase SPD] buff on this Champion for 2 turns. Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Verser le Sang",
+          description: `Place un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours. Place également un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Feral Hunter [P]",
-          description: `Fills this Champion's Turn Meter by 15% on critical hits. Fills this Champion's Turn Meter by 50% if this Champion kills an enemy.`,
+          name: "Chasse Féroce [P]",
+          description: `Remplit de 15 % le Compteur de Tours de ce Champion lors de chaque coup en critique. Remplit de 50 % le Compteur de Tours de ce Champion si ce Champion tue un ennemi.`,
           isPassive: true
         }
       ],
@@ -38,5 +38,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 13%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 13%`,
 };

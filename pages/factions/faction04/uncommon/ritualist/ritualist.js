@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Power Slash",
-          description: `Attacks 1 enemy 2 times. Has a 15% chance of destroying enemy MAX HP by 25% of the damage dealt.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Balafre Puissante",
+          description: `Attaque 2 fois un ennemi. Possède 15 % de chances de détruire les PV MAX des ennemis de 25 % des dégâts infligés.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wrath of Gods",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "6.8*ATK",
+          name: "Courroux des Dieux",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "6.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

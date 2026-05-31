@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hoodoo",
-          description: `Attacks 2 times at random. Has a 15% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Porte-malheur",
+          description: `Attaque 2 fois au hasard. Possède 15 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soul Sizzle",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing two 2.5% [Poison] debuffs for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Grille Âme",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de placer, pendant 2 tours, deux débuffs de ${DEBUFFS.POISON} de 2,5 %.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Envelop",
-          description: `Places a [Shield] buff on all allies equal to 20% of their HP and a 15% [Reflect Damage] buff on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Envelopper",
+          description: `Place un buff de ${BUFFS.SHIELD} sur tous les alliés, équivalent à 20 % de leurs PV, et possède 15% de chances de placer un buff de ${BUFFS.REFLECT_DAM} de 2 tours sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +5%", "Level 5: Shield +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Spirit Ally HP in All Battles by 19%`,
+  description: `Augmente la statistique PV des Alliés Esprit lors de toutes les Batailles de 19%`,
 };

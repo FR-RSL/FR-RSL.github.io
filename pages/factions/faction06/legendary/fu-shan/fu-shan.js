@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Howl",
-          description: `Attacks 1 enemy. Has a 25% chance of placing an extra hit.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +15%"],
+          name: "Mugissement",
+          description: `Attaque un ennemi. Possède 25 % de chances de porter un coup supplémentaire.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Frightful Claws",
-          description: `Attacks all enemies 2 times. Each hit has a 20% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "2*ATK",
+          name: "Griffes Effroyables",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +15%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shred",
-          description: `Attacks 4 times at random. Each hit has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.8*ATK",
+          name: "Déchiqueter",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1", "Level 4: Buff/Debuff Chance +25%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Chances de Buff/Debuff +25%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 24%`,
+  description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
 };

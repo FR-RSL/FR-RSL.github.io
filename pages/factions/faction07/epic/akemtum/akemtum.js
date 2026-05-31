@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Noxious Claws",
-          description: `Attacks 1 enemy 3 times. Each hit has a 40% chance of placing a 5% [Poison] debuff for 2 turns. <br><br>If the target is under a [Hex] debuff, each hit also has a 40% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies.`,
-          damage: "1.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Griffes toxiques",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours. 
+
+Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe possède également 40 % de chances d'appliquer un effet de [Propagation de Débuffs], prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis.`,
+          damage: "1.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Immortal Malison",
-          description: `Attacks all enemies 3 times. Each hit has a 60% chance of increasing the duration of any [Hex] debuffs on enemies by 1 turn. <br><br>If enemies are not under a [Hex] debuff, each hit has a 60% chance of placing a [Hex] debuff for 2 turns.`,
-          damage: "1*ATK",
+          name: "Imprécation immortelle",
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 60 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.HEX} sur les ennemis. 
+
+Si les ennemis ne se trouvent pas sous débuff ${DEBUFFS.HEX}, chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
+          damage: "1*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Hex Blood [P]",
-          description: `Has an 80% chance of inflicting damage from one [Poison] debuff to enemies under a [Hex] debuff whenever their allies receive damage from [Poison] debuffs.`,
+          name: "Sang maudit [P]",
+          description: `Possède 80 % de chances d'infliger les dégâts d'un débuff ${DEBUFFS.POISON} aux ennemis sous débuff ${DEBUFFS.HEX} dès que leurs alliés reçoivent des dégâts des débuffs ${DEBUFFS.POISON}.`,
           damage: "Damage Dealt",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -41,5 +45,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 18%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 18%`,
 };

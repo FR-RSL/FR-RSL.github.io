@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shatter Confidence",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 60% [Decrease DEF] debuff for 2 turns. The chance increases to 50% if the target is under a [Fear] or [True Fear] debuff.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Briser la Confiance",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Les chances passent à 50 % si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bane of Elves",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ACC] debuff for 2 turns and a [True Fear] debuff for 1 turn. Champions from the High Elf and Dark Elf Factions cannot resist these debuffs.`,
-          damage: "4.2*ATK",
+          name: "Fléau des Elfes",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours et un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Les Champions des Factions des Hauts Elfes et Elfes Noirs ne peuvent pas résister à ces débuffs.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Battle Flow",
-          description: `Attacks 1 enemy. Will ignore [Shield] buffs. <br><br>Decreases the cooldown of the Battle Flow skill by 2 turns, fills this Champion's Turn Meter by 30%, and places a 30% [Increase C. DMG] buff on this Champion for 2 turns if this attack kills an enemy.`,
-          damage: "5.9*ATK",
+          name: "Flux de Bataille",
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. 
+
+Réduit le temps de recharge de la compétence Flux de Bataille de 2 tours, remplit le Compteur de Tour de ce Champion de 30 % et place un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si cette attaque tue un ennemi.`,
+          damage: "5.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Healthy Grudge [P]",
-          description: `Heals this Champion by 50% of their MAX HP every time this Champion kills an enemy. <br><br>Also grants an Extra Turn every time this Champions kills an enemy from the High Elf or Dark Elf Factions.<br><br>Heal Multiplier: 0.5*HP`,
+          name: "Saine Rancune [P]",
+          description: `Soigne ce Champion de 50 % de ses PV MAX chaque fois qu'il tue un ennemi. 
+
+Accorde également un Tour Supplémentaire chaque fois que ce Champion tue un ennemi des Factions des Hauts Elfes ou Elfes Noirs.`,
           isPassive: true
         }
       ],

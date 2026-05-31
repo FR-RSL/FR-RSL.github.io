@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Service in Death",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit steals 10% of the target's Turn Meter. Places a [True Fear] debuff for 2 turns if the target’s Turn Meter is fully depleted.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Service dans la mort",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe vole 10 % du Compteur de Tour de la cible. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours si le Compteur de Tour de la cible est totalement vidé.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Unwelcome Guest",
-          description: `Attacks 1 enemy. <br><br>Places a [Petrification] debuff for 1 turn. Has a 75% chance of placing a [True Fear] debuff for 2 turns on all other enemies who are not under a [Fear] or [True Fear] debuff.<br><br>[Passive Effect]<br><br>Activates this skill whenever an enemy under a [Fear] or [True Fear] debuff successfully uses a skill. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
-          damage: "5.5*ATK",
+          name: "Invité importun",
+          description: `Attaque un ennemi. 
+
+Place un débuff ${DEBUFFS.PETRIFICATION} pendant 1 tour. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours sur tous les ennemis qui ne sont pas sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.
+
+${PASSIVE}
+
+Active cette compétence dès qu'un ennemi sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR} utilise une compétence avec succès.. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Spectral Flourish",
-          description: `Attacks all enemies. Before attacking, has a 75% chance of decreasing the duration of all enemy buffs by 3 turns. Will grant an Extra Turn if there are no buffs on the enemy team before the attack.<br><br>Also has a 75% chance of increasing the cooldowns of all enemy skills by 3 turns.`,
-          damage: "4*ATK",
+          name: "Fioriture spectrale",
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de réduire de 3 tours la durée de tous les buffs ennemis. Accordera un Tour supplémentaire s'il n'y a aucun buff sur l'équipe ennemie avant l'attaque.
+
+A également 75 % de chances d'augmenter de 3 tours les temps de recharge de toutes les compétences des ennemis.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Ghost With The Most [P]",
-          description: `Whenever an enemy is revived, places a [True Fear] debuff on that enemy for 2 turns. If there are multiple Champions on the team with this skill, this effect will only activate once. <br><br>Removes any [Stun], [Freeze], [Sleep], [Provoke], [Fear], [True Fear], and [Petrification] debuffs from this Champion before the start of their turn.`,
+          name: "Le meilleur fantôme [P]",
+          description: `Dès qu'un ennemi est ranimé, place un débuff ${DEBUFFS.TRUE_FEAR} sur cet ennemi pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, cet effet ne sera activé qu'une fois. 
+
+Retire les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} et ${DEBUFFS.PETRIFICATION} sur ce Champion avant le début de son tour.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

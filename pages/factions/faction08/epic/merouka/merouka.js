@@ -3,32 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tarfield Affliction",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Affliction de goudron",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "1.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Badlands Witchery",
-          description: `Removes all debuffs from a target ally, then heals them by 50% of their MAX HP.<br><br><br>Heal Multiplier: 0.5*Target Max HP`,
+          name: "Sorcellerie du désert",
+          description: `Retire tous les débuffs sur un allié ciblé, puis le soigne de 50 % de ses PV MAX.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Return From The Slime",
-          description: `Places a [Revive On Death] buff on all allies for 2 turns.`,
+          name: "Revenir de la vase",
+          description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Springy [P]",
-          description: `Each time this Champion is hit, increases their DEF by 2.5% (stacks up to 20%). Resets each round.`,
+          name: "Élastique [P]",
+          description: `Chaque fois qu'un Champion se fait frapper, augmente sa DÉF de 2,5 % (s'accumule jusqu'à 20 %). Se réinitialise à chaque round.`,
           isPassive: true
         }
       ],

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shatter Shell",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Fracasse Carcasse",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crunch Frenzy",
-          description: `Attacks 4 times at random. Each hit has a 40% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "1.4*ATK",
+          name: "Craquement Frénétique",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 40 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          damage: "1.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burn Away",
-          description: `Attacks all enemies. Destroys each target's MAX HP by 50% of the damage inflicted. Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "3.5*ATK",
+          name: "Brûler",
+          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 50 % des dégâts infligés. Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Spirit Ally ATK in All Battles by 40%`,
+  description: `Augmente la statistique ATQ des Alliés Esprit lors de toutes les Batailles de 40%`,
 };

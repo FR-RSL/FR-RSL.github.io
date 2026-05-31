@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Perforate",
-          description: `Attacks 1 enemy.`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Perforer",
+          description: `Attaque 1 ennemi.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sight In",
-          description: `Attacks 1 enemy. If the hit is critical, places a 25% [Increase ATK] buff on this Champion for 2 turns.`,
-          damage: "7.6*ATK",
+          name: "Régler la Visée",
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur ce Champion.`,
+          damage: "7.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

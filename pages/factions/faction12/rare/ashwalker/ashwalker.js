@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Great Hammer",
-          description: `Attacks 1 enemy. Resets the cooldown of the Devastator skill if this attack kills an enemy.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Grand Marteau",
+          description: `Attaque un ennemi. Réinitialise le compteur de tour de la compétence Dévastateur si cette attaque tue un ennemi.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Devastator",
-          description: `Attacks 1 enemy. Has a 65% chance of placing a [Stun] debuff for 1 turn. Decreases the Turn Meters of all enemies by 10% if this attack is critical.`,
-          damage: "5*ATK",
+          name: "Dévastateur",
+          description: `Attaque un ennemi. Possède 65 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Remplit le Compteur de Tour de tous les ennemis de 10 % si cette attaque passe en critique.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Backbreaker",
-          description: `Attacks all enemies. Has a 75% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "3.5*ATK",
+          name: "Brise-dos",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 12%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 12%`,
 };

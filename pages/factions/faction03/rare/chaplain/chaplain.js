@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Holy Bolt",
-          description: `Attacks 1 enemy.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Éclair Sacré",
+          description: `Attaque 1 ennemi.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Benediction",
-          description: `Removes all debuffs from a target ally, then heals the target. The heal amount is proportional to this Champion's ATK.<br><br><br>Heal Multiplier: 3.5*ATK`,
+          name: "Bénédiction",
+          description: `Retire tous les débuffs sur une cible alliée, puis soigne la cible. La quantité de soins est proportionnelle à l'ATQ de ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Radiance",
-          description: `Attacks all enemies. Heals all allies by 25% of the damage inflicted.<br><br><br>Heal Multiplier: 0.25*Damage Dealt`,
-          damage: "3.4*ATK",
+          name: "Rayonnement",
+          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 25 % des dégâts infligés.`,
+          damage: "3.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

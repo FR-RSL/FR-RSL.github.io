@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shadowbow",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 25% [Decrease ATK] debuff for 1 turn.`,
+          name: "Arc d'ombre",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
           damage: "3.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Swift Warband",
-          description: `Attacks all enemies. Places a 15% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Bande véloce",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.SPD} de 15 % sur tous les alliés pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Diversion",
-          description: `Places a [Veil] buff on all allies except this Champion for 1 turn. <br><br>Also places a [Shield] buff on all allies for 2 turns equal to 20% of this Champion's MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          description: `Place un buff ${BUFFS.VEIL} sur tous les alliés sauf ce Champion pendant 1 tour. 
+
+Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Camo Cover [P]",
-          description: `Decreases the damage received from skills by all allies under [Veil] or [Perfect Veil] buffs by 5%.`,
+          name: "Camouflé [P]",
+          description: `Réduit de 5 % les dégâts infligés par des compétences à tous les alliés sous buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true
         }
       ],

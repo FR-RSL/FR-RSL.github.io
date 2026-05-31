@@ -3,26 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wanton Mugging",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of stealing one random buff.`,
+          name: "Agression Gratuite",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de voler un buff aléatoire.`,
           damage: "0.08*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ruckus",
-          description: `Attacks 1 enemy. Will ignore the target's DEF if they have no active buffs. Steals 2 random buffs from the target.`,
+          name: "Grabuge",
+          description: `Attaque un ennemi. Ignorera la DÉF de la cible si elle ne dispose d'aucun buff actif. Vole 2 buffs aléatoires à la cible.`,
           damage: "0.15*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dire Defense",
-          description: `Has a 30% chance of stealing 1 random buff from the attacker when hit. Occurs once per hit.<br><br>Counterattacks the attacker if they have no active buffs.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%"],
+          name: "Défense Désespérée",
+          description: `Lorsqu'il est frappé, possède 30 % de chances de voler un buff aléatoire à l'assaillant. Survient une fois par frappe.
+
+Contre-attaque l'assaillant s'il ne possède pas de buff actif.`,
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -40,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

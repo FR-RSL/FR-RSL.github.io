@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Razor Claws",
-          description: `Attacks 1 enemy. Has a 90% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Griffes Rasoirs",
+          description: `Attaque un ennemi. Possède 90 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Almighty Curse",
-          description: `Attacks all enemies. Has a 75% chance of increasing the duration of all debuffs on the target by 1 turn.`,
-          damage: "3.2*ATK",
+          name: "Terrible Malédiction",
+          description: `Attaque tous les ennemis. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
+          damage: "3.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Engulfing Flame",
-          description: `Attacks 1 enemy. Places a [Block Buffs] debuff for 2 turns.`,
-          damage: "5*ATK",
+          name: "Flamme Engloutissante",
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 70`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 70`,
 };

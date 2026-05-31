@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dark Lance",
-          description: `Attacks all enemies.`,
-          damage: "2.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Sombre Lance",
+          description: `Attaque tous les ennemis.`,
+          damage: "2.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Unholy Contract",
-          description: `Places a 50% [Ally Protection] buff on all allies for 2 turns. Places a [Shield] buff on this Champion for 2 turns. The value of the [Shield] is equal to 40% of this Champion's MAX HP.<br><br><br>Shield Multiplier: 0.4*Target Max HP`,
+          name: "Contrat Impie",
+          description: `Place un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés pendant 2 tours. Place un buff de ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 40 % des PV MAX de ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Steel Breaker",
-          description: `Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "6*ATK",
+          name: "Briseur d'Acier",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 28%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 28%`,
 };

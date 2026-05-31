@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Headshot",
-          description: `Attacks 1 enemy. If the target has less than 30% HP, this attack is always critical.`,
-          damage: "ATK*3.8",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "En pleine tête",
+          description: `Attaque 1 ennemi. Si la cible possède moins de 30 % de PV, cette attaque passe toujours en critique.`,
+          damage: "ATQ*3.8",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Piercing Bolt",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "ATK*6",
+          name: "Carreau Perçant",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "ATQ*6",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

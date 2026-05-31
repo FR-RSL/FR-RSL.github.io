@@ -3,24 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vigor Spores",
-          description: `Attacks 1 enemy. Heals this Champion by 30% of the damage inflicted. <br><br>Also heals the ally with the lowest HP by 10% of their MAX HP. This heal will not affect this Champion.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Spores de Vigueur",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés. 
+
+Soigne également l'allié ayant le moins de PV à hauteur de 10 % de ses PV MAX. Ce soin n'affectera pas ce Champion.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fungal Privilege",
-          description: `Places a [Shield] buff on this Champion for 2 turns equal to 20% of their MAX HP, then places a 25% [Ally Protection] buff on all allies except this Champion for 2 turns. <br><br>Will also heal all allies except this Champion by 10% of their MAX HP.<br><br><br>Shield Multiplier: 0.2*HPHeal Multiplier: 0.1*Target Max HP`,
+          name: "Privilège Fongique",
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 2 tours, puis place sur tous les alliés sauf ce Champion un buff ${BUFFS.ALLY_PROTECT} de 25 % pendant 2 tours. 
+
+Soignera également tous les alliés sauf ce Champion à hauteur de 10 % de leurs PV MAX.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Absorbtion Roots [P]",
-          description: `Decreases the damage all allies receive by 5%. This Champion will receive that damage instead.`,
+          name: "Racines Drainantes [P]",
+          description: `Réduit de 5 % les dégâts reçus par tous les alliés. Ce Champion recevra les dégâts à leur place.`,
           isPassive: true
         }
       ],
@@ -38,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 21%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 21%`,
 };

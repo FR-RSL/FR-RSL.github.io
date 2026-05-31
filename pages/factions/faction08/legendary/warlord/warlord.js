@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bludgeon",
-          description: `Attacks 1 enemy. Has a 25% chance of increasing the duration of all debuffs on the target by 1 turn.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Matraquage",
+          description: `Attaque un ennemi. Possède 25 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
+          damage: "5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Protection of Gods",
-          description: `Places a [Block Debuffs] buff on all allies for 1 turn, then places a [Shield] buff on all allies equal to 30% of this Champion's MAX HP for 2 turns. Heals all allies by 25% of their MAX HP.<br><br><br>Heal Multiplier: Target Max HP*0.25Shield Multiplier: 0.3*HP`,
+          name: "Protection des Dieux",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour, puis place un buff ${BUFFS.SHIELD} égal à 30 % des PV MAX de ce Champion sur tous les alliés pendant 2 tours. Soigne tous tes alliés à hauteur de 25 % de leurs PV max.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Orcish Rituals",
-          description: `Attacks all enemies. Has a 70% chance to put each target's Skills on cooldown. Has a 30% chance to fully deplete each target's Turn Meter.`,
-          damage: "5.5*ATK",
+          name: "Rituels Orcs",
+          description: `Attaque tous les ennemis. Possède 70 % de chances de placer en recharge chaque compétence de la cible. Possède 30 % de chances de vider complètement le Compteur de Tours de la cible.`,
+          damage: "5.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 80`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
 };

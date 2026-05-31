@@ -3,12 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fleau de Crystal",
-          description: `
-            Attaque un ennemi.
-            Possède 45% de chances de placer un débuff
-            <span class='gbt'>Brulure de PV</span> pendant 2 tours.
-          `,
+          name: "Fléau de Cristal",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "6.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -21,13 +17,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poigne de Caverne",
-          description: `
-            Attaque tous les ennemis. Possède 75% de chances de retirer
-            un buff aleatoire sur tous les ennemis.<br><br>
-            Possède 75% de chances de retirer 1 débuff aleatoire sur tous les alliés.
-            Augmente la valeur des buffs <span class='gbt'>Bouclier</span> sur tous les alliés 
-            de 30% des degats infliges.
-          `,
+          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis. 
+
+Possède 75 % de chances de retirer 1 débuff aléatoire sur tous les alliés. Augmente la valeur des buffs ${BUFFS.SHIELD} sur tous les alliés de 30 % des dégâts infligés.`,
           damage: "6.6*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -41,13 +33,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Lueur Tenace",
-          description: `
-            Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff <span class='gbt'>Augmentation d'ATQ</span>
-            de 50% sur tous les alliés pendant 2 tours.
-            Place également sur tous les alliés un buff <span class='gbt'>Bouclier</span>
-            equivalent a 30% des PV MAX de ce Champion pendant 2 tours.
-            Le buff <span class='gbt'>Bouclier</span> ne peut etre retire. 
-          `,
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. Le buff ${BUFFS.SHIELD} ne peut être retiré.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",

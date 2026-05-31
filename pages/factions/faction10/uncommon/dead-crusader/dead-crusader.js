@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Archaic Gladius",
-          description: `Attacks 1 enemy.`,
+          name: "Gladius Archaïque",
+          description: `Attaque un ennemi.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crypt Blight",
-          description: `Attacks all enemies. Has a 75% chance of placing a 2.5% [Poison] debuff on all enemies for 2 turns.`,
+          name: "Plaie de Crypte",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % sur tous les ennemis pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],

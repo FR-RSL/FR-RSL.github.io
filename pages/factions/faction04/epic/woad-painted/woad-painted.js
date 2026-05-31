@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crossup",
-          description: `Attacks 1 enemy 2 times. Has a 25% chance of placing a [Block Active Skills] debuff for 1 turn.`,
+          name: "Croisée",
+          description: `Attaque 2 fois un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "0.13*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Undying Fury",
-          description: `Removes all debuffs from this Champion and 1 random debuff from all allies, then heals this Champion by 100% of their MAX HP and heals all allies equal to 50% of the surplus heal. Afterwards, places a 30% [Reflect Damage] buff on all allies for 2 turns, then grants this Champion an Extra Turn.<br><br><br>Heal Multiplier: 1*HP`,
+          name: "Colère Éternelle",
+          description: `Retire tous les débuffs sur ce Champion et un débuff pris au hasard sur tous les alliés, puis soigne ce Champion de 100 % de ses PV MAX et soigne tous les alliés de 50 % des soins en surplus. Après coup, place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours, puis accorde un Tour supplémentaire à ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Overpower",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Block Active Skills] debuff for 2 turns.`,
+          name: "Maîtriser",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "0.42*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

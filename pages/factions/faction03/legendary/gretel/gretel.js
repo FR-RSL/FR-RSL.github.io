@@ -3,34 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Evil Undone",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br><br>If Hansel Witchhunter is on the same team, attacks all enemies instead. Has a 25% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Also places an extra hit against enemies under any buffs.`,
-          damage: "3.8*ATKMultiplier: 2.4*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Défaite du mal",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Si Hansel le Chasseur se trouve dans la même équipe, attaque au lieu de ça tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Place également une frappe supplémentaire sur les ennemis bénéficiant de buffs.`,
+          damage: "3.8*ATQMultiplier: 2.4*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shadowseeker Bolts",
-          description: `Attacks 1 enemy 4 times. The first hit will ignore 10% of the target’s DEF, the second hit will ignore 15% DEF, the third hit will ignore 20% DEF, and the fourth hit will ignore 25% DEF. <br><br>If this attack kills an enemy, resets cooldown of this skill and fills this Champion’s Turn Meter by 50%.`,
-          damage: "1.4*ATK",
+          name: "Carreaux cherche-ombre",
+          description: `Attaque 4 fois un ennemi. La première frappe ignorera 10 % de la DÉF de la cible, la deuxième ignorera 15 % de sa DÉF, la troisième ignorera 20 % de sa DÉF et la quatrième ignorera 25% de sa DÉF. 
+
+Si cette attaque tue un ennemi, réinitialise le temps de recharge de cette compétence et remplit le Compteur de Tour de cette Championne de 50 %.`,
+          damage: "1.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sacred Ritual",
-          description: `Attacks all enemies. Decreases the Turn Meters of all enemies by 25%. <br><br>If Hansel Witchhunter is on the same team, decreases the Turn Meters of all enemies by 50% instead. This effect cannot be resisted. <br><br>Then fills this Champion’s Turn Meter by 20% for each enemy alive after the attack.`,
-          damage: "4.1*ATK",
+          name: "Rituel sacré",
+          description: `Attaque tous les ennemis. Réduit les Compteurs de Tour de tous les ennemis de 25 %. 
+
+Si Hansel le Chasseur se trouve dans la même équipe, réduit au lieu de ça les Compteurs de Tour de tous les ennemis de 50 %. Il est impossible de résister à cet effet. 
+
+Remplit ensuite le Compteur de Tour de cette Championne de 20 % pour chaque ennemi vivant après l'attaque.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Sisterly Bond [P]",
-          description: `[Passive Effect]<br><br>Fills this Champion’s Turn Meter by 50% whenever an enemy is granted an Extra Turn.<br><br>If Hansel Witchhunter is on the same team, also fills their Turn Meter by 50% whenever an enemy is granted an Extra Turn. <br><br>[Active Effect]<br><br>If Hansel Witchhunter is on the same team and is killed by the enemy, instantly activates the [Sacred Ritual] skill.`,
+          name: "Lien sororal [P]",
+          description: `${PASSIVE}
+
+Remplit le Compteur de Tour de cette Championne de 50 % dès qu'un ennemi reçoit un Tour supplémentaire.
+
+Si Hansel le Chasseur se trouve dans la même équipe, remplit également le Compteur de Tour de 50 % dès qu'un ennemi reçoit un Tour supplémentaire. 
+
+${ACTIVE}
+
+Si Hansel le Chasseur se trouve dans la même équipe et qu'il est tué par l'ennemi, active instantanément la compétence [Rituel sacré].`,
           cooldown: 3,
           isPassive: true
         }
@@ -49,5 +65,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

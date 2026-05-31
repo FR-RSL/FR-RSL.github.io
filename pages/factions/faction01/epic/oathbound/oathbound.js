@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shatter",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Freeze] debuff for 1 turn. Damage inflicted is proportional to DEF.`,
-          damage: "1.5*ATK+2.7*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Fracasser",
+          description: `Attaque 1 ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
+          damage: "1.5*ATQ+2.7*DEF",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Subjugate",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns. Also has a 55% chance of decreasing each target's Turn Meter by 20%.`,
+          name: "Subjuguer",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours. Possède également 55 % de chances de réduire de 20 % le Compteur de Tour de chaque cible.`,
           damage: "4*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Intimidate",
-          description: `Attacks at random 4 times. Each attack has a 30% chance of placing a [Block Active Skills] debuff for 2 turns. <br><br>The chance of the [Block Active Skills] debuff increases to 100% if the target is under a [Decrease ATK] debuff.`,
+          name: "Intimider",
+          description: `Attaque 4 fois au hasard. Chaque attaque possède 30 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. 
+
+Les chances de débuff ${DEBUFFS.LOCK_ACTIVE} augmentent jusqu'à 100 % si la cible est affligée d'un débuff ${DEBUFFS.ATK}.`,
           damage: "1.65*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Harvest of Fear",
-          description: `Attacks 1 enemy 3 times. Each hit has a 50% chance of stealing 1 random buff from the target.<br><br>Each hit also has a 50% chance of placing a [Fear] debuff for 1 turn.<br><br>This chance increases to 100% if the target has no active buffs.`,
+          name: "Moisson de Peur",
+          description: `Attaque 3 fois un ennemi. Chaque frappe a 50 % de chances de voler un buff aléatoire à la cible.
+
+Chaque frappe a également 50 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour.
+
+Ces chances passent à 100 % si la cible ne possède aucun buff actif.`,
           damage: "0.06*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dreams to Ash",
-          description: `Attacks all enemies. <br><br>Removes all buffs from each target. Then places a 50% [Decrease ATK] debuff and a [Block Buffs] debuff on all enemies for 2 turns.<br><br>Then grants an Extra Turn.`,
+          name: "Rêves en Cendres",
+          description: `Attaque tous les ennemis. 
+
+Retire tous les buffs de chaque cible. Place ensuite un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.
+
+Accorde ensuite un Tour supplémentaire.`,
           damage: "0.16*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lord of Terror",
-          description: `Attacks all enemies. Has a 75% chance of placing a [True Fear] debuff for 2 turns.<br><br>Also places a 30% [Decrease SPD] debuff for 2 turns and decreases each target's Turn Meter by 30% if the [True Fear] debuff is placed. <br><br>Has a 75% chance of placing an unresistable [Sleep] debuff for 1 turn if the [True Fear] debuff is not placed. Also decreases each target’s Turn Meter by 30%.`,
+          name: "Seigneur de Terreur",
+          description: `Attaque tous les ennemis. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.
+
+Place également un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours et réduit de 30 % le Compteur de Tour de chaque cible si le débuff ${DEBUFFS.TRUE_FEAR} est placé. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} irrésistible pendant 1 tour si le débuff ${DEBUFFS.TRUE_FEAR} n'est pas placé. Réduit également le Compteur de Tour de chaque cible de 30 %.`,
           damage: "0.21*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Leering Grin [P]",
-          description: `Whenever an ally is attacked, has a 50% chance of decreasing the duration of all buffs on the attacker by 1 turn. Whenever this Champion is attacked, the chance increases to 100%. This Champion is immune to [Fear] debuffs.`,
+          description: `Whenever an ally is attacked, has a 50% chance of decreasing the duration of all buffs on the attacker by 1 turn. Whenever this Champion is attacked, the chance increases to 100%. This Champion is immune to ${DEBUFFS.FEAR} debuffs.`,
           isPassive: true
         }
       ],

@@ -4,11 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Courroux de Mjolnir",
-          description: `
-            Attaque 2 fois un ennemi.
-            Possède 20% de chances de repeter l'attaque.<br><br>
-			Chaque coup reduit le Compteur de Tour de la cible de 10%.
-          `,
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de répéter l'attaque. 
+
+Chaque coup réduit le Compteur de Tour de la cible de 10 %.`,
           damage: "1.9*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -18,15 +16,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ricochet fulminant",
-          description: `
-            Attaque tous les ennemis.<br><br>
-			Apres avoir frappe l'ennemi selectionne initialement, tous les autre
-			ennemis seront frappes dans un ordre aleatoire. Chaque frappe suivant
-			la frappe initiale augmentera les degats infliges de 25%
-			(s'accumule jusqu'a 100%).<br><br>
-			Ignorera les buffs <span class='gbt'>Blocage des Degats</span> et <span class='gbt'>Invincible</span>.
-			Cet effet ne fonctionne pas contre les Boss.
-          `,
+          description: `Attaque tous les ennemis. 
+
+Après avoir frappé l'ennemi sélectionné initialement, tous les autres ennemis seront frappés dans un ordre aléatoire. Chaque frappe suivant la frappe initiale augmentera les dégâts infligés de 25 % (s'accumule jusqu'à 100 %). 
+
+Ignorera les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. Cet effet ne fonctionne pas contre les Boss.`,
           damage: "5*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -38,16 +32,11 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Marteau des cieux",
-          description: `
-            Attaque tous les ennemis.
-            Avant d'attaquer, place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
-			et un buff <span class='gbt'>Augmentation des DEG C.</span> de 30% 
-			sur ce Champion pendant 2 tours.<br><br>
-			Possède 75% de chances de reduire la RES de chaque ennemi de 10% 
-			de maniere permanente (s'accumule jusqu'a 50%).<br><br>
-			Possède également 75% de chances de placer un débuff 
-			<span class='gbt'>Reduction de VIT</span> de 30% sur tous les ennemis pendant 2 tours.
-          `,
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours. 
+
+Possède 75 % de chances de réduire la RÉS de chaque ennemi de 10 % de manière permanente (s'accumule jusqu'à 50 %). 
+
+Possède également 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis pendant 2 tours.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -60,16 +49,12 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Rupture celeste [P]",
-          description: `
-            A chaque fois que ce Champion inflige des degats, augmente le 
-			compteur de Tonnerre d'1 point (s'accumule jusqu'a 10).<br><br>
-			Chaque pile de Tonnerre augmente les DEG de ce Champion de 3%
-			(s'accumule jusqu'a 30%).<br><br>
-			Une fois que le compteur de Tonnerre atteint 10, attaque tous les
-			ennemis et place un débuff <span class='gbt'>Etourdissement</span>
-			pendant 1 tour. Apres l'attaque, le compteur de Tonnerre se reinitialise a 0.
-          `,
+          name: "Rupture céleste [P]",
+          description: `À chaque fois que ce Champion inflige des dégâts, augmente le compteur de Tonnerre d'1 point (s'accumule jusqu'à 10). 
+
+Chaque pile de Tonnerre augmente les DÉG de ce Champion de 3 % (s'accumule jusqu'à 30 %). 
+
+Une fois que le compteur de Tonnerre atteint 10, attaque tous les ennemis et place un débuff ${DEBUFFS.STUN} pendant 1 tour. Après l'attaque, le compteur de Tonnerre se réinitialise à 0.`,
           damage: "3.8*ATQ",
           isPassive: true,
         },

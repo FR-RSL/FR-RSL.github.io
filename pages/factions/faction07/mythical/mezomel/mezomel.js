@@ -4,40 +4,46 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Moonclaw",
-          description: `Attacks 1 enemy. Places a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "4.05*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          name: "Griffe-lune",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "4.05*ATQ",
+          levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Scarlet Crescent",
-          description: `Attacks 1 enemy 2 times. <br><br>Will ignore 15% of the target's DEF, as well as [Stone Skin], [Strengthen], [Ally Protection], and [Shield] buffs. <br><br>Places a [Block Revive] debuff if the target is killed.`,
-          damage: "2.8*ATK",
+          name: "Croissant écarlate",
+          description: `Attaque 2 fois un ennemi. 
+
+Ignorera 15 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}. 
+
+Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
+          damage: "2.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Moonlight Gift",
-          description: `Places a 50% [Increase ATK] buff, a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 3 turns. <br><br>Grants an Extra Turn.`,
+          name: "Cadeau de clair de lune",
+          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 3 tours. 
+
+Accorde un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Relentless Hunt [P]",
-          description: `Heals this Champion by 20% of the damage inflicted. Places a [Revive On Death] buff on this Champion for 2 turns every time they kill an enemy.<br><br>Heal Multiplier: 0.2*Damage Dealt`,
+          name: "Chasse implacable [P]",
+          description: `Soigne cette Championne à hauteur de 20 % des dégâts infligés. Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours lorsqu'elle tue un ennemi.`,
           isPassive: true
         }
       ],
@@ -53,7 +59,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/crit.webp",
-    description: `Increases Ally C.RATE in All Battles by 27%`,
+    description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 27%`,
   },
   },
   form2: {
@@ -61,32 +67,36 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Spirit of the Pack",
-          description: `Attacks all enemies. This attack will not trigger counterattacks. <br><br>Places an extra hit on enemies under [True Fear] debuffs.`,
-          damage: "2.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Esprit de la meute",
+          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques. 
+
+Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.TRUE_FEAR}.`,
+          damage: "2.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Life Shredder",
-          description: `Attacks all enemies 2 times. Places a [True Fear] debuff for 2 turns. <br><br>This attack will not trigger counterattacks. Will also ignore [Unkillable] and [Block Damage] buffs.`,
-          damage: "2.15*ATK",
+          name: "Déchiquette-vie",
+          description: `Attaque 2 fois tous les ennemis. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours. 
+
+Cette attaque ne déclenchera pas de contre-attaques. Ignorera également les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "2.15*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Embrace the Beast [P]",
-          description: `Increases this Champion’s ATK and C. DMG by 20% while in their Alternate Form.`,
+          name: "Étreindre la bête [P]",
+          description: `Augmente l'ATQ et les DÉG C. de cette Championne de 20 % lorsqu'elle se trouve sous sa Forme alternative.`,
           isPassive: true
         }
       ],
@@ -102,7 +112,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/crit.webp",
-    description: `Increases Ally C.RATE in All Battles by 27%`,
+    description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 27%`,
   },
   },
 };

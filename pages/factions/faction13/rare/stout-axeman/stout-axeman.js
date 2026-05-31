@@ -3,24 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Go No Further",
-          description: `Attacks 1 enemy.`,
-          damage: "4.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Plus un Pas",
+          description: `Attaque un ennemi.`,
+          damage: "4.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Repel the Horde",
-          description: `Places a 15% [Reflect Damage] buff on this Champion for 2 turns.<br>Has an 85% chance of placing a 15% [Reflect Damage] buff on a random ally for 2 turns.<br>Also has a 35% chance of placing a [Provoke] debuff on 2 random enemies for 1 turn.`,
+          name: "Repousse la Horde",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur ce Champion.
+Possède 85 % de chances de placer, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur un allié pris au hasard.
+Possède également 35 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur deux ennemis pris au hasard.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Thrives on Danger [P]",
-          description: `Heals this Champion by 50% of the damage taken while under a [Reflect Damage] buff. Also, has a 25% chance of increasing the duration of all attacker’s debuffs by 1 turn when hit while under a [Reflect Damage] buff.<br><br>Heal Multiplier: 0.5*Damage Dealt`,
+          name: "Nourri au Danger [P]",
+          description: `Soigne ce Champion de 50 % des dégâts subis quand il bénéficie d'un buff de ${BUFFS.REFLECT_DAM}. Possède également 25 % de chances d'augmenter d'1 tour la durée de tous les débuffs de l'attaquant lorsqu'il frappe en bénéficiant d'un buff de ${BUFFS.REFLECT_DAM}.`,
           isPassive: true
         }
       ],

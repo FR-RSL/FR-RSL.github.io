@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Confident Shot",
-          description: `Attacks 1 enemy. Places a 50% [Increase ATK] buff on this Champion for 2 turns if this attack is critical.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Tir Confiant",
+          description: `Attaque un ennemi. Place un buff d'${BUFFS.ATK} de 50 % pendant 2 tours sur ce Champion si l'attaque passe en critique.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Slaughter Volley",
-          description: `Attacks all enemies. Places a 60% [Decrease DEF] debuff on the target for 2 turns if this attack is critical.`,
-          damage: "3.6*ATK",
+          name: "Volée Massacrante",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours sur la cible si cette attaque passe en critique.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dead Aim",
-          description: `Attacks 1 enemy. Will ignore DEF by 100%.`,
-          damage: "5*ATK",
+          name: "Faire Mouche",
+          description: `Attaque un ennemi. Ignorera 100 % de la DÉF.`,
+          damage: "5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Spirit Ally ATK in all Battles by 38%`,
+  description: `Augmente la statistique ATQ des Alliés Esprit lors de toutes les Batailles de 38%`,
 };

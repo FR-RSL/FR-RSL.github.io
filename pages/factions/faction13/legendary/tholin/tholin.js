@@ -3,18 +3,12 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brise-demon",
-          description: `
-            Attaque tous les ennemis.
-            Avant d'attaquer, a 25% de chances
-            de placer un débuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
-            A 50% de chances de placer un débuff <span class='gbt'>Affaiblissement</span> de 25%
-            pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire.
-            Les ennemies membre de l'Alliance corrompue, les Boss ou sbires ne peuvent pas resister a cet effet.<br><br>
-            Accorde un Tour supplémentaire si un débuff <span class='gbt'>Affaiblissement</span> a ete place sur tous les ennemis
-            par cette compétence.
+          name: "Brise-démon",
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 25 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.
 
-          `,
+A 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire. Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas résister à cet effet. 
+
+Accorde un Tour supplémentaire si un débuff ${DEBUFFS.WEAKEN} a été placé sur tous les ennemis par cette compétence.`,
           damage: "2.5*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -25,15 +19,12 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Retour dans l'abime",
-          description: `
-            Attaque 2 fois un ennemi.<br><br>
-            Chaque frappe ignorera 25% de la DEF de la cible.
-            Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire,
-            chaque frappe ignore au lieu de ca 50% de la DEF de la cible.<br><br>
-            Chaque frappe reduit l'ATQ de la cible de 5% (s'accumule jusqu'a 25%).
-            Chaque frappe augmente également l'ATQ de ce Champion de 5% (s'accumule jusqu'a 50%).
-          `,
+          name: "Retour dans l'abîme",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe ignorera 25 % de la DÉF de la cible. Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire, chaque frappe ignore au lieu de ça 50 % de la DÉF de la cible. 
+
+Chaque frappe réduit l'ATQ de la cible de 5 % (s'accumule jusqu'à 25 %). Chaque frappe augmente également l'ATQ de ce Champion de 5 % (s'accumule jusqu'à 50 %).`,
           damage: "2.4*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -44,14 +35,10 @@ const championData = {
         },
         {
           img: "assets/sort3.webp",
-          name: "Fureur enragee",
-          description: `
-            Attaque 2 fois tous les ennemis.
-            Avant d'attaquer, place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
-            sur ce Champion pendant 2 tours.<br><br>
-            Pour chaque coup critique porte par la premiere frappe, augmente les degats infliges par la seconde frappe de 10%.
-            Ignorera les buffs <span class='gbt'>Intuable</span> et <span class='gbt'>Bouclier</span>.
-          `,
+          name: "Fureur enragée",
+          description: `Attaque 2 fois tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours. 
+
+Pour chaque coup critique porté par la première frappe, augmente les dégâts infligés par la seconde frappe de 10 %. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}.`,
           damage: "2*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -62,11 +49,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Cauchemar du Mal [P]",
-          description: `
-            Active la compétence <span class='gt'>Brise-demon</span> tous les cinq tours joues par ce Champion.<br><br>
-            Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas porter de coup critique sur ce Champion.
-          `,
+          name: "Cauchemar du mal [P]",
+          description: `Active la compétence Brise-démon  tous les cinq tours joués par ce Champion.
+
+Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas porter de coup critique sur ce Champion.`,
           isPassive: true,
         },
       ],

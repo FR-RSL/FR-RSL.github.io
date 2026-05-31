@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dagger Throw",
-          description: `Attacks 1 enemy. Has a 10% chance of granting an Extra Turn.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Lancé de Dague",
+          description: `Attaque 1 ennemi. Possède 10 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Foul Play",
-          description: `Places two 5% [Poison] debuffs on the target for 2 turns.`,
+          name: "Homicide",
+          description: `Place, pour 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5 % sur la cible.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

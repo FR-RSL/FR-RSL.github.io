@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Devour All Hope",
-          description: `Attacks 1 enemy. Has a 30% chance of decreasing the duration of 1 random buff if the target is under a [HP Burn] debuff. Also has a 30% chance of decreasing the target’s Turn Meter by 15% if they are under a [Freeze] debuff.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Dévorer tout Espoir",
+          description: `Attaque un ennemi. Possède 30 % de chances de réduire la durée d'un buff aléatoire si la cible se trouve sous débuff ${DEBUFFS.BURN}. Possède également 30 % de chances de réduire le Compteur de Tour de la cible de 15 % si elle se trouve sous débuff ${DEBUFFS.GEL}.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cannibal Might",
-          description: `Places a [Block Debuffs] buff on all allies for 1 turn and a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Puissance Cannibale",
+          description: `Place sur tous les alliés un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour et un buff ${BUFFS.STRENGTHEN} de 25 % pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Frostfire Gale",
-          description: `Attacks all enemies. Has a 70% chance of placing a [Freeze] debuff for 1 turn on enemies whose ATK is higher than their DEF. Has a 70% chance of placing a [HP Burn] debuff for 1 turn on enemies whose DEF is equal to or higher than their ATK.`,
-          damage: "5.5*ATK",
+          name: "Vent Feu de Glace",
+          description: `Attaque tous les ennemis. Possède 70 % de chances de placer un débuff ${DEBUFFS.GEL} d'1 tour sur les ennemis dont l'ATQ est plus élevée que la DÉF. Possède 70 % de chances de placer un débuff ${DEBUFFS.BURN} d'1 tour sur les ennemis dont la DÉF est plus élevée que l'ATQ.`,
+          damage: "5.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Twisted Hunger [P]",
-          description: `Heals all allies by 5% of their MAX HP every time an enemy under a [HP Burn] debuff gets a turn. <br><br>Fills the Turn Meters of all allies by 10% every time an enemy under a [Freeze] debuff gets a turn.<br><br>Heal Multiplier: 0.05*Target Max HP`,
+          name: "Faim Tordue [P]",
+          description: `Soigne tous les alliés de 5 % de leurs PV MAX chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} joue un tour. 
+
+Remplit le Compteur de Tour de tous les alliés de 10 % chaque fois qu'un ennemi sous débuff ${DEBUFFS.GEL} joue un tour.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%`,
 };

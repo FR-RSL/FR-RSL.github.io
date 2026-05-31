@@ -3,14 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Foudre boreale",
-          description: `
-            Attaque 2 fois un ennemi.
-			Chaque frappe Possède 35% de chances de placer un débuff
-			<span class='gbt'>Gel</span> pendant 1 tour.<br><br>
-			Il est impossible de resister a ce débuff si la cible
-			Possède 50% de PV ou moins.
-          `,
+          name: "Foudre boréale",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. 
+
+Il est impossible de résister à ce débuff si la cible possède 50 % de PV ou moins.`,
           damage: "3.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -22,13 +18,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Voile d'eau de fonte",
-          description: `
-            Place un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%
-			sur tous les alliés pendant 2 tours.<br><br>
-			Possède également 80% de chances de placer un buff <span class='gbt'>Voile Parfait</span>
-			sur tous les alliés sauf ce Champion pendant 2 tours.<br><br>
-			Ensuite, remplit le Compteur de Tour de tous les alliés de 15%.
-          `,
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. 
+
+Possède également 80 % de chances de placer un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Champion pendant 2 tours. 
+
+Ensuite, remplit le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
           levelInfo: [
             "Chance de Buff/débuff +10%",
@@ -39,14 +33,11 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ruisseau de vie",
-          description: `
-            Ranime tous les alliés morts avec 40% de PV et 25% de Compteur de Tour.<br><br>
-			Place également un buff <span class='gbt'>Augmentation de PRE</span> de 50%
-			et un buff <span class='gbt'>Augmentation de DEF</span> de 60% sur tous les alliés
-			pendant 3 tours. Ces buffs seront places meme si aucun allié n'a ete ranime.<br><br>
-			Si aucun allié n'a ete ranime par cette compétence,
-			accorde un Tour supplémentaire a ce Champion.
-          `,
+          description: `Ranime tous les alliés morts avec 40 % de PV et 25 % de Compteur de Tour. 
+
+Place également un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours. Ces buffs seront placés même si aucun allié n'a été ranimé. 
+
+Si aucun allié n'a été ranimé par cette compétence, accorde un Tour supplémentaire à ce Champion.`,
           cooldown: 7,
           levelInfo: [
             "Temps de recharge -1",
@@ -56,14 +47,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Force du degel [P]",
-          description: `
-            Les alliés sous buff <span class='gbt'>Voile parfait</span> place
-			par ce Champion infligent 10% de degats en plus.<br><br>
-            Les alliés sous buff <span class='gbt'>Voile parfait</span> place
-			par ce Champion infligent 10% de degats en plus aux ennemis sous buffs
-			<span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>.
-          `,
+          name: "Force du dégel [P]",
+          description: `Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10 % de dégâts en plus. 
+
+Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10 % de dégâts en plus aux ennemis sous buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true,
         },
       ],

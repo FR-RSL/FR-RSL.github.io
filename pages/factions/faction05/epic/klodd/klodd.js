@@ -3,32 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "New Stabby Hand",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease C. RATE] debuff for 2 turns.`,
+          name: "Nouvelle Main Violente",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.`,
           damage: "0.24*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Get Behind Me",
-          description: `Places a [Shield] buff on all allies equal to 20% of this Champion’s MAX HP for 2 turns.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Derrière Moi",
+          description: `Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +10%", "Level 4: Shield +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Beast Escape",
-          description: `Places a 30% [Increase SPD] buff and a 50% [Increase ACC] buff on all allies for 2 turns.`,
+          name: "Esquive Bestiale",
+          description: `Place un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Delicious Giblets [P]",
-          description: `Heals the ally with the lowest HP by 10% of their MAX HP at the start of this Champion’s turn.<br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Délicieux Abats [P]",
+          description: `Au début du tour de ce Champion, soigne l'allié ayant le moins de PV de 10 % de ses PV MAX.`,
           isPassive: true
         }
       ],

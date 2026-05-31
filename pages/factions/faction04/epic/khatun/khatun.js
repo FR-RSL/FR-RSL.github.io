@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Imperial Grace",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Grâce Impériale",
+          description: `Attaque un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rally the Horde",
-          description: `Fills the Turn Meters of all allies by 15% and places a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Rallier la Horde",
+          description: `Remplit de 15 % le Compteur de tour de tous les alliés et place un buff d'${BUFFS.SPD} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shamanic Lightning",
-          description: `Attacks all enemies. Has a 50% chance of decreasing the Turn Meter by 15%.`,
-          damage: "3.5*ATK",
+          name: "Éclair Chamanique",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de réduire de 15 % le Compteur de Tour.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Plunder",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Saccage",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

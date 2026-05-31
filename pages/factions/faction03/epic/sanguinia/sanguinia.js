@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Red Punishment",
-          description: `Attacks 1 enemy 3 times. Each hit has a 20% chance of decreasing the duration of 2 random buffs on the target by 1 turn.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Punition Rouge",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 20 % de chances de réduire d'1 tour la durée de 2 débuffs aléatoires de la cible.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Holy Blood",
-          description: `Places a [Block Debuffs] on all allies for 1 turn and a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Sang Sacré",
+          description: `Place sur tous les alliés un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour et un buff ${BUFFS.HEALS} de 15 % pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sacrificial Lamb",
-          description: `Attacks 1 enemy. Has a 75% chance of transferring all debuffs from this Champion to the target. Removes all debuffs from all allies except this Champion.`,
-          damage: "7.6*ATK",
+          name: "Agneau Sacrificiel",
+          description: `Attaque un ennemi. Possède 75 % de chances de transférer tous les débuffs de ce Champion sur la cible. Retire tous les débuffs sur tous les alliés sauf ce Champion.`,
+          damage: "7.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Doom Tower by 55`,
+  description: `Augmente la statistique PRÉ des Alliés lors de la Tour du Malheur de 55`,
 };

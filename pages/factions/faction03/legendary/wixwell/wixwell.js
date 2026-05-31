@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Deadbolt",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 40% chance of placing a [Provoke] debuff for 1 turn. If the target is a Boss, the chance increases to 80%.`,
+          name: "Éclair de mort",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Si la cible est un Boss, les chances passent à 80 %.`,
           damage: "1.5*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tempest of Knowledge",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Also increases the duration of all ally buffs by 1 turn. <br><br>Then increases the value of all [Shield]s on all allies. The value of each [Shield] is increased proportional to the total number of buffs which had their duration increased.`,
+          name: "Tempête de savoir",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Augmente également la durée de tous les buffs des alliés d'1 tour. 
+
+Ensuite, augmente la valeur de tous les ${BUFFS.SHIELD}s sur tous les alliés. La valeur de chaque ${BUFFS.SHIELD} est augmentée proportionnellement au nombre total de buffs dont la durée a été augmentée.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Codex Intercipio",
-          description: `Places 2 [Intercept] stacks on a target ally.<br><br>Also places a 60% [Increase DEF] buff and a [Shield] buff on all allies for 2 turns. The value of the [Shield] is proportional to this Champion's DEF.<br><br><br>Shield Multiplier: 3*DEF`,
+          name: "Codex intercipio",
+          description: `Place 2 piles d'${BUFFS.INTERCEPT} sur l'allié ciblé.
+
+Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Isolated Lunacy [P]",
-          description: `At the start of each Round, places a [Counterattack] buff on this Champion for 1 turn. This buff cannot be removed. <br><br>At the end of this Champion’s turn, places a [Counterattack] buff on them for 1 turn.`,
+          name: "Démence isolée [P]",
+          description: `Au début de chaque round, place un buff ${BUFFS.COUNTER} sur ce Champion pendant 1 tour. Il est impossible de retirer ce buff. 
+
+À la fin du tour de ce Champion, lui accorde un buff ${BUFFS.COUNTER} pendant 1 tour.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 28%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 28%`,
 };

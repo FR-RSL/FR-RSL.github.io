@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Flurry of Arrows",
-          description: `Attacks 4 times at random. Each hit has a 25% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "0.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          name: "Rafale de Flèches",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "0.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Art of Pain",
-          description: `Attacks all enemies. Has a 30% chance of placing a 50% [Decrease ACC] debuff for 1 turn. Places a 5% [Poison] debuff for 2 turns if the target is under a [Heal Reduction] debuff.`,
-          damage: "3.3*ATK",
+          name: "Art de la Douleur",
+          description: `Attaque tous les ennemis. Offre 30 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 1 tour. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours si la cible souffre d'un débuff de ${DEBUFFS.HEALS}.`,
+          damage: "3.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heartseeker",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter by 100%. Has an extra 30% chance of inflicting a critical hit. Damage increases according to enemy MAX HP.`,
-          damage: "Target Max HP*0.1+ATK*1.7",
+          name: "Cherche-Coeur",
+          description: `Attaque un ennemi. Réduit de 100 % le Compteur de Tour de la cible. Possède 30 % de chances supplémentaires de porter un coup critique. Les dégâts augmentent en fonction des PV MAX de l'ennemi.`,
+          damage: "Target Max HP*0.1+ATQ*1.7",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

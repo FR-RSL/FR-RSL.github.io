@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Terror Scourge",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Also has a 25% chance of granting an Extra Turn.`,
-          damage: "1.9*ATK+0.19*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Fléau Terrifiant",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Possède également 25 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "1.9*ATQ+0.19*HP",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Vitality Plunder",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 20%, then adds that HP to this Champion's own MAX HP.<br><br>[Cannot destroy a single Champion's MAX HP by more than 60% in one Battle. Cannot increase this Champion's MAX HP by more than 60,000. Destroys the MAX HP of Bosses by 30% of the damage inflicted instead. This Champion's MAX HP will be increased by 15,000 when this Skill is used against Bosses.]`,
-          damage: "3.5*ATK+0.3*HP",
+          name: "Pillage de Vitalité",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 20 %, puis ajoute cette quantité de PV aux PV MAX de ce Champion.
+
+[Ne peut pas détruire les PV MAX d'un seul Champion de plus de 60 % lors d'une Bataille. Ne peut pas augmenter les PV MAX de ce Champion de plus de 60 000. Détruit les PV MAX des Boss de 30 % des dégâts infligés. Les PV MAX de ce Champion seront augmentés de 15 000 lorsque cette Compétence est utilisée contre les Boss.]`,
+          damage: "3.5*ATQ+0.3*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fated Destruction",
-          description: `Attacks 1 enemy. Will ignore 60% of the target's DEF. Will also ignore [Unkillable] and [Block Damage] buffs. Enemies killed by this skill cannot be revived if this Champion has gained maximum amount of HP from the Vitality Plunder skill. Grants an Extra Turn if this skill kills an enemy.`,
-          damage: "2.1*ATK+0.19*HP",
+          name: "Perte Prédestinée",
+          description: `Attaque un ennemi. Ignorera 60 % de la DÉF de la cible. Ignorera également les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}. Les ennemis tués par cette compétence ne peuvent pas être ranimés si ce Champion a gagné la quantité maximum de PV grâce à la compétence Pillage de Vitalité. Accorde un Tour supplémentaire si cette compétence tue un ennemi.`,
+          damage: "2.1*ATQ+0.19*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spurn Oblivion [P]",
-          description: `Will decrease damage from enemy hits so that incoming damage from any single hit will not exceed 50% of this Сhampion's MAX HP. Grants an Extra Turn if this damage reduction occurs. <br><br>[Does not work against Bosses.] <br><br>Decreases the damage taken from Bosses by 15%. Decreases the damage taken from Bosses by 30% if Siphi the Lost Bride is on the same team.`,
+          name: "Oubli de l'Éconduit [P]",
+          description: `Réduira les dégâts des frappes ennemies pour que les dégâts réalisés par une frappe unique ne dépassent pas 50 % des PV MAX de ce Champion. Accorde un Tour Supplémentaire si la réduction des dégâts survient. 
+
+[Ne fonctionne pas contre les Boss.] 
+
+Réduit de 15 % les dégâts infligés par les Boss. Réduit de 30 % les dégâts infligés par les Boss si Siphi la Mariée Égarée se trouve dans la même équipe.`,
           isPassive: true
         }
       ],

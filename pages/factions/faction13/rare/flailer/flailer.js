@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tangle Bash",
-          description: `Attacks 1 enemy. Has a 25% chance of decreasing the target’s Turn Meter by 10%.`,
+          name: "Frappe Emmêlée",
+          description: `Attaque un ennemi. Possède 25 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
           damage: "4.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Noble Stand",
-          description: `Places a 30% [Increase DEF] buff on this Champion and the ally with the lowest HP for 2 turns. Also fills this Champion’s Turn Meter by 25%.`,
+          name: "Noble Posture",
+          description: `Place un buff ${BUFFS.DEF} de 30 % sur ce Champion et sur l'allié ayant le moins de PV pendant 2 tours. Remplit également le Compteur de Tour de ce Champion de 25 %.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fury Swipe",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Balayage Furieux",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "6.3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 17%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 17%`,
 };

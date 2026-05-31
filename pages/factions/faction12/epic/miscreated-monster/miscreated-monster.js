@@ -3,33 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Meaty Fists",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a [Stun] debuff for 1 turn.<br><br>Has a 50% chance of placing a 60% [Decrease DEF] debuff for 1 turn if the [Stun] debuff is placed.`,
+          name: "Poings Massifs",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.
+
+Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 1 tour si le débuff d'${DEBUFFS.STUN} est placé.`,
           damage: "0.1*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lightning Storm",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Stun] debuff for 1 turn.<br><br>Places a [Shield] buff on all allies for 3 turns equal to 25% of the damage inflicted.<br><br><br>Shield Multiplier: 0.25*Damage Dealt`,
+          name: "Orage Électrique",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.
+
+Place, sur tous les alliés, 3 tours de buff de ${BUFFS.SHIELD} égal à 25 % des dégâts infligés.`,
           damage: "0.21*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "It's Alive",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 3 turns.<br><br>Heals this Champion by 50% of their MAX HP.<br>Places a 15% [Continuous Heal] buff on this Champion for 3 turns.<br><br><br>Heal Multiplier: 0.5*HP`,
+          name: "C'est vivant",
+          description: `Place, pendant 3 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés, sauf sur ce Champion.
+
+Soigne ce Champion à hauteur de 50 % de ses PV MAX.
+Place, pendant 3 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spooky Groan [P]",
-          description: `Places a [Fear] debuff on the attacker for 1 turn whenever an ally is attacked while under an [Ally Protection] buff.`,
+          name: "Plainte Effrayante [P]",
+          description: `Place un débuff ${DEBUFFS.FEAR} d'1 tour sur l'assaillant lorsqu'un allié se fait attaquer alors qu'il bénéficie d'un buff de ${BUFFS.ALLY_PROTECT}.`,
           isPassive: true
         }
       ],
@@ -47,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Arena by 33%`,
+  description: `Augmente la statistique PV des Alliés lors des batailles d'Arène de 33%`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grotesque Strength",
-          description: `Has a 50% chance of placing a 25% [Increase ATK] buff on this Champion for 2 turns, then attacks 1 enemy.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Force Grotesque",
+          description: `Possède 50 % de chances de placer un buff d'${BUFFS.ATK} de 25 % sur ce Champion, puis attaque un ennemi.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ghoulish Feeding",
-          description: `Attacks 1 enemy 3 times. Heals this Champion by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "1.8*ATK",
+          name: "Repas Macabre",
+          description: `Attaque 3 fois un ennemi. Soigne ce Champion à hauteur de 20 % des dégâts infligés.`,
+          damage: "1.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Army of Death",
-          description: `Teams up with 3 random allies to attack a single enemy. The allies joining the attack will use their default skills.`,
+          name: "Armée des Morts",
+          description: `Fais équipe avec 3 alliés pris au hasard pour attaquer un seul ennemi. Les alliés rejoignant l'attaque utilisent leurs compétences par défaut.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

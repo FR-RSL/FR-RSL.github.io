@@ -3,25 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blade Hand Butcher",
-          description: `Attacks 1 enemy 2 times. Each hit heals this Champion by 30% of the damage inflicted.<br><br>This attack cannot be critical.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
+          name: "Boucher Lame-Main",
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion à hauteur de 30 % des dégâts infligés.
+
+Cette attaque ne peut pas passer en critique.`,
           damage: "0.21*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cut Wide Open",
-          description: `Attacks 1 enemy. When not attacking Bosses, inflicts pure damage and decreases the target’s HP to 50%. Inflicts damage based on this Champion’s MAX HP instead and places a [Stun] debuff for 1 turn if the target already has less than 50% HP.<br><br>Inflicts damage based on this Champion’s MAX HP when attacking Bosses.<br><br>This attack cannot be critical.`,
+          name: "Étripage",
+          description: `Attaque un ennemi. Lorsqu'il n'attaque pas un Boss, inflige des dégâts purs et réduit les PV de la cible de 50 %. Sinon, inflige des dégâts basés sur les PV MAX de ce Champion et place un débuff ${DEBUFFS.STUN} d'1 tour si la cible possède déjà moins de 50 % de PV.
+
+Inflige des dégâts basés sur les PV MAX de ce Champion lorsqu'il attaque des Boss.
+
+Cette attaque ne peut pas passer en critique.`,
           damage: "0.32*HPMultiplier: 1*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Armor Cracker [P]",
-          description: `Decreases the values of all enemy [Shield] buffs by 50% at the start of every turn, then increases this Champion’s MAX HP by the same amount (up to 25% of their MAX HP).`,
+          name: "Casseur d'Armure [P]",
+          description: `Réduit de 50 % la valeur des buffs ${BUFFS.SHIELD} de tous les ennemis au début de chaque tour, puis augmente les PV MAX de ce Champion de la même valeur (jusqu'à 25 % de ses PV MAX).`,
           isPassive: true
         }
       ],

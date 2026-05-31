@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Winnowing Winter",
-          description: `Attacks all enemies.<br><br>Has a 25% chance of placing a [Block Active Skills] debuff for 1 turn. This debuff cannot be resisted if there is at least 1 enemy under a [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], or [Petrification] debuff.<br><br>Instantly activates this skill whenever this Champion skips a turn because of a [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], or [Petrification] debuff.`,
-          damage: "2.7*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff chance +5%", "Level 5: Buff/Debuff chance +10%"],
+          name: "Hiver réducteur",
+          description: `Attaque tous les ennemis.
+
+A 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+
+Active instantanément cette compétence dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
+          damage: "2.7*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blizzard of Stikes",
-          description: `Attacks all enemies. Will ignore [Block Damage] buffs.<br><br>Has a 75% chance of placing a [Freeze] debuff on all enemies for 1 turn. This debuff cannot be resisted, if there is at least 1 enemy under a [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], or [Petrification] debuff.<br><br>Revives one random ally with 50% HP and 50% Turn Meter, if this skill did not kill an enemy. Revives all allies with 50% HP and 50% Turn Meter, if this skill kills at least one enemy.`,
-          damage: "4*ATK",
+          name: "Blizzard de coups",
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+
+Ranime un allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour si cette compétence n'a pas tué d'ennemi. Ranime tous les alliés avec 50 % de PV et 50 % de Compteur de Tour si cette compétence tue au moins un ennemi.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff chance +10%", "Level 5: Buff/Debuff chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stain the Snows",
-          description: `Attacks 1 enemy. Before attacking, steals all Turn Meter from the target. This effect cannot be resisted if there is at least 1 enemy under a [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], or [Petrification] debuff.<br><br>Also equalizes the target's DEF with this Champion’s DEF for this attack.<br><br>The damage inflicted by this skill increases by the amount of Turn Meter stolen.`,
-          damage: "5.8*ATK",
+          name: "Tâcher les neiges",
+          description: `Attaque un ennemi. Avant d'attaquer, vole la totalité du Compteur de Tour de la cible. Il est impossible de résister à cet effet s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. Égalise également la DÉF de la cible avec la DÉF de ce Champion pour cette attaque. 
+
+Les dégâts infligés par cette compétence augmentent de la quantité de Compteur de Tour volé.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Solitary Demon [P]",
-          description: `Fills this Champion's Turn Meter by 50% whenever this Champion skips a turn because of a [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], or [Petrification] debuff.<br><br>Whenever this Champion skips a turn because of one of those debuffs, their next active skill will ignore 50% of the target's DEF.`,
+          name: "Démon solitaire [P]",
+          description: `Remplit le Compteur de Tour de ce Champion de 50 % dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+
+Dès que ce Champion passe un tour à cause d'un de ces débuffs, sa prochaine compétence active ignorera 50 % de la DÉF de la cible.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena battles by 33%.`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 33%`,
 };

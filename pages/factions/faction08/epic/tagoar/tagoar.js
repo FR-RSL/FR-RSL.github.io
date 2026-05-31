@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Da Magic Stick",
-          description: `Attacks 1 enemy 2 times. Places a 60% [Increase DEF] buff for 2 turns on the ally with the lowest current HP.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Bâton magique",
+          description: `Attaque 2 fois un ennemi. Place un buff ${BUFFS.DEF} de 60 % pendant 2 tours sur l'allié ayant le moins de PV.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Charge Cant",
-          description: `Attacks all enemies. Places a 30% [Increase SPD] buff on all allies for 2 turns, then heals all allies by 15% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.15*HP`,
-          damage: "3.7*ATK",
+          name: "Charge inclinée",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours, puis soigne tous les alliés de 15 % des PV MAX de ce Champion.`,
+          damage: "3.7*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rise And Fight",
-          description: `Revives all dead allies with 30% HP. Also places a [Shield] buff on all allies for 2 turns equal to 20% of this Champion’s MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Lève-toi et combats",
+          description: `Ranime tous alliés tombés avec 30 % de PV. Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Aid the Feeble [P]",
-          description: `Decreases the damage received by allies with 50% HP or less by 10%.`,
+          name: "Aider les faibles [P]",
+          description: `Réduit de 10 % les dégâts reçus par les alliés ayant 50 % de PV ou moins.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

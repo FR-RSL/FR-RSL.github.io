@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Frosty Pick",
-          description: `Attacks 1 enemy.`,
-          damage: "4.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Pic Glacial",
+          description: `Attaque un ennemi.`,
+          damage: "4.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Noggin Knocker",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "7.8*ATK",
+          name: "Heurte Caboche",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "7.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

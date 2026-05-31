@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Curved Shot",
-          description: `Attacks 1 enemy 2 times. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%"],
+          name: "Tir Courbe",
+          description: `Attaque 2 fois un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Incinerate",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "5.2*ATK",
+          name: "Incinérer",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "5.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Whisper",
-          description: `Places a 15% [Increase C. RATE] buff and a 50% [Increase ATK] buff on this Champion for 2 turns.`,
+          name: "Murmures",
+          description: `Place un buff d'${BUFFS.CRATE} de 15 % et un buff d'${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

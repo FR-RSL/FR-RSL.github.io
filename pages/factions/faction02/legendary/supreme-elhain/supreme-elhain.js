@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Exemplar of Strikes",
-          description: `Attacks 1 enemy 2 times. Each hit transfers a random debuff from this Champion to the target.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Archétype de frappes",
+          description: `Attaque 2 fois un ennemi. Chaque frappe transfère un débuff aléatoire de cette Championne sur la cible.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Let None Live",
-          description: `Attacks all enemies. Damage increases by 10% for each debuff on each target. <br><br>Resets the cooldown of the [Crack Shot] skill if this attack kills an enemy.`,
-          damage: "4*ATK*(1+0.1*Target Debuffs)",
+          name: "Aucun survivant",
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 10 % pour chaque débuff sur chaque cible. 
+
+Réinitialise le compteur de tour de la compétence [Tir fissurant] si cette attaque tue un ennemi.`,
+          damage: "4*ATQ*(1+0.1*Target Debuffs)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Crack Shot",
-          description: `Attacks 1 enemy. Will ignore [Ally Protection], [Strengthen], and [Shield] buffs. <br><br>Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "6*ATK",
+          name: "Tir fissurant",
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "6*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Implacable [P]",
-          description: `Immune to [Decrease ATK] debuffs. Inflicts 20% more damage against targets whose ATK is lower than this Champion’s ATK.`,
+          description: `Immunisée contre les débuffs ${DEBUFFS.ATK}. Inflige 20 % de dégâts en plus contre les cibles dont l'ATQ est inférieure à celle de cette Championne.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

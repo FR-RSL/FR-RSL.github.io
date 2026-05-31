@@ -3,34 +3,48 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sword of Redemption",
-          description: `Attacks 1 enemy 2 times. Will ignore 3% of the target’s DEF for each buff on the target.<br><br>Will also ignore [Shield] buffs if the target is under 2 or more buffs or debuffs.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Épée de rédemption",
+          description: `Attaque 2 fois un ennemi. Ignorera 3 % de la DÉF de la cible pour chaque buff dont bénéficie la cible.
+
+Ignorera également les buffs ${BUFFS.SHIELD} si la cible possède 2 buffs, ou débuffs, ou plus.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Chakram Cyclone",
-          description: `Attacks all enemies. Will ignore 5% of the target’s DEF for each buff on the target.<br><br>Steals 20% of the Turn Meter from each enemy. This effect cannot be resisted if the target is under 2 or more buffs or debuffs.`,
-          damage: "4*ATK",
+          name: "Cyclone chakram",
+          description: `Attaque tous les ennemis. Ignorera 5 % de la DÉF de la cible pour chaque buff dont bénéficie la cible.
+
+Vole 20 % du Compteur de Tour pour chaque ennemi. Il est impossible de résister à cet effet si la cible possède 2 buffs, ou débuffs, ou plus.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Whip of Destiny",
-          description: `Attacks all enemies. Will ignore 10% of the target’s DEF for each buff on the target.<br><br>Resets the cooldown of this skill if it kills 2 or more enemies.`,
-          damage: "4.1*ATK",
+          name: "Fouet du destin",
+          description: `Attaque tous les ennemis. Ignorera 10 % de la DÉF de la cible pour chaque buff dont bénéficie la cible.
+
+Réinitialise le compteur de tour de cette compétence si cette attaque tue 2 ennemis, ou plus.`,
+          damage: "4.1*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "For the Greater Good! [P]",
-          description: `[Passive Effect]<br><br>Increases this Champion’s ATK by 10% every time they use an active skill (stacks up to 100%). Resets each Round.<br><br>Also has a 50% chance of randomly changing this Champion’s weak hits to normal, strong, or critical hits. The chance increases to 100% when attacking enemies under 2 or more buffs or debuffs.<br><br>[Active Effect]<br><br>Fills this Champion’s Turn Meter by 100% and places a 50% [Increase ATK] buff on this Champion for 1 turn whenever 8 or more buffs are placed on the enemy team in a single turn.`,
+          name: "Servir au mieux ! [P]",
+          description: `${PASSIVE}
+
+Augmente l'ATQ de ce Champion de 10 % chaque fois qu'il utilise une compétence active (s'additionne jusqu'à 100 %). Se réinitialise à chaque round.
+
+Possède également 50 % de chances de changer de manière aléatoire les frappes faibles de ce Champion en frappes normales, puissantes ou critiques. Les chances passent à 100 % lors des attaques contre des ennemis se trouvant sous 2 buffs, débuffs, ou plus.
+
+${ACTIVE}
+
+Remplit le Compteur de Tour de ce Champion par 100 % et place sur ce Champion un buff ${BUFFS.ATK} de 50 %, pour 1 tour, dès que 8 buffs, ou plus, sont placés sur l'équipe ennemie lors d'un seul tour.`,
           cooldown: 3,
           isPassive: true
         }
@@ -49,5 +63,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 33%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gore-Slick Maul",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Leech] debuff on the target for 2 turns before attacking.`,
+          name: "Maillet Sanglant",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer sur la cible un débuff ${DEBUFFS.LEECH} de 2 tours avant d'attaquer.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bonebreaker Stomp",
-          description: `Attacks all enemies. Has a 60% chance of placing a 50% [Decrease ATK] debuff or a 25% [Decrease C. DMG] debuff for 2 turns.`,
+          name: "Écrasement Brise-os",
+          description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % ou un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +20%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Smothering Swath",
-          description: `Attacks all enemies. Places a 15% [Continuous Heal] buff on all allies for 2 turns. Places an additional 7.5% [Continuous Heal] buff on all allies for 1 turn if at least one enemy is hit with a critical hit.`,
+          name: "Fauchée Étouffante",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place un buff ${BUFFS.HEALS} supplémentaire de 7,5 % sur tous les alliés pendant 1 tour si au moins un ennemi est touché par une frappe en critique.`,
           damage: "4*DEF",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 30%`,
 };

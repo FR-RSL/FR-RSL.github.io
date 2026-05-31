@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gigantic Cudgel",
-          description: `Attacks 1 enemy. Has a 45% chance of placing a [Block Active Skills] debuff for 1 turn.`,
+          name: "Gigantesque Gourdin",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "0.23*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Barrel Through",
-          description: `Attacks all enemies. Places a 25% [Decrease C. DMG] debuff and a 50% [Decrease ATK] debuff for 2 turns on targets whose ATK is higher than their DEF. Places a 30% [Decrease SPD] debuff and a 60% [Decrease DEF] debuff for 2 turns on targets whose ATK is equal to or lower than their DEF.`,
+          name: "Foncer dans le tas",
+          description: `Attaque tous les ennemis. Place, pendant 2 tours, un débuff ${DEBUFFS.CDAM} de 25 % et un débuff ${DEBUFFS.ATK} de 50 % sur les cibles dont l'ATQ est plus élevée que la DÉF. Place, pendant 2 tours, un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.DEF} de 60 % sur les cibles dont l'ATQ est inférieure ou égale à la DÉF.`,
           damage: "0.23*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bottoms Up",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 3 turns. Places a 25% [Strengthen] buff on this Champion for 3 turns.`,
+          name: "Cul Sec",
+          description: `Place, pendant 3 tours, un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf sur ce Champion. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 3 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Golden Guard [P]",
-          description: `Decreases the damage all allies receive from critical hits by 30%. This Champion will receive that damage instead.`,
+          name: "Garde Dorée [P]",
+          description: `Réduit de 30 % les dégâts infligés à tous les alliés par les coups critiques. Ce Champion subira les dégâts à leur place.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

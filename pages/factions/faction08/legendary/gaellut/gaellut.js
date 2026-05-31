@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Beheading Strike",
-          description: `Attacks 1 enemy. Before attacking, decreases the duration of all buffs on the target by 1 turn. <br><br>Also has a 75% chance of placing a [Block Buffs] debuff for 2 turns. This debuff is protected when placed on Bosses.`,
+          name: "Frappe décapitante",
+          description: `Attaque un ennemi. Avant d'attaquer, réduit d'1 tour la durée de tous les buffs de la cible. 
+
+A également 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Ce débuff est protégé lorsqu'il est placé sur des Boss.`,
           damage: "0.23*HP",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gaellen Fury",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a [Stun] debuff for 1 turn and a 60% [Decrease DEF] debuff for 2 turns. <br><br>Decreases the Turn Meters of enemies without a [Stun] debuff by 30%.`,
+          name: "Furie gaelienne",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour et un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Réduit de 30 % le Compteur de Tour des ennemis sans débuff ${DEBUFFS.STUN}.`,
           damage: "0.28*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blood Of The Pact",
-          description: `Removes all debuffs from all allies, then heals them by 25% of this Champion’s MAX HP. <br><br>Places a [Shield] buff, equal to 25% of this Champion’s MAX HP, and a 25% [Fortify] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.25*HPShield Multiplier: 0.25*HP`,
+          name: "Sang du Pacte",
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 25 % des PV MAX de ce Champion. 
+
+Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 25 % des PV MAX de ce Champion et un buff ${BUFFS.FORTIFY} de 25 % pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Shield +10%", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Bouclier +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Freedom Or Death [P]",
-          description: `For every 10 debuffs this Champion's team receives, activates the Blood Of The Pact skill. When activated in this way, the buffs placed by the Blood Of The Pact skill are protected. Does not set the Blood Of The Pact skill on cooldown. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "La liberté ou la mort [P]",
+          description: `Pour tous les 10 débuffs que reçoit l'équipe de ce Champion, active la compétence Sang du Pacte. Lorsqu'elle est activée ainsi, les buffs placés par la compétence Sang du Pacte sont protégés. Ne place pas la compétence Sang du Pacte en temps de recharge. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 35%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
 };

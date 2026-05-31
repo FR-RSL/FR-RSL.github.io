@@ -4,25 +4,28 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Provoquer la ruine",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possede 30% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "1.5*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Sort de cariatide",
-          description: `Transfere tous les debuffs ce cette Championne sur une cible ennemi, puis attaque 3 fois cet ennemi.${RETURN}${RETURN}
-La premiere frappe augmente d'1 tour la duree de tous les debuffs de la cible.${RETURN}${RETURN}
-La seconde frappe reduit d'1 tour la duree de tous les buffs de la cible.${RETURN}${RETURN}
-Augmente egalement d'1 tour la duree de tous les buffs de cette Championne apres l'attaque.`,
+          description: `Transfère tous les débuffs de cette Championne sur une cible ennemie, puis attaque 3 fois cet ennemi. 
+
+La première frappe augmente d'1 tour la durée de tous les débuffs de la cible. 
+
+La seconde frappe réduit d'1 tour la durée de tous les buffs de la cible. 
+
+Augmente également d'1 tour la durée de tous les buffs de cette Championne après l'attaque.`,
           damage: "1.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
-          name: "Humilie et brise",
-          description: `Attaque 2 fois tous les ennemis. La premiere frappe retire tous les buffs. La seconde frappe ignorera 20% de la DEF de la cible contre les cibles n'ayant aucun buff actif.`,
+          name: "Humilié et brisé",
+          description: `Attaque 2 fois tous les ennemis. La première frappe retire tous les buffs. La seconde frappe ignorera 20 % de la DÉF de la cible contre les cibles n'ayant aucun buff actif.`,
           damage: "2.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -30,8 +33,9 @@ Augmente egalement d'1 tour la duree de tous les buffs de cette Championne apres
         {
           img: "assets/sort4.webp",
           name: "Chercheuse de mana [P]",
-          description: `Augmente la PRE de cette Championne de 10 pour chaque buff sur chaque ennemi.${RETURN}${RETURN}
-Augmente les DEG C. de cette Championne de 5% pour chaque debuff sur chaque ennemi. S'accumule jusqu'a 100%.`,
+          description: `Augmente la PRÉ de cette Championne de 10 pour chaque buff sur chaque ennemi.
+
+Augmente les DÉG C. de cette Championne de 5 % pour chaque débuff sur chaque ennemi. S'accumule jusqu'à 100 %.`,
           isPassive: true,
         }
   ],

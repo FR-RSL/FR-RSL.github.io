@@ -3,10 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Passer a la Flamme",
-          description: `
-            Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.BURN} de 2 tours.
-          `,
+          name: "Passer à la Flamme",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
           damage: "5.2*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -16,11 +14,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Etreinte Seigneuriale",
-          description: `
-            Retire tous les debuffs sur une cible alliee, puis place un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours, avant de soigner cet allie de 75% de ses PV MAX.<br><br>
-			Soigne tous les autres allies de 20% de leurs PV MAX, puis remplit de 15% leurs Compteurs de Tours si la cible est totalement soignee par cette Competence.
-          `,
+          name: "Étreinte Seigneuriale",
+          description: `Retire tous les débuffs sur une cible alliée, puis place un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours, avant de soigner cet allié de 75 % de ses PV MAX.
+
+Soigne tous les autres alliés de 20 % de leurs PV Max, puis remplit de 15 % leurs Compteurs de Tour si la cible est totalement soignée par cette Compétence.`,
           cooldown: 3,
           levelInfo: [
             "Soins +5%",
@@ -31,10 +28,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Agresser",
-          description: `
-            Possede 75% de chances de retirer tous les buffs sur tous les ennemis, puis reduit de 10% le Compteur de Tour de tous les ennemis et remplit de 10% le Compteur de Tour de tous les allies.<br><br>
-			Reduit de 20% le Compteur de Tour de tous les ennemis et remplit de 20% le Compteur de Tour de tous les allies si 5 buffs, ou plus, ont ete retires.
-          `,
+          description: `Possède 75 % de chances de retirer tous les buffs sur tous les ennemis, puis réduit de 10 % le Compteur de Tour de tous les ennemis et remplit de 10 % le Compteur de Tour de tous les alliés. 
+
+Réduit de 20 % le Compteur de Tour de tous les ennemis et remplit de 20 % le Compteur de Tour de tous les alliés si 5 buffs, ou plus, ont été retirés.`,
           cooldown: 4,
           levelInfo: [
 			"Chance de Buff/débuff +5%",

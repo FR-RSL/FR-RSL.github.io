@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Smell Weakness",
-          description: `Attacks 1 enemy 2 times. Has a 30% chance of placing a [Provoke] debuff on the target for 1 turn if this Champion has no debuffs. <br>Heals by 15% of the damage inflicted if this Champion is under any debuff.<br><br><br>Heal Multiplier: 0.15*Damage Dealt`,
+          name: "Sentir la Faiblesse",
+          description: `Attaque 2 fois un ennemi.`,
           damage: "1.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Endless Sands",
-          description: `Attacks all enemies. Decreases the duration of all enemy buffs by 1 turn. Increases the duration of all ally buffs by 1 turn.`,
+          name: "Sables Intarissables",
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Augmente d'1 tour la durée de tous les buffs alliés.`,
           damage: "3.3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Born Survivor [P]",
-          description: `Places a 50% [Ally Protection] buff on all allies for 2 turns when any ally’s HP drops below 50%. Also places a [Block Damage] buff on this Champion for 1 turn.`,
+          name: "Survivante Née [P]",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, pendant 2 tours, sur tous les alliés lorsque les PV de n'importe quel allié tombent sous 50 %. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%`,
 };

@@ -3,33 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brutal Verdict",
-          description: `Attacks 1 enemy. Heals this Champion by 10% of their MAX HP. Grants an Extra Turn if this attack kills an enemy.<br><br><br>Heal Multiplier: 0.1*HP`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Verdict Brutal",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10 % de ses PV MAX. Accorde un Tour Supplémentaire si cette attaque tue un ennemi.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gore Feast",
-          description: `Attacks all enemies. After attacking, this Champion sacrifices HP equal to 50% of their MAX HP, then places a 15% [Continuous Heal] buff on all allies for 2 turns.<br><br>The HP sacrifice will happen even if it kills this Champion.`,
-          damage: "3.2*ATK",
+          name: "Sanglant Festin",
+          description: `Attaque tous les ennemis. Après avoir attaqué, ce Champion sacrifie des PV équivalents à 50 % de ses PV MAX, puis place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés, pendant 2 tours.
+
+Le sacrifice de PV se produira même si cela tue ce Champion.`,
+          damage: "3.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Last Rites",
-          description: `Sacrifices HP equal to 50% of this Champion's MAX HP, then equalizes HP levels with the target enemy. Then, grants an Extra Turn. <br><br>The HP levels of both this Champion and the target enemy will be brought down to the level of the one with the lowest HP.<br>[Does not work against Bosses. This Champion cannot be killed by this Skill.]`,
+          name: "Viatique",
+          description: `Sacrifie des PV équivalents à 50 % des PV MAX de ce Champion, puis égalise les niveaux de PV avec l'ennemi ciblé. Accorde ensuite un Tour supplémentaire. 
+
+Les PV de ce Champion et de l'ennemi ciblé seront descendus au niveau de celui qui a le moins de PV.
+[Ne fonctionne pas contre les Boss. Ce Champion ne peut pas être tué par cette Compétence.]`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Headsman's Return [P]",
-          description: `Revives this Champion with 50% HP and full Turn Meter when dead if all allies are alive.<br><br>Does not work if there are multiple Nogdars on the team or if there are 3 or fewer total Champions on the team.`,
+          name: "Retour du Bourreau [P]",
+          description: `Ranime ce Champion avec 50 % de PV et un Compteur de Tour rempli lorsqu'il est mort si tous les alliés sont vivants.
+
+Ne fonctionne pas s'il y a plusieurs Nogdar dans l'équipe, ou s'il y a 3 Champions ou moins au total dans l'équipe.`,
           cooldown: 1,
           isPassive: true
         }
@@ -48,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

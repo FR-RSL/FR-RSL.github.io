@@ -4,13 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Absorption",
-          description: `
-            Attaque un ennemi.<br><br>
-			Place pendant 1 tour un buff <span class='gbt'>Soins continus</span> de 15%
-			sur l'allié ayant le moins de PV.
-			Place également pendant 1 tour un buff <span class='gbt'>Soins continus</span>
-			de 7.5% sur tous les alliés ayant 30% de PV ou moins.
-          `,
+          description: `Attaque un ennemi. 
+
+Place pendant 1 tour un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV. Place également pendant 1 tour un buff ${BUFFS.HEALS} de 7,5 % sur tous les alliés ayant 30 % de PV ou moins.`,
           damage: "4.3*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -22,16 +18,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Points de Pression",
-          description: `
-            Place un débuff <span class='gbt'>Etourdissement</span>
-			sur un cible ennemie pendant 1 tour,
-			ainsi qu'un débuff <span class='gbt'>Brulure de PV</span>,
-			un débuff <span class='gbt'>Reduction de DEF</span> de 60%,
-			un débuff <span class='gbt'>Affaiblissement</span> de 25%,
-			un débuff <span class='gbt'>Reduction d'ATQ</span> de 50% et
-			un débuff <span class='gbt'>Reduction du TAUX C.</span> de 30% 
-			pendant 2 tours, puis attaque la cible.
-          `,
+          description: `Place un débuff ${DEBUFFS.STUN} sur une cible ennemie pendant 1 tour, ainsi qu'un débuff ${DEBUFFS.BURN}, un débuff ${DEBUFFS.DEF} de 60 %, un débuff ${DEBUFFS.WEAKEN} de 25 %, un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours, puis attaque la cible.`,
           damage: "5.8*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -45,13 +32,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Corps Parfait",
-          description: `
-            Retire tous les débuffs sur tous les alliés,
-			puis leur place un buff <span class='gbt'>Blocage des débuffs</span>
-			pendant 2 tours. Soigne également tous les alliés de 35%
-			de leurs PV MAX et de 5% supplémentaires pour chaque débuff
-			qui leur a ete retire.
-          `,
+          description: `Retire tous les débuffs sur tous les alliés, puis leur place un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours. Soigne également tous les alliés de 35 % de leurs PV MAX et de 5 % supplémentaires pour chaque débuff qui leur a été retiré.`,
           cooldown: 6,
           levelInfo: [
             "Soins +10%",
@@ -64,11 +45,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Renvoi [P]",
-          description: `
-            Lors de la reception d'un débuff,
-			le transfere de ce Champion a l'assaillant.<br><br>
-			[Ne transferera pas les débuffs impossibles a retirer.]
-          `,
+          description: `Lorsque ce Champion reçoit des débuffs, les retourne de ce Champion vers l'assaillant.
+
+[Ne retournera pas les débuffs impossibles à retirer.]`,
 		  cooldown: 3,
           isPassive: true,
         },

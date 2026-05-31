@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Night Blossom",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "3.55*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Floraison Nocturne",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          damage: "3.55*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Reign of Fear",
-          description: `Attacks 3 times at random. Each hit has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "1.9*ATK",
+          name: "Règne de Terreur",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lay Bare",
-          description: `Removes all [Increase DEF] buffs from all enemies, then attacks all enemies. <br><br>Decreases the cooldown of Lay Bare by 1 turn for each enemy killed by this skill.`,
-          damage: "3.6*ATK",
+          name: "Dévoiler",
+          description: `Retire tous les buffs ${BUFFS.DEF} sur tous les ennemis, puis attaque tous les ennemis. 
+
+Réduit d'1 tour le temps de recharge de Dévoiler pour chaque ennemi tué par cette compétence.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

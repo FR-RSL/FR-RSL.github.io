@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hawktalon",
-          description: `Attacks 1 enemy. Places a 7.5% [Continuous Heal] buff for 1 turn on the ally with the lowest HP.`,
+          name: "Serre de faucon",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.HEALS} de 7,5 % pendant 1 tour sur l'allié ayant le moins de PV.`,
           damage: "0.22*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Emotionless Rampage",
-          description: `Attacks 3 times at random. Each hit has a 50% chance of placing a [Provoke] debuff for 1 turn. <br><br>Also places a 30% [Reflect Damage] buff on this Champion for 2 turns.`,
+          name: "Fureur impassible",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+
+Place également un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 tours.`,
           damage: "0.12*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Living Barricade",
-          description: `Places a 25% [Ally Protection] buff on all allies except this Champion for 2 turns. <br><br>Also places a 30% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Barricade vivante",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 25 % sur tous les alliés sauf ce Champion pendant 2 tours. 
+
+Place également un buff ${BUFFS.DEF} de 30 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

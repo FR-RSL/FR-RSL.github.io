@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Desert Wind",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.45*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Vent du Désert",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "3.45*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Nomad's Stride",
-          description: `Attacks 3 times at random. Each critical hit decreases the target’s Turn Meter by 10%. Will only decrease the Turn Meter once per target.`,
-          damage: "1.9*ATK",
+          name: "Pas de Nomade",
+          description: `Attaque 3 fois au hasard. Chaque coup critique réduit le Compteur de Tour de la cible de 10 %. Ne réduira le Compteur de Tour qu'une fois par cible.`,
+          damage: "1.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Harsh Mercy",
-          description: `Attacks all enemies, then attacks the enemy with the lowest HP. Has a 75% chance of placing a 100% [Heal Reduction] debuff on the enemy with the lowest HP for 2 turns.`,
-          damage: "3.62*ATK",
+          name: "Pitié Sévère",
+          description: `Attaque tous les ennemis, puis attaque l'ennemi ayant le moins de PV. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % sur l'ennemi ayant le moins de PV pendant 2 tours.`,
+          damage: "3.62*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

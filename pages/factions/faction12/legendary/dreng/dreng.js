@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Corpsefire",
-          description: `Attacks 1 enemy 2 times. Instantly activates any [HP Burn] debuffs on the target after attacking.`,
+          name: "Feu de cadavre",
+          description: `Attaque 2 fois un ennemi. Active instantanément tout débuff ${DEBUFFS.BURN} sur la cible après avoir attaqué.`,
           damage: "0.11*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Exalted Pyre",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff on all enemies for 2 turns. This debuff cannot be resisted.`,
+          name: "Bûcher exalté",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff.`,
           damage: "0.23*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Death's Balance",
-          description: `Equalizes the HP of all allies, then attacks 1 enemy.<br><br>The HP levels of all allies will be brought up to the level of the ally with the highest HP. <br><br>The attack will ignore 30% of the target's DEF if the target's current HP is equal to or lower than this Champion's current HP.<br><br>Will decrease the cooldown of the Exalted Pyre skill by 1 turn if the target's current HP is higher than this Champion's current HP.`,
+          name: "Équilibre de la Mort",
+          description: `Égalise les PV de tous les alliés, puis attaque 1 ennemi.
+
+Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV. 
+
+Cette attaque ignorera 30 % de la DÉF de la cible si les PV actuels de la cible sont inférieurs ou égaux aux PV actuels de ce Champion.
+
+Réduira d'1 tour le temps de recharge de la compétence Bûcher exalté si les PV actuels de la cible sont supérieurs aux PV actuels de ce Champion.`,
           damage: "0.35*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fortress [P]",
-          description: `Reflects 30% of the damage this Champion receives back to the attacker if this Champion has 50% HP or more.<br><br>Deals 30% more damage instead if this Champion has less than 50% HP.`,
+          name: "Forteresse [P]",
+          description: `Renvoie sur l'assaillant 30 % des dégâts reçus par ce Champion si ce Champion possède 50 % de PV ou plus.
+
+Inflige 30 % de dégâts en plus si ce Champion possède moins de 50 % de PV.`,
           isPassive: true
         }
       ],
@@ -48,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 30%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%`,
 };

@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Holy Blow",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 25% [Decrease ATK] debuff for 1 turn.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Coup Sacré",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

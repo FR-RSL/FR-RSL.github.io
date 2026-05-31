@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brush Choppers",
-          description: `Attacks 1 enemy. Has a 15% chance of placing an extra hit.`,
-          damage: "2.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Hachoirs brosses",
+          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          damage: "2.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crown Breaker",
-          description: `Attacks 1 enemy. Will ignore [Shield] and [Block Damage] buffs. Places a [Block Damage] buff on this Champion for 1 turn if this attack kills an enemy.`,
-          damage: "5*ATK",
+          name: "Brise couronne",
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. Place un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour si cette attaque tue un ennemi.`,
+          damage: "5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ancient Rage",
-          description: `Places a 30% [Increase C. DMG] buff and a 50% [Increase ATK] buff on this Champion for 3 turns, then grants an Extra Turn.`,
+          name: "Rage antique",
+          description: `Place un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.ATK} de 50 % sur cette Championne pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Assassin of Kings [P]",
-          description: `Whenever this Champion kills an enemy, decreases the cooldown of the Crown Breaker skill by 1 turn.`,
+          name: "Assassin de rois [P]",
+          description: `Dès que cette Championne tue un ennemi, réduit d'1 tour le temps de recharge de la Compétence Brise couronne.`,
           isPassive: true
         }
       ],

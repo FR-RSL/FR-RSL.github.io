@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Devour",
-          description: `Attacks 1 enemy 2 times. Has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Damage +10%"],
+          name: "Dévorer",
+          description: `Attaque 2 fois un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tailwind",
-          description: `Fills the Turn Meter of all allies by 30%. Places a 50% [Increase ATK] buff on all allies for 2 turns. Grants an Extra Turn.`,
+          name: "Vent arrière",
+          description: `Remplit de 30 % le Compteur de Tours de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dark Blood [P]",
-          description: `Heals this Champion by 20% HP and places a 60% [Increase DEF] buff on all allies for 2 turns when hit with a critical hit.<br><br>Heal Multiplier: 0.2*HP`,
+          name: "Sang Noir [P]",
+          description: `Soigne ce Champion de 20 % de PV, puis place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur tous les alliés lorsqu'un coup passe en critique.`,
           cooldown: 5,
           isPassive: true
         }
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Arena by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des batailles d'Arène de 30%`,
 };

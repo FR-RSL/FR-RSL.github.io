@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Searing Rebuke",
-          description: `HP Burn Attacks 1 enemy. Places a [HP Burn] debuff for 2 turns. This debuff cannot be resisted.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Réprimande Brûlante",
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.BURN} de 2 tours. Il est impossible de résister à ce débuff.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Smolder",
-          description: `Attacks all enemies. Places a 5% [Poison] debuff for 2 turns. Places a second 5% [Poison] debuff for 2 turns if the attack is critical.`,
-          damage: "4.7*ATK",
+          name: "Bouillir",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours. Place un second débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours si cette attaque passe en critique.`,
+          damage: "4.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Combust",
-          description: `Instantly activates all [Poison] debuffs on all enemies.`,
+          name: "Allumer",
+          description: `Active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.`,
           damage: "Poison Debuff Count",
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Faction Wars by 24%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Cryptes de Faction de 24%`,
 };

@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crushing Impact",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Impact Écrasant",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flail Master",
-          description: `Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.<br><br>Heals this Champion by 25% of the damage inflicted.<br><br><br>Heal Multiplier: 0.25*Damage Dealt`,
+          name: "Maître du Fléau",
+          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.
+
+Soigne ce Champion à hauteur de 25 % des dégâts infligés.`,
           damage: "3.6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fend Them Off",
-          description: `Places a 50% [Ally Protection] buff and a 15% [Continuous Heal] buff on all allies except this Champion for 2 turns.`,
+          name: "Repousse-les",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % et un buff de ${BUFFS.HEALS} de 15 % sur tous les alliés, sauf ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Force Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés Force lors de toutes les Batailles de 33%`,
 };

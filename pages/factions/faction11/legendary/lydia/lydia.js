@@ -4,17 +4,18 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Oppression",
-          description: `Attaque un ennemi. Possede 75% de chances de placer un debuff ${DEBUFFS.FEAR} pendant 1 tour. Possede 75% de chances d'augmenter d'1 tour la duree de tous les debuffs ${DEBUFFS.POISON_S}.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON_S}.
+
 ${PASSIVE}
-Attaque tous les ennemis avec cette Competence des qu'ils place un debuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} sur un allie. Le nombre d'attaques augmente en fonction du nombre de debuffs places a ce moment : 1 attaque pour chaque debuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} place. La premiere attaque ciblera l'assaillant et toutes les frappes supplementaires attaqueront des ennemis choisis au hasard. Ne peut attaquer chaque ennemi qu'une fois.`,
+
+Attaque les ennemis avec cette Compétence dès qu'ils placent un débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} sur un allié. Le nombre d'attaques augmente en fonction du nombre de débuffs placés à ce moment : 1 attaque pour chaque débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} placé. La première attaque ciblera l'assaillant et toutes les frappes supplémentaires attaqueront des ennemis choisis au hasard. Ne peut attaquer chaque ennemi qu'une fois.`,
           damage: "3.75*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Pleurs de Sirene",
-          description: `Attaque tous les ennemis. Possede 75% de chances de placer un debuff ${DEBUFFS.DEF} de 60% et un debuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.${RETURN}${RETURN}
-Place egalement un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.SPD} de 30% sur tous les allies pendant 2 tours.`,
+          name: "Pleurs de Sirène",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Place également un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -22,7 +23,7 @@ Place egalement un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.SPD} de 30
         {
           img: "assets/sort3.webp",
           name: "Invalidation",
-          description: `Attaque 2 fois un ennemi. La premiere frappe possede 75% de chances de placer un debuff ${DEBUFFS.POISON_S} de 25% pendant 2 tours. La seconde frappe possede 75% de chances de placer un debuff ${DEBUFFS.BLOCK_BUFFS} et un debuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.POISON_S} de 25 % pendant 2 tours. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "3.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -30,10 +31,13 @@ Place egalement un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.SPD} de 30
         {
           img: "assets/sort4.webp",
           name: "Prise Mortelle [P]",
-          description: `<span class="grn-t">Empeche</span> chaque tentative de reanimation ennemie. Cela fonctionne meme si cette Championne est morte.${RETURN}${RETURN}
-Si cette Championne est vivante lorsqu'une reanimation ennemie est empechee, ranime les allies morts avec 50% de PV et 50% de Compteur de Tour. Accorde un Tour Supplementaire si aucun allie n'est mort.${RETURN}${RETURN}
-Si cette Championne est morte lorsqu'une reanimation ennemie est empechee, ranime cette Championne avec 50% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
-Cette competence ignorera ${DEBUFFS.BLOCK_REA}.`,
+          description: `Empêche chaque tentative de réanimation ennemie. Cela fonctionne même si cette Championne est morte.
+
+Si cette Championne est vivante lorsqu'une réanimation ennemie est empêchée, ranime les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Accorde un Tour Supplémentaire si aucun allié n'est mort.
+
+Si cette Championne est morte lorsqu'une réanimation ennemie est empêchée, ranime cette Championne avec 50 % de PV et 50 % de Compteur de Tour.
+
+Cette compétence ignorera ${DEBUFFS.BLOCK_REA}.`,
           cooldown: 9,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true,

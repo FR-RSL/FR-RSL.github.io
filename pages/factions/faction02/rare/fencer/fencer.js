@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Enchanted Rapier",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%"],
+          name: "Rapière Enchantée",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pommel Strike",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn. Steals 20% of the target’s Turn Meter if the [Stun] debuff is not placed.`,
-          damage: "5.9*ATK",
+          name: "Frappe du Pommeau",
+          description: `Attaque un ennemi. Offre 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Vole 20 % du Compteur de Tour de la cible si le débuff ${DEBUFFS.STUN} n'est pas placé.`,
+          damage: "5.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blade Flourish",
-          description: `Attacks all enemies. Has a 75% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.5*ATK",
+          name: "Moulinet de Lame",
+          description: `Attaque tous les ennemis. Offre 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 23%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 23%`,
 };

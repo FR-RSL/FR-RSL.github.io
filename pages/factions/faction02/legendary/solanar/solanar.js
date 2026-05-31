@@ -3,34 +3,48 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Solar Surge",
-          description: `Attacks all enemies. This attack is always critical if Noluda the Gloaming is on the same team. Has a 60% chance of placing a [Fatigue] debuff on all enemies for 1 turn.<br><br>[Passive Effect] <br><br>Has an 80% chance to counterattack with this skill whenever an enemy gets an Extra Turn or has an Instant Turn effect activated. <br><br>Has a 15% chance to counterattack with this skill whenever an enemy has their Turn Meter increased.`,
-          damage: "2.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Déferlement solaire",
+          description: `Attaque tous les ennemis. Cette attaque est toujours critique si Noldua du Crépuscule se trouve dans la même équipe. 
+
+A 60 % de chances de placer un débuff ${DEBUFFS.FATIGUE} sur tous les ennemis pendant 1 tour. 
+
+${PASSIVE}
+
+A 80 % de chances de contre-attaquer avec cette compétence dès qu'un ennemi obtient un Tour supplémentaire ou active un effet ${INSTANT}. A 15 % de chances de contre-attaquer avec cette compétence dès qu'un ennemi voit son Compteur de Tour augmenté.`,
+          damage: "2.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blazing Force",
-          description: `Attacks 1 enemy. This attack is always critical if Noluda the Gloaming is on the same team. Will ignore 10% of the target’s DEF for each buff on this Champion.<br><br>This Champion is immune to all debuffs while this skill is not on cooldown. Whenever an enemy attempts to place a debuff on this Champion while this skill is not on cooldown, this Champion gains a random buff instead.`,
-          damage: "6*ATK",
+          name: "Force éclatante",
+          description: `Attaque un ennemi. Cette attaque est toujours critique si Noldua du Crépuscule se trouve dans la même équipe. Ignorera 10 % de la DÉF de la cible pour chaque buff dont bénéficie ce Champion.
+
+Ce Champion est immunisé contre tous les débuffs si cette compétence n'est pas en temps de recharge. Dès qu'un ennemi essaie de placer un débuff sur ce Champion lorsque cette compétence n'est pas en temps de recharge, ce Champion reçoit au lieu de cela un buff aléatoire. Cet effet ne fonctionne pas contre les Boss.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unfettered Radiance",
-          description: `Attacks 1 enemy. Before attacking, steals all buffs and 100% Turn Meter from the target if they are not under a [Stone Skin] buff. This effect cannot be resisted. This attack is always critical if Noluda the Gloaming is on the same team. Will ignore [Stone Skin] buffs.<br><br>This Champion receives 75% less damage on enemy Extra Turns or Instant Turns while this skill is not on cooldown.<br><br>While this skill is on cooldown, reduces the cooldown by 1 whenever an enemy receives an Extra Turn, has an Instant Turn effect activated on them, or has their Turn Meter increased. Occurs once per turn.`,
-          damage: "6*ATK",
+          name: "Rayonnement débridé",
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs et 100 % du Compteur de Tour de la cible si elle ne se trouve pas sous buff ${BUFFS.STONE_SKIN}. Il est impossible de résister à cet effet. Cette attaque est toujours critique si Noldua du Crépuscule se trouve dans la même équipe. Ignorera les buffs ${BUFFS.STONE_SKIN}. 
+
+Ce Champion se voit infliger 75 % de dégâts en moins lors des Tours supplémentaires ou ${INSTANT} de l'ennemi lorsque cette compétence n'est pas en temps de recharge. 
+
+Lorsque cette compétence est en temps de recharge, réduit d'1 tour le temps de recharge dès qu'un ennemi reçoit un Tour supplémentaire, bénéficie de l'activation d'un ${INSTANT} ou voit son Compteur de Tour augmenté. Se produit une fois par tour.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +20%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Scholar Of Sun [P]",
-          description: `Whenever an enemy receives healing, has a 100% chance to reduce the amount of healing received to zero. This Champion will receive that healing instead. If Noluda the Gloaming is on the same team, enemies will receive damage equal to the amount of healing instead.<br><br>Once per Round, if this Champion is dead, revives this Champion with 100% HP and 100% Turn Meter when their last living ally is killed. Then places a [Magma Shield] buff on this Champion for 2 turns. The value of the [Magma Shield] is equal to 300% of this Champion’s MAX HP. If Noluda the Gloaming is on the same team, this buff is protected.`,
+          name: "Spécialiste du soleil [P]",
+          description: `Dès qu'un ennemi reçoit un soin, a 100 % de chances de réduire à zéro la quantité de soin reçue. Ce Champion recevra ce soin à la place. Si Noldua du Crépuscule se trouve dans la même équipe, les ennemis recevront au lieu de cela des dégâts équivalents à la quantité de soin. Cet effet ne fonctionne pas contre les Boss.
+
+Une fois par tour, si ce Champion est mort, ranime ce Champion avec 100 % de PV et 100 % de Compteur de Tour lorsque le dernier allié vivant est tué. Ensuite, place un buff ${BUFFS.SHIELD_MAGMA} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD_MAGMA} est égale à 300 % des PV MAX de ce Champion. Si Noldua du Crépuscule se trouve dans la même équipe, ce buff est protégé.`,
           isPassive: true
         }
       ],
@@ -48,5 +62,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

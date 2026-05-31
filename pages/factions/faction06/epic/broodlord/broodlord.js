@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Patient Tactician",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a [Provoke] debuff for 1 turn if the target is under a [Decrease SPD] debuff.`,
+          name: "Tacticien patient",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si la cible est affligée d'un débuff ${DEBUFFS.SPD}.`,
           damage: "1.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Defend the Nest",
-          description: `Places a 50% [Ally Protection] buff on an ally for 2 turns, then a [Block Debuffs] buff on that ally for 1 turn. <br><br>Also places a [Shield] buff on this Champion for 2 turns equal to 20% of this Champion’s MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Défendre le Nid",
+          description: `Place sur un allié un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours, puis un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour. 
+
+Place également sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Primal Tremor",
-          description: `Attacks all enemies. Has a 40% chance of placing a [Stun] debuff for 1 turn. The chance increases to 75% against enemies under [Decrease SPD] debuffs.`,
+          name: "Frisson primitif",
+          description: `Attaque tous les ennemis. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Les chances passent à 75 % contre les ennemis sous débuffs ${DEBUFFS.SPD}.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Eggwatcher [P]",
-          description: `Whenever this Champion is attacked, or whenever allies under [Ally Protection] buffs are attacked, has a 30% chance of placing a 30% [Decrease SPD] debuff on the attacker for 2 turns.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%"],
+          name: "Garde-ufs [P]",
+          description: `Dès que ce Champion se fait attaquer, ou dès que les alliés sous buffs ${BUFFS.ALLY_PROTECT} se font attaquer, possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur l'assaillant pendant 2 tours.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%`,
 };

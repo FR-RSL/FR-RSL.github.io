@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Onrush",
-          description: `Attacks 1 enemy. Fills this Champion's Turn Meter by 10% if this attack is critical.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Assaut",
+          description: `Attaque un ennemi. Remplit de 10 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shatter Defenses",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "7.1*ATK",
+          name: "Fracasser les Défenses",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "7.1*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Destroy Confidence",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Block Active Skills] debuff for 2 turns. Has an extra 15% chance of inflicting a critical hit.`,
-          damage: "8*ATK",
+          name: "Confiance Détruite",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Possède 15 % de chances de porter un coup critique.`,
+          damage: "8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 18%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 18%`,
 };

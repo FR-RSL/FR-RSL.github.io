@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Elders' Judgment",
-          description: `Attacks 1 enemy 2 times. Destroys the target’s MAX HP by 10% of the damage inflicted. <br><br>Cannot destroy a single enemy’s MAX HP by more than 50%.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Jugement des Anciens",
+          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 10 % des dégâts infligés. 
+
+Ne peut pas détruire les PV MAX d'un seul ennemi de plus de 50 %.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crushing Eternity",
-          description: `Attacks 1 enemy. Has a 75% chance of fully depleting the target’s Turn Meter.`,
-          damage: "6.5*ATK",
+          name: "Éternité écrasante",
+          description: `Attaque un ennemi. Possède 75 % de chances de vider complètement le Compteur de Tour de la cible.`,
+          damage: "6.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Righteous Evocation",
-          description: `Attacks all enemies. Fills this Champion’s Turn Meter by 15% and heals them by 15% of the damage inflicted if this attack is critical.<br><br><br>Heal Multiplier: 0.15*Damage Dealt`,
-          damage: "3.5*ATK",
+          name: "Évocation juste",
+          description: `Attaque tous les ennemis. Remplit le Compteur de Tour de ce Champion de 15 % et le soigne de 15 % des dégâts infligés si cette attaque passe en critique.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%", "Level 4: Damage +10%", "Level 5: Heal +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Boonchant [P]",
-          description: `If this Champion has 2 or fewer buffs at the start of the turn, places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 1 turn.`,
+          name: "Chant bienfaiteur [P]",
+          description: `Si ce Champion possède 2 buffs ou plus au début du tour, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 1 tour.`,
           isPassive: true
         }
       ],

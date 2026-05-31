@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Head Splitter",
-          description: `Attacks 1 enemy. Attacks all enemies 1 time if the first attack is critical.`,
-          damage: "2.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +15%"],
+          name: "Fendeur de Tête",
+          description: `Attaque 1 ennemi. Attaque une fois tous les ennemis si la première attaque passe en critique.`,
+          damage: "2.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Forward Charge",
-          description: `Attacks all enemies. Has a 30% chance of placing a [Stun] debuff for 1 turn. Also has a 50% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.6*ATK",
+          name: "Charge en Avant",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour. Possède également 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "3.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +15%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +15%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Molten Slag",
-          description: `Attacks all enemies 2 times. Decreases the Turn Meter by 25%. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "1.9*ATK",
+          name: "Scories en Fusion",
+          description: `Attaque 2 fois tous les ennemis. Réduit de 25 % le Compteur de Tours. Possède 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
           cooldown: 7,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 90`,
+  description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
 };

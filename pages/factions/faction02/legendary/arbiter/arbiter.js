@@ -3,35 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gaze of Justice",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Regard de la Justice",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Enforced Humility",
-          description: `Attacks all enemies 1 time. Has a 75% chance of decreasing the duration of all enemy buffs by 1 turn.`,
-          damage: "2.2*ATK",
+          name: "Humilité Imposée",
+          description: `Attaque 1 fois tous les ennemis. Possède 75 % de chances de réduire d'1 tour la durée de tous les buffs ennemis.`,
+          damage: "2.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mentor of Heroes",
-          description: `Places a 50% [Increase ATK] buff on all allies for 2 turns, then fills the Turn Meters of all allies by 30%. Heals all allies by 25% of their MAX HP if they have less than 50% HP.<br><br><br>Heal Multiplier: 0.25*Target Max HP`,
+          name: "Mentor de Héros",
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours, puis augmente le Compteur de Tour de tous les alliés de 30 %. Soigne tous les alliés de 25 % de leurs PV MAX s'ils ont moins de 50 % de PV.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort4.webp",
-          name: "Destiny's Call",
-          description: `Revives all dead allies to 30% HP, then fills the Turn Meters of all allies by 20%. Grants an Extra Turn to this Champion if an ally was successfully revived.`,
+          name: "Appel du Destin",
+          description: `Ranime tous les alliés morts avec 30 % de PV, puis remplit de 20 % les Compteurs de tour de tous les alliés.
+
+Accorde un Tour Supplémentaire à ce Champion si un allié a été ranimé.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 30%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 30%`,
 };

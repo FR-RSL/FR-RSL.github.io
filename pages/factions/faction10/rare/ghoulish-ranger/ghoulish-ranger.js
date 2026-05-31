@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Numbing Arrows",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a 25% [Decrease ACC] debuff for 2 turns. Places an extra hit if the target is under a [Decrease ACC] debuff.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Flèches Abrutissantes",
+          description: `Attaque un ennemi. Offre 35 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours. Place une frappe supplémentaire si la cible se trouve sous débuff de ${DEBUFFS.PRE}.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Foul Festering",
-          description: `Attacks 1 enemy. Has a 45% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "3.3*ATK",
+          name: "Suppuration Fétide",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
+          damage: "3.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cryptfire",
-          description: `Attacks 3 times at random. Has a 30% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "1.25*ATK",
+          name: "Feu de crypte",
+          description: `Attaque 3 fois au hasard. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
+          damage: "1.25*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

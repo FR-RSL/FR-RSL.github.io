@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rebuke",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random buff from the target.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Réprimande",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de retirer 1 buff aléatoire sur chaque cible.`,
+          damage: "5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Sanction",
-          description: `Attacks 1 enemy. Places a [Block Active Skills] debuff and a [Block Buffs] debuff for 2 turns. These debuffs cannot be resisted.`,
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de résister à ces débuffs.`,
           damage: "0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Zone of Protection",
-          description: `Places a [Block Damage] buff on all allies for 2 turns.`,
+          name: "Zone de Protection",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DAMAGE} sur tous les alliés.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

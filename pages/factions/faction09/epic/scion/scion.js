@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Nightmare Khopesh",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Block Active Skills] debuff for 1 turn.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Khépesh de Cauchemar",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Evil Seed",
-          description: `Attacks 1 enemy. Places a [Block Buffs] debuff and a 100% [Heal Reduction] debuff for 2 turns. <br><br>Will ignore any [Shield] buffs.`,
-          damage: "6*ATK",
+          name: "Mauvaise Graine",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours. 
+
+Ignorera les buffs ${BUFFS.SHIELD}.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Crawling Chaos",
-          description: `Removes all debuffs from this Champion, then attacks all enemies. Places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 1 turn after attacking.`,
-          damage: "3.8*ATK",
+          name: "Chaos rampant",
+          description: `Retire tous les débuffs sur ce Champion, puis attaque tous les ennemis. Après l'attaque, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 1 tour.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Incarnate [P]",
-          description: `Enemies under [Block Active Skills], [Block Buffs], and [Heal Reduction] debuffs cannot decrease this Champion’s Turn Meter.`,
+          name: "Incarné [P]",
+          description: `Les ennemis sous débuffs ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.BLOCK_BUFFS} et ${DEBUFFS.HEALS} ne peuvent pas réduire le Compteur de Tour de ce Champion.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Dungeons by 24%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Donjons de 24%`,
 };

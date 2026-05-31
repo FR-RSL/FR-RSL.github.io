@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hold the Line",
-          description: `Attacks 1 enemy. Increases this Champion's DEF by 3% (up to 10 times in one round).`,
-          damage: "3.65*ATK+DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Tenir la Ligne",
+          description: `Attaque 1 ennemi. Augmente de 3 % la DÉF de ce Champion (jusqu'à 10 fois lors d'un round).`,
+          damage: "3.65*ATQ+DEF",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Contemptuous Blow",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Provoke] debuff on the target for 1 turn.`,
-          damage: "5.5*DEF+ATK",
+          name: "Coup Dédaigneux",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur la cible.`,
+          damage: "5.5*DEF+ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Comeback [P]",
-          description: `When this Champion is hit with a critical hit, counterattacks using their default skill and decreases the buffs duration on the target by 1 turn.`,
+          name: "Répartie [P]",
+          description: `Lorsque ce Champion reçoit un coup critique, contre-attaque en utilisant sa compétence par défaut et réduit d'1 tour la durée des buffs de la cible.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 19%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 19%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Savagery",
-          description: `Attacks 1 enemy. Attacks 2 times if the target's HP percentage is higher than this Champion's.`,
-          damage: "3.8*ATKMultiplier: 3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Sauvagerie",
+          description: `Attaque un ennemi. Attaque 2 fois si le pourcentage de PV de la cible est supérieur à celui de ce Champion.`,
+          damage: "3.8*ATQMultiplier: 3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Carnage",
-          description: `Attacks all enemies. Has a 25% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.4*ATK",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dominate",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a [Stun] debuff for 1 turn. Also has a 60% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "6.5*ATK",
+          name: "Domination",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Possède également 60 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "6.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +20%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +20%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +20%", "Dégâts +10%", "Chances de Buff/Debuff +20%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 13%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 13%`,
 };

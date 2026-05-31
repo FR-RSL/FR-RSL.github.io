@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shieldsplitter",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Fend-Bouclier",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flailing Assault",
-          description: `Attacks 4 times at random. The first hit has a 100% chance of placing a [Provoke] debuff for 1 turn. Each of the other hits has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Assaut Gesticulant",
+          description: `Attaque 4 fois au hasard. La première frappe possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Chacune des autres frappes possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "0.08*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bullish Vitality",
-          description: `Places a 60% [Increase DEF] buff on all allies for 2 turns. Places a 15% [Continuous Heal] buff on this Champion for 2 turns, as well as a [Shield] buff on this Champion equal to 30% of their MAX HP for 3 turns. Grants an Extra Turn.<br><br><br>Shield Multiplier: 0.3*HP`,
+          name: "Vitalité Obstinée",
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Place sur ce Champion un buff ${BUFFS.HEALS} de 15 % pendant 2 tours, ainsi qu'un buff ${BUFFS.SHIELD} équivalent à 30 % de ses PV MAX pendant 3 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +10%", "Level 5: Shield +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Battle Brothers [P]",
-          description: `Will transfer 50% of the damage inflicted on Cagebreaker to this Champion during battle.<br><br>[Only available when Cagebreaker is on the same team. If multiple Cagebreakers are on the team, this Champion will only transfer the damage from one of them.]`,
+          name: "Frères d'Armes [P]",
+          description: `Transférera, pendant la bataille, 50 % des dégâts infligés à Brisecage sur ce Champion.
+
+[Uniquement disponible lorsque Brisecage se trouve dans la même équipe. S'il y a plusieurs Brisecage dans l'équipe, ce Champion ne transférera les dégâts que d'un d'entre eux.]`,
           cooldown: 2,
           isPassive: true
         }
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

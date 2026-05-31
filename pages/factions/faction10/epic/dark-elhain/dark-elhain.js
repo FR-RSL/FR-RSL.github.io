@@ -3,32 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Necrotic Bolt",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 30% of the damage inflicted.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Éclair Nécrotique",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Death's Majesty",
-          description: `Places a 50% [Increase ATK] buff on this Champion for 2 turns, then attacks all enemies. Has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3.8*ATK",
+          name: "Majesté de la Mort",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.ATK} de 50 % sur cette Championne, puis attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Lethal Winter [P]",
-          description: `Fills this Champion's Turn Meter by 25% and instantly activates the Death's Majesty skill whenever this Champion or an ally receives a [Freeze] debuff.`,
+          name: "Hiver Mortel [P]",
+          description: `Remplit de 25 % le Compteur de Tour de cette Championne et active instantanément la Compétence [Majesté de la Mort] dès que cette Championne, ou un allié, reçoit un débuff ${DEBUFFS.GEL}.`,
           cooldown: 1,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Veins of Ice [P]",
-          description: `Instantly removes any [Freeze] debuffs on this Champion and replaces them with a 30% [Increase C. RATE] buff, a 30% [Increase C. DMG] buff, and a 15% [Strengthen] buff whenever an enemy places a [Freeze] debuff on this Champion.`,
+          name: "Veines de Glace [P]",
+          description: `Retire instantanément les débuffs ${DEBUFFS.GEL} sur cette Championne et les remplace par un buff ${BUFFS.CRATE} de 30 %, un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.STRENGTHEN} de 15 % dès qu'un ennemi place un débuff ${DEBUFFS.GEL} sur cette Championne.`,
           cooldown: 1,
           isPassive: true
         }

@@ -3,35 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wave of Souls",
-          description: `Attacks all enemies. Places an extra hit if the target has more than 50% HP.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Vague d'Âmes",
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire si la cible a plus de 50 % de PV.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Corrupting Touch",
-          description: `Attacks all enemies. Has a 50% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "4.3*ATK",
+          name: "Toucher Corrupteur",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "4.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Resilient [P]",
-          description: `Places an [Unkillable] buff on this Champion for 1 turn every time their HP drops below 20%.`,
+          name: "Résistant [P]",
+          description: `Place un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion à chaque fois que ses PV tombent en dessous de 20 %.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "From Beyond [P]",
-          description: `Revives this Champion with 30% HP. <br><br>[Only available when Sinesha is on the same team.]`,
+          name: "D'outre-tombe [P]",
+          description: `Ranime cette Championne avec 30 % de PV. 
+
+[Uniquement disponible lorsque Sinesha se trouve dans la même équipe.]`,
           cooldown: 8,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 23%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 23%`,
 };

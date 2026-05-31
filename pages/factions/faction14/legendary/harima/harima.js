@@ -4,9 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Corruption",
-          description: `
-            Attaque un ennemi. Possède 50 % de chances de placer un débuff <span class='gbt'>Réduction d’ATQ</span> de 50 % pendant 2 tours. Possède également 25 % de chances de placer un débuff <span class='gbt'>Réduction d’ATQ</span> de 50 % sur tous les ennemis pendant 2 tours si cette attaque passe en critique.
-		`,
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 25 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours si cette attaque passe en critique.`,
           damage: "3.3*DEF",
           levelInfo: [
             "Dégâts +10%",
@@ -18,10 +16,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Punition purgative",
-          description: `
-            Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 5 % (s’accumule jusqu’à 30 %). Chaque frappe augmente également la DÉF de cette Championne de 5 % (s’accumule jusqu’à 100 %).<br><br>
-			Active instantanément la compétence <span class='gbt'>Terreur céleste</span> si cette compétence tue un ennemi.
-          `,
+          description: `Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 5 % (s'accumule jusqu'à 30 %). Chaque frappe augmente également la DÉF de cette Championne de 5 % (s'accumule jusqu'à 100 %). 
+
+Active instantanément la compétence [Terreur céleste] si cette compétence tue un ennemi.`,
           damage: "1.6*DEF",
           cooldown: 4,
           levelInfo: [
@@ -34,9 +31,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Terreur céleste",
-          description: `
-            Attaque tous les ennemis. Place un débuff <span class='gbt'>Provocation</span> pendant 1 tour. Il est impossible de bloquer ou de résister à ce débuff si le Champion ciblé fait partie de la Faction des Rejetons Démoniaques.
-          `,
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de bloquer ou de résister à ce débuff si le Champion ciblé fait partie de la Faction des Rejetons Démoniaques.`,
           damage: "3.9*DEF",
           cooldown: 4,
           levelInfo: [
@@ -47,12 +42,12 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Tueuse de demons [P]",
-          description: `
-            Les effets Ignorer la DÉF de l’ennemi sont réduits de 50 %.<br><br>
-			Les Champions de la Faction des Rejetons Démoniaques ne peuvent pas infliger de coups critiques à cette Championne.<br><br>
-			Cette Championne ne peut pas placer de coups faibles sur les Champions de la Faction des Rejetons Démoniaques.
-          `,
+          name: "Tueuse de démons [P]",
+          description: `Les effets Ignorer la DÉF de l'ennemi sont réduits de 50 %. 
+
+Les Champions de la Faction des Rejetons Démoniaques ne peuvent pas infliger de coups critiques à cette Championne. 
+
+Cette Championne ne peut pas placer de coups faibles sur les Champions de la Faction des Rejetons Démoniaques.`,
           isPassive: true,
         },
       ],

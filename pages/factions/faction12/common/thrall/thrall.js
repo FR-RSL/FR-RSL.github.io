@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shambling Assault",
-          description: `Attacks 1 enemy. Has a 5% chance of placing an extra hit.`,
-          damage: "4.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Buff/Debuff Chance +5%"],
+          name: "Assaut en Pagaille",
+          description: `Attaque un ennemi. Possède 5 % de chances de porter un coup supplémentaire.`,
+          damage: "4.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         }
       ],

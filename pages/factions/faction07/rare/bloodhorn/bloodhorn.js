@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Killer Crescent",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a 25% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Croissant Tueur",
+          description: `Attaque 1 ennemi. Offre 15 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Intervene",
-          description: `Places a 50% [Ally Protection] buff on 2 random allies for 2 turns.`,
+          name: "Intervention",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur 2 alliés choisis au hasard.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Deep Defense [P]",
-          description: `If an ally is hit with a critical hit, places a 15% [Continuous Heal] buff on them for 1 turn.`,
+          name: "Défense Profonde [P]",
+          description: `Si un allié reçoit un coup critique, lui octroie un buff de ${BUFFS.HEALS} de 15 % pendant 1 tour.`,
           cooldown: 1,
           isPassive: true
         }
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 21%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 21%`,
 };

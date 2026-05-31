@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Witchlight Barrier",
-          description: `Attacks 1 enemy. Places a [Shield] buff equal to 10% of this Champion’s MAX HP on the ally with the lowest HP for 2 turns.<br><br><br>Shield Multiplier: 0.1*HP`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Shield +5%", "Level 6: Shield +10%"],
+          name: "Barrière Lumisorcière",
+          description: `Attaque un ennemi. Place, sur l'allié ayant les PV les plus bas, un buff ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de cette Championne pendant 2 tours.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Bouclier +5%", "Bouclier +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blinding Glow",
-          description: `Attacks 1 enemy. Places a [Stun] debuff for 1 turn. Has an 80% chance of teaming up with 3 random allies to attack a random enemy. Allies joining the attack will use their default skills.`,
-          damage: "5.1*ATK",
+          name: "Lueur Aveuglante",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} d'1 tour. Possède 80 % de chances de faire équipe avec 3 alliés pris au hasard pour attaquer un ennemi choisi au hasard. Les alliés rejoignant l'attaque utiliseront leurs compétences par défaut.`,
+          damage: "5.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "War Weirding",
-          description: `Places a 50% [Increase ATK] buff and a 30% [Increase C. RATE] buff on all allies for 3 turns, then attacks all enemies.`,
-          damage: "4.4*ATK",
+          name: "Bizarrerie Guerrière",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 3 tours, puis attaque tous les ennemis.`,
+          damage: "4.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

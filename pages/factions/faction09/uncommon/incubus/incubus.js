@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Javelin",
-          description: `Attacks 1 enemy. Has a 10% chance of placing an extra hit.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Javelot",
+          description: `Attaque 1 ennemi. Possède 10 % de chances de porter un coup supplémentaire.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Demon Fangs",
-          description: `Attacks 3 times at random. Resets the cooldown on this skill if the target is killed.`,
-          damage: "1.5*ATK",
+          name: "Crocs Démoniaques",
+          description: `Attaque 3 fois au hasard. Réinitialise le temps de recharge de cette Compétence si la cible est tuée.`,
+          damage: "1.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

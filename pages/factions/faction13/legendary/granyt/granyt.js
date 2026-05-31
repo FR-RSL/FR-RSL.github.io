@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "You're Barred!",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 75% chance of removing 1 random buff from the target. <br><br>Each hit will ignore 20% of the target’s DEF.`,
+          name: "Entrée interdite !",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 75 % de chances de retirer un buff aléatoire à la cible. 
+
+Chaque frappe ignorera 20 % de la DÉF de la cible.`,
           damage: "HP*0.1",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Geode Haymaker",
-          description: `Attacks all enemies. Before attacking, places a 50% [Increase ACC] buff on all allies for 2 turns. <br><br>Has a 75% chance of placing a 60% [Decrease DEF] debuff and a [Block Buffs] debuff on all enemies for 2 turns.`,
+          name: "Coup de géode",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.`,
           damage: "0.27*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Demolisher Blow",
-          description: `Attacks 1 enemy. Before attacking, removes all debuffs from this Champion and places a 15% [Shatter] buff and a 30% [Increase C. DMG] buff on all allies for 2 turns.  <br><br>Will ignore [Unkillable], [Stone Skin] and [Block Damage] buffs. If the target is not under any [Unkillable], [Stone Skin] or [Block Damage] buffs, this attack will deal 100% more damage.<br><br>Grants an Extra Turn if this attack kills an enemy.`,
+          name: "Frappe destructrice",
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les débuffs sur ce Champion, puis place un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.  
+
+Ignorera les buffs ${BUFFS.UNKILLABLE}, ${BUFFS.STONE_SKIN} et ${BUFFS.BLOCK_DAMAGE}. Si la cible ne se trouve pas sous buff ${BUFFS.UNKILLABLE}, ${BUFFS.STONE_SKIN} ou ${BUFFS.BLOCK_DAMAGE}, cette attaque infligera 100 % de dégâts en plus.
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "0.35*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Stonefaced [P]",
-          description: `At the start of this Champion's turn, removes any [Fear], [True Fear], [Provoke], [Stun], [Freeze], [Sleep], and [Petrification] debuffs from this Champion. <br><br>Increases this Champion's damage inflicted against targets with no buffs on them by 20%.`,
+          name: "Visage de marbre [P]",
+          description: `Au début du tour de ce Champion, retire les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP} et ${DEBUFFS.PETRIFICATION} sur ce Champion. 
+
+Augmente les dégâts infligés par ce Champion de 20 % contre les cibles ne bénéficiant d'aucun buff.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 20%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 20%`,
 };

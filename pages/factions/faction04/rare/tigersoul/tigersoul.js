@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scorpion Tips",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "2.77*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Pointes de Scorpion",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "2.77*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wearying Tactics",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "4.5*ATK",
+          name: "Tactiques Épuisantes",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "4.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Damage +10%", "Level 8: Buff/Debuff Chance +10%", "Level 9: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tiger's Strength",
-          description: `Places a [Block Debuffs] buff and a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Force du Tigre",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

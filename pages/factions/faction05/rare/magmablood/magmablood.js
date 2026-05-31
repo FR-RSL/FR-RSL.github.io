@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hurl",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%"],
+          name: "Violent Jeté",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Splinters",
-          description: `Attacks all enemies. Has a 30% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.6*ATK",
+          name: "Esquilles",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Magma Bomb",
-          description: `Attacks 2 times at random. Each hit has a 60% chance of placing a [Bomb] debuff for 3 turns.<br><br><br>Bomb Multiplier: 3.2*ATK`,
-          damage: "3.2*ATK",
+          name: "Bombe de Magma",
+          description: `Attaque 2 fois au hasard. Chaque frappe possède 60 % de chances de placer un débuff de ${DEBUFFS.BOMB} pendant 3 tours.`,
+          damage: "3.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 40`,
 };

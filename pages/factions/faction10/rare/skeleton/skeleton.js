@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sorcerous Bones",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Block Buffs] debuff for 2 turns.`,
+          name: "Os Ensorcelés",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "3.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tomb Blight",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a [Block Active Skills] debuff for 1 turn. Also has an 80% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
+          name: "Plaie Tombale",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "5.6*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rusted Targe",
-          description: `Attacks 1 enemy. Places a 30% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Targe Rouillée",
+          description: `Attaque un ennemi. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 30 % sur ce Champion.`,
           damage: "5.4*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

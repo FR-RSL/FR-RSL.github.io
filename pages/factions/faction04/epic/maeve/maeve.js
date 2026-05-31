@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Stupefy",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a [Sleep] debuff for 1 turn. Has a 50% chance of granting an Extra Turn if the [Sleep] debuff is placed.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Stupéfier",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. Possède 50 % de chances d'accorder un Tour Supplémentaire si un débuff ${DEBUFFS.SLEEP} est placé.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Slobber Knocker",
-          description: `Attacks 1 enemy. Places a [Stun] debuff for 1 turn. Places a [Stun] debuff for 2 turns if the target is under a [Sleep] debuff.`,
-          damage: "6.3*ATK",
+          name: "Marteau Baveux",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 1 tour. Place un débuff ${DEBUFFS.STUN} pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.SLEEP}.`,
+          damage: "6.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "And Stay Down",
-          description: `Attacks 1 enemy. Enemies killed by this skill cannot be revived.`,
-          damage: "7.15*ATK",
+          name: "Et ne te relève pas",
+          description: `Attaque un ennemi. Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
+          damage: "7.15*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

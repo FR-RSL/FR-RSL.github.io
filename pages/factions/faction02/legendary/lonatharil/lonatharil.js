@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gallantry",
-          description: `Attacks 1 enemy. Destroys the target’s MAX HP by 30% of the damage inflicted. Places a [Shield] buff equal to 10% of this Champion’s MAX HP for 2 turns on the ally with the lowest HP.<br><br><br>Shield Multiplier: 0.1*HP`,
+          name: "Galanterie",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés. Place sur l'allié ayant le moins de PV un buff ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de ce Champion pendant 2 tours.`,
           damage: "0.23*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flicker Barrier",
-          description: `Attacks all enemies. Places a [Shield] buff on all allies for 3 turns equal to 20% of this Champion's MAX HP. <br><br>If there are any dead allies, places a [Shield] buff on all allies for 3 turns equal to 30% of this Champion’s MAX HP instead. This buff cannot be removed, stolen, transferred, spread, or have its duration increased or decreased by enemies or allies.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Barrière vacillante",
+          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 3 tours. 
+
+S'il y a des alliés morts, place plutôt sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 3 tours. Il est impossible pour les ennemis ou les alliés de retirer, voler, transférer ou propager ce buff, et d'augmenter ou de réduire sa durée.`,
           damage: "0.25*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Finest Hour",
-          description: `Places a 30% [Increase C. DMG] buff on all allies for 2 turns, then teams up with all allies to attack a single enemy.`,
+          name: "Heure de gloire",
+          description: `Place un buff ${BUFFS.CDAM} sur tous les alliés pendant 2 tours, puis fais équipe avec eux pour attaquer un seul ennemi.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Piercer [P]",
-          description: `Inflicts 20% more damage against targets under [Shield] buffs.`,
+          name: "Perceur [P]",
+          description: `Inflige 20 % de dégâts supplémentaires contre les cibles sous buffs ${BUFFS.SHIELD}.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Doom Tower by 35%`,
+  description: `Augmente la statistique PV des Alliés lors de la Tour du Malheur de 35%`,
 };

@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thorn Maul",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Provoke] debuff for 1 turn. Also heals the ally with the lowest HP by 15% of the damage inflicted.<br><br>The [Provoke] debuff can be placed even if this attack lands as a weak hit.<br><br><br>Heal Multiplier: 0.15*Damage Dealt`,
+          name: "Merlin d'épine",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Soigne également l'allié ayant le moins de PV de 15 % des dégâts infligés.
+
+Le débuff ${DEBUFFS.PROVOKE} peut être placé même si cette attaque consiste en une frappe faible.`,
           damage: "0.25*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Admonition of Barbs",
-          description: `Attacks all enemies 2 times. The first hit has a 75% chance of placing a [Provoke] debuff for 1 turn. The second hit has a 75% chance of placing a [Leech] debuff for 2 turns. Also places a 25% [Strengthen] buff on this Champion for 2 turns.<br><br>The [Leech] and [Provoke] debuffs can be placed even if this attack lands as weak hits.`,
+          name: "Sermon de pointes",
+          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours.
+
+Les débuffs ${DEBUFFS.LEECH} et ${DEBUFFS.PROVOKE} peuvent être placés même si cette attaque consiste en une frappe faible.`,
           damage: "0.15*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Briar Nexus",
-          description: `Attacks all enemies. Damage increases by 5% for each debuff on each enemy. Also heals all allies by 20% of the damage inflicted and places a [Shield] buff on them for 2 turns equal to 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage DealtShield Multiplier: 0.2*Damage Dealt`,
+          name: "Amas de ronces",
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 5 % pour chaque débuff sur chaque ennemi. Soigne également tous les alliés de 20 % des dégâts infligés et leur accorde un buff ${BUFFS.SHIELD} de 2 tours équivalent à 20 % des dégâts infligés.`,
           damage: "0.25*HP*(1+0.05*Target Debuffs)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dethorned [P]",
-          description: `Decreases the damage taken by all allies from enemies under [Provoke] debuffs by 15%.`,
+          name: "Sans épine [P]",
+          description: `Réduit de 15 % les dégâts reçus par tous les alliés de la part des ennemis sous débuffs ${DEBUFFS.PROVOKE}.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 28%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 28%`,
 };

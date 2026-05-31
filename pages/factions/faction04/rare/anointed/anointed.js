@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mystic Chill",
-          description: `Attacks 1 enemy 3 times. Has a 25% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Froid Mystique",
+          description: `Attaque 3 fois un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Vigor Theft",
-          description: `Attacks 1 enemy 2 times. Each hit has a 75% chance of stealing 1 buff from the target.`,
-          damage: "3.5*ATK",
+          name: "Vol de Vigueur",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 75 % de chances de voler un buff sur la cible.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Chant of Violence",
-          description: `Fills the Turn Meter of all allies by 25%. Places a 30% [Increase C. RATE] buff on all allies for 2 turns.`,
+          name: "Mélopée de Violence",
+          description: `Remplit de 25 % le Compteur de Tours de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

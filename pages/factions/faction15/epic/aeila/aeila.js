@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Restorative Blow",
-          description: `Attacks 1 enemy. Restores destroyed MAX HP of this Champion or the ally with the most destroyed HP by 25% of their destroyed MAX HP.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Coup vivifiant",
+          description: `Attaque un ennemi. Rétablit les PV MAX détruits de cette Championne ou de l'allié ayant le plus de PV détruits de 25 % de ses PV MAX détruits.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Song Strike",
-          description: `Attacks 1 enemy. Before attacking, places a 50% [Increase ACC] buff on all allies for 2 turns. <br><br>Has a 75% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "5*ATK",
+          name: "Frappe de chant",
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Healing Haven",
-          description: `Places a [Block Debuffs] buff on all allies for 2 turns. <br><br>Then, heals all allies by 30% of their MAX HP.<br><br><br>Heal Multiplier: 0.3*Target Max HP`,
+          name: "Havre de guérison",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. 
+
+Ensuite, soigne tous les alliés à hauteur de 30 % de leurs PV MAX.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rhythmic Flow [P]",
-          description: `Has a 12% chance of activating an [Instant Turn] effect on this Champion or an ally after using any active skill. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Flux rythmique [P]",
+          description: `A 12 % de chances d'activer un effet ${INSTANT} sur cette Championne ou un allié après avoir utilisé n'importe quelle compétence active. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           cooldown: 1,
           isPassive: true
         }

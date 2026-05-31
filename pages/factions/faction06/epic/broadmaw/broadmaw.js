@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ice Blast",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "ATK*3.8",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%"],
+          name: "Souffle Glacé",
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          damage: "ATQ*3.8",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gift",
-          description: `Places a 30% [Increase C. RATE] buff and a 15% [Increase SPD] buff on all allies for 2 turns. Also fills the Turn Meters of all allies by 15%.`,
+          name: "Cadeau",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.SPD} de 15 % sur tous les alliés pendant 2 tours. Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Resurrect",
-          description: `Revives 2 random dead allies with 25% HP. Places a [Block Damage] buff on the revived allies for 1 turn.`,
+          name: "Ressusciter",
+          description: `Ranime 2 alliés morts aléatoires et les soigne de 25 % de leurs PV MAX. Place un buff ${BUFFS.BLOCK_DAMAGE} sur les alliés ranimés pendant 1 tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +10%", "Level 4: Heal +15%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +10%", "Soins +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 33%`,
 };

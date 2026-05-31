@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wild Slashing",
-          description: `Attacks 1 enemy. Has a 50% chance of attacking all other enemies with a second hit, dealing 30% of the damage inflicted from the first hit. The second hit is always a normal hit.`,
-          damage: "3*ATKMultiplier: 0.3*Damage Ouput",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Balafre Sauvage",
+          description: `Attaque un ennemi. Possède 50 % de chances d'attaquer tous les autres ennemis avec une seconde frappe, infligeant 30 % des dégâts infligés lors de la première frappe. La seconde frappe est toujours un coup normal.`,
+          damage: "3*ATQMultiplier: 0.3*Damage Ouput",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Insane Resilience",
-          description: `Attacks all enemies. Heals this Champion by 10% of the damage inflicted if this Champion's current HP is below 50%.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
-          damage: "3.4*ATK",
+          name: "Folle Résistance",
+          description: `Attaque tous les ennemis. Soigne ce Champion de 10 % des dégâts infligés si les PV actuels de ce Champion sont inférieurs à 50 %.`,
+          damage: "3.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Crazed Lunge",
-          description: `Attacks 1 enemy. Will ignore 30% of the target's DEF. Will ignore [Block Damage] and [Shield] buffs.`,
-          damage: "4.5*ATK",
+          name: "Fente Démente",
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.SHIELD}.`,
+          damage: "4.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
         }
       ],

@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lethal Lust",
-          description: `Attacks 1 enemy. Grants an Extra Turn and decreases the cooldown of the Stasis Strike skill by 2 turns if this attack kills an enemy.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Désir Mortel",
+          description: `Attaque un ennemi. Accorde un Tour Supplémentaire et réduit de 2 tours le temps de recharge de la Compétence Frappe d'Inertie si cette attaque tue un ennemi.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Arcane Tempest",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff and a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "4.4*ATK",
+          name: "Tempête Ésotérique",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stasis Strike",
-          description: `Attacks 1 enemy. Fully depletes the target’s Turn Meter. <br><br>Will also attack all enemies if the first attack is critical. This AoE attack has a 75% chance of placing a 25% [Weaken] debuff for 2 turns. Will also place a [HP Burn] debuff for 2 turns after the attack on the enemies whose Turn Meters are below 30%.`,
-          damage: "6.2*ATKMultiplier: 4*ATK",
+          name: "Frappe d'Inertie",
+          description: `Attaque un ennemi. Vide totalement le Compteur de Tour de la cible. 
+
+Attaquera également tous les ennemis si la première attaque passe en critique. Cette attaque de zone possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Après l'attaque, placera également un débuff ${DEBUFFS.BURN} pendant 2 tours sur les ennemis dont les Compteurs de Tour sont inférieurs à 30 %.`,
+          damage: "6.2*ATQMultiplier: 4*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Staid [P]",
-          description: `Fills this Champion's Turn Meter by 10% every time they are hit. Occurs once per hit. <br><br>Also fills this Champion's Turn Meter by 20% whenever an ally dies.`,
+          name: "Guindé [P]",
+          description: `Remplit le Compteur de Tour de ce Champion de 10 % chaque fois qu'il se fait frapper. Se produit une fois par frappe. 
+
+Remplit également le Compteur de Tour de ce Champion de 20 % lorsqu'un ennemi meurt.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 35%`,
 };

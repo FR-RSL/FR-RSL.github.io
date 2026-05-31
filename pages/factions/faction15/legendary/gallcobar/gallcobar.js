@@ -3,14 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Baton emmele",
-          description: `
-            Attaque un ennemi.
-            Place un buff <span class='gbt'>Bouclier</span> pendant 2 tours
-            sur l'allié ayant le moins de PV.
-            La valeur du <span class='gbt'>Bouclier</span> est egale a
-            15% des PV MAX de l'allié.
-          `,
+          name: "Bâton emmêlé",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.SHIELD} de 2 tours sur l'allié ayant le moins de PV. La valeur du ${BUFFS.SHIELD} est égale à 15 % des PV MAX de l'allié.`,
           damage: "3.75*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -21,15 +15,8 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Epines vitrioliques",
-          description: `
-            Attaque tous les ennemis.
-            Possède 80% de chances de retirer tous les buffs.
-            Place sur chaque ennemi un débuff <span class='gbt'>Poison</span> de 5%
-            pendant 2 tours pour chaque buff qui lui a ete retire.
-            Possède également 80% de chances de placer un débuff
-            <span class='gbt'>Blocage des Buffs</span> sur tous les ennemis pendant 1 tour.
-          `,
+          name: "Épines vitrioliques",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de retirer tous les buffs. Place sur chaque ennemi un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours pour chaque buff qui lui a été retiré. Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
           damage: "4.2*ATQ",
           levelInfo: [
@@ -42,15 +29,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Hypertrophie",
-          description: `
-            Retire tous les débuffs sur tous les alliés.
-            Place sur chaque allié un buff <span class='gbt'>Soins continus</span> de 15%
-            pendant 1 toir pour chaque débuff qui lui a ete retire.<br><br>
-            Place également un buff <span class='gbt'>Bouclier</span> sur
-            tous les alliés pendant 2 tours.
-            La valeur du <span class='gbt'>Bouclier</span> est egale a 25%
-            des PV MAX de ce Champion.
-          `,
+          description: `Retire tous les débuffs sur tous les alliés. Place sur chaque allié un buff ${BUFFS.HEALS} de 15 % pendant 1 tour pour chaque débuff qui lui a été retiré. 
+
+Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 25 % des PV MAX de ce Champion.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",

@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sun's Kiss",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns. <br><br>Places a 15% [Continuous Heal] buff on this Champion for 1 turn. Also places a 15% [Continuous Heal] buff for 1 turn on the ally with the lowest HP.`,
+          name: "Baiser du Soleil",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Place un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour. Place un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV pendant 1 tour.`,
           damage: "4.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Radiant Suffering",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 50% [Decrease ATK] debuff and a [Block Buffs] debuff for 2 turns. Also applies a [Debuff Spread] effect, taking 2 random debuffs from the target and placing them on all enemies.`,
+          name: "Souffrance Radiante",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Applique un effet de [Propagation de Débuffs], qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis.`,
           damage: "5.6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Desert Fitness",
-          description: `Places a 60% [Increase DEF] buff and a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Forme du Désert",
+          description: `Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Inviolable [P]",
-          description: `Removes 1 random debuff from all allies at the start of each turn. <br><br>Removes 2 random debuffs instead from allies under [Continuous Heal] buffs.`,
+          description: `Au début de chaque tour, retire un débuff aléatoire à tous les alliés. 
+
+Sinon, retire 2 débuffs aléatoires aux alliés sous buffs ${BUFFS.HEALS}.`,
           isPassive: true
         }
       ],
@@ -47,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 70`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 70`,
 };

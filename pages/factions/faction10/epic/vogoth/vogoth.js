@@ -3,32 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Horrendous Strength",
-          description: `Attacks 1 enemy 3 times. Each hit has a 30% chance of increasing the duration of 1 random debuff on the target by 1 turn.`,
+          name: "Terrible Force",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'1 débuff de la cible pris au hasard.`,
           damage: "0.07*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wave of Revulsion",
-          description: `Attacks all enemies. Has a 60% chance of placing a [Provoke] debuff on all enemies for 1 turn. Also has a 60% chance of placing a 50% [Decrease ATK] debuff for 2 turns on targets who receive the [Provoke] debuff from this skill.`,
+          name: "Vague de Révulsion",
+          description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Possède également 60 % de chances de placer pendant 2 tours un débuff ${DEBUFFS.ATK} de 50 % sur les cibles affligés d'un débuff |Provocation] grâce à cette compétence.`,
           damage: "0.2*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Festering Dynamo [P]",
-          description: `Whenever this Champion is attacked, heals all allies by 50% of the damage received. <br><br>[Only heals by 25% of the damage received from Boss attacks. This Champion only receives half of the heal that all other allies receive.]<br><br>Heal Multiplier: 0.5*Damage Dealt`,
+          name: "Dynamo Fétide [P]",
+          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés à hauteur de 50 % des dégâts reçus. 
+
+[Soigne de 25 % des dégâts reçus seulement lors des attaques de Boss. Ce Champion ne reçoit que la moitié des soins reçus par les autres alliés.]`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Eerie Presence [P]",
-          description: `When attacked, places a [Leech] debuff on the attacker for 2 turns.<br><br>If the attacker is under a [Provoke] debuff placed by this Champion, also has a 70% chance of increasing the cooldown of a random skill on the attacker by 2 turns. Occurs once per attack.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Présence Étrange [P]",
+          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.LEECH} de 2 tours sur l'assaillant.
+
+Si l'assaillant est affligé d'un débuff ${DEBUFFS.PROVOKE} placé par ce Champion, possède également 70 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire de l'assaillant. Ne se produit qu'une fois par attaque.`,
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -46,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

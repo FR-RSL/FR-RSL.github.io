@@ -3,35 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sai Assassin",
-          description: `Attacks 1 enemy 2 times. Has an additional 20% chance of inflicting a critical hit if this Champion is under a [Veil] or [Perfect Veil] buff.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Assassin saï",
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances supplémentaires de placer un coup critique si ce Champion se trouve sous débuff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Silent Parting",
-          description: `Attacks 1 enemy 2 times. Each hit will ignore 20% of the target's DEF. Has an additional 20% chance of inflicting a critical hit if this Champion is under a [Veil] or [Perfect Veil] buff.`,
-          damage: "2.5*ATK",
+          name: "Départ silencieux",
+          description: `Attaque 2 fois un ennemi. Chaque frappe ignorera 20 % de la DÉF de la cible. Possède 20 % de chances supplémentaires de placer un coup critique si ce Champion se trouve sous débuff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          damage: "2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fade Into Nothing",
-          description: `Places a [Perfect Veil] buff and a 30% [Increase SPD] buff on this Champion for 2 turns, then fills this Champion’s Turn Meter by 40%.`,
+          name: "Effacement progressif",
+          description: `Place également sur ce Champion un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.SPD} de 30 % pendant 2 tours, puis remplit le Compteur de Tour de ce Champion de 40 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Standoff [P]",
-          description: `Whenever this Champion is attacked, completely blocks 1 hit, decreasing the incoming damage to zero, then counterattacks with the default skill.<br><br>When attacked by a Boss, decreases the incoming damage by 50% instead before counterattacking.`,
+          name: "Impasse [P]",
+          description: `Dès que ce Champion se fait attaquer, bloque totalement 1 frappe, réduisant à zéro les dégâts qui arrivent, puis contre-attaque avec la compétence par défaut.
+
+Lorsqu'il est attaqué par un Boss, réduit de 50 % les dégâts en approche avant de contre-attaquer.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 15%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 15%`,
 };

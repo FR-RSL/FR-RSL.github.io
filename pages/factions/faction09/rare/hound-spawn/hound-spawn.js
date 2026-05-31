@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fire Breath",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Souffle de Feu",
+          description: `Attaque 1 ennemi. Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Adamantine Teeth",
-          description: `Attacks 1 enemy 2 times. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 1 turn.`,
-          damage: "2.6*ATK",
+          name: "Dent d'Adamantine",
+          description: `Attaque 2 fois 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 1 tour.`,
+          damage: "2.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shattering Strike",
-          description: `Attacks all enemies. Will ignore DEF and [Block Damage] buffs if the target has a [Freeze] debuff.<br><br>[Only available when Hellfang is on the same team.]`,
-          damage: "2.5*ATK",
+          name: "Frappe Fracassante",
+          description: `Attaque tous les ennemis. Ignorera la DÉF et les buffs de ${BUFFS.BLOCK_DAMAGE} si la cible est affligée d'un débuff de ${DEBUFFS.GEL}.
+
+[Uniquement disponible lorsque Croc Infernal est dans la même équipe.]`,
+          damage: "2.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

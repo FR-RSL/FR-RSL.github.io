@@ -3,26 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Purgatory",
-          description: `Attacks 1 enemy. Has a 30% chance of decreasing the target’s Turn Meter by 10%. Has a 60% instead if the target is under a [HP Burn] debuff.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Purgatoire",
+          description: `Attaque un ennemi. Possède 30 % de chances de réduire le Compteur de Tour de la cible de 10 %. Sinon, possède 60 % de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN}.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Time's Undoing",
-          description: `Has a 75% chance of decreasing the Turn Meters of all enemies by 15%.<br><br>Fills the Turn Meters of all allies by 15%.`,
+          name: "Perte de Temps",
+          description: `Possède 75 % de chances de réduire le Compteur de Tour de tous les ennemis de 15 %.
+
+Remplit le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heavenly Flames",
-          description: `Has a 75% chance of placing a [HP Burn] debuff on all enemies for 2 turns. <br><br>Places a 50% [Increase ATK] buff on all allies for 3 turns.`,
+          name: "Flammes Célestes",
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. 
+
+Place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 3 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

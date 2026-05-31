@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brew Mama",
-          description: `Attacks 1 enemy. Has a 60% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies under [Weaken] debuffs. <br><br>Decreases the target’s Turn Meter by 10% if they are not under any debuffs.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Maman infusion",
+          description: `Attaque un ennemi. Possède 60 % de chances d'appliquer un effet de [Propagation de Débuff] qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.WEAKEN}. Réduit le Compteur de Tour de la cible de 10 % si elle n'est affligée d'aucun débuff.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rotlimb Decoction",
-          description: `Attacks all enemies. Has an 80% chance of placing a 25% [Weaken] debuff for 2 turns. <br><br>After attacking, has an 80% chance of placing two 5% [Poison] debuffs for 2 turns on all enemies without [Weaken] debuffs. These [Poison] debuffs cannot be blocked or resisted.`,
-          damage: "4*ATK",
+          name: "Décoction branchmoisie",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Après l'attaque, possède 80 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours sur tous les ennemis sans débuff ${DEBUFFS.WEAKEN}. Il est impossible de bloquer ces débuffs ${DEBUFFS.POISON} ou d'y résister.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hemlock Surprise",
-          description: `Has an 80% chance of removing 1 random buff from all enemies, then has an 80% chance of placing two 5% [Poison] debuffs on all enemies for 2 turns. <br><br>Also removes 2 random debuffs from all allies.`,
+          name: "Ciguë surprise",
+          description: `Possède 80 % de chances de retirer 1 buff aléatoire sur tous les ennemis, puis 80 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours. Retire également 2 débuffs aléatoires sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Malign Tendrils [P]",
-          description: `Whenever an enemy receives a debuff, their Turn Meter is decreased by 3%.`,
+          name: "Ceps néfastes [P]",
+          description: `Dès qu'un ennemi reçoit un débuff, son Compteur de Tour est réduit de 3 %.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 65`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 65`,
 };

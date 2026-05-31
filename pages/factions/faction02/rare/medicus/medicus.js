@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dual Scalpel",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Scalpel double",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Restraints",
-          description: `Attacks all enemies. Has a 50% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3.1*ATK",
+          name: "Contentions",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "3.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stimulant Elixir",
-          description: `Places a 30% [Increase DEF] buff on all allies for 2 turns. Also places a 15% [Increase SPD] buff on this Champion for 2 turns.`,
+          name: "Élixir stimulant",
+          description: `Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours. Place un buff ${BUFFS.SPD} de 15 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

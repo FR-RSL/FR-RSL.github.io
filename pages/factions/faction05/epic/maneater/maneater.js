@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pummel",
-          description: `Attacks 1 enemy. Places a 50% [Decrease ATK] debuff on all enemies if this attack is critical.`,
-          damage: "5.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Marteler",
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis si l'attaque passe en critique.`,
+          damage: "5.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Syphon",
-          description: `Attacks 1 enemy. Fully depletes the target's Turn Meter. Fills this Champion's Turn Meter equal to the amount the target loses.`,
-          damage: "8.2*ATK",
+          name: "Siphon",
+          description: `Attaque 1 ennemi. Vide totalement le Compteur de Tours de la cible. Remplit le Compteur de Tour de ce Champion d'une valeur équivalent à la somme des pertes de la cible.`,
+          damage: "8.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ancient Blood",
-          description: `This Champion receives damage, then places an [Unkillable] buff and a [Block Debuffs] buff on all allies for 2 turns. Damage received is equal to 5% MAX HP for each alive ally.`,
+          name: "Vieux Sang",
+          description: `Ce Champion subit des dégâts, puis place, pendant 2 tours, un buff ${BUFFS.UNKILLABLE} et un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés. Les dégâts subis sont égaux à 5 % des PV MAX de chaque allié vivant.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Dungeons by 33%`,
+  description: `Augmente la statistique PV des Alliés lors des Donjons de 33%`,
 };

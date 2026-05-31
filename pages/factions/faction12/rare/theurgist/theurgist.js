@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ice Debris",
-          description: `Attacks 1 enemy. Fills the Turn Meter for a random ally by 10%.`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Débris de Glace",
+          description: `Attaque un ennemi. Remplit de 10 % le Compteur de Tours d'un allié pris au hasard.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Touch of Sealing",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Block Buffs] debuff for 1 turn.`,
-          damage: "4.1*ATK",
+          name: "Touche Cicatrisante",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} d'1 tour.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Uplift",
-          description: `Places a 30% [Increase DEF] buff and a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Exalter",
+          description: `Place un buff d'${BUFFS.DEF} de 30 % et un buff d'${BUFFS.ATK} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Wars by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Faction de 30`,
 };

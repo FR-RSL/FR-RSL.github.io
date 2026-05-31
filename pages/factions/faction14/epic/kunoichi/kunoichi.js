@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sever Muscle",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns.`,
+          name: "Coupe-Muscle",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           damage: "3.1*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Poison Piercing",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Leech] debuff for 2 turns.`,
+          name: "Poison perçant",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "3.7*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Interpose",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Fills this Champion’s Turn Meter by 50%.`,
+          name: "S'interposer",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf cette Championne pendant 2 tours. Remplit le Compteur de Tour de cette Championne de 50 %.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Blooded Grit [P]",
-          description: `Places a [Block Damage] buff on this Champion for 1 turn whenever their HP drops below 50%.`,
+          name: "Courage acharné [P]",
+          description: `Place un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour lorsque ses PV tombent sous 50 %.`,
           cooldown: 5,
           isPassive: true
         }

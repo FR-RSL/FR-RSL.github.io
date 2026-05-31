@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Flaming Pigsticker",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.<br><br>Has a 30% chance of placing a [Stun] debuff for 1 turn instead when counterattacking with this skill.`,
+          name: "Pique-Porc Flamboyant",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.
+
+Sinon, possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour lors d'une contre-attaque avec cette compétence.`,
           damage: "2.65*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hulking Tantrum",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Provoke] debuff for 1 turn. Places a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Caprice Balourd",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           damage: "3*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Cooldown -1", "Level 8: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Giant Strength",
-          description: `Places a 25% [Strengthen] buff and a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Force de Géant",
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Trash Talk [P]",
-          description: `Receives 20% less damage from enemies under [Provoke] debuffs. <br><br>Has a 25% chance of counterattacking whenever an enemy under a [Provoke] debuff attacks either this Champion or an ally.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Moquerie [P]",
+          description: `Subis 20 % de dégâts en moins de la part d'ennemis sous débuff ${DEBUFFS.PROVOKE}. 
+
+Possède 25 % de chances de contre-attaquer dès qu'un ennemi sous débuff ${DEBUFFS.PROVOKE} attaque ce Champion ou un allié.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Doom Tower by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors de la Tour du Malheur de 30%`,
 };

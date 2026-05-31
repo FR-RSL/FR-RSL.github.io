@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ferocious Attack",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 2.5% [Poison] debuff for 1 turn.`,
-          damage: "2.4*ATK+50",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Attaque Féroce",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 1 tour.`,
+          damage: "2.4*ATQ+50",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Opportunity Strike",
-          description: `Attacks 1 enemy. Places a 50% [Increase ATK] buff on this Champion and places an extra hit if this attack is critical. The extra hit cannot be critical.`,
-          damage: "3*ATK",
+          name: "Frappe Fortunée",
+          description: `Attaque un ennemi. Place un buff d'${BUFFS.ATK} de 50 % sur ce Champion et place une frappe supplémentaire si cette attaque passe en critique. La frappe supplémentaire ne peut pas passer en critique.`,
+          damage: "3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Crumbling Blast",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Souffle Émiettant",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

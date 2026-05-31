@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Harassment Volley",
-          description: `Attacks 1 enemy 3 times. Each critical hit has an 80% chance of stealing 5% of the target’s Turn Meter.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Salve de harcèlement",
+          description: `Attaque 3 fois un ennemi. Chaque coup critique possède 80 % de chances de voler 5 % du Compteur de Tour de la cible.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "No Respite",
-          description: `Attacks 1 enemy 3 times. Each hit has a 50% chance of placing a 60% [Decrease DEF] debuff, a 25% [Weaken] debuff and a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2.3*ATK",
+          name: "Aucun répit",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 %, un débuff ${DEBUFFS.WEAKEN} de 25 % et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "2.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Timed Offensive",
-          description: `Fills the Turn Meters of all allies by 20% and places a 30% [Increase C. RATE] buff on all allies for 2 turns.`,
+          name: "Offensive minutée",
+          description: `Remplit le Compteur de tour de tous les alliés de 20 % et place un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 40`,
 };

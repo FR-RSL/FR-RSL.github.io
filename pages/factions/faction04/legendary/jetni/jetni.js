@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Splinter Steel",
-          description: `Attacks 1 enemy 2 times. <br><br>The first hit has a 30% chance of placing a [Stun] debuff for 1 turn. The second hit has a 30% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Acier brise-éclats",
+          description: `Attaque 2 fois un ennemi. 
+
+La première frappe possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. La seconde frappe possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Barrier Breach",
-          description: `Attacks all enemies. Will ignore 20% of each target’s DEF. <br><br>Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. This debuff cannot be resisted if Alsgor Crimsonhorn is on the same team.`,
-          damage: "3.8*ATK",
+          name: "Brise-barrière",
+          description: `Attaque tous les ennemis. Ignorera 20 % de la DÉF de chaque cible. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff si Alsgor Corne-Pourpre se trouve dans la même équipe.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Towering Might",
-          description: `Attacks all enemies 2 times. <br><br>Before attacking, places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns. <br><br>Grants an Extra Turn if this attack kills an enemy when Alsgor Crimsonhorn is on the same team.`,
-          damage: "1.9*ATK",
+          name: "Force imposante",
+          description: `Attaque 2 fois tous les ennemis. 
+
+Avant d'attaquer, place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 2 tours. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi lorsque Alsgor Corne-Pourpre se trouve dans la même équipe.`,
+          damage: "1.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Nowhere To Hide [P]",
-          description: `Inflicts 20% more damage against targets under [Shield] buffs. <br><br>Will ignore [Shield] buffs if Alsgor Crimsonhorn is on the same team.`,
+          name: "Aucun abri [P]",
+          description: `Inflige 20 % de dégâts supplémentaires contre les cibles sous buffs ${BUFFS.SHIELD}. 
+
+Ignorera les buffs ${BUFFS.SHIELD} si Alsgor Corne-Pourpre se trouve dans la même équipe.`,
           isPassive: true
         }
       ],

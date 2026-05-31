@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hypnotic Gaze",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Regard Hypnotique",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Armored Scales",
-          description: `Places a [Shield] buff on all allies equal to 20% of this Champion's MAX HP for 3 turns. Places a 15% [Continuous Heal] buff on all allies for 2 turns.<br><br><br>Shield Multiplier: HP*0.2`,
+          name: "Écailles Cuirassées",
+          description: `Place, sur tous les alliés, un buff de ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 3 tours. Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +5%", "Level 5: Shield +5%"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Bouclier +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Horrid Dreams",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Sleep] debuff for 1 turn. Has a 75% chance against enemies under debuffs.`,
-          damage: "5*ATK",
+          name: "Rêves Épouvantables",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour. Possède 75 % de chances contre les ennemis souffrant de débuffs.`,
+          damage: "5*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 70`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 70`,
 };

@@ -3,32 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Equivalent Exchange",
-          description: `Attacks 1 enemy. Has a 50% chance of transferring 1 random debuff from this Champion to the target. Also has a 50% chance of stealing 1 random buff from the target.`,
-          damage: "5.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Échange équivalent",
+          description: `Attaque un ennemi. Possède 50 % de chances de transférer 1 débuff aléatoire de cette Championne sur la cible. Possède également 50 % de chances de voler 1 buff aléatoire à la cible.`,
+          damage: "5.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Healing Script",
-          description: `Restores 25% of each ally's destroyed MAX HP, then heals all allies by 25% of this Champion's MAX HP.<br><br><br>Heal Multiplier: 0.25*HP`,
+          name: "Texte de guérison",
+          description: `Rétablit 25 % des PV MAX détruits de chaque allié, puis soigne tous les alliés de 25 % des PV MAX de cette Championne.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Writ of Sleep",
-          description: `Has a 75% chance of placing a [Sleep] debuff on a target for 1 turn. <br><br>Also has a 75% chance of placing a 30% [Decrease SPD] debuff and а 50% [Decrease ATK] debuff on the target for 2 turns. <br><br>Debuffs placed by this skill will ignore any [Block Debuffs] buffs.`,
+          name: "Décret de sommeil",
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur une cible pendant 1 tour. 
+
+Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+Les débuffs placés par cette compétence ignoreront les débuffs ${BUFFS.BLOCK_DEBUFFS}.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Perceive Weakness [P]",
-          description: `Allies deal 3% more damage to targets for each debuff placed on them by this Champion.`,
+          name: "Percevoir la faiblesse [P]",
+          description: `Les alliés infligent 3 % de dégâts en plus aux cibles pour chaque débuff que cette Championne a placé sur elles.`,
           isPassive: true
         }
       ],
@@ -46,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in all Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

@@ -3,27 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tireless Anger",
-          description: `Attacks 1 enemy. Fills this Champion's Turn Meter by 25%.`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Lances de sombre-lumière",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 35 % de chances de réduire le Compteur de Tour de la cible de 5 %. Si la cible se trouve sous un débuff ${DEBUFFS.SPD}, chaque frappe a au lieu de cela 35 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dark Exhaustion",
-          description: `Attacks 1 enemy. Has a 75% chance of decreasing the target's Turn Meter by 50%.`,
-          damage: "6.3*ATK",
+          name: "Réduire en cendres",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours. 
+
+Soigne tous tes alliés à hauteur de 15 % de leurs PV MAX.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +15%", "Level 7: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +15%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Liberation",
-          description: `Removes all debuffs on all allies.`,
+          name: "Rite de flamme",
+          description: `Place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. 
+
+Remplit le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 30%`,
 };

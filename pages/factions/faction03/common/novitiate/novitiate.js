@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Harrying Shot",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "2.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Damage +10%"],
+          name: "Tir Harcelant",
+          description: `Attaque 1 ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "2.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],

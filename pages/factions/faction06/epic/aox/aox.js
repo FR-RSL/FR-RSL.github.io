@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Feathered Staff",
-          description: `Attacks 1 enemy 2 times. Each hit has a 10% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Bâton à Plumes",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 10 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lore of Restoration",
-          description: `Attacks 1 enemy. Heals all allies by 10% of their MAX HP.<br><br>Heals each ally by an extra 2.5% for each debuff on the target.<br><br><br>Heal Multiplier: 0.1*Target Max HP+(0.025*Target Max HP*Target Debuffs)`,
-          damage: "5.7*ATK",
+          name: "Lore de Guérison",
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 10 % de leurs PV max.
+
+Soigne chaque allié de 2,5 % supplémentaires pour chaque débuff dont est affligée la cible.`,
+          damage: "5.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Heal +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Weight of Aeons",
-          description: `Places a 50% [Decrease ATK] debuff on all enemies for 2 turns. Also has a 75% chance of decreasing each enemy's Turn Meter by 20%. Places a 30% [Decrease C. RATE] debuff on the target for 2 turns if they have 50% or more Turn Meter after the Turn Meter decrease.`,
+          name: "Poids des Siècles",
+          description: `Place un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours. Possède également 75 % de chances de réduire le Compteur de Tour de chaque cible de 20 %. Place sur la cible un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours si elle possède 50 % de Compteur de Tour ou moins après le réduction du Compteur de Tour.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Steward of Time [P]",
-          description: `Increases the duration of 2 random debuffs on the attacker by 1 turn when attacked. Occurs once per hit.`,
+          name: "Gardien du Temps [P]",
+          description: `Lorsque ce Champion se fait attaquer, augmente d'1 tour la durée de 2 débuffs aléatoires sur l'assaillant. Se produit une fois par frappe.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Doom Tower by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de la Tour du Malheur de 60`,
 };

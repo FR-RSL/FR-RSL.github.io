@@ -3,33 +3,45 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Havoc Scythe",
-          description: `Attacks 1 enemy 2 times.<br><br>Each hit has a 75% chance of increasing the duration of 2 random debuffs on the target by 1 turn. Each hit also has a 75% chance of decreasing the duration of 2 random buffs on the target by 1 turn.`,
+          name: "Faux de dévastation",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 75 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible.`,
           damage: "0.12*HP",
-          levelInfo: ["Level 2: +5% Damage", "Level 3: +10% Buff/Debuff Chance", "Level 4: +10% Damage", "Level 5: +15% Buff/Debuff Chance"],
+          levelInfo: ["+5% Damage", "+10% Buff/Debuff Chance", "+10% Damage", "+15% Buff/Debuff Chance"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Skull Comet",
-          description: `Attacks 1 enemy.<br><br>Has a 75% chance of placing a [Petrification] debuff on the target for 1 turn. Also has a 75% chance to place a 50% [Decrease ATK] debuff and a 30% [Decrease SPD] debuff on the target for 2 turns.`,
+          name: "Comète crâne",
+          description: `Attaque un ennemi. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.PETRIFICATION} sur la cible pendant 1 tour. Si la cible est un Boss, place au lieu de ça un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Dès qu'un débuff ${DEBUFFS.PETRIFICATION} est retiré ou expire sur un ennemi, a 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur cet ennemi pendant 1 tour.`,
           damage: "0.32*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: +15% Damage", "Level 3: +10% Buff/Debuff Chance", "Level 4: -1 Cooldown", "Level 5: +15% Buff/Debuff Chance", "Level 6: -1 Cooldown"],
+          levelInfo: ["+15% Damage", "+10% Buff/Debuff Chance", "Temps de recharge -1", "+15% Buff/Debuff Chance", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Begone, Fools!",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns.<br><br>Has a 75% chance to steal any [Block Debuffs] buffs and 2 other random buffs from each enemy.<br><br>Then decreases all enemies' Turn Meters by 15%. If an enemy is from the Telerian League, decreases that enemy's Turn Meter by 30% instead.`,
+          name: "Hors d'ici, idiots !",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+Possède également 75 % de chances de voler les buffs ${BUFFS.BLOCK_DEBUFFS} et un autre buff aléatoire de chaque ennemi. 
+
+Réduit ensuite les Compteurs de Tour de tous les ennemis de 15 %. Si un ennemi fait partie de la Ligue télérienne, réduit au lieu de ça le Compteur de Tour de cet ennemi de 30 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: +10% Buff/Debuff Chance", "Level 3: -1 Cooldown", "Level 4: +15% Buff/Debuff Chance", "Level 5: -1 Cooldown"],
+          levelInfo: ["+10% Buff/Debuff Chance", "Temps de recharge -1", "+15% Buff/Debuff Chance", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Master of Evil [P]",
-          description: `Whenever this Champion attempts to place a debuff, steal a buff, decrease an enemy's Turn Meter, decrease the duration of a buff on an enemy, or increase the duration of a debuff on an enemy, increases this Champion's ACC by 20 for each buff on that enemy.<br><br>Whenever this Champion is hit, has a 50% chance to place a 50% [Decrease RES] debuff on the attacker for 1 turn. The chance increases to 100% against Champions from the Telerian League. If this Champion loses 30% or more HP from this attack, also has a 25% chance to place a [Petrification] debuff on the attacker for 1 turn. The chance increases to 50% against Champions from the Telerian League.`,
+          name: "Maître du mal [P]",
+          description: `Dès que ce Champion essaie de placer un débuff, voler un buff, réduire le Compteur de Tour d'un ennemi ou augmenter la durée d'un débuff sur un ennemi, augmente la PRÉ de ce Champion de 20 points pour chaque buff sur cet ennemi. 
+
+Dès que ce Champion est frappé, a 40 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % sur l'assaillant pendant 1 tour. Les chances passent à 75 % contre les Champions de la Ligue télérienne.`,
           isPassive: true
         }
       ],
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

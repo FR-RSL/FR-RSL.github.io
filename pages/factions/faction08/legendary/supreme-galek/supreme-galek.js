@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Exemplar of Rage",
-          description: `Attacks 1 enemy 2 times. Each hit has an extra 10% chance of inflicting a critical hit. <br><br>Each hit also has a 40% chance of increasing the duration of any [HP Burn] debuffs on the target by 1 turn.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Archétype de rage",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 10 % de chances supplémentaires de porter un coup critique. 
+
+Chaque frappe possède également 40 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur la cible.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloodshed Tempest",
-          description: `Attacks 4 times at random. Places a 50% [Increase ATK] buff on this Champion for 3 turns before attacking. <br><br>Each hit has an extra 10% chance of inflicting a critical hit. Each hit also has a 75% chance of instantly activating any [HP Burn] debuffs on each target and decreasing the duration of those [HP Burn] debuffs by 1 turn. <br><br>Fills this Champion’s Turn Meter by 30% if 3 or more [HP Burn] debuffs are activated during the attack.`,
-          damage: "1.65*ATK",
+          name: "Tempête de carnage",
+          description: `Attaque 4 fois au hasard. Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 3 tours avant d'attaquer. 
+
+Chaque frappe possède 10 % de chances supplémentaires de porter un coup critique. Chaque frappe possède également 75 % de chances d'activer instantanément tout débuff ${DEBUFFS.BURN} sur chaque cible et de réduire d'1 tour la durée de ces débuffs ${DEBUFFS.BURN}. 
+
+Remplit le Compteur de Tour de ce Champion de 30 % si 3 débuffs ${DEBUFFS.BURN} ou plus sont activés pendant l'attaque.`,
+          damage: "1.65*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unreasoning Outburst",
-          description: `Attacks all enemies. Has an extra 10% chance of inflicting a critical hit. Has a 75% chance of placing [HP Burn] and [Block Buffs] debuffs for 2 turns. <br><br>Also places a 30% [Decrease SPD] debuff on targets whose Turn Meter is higher than 50%.`,
-          damage: "4.6*ATK",
+          name: "Explosion aveugle",
+          description: `Attaque tous les ennemis. Possède 10 % de chances supplémentaires de porter un coup critique. Possède 75 % de chances de placer des débuffs ${DEBUFFS.BURN} et ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. 
+
+Place également un débuff ${DEBUFFS.SPD} de 30 % sur les cibles dont le Compteur de Tour est supérieur à 50 %.`,
+          damage: "4.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Laugh At Danger [P]",
-          description: `Whenever this Champion receives a [Fear], [True Fear], [Freeze], [Provoke], [Sleep], [Stun], or [Petrification] debuff, instantly removes it. Then, fully heals this Champion, and grants an Extra Turn.<br><br>Heal Multiplier: HP`,
+          name: "Rire du danger [P]",
+          description: `Dès que ce Champion reçoit un débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION}, le retire instantanément. Ensuite, soigne totalement ce Champion et accorde un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

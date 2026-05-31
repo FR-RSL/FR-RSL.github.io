@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blazing Sword",
-          description: `Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Épée Embrasée",
+          description: `Attaque 1 ennemi. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Helmbreaker",
-          description: `Attacks all enemies 2 times. Has an extra 30% chance of inflicting a critical hit. Each hit will ignore 15% of the target's DEF.`,
-          damage: "1.85*ATK",
+          name: "Brisheaume",
+          description: `Attaque 2 fois tous les ennemis. Possède 30 % de chances supplémentaires de porter un coup critique. Chaque frappe ignorera 15 % de la DÉF de la cible.`,
+          damage: "1.85*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Damage +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Negation",
-          description: `Attacks 1 enemy. Removes all debuffs from this Champion and steals all buffs from the target before attacking. Has an extra 30% chance of inflicting a critical hit. Grants an Extra Turn if the target is killed.`,
-          damage: "5.2*ATK",
+          name: "Négation",
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les débuffs sur ce Champion et vole tous les buffs de la cible. Possède 30 % de chances supplémentaires de porter un coup critique. Octroie un Tour supplémentaire si la cible est tuée.`,
+          damage: "5.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%", "Level 4: Damage +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Dégâts +15%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 28%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 28%`,
 };

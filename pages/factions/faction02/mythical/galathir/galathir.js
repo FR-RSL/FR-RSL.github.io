@@ -4,39 +4,51 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Astral Storm",
-          description: `Attacks all enemies.<br><br>Fills the Turn Meters of all allies by 10%. Also fills the Turn Meter of each ally by an extra 5% if they have any active buffs placed on them by this Champion.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Tempête astrale",
+          description: `Attaque tous les ennemis. 
+
+Remplit le Compteur de Tour de tous les alliés de 10 %. Remplit également le Compteur de Tour de chaque allié de 5 % supplémentaires s'ils possèdent des buffs actifs que ce Champion leur a accordés.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stellar Embryo",
-          description: `Removes all debuffs from all allies, then heals them by 25% of this Champion’s MAX HP. <br><br>Also fills the Turn Meters of all allies by 15%, and places a [Block Debuffs] buff on them for 2 turns.<br><br><br>Heal Multiplier: 0.25*HP`,
+          name: "Embryon stellaire",
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 25 % des PV MAX de ce Champion. 
+
+Remplit également le Compteur de tour de tous les alliés de 15 % et leur accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Soins +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Part the Veil",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter. <br><br>Also places a [Perfect Veil] buff on all allies, except this Champion, for 2 turns.`,
+          name: "Lever le voile",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. 
+
+Place également un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Eternal Beyonder [P]",
-          description: `3 Turns<br><br>[Passive Effect] <br><br>This Champion receives 5% less damage for each 100 RES on this Champion (stacks up to 25%). <br><br>[Active Effect] <br><br>Prevents this Champion's death and keeps them alive on 1 HP when receiving fatal damage, then equalizes their HP. The HP level of this Champion will be brought up to the average HP level of the team.`,
+          name: "Au-delà éternel [P]",
+          description: `${PASSIVE}
+
+Ce Champion reçoit 5 % de dégâts en moins par tranche de 100 RÉS qu'il possède (s'accumule jusqu'à 25 %).
+
+${ACTIVE}
+
+Empêche la mort de ce Champion et le garde vivant avec 1 PV lorsqu'il reçoit des dégâts mortels, puis égalise ses PV. Le niveau de PV de ce Champion sera ramené au niveau de PV moyen de l'équipe.`,
           isPassive: true
         }
       ],
@@ -52,7 +64,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in all Battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -60,40 +72,54 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Uncreation Beam",
-          description: `Attacks all enemies. <br><br>Decreases the Turn Meters of all enemies by 10%. Decreases the Turn Meter of each enemy by an extra 5% if they are under a [Block Active Skills], [Decrease RES], or [Stun] debuff placed by this Champion.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          name: "Rayon de décréation",
+          description: `Attaque tous les ennemis. 
+
+Réduit le Compteur de Tour de tous les ennemis de 10 %. Réduit le Compteur de Tour de chaque ennemi de 5 % supplémentaires s'ils se trouvent sous un débuff ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.RES} ou ${DEBUFFS.STUN} placé par ce Champion.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Eclipse Rend",
-          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies. <br><br>Then, places a [Block Active Skills] debuff for 2 turns. <br><br>This attack will not trigger counterattacks.`,
-          damage: "5.5*ATK",
+          name: "Déchirure d'éclipse",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs de tous les ennemis. 
+
+Place ensuite un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+
+Cette attaque ne déclenchera pas de contre-attaques.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Dark Nebula",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns. <br><br>Then, places a 50% [Decrease RES] debuff on all enemies for 2 turns, and a [Stun] debuff on all enemies for 1 turn.`,
+          name: "Sombre nébuleuse",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+Ensuite, place un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours et un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%"],
+          levelInfo: ["Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Starlight Reflect [P]",
-          description: `[Passive Effect] <br><br>Increases this Champion's ACC equal to 75% of their RES when placing debuffs or activating instant effects. <br><br>[Active Effect] <br><br>If an enemy’s ACC is higher than this Champion’s RES, has a 50% chance of transferring any [Fear], [True Fear], [Freeze], [Provoke], [Sleep], [Stun], or [Petrification] debuffs back to the enemy when placing these debuffs on this Champion.`,
+          name: "Reflet d'étoile [P]",
+          description: `${PASSIVE}
+
+Augmente la PRÉ de ce Champion afin qu'elle soit équivalente à 75 % de sa RÉS lorsqu'il place des débuffs ou active des effets instantanés.
+
+${ACTIVE}
+
+Si la PRÉ d'un ennemi est plus élevée que la RÉS de ce Champion, possède 50 % de chances de renvoyer tout débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} sur l'ennemi lorsqu'il place ces débuffs sur ce Champion.`,
           cooldown: 3,
           isPassive: true
         }
@@ -110,7 +136,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in all Battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

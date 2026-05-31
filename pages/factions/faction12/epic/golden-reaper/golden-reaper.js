@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Harvest of Blood",
-          description: `Attacks 1 enemy. Has a 30% chance of decreasing the cooldown of one of a random ally's Skills by 1 turn.`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Moisson Sanglante",
+          description: `Attaque un ennemi. Possède 30 % de chances de réduire d'1 tour le temps de recharge d'une des compétences d'un allié pris au hasard.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Maelstrom",
-          description: `Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Decreases the Turn Meter of each target by 20% if they are not under a [Decrease ATK] debuff.`,
-          damage: "3*ATK",
+          name: "Maelström",
+          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Réduit de 20 % le Compteur de Tour de chaque cible si elle ne souffre pas d'un débuff de ${DEBUFFS.ATK}.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Alacrity",
-          description: `Places a 30% [Increase SPD] buff on all allies for 2 turns and boosts their Turn Meter by 20%.`,
+          name: "Alacrité",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % sur tous les alliés, puis augmente de 20 % leurs Compteurs de Tour.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 40`,
 };

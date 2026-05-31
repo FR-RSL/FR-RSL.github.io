@@ -3,26 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Soul Manacles",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Menottes d'Âme",
+          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Might of Undeath",
-          description: `Places a 30% [Increase C. RATE] buff and a 60% [Increase DEF] on all allies for 2 turns. Also places a [Block Debuffs] buff on all allies for 1 turn.`,
+          name: "Force du Mort-vivant",
+          description: `Place un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Place également un buff de ${BUFFS.BLOCK_DEBUFFS} d'1 tour sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Winds of Purging",
-          description: `Removes all debuffs from all allies, then heals all allies by 10% of this Champion's MAX HP.<br>Heals each ally by a further 10% if 1 or more debuffs are removed from that ally. Fills each ally’s Turn Meter by 15% if 2 or more debuffs are removed from that ally.<br><br><br>Heal Multiplier: 0.1*HP`,
+          name: "Ailes de Purge",
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 10 % des PV MAX de ce Champion.
+Soigne chaque allié de 10 % supplémentaires si 1 débuff ou plus de cet allié est retiré. Remplit de 15 % le Compteur de Tour de chaque allié si 2 débuffs ou plus de cet allié sont retirés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

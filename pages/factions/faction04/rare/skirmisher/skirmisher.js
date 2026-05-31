@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Twin Shafts",
-          description: `Attacks 1 enemy 2 times. Inflicts 15% more damage against targets who have no active buffs.`,
-          damage: "1.85*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Hampe Double",
+          description: `Attaque 2 fois un ennemi. Inflige 15 % de dégâts supplémentaires contre les cibles n'ayant pas de buff actif.`,
+          damage: "1.85*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hexed Arrow",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter by 20% if this attack is critical.`,
-          damage: "5.3*ATK",
+          name: "Flèche Maudite",
+          description: `Attaque un ennemi. Réduit de 20 % le Compteur de Tours de la cible si cette attaque passe en critique.`,
+          damage: "5.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dispelling Shot",
-          description: `Attacks all enemies. Removes 1 random buff from each enemy.`,
-          damage: "3.3*ATK",
+          name: "Tir Dissipant",
+          description: `Attaque tous les ennemis. Retire 1 buff aléatoire sur chaque ennemi.`,
+          damage: "3.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

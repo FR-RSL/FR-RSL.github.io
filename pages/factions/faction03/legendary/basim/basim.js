@@ -3,40 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dagger Swirl",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 50% chance of placing a 25% [Weaken] debuff for 2 turns. If this Champion is under a [Veil] or [Perfect Veil] buff, the chance increases to 100%. <br><br>Then has a 50% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies. If this Champion is under a [Veil] or [Perfect Veil] buff, the chance increases to 100%.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Tourbillon de dagues",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %. 
+
+Ensuite, a 50 % de chances d'appliquer un effet de [Propagation de Débuffs], qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Up In Smoke",
-          description: `Attacks all enemies. Will ignore 15% of each target's DEF. Will ignore 30% of each target's DEF instead if this Champion is under a [Veil] or [Perfect Veil] buff. <br><br>Has a 75% chance of placing a [Block Active Skills] debuff for 2 turns. This debuff will ignore any [Block Debuffs] buffs if this Champion is under a [Veil] or [Perfect Veil] buff.`,
-          damage: "4*ATK",
+          name: "En fumée",
+          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible. Ignorera au lieu de cela 30 % de la DÉF de la cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Winds of Baghdad",
-          description: `Attacks 1 enemy 2 times. Deals 5% more damage for each buff and debuff on this Champion and 5% more damage for each buff and debuff on the target (stacks up to 100%). <br><br>Places a [Perfect Veil] buff on this Champion for 3 turns, and grants an Extra Turn.`,
-          damage: "3.2*ATK+(0.05*BUFF_COUNT+0.05*DEBUFF_COUNT+0.05*REL_TRG_BUFF_COUNT+0.05*REL_TRG_DEBUFF_COUNT)",
+          name: "Vents de Bagdad",
+          description: `Attaque 2 fois un ennemi. Inflige 5 % de dégâts supplémentaires pour chaque buff et débuff sur ce Champion, et 5 % de dégâts supplémentaires pour chaque buff et débuff sur la cible (s'accumule jusqu'à 100 %). 
+
+Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours et accorde un Tour supplémentaire.`,
+          damage: "3.2*ATQ+(0.05*BUFF_COUNT+0.05*DEBUFF_COUNT+0.05*REL_TRG_BUFF_COUNT+0.05*REL_TRG_DEBUFF_COUNT)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Everything is Permitted [P]",
-          description: `Whenever an enemy's HP drops below 25% after receiving damage from any Assassin, they receive additional bonus damage proportional to this Champion's ATK. This bonus damage will ignore 100% of the target's DEF and cannot be critical.`,
+          name: "Tout est permis [P]",
+          description: `Dès que les PV d'un ennemi tombent sous 25 % après qu'il a reçu des dégâts de n'importe quel Assassin, il reçoit des dégâts bonus supplémentaires proportionnels à l'ATQ de ce Champion ou cette Championne. Ces dégâts bonus ignoreront 100 % de la DÉF de la cible et ne peuvent pas être critiques.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Masterful Thief [P]",
-          description: `Whenever this Champion is attacked, steals 1 random buff from the attacker and transfers 1 random debuff from this Champion to the attacker. These effects will ignore [Polymorph]. Occurs once per skill. <br><br>Will ignore 25% of a target's RES when using skills if this Champion is under a [Veil] or [Perfect Veil] buff.`,
+          name: "Voleur magistral [P]",
+          description: `Dès que ce Champion est attaqué, vole 1 buff aléatoire à l'assaillant et transfère 1 débuff aléatoire de ce Champion sur l'assaillant. Ces effets ignoreront [Polymorphe]. Se produit une fois par compétence. 
+
+Ignorera au lieu de cela 25 % de la RÉS de la cible lorsque ce Champion utilise des compétences s'il se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true
         }
       ],
@@ -54,5 +64,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

@@ -3,33 +3,45 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wyrd Blade",
-          description: `Attacks 1 enemy. <br><br>Has a 35% chance of increasing the cooldown of a random active skill by 2 turns. <br><br>Fills this Champion’s Turn Meter by 10% for each turn added to the cooldown.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Lame de destinée",
+          description: `Attaque un ennemi. 
+
+Possède 35 % de chances d'augmenter le temps de recharge d'une compétence active de 2 tours. 
+
+Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au temps de recharge.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Greatest Hits",
-          description: `Attacks all enemies. <br><br>Steals all the Turn Meter of each target, except enemies under [Sheep] debuffs. Also places a [Stun] debuff for 1 turn on all enemies not under a [Sheep] debuff.`,
-          damage: "4.2*ATK",
+          name: "Plus grands succès",
+          description: `Attaque tous les ennemis. 
+
+Vole tout le Compteur de Tour de chaque cible, sauf les ennemis sous débuffs ${DEBUFFS.SHEEP}. Place également un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis ne se trouvant pas sous débuff ${DEBUFFS.SHEEP}.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "For My Next Trick!",
-          description: `Places a [Sheep] debuff on an enemy for 1 turn. This debuff cannot be blocked.<br><br>Then, has a 75% chance of removing all buffs from all enemies. Fills this Champion’s Turn Meter by 5% for each buff removed.`,
+          name: "Pour mon prochain tour !",
+          description: `Place un débuff ${DEBUFFS.SHEEP} sur un ennemi pendant 1 tour. Il est impossible de bloquer ce débuff.
+
+Ensuite, possède 75 % de chances de retirer tous les buffs de tous les ennemis. Remplit le Compteur de Tour de ce Champion de 5 % pour chaque buff retiré.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Cooldown -1", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Master of Ceremonies [P]",
-          description: `Whenever a [Sheep] debuff is removed or expires on an enemy, increase the cooldown of a random active skill on that enemy to its max. <br><br>Fills this Champion’s Turn Meter by 10% for each turn added to the cooldown.<br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Maître de cérémonie [P]",
+          description: `Dès qu'un débuff ${DEBUFFS.SHEEP} est retiré ou expire sur un ennemi, augmente au maximum le temps de recharge d'une compétence active aléatoire sur cet ennemi. 
+
+Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au temps de recharge.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 28%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 28%`,
 };

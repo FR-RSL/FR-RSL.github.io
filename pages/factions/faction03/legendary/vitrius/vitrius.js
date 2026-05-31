@@ -3,34 +3,52 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Holy Terror",
-          description: `Attacks 1 enemy 2 times. <br><br>The first hit heals this Champion by 30% of the damage inflicted. <br><br>The second hit has a 65% chance of placing a [True Fear] debuff for 1 turn. This debuff cannot be resisted if the first hit fully healed this Champion.<br><br>If the target is a Boss, the second hit has a 65% chance of placing a 30% [Decrease SPD] debuff for 2 turns instead.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Sainte terreur",
+          description: `Attaque 2 fois un ennemi. 
+
+La première frappe soigne ce Champion à hauteur de 30 % des dégâts infligés. 
+
+La seconde frappe possède 65 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il est impossible de résister à ce débuff si la première frappe a totalement soigné ce Champion.
+
+Si la cible est un Boss, la seconde frappe possède 65 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Storm of Righteousness",
-          description: `Attacks all enemies. Before attacking, removes all [Increase DEF], [Ally Protection], and [Strengthen] buffs from all enemies. This effect cannot be resisted. <br><br>If at least one buff was removed, also places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns.<br><br>Will also ignore 30% of each target's DEF. Boosts this Champion's Turn Meter by 30% for each enemy alive after the attack.`,
-          damage: "3.1*ATK",
+          name: "Tempête de rectitude",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs ${BUFFS.DEF}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.STRENGTHEN} de tous les ennemis. Il est impossible de résister à cet effet. 
+
+Si au moins un buff a été retiré, place également un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.
+
+Ignorera également 30 % de la DÉF de chaque cible. Booste le Compteur de Tour de ce Champion de 30 % pour chaque ennemi vivant après l'attaque.`,
+          damage: "3.1*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "By My Hand!",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit ignores 30% of the target's DEF and destroys the enemy's MAX HP by 25% of the damage dealt. Cannot destroy a single enemy's MAX HP by more than 75%. If the target is a Boss, destroys MAX HP equal to 35% of the damage dealt. <br><br>If the target has any active skills on cooldown, both hits will ignore 50% of the target's DEF instead.<br><br>Ignores [Shield], [Unkillable], and [Block Damage] buffs.`,
-          damage: "2.5*ATK",
+          name: "De ma main !",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe ignore 30 % de la DÉF de la cible et détruit les PV MAX de l'ennemi de 25 % des dégâts infligés. Ne peut pas détruire les PV MAX d'un seul ennemi de plus de 75 %. Si la cible est un Boss, détruit les PV MAX à hauteur de 35 % des dégâts infligés. 
+
+Si la cible a des compétences actives en temps de recharge, les deux frappes ignoreront au lieu de ça 50 % de la DÉF de la cible.
+
+Ignore les buffs ${BUFFS.SHIELD}, ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Inexorable [P]",
-          description: `Instantly resets the cooldown on one of this Champion’s random active skills, whenever an enemy increases the cooldown of any of their skills. Grants an Extra Turn if a skill’s cooldown was reset. After granting an Extra Turn, places this skill on cooldown. <br><br>Will also grant an Extra Turn if an ally, Mastery, Artifact Set, or Accessory decreases the cooldown of any of this Champion’s skills. After granting an Extra Turn, places this skill on cooldown.`,
+          description: `Réinitialise instantanément le temps de recharge d'une compétence active aléatoire de ce Champion dès qu'un ennemi augmente le temps de recharge de n'importe laquelle de ses compétences. Accorde un Tour supplémentaire si le temps de recharge d'une compétence a été réinitialisé. Après avoir accordé un Tour supplémentaire, place cette compétence en recharge. 
+
+Accordera également un Tour supplémentaire si un allié, une Maîtrise, un Jeu d'Artefacts ou un Accessoire réduit le temps de recharge de n'importe laquelle des compétences de ce Champion. Après avoir accordé un Tour supplémentaire, place cette compétence en recharge.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +67,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 24%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 24%`,
 };

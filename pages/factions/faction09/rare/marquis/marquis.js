@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skewer",
-          description: `Attacks 1 enemy. If the hit is critical, places a 15% [Decrease SPD] debuff.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Brochette",
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place un débuff de ${DEBUFFS.SPD} de 15 %.`,
+          damage: "5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Infernal Skill",
-          description: `Places a [Counterattack] buff and a 15% [Continuous Heal] buff on this Champion for 2 turns.`,
+          name: "Compétence Infernale",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} et un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Paralyzing Bolts",
-          description: `Attacks all enemies. Has a 35% chance of placing a [Sleep] debuff for 1 turn. This debuff cannot be removed.`,
-          damage: "5.1*ATK",
+          name: "Éclairs Paralysants",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour. Il est impossible de retirer ce débuff.`,
+          damage: "5.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Force Ally HP in All Battles by 18%`,
+  description: `Augmente la statistique PV des Alliés Force lors de toutes les Batailles de 18%`,
 };

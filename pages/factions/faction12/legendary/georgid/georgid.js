@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Breaker Suite",
-          description: `Attacks 1 enemy 2 times. Has a 30% chance of repeating the attack.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Série brisante",
+          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de répéter l'attaque.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "March of Tin",
-          description: `Attacks all enemies. Decreases the Turn Meters of all targets by 30%. This effect cannot be resisted. <br><br>Places an [Unkillable] buff on this Champion for 1 turn if this attack kills an enemy.`,
-          damage: "4*ATK",
+          name: "Marche d'étain",
+          description: `Attaque tous les ennemis. Réduit le Compteur de Tour de toutes les cibles de 30 %. Il est impossible de résister à cet effet. 
+
+Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Deadly Ballet",
-          description: `Attacks 1 enemy. Will ignore [Strengthen], [Stone Skin], [Unkillable], [Block Damage], [Increase DEF], [Ally Protection], and [Shield] buffs. <br><br>Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "5.7*ATK",
+          name: "Ballet mortel",
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.STONE_SKIN}, ${BUFFS.UNKILLABLE}, ${BUFFS.BLOCK_DAMAGE}, ${BUFFS.DEF}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "5.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Crack Any Shell [P]",
-          description: `Has a 50% chance for this Champion to ignore 50% of the target's DEF from each hit placed by this Champion's skills.`,
+          name: "Craque carapace [P]",
+          description: `Possède 50 % de chances que ce Champion ignore 50 % de la DÉF de la cible pour chaque frappe placée par les compétences de ce Champion.`,
           isPassive: true
         }
       ],

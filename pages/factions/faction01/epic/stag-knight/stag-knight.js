@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spot Quarry",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Repère la Proie",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Huntmaster",
-          description: `Attacks all enemies. Has a 70% chance of placing a 60% [Decrease DEF] debuff and a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "3.5*ATK",
+          name: "Maître Chasseur",
+          description: `Attaque tous les ennemis. Possède 70 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Lead the Pack [P]",
-          description: `Places a 50% [Increase ACC] buff on an ally for 1 turn each time the ally has a debuff resisted by an enemy.`,
+          name: "Mène la Meute",
+          description: `Place, pendant 1 tour, un buff ${BUFFS.PRE} de 50 % sur un allié à chaque fois qu'un ennemi résiste à un débuff de l'allié.`,
           isPassive: true
         }
       ],

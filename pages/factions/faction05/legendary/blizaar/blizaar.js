@@ -3,35 +3,47 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Frozen Caltrops",
-          description: `Attacks 3 times at random. Each hit has a 40% chance of placing a [Freeze] debuff for 1 turn.`,
+          name: "Chausse-trappes gelées",
+          description: `Attaque 3 fois de façon aléatoire. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
           damage: "1.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cryo Therapy",
-          description: `Removes any [Stun], [Sleep], [Fear], [True Fear], [Freeze], [Provoke], and [Petrification] debuffs from all allies. <br><br>Then, places a 60% [Increase DEF] buff on all allies for 2 turns. <br><br>Also places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.`,
+          name: "Cryothérapie",
+          description: `Retire les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE} et ${DEBUFFS.PETRIFICATION} sur tous les alliés. 
+
+Ensuite, place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Spike Blizzard",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Freeze] debuff for 1 turn. <br><br>Also has a 75% chance of decreasing the Turn Meter of all enemies by 30%.`,
+          name: "Blizzard de pics",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. 
+
+Possède également 75 % de chances de réduire le Compteur de Tour de tous les ennemis de 30 %.`,
           damage: "4.3*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Abominable Snogryn [P]",
-          description: `[Passive Effect]<br><br>Whenever an enemy tries to place a [Freeze] debuff on this Champion, instantly transfers it from this Champion to that enemy. <br><br>[Active Effect]<br><br>Whenever this Champion is killed, revives them with 30% HP and 30% Turn Meter, and places a [Revive On Death] buff on them for 1 turn.`,
+          name: "Abominable ogryneige [P]",
+          description: `${PASSIVE}
+
+Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.GEL} sur ce Champion, le transfère instantanément de ce Champion sur l'ennemi. 
+
+${ACTIVE}
+
+Dès que ce Champion est tué, le ranime avec 30 % de PV et 30 % de Compteur de Tour, puis lui accorde un buff ${BUFFS.REVIVE_ON_DEATH} pendant 1 tour.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],

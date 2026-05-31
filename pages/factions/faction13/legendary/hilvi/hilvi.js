@@ -3,32 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Frostflame Torch",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.<br><br>If Tormin the Cold is on the same team, has a 25% chance to instantly activate his [Rimefire] skill.`,
-          damage: "2.6*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Torche de flamme-gel",
+          description: `Attaque 2 fois un ennemi. Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Si Tormin le Froid se trouve dans la même équipe, a 25 % de chances d'activer instantanément sa compétence Feu givré.`,
+          damage: "2.6*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Embittering Cold Level 1",
-          description: `Removes all buffs from all enemies, and places a [Freeze] debuff on all enemies for 1 turn.<br><br>If Tormin the Cold is on the same team, instantly activates his Blizzard Rage skill.<br><br>This skill’s cooldown cannot be decreased or reset.`,
+          name: "Froid d'amertume",
+          description: `Retire tous les buffs sur tous les ennemis, puis leur inflige un débuff ${DEBUFFS.GEL} pendant 1 tour. 
+
+Si Tormin le Froid se trouve dans la même équipe, active instantanément sa compétence Rage du Blizzard. 
+
+Le temps de recharge de cette compétence ne peut être ni réduit ni réinitialisé.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ward Of The Glacier",
-          description: `Revives all dead allies with 50% HP and 30% Turn Meter.<br><br>Places a [Block Damage] buff on all allies for 1 turn and a 30% [Increase SPD] buff on all allies for 2 turns. Will place these buffs even if no allies were revived.<br><br>If no allies were revived by this skill, also fills the Turn Meters of all allies by 25%.<br><br>This skill's cooldown cannot be decreased or reset.`,
+          name: "Garde du glacier",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 30 % de Compteur de Tour. 
+
+Place sur tous les alliés un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour et un buff ${BUFFS.SPD} de 30 % pendant 2 tours. Ces buffs seront placés même si aucun allié n'a été ranimé. 
+
+Si aucun allié n'a été ranimé par cette compétence, remplit également de 25 % les Compteurs de Tour de tous les alliés.
+
+Le temps de recharge de cette compétence ne peut être ni réduit ni réinitialisé.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Divine Mission [P]",
-          description: `Whenever an enemy receives a [Freeze] debuff, this Champion steals 1 random buff from them, places a [HP Burn] debuff on them for 2 turns, and decreases their Turn Meter by 10%.<br><br>If Tormin the Cold is on the same team, fills his Turn Meter by an amount equal to the enemy Turn Meter decreased by this skill. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Mission divine [P]",
+          description: `Dès qu'un ennemi reçoit un débuff ${DEBUFFS.GEL}, cette Championne lui vole 1 buff aléatoire, lui inflige un débuff ${DEBUFFS.BURN} pendant 2 tours et réduit de 10 % son Compteur de Tour. 
+
+Si Tormin le Froid se trouve dans la même équipe, remplit son Compteur de Tour d'une quantité égale au Compteur de Tour ennemi réduit par cette compétence. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true
         }
       ],
@@ -46,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

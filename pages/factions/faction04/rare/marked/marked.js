@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dance of Blades",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease DEF] debuff for 1 turn.`,
-          damage: "6*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Danse de Lames",
+          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          damage: "6*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Punishment of Gods",
-          description: `Attacks all enemies. Places a 25% [Decrease ACC] debuff for 2 turns.`,
-          damage: "4.7*ATK",
+          name: "Punition des Dieux",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "4.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Totemic Power",
-          description: `Places a [Block Debuffs] buff on all allies for 1 turn and a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Puissance Totémique",
+          description: `Place 1 tour de buff de ${BUFFS.BLOCK_DEBUFFS} et 2 tours de buff d'${BUFFS.DEF} de 60 % sur tous les alliés.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 15%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 15%`,
 };

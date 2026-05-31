@@ -4,41 +4,53 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Allpiercer",
-          description: `Attacks 1 enemy. <br><br>Will ignore [Shield], [Unkillable], and [Block Damage] buffs.`,
-          damage: "0.26*HP+1.2*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Perce-tout",
+          description: `Attaque un ennemi. 
+
+Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "0.26*HP+1.2*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blackfeather Barrage",
-          description: `Attacks all enemies. This attack will not trigger counterattacks and ignores [Shield] buffs. <br><br>Also steals 20% of the Turn Meter from each enemy. This effect cannot be resisted by enemies with more than 50% Turn Meter.`,
-          damage: "0.3*HP+1.85*ATK",
+          name: "Barrage de plumes noires",
+          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques et ignore les buffs ${BUFFS.SHIELD}. 
+
+Vole également 20 % du Compteur de Tour de chaque ennemi. Les ennemis avec plus de 50 % de Compteur de Tour ne peuvent pas résister à cet effet.`,
+          damage: "0.3*HP+1.85*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Thief's Omen",
-          description: `Attacks 1 enemy. Deals double damage to Bosses. <br><br>Destroys the target's MAX HP and decreases the target's ATK, DEF, SPD, RES, and ACC by 10% when this skill is used against them for the first time. This effect does not work against Bosses. <br><br>Also increases this Champion's MAX HP, ATK, DEF, SPD, RES, and ACC by 10% each time this Champion decreases enemy stats with this skill. <br><br>Finally, places a [Block Revive] debuff if the target is killed by this skill.`,
-          damage: "(!If Boss*(0.47*HP+2.5*ATK))+(If Boss*(0.94*HP+5*ATK))",
+          name: "Présage du voleur",
+          description: `Attaque un ennemi. Inflige deux fois plus de dégâts aux Boss. 
+
+Détruit les PV MAX de la cible et réduit son ATQ, sa DÉF, sa VIT, sa RÉS et sa PRÉ de 10 % lorsque cette compétence est utilisée contre elle pour la première fois. Cet effet ne fonctionne pas contre les Boss. 
+
+Augmente également les PV MAX, l'ATQ, la DÉF, la VIT, la RÉS et la PRÉ de ce Champion de 10 % chaque fois que ce Champion réduit des stats ennemies avec cette compétence. 
+
+Enfin, place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée par cette compétence.`,
+          damage: "(!If Boss*(0.47*HP+2.5*ATQ))+(If Boss*(0.94*HP+5*ATQ))",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Glinting Saviour [P]",
-          description: `Deals 5% more damage for each 10% HP the target has lost.<br><br>Also prevents this Champion's death and keeps them alive on 1 HP when receiving fatal damage, then transforms them into their Alternate Form.`,
+          name: "Sauveur étincelant [P]",
+          description: `Inflige 5 % de dégâts en plus par tranche de 10 % de PV que la cible a perdus.
+
+Empêche également la mort de ce Champion et le garde vivant avec 1 PV lorsqu'il reçoit des dégâts mortels, puis le fait passer à sa Forme alternative.`,
           cooldown: 4,
           isPassive: true
         }
@@ -55,7 +67,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -63,40 +75,48 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Fae Talons",
-          description: `Attacks 1 enemy 2 times. Each hit heals this Champion by 7.5% of their MAX HP. <br><br>If this Champion’s HP is full, each hit fills this Champion’s Turn Meter by 15% instead.<br><br><br>Heal Multiplier: 0.075*HP`,
+          name: "Serres d'Être féerique",
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion de 7,5 % de ses PV MAX. 
+
+Si les PV de ce Champion sont pleins, chaque frappe remplit au lieu de ça le Compteur de Tour de ce Champion de 15 %.`,
           damage: "0.13*HP",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Murder of Crows",
-          description: `Attack all enemies. Places a [Provoke] debuff for 1 turn if this Champion has more than 50% HP. This debuff cannot be resisted if this Champion has more than 75% HP. <br><br>If this Champion has 50% HP or less, places a [Stun] debuff for 1 turn instead. This debuff cannot be resisted.`,
+          name: "Nuée de corbeaux",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si ce Champion possède plus de 50 % de PV. Il est impossible de résister à ce débuff si ce Champion possède plus de 75 % de PV. 
+
+Si ce Champion possède 50 % de PV ou moins, place au lieu de ça un débuff ${DEBUFFS.STUN} pendant 1 tour. Il est impossible de résister à ce débuff.`,
           damage: "0.45*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Feathershield",
-          description: `Removes all debuffs from this Champion. Places a number of 15% [Continuous Heal] buffs on this Champion, equal to the amount of debuffs removed by this skill. <br><br>Also places a [Counterattack] buff and a [Block Damage] buff on this Champion for 2 turns. These buffs cannot be removed, stolen, or transferred.`,
+          name: "Bouclier de plumes",
+          description: `Retire tous les débuffs dont ce Champion est affligé. Place un certain nombre de buffs ${BUFFS.HEALS} de 15 % sur ce Champion, équivalent à la quantité de débuffs retirés par cette compétence. 
+
+Place également un buff ${BUFFS.COUNTER} et un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours. Il est impossible de retirer, de voler et de transférer ces buffs.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Fae Intervention [P]",
-          description: `Increases this Champion’s MAX HP, DEF, SPD, RES, and ACC by 15% for every dead enemy and ally, including Bosses and their minions, in battle (stacks up to 100%). <br><br>Also revives 1 random ally with 50% HP and 50% Turn Meter each time this Champion kills an enemy.`,
+          name: "Intervention féerique [P]",
+          description: `Augmente les PV MAX, la DÉF, la VIT, la RÉS et la PRÉ de ce Champion de 15 % pour chaque ennemi et allié mort, dont les Boss et leurs sbires, lors d'un combat (s'accumule jusqu'à 100 %). 
+
+Ranime également 1 allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour chaque fois que ce Champion tue un ennemi.`,
           isPassive: true
         }
       ],
@@ -112,7 +132,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

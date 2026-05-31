@@ -3,32 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scepter of Authority",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Sceptre d'Autorité",
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Necro Mutation",
-          description: `Heals all allies by 20% of this Champion's MAX HP. After healing, places a [Perfect Veil] buff for 2 turns on all allies with full HP. Places a 15% [Continuous Heal] buff for 1 turn instead on all allies with less than 100% HP.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Nécro Mutation",
+          description: `Soigne tous tes alliés à hauteur de 20 % des PV MAX de ce Champion. Après le soin, place un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours sur tous les alliés ayant tous leurs PV. Sinon, place pendant 1 tour un buff ${BUFFS.HEALS} de 15 % sur les alliés ayant moins de 100 % de PV.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Spirit Form",
-          description: `Revives a single ally with 60% HP and fills their Turn Meter by 60%. Places a [Perfect Veil] buff on them for 3 turns.`,
+          name: "Forme Spirituelle",
+          description: `Ranime un seul allié avec 60 % de PV et remplit son Compteur de Tour de 60 %. Place un buff ${BUFFS.PERFECT_VEIL} de 3 tours sur cet allié.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Master of Ghosts [P]",
-          description: `Whenever an ally under a [Veil] or [Perfect Veil] buff gets a turn, heals them by 10% of their MAX HP. Also increases the RES of allies under [Veil] or [Perfect Veil] buffs by 50.<br><br>[Will only increase RES once per ally if there are multiple Rectors on the team.]<br><br>Heal Multiplier: 0.1*Target Max HP`,
+          description: `Whenever an ally under a ${BUFFS.VEIL} or ${BUFFS.PERFECT_VEIL} buff gets a turn, heals them by 10% of their MAX HP. Also increases the RES of allies under ${BUFFS.VEIL} or ${BUFFS.PERFECT_VEIL} buffs by 50.<br><br>[Will only increase RES once per ally if there are multiple Rectors on the team.]<br><br>Heal Multiplier: 0.1*Target Max HP`,
           isPassive: true
         }
       ],
@@ -46,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Doom Tower by 55`,
+  description: `Augmente la statistique RÉS des Alliés lors de la Tour du Malheur de 55`,
 };

@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hammerhorn",
-          description: `Attacks 1 enemy. <br><br>Transfers a random debuff from this Champion to the target. <br><br>Heals this Champion by 10% of their MAX HP.<br><br><br>Heal Multiplier: 0.1*HP`,
+          name: "Corne-marteau",
+          description: `Attaque un ennemi. 
+
+Transfère un débuff aléatoire de ce Champion sur la cible. 
+
+Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
           damage: "0.24*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Thundering Charge",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of removing 2 random buffs from all enemies. <br><br>Heals this Champion by 10% of their MAX HP for each buff removed by this skill.<br><br><br>Heal Multiplier: 0.1*HP*Removed Debuffs`,
+          name: "Charge grondante",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis. 
+
+Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette compétence.`,
           damage: "0.25*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Good Luck Charm",
-          description: `Removes 1 random debuff from all allies. <br><br>Heals all allies by 20% of this Champion’s MAX HP, and places a [Block Debuffs] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Porte-bonheur",
+          description: `Retire 1 débuff aléatoire à tous les alliés. 
+
+Soigne tous les alliés de 20 % des PV MAX de ce Champion et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Kind Soul [P]",
-          description: `Whenever this Champion heals themselves using one of their own skills, also heals all allies by 20% of any surplus heal.<br><br>Heal Multiplier: 0.2*Remaining Heal Amount`,
+          name: "Âme charitable [P]",
+          description: `Dès que ce Champion se soigne à l'aide d'une de ses compétences, soigne également tous les alliés de 20 % des soins en surplus.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

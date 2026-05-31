@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Majestic Staff",
-          description: `Attacks 1 enemy. If the hit is critical, places a 25% [Increase ATK] buff on a random ally for 1 turn.`,
-          damage: "4.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Bâton Majestueux",
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place, pendant 1 tour, un buff d'${BUFFS.ATK} de 25 % sur un allié pris au hasard.`,
+          damage: "4.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Anoint",
-          description: `Revive on Death Places a [Revive On Death] buff and a 30% [Reflect Damage] buff on a target ally for 2 turns. Heals all other allies by 10% of the target's HP.<br><br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Consacrer",
+          description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} et un buff ${BUFFS.REFLECT_DAM} de 30% sur une cible alliée pendant 2 tours. Soigne tous les autres alliés à hauteur de 10 % des PV de la cible.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Heal +10%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Censure",
-          description: `Attacks all enemies. Has a 50% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Réprimander",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 22%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 22%`,
 };

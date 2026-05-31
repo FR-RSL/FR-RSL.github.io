@@ -3,40 +3,52 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Eagle Dive",
-          description: `Attacks 1 enemy. <br><br>Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. This debuff cannot be resisted if this Champion is under a [Veil] or [Perfect Veil] buff.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff chance +10%", "Level 5: Buff/Debuff chance +15%"],
+          name: "Plongeon d'aigle",
+          description: `Attaque un ennemi. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Da Vinci's Design",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing two 5% [Poison] debuffs and a 25% [Poison Sensitivity] debuff on all enemies for 2 turns. These debuffs cannot be resisted if this Champion is under a [Veil] or [Perfect Veil] buff. Instantly activates all [Poison] debuffs on enemies under 4 or more debuffs. <br><br>If any enemies are under a [Stone Skin] buff, has a 75% chance of placing 2 [Bomb] debuffs that detonate after 2 turns on them instead. These debuffs cannot be resisted if this Champion is under a [Veil] or [Perfect Veil] buff. If all enemies are under a [Stone Skin] buff, decreases each [Bomb] debuff's detonation countdown by 1 turn.`,
-          damage: "4*ATK",
+          name: "Plan de De Vinci",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur les ennemis affligés de 4 débuffs ou plus. 
+
+Si des ennemis se trouvent sous buff ${BUFFS.STONE_SKIN}, a au lieu de cela 75 % de chances de placer 2 débuffs ${DEBUFFS.BOMB} qui explosent sur eux après 2 tours. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Si tous les ennemis se trouvent sous buff ${BUFFS.STONE_SKIN}, réduit d'1 tour le compte à rebours de détonation de chaque débuff ${DEBUFFS.BOMB}.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff chance +10%", "Level 5: Buff/Debuff chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hidden Gun",
-          description: `Attacks 1 enemy. Before attacking, steals all buffs from the target. This effect cannot be resisted if this Champion is under a [Veil] or [Perfect Veil] buff. <br><br>Will ignore 35% of the target's DEF, as well as [Shield] and [Strengthen] buffs.`,
-          damage: "5*ATK",
+          name: "Pistolet secret",
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+
+Ignorera 35 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Everything is Permitted [P]",
-          description: `Whenever an enemy's HP drops below 25% after receiving damage from any Assassin, they receive additional bonus damage proportional to this Champion's ATK. This bonus damage will ignore 100% of the target's DEF and cannot be critical.`,
+          name: "Tout est permis [P]",
+          description: `Dès que les PV d'un ennemi tombent sous 25 % après qu'il a reçu des dégâts de n'importe quel Assassin, il reçoit des dégâts bonus supplémentaires proportionnels à l'ATQ de ce Champion ou cette Championne. Ces dégâts bonus ignoreront 100 % de la DÉF de la cible et ne peuvent pas être critiques.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Full Synchronization [P]",
-          description: `Places a [Perfect Veil] buff on this Champion for 2 turns at the start of each Round. <br><br>Whenever this Champion is about to receive damage that would exceed 50% of their MAX HP, has a 35% chance of decreasing the damage received to 0 instead. <br><br>Whenever this Champion is attacked, also has a 35% chance of counterattacking.`,
+          name: "Synchronisation totale [P]",
+          description: `Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. 
+
+Dès que ce Champion est sur le point de recevoir des dégâts qui dépasseraient 50 % de ses PV MAX, a au lieu de cela 35 % de chances de réduire les dégâts reçus à 0. 
+
+Dès que ce Champion est attaqué, a également 35 % de chances de contre-attaquer.`,
           isPassive: true
         }
       ],
@@ -54,5 +66,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

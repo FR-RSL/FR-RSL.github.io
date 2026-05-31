@@ -3,25 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grave's Grasp",
-          description: `Attacks 2 times at random.<br><br>Each hit has a 35% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Poigne Tombale",
+          description: `Attaque 2 fois au hasard.
+
+Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crippling Cold",
-          description: `Attacks all enemies.<br><br>Places a 50% [Decrease ATK] debuff for 2 turns. Also has a 50% chance of placing a [Block Active Skills] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Froid Engourdissant",
+          description: `Attaque tous les ennemis.
+
+Place un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fateful Arrival [P]",
-          description: `Always goes first each Round.<br><br>If multiple Hegemons are in battle, the Hegemon with the highest SPD will move first, followed by the next highest, and so on.`,
+          name: "Arrivée Fatidique [P]",
+          description: `Joue toujours en premier lors de chaque round.
+
+Si plusieurs Hégémons participent au combat, l'Hégémon ayant la VIT la plus élevée jouera en premier, suivi du deuxième sur la liste et ainsi de suite.`,
           isPassive: true
         }
       ],
@@ -39,5 +45,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 19%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 19%`,
 };

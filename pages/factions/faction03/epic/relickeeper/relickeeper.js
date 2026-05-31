@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crusade",
-          description: `Attacks 1 enemy. Grants an Extra Turn if the target is killed.`,
-          damage: "3.75*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Croisade",
+          description: `Attaque 1 ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "3.75*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Surging Strength",
-          description: `Places a 50% [Increase ATK] buff on this Champion for 4 turns. Grants an Extra Turn.`,
+          name: "Poussée de Force",
+          description: `Place, pendant 4 tours, un buff d'${BUFFS.ATK} de 50 % sur ce Champion. Accorde un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Ageless Endurance [P]",
-          description: `When hit by an enemy, places a 15% [Continuous Heal] buff on this Champion for 2 turns.`,
+          name: "Endurance Éternelle [P]",
+          description: `Lorsque touché par un ennemi, place, pour 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Campaign by 40%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Campagne de 40%`,
 };

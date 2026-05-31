@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Long Shot",
-          description: `Attacks 1 enemy. <br>Has a 15% chance of placing an extra hit.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Tir Lointain",
+          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Support Fire",
-          description: `Attacks 1 enemy.<br><br>Places a 30% [Increase DEF] buff on the ally with the lowest HP for 3 turns.`,
-          damage: "4.3*ATK",
+          name: "Feu d'Assistance",
+          description: `Attaque un ennemi. Place, pendant 3 tours, un buff d'${BUFFS.DEF} de 30 % sur l'allié ayant le moins de PV.`,
+          damage: "4.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Prayer of Comfort",
-          description: `Places a [Block Debuffs] buff on all allies for 1 turn.<br><br>Places a [Shield] buff equal to 30% of this Champion's MAX HP on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.3*HP`,
+          name: "Prière de Réconfort",
+          description: `Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour. Place, sur tous les alliés, un buff de ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Wars by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Faction de 30`,
 };

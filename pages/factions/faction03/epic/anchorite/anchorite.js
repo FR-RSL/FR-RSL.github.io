@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Warm Embrace",
-          description: `Attacks all enemies. Heals the ally with the lowest HP by 10% of the damage inflicted.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Heal +5%", "Level 5: Heal +10%"],
+          name: "Chaude étreinte",
+          description: `Attaque tous les ennemis. Soigne l'allié ayant le moins de PV de 10 % des dégâts infligés.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Soins +5%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Prayer of Prowess",
-          description: `Removes 1 random debuff from all allies, then increases the duration of all ally buffs by 1 turn.`,
+          name: "Prière de bravoure",
+          description: `Retire un débuff aléatoire sur tous les alliés, puis augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sacred Trust",
-          description: `Fully heals a target ally, then places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 1*Target Max HP`,
+          name: "Confiance sacrée",
+          description: `Soigne totalement une cible alliée, puis place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

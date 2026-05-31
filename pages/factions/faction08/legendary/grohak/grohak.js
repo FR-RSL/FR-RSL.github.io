@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sap Swiftness",
-          description: `Attacks 2 times at random. Each hit has a 35% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Sape la Promptitude",
+          description: `Attaque 2 fois au hasard. Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Unbound Anger",
-          description: `Attacks all enemies. Each critical hit fills this Champion's Turn Meter by 20%.`,
-          damage: "3.7*ATK",
+          name: "Colère Libérée",
+          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 20 %.`,
+          damage: "3.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lord of War",
-          description: `Attacks 1 enemy and steals the target's Turn Meter. Places a 25% [Weaken] debuff for 2 turns if this attack is critical.`,
-          damage: "5.9*ATK",
+          name: "Seigneur de Guerre",
+          description: `Attaque un ennemi et vole le Compteur de Tour de la cible. Place un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours si cette attaque passe en critique.`,
+          damage: "5.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 24%`,
 };

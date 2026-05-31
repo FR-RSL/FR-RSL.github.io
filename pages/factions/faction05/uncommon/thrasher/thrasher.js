@@ -3,19 +3,20 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gorey Fists",
-          description: `Attacks 1 enemy.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Poings Sanglants",
+          description: `Attaque un ennemi.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Thrash",
-          description: `Attacks 1 enemy.<br>Has a 15% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "6.7*ATK",
+          name: "Rouer de coups",
+          description: `Attaque un ennemi.
+Possède 15 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+          damage: "6.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         }
       ],

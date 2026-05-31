@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Splintering Bash",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Coup Éclatant",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stinging Blast",
-          description: `Attacks all enemies. Increases the cooldown of all of the skills on each enemy by 2 turns.`,
-          damage: "3.8*ATK",
+          name: "Souffle Piquant",
+          description: `Attaque tous les ennemis. Augmente de 2 tours le temps de recharge de toutes les compétences sur chaque ennemi.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cause Fear",
-          description: `Attacks 4 times at random. Has a 75% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "1.55*ATK",
+          name: "Cause la Peur",
+          description: `Attaque 4 fois au hasard. Possède 75 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+          damage: "1.55*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

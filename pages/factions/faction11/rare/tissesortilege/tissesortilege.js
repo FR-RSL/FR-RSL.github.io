@@ -3,22 +3,22 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Imprecation",
-          description: `Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.PRE} de 25% pendant 2 tours.`,
+          name: "Imprécation",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Sombre Etreinte",
-          description: `Soigne tous les allies a hauteur de 15% de leurs PV MAX.`,
+          name: "Sombre Étreinte",
+          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max.`,
           cooldown: 4,
           levelInfo: ["Soins +10%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
           name: "Ailes de Ruine",
-          description: `Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.SPD} de 15% sur tous les allies pendant 2 tours.`,
+          description: `Place un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.SPD} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         }

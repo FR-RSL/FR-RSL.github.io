@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Painful Bite",
-          description: `Attacks 1 enemy. Has a 20% chance of increasing the cooldown of one of the target's skills by 1 turn at random.`,
-          damage: "4.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Morsure Douloureuse",
+          description: `Attaque un ennemi. Possède 20 % de chances d'augmenter d'1 tour le temps de recharge d'une des compétences de la cible prise au hasard.`,
+          damage: "4.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shriek",
-          description: `Attacks 2 times at random. Places a 30% [Reflect Damage] buff on all allies for 3 turns.`,
+          name: "Cri Perçant",
+          description: `Attaque 2 fois au hasard. Place, pendant 3 tours, un buff de ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés.`,
           damage: "0.23*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Flesh Feast",
-          description: `Attacks 1 enemy 2 times. Fully heals this Champion if the target is killed by this attack. Places a [Stun] debuff for 2 turns if the target survives.<br><br><br>Heal Multiplier: Target Max HP`,
-          damage: "3.7*ATK",
+          name: "Festin de Chair",
+          description: `Attaque 2 fois un ennemi. Soigne totalement ce Champion si la cible est tuée par cette attaque. Place un débuff d'${DEBUFFS.STUN} de 2 tours si la cible survit.`,
+          damage: "3.7*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

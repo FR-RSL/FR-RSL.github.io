@@ -4,41 +4,55 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blink Cut",
-          description: `Attacks 1 enemy. Places a 60% [Decrease DEF] debuff for 2 turns.<br><br>Also places a [Perfect Veil] buff on this Champion for 1 turn.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Entaille éclair",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.
+
+Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Umbral Stingers",
-          description: `Attacks all enemies. Before attacking, places a 50% [Increase ATK] buff on all allies for 2 turns.<br><br>Will ignore 25% of a target's DEF if they are not under a [HP Burn] debuff. Will ignore 50% of a target's DEF if they are under a [HP Burn] debuff.<br><br>Then, increases the duration of all enemy debuffs by 1 turn.`,
-          damage: "4*ATK",
+          name: "Sombres dards",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.
+
+Ignorera 25 % de la DÉF de la cible si elle ne se trouve pas sous débuff ${DEBUFFS.BURN}. Ignorera 50 % de la DÉF de la cible si elle se trouve sous débuff ${DEBUFFS.BURN}.
+
+Augmente ensuite d'1 tour la durée de tous les débuffs des ennemis.`,
+          damage: "4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blisterbug Horde",
-          description: `Attacks all enemies. Damage increases by 25% against targets under any debuffs.<br><br>Instantly activates one tick of all [HP Burn] debuffs on all enemies. <br><br>If an enemy is not under any [HP Burn] debuffs, place a [HP Burn] debuff on them for 2 turns.`,
-          damage: "4*ATK",
+          name: "Horde de bêtes-cloques",
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 25 % contre les cibles qui sont affligées de débuffs.
+
+Active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis. 
+
+Si un ennemi ne se trouve pas sous débuff ${DEBUFFS.BURN}, lui inflige un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fleshsearer [P]",
-          description: `Each time this Champion places a [HP Burn] debuff, decreases the target's DEF by 3% (stacks up to 30%). <br><br>For each [HP Burn] debuff on the enemy team, increase this Champion's C.DMG by 10% (stacks up to 100%). <br><br>Whenever an enemy [HP Burn] debuff activates, increase this Champion's ATK by 5% (stacks up to 50%). Resets each Round.`,
+          name: "Brûle-chair [P]",
+          description: `Chaque fois que ce Champion place un débuff ${DEBUFFS.BURN}, réduit la DÉF de la cible de 3 % (s'accumule jusqu'à 30 %). 
+
+Pour chaque débuff ${DEBUFFS.BURN} sur l'équipe ennemie, augmente les DÉG. C. de ce Champion de 10 % (s'accumule jusqu'à 100 %). 
+
+Dès que le débuff ${DEBUFFS.BURN} d'un ennemi s'active, augmente l'ATQ de ce Champion de 5 % (s'accumule jusqu'à 50 %). Se réinitialise à chaque round.`,
           isPassive: true
         }
       ],
@@ -54,7 +68,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -62,40 +76,46 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Crushing Pincers",
-          description: `Attacks 1 enemy. Places a 50% [Increase ACC] buff on the ally with the highest ACC for 2 turns and fills their Turn Meter by 10%.`,
+          name: "Pinces écrasantes",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.PRE} de 50 % sur l'allié ayant la PRÉ la plus élevée pendant 2 tours et remplit son Compteur de Tour de 10 %.`,
           damage: "3.7*DEF",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Putrid Cocoon",
-          description: `Attacks all enemies. Places a [Stun] debuff on all enemies for 1 turn. <br><br>Also places two 15% [Continuous Heal] buffs on all allies for 2 turns.`,
+          name: "Cocon putride",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour. 
+
+Place également deux buffs ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           damage: "2.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Behold The Beast",
-          description: `Places a [Provoke] debuff on all enemies for 1 turn. <br><br>Also places a 25% [Strengthen] buff and a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Et voici la Bête",
+          description: `Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. 
+
+Place également un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Entomophobia [P]",
-          description: `When attacked, has a 100% chance of placing a 25% [Weaken] debuff, and a 40% chance of placing a [Stun] debuff on the attacker for 1 turn. <br><br>Increases this Champion's DEF by 1 point for every 2 points of ATK when in their Alternate Form.`,
+          name: "Entomophobie [P]",
+          description: `Lorsque le Champion est attaqué, a 100 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % et 40 % de chances de placer un débuff ${DEBUFFS.STUN} sur l'assaillant pendant 1 tour. 
+
+Augmente la DÉF de ce Champion d'1 point par tranche de 2 points d'ATQ lorsqu'il est sous sa Forme alternative.`,
           isPassive: true
         }
       ],
@@ -111,7 +131,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

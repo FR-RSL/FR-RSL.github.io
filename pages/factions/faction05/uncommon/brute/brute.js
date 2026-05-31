@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dirty Cuts",
-          description: `Attacks 2 times at random. Has a 50% chance of placing a 5% [Poison] debuff for 1 turn if this attack is critical.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Entaille Rouillée",
+          description: `Attaque 1 ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rip and Tear",
-          description: `Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "6*ATK",
+          name: "Arrachage d'Essence",
+          description: `Attaque 1 ennemi et vole 1 buff pris au hasard.`,
+          damage: "6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

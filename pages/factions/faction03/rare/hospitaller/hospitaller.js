@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Quick Slash",
-          description: `Attacks 1 enemy.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Entaille Rapide",
+          description: `Attaque un ennemi.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wave of Purification",
-          description: `Attacks all enemies. Has a 50% chance of removing 1 random buff from each target.`,
-          damage: "2.5*ATK",
+          name: "Vague de Purification",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de retirer un buff aléatoire sur chaque cible.`,
+          damage: "2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Invigo",
-          description: `Places a 15% [Increase SPD] and a 15% [Increase C. RATE] buff on all allies for 2 turns.`,
+          name: "Prières Revigorantes",
+          description: `Place une ${BUFFS.SPD} de 15 % et un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Merciful Partner [P]",
-          description: `Revives a random ally with 25% HP and places a [Block Damage] buff on them for 1 turn whenever Harrier kills an enemy.<br><br>[Only available when Harrier is on the same team.]`,
+          name: "Miséricordieux ${PASSIVE}",
+          description: `Ranime un allié choisi au hasard avec 25 % de PV, puis lui accorde un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour dès que Harrier tue un ennemi.
+
+[Uniquement disponible lorsque Harrier se trouve dans la même équipe.]`,
           cooldown: 5,
           isPassive: true
         }
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 10%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 10%`,
 };

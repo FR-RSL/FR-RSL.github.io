@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Exemplar of Stoicism",
-          description: `Attacks 1 enemy. If there are any enemies under a [Freeze] debuff, also attacks them. <br><br>Decreases the enemy’s ATK by 3% whenever this Champion hits an enemy with this skill (stacks up to 30%). <br><br>Also increases this Champion’s ATK by 3% whenever they hit an enemy with this skill (stacks up to 30%).`,
-          damage: "3.5*ATKMultiplier: 3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Archétype de stoïcisme",
+          description: `Attaque un ennemi. Si des ennemis se trouvent sous débuff ${DEBUFFS.GEL}, les attaque également. 
+
+Réduit l'ATQ de l'ennemi de 3 % dès que cette Championne frappe un ennemi avec cette compétence (s'accumule jusqu'à 30 %). 
+
+Augmente également l'ATQ de cette Championne de 3 % dès qu'elle frappe un ennemi avec cette compétence (s'accumule jusqu'à 30 %).`,
+          damage: "3.5*ATQMultiplier: 3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cold Company",
-          description: `Attacks all enemies. Before attacking, has a 100% chance of placing a [Freeze] debuff for 1 turn.<br><br>Will ignore [Strengthen], [Ally Protection] and [Unkillable] buffs, as well as 20% of the target's DEF on enemies under a [Freeze] debuff.`,
-          damage: "4.3*ATK",
+          name: "Froide compagnie",
+          description: `Attaque tous les ennemis. Avant d'attaquer, possède 100 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+
+Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.UNKILLABLE}, ainsi que 20 % de la DÉF de la cible, sur les ennemis sous débuff ${DEBUFFS.GEL}.`,
+          damage: "4.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ever Faithful",
-          description: `Places a 50% [Increase ATK] buff, a 30% [Increase C. RATE] buff, a [Shield] buff, and a 50% [Increase ACC] buff on this Champion for 3 turns, then grants an Extra Turn. <br><br>The value of the [Shield] is proportional to this Champion's ATK.<br><br><br>Shield Multiplier: 4*ATK`,
+          name: "À jamais fidèle",
+          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 %, un buff ${BUFFS.SHIELD} et un buff ${BUFFS.PRE} de 50 % sur cette Championne pendant 3 tours, puis accorde un Tour supplémentaire. 
+
+La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de cette Championne.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Frosty Glare [P]",
-          description: `Has a 15% chance of placing a [Freeze] debuff on attackers for 1 turn when hit while under a [Shield] buff. <br><br>Has a 35% chance of placing a [Freeze] debuff on all enemies for 1 turn whenever a [Shield] buff on this Champion is removed by damage.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%"],
+          name: "Regard glacial [P]",
+          description: `Possède 15 % de chances de placer un débuff ${DEBUFFS.GEL} sur les assaillants pendant 1 tour lorsqu'elle est frappée alors qu'elle dispose d'un buff ${BUFFS.SHIELD}. 
+
+Possède 35 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour dès qu'un buff ${BUFFS.SHIELD} se trouvant sur cette Championne est retiré par des dégâts.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -48,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 35%`,
 };

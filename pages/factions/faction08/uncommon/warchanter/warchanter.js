@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Head Wound",
-          description: `Attacks 1 enemy. Has a 20% chance of applying a [Stun] debuff for 1 turn.`,
+          name: "Blessure à la Tête",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Frenzy",
-          description: `Attacks all enemies. Has a 25% chance of placing a 25% [Decrease ATK] debuff for 1 turn. Also has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "5.6*ATK",
+          name: "Frénésie",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour. Possède également 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "5.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1", "Level 7: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Dégâts +10%"],
           isPassive: false
         }
       ],

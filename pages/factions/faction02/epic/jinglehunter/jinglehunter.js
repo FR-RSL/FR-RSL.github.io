@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Missile Toe",
-          description: `Attacks 1 enemy 2 times. Has a 40% chance of placing a 30% [Decrease SPD] debuff for 2 turns if this attack is critical.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Double Missile",
+          description: `Attaque 2 fois un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours si l'attaque passe en critique.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Jacked Frost",
-          description: `Attacks 1 enemy. Has a 90% chance of placing a [Freeze] debuff on all enemies for 1 turn if this attack kills the enemy.`,
-          damage: "5.9*ATK",
+          name: "Valet du Gel",
+          description: `Attaque un ennemi. Possède 90 % de chances de placer un débuff ${DEBUFFS.GEL} d'1 tour sur tous les ennemis si cette attaque tue l'ennemi.`,
+          damage: "5.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cold Snap",
-          description: `Attacks all enemies. Decreases the Turn Meter by 20% if this attack is critical. Fills this Champion's Turn Meter by 10% if this attack is critical.`,
-          damage: "3.8*ATK",
+          name: "Froide Mitraille",
+          description: `Attaque tous les ennemis. Réduit de 20 % le Compteur de Tours si cette attaque passe en critique. Remplit de 10% le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
+          damage: "3.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 24%`,
 };

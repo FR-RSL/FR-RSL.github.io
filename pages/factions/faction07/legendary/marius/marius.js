@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Auric Lance",
-          description: `Attacks all enemies. Has a 35% chance of placing an [Enfeeble] debuff for 1 turn.`,
+          name: "Lance aurique",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff ${DEBUFFS.UNFEEBLE} pendant 1 tour.`,
           damage: "2.5*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Death or Glory",
-          description: `Attacks all enemies 3 times. Each hit decreases the duration of all enemy buffs by 1 turn.`,
+          name: "La mort ou la gloire",
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe réduit d'1 tour la durée de tous les buffs ennemis.`,
           damage: "1.2*DEF+0.03*Target Max HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Galloping Thunder",
-          description: `Places a 50% [Increase ACC] buff and a 60% [Increase DEF] buff on all allies for 3 turns. <br><br>Then places a [Stun] debuff on the enemy with the highest Turn Meter for 1 turn. <br><br>Finally, grants an Extra Turn.`,
+          name: "Tonnerre galopant",
+          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours. 
+
+Place ensuite un débuff ${DEBUFFS.STUN} d'1 tour sur l'ennemi ayant le Compteur de Tour le plus élevé. 
+
+Enfin, accorde un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Steadfast Knight [P]",
-          description: `This Champion is immune to Turn Meter reduction effects from enemies and [Decrease SPD] debuffs. <br><br>Whenever an enemy changes Form or attempts to decrease this Champion's Turn Meter, counterattacks using this Champion's default skill.`,
+          name: "Chevalier loyal [P]",
+          description: `Ce Champion est immunisé contre les effets de réduction du Compteur de Tour utilisés par les ennemis, ainsi que les débuffs ${DEBUFFS.SPD}. 
+
+Dès qu'un ennemi change de Forme ou tente de réduire le Compteur de Tour de ce Champion, contre-attaque en utilisant la compétence par défaut de ce Champion.`,
           isPassive: true
         }
       ],
@@ -47,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 35%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%`,
 };

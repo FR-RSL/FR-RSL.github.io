@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crush",
-          description: `Attacks 1 enemy. Has a 15% chance of placing an extra hit.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Concasser",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Remedy",
-          description: `Removes all debuffs from a target ally. Heals the target by 20%. The heal increases according to the amount of debuffs removed.<br><br><br>Heal Multiplier: Target Max HP*0.2+0.1*Target Max HP*DEBUFF_COUNT`,
+          name: "Remède",
+          description: `Retire tous les débuffs d'une cible alliée. Soigne la cible de 20 %. Les soins augmentent en fonction de la quantité de débuffs retirés.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +5%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Forest Kin [P]",
-          description: `Heals the ally with the lowest HP by 7.5% each turn. This heal can be critical. Will not heal this Champion.<br><br>Heal Multiplier: 0.075*Target Max HP`,
+          name: "De la Forêt [P]",
+          description: `Soigne, à chaque tour, l'allié ayant le moins de PV de 7,5 %. Ce soin ne peut pas passer en critique. Ne soignera pas ce Champion.`,
           isPassive: true
         }
       ],

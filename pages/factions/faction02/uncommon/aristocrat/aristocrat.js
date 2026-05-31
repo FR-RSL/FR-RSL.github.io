@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sepsis Tips",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Astuces d'Infection",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stinging Rebuke",
-          description: `Attacks 1 enemy 2 times. Has a 50% chance of placing a 15% [Weaken] debuff for 1 turn.`,
-          damage: "3*ATK",
+          name: "Réprimande Piquante",
+          description: `Attaque 2 fois un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 1 tour.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

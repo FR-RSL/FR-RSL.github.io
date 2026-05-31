@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Profane Glaive",
-          description: `Attacks 1 enemy 2 times. Has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Glaive Profane",
+          description: `Attaque 2 fois un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blades of Blood",
-          description: `Attacks all enemies. Has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3.6*ATK",
+          name: "Lames de Sang",
+          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "3.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Harvest of Despair",
-          description: `Attacks all enemies. Places a 30% [Increase SPD] buff on this Champion for 3 turns if this attack kills 4 or more enemies.<br>Heals this Champion by 50% of their MAX HP if this attack kills 6 or more enemies.<br>Grants an Extra Turn if this attack kills 10 or more enemies.<br><br><br>Heal Multiplier: 0.5*Target Max HP`,
-          damage: "3.65*ATK",
+          name: "Récolte de Tourment",
+          description: `Attaque tous les ennemis. Place, pendant 3 tours, un buff d'${BUFFS.SPD} de 30 % sur ce Champion si cette attaque tue 4 ennemis ou plus.
+Soigne ce Champion de 50 % de ses PV MAX si cette attaque tue 6 ennemis ou plus.
+Accorde un Tour Supplémentaire si cette attaque tue 10 ennemis ou plus.`,
+          damage: "3.65*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 20%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 20%`,
 };

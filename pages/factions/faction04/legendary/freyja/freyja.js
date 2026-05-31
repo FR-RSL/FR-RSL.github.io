@@ -4,12 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lance heitt",
-          description: `
-            Attaque tous les ennemis. Possède 25% de chances de placer un 
-			débuff <span class='gbt'>Provocation</span> pendant 1 tour.<br><br>
-			Active cette compétence lorsqu'un buff <span class='gbt'>Bouclier</span>
-			place par cette Championne est retire par des degats. Se produit une fois par tour.
-          `,
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+
+Active cette compétence lorsqu'un buff ${BUFFS.SHIELD} placé par cette Championne est retiré par des dégâts. Se produit une fois par tour.`,
           damage: "2.5*DEF",
           levelInfo: [
             "Dégâts +10%",
@@ -20,13 +17,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Egide prismatique",
-          description: `
-            Place un buff <span class='gbt'>Augmentation de DEF</span> de 60% 
-			sur tous les alliés pendant 2 tours.<br><br>
-			Place également un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
-			La valeur du ${BUFFS.SHIELD} est equivalent a 250% de la DEF de cette Championne et a 10% des PV MAX de chaque cible.
-          `,
+          name: "Égide prismatique",
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion et aux PV MAX de chaque cible de ce Champion.`,
           cooldown: 4,
           levelInfo: [
             "Bouclier +10%",
@@ -37,11 +31,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tresse d'or",
-          description: `
-            Retire tous les débuffs sur tous les alliés et leur accorde un buff
-			<span class='gbt'>Blocage des débuffs</span> pendant 2 tours.<br><br>
-			Remplit également le Compteur de Tour de tous les alliés de 20%.
-          `,
+          description: `Retire tous les débuffs sur tous les alliés et leur accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours. 
+
+Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",
@@ -51,18 +43,15 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Prescience divine [P]",
-          description: `
-            <span class='gbt'>Effet Passif</span><br><br>
-			Augmente la DEF de cette Championne de 5% chaque fois qu'un allié 
-			inflige un coup critique (s'accumule jusqu'a 50%).<br><br>
-			<span class='gbt'>Effet Actif</span><br><br>
-			Empeche la mort de l'allié ayant les DEG C. les plus eleves,
-			sauf cette Championne, et le garde en vie avec 1 PV lorsqu'il est touche
-			par un frappe critique. Si plusieurs Champions de l'equipe disposent de cette
-			compétence, cet effet ne sera active qu'une fois.<br><br>
-			Soigne ensuite cet allié de 20% de ses PV MAX et active un effet
-			<span class='gbt'>Tour instantane</span> sur lui.
-          `,
+          description: `${PASSIVE}
+
+Augmente la DÉF de cette Championne de 5 % chaque fois qu'un allié inflige un coup critique (s'accumule jusqu'à 50 %).
+
+${ACTIVE}
+
+Empêche la mort de l'allié ayant les DÉG C. les plus élevés, sauf cette Championne, et le garde en vie avec 1 PV lorsqu'il est touché par une frappe critique. Si plusieurs Champions de l'équipe disposent de cette Compétence, cet effet ne sera activé qu'une fois. 
+
+Soigne ensuite cet allié de 20 % de ses PV MAX et active un effet ${INSTANT} sur lui.`,
 		  cooldown: 5,
           isPassive: true,
         },

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sly Slice",
-          description: `Attacks 1 enemy. Has a 30% chance of stealing 1 random buff from the target.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Fente Sournoise",
+          description: `Attaque 1 ennemi. Possède 30 % de chances de voler un buff aléatoire sur la cible.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flying Daggers",
-          description: `Attacks 4 times at random. Each hit has a 50% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "1.4*ATK",
+          name: "Dagues Volantes",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
+          damage: "1.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vicious Partner",
-          description: `Places a 50% [Increase ATK] and a 30% [Increase C. RATE] buff on this Champion for 2 turns. Grants an Extra Turn when Seducer is on the same team.`,
+          name: "Vicieuse Partenaire",
+          description: `Place un buff d'${BUFFS.ATK} de 50 % et un buff d'${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours. Accorde un Tour Supplémentaire lorsque Séducteur se trouve dans la même équipe.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

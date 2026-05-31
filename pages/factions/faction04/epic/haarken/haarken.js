@@ -3,28 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blooded Steel",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Acier Ensanglanté",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fearsome Iron Slab",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 25% [Weaken] debuff on the target for 2 turns before attacking.`,
-          damage: "6.2*ATK",
+          name: "Terrifiant Bloc de Fer",
+          description: `Attaque un ennemi. Avant d'attaquer, possède 75 % de chances de placer sur la cible un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "6.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Infectious Panic",
-          description: `Attacks 1 enemy. Applies a [Debuff Spread] effect, taking 2 random debuffs from the target and placing them on all enemies. Also extends the duration of those debuffs by 2 turns.<br>Will not extend the duration of debuffs on the initial target.`,
-          damage: "5.5*ATK",
+          name: "Panique Contagieuse",
+          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuff], prenant 2 débuffs aléatoires sur la cible pour les placer sur tous les ennemis. Prolonge également de 2 tours la durée de ces débuffs.
+Ne prolongera pas la durée des débuffs sur la cible initiale.`,
+          damage: "5.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Doom Tower by 32%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Tour du Malheur de 32%`,
 };

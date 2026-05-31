@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sure Strike",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a 50% [Decrease ACC] debuff on the target for 1 turn.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Frappe Assurée",
+          description: `Attaque 1 ennemi. Possède 20 % de chances de placer sur la cible un débuff de ${DEBUFFS.PRE} de 50 % pendant 1 tour.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fortify",
-          description: `Places a [Block Debuffs] buff and a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Fortifier",
+          description: `Place un buff de ${BUFFS.BLOCK_DEBUFFS} et un buff d'${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Helmcleaver",
-          description: `Attacks 1 enemy. Will ignore DEF if the target has less than 50% HP. Damage increases according to this Champion's MAX HP.`,
-          damage: "3.9*ATK+0.1*HP",
+          name: "Coupheaume",
+          description: `Attaque 1 ennemi. Ignorera la DÉF si la cible possède moins de 50 % de PV. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
+          damage: "3.9*ATQ+0.1*HP",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Arena by 25%`,
+  description: `Augmente la statistique PV des Alliés lors des batailles d'Arène de 25%`,
 };

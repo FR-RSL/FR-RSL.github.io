@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Insidious Arrow",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 25% [Poison Sensitivity] debuff for 2 turns.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Flèche Insidieuse",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.POISON_S} de 25 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soul Fire",
-          description: `Places a 50% [Increase ACC] buff and a 50% [Increase ATK] buff on this Champion for 2 turns, then attacks 1 enemy. Places a [HP Burn] debuff for 2 turns if this attack is critical.`,
-          damage: "5.5*ATK",
+          name: "Feu d'Âme",
+          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours, puis attaque un ennemi. Place un débuff ${DEBUFFS.BURN} pendant 2 tours si cette attaque passe en critique.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shower of Misery",
-          description: `Attacks all enemies. Has a 50% chance of increasing the duration of all debuffs by 1 turn.`,
-          damage: "4*ATK",
+          name: "Pluie de Misère",
+          description: `Attaque tous les ennemis. Possède 50 % de chances d'augmenter d'1 tour la durée de tous les débuffs.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Sureshot [P]",
-          description: `Immune to [Decrease ACC] debuffs.<br><br>Increases this Champion’s C. RATE by 0.05% for every point of ACC they have.`,
+          name: "Tireuse d'élite [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.PRE}.
+
+Augmente le TAUX C. de ce Champion de 0,05 % pour chaque point de PRÉ qu'il possède.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

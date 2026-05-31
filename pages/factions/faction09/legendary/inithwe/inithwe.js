@@ -3,34 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vitality Censure",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 30% of the damage inflicted.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Censure de Vitalité",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "No Mercy",
-          description: `Attacks 1 enemy 3 times. Damage increases equal to the percentage of HP the target has lost.`,
-          damage: "1.6*ATK",
+          name: "Pas de quartier",
+          description: `Attaque 3 fois un ennemi. Les dégâts augmentent en fonction du pourcentage de PV perdus par la cible.`,
+          damage: "1.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tormenting Whispers",
-          description: `Attacks all enemies. Has an 80% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "3.6*ATK",
+          name: "Murmures de Tourment",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff de ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Final Doom [P]",
-          description: `Heals this Champion by 30% of their MAX HP each time they kill an enemy. Enemies killed by this Champion cannot be revived.<br><br>Heal Multiplier: 0.3*HP`,
+          name: "Ruine Définitive [P]",
+          description: `Soigne ce Champion de 30 % de ses PV MAX à chaque fois qu'il tue un ennemi. Les ennemis tués par ce Champion ne peuvent pas être ranimés.`,
           isPassive: true
         }
       ],
@@ -48,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

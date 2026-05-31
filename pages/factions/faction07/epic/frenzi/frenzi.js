@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Searing Hack",
-          description: `Attacks 1 enemy. Has a 50% chance of instantly activating a [HP Burn] debuff on the target.`,
+          name: "Charcutage brûlant",
+          description: `Attaque un ennemi. Possède 50 % de chances d'activer instantanément un débuff ${DEBUFFS.BURN} sur la cible.`,
           damage: "3.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Jaws of Flame",
-          description: `Attacks 3 times at random. Each hit has a 75% chance of placing a [HP Burn] debuff for 2 turns. <br><br>Fills this Champion’s Turn Meter by 10% for each [HP Burn] debuff placed by this skill.`,
+          name: "Mâchoires de flamme",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+
+Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
           damage: "1.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vexatious Cackle",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Provoke] debuff for 1 turn. <br><br>Also places a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Ricanement vexant",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+
+Place également un buff ${BUFFS.DEF} de 60 % sur cette Championne pendant 2 tours.`,
           damage: "3.8*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Broiling Bulwark [P]",
-          description: `Increases this Champion’s DEF by 2% each time a [HP Burn] debuff is activated on enemies (stacks up to 20%). <br><br>Resets each Round.`,
+          name: "Rempart grillant [P]",
+          description: `Augmente la DÉF de cette Championne de 2 % chaque fois qu'un débuff ${DEBUFFS.BURN} est activé sur les ennemis (s'accumule jusqu'à 20 %). 
+
+Se réinitialise à chaque round.`,
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 30%`,
 };

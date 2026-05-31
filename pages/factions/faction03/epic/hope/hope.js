@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sequester",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Ouragan de neige",
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 10 % de leurs PV max.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hearten",
-          description: `Increases the duration of buffs on all allies by 1 turn. Places a [Shield] buff equal to 25% of this Champion's HP on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.25*HP`,
+          name: "Vague de verglas",
+          description: `Attaque 2 fois tous les ennemis. Les dégâts infligés par cette compétence augmentent de 5 % pour chaque allié dont les PV sont supérieurs à 50 %. 
+
+Place un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf cette Championne pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +5%", "Level 5: Shield +5%"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Bouclier +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Holy Storm",
-          description: `Attacks all enemies. Has a 50% chance of removing all buffs.`,
-          damage: "4.9*ATK",
+          name: "Vacance de Yuletide",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.
+
+Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.COUNTER} sur tous les alliés pendant 2 tours.`,
+          damage: "4.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +45,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 31%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 31%`,
 };

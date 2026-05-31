@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ferocity",
-          description: `Attacks 1 enemy 2 times. Has a 15% chance of granting an Extra Turn.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Férocité",
+          description: `Attaque 2 fois un ennemi. Possède 15 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloody Swath",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a 25% [Weaken] debuff for 3 turns.`,
-          damage: "6.4*ATK",
+          name: "Ravage Sanglant",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 3 tours.`,
+          damage: "6.4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Overmaster",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a 60% [Decrease DEF] debuff for 3 turns. Heals this Champion by 30% of the damage inflicted.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "6.4*ATK",
+          name: "Dominer",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 3 tours. Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "6.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 40`,
 };

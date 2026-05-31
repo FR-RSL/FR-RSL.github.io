@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Abase",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Humilier",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flow of Morale",
-          description: `Attacks all enemies. Has a 75% chance of stealing one random buff from each enemy. Also places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
-          damage: "3.2*ATK",
+          name: "Affluence de moral",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de voler 1 buff aléatoire à chaque ennemi. Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
+          damage: "3.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Committed Offensive",
-          description: `Fills the Turn Meters of all allies by 15%, then places a 50% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Offensive engagée",
+          description: `Remplit le Compteur de tour de tous les alliés de 15 %, puis place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Perdurable [P]",
-          description: `Removes all [Decrease ATK] debuffs from all allies at the start of this Champion's turn.`,
+          name: "Pérenne [P]",
+          description: `Retire tous les débuffs ${DEBUFFS.ATK} sur tous les alliés au début du tour de ce Champion.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 15%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%`,
 };

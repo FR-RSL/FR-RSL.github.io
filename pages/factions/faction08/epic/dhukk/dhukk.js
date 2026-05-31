@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mad Chopper",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
+          name: "Hachoir Fou",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
           damage: "1.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lunatic Outburst",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Also has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns on each critical hit.`,
+          name: "Crise Démente",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours lors de chaque coup critique.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shrieking Display",
-          description: `Places a [Provoke] debuff for 1 turn on the target enemy. Also has a 75% chance of placing a [Provoke] debuff for 1 turn on 2 random enemies.<br><br>Places a 30% [Reflect Damage] buff on this Champion for 2 turns and an [Unkillable] buff on this Champion for 1 turn.`,
+          name: "Festival de Cris",
+          description: `Place un débuff ${DEBUFFS.PROVOKE} d'1 tour sur l'ennemi ciblé. Possède également 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur 2 ennemis choisis au hasard.
+
+Place sur ce Champion un buff ${BUFFS.REFLECT_DAM} de 30 % pendant 2 tours et un buff ${BUFFS.UNKILLABLE} pendant 1 tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 31%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 31%`,
 };

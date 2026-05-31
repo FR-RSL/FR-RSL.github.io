@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Noble Authority",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 25% [Decrease ACC] debuff for 2 turns.`,
-          damage: "2.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +10%", "Level 9: Buff/Debuff Chance +10%"],
+          name: "Autorité de Noble",
+          description: `Attaque un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "2.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Royal Shield",
-          description: `Places a 30% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Bouclier Royal",
+          description: `Place un buff d'${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

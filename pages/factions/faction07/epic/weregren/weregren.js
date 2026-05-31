@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bestial Leap",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of stealing one random buff.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Bond bestial",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de voler un buff aléatoire.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Terror Assault",
-          description: `Attacks 1 enemy 3 times. Each hit will ignore [Shield] buffs. <br><br>Places a [True Fear] debuff on all enemies for 1 turn if this attack kills an enemy. Also places an [Unkillable] buff on this Champion for 1 turn if this attack kills an enemy.`,
-          damage: "2*ATK",
+          name: "Assaut de terreur",
+          description: `Attaque 3 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}. 
+
+Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour si cette attaque tue un ennemi. Place également un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
+          damage: "2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vitality Feast",
-          description: `Swaps HP with an enemy, then grants an Extra Turn.`,
+          name: "Festin de vitalité",
+          description: `Échange les PV avec un ennemi, puis accorde un Tour supplémentaire.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Prey on the Weak [P]",
-          description: `Deals 30% more damage against targets whose current HP is lower than this Champion’s current HP.`,
+          name: "Chasser les faibles [P]",
+          description: `Inflige 30 % de dégâts en plus contre les cibles dont les PV actuels sont inférieurs à ceux de ce Champion.`,
           isPassive: true
         }
       ],

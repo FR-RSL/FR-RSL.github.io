@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dragging Line",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Ligne traînante",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Untraceable",
-          description: `Attacks all enemies. Has a 30% chance of increasing the cooldown of a random skill on each target by 2 turns.`,
-          damage: "3.8*ATK",
+          name: "Intraçable",
+          description: `Attaque tous les ennemis. Possède 30 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire de chaque cible.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Hidden Paths [P]",
-          description: `Places a [Perfect Veil] buff on this Champion for 1 turn whenever they kill an enemy.`,
+          name: "Chemin cachés [P]",
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 1 tour dès qu'elle tue un ennemi.`,
           isPassive: true
         }
       ],

@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bone Gladius",
-          description: `Attacks 1 enemy. Has a 50% chance of transferring 1 random debuff from this Champion to the target.`,
+          name: "Glaive en os",
+          description: `Attaque un ennemi. Possède 50 % de chances de transférer 1 débuff aléatoire de ce Champion sur la cible.`,
           damage: "3.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Khafru's Command",
-          description: `Attacks all enemies. Before attacking, removes 1 random debuff from all allies. Damage increases by 5% for each debuff removed. <br><br>Also heals each ally by 10% of this Champion's MAX HP if a debuff was removed from them.<br><br><br>Heal Multiplier: 0.1*HP`,
+          name: "Ordre de Khafru",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire 1 débuff aléatoire sur tous les alliés. Les dégâts augmentent de 5 % pour chaque débuff retiré. 
+
+Soigne également chaque allié de 10 % des PV MAX de ce Champion si un débuff leur a été retiré.`,
           damage: "4.1*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Goad the Living",
-          description: `Places an [Unkillable] buff on this Champion for 1 turn, and a [Taunt] buff on them for 2 turns.`,
+          name: "Harceler les vivants",
+          description: `Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour et un buff ${BUFFS.TAUNT} sur eux pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Nekhret's Guardian [P]",
-          description: `Decreases the damage all allies receive by 10%. This Champion will receive that damage instead.`,
+          name: "Gardien de Nekhret [P]",
+          description: `Réduit les dégâts reçus par tous les alliés de 10 %. Ce Champion recevra ces dégâts à la place.`,
           isPassive: true
         }
       ],

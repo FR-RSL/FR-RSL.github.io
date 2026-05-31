@@ -3,35 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Verminous Grasp",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Prise venimeuse",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Duke of Flies",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Hex] debuff for 2 turns.`,
-          damage: "5*ATK",
+          name: "Duc des Mouches",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
+          damage: "5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Swarm of Horrors",
-          description: `Attacks all enemies. Has an 80% chance of increasing the duration of all enemy debuffs by 1 turn. <br><br>When hitting enemies under [Hex] debuffs, also has a 60% chance of putting one of their skills on cooldown.`,
-          damage: "4.5*ATK",
+          name: "Essaim d'Horreurs",
+          description: `Attaque tous les ennemis. Possède 80 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis. 
+
+Lorsque tu frappes des ennemis sous débuffs ${DEBUFFS.HEX}, possède également 60 % de chances de placer une de leurs compétences en temps de recharge.`,
+          damage: "4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Pestiferous [P]",
-          description: `Has a 10% chance of stealing the heal each time an enemy under a [Hex] debuff is about to be healed.<br> <br>[Does not work against Bosses. The amount healed will be the same as it would have been on the original target of the heal, except if the heal is based on the target's HP, in which it will scale off Vildrax's HP.]`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%"],
+          name: "Pestiféré [P]",
+          description: `Possède 10 % de chances de voler le soin chaque fois qu'un ennemi sous débuff ${DEBUFFS.HEX} est sur le point d'être soigné.
+ 
+[Ne fonctionne pas contre les Boss. La quantité soignée sera la même qu'elle l'aurait été sur la cible originale du soin, sauf si le soin est basé sur les PV de la cible, auquel cas il s'étalonnera sur les PV de [Vildrax].]`,
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -49,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

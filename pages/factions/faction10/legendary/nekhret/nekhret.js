@@ -3,38 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tomb Glaive",
-          description: `Attacks 1 enemy 3 times. Each hit has a 20% chance of placing a 50% [Decrease ATK] debuff for 1 turn. This effect cannot be resisted.`,
+          name: "Glaive Tombal",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 1 tour. Il est impossible de résister à ce débuff.`,
           damage: "1.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Legion of the Damned",
-          description: `Teams up with allies to attack 1 enemy. All allies under [Ally Protection] buffs placed by this Champion will join the attack. Allies joining the attack will use their default skills.<br><br>Grants an Extra Turn if no enemies are killed during this attack.`,
+          name: "Légion des Damnés",
+          description: `Fais équipe avec des alliés pour attaquer un ennemi. Tous les alliés sous buffs ${BUFFS.ALLY_PROTECT} placés par ce Champion rejoindront l'attaque. Les alliés rejoignant l'attaque utiliseront leurs compétences par défaut.
+
+Accorde un Tour supplémentaire si aucun ennemi n'est tué pendant cette attaque.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Disturbing Infusion",
-          description: `Places a [Block Debuffs] buff, a 50% [Ally Protection] buff, and a 25% [Strengthen] buff on an ally for 3 turns.<br><br>The [Ally Protection] buff cannot be removed.`,
+          name: "Infusion Troublante",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS}, un buff ${BUFFS.ALLY_PROTECT} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur un allié pendant 3 tours.
+
+Le buff ${BUFFS.ALLY_PROTECT} ne peut pas être retiré.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Unsleeping Aegis [P]",
-          description: `Whenever an ally is attacked while under an [Ally Protection] buff placed by this Champion, places a [Shield] buff on the ally equal to 30% of this Champion's MAX HP for 2 turns. Occurs only if the ally does not already have a [Shield] buff placed by this Champion.<br><br>Also decreases the cooldown of this Champion's Legion of the Damned skill by 2 turns if the [Shield] buff is placed.<br><br>Shield Multiplier: 0.3*HP`,
+          name: "Égide Éveillée [P]",
+          description: `Lorsqu'un allié est attaqué alors qu'il bénéficie d'un buff ${BUFFS.ALLY_PROTECT} placé par ce Champion, place sur l'allié un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. Ne survient que si l'allié ne possède pas déjà un buff ${BUFFS.SHIELD} placé par ce Champion.
+
+Réduit également de 2 tours le temps de recharge de la compétence Légion des Damnés de ce Champion si le buff ${BUFFS.SHIELD} est placé.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Arise My Minions [P]",
-          description: `Places a [Block Debuffs] buff and a 25% [Strengthen] buff for 3 turns on the ally with the lowest MAX HP at the start of each Round. Also places a 50% [Ally Protection] buff on them for 6 turns. <br><br>The [Ally Protection] buff cannot be removed.`,
+          name: "Debout mes Sbires [P]",
+          description: `Place, pendant 3 tours, un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.STRENGTHEN} de 25 % sur l'allié ayant le moins de PV MAX au début de chaque round. Place également sur cet allié un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 6 tours. 
+
+Le buff ${BUFFS.ALLY_PROTECT} ne peut pas être retiré.`,
           isPassive: true
         }
       ],
@@ -52,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 60`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Agonize",
-          description: `Attacks 1 enemy 2 times. If this attack is critical, has an 85% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns.`,
-          damage: "1.2*DEF+ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Tourmenter",
+          description: `Attaque 2 fois un ennemi. Si cette attaque passe en critique, possède 85 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis.`,
+          damage: "1.2*DEF+ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flesh Warp",
-          description: `Attacks all enemies. Has a 35% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.3*DEF+ATK",
+          name: "Déformation de Chair",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "3.3*DEF+ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Appropriate",
-          description: `Attacks 1 enemy. Removes all buffs from the target and places them on this Champion.`,
+          name: "Détourner",
+          description: `Attaque 1 ennemi. Retire tous les buffs de la cible et les place sur ce Champion.`,
           damage: "6*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

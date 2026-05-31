@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sharpened Bone",
-          description: `Attacks 1 enemy 3 times.`,
-          damage: "1.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Os Affilé",
+          description: `Attaque 3 fois un ennemi.`,
+          damage: "1.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Skinning Slice",
-          description: `Attacks 1 enemy. Removes 2 random buffs from the target.`,
-          damage: "6.3*ATK",
+          name: "Fente Écorcheuse",
+          description: `Attaque un ennemi. Retire 2 buffs aléatoires de la cible.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

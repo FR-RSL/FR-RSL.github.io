@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skull Clapper",
-          description: `Attacks 1 enemy 2 times. <br><br>Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Batteur de crâne",
+          description: `Attaque 2 fois un ennemi. 
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ear-Splitter",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a [Stun] debuff for 1 turn. <br><br>Places an extra hit on enemies under [Stun] debuffs. If Esme the Dancer is on the same team, will always place an extra hit and ignore 20% of each enemy’s DEF.`,
-          damage: "3.8*ATK",
+          name: "Bruit assourdissant",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+
+Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.STUN}. Si Esmé la Danseuse se trouve dans la même équipe, placera toujours une frappe supplémentaire et ignorera 20 % de la DÉF de chaque ennemi.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Peal of Breaking",
-          description: `Attacks all enemies. Will ignore [Shield] buffs. <br><br>Damage increases by 75% while attacking enemies under [Stone Skin] buffs. <br><br>If this attack removes one or more [Stone Skin] buffs, grants this Champion an Extra Turn.`,
-          damage: "4*ATK",
+          name: "Carillon de fracture",
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD}. 
+
+Les dégâts augmentent de 75 % lors d'une attaque sur des ennemis sous buffs ${BUFFS.STONE_SKIN}. 
+
+Si cette attaque retire un ou plusieurs buffs ${BUFFS.STONE_SKIN}, accorde un Tour supplémentaire à ce Champion.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Beloved Companion [P]",
-          description: `Whenever this Champion kills an enemy, places a [Stun] debuff on the enemy with the highest Turn Meter for 2 turns. Occurs once per skill. <br><br>If Esme the Dancer is on the same team, this Champion’s skills will ignore 50% of each enemy’s RES. Also, if Esme the Dancer is on the same team, places an [Intercept] stack on this Champion at the start of their turn.`,
+          name: "Compagnon adoré [P]",
+          description: `Dès que ce Champion tue un ennemi, place un débuff ${DEBUFFS.STUN} pendant 2 tours sur l'ennemi qui a le Compteur de Tour le plus élevé. Se produit une fois par compétence. 
+
+Si Esmé la Danseuse se trouve dans la même équipe, les compétences de ce Champion ignoreront 50 % de la RÉS de chaque ennemi. De plus, si Esmé la Danseuse se trouve dans la même équipe, place une pile d'${BUFFS.INTERCEPT} sur ce Champion au début de son tour.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

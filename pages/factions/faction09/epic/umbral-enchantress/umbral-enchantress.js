@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Essence Scepter",
-          description: `Attacks 1 enemy. Damage increases as current HP decreases.`,
+          name: "Sceptre d'Essence",
+          description: `Attaque un ennemi. Les dégâts augmentent à mesure que les PV actuels baissent.`,
           damage: "(3.3+(1-Current HP %))*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Immolate",
-          description: `Attacks all enemies. Has an 80% chance of placing a [Block Buffs] debuff for 3 turns.`,
+          name: "Immolation",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 3 tours.`,
           damage: "3.6*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Undying Evil",
-          description: `Attacks all enemies. Has an 80% chance of placing a [Provoke] debuff for 2 turns. Places an [Unkillable] buff on this Champion for 2 turns. Places a [Block Active Skills] debuff on this Champion for 5 turns. The [Block Active Skills] debuff cannot be resisted or blocked and cannot be removed.`,
+          name: "Mal Immortel",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 2 tours. Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours. Place un débuff ${DEBUFFS.LOCK_ACTIVE} sur ce Champion pendant 5 tours. Il est impossible de résister au débuff ${DEBUFFS.LOCK_ACTIVE}, de le bloquer et de le retirer.`,
           damage: "4*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],

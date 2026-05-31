@@ -3,27 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Massive Halberd",
-          description: `Attacks 1 enemy.<br><br>Has a 35% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
+          name: "Énorme Hallebarde",
+          description: `Attaque un ennemi.
+
+Possède 35 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ancestral Shield",
-          description: `Places a 60% [Increase DEF] buff on all allies for 2 turns.<br><br>Places a [Block Debuffs] buff on all allies for 1 turn.`,
+          name: "Bouclier Ancestral",
+          description: `Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.
+
+Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Earthstomp",
-          description: `Attacks all enemies.<br><br>Has a 75% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns.<br>Destroys each target’s MAX HP by 30% of the damage inflicted.`,
+          name: "Écrase-Sol",
+          description: `Attaque tous les ennemis.
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.
+Détruit les PV MAX de chaque cible de 30 % des dégâts infligés.`,
           damage: "3.3*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

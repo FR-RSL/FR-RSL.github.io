@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dark Sphere",
-          description: `Attacks all enemies. Heals this Champion and all allies by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Heal +10%", "Level 5: Damage +10%", "Level 6: Heal +10%"],
+          name: "Sombre Sphère",
+          description: `Attaque tous les ennemis. Soigne ce Champion et tous les alliés à hauteur de 20 % des dégâts infligés.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Malice",
-          description: `Removes all debuffs from all allies. Places two 15% [Continuous Heal] buffs on all allies for 2 turns. Places two 5% [Poison] debuffs on all enemies for 2 turns.`,
+          name: "Malveillance",
+          description: `Retire tous les débuffs de tous les alliés. Place, pendant 2 tours, deux buffs de ${BUFFS.HEALS} de 15 % sur tous les alliés. Place, pendant 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5 % sur tous les ennemis.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Prey Upon [P]",
-          description: `All allies inflict 20% more damage against targets under [Poison] debuffs.`,
+          name: "Harcèlement [P]",
+          description: `Tous les alliés infligent 20 % de dégâts supplémentaires contre les cibles souffrant de débuffs de ${DEBUFFS.POISON}.`,
           isPassive: true
         }
       ],
@@ -38,5 +38,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 25%`,
+  description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Drover",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Berger",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Highpeak's Reach",
-          description: `Attacks 1 enemy. Before attacking, has a 75% chance of placing a 60% [Decrease DEF] debuff on the target for 2 turns.`,
-          damage: "5*ATK",
+          name: "Col du Haut-pic",
+          description: `Attaque un ennemi. Avant d'attaquer, possède 75 % de chances de placer sur la cible un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tempo Shift",
-          description: `Places a 50% [Increase ACC] buff and a 30% [Increase C. RATE] buff on this Champion for 3 turns, then grants an Extra Turn.`,
+          name: "Changement de tempo",
+          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 3 tours, puis accorde un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 20%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 20%`,
 };

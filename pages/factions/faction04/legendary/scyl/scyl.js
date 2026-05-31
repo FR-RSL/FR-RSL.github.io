@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Drake's Swiftness",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Also has a 30% chance of decreasing the target's Turn Meter by 15%.`,
+          name: "Célérité du Drake",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Possède 30 % de chances de réduire de 15 % le Compteur de Tour de la cible.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wingbeat Flurry",
-          description: `Attacks all enemies 2 times. Each hit has a 20% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Battements d'Ailes",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "1.55*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Phoenix Rite",
-          description: `Revives an ally with 50% HP and places a 50% [Ally Protection] buff on them for 2 turns.`,
+          name: "Rite du Phénix",
+          description: `Ranime un allié avec 50 % de PV, puis place un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur cet allié pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Boundless Life [P]",
-          description: `Heals all allies by 10% of their MAX HP at the start of each turn. Also places a 30% [Increase SPD] buff on a random ally for 2 turns.<br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Vie Intarissable [P]",
+          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de chaque tour. Place également, pendant 2 tours, un buff ${BUFFS.SPD} de 30 % sur un allié pris au hasard.`,
           isPassive: true
         }
       ],

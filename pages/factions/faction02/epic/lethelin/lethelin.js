@@ -3,26 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spearshower",
-          description: `Attacks all enemies. <br><br>Has a 15% chance of placing a 30% [Decrease C. RATE] debuff for 2 turns. <br><br>If this Champion’s HP is full, the chance increases to 30%.`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Pluie de lances",
+          description: `Attaque tous les ennemis. 
+
+Possède 15 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours. 
+
+Si les PV de ce Champion sont pleins, les chances passent à 30 %.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rallying Banner",
-          description: `Places a [Taunt] buff on a target ally for 2 turns. <br><br>Also places a 30% [Reflect Damage] buff on all allies for 2 turns.`,
+          name: "Bannière de ralliement",
+          description: `Place un buff ${BUFFS.TAUNT} sur une cible alliée pendant 2 tours. 
+
+Place également un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Field Medic",
-          description: `Decreases the duration of 2 random debuffs on all allies by 1 turn. Then, heals all allies by 5% of their MAX HP. Heals by an additional 2.5% MAX HP for each debuff that has its duration decreased.<br><br><br>Heal Multiplier: (0.05*Target Max HP)+(0.025*Target Max HP*totalDecreasedTurnsCountBySkill)`,
+          name: "Médecin de terrain",
+          description: `Réduit d'1 tour la durée de 2 débuffs aléatoires sur tous les alliés. Ensuite, soigne tous les alliés à hauteur de 5 % de leurs PV MAX.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Twysted Bark",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Écorce tordue",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Burst of Despair",
-          description: `Attacks all enemies. Fills this Champion’s Turn Meter by 5% for each [Leech] debuff on each enemy.`,
-          damage: "3.5*ATK",
+          name: "Éclat de désespoir",
+          description: `Attaque tous les ennemis. Remplit le Compteur de Tour de ce Champion de 5 % pour chaque débuff ${DEBUFFS.LEECH} sur chaque ennemi.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Feasting Shadow",
-          description: `Attacks all enemies. Before attacking, places a 25% [Increase ACC] buff on all allies for 2 turns.<br><br>Has a 50% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "3.65*ATK",
+          name: "Ombre dévorante",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur tous les alliés pendant 2 tours.
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "3.65*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 30`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 30`,
 };

@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Maim",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 15% [Decrease SPD] debuff for 1 turn.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Estropier",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 1 tour.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cold Grasp",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease DEF] debuff for 2 turns. Places a [Freeze] debuff for 1 turn if the target is currently under a [Decrease SPD] debuff.`,
-          damage: "5*ATK",
+          name: "Poigne Glaciale",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours. Place un débuff de ${DEBUFFS.GEL} d'1 tour si la cible ne souffre pas du débuff de ${DEBUFFS.SPD}.`,
+          damage: "5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],

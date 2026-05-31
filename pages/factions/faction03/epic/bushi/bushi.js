@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rising Storm",
-          description: `Attacks 1 enemy. Damage inflicted increases each time this skill is used. Stacks up to 4 times.`,
-          damage: "ATK*(2.9+0.4*# of Skills Used)",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Vent de Tempête",
+          description: `Attaque 1 ennemi. Les dégâts infligés augmentent à chaque fois que cette compétence est utilisée. S'accumule jusqu'à 4 fois.`,
+          damage: "ATQ*(2.9+0.4*# of Skills Used)",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Deadly Edge",
-          description: `Attacks 1 enemy. This attack is always critical. Places a 30% [Increase C. RATE] buff and a 15% [Increase SPD] buff on this Champion for 3 turns.`,
-          damage: "7*ATK",
+          name: "Fil Mortel",
+          description: `Attaque un ennemi. Cette attaque passe toujours en critique. Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.SPD} de 15 % sur ce Champion pendant 3 tours.`,
+          damage: "7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unbending",
-          description: `Revives this Champion with 30% HP. Places an [Unkillable] buff on this Champion for 1 turn.`,
+          name: "Inflexible",
+          description: `Ranime ce Champion avec 30 % de PV. Place, pendant 1 tour, un buff ${BUFFS.UNKILLABLE} sur ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 20%`,
 };

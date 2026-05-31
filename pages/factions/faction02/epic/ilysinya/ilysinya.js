@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lancer",
-          description: `Attacks 1 enemy. Has a 30% chance of stealing 1 random buff from the target.`,
+          name: "Lancière",
+          description: `Attaque un ennemi. Possède 30 % de chances de voler un buff aléatoire à la cible.`,
           damage: "0.25*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Excoriating Light",
-          description: `Attacks all enemies. <br><br>Before attacking, has a 50% chance of removing any [Block Debuffs] buffs from all enemies. <br><br>Also has a 50% chance of placing a [Block Buffs] debuff on all enemies for 2 turns after attacking.`,
+          name: "Lumière d'excoriation",
+          description: `Attaque tous les ennemis.
+
+Avant d'attaquer, possède 50 % de chances de retirer les buffs ${BUFFS.BLOCK_DEBUFFS} de tous les ennemis. 
+
+Possède également 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours après avoir attaqué.`,
           damage: "0.24*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shield of Aravia",
-          description: `Places a [Shield] buff on all allies for 2 turns equal to 20% of this Champion’s MAX HP. <br><br>Also places a 15% [Strengthen] buff on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Bouclier d'Aravia",
+          description: `Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de cette Championne pendant 2 tours. 
+
+Place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Inviolable Nobility [P]",
-          description: `Heals this Champion by 30% of their MAX HP whenever a [Shield] buff placed by the Shield of Aravia skill on this Champion expires, is removed, or is broken by an enemy attack.<br><br>Heal Multiplier: 0.3*HP`,
+          name: "Noblesse inviolable [P]",
+          description: `Soigne cette Championne à hauteur de 30 % de ses PV MAX dès qu'un buff ${BUFFS.SHIELD} qui lui a été accordé par la compétence Bouclier d'Aravia expire, est retiré ou est brisé par une attaque ennemie.`,
           isPassive: true
         }
       ],

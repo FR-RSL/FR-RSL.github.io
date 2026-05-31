@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thirsty Axe",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Hache Assoiffée",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gold-Mad Frenzy",
-          description: `Sacrifices HP equal to 15% of this Champion's MAX HP, then fills this Champion's Turn Meter by 75% and places a [Shield] buff on this Champion equal to 20% of their MAX HP for 3 turns. The [Shield] buff cannot be removed.<br><br>The HP sacrifice will happen even if it kills this Champion, and will ignore [Shield] and [Block Damage] buffs.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Frénésie Fou d'Or",
+          description: `Sacrifie des PV équivalents à 15 % des PV MAX de ce Champion, puis remplit le Compteur de Tour de ce Champion de 75% et lui accorde un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 3 tours. Il est impossible de retirer le buff ${BUFFS.SHIELD}.
+
+Le sacrifice de PV surviendra même si cela tue ce Champion, et il ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gleam of Avarice",
-          description: `Places a 50% [Increase ATK] buff on this Champion for 2 turns, then attacks 1 enemy. Has a 75% chance of placing a 25% [Weaken] debuff on the target for 2 turns.<br><br>Also has a 75% chance of placing a 60% [Decrease DEF] debuff on the target for 2 turns before attacking.`,
-          damage: "6*ATK",
+          name: "Lueur d'Avarice",
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours, puis attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 2 tours.
+
+Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours, avant d'attaquer.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dire Grudge [P]",
-          description: `Decreases the cooldown of this Champion's Gleam of Avarice skill by 1 turn every time this Champion loses 15% HP. <br><br>The HP loss is accumulated and tracked over multiple turns, attacks, or hits, and is not affected by healing or other HP increases.`,
+          name: "Terrible Rancune [P]",
+          description: `Réduit d'1 tour le temps de recharge de la compétence Lueur d'Avarice de ce Champion chaque fois que ce Champion perd 15 % de PV. 
+
+La perte de PV est accumulée et suivie au cours de plusieurs tours, attaques ou frappes et n'est pas affectée par les soins ou d'autres augmentations des PV.`,
           isPassive: true
         }
       ],
@@ -47,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Doom Tower by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Tour du Malheur de 35%`,
 };

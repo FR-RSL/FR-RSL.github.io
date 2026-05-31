@@ -4,10 +4,9 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Punis l'Orgueil",
-			description: `
-				Attaque 1 ennemi.<br><br>
-				Place une frappe supplémentaire si la cible Possède n'importe quel buff.
-			`,
+			description: `Attaque 1 ennemi.
+
+Place une frappe supplémentaire si la cible possède n'importe quel buff.`,
 			damage: "3*ATQ",
 			levelInfo: [
 				"Dégâts +5%",
@@ -18,11 +17,10 @@ const championData = {
         },
         {
 			img: "assets/sort2.webp",
-			name: "Allegresse du Boucher",
-			description: `
-				Attaque tous les ennemis.<br><br>
-				Accorde un Tour supplémentaire et reinitialise le temps de recharge de la compétence <span class='gt'>En Chasse</span> si cette attaque tue un ennemi.
-			`,
+			name: "Allégresse du Boucher",
+			description: `Attaque tous les ennemis.
+
+Accorde un Tour Supplémentaire et réinitialise le temps de recharge de la Compétence En Chasse si cette attaque tue un ennemi.`,
 			damage: "3.7*ATQ",
 			cooldown: 4,
 			levelInfo: [
@@ -36,26 +34,21 @@ const championData = {
         {
 			img: "assets/sort3.webp",
 			name: "En Chasse",
-			description: `
-				Place un buff <span class='gbt'>Voile Parfait</span>, un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%,
-				un buff <span class='gbt'>Augmentation de VIT</span> de 30% et un buff <span class='gbt'>Augmentation des DEG C.</span> de 30%
-				sur ce Champion pendant 2 tours.
-			`,
+			description: `Place un buff ${BUFFS.PERFECT_VEIL}, un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.`,
 			cooldown: 5,
         },
         {
         	img: "assets/passif1.webp",
         	name: "Depuis les Ombres [P]",
-        	description: `
-				<span class='gbt'>Effet Passif</span><br><br>
-				Les degats augmentent de 40% lorsque ce Champion attaque alors qu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>.<br>
-				Recoit 40% de degats en moins lorsqu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>. Augmente également le Compteur de Tour
-				de ce Champion de 15% chaque fois qu'il recoit des degats alors qu'il dispose d'un buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile Parfait</span>.<br>
-				Ne fonctionne pas si ce Champion est le seul allié vivant de l'equipe.<br><br>
-				<span class='gbt'>Effet Actif</span><br><br>
-				Place un buff <span class='gbt'>Voile Parfait</span> d'1 tour sur ce Champion chaque fois que le Compteur de Tour d'un ennemi est rempli.
-				Il est impossible de retirer ce buff.
-        	`,
+        	description: `${PASSIVE}
+
+Les dégâts augmentent de 40 % lorsque ce Champion attaque alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
+Reçoit 40 % de dégâts en moins lorsqu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Augmente également le Compteur de Tour de ce Champion de 15 % chaque fois qu'il reçoit des dégâts alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
+Ne fonctionne pas si ce Champion est le seul allié vivant de l'équipe.
+
+${ACTIVE}
+
+Place un buff ${BUFFS.PERFECT_VEIL} d'1 tour sur ce Champion chaque fois que le Compteur de Tour d'un ennemi est rempli. Il est impossible de retirer ce buff.`,
           	isPassive: true,
         },
       ],

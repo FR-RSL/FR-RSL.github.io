@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Public Execution",
-          description: `Attacks 1 enemy 2 times. Each hit has a 10% chance of placing a [Fear] debuff for 1 turn.`,
-          damage: "1.57*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Exécution Publique",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 10 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour.`,
+          damage: "1.57*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Headman's Due",
-          description: `Attacks all enemies. Has a 30% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Dû du Bourreau",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Judged Guilty [P]",
-          description: `Inflicts 15% more damage to targets under [Heal Reduction] debuffs.`,
+          name: "Jugé Coupable [P]",
+          description: `Inflige 15 % de dégâts supplémentaires sur les cibles affligées de débuffs ${DEBUFFS.HEALS}.`,
           isPassive: true
         }
       ],

@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pounce",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "1.5*ATK+0.12*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Bondir",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          damage: "1.5*ATQ+0.12*HP",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Strangle",
-          description: `Attacks 1 enemy. Places a [Sleep] debuff for 2 turns if the target has no active buffs.`,
-          damage: "2.5*ATK+0.2*HP",
+          name: "Étranglement",
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.SLEEP} pendant 2 tours si la cible ne possède pas de buff actif.`,
+          damage: "2.5*ATQ+0.2*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Herbal Balm [P]",
-          description: `Places a 15% [Continuous Heal] buff on this Champion for 2 turns if incoming damage exceeds 20% HP in one attack.`,
+          name: "Baume d'Herbe [P]",
+          description: `Place sur ce Champion un buff de ${BUFFS.HEALS} de 15 %, pendant 2 tours, si les dégâts reçus dépassent 20 % des PV en une seule attaque.`,
           cooldown: 2,
           isPassive: true
         }
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 22%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 22%`,
 };

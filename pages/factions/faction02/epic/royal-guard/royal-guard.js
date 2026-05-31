@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Razor Blade",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Lame Rasoir",
+          description: `Attaque un ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Takedown",
-          description: `Attacks all enemies. Damage increases according to enemy MAX HP.`,
-          damage: "2*ATK+0.1*Target Max HP",
+          name: "Mise au tapis",
+          description: `Attaque tous les ennemis. Les dégâts augmentent en fonction des PV MAX de l'ennemi.`,
+          damage: "2*ATQ+0.1*Target Max HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hamstring",
-          description: `Attacks 4 times at random. Each hit has a 60% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Each hit also has a 60% chance of decreasing the target's Turn Meter by 25%.`,
-          damage: "1.5*ATK",
+          name: "Ankyloser",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 60 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours. Chaque frappe possède également 60 % de chances de réduire le Compteur de Tours de la cible de 25 %.`,
+          damage: "1.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 35%`,
 };

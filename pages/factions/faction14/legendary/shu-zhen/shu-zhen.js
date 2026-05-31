@@ -4,12 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lance de providence",
-          description: `
-            Attaque un ennemi. Possède 30% de chance de placer un débuff
-            <span class='gbt'>Blocage des compétences Actives</span> pendant 2 tours.<br><br>
-            Possède également 80% de chances de voler 20% du Compteur de Tour de la cible
-            si cette derniere se trouve deja sous un débuff <span class='gbt'>Blocage des compétences Actives</span>.
-          `,
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. 
+
+Possède également 80 % de chances de voler 20 % du Compteur de tour de la cible si cette dernière se trouve déjà sous un débuff ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "3.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -21,16 +18,12 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Petales de purge",
-          description: `
-            Cible un allié.
-            Si l'allié cible ne se trouve pas sous débuff <span class='gbt'>Mouton</span>
-            lui accorde un buff <span class='gbt'>Augmentation d'ATQ</span> de 50%,
-            un buff <span class='gbt'>Augmentation du TAUX C.</span> de 30% et un buff
-            <span class='gbt'>Augmentation des DEG C.</span> de 30% pendant 2 tours.<br><br>
-            Active ensuite un effet <span class='gbt'>Tour instantane</span> sur l'allié cible.<br><br>
-            Si l'allié cible se trouve sous débuff <span class='gbt'>Mouton</span>, retire ce dernier.
-          `,
+          name: "Pétales de purge",
+          description: `Cible un allié. Si l'allié ciblé ne se trouve pas sous débuff ${DEBUFFS.SHEEP}, lui accorde un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % pendant 2 tours.
+
+Active ensuite un effet ${INSTANT} sur l'allié ciblé. 
+
+Si l'allié ciblé se trouve sous débuff ${DEBUFFS.SHEEP}, retire ce dernier.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",
@@ -40,13 +33,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Charge de la Brave",
-          description: `
-            Remplit le Compteur de Tour de tous les alliés de 20% et leur accorde un buff
-            <span class='gbt'>Augmentation de VIT</span> de 30% pendant 2 tours.<br><br>
-            Possède également 100% de chances de reduire le Compteur de Tour de tous
-            les ennemis de 20% et de leur placer un débuff
-            <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours.
-          `,
+          description: `Remplit le Compteur de tour de tous les alliés de 20 % et leur accorde un buff ${BUFFS.SPD} de 30 % pendant 2 tours. 
+
+Possède également 100 % de chances de réduire le Compteur de tour de tous les ennemis de 20 % et de leur placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -56,9 +45,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Vue souveraine [P]",
-          description: `
-            Augmente la PRE de cette Championne a hauteur de la quantite de VIT qu'elle Possède.
-          `,
+          description: `Augmente la PRÉ de cette Championne à hauteur de la quantité de VIT qu'elle possède.`,
           isPassive: true,
         },
       ],

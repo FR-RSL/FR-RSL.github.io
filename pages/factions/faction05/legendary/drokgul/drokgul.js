@@ -3,26 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bonebreak Boulder",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Rocher Brise-os",
+          description: `Attaque un ennemi. Offre 20 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Eldritch Ground",
-          description: `Places a 50% [Increase ATK] buff and a 60% [Increase DEF] buff on all allies for 2 turns. Also places a [Block Damage] buff for 1 turn on allies with less than 30% HP.`,
+          name: "Sol Mystérieux",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour sur les alliés ayant moins de 30 % de PV.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Runestone Blessing",
-          description: `[Active Effect]<br><br>Places a [Shield] buff equal to 15% of this Champion's MAX HP on all allies for 3 turns. <br><br>[Passive Effect]<br><br>Heals each ally by 15% of this Champion's MAX HP whenever a [Shield] buff placed by this Skill expires, is removed, or is broken by an enemy attack. Allies whose [Shield] buffs are broken will also counterattack the enemy that breaks the [Shield]. When a [Shield] is broken, the heal occurs instantly before any remaining damage from the Shield-breaking attack is taken.<br><br><br>Shield Multiplier: 0.15*HP`,
+          name: "Bénédiction Runique",
+          description: `${ACTIVE}
+
+Place un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion sur tous les alliés pendant 3 tours. 
+
+${PASSIVE}
+
+Soigne chaque allié de 15 % des PV MAX de ce Champion dès qu'un buff ${BUFFS.SHIELD} placé par cette Compétence expire, est retiré ou est brisé par une attaque ennemie. Les alliés dont le buff ${BUFFS.SHIELD} est brisé contre-attaqueront également l'ennemi ayant brisé le ${BUFFS.SHIELD}. Lorsqu'un ${BUFFS.SHIELD} est brisé, le soin survient instantanément avant que tout dégât restant de l'attaque du briseur de Bouclier soit reçu.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

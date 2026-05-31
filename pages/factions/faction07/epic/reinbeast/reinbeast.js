@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Caning",
-          description: `Attacks 1 enemy. Places a 15% [Continuous Heal] buff on the ally with the lowest HP for 1 turn.`,
+          name: "Coup de Bâton",
+          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV.`,
           damage: "3.7*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Open Slay",
-          description: `Attacks 1 enemy 2 times. Revives a random ally with full HP if this attack kills the enemy.`,
+          name: "À la remorque",
+          description: `Attaque 2 fois un ennemi. Ranime un allié choisi au hasard avec tous ses PV si cette attaque tue l'ennemi.`,
           damage: "3.1*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "It Glows",
-          description: `When an ally is attacked, places a [Shield] buff equal to 35% of this Champion's MAX HP on that ally for 2 turns. Occurs once per turn. Will not place a [Shield] buff on this Champion.<br><br><br>Shield Multiplier: 0.35*HP`,
+          name: "Lumineux",
+          description: `Lorsqu'un allié se fait attaquer, place sur ce dernier un buff de ${BUFFS.SHIELD} équivalent à 35 % des PV MAX de ce Champion pendant 2 tours. Se produit une fois par tour. Place un buff de ${BUFFS.SHIELD} sur ce Champion.`,
           cooldown: 2,
-          levelInfo: ["Level 2: Shield +10%", "Level 3: Shield +10%", "Level 4: Shield +10%"],
+          levelInfo: ["Bouclier +10%", "Bouclier +10%", "Bouclier +10%"],
           isPassive: false
         }
       ],

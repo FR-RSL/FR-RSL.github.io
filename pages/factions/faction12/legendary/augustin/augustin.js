@@ -3,32 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Edenic Blades",
-          description: `Attacks 1 enemy. <br><br>Has a 75% chance of placing a [Block Active Skills] debuff for 2 turns. Steals 5% of the target's Turn Meter for each buff on them.`,
-          damage: "5.4*ATK",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          name: "Lames édéniques",
+          description: `Attaque un ennemi. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Vole 5 % du Compteur de Tour de la cible pour chaque buff dont elle bénéficie.`,
+          damage: "5.4*ATQ",
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shackle The Unjust",
-          description: `Removes all buffs from all enemies. <br><br>Has a 75% chance of placing a 100% [Ensnare] debuff on all enemies for 2 turns. This debuff will ignore any [Block Debuffs] buffs on enemies under 3 or more buffs. <br><br>Also decreases the Turn Meters of all enemies by 25%. If an enemy is under 3 or more buffs, will decrease their Turn Meter by 40% instead.`,
+          name: "Enchaîner les injustes",
+          description: `Retire tous les buffs dont disposent les ennemis. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.TRAP} de 100 % sur tous les ennemis pendant 2 tours. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} sur les ennemis qui bénéficient de 3 buffs ou plus. 
+
+Réduit également les Compteurs de Tour de tous les ennemis de 25 %. Si un ennemi bénéficie de 3 buffs ou plus, réduira au lieu de cela son Compteur de Tour de 40 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ethereal Benediction",
-          description: `Places a 50% [Increase ACC] buff for 2 turns and 1 [Intercept] stack on all allies. Also fills the Turn Meters of all allies by 25%. <br><br>Then grants an Extra Turn.`,
+          name: "Bénédiction éthérée",
+          description: `Place un buff ${BUFFS.PRE} de 50 % pendant 2 tours et une pile d'${BUFFS.INTERCEPT} sur tous les alliés. Remplit également les Compteurs de Tour de tous les alliés de 25 %. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Your Eminence [P]",
-          description: `Allies receive 25% less damage from enemies under [Block Damage], [Unkillable], [Veil], [Perfect Veil], or [Stone Skin] buffs. <br><br>Each time an enemy receives a buff, is healed, or has their Turn Meter filled, has a 50% chance to decrease the duration of all their buffs by 1 turn. Occurs once per skill and once per target. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Votre Éminence [P]",
+          description: `Les alliés reçoivent 25 % de dégâts en moins de la part des ennemis sous buffs ${BUFFS.BLOCK_DAMAGE}, ${BUFFS.UNKILLABLE}, ${BUFFS.VEIL}, ${BUFFS.PERFECT_VEIL} ou ${BUFFS.STONE_SKIN}.
+
+À chaque fois qu'un ennemi reçoit un buff, est soigné ou voit son Compteur de Tour rempli, a 50 % de chances de réduire d'1 tour la durée de tous ses buffs. Se produit une fois par compétence et une fois par cible.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -46,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all battles by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 24%`,
 };

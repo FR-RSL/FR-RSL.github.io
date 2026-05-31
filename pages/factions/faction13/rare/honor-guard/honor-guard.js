@@ -3,28 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bell Ringer",
-          description: `Attacks 1 enemy.<br>Has a 50% chance of placing a 25% [Decrease ACC] debuff for 2 turns if the target has no active buffs.`,
+          name: "Sonneur de Cloches",
+          description: `Attaque un ennemi.
+Possède 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours si la cible ne possède aucun buff actif.`,
           damage: "3.12*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fate Transfer",
-          description: `Attacks 1 enemy.<br><br>Has a 50% chance of stealing 2 random buffs from the target.`,
+          name: "Transfert de Destin",
+          description: `Attaque un ennemi.
+
+Possède 50 % de chances de voler 2 buffs aléatoires à la cible.`,
           damage: "5.25*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Astral Chains",
-          description: `Attacks 1 enemy.<br><br>Has a 75% chance of placing a [Block Buffs] debuff for 2 turns.`,
+          name: "Chaînes Astrales",
+          description: `Attaque un ennemi.
+
+Possède 75 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "5.1*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Force Ally DEF in All Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés Force lors de toutes les Batailles de 25%`,
 };

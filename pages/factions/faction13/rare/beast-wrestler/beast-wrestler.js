@@ -3,25 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Weighty Cleaver",
-          description: `Attacks 1 enemy 2 times.<br>Has a 20% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Tranchoir Écrasant",
+          description: `Attaque 2 fois un ennemi.
+Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Slaughter Prey",
-          description: `Attacks 1 enemy.<br><br>Enemies killed by this skill cannot be revived.`,
-          damage: "5.6*ATK",
+          name: "Proie à Abattre",
+          description: `Attaque un ennemi.
+
+Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
+          damage: "5.6*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "First Blood [P]",
-          description: `Increases damage inflicted by 50% for the first hit on each enemy.`,
+          name: "Premier Sang [P]",
+          description: `Augmente de 50 % les dégâts infligés lors de la première frappe sur chaque ennemi.`,
           isPassive: true
         }
       ],
@@ -39,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Arena by 16%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des batailles d'Arène de 16%`,
 };

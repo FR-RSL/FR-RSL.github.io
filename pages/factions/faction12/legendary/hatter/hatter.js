@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dastardly Distillation",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 25% chance of stealing 1 random buff. Each hit also has a 75% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies under a [Hex] debuff.`,
+          name: "Infâme distillation",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 25 % de chances de voler un buff aléatoire. Chaque frappe a également 75 % de chances d'appliquer un effet de [Propagation de Débuffs], prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.HEX}.`,
           damage: "0.1*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mixture Most Foul",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a [Hex] debuff and a 25% [Weaken] debuff on all enemies for 2 turns.<br><br>The ally with the highest C. DMG will team up and join the attack. The ally joining the attack will use their default skill. The damage dealt by the ally joining the attack will increase by 10% per each debuff on the target.`,
+          name: "Mélange vraiment infect",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.
+
+L'allié qui a les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. Les dégâts infligés par l'allié qui rejoint l'attaque augmenteront de 10 % pour chaque débuff sur la cible.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "A Whiff of Madness",
-          description: `Increases the duration of all buffs on all allies by 1 turn, and decreases the duration of all debuffs on all allies by 1 turn. <br><br>Also fills the Turn Meters of all allies by 20%.`,
+          name: "Une effluve de folie",
+          description: `Augmente d'1 tour la durée de tous les buffs sur tous les alliés et réduit d'1 tour la durée de tous les débuffs sur tous les alliés. 
+
+Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Time For Tea! [P]",
-          description: `Every 10 turns taken by allies, heals all allies by 20% of their MAX HP. Every 6 turns taken by enemies, places a [True Fear] debuff on all enemies for 1 turn.<br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Heal Multiplier: 0.2*Target Max HP`,
+          description: `Every 10 turns taken by allies, heals all allies by 20% of their MAX HP. Every 6 turns taken by enemies, places a ${DEBUFFS.TRUE_FEAR} debuff on all enemies for 1 turn.<br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Heal Multiplier: 0.2*Target Max HP`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

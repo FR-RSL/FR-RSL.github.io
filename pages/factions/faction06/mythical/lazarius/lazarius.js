@@ -4,40 +4,50 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Phantom Cobra",
-          description: `Attacks 1 enemy. Places a [Shield] buff on the ally with the lowest HP for 2 turns. The value of the [Shield] is proportional to this Champion's ATK.<br><br><br>Shield Multiplier: 4*ATK`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +10%"],
+          name: "Cobra fantôme",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.SHIELD} sur l'allié ayant le moins de PV pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de ce Champion.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Nest of Vipers",
-          description: `Attacks all enemies. Before attacking, places a [Block Debuffs] buff on all allies for 2 turns. Also decreases the duration of all buffs on all enemies by 2 turns. <br><br>After attacking, places a [Block Buffs] debuff on all enemies for 2 turns.`,
-          damage: "3.8*ATK",
+          name: "Nid de vipères",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. Réduit également de 2 tours la durée de tous les buffs sur tous les ennemis. 
+
+Après l'attaque, place un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "The Rift's Gaze",
-          description: `Fills the Turn Meters of all allies by 20%. Also decreases the Turn Meters of all enemies by 20%. <br><br>Then, places a 50% [Increase ATK] buff and a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Le regard de la faille",
+          description: `Remplit le Compteur de Tour de tous les alliés de 20 %. Réduit également le Compteur de Tour de tous les ennemis de 20 %. 
+
+Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Reality Shift [P]",
-          description: `[Passive Effect]<br><br>At the start of this Champion's turn, places a [Perfect Veil] buff and a 50% [Increase ACC] buff on them for 2 turns. Also, this Champion receives 3% less damage for every 750 ATK they have (stacks up to 30%). <br><br>[Active Effect]<br><br>At the end of this Champion's turn, revive a random ally with 50% HP and 50% Turn Meter. Also places a [Perfect Veil] buff on the revived ally for 2 turns.`,
+          name: "Réalité modifiée [P]",
+          description: `${PASSIVE}
+
+Au début du tour de ce Champion, lui accorde un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.PRE} de 50 % pendant 2 tours. Ce Champion reçoit également 3 % de dégâts en moins par tranche de 750 ATQ qu'il possède (s'accumule jusqu'à 30 %). 
+
+${ACTIVE}
+
+À la fin du tour de ce Champion, ranime un allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour. Place également un buff ${BUFFS.PERFECT_VEIL} sur l'allié ranimé pendant 2 tours.`,
           cooldown: 3,
           isPassive: true
         }
@@ -54,7 +64,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/speed.webp",
-    description: `Increases Ally SPD in All Battles by 25%`,
+    description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 25%`,
   },
   },
   form2: {
@@ -62,41 +72,59 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Lambent Trident",
-          description: `Attacks 1 enemy 2 times. <br><br>The first hit increases this Champion’s ATK by 3% (stacks up to 30%). The second hit decreases 3% of the target’s ATK or DEF or destroys 3% of the target’s MAX HP, depending on their Type (stacks up to 30%). <br><br>[This effect does not work against Support Type Champions]`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +10%"],
+          name: "Trident lumineux",
+          description: `Attaque 2 fois un ennemi. 
+
+La première frappe augmente l'ATQ de ce Champion de 3 % (s'accumule jusqu'à 30 %). La seconde frappe réduit 3 % de l'ATQ ou la DÉF de la cible ou détruit 3 % des PV MAX de la cible, en fonction de son Type (s'accumule jusqu'à 30 %). 
+
+[Cet effet ne fonctionne pas contre les Champions de Type Soutien]`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Destruction Surge",
-          description: `Attacks all enemies. Will ignore [Shield] and [Increase DEF] buffs.<br><br>Before attacking, removes all debuffs from this Champion. Increases this attack’s damage by 15% for each debuff removed. <br><br>If no debuffs were removed from this Champion, increases this attack’s damage by 15% for each alive ally instead.`,
-          damage: "3.4*ATK+(3.4*ATK*0.15*Living Allies)Multiplier: 3.4*ATK+(3.4*ATK*0.15*Removed Debuffs)",
+          name: "Flot de destruction",
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.DEF}.
+
+Avant d'attaquer, retire tous les débuffs sur ce Champion. Augmente les dégâts de cette attaque de 15 % pour chaque débuff retiré. 
+
+Si aucun débuff n'a été retiré sur ce Champion, augmente les dégâts de cette attaque de 15 % pour chaque allié en vie.`,
+          damage: "3.4*ATQ+(3.4*ATQ*0.15*Living Allies)Multiplier: 3.4*ATQ+(3.4*ATQ*0.15*Removed Debuffs)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Flame Vulcan",
-          description: `Attacks 1 enemy 2 times. Will ignore any [Ally Protection], [Strengthen], and [Shield] buffs, as well as 30% of the target’s DEF.<br><br>Before attacking, steals 50% of the target’s Turn Meter. This effect cannot be resisted.`,
-          damage: "2.5*ATK",
+          name: "Vulcan de flammes",
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}, ainsi que 30 % de la DÉF de la cible.
+
+Avant d'attaquer, vole 50 % du Compteur de Tour de la cible. Il est impossible de résister à cet effet.`,
+          damage: "2.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Overwhelming Power [P]",
-          description: `[Passive Effect]<br><br>At the start of this Champion's turn, places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on them for 2 turns. <br><br>[Active Effect]<br><br>Increases the cooldown of all enemy skills by 2 turns whenever this Champion kills an enemy. <br><br>If this Champion kills two or more enemies in a single attack, this effect will only activate once. This effect cannot be resisted.`,
+          name: "Pouvoir écrasant [P]",
+          description: `${PASSIVE}
+
+Au début du tour de ce Champion, lui accorde un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % pendant 2 tours. 
+
+${ACTIVE}
+
+Dès que ce Champion tue un ennemi, augmente de 2 tours le temps de recharge de toutes les compétences ennemies. 
+
+Si ce Champion tue deux ennemis ou plus en une seule attaque, cet effet ne s'activera qu'une fois. Il est impossible de résister à cet effet.`,
           cooldown: 3,
           isPassive: true
         }
@@ -113,7 +141,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/speed.webp",
-    description: `Increases Ally SPD in All Battles by 25%`,
+    description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 25%`,
   },
   },
 };

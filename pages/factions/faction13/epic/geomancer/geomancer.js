@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tremor Staff",
-          description: `Attacks all enemies. Has a 30% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "2.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Bâton Secousse",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "2.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Creeping Petrify",
-          description: `Removes all buffs from a target enemy, then attacks them.<br><br>Steals all buffs instead if the target is under a [HP Burn] debuff placed by this Champion.<br><br>Reduces the cooldown of Quicksand Grasp by 2 turns if the target is killed by this Skill while under a [HP Burn] debuff placed by this Champion.`,
-          damage: "6*ATK",
+          name: "Pétrification Rampante",
+          description: `Retire tous les buffs d'un ennemi ciblé avant de l'attaquer.
+
+Sinon, vole tous les buffs si la cible se trouve sous un débuff ${DEBUFFS.BURN} placé par ce Champion.
+
+Réduit le temps de recharge de Prise Bourbier de 2 tours si la cible est tuée par cette Compétence alors qu'elle se trouve sous un débuff ${DEBUFFS.BURN} placé par ce Champion.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Quicksand Grasp",
-          description: `Fully depletes the target’s Turn Meter. Fills this Champion’s Turn Meter by the amount the target loses.<br><br>Has a 75% chance of placing a [HP Burn] and a 25% [Weaken] debuff on the target for 3 turns.`,
+          name: "Prise Bourbier",
+          description: `Vide totalement le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion de la quantité perdue par la cible.
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} et un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 3 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Stoneguard [P]",
-          description: `Decreases the damage all allies receive by 15% and deflects that damage onto each enemy under a [HP Burn] debuff placed by this Champion. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Whenever this Champion is attacked, deflects 30% of the damage instead. When deflecting damage, on each enemy hit, has a 30% chance of dealing additional damage equal to 3% of the target's MAX HP.`,
+          name: "Garde de pierre [P]",
+          description: `Réduit de 15 % les dégâts reçus par les alliés et dévie ces dégâts sur chaque ennemi affligé d'un débuff ${DEBUFFS.BURN} placé par ce Champion. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.
+
+Lorsque ce Champion est attaqué, dévie au lieu de cela 30 % des dégâts. Lorsque des dégâts sont déviés, lors de chaque frappe ennemie, a 30 % de chances d'infliger des dégâts supplémentaires équivalents à 3 % des PV MAX de la cible.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

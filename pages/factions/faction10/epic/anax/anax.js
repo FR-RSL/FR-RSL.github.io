@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Piercing Shotels",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Shotels Perçants",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Deathly Ichors",
-          description: `Attacks 1 enemy 2 times. Each hit has a 75% chance of placing a 50% [Decrease ACC] debuff and a 5% [Poison] debuff for 3 turns.`,
-          damage: "2.8*ATK",
+          name: "Ichors Mortels",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.POISON} de 5 % pendant 3 tours.`,
+          damage: "2.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Soul Feast",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns. Heals this Champion by 50% of the damage inflicted.<br><br><br>Heal Multiplier: 0.5*Damage Dealt`,
-          damage: "6*ATK",
+          name: "Festin d'Âmes",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Soigne ce Champion à hauteur de 50 % des dégâts infligés.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Revenant [P]",
-          description: `[Passive Effect]<br><br>Places a 60% [Increase DEF] buff on this Champion for 2 turns when their HP drops below 75%.<br><br>Places a 50% [Increase ATK] buff on this Champion for 2 turns when their HP drops below 50%.<br><br>[Active Effect]<br><br>Grants an Extra Turn when this Champion's HP drops below 10%.`,
+          description: `${PASSIVE}
+
+Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 75 %.
+
+Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 50 %.
+
+${ACTIVE}
+
+Accorde un Tour Supplémentaire lorsque les PV de ce Champion tombent sous 10 %.`,
           cooldown: 5,
           isPassive: true
         }

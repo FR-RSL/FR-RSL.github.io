@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Deathknell",
-          description: `Attacks all enemies. Has a 35% chance of decreasing the duration of all enemy buffs by 1 turn.`,
-          damage: "2.6*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Glas",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de réduire d'1 tour la durée de tous les buffs ennemis.`,
+          damage: "2.6*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Canticle of Cold",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Hex] debuff and a 25% [Weaken] debuff for 2 turns. <br><br>If the target is under a [Freeze] debuff, has a 75% chance of placing a [Hex] debuff and a 25% [Weaken] debuff for 3 turns instead.`,
-          damage: "3.2*ATK",
+          name: "Cantique du froid",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Si la cible se trouve sous débuff ${DEBUFFS.GEL}, possède alors 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 3 tours.`,
+          damage: "3.2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Polar Vortex",
-          description: `Places a [Freeze] debuff on all enemies for 1 turn. <br><br>Fully depletes the Turn Meters of all enemies that receive [Freeze] debuffs from this skill. <br><br>Fills the Turn Meters of all allies by 10% for each [Freeze] debuff attempt blocked or resisted by the enemy team.`,
+          name: "Vortex polaire",
+          description: `Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. 
+
+Vide totalement le Compteur de Tour de tous les ennemis qui reçoivent des débuffs ${DEBUFFS.GEL} à cause de cette compétence. 
+
+Remplit le Compteur de Tour de tous les alliés de 10 % pour chaque tentative de débuff ${DEBUFFS.GEL} que l'équipe ennemie a bloquée ou à laquelle elle a résisté.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rime Hammer [P]",
-          description: `Allies will ignore 10% of the target's DEF if the target is under [Freeze] debuffs. <br><br>If the [Freeze] debuff was placed by this Champion, allies will ignore 20% of the target’s DEF instead.`,
+          name: "Marteau de givre [P]",
+          description: `Les alliés ignoreront 10 % de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.GEL}. 
+
+Si le débuff ${DEBUFFS.GEL} a été placé par ce Champion, les alliés ignoreront alors 20 % de la DÉF de la cible.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 30%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 30%`,
 };

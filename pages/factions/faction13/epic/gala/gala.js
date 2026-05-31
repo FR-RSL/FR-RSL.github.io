@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brutal Bludgeon",
-          description: `Attacks 1 enemy 2 times. Each hit will ignore 30% of the target's DEF. Places a [Shield] buff on this Champion for 2 turns. The value of the [Shield] is equal to 20% of the damage inflicted.<br><br><br>Shield Multiplier: 0.2*Damage Dealt`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Matraquage Brutal",
+          description: `Attaque 2 fois un ennemi. Chaque frappe ignorera 30 % de la DÉF de la cible. Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20 % des dégâts infligés.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fearless Aggression",
-          description: `Attacks 1 enemy. Will ignore 50% of target's DEF when attacking under a [Shield] buff. Heals this Champion by 50% of the damage inflicted. Places a [Shield] buff on this Champion equal to any surplus heal for 3 turns.<br><br><br>Heal Multiplier: 0.5*Damage DealtShield Multiplier: Remaining Heal Amount`,
-          damage: "4.7*ATK",
+          name: "Agression Intrépide",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible lors d'une attaque sous un buff ${BUFFS.SHIELD}. Soigne ce Champion à hauteur de 50 % des dégâts infligés. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à tout surplus de soins pendant 3 tours.`,
+          damage: "4.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sheer Swagger",
-          description: `Attacks 1 enemy 3 times. Each hit will ignore 25% of the target's DEF. Grants an Extra Turn if this Champion has full HP after using this Skill.`,
-          damage: "1.6*ATK",
+          name: "Pure Fanfaronnade",
+          description: `Attaque 3 fois un ennemi. Chaque frappe ignorera 25 % de la DÉF de la cible. Accorde un Tour supplémentaire si ce Champion possède tous ses PV après avoir utilisé cette Compétence.`,
+          damage: "1.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 25%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 25%`,
 };

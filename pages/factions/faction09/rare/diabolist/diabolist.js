@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Torment",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Tourment",
+          description: `Attaque 1 ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Electric Storm",
-          description: `Attacks all enemies. Places a 30% [Increase SPD] buff on all allies for 2 turns.`,
-          damage: "3.6*ATK",
+          name: "Tempête Électrique",
+          description: `Attaque tous les ennemis. Place un buff d'${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Positive Charge",
-          description: `Fills the Turn Meter of all allies by 15%. Decreases the Turn Meter of all enemies by 15%.`,
+          name: "Charge Positive",
+          description: `Remplit de 15 % le Compteur de Tours de tous les alliés. Réduit de 15 % le Compteur de Tours de tous les ennemis.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,27 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rapid Sickle",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 25% chance to steal 5% of the target's Turn Meter.`,
+          name: "Faucille rapide",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 25 % de chances de voler 5 % du Compteur de Tour de la cible.`,
           damage: "1.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Whistling Blades",
-          description: `Attacks all enemies. Before attacking, places a 25% [Increase ACC] buff on all allies for 2 turns. <br><br>Also has a 50% chance of decreasing the Turn Meters of all enemies by 15%.`,
+          name: "Lames sifflantes",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur tous les alliés pendant 2 tours. 
+
+Possède également 50 % de chances de réduire les Compteurs de Tour de tous les ennemis de 15 %.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tripwire",
-          description: `Removes one random buff from each enemy. <br><br>Then has a 50% chance of placing a 15% [Decrease SPD] debuff on all enemies for 2 turns.`,
+          name: "Fil de détente",
+          description: `Retire un buff aléatoire à chaque ennemi. 
+
+Possède ensuite 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % sur tous les ennemis pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Cooldown -1", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

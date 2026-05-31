@@ -3,26 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Stave Smash",
-          description: `Attacks 1 enemy. <br><br>Has a 50% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Frappe de canne",
+          description: `Attaque un ennemi. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "0.25*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Skinsealer",
-          description: `Places a 25% [Increase RES] buff on all allies for 2 turns. <br><br>Also places a [Shield] buff on all allies equal to 20% of their MAX HP for 2 turns.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Scelle-peau",
+          description: `Place un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.SHIELD} sur tous les alliés, équivalent à 20 % de leurs PV MAX, pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hidestitcher",
-          description: `Heals all allies by 15% of this Champion’s MAX HP. <br><br>Also fills the Turn Meters of all allies by 15%.<br><br><br>Heal Multiplier: 0.15*HP`,
+          name: "Suture-peau",
+          description: `Soigne tous les alliés à hauteur de 15 % des PV MAX de ce Champion. 
+
+Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Cooldown -1", "Level 4: Heal +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Temps de recharge -1", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

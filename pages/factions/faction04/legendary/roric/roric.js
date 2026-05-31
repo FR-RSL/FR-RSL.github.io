@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wyrmslayer Hammer",
-          description: `Attacks 1 enemy 2 times. Each hit has a 40% chance of placing a [Stun] debuff for 1 turn. Each hit will fill this Champion’s Turn Meter by 15% if the target is not under a [Stun] debuff after the hit.`,
-          damage: "1.75*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          name: "Marteau Tue-Dragon",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Chaque frappe remplira le Compteur de Tour de ce Champion de 15 % si la cible ne se trouve pas sous débuff ${DEBUFFS.STUN} après la frappe.`,
+          damage: "1.75*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dragon Rage",
-          description: `Attacks 1 enemy. Has an 80% chance of decreasing the target's Turn Meter by 75%. If this skill fully depletes the target's Turn Meter, also has an 80% chance of placing a [Stun] debuff on all other enemies for 1 turn.`,
-          damage: "3.5*ATK",
+          name: "Rage de Dragon",
+          description: `Attaque un ennemi. Possède 80 % de chances de réduire le Compteur de Tour de la cible de 75 %. Si cette compétence vide totalement le Compteur de Tour de la cible, possède également 80 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les autres ennemis pendant 1 tour.`,
+          damage: "3.5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Scale Breaker",
-          description: `Attacks 1 enemy. Will ignore 50% of the target’s DEF. <br><br>[Passive Effect]<br><br>Will always use this Skill instead of the default Skill when counterattacking.<br><br>This Skill will not be blocked by [Block Active Skills] debuffs.`,
-          damage: "4.7*ATK",
+          name: "Briseur d'Écailles",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. 
+
+${PASSIVE}
+
+Utilisera toujours cette Compétence au lieu de la Compétence par défaut lors d'une contre-attaque.
+
+Cette Compétence ne sera pas bloquée par les débuffs ${DEBUFFS.LOCK_ACTIVE}.`,
+          damage: "4.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Titan's End [P]",
-          description: `Immune to [Stun] debuffs. <br><br>Deals 15% more damage to Bosses and receives 15% less damage from them.`,
+          name: "Fin du Titan [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}. 
+
+Inflige 15 % de dégâts en plus sur les Boss et reçoit 15 % de dégâts en moins de leur part.`,
           isPassive: true
         }
       ],
@@ -48,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

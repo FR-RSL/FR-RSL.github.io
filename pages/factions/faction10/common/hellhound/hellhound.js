@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Paralyzing Bite",
-          description: `Attacks 1 enemy. Places a [Sleep] debuff on the target for 1 turn when hit with a critical hit.`,
-          damage: "2.9*ATK+2.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Morsure Paralysante",
+          description: `Attaque 1 ennemi. Place 1 tour de débuff de ${DEBUFFS.SLEEP} sur la cible lorsque le coup passe en critique.`,
+          damage: "2.9*ATQ+2.1*DEF",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],

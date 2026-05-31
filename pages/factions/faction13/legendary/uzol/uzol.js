@@ -3,12 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Maitre-hache impitoyable",
-          description: `
-            Attaque un ennemi.<br><br>
-			A 20% de chances d'accorder un Tour supplémentaire.
-			Si cette attaque tue un ennemi, accorde un Tour supplémentaire.
-          `,
+          name: "Maître-hache impitoyable",
+          description: `Attaque un ennemi. 
+
+A 20 % de chances d'accorder un Tour supplémentaire. Si cette attaque tue un ennemi, accorde un Tour supplémentaire.`,
           damage: "3.7*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -20,16 +18,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coeur de pierre",
-          description: `
-            Attaque tous les ennemis.
-			Avant d'attaquer, reduit de 100% la valeur des buffs
-			<span class='gbt'>Bouclier</span> sur tous les ennemis et
-			leur inflige un débuff <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.
-			Il est impossible de resister a ces effets si la cible de la compétence est utilisee
-			lors d'un Tour supplémentaire.<br><br>
-			A 20% de chances d'accorder un Tour supplémentaire. Ces chances augmentent de 10% pour
-			chaque coup critique.
-          `,
+          description: `Attaque tous les ennemis. Avant d'attaquer, réduit de 100 % la valeur des buffs ${BUFFS.SHIELD} sur tous les ennemis et leur inflige un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ces effets si la compétence est utilisée lors d'un Tour supplémentaire. 
+
+A 20 % de chances d'accorder un Tour supplémentaire. Ces chances augmentent de 10 % pour chaque coup critique.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -42,15 +33,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Fureur royale",
-          description: `
-            Attaque ennemi.
-            Ignorera les buffs <span class='gbt'>Bouclier</span>,
-			<span class='gbt'>Blocage des Degats</span> et
-			<span class='gbt'>Invincible</span>.<br><br>
-			Ignorera également les buffs <span class='gbt'>Peau de Pierre</span>
-			et 100% de la DEF de la cible si cette compétence est utilisee
-			lors d'un Tour supplémentaire ou d'un Tour instantane.
-          `,
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. 
+
+Ignore également les buffs ${BUFFS.STONE_SKIN} et 100 % de la DÉF de la cible si cette compétence est utilisée lors d'un Tour supplémentaire ou d'un Tour instantané.`,
           damage: "5.5*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -62,9 +47,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Roi de jade [P]",
-          description: `
-            Si un allie a des chances de gagner un Tour supplementaire, augmente ces chances de 5%. Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
-          `,
+          description: `Si un allié a des chances de gagner un Tour supplémentaire, augmente ces chances de 5 %. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort. 
+
+Ce Champion inflige 25 % de dégâts en plus lors des Tours supplémentaires.`,
           isPassive: true,
         },
       ],

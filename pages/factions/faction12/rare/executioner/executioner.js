@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shield Bash",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Coup de Bouclier",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "5*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tumult",
-          description: `Attacks all enemies. Decreases the Turn Meter by 20%. Has a 50% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2*ATK+2.4*DEF",
+          name: "Tumulte",
+          description: `Attaque tous les ennemis. Réduit de 20 % le Compteur de Tours. Offre 50 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "2*ATQ+2.4*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Schiltron",
-          description: `Places a 60% [Increase DEF] buff and a [Counterattack] buff on this Champion for 3 turns.`,
+          description: `Place un buff d'${BUFFS.DEF} de 60 % et un buff de ${BUFFS.COUNTER} sur ce Champion pendant 3 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 17%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 17%`,
 };

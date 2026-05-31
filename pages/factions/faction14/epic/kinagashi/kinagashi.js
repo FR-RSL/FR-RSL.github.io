@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Leaping Sword Art",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of decreasing the target’s Turn Meter by 10%.`,
-          damage: "1.95*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Épée bondissante",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
+          damage: "1.95*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "United Front",
-          description: `Teams up with a random ally to attack a single enemy. Also fills the Turn Meters of all allies by 15%.`,
+          name: "Front uni",
+          description: `Fait équipe avec un allié pris au hasard pour attaquer un seul ennemi. Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Recall From Death",
-          description: `Revives an ally with 50% HP and 50% Turn Meter. Also places a 60% [Increase DEF] buff on the ally for 2 turns.`,
+          name: "Rappel de la Mort",
+          description: `Ranime un allié avec 50 % de PV et 50 % de Compteur de Tour. Place également un buff ${BUFFS.DEF} de 60 % sur cet allié pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rending Claws",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "6.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Griffes Déchirantes",
+          description: `Attaque un ennemi. Offre 35 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "6.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pack Leader",
-          description: `Places a 50% [Ally Protection] and a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Chef de Meute",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % et un buff de ${BUFFS.DEF} de 60 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Sheltering Scales [P]",
-          description: `Places a 15% [Continuous Heal] buff on an ally for 1 turn whenever an ally loses 20% of their MAX HP in one hit.`,
+          name: "Écailles Protectrices [P]",
+          description: `Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 15 % sur un allié dès qu'un allié perd 20 % de ses PV MAX suite à une frappe.`,
           isPassive: true
         }
       ],
@@ -38,5 +38,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

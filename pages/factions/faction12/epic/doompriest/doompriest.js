@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fate Weave",
-          description: `Attacks 1 enemy. If the hit is critical, places a 15% [Increase C. RATE] buff on a random ally for 2 turns.`,
-          damage: "4.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Tisse Destin",
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur un allié pris au hasard.`,
+          damage: "4.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mass Possession",
-          description: `Places a 50% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Possession de Masse",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Bolster [P]",
-          description: `Heals all allies by 7.5% of their HP and removes 1 random debuff from them at the start of this Champion's turn.<br><br>Heal Multiplier: 0.075*Target Max HP`,
+          name: "Soutenir [P]",
+          description: `Soigne tous les alliés de 7,5 % de leurs PV et retire un de leurs débuffs choisi au hasard au début du tour de ce Champion.`,
           isPassive: true
         }
       ],
@@ -38,5 +38,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Force Ally SPD in All Battles by 15%`,
+  description: `Augmente la statistique VIT des Alliés Force lors de toutes les Batailles de 15%`,
 };

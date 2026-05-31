@@ -4,12 +4,11 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flammes de malice",
-          description: `
-            Attaque tous les ennemis.<br><br>
-			Possède 30% de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis.<br><br>
-			Si ce Champion est sous buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>,
-			les chances passent a 50%.
-          `,
+          description: `Attaque tous les ennemis. 
+
+Possède 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis. 
+
+Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 50 %.`,
           damage: "3.6*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -20,21 +19,12 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Stratageme de trompeur",
-          description: `
-            Selectionne une cible.<br><br>
-			Si la cible est un ennemi, Possède 75% de chances de placer un débuff
-			<span class='gbt'>Blocage des compétences Actives</span> et un débuff <span class='gbt'>Blocage des Buffs</span> pendant 2 tours.
-			Si le Champion utilise cette compétence alors qu'il beneficie d'un buff
-			<span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>, applique également un effet
-			de <span class='gbt'>Propagation de débuffs</span>, qui prend 2 débuffs aleatoires a la cible
-			pour les placer sur tous les ennemis.<br><br>
-			Si la cible est un allié ou Champion, le soigne de 50% de ses PV MAX de ce Champion
-			et lui accord un buff <span class='gbt'>Voile parfait</span> pendant 2 tours.
-			Si ce Champion se trouve sous buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>,
-			applique également un effet de <span class='gbt'>Propagation de Buffs</span>, qui prend un buff aleatoire
-			a la cible et le place sur tous les alliés.
-          `,
+          name: "Stratagème de trompeur",
+          description: `Sélectionne une cible.
+
+Si la cible est un ennemi, possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Si le Champion utilise cette compétence alors qu'il bénéficie d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de [Propagation de Débuffs], qui prend 2 débuffs aléatoires à la cible pour les placer sur tous les ennemis. 
+
+Si la cible est un allié ou ce Champion, le soigne de 50 % des PV MAX de ce Champion et lui accorde un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours. Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de [Propagation de Buffs], qui prend un buff aléatoire à la cible et le place sur tous les alliés.`,
           cooldown: 4,
           levelInfo: [
             "Chances de Buff/débuff +10%",
@@ -44,15 +34,12 @@ const championData = {
         },
         {
           img: "assets/sort3.webp",
-          name: "Eclair de bandit",
-          description: `
-            Possède 75% de chances de voler tous les buffs d'une cible ennemi
-			et 100% de son Compteur de Tour. Il est impossible de resister a ces effets
-			si ce champion se trouve sous buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>.<br><br>
-			Si le Compteur de Tour de la cible n'a pas ete vole, remplit au lieu de ca les Compteurs
-			de Tour de tous les alliés de 15%.<br><br>
-			Place également un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% sur tous les alliés pendant 2 tours.
-          `,
+          name: "Éclair de bandit",
+          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie et 100 % de son Compteur de Tour. Il est impossible de résister à ces effets si ce champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+
+Si le Compteur de Tour de la cible n'a pas été volé, remplit au lieu de ça les Compteurs de Tour de tous les alliés de 15 %. 
+
+Place également un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: [
             "Chances de Buff/débuff +10%",
@@ -63,22 +50,17 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Pas brumeux [P]",
-          description: `
-            <span class='gbt'>Effet Passif</span><br><br>
-			Au debut de chaque round, place un buff <span class='gbt'>Voile parfait</span>
-			sur ce Champion pendant 2 tours.<br><br>
-			Place également un buff <span class='gbt'>Voile parfait</span> sur ce Champion
-			pendant 1 tour lorsque ses PV tombent sous 50%.<br><br>
-			Possède 15% de chances d'<span class='gt'>Esquiver</span> une compétence
-			ennemi et tous les effets qui l'accompagnent.
-			Si ce champion est sous buff <span class='gbt'>Voile</span> ou <span class='gbt'>Voile parfait</span>,
-			les chances d'<span class='gt'>Esquiver</span> passent a 30%.<br><br>
-			<span class='gbt'>Effet Actif</span><br><br>
-			Si les PV de ce Champion se trouvent sous 50% lorsqu'il se fait cibler par
-			une compétence ennemie, Possède 100% de chances d'<span class='gt'>Esquiver</span>
-			cette compétence et tous les effets qui l'accompagnent, Cette <span class='gt'>Esquive</span>
-			garantie passe ensuite en temps de recharge.
-          `,
+          description: `${PASSIVE}
+
+Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. 
+
+Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour lorsque ses PV tombent sous 50 %. 
+
+Possède 15 % de chances d'Esquiver une compétence ennemie et tous les effets qui l'accompagnent. Si ce champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances d'Esquiver passent à 30 %. 
+
+${ACTIVE}
+
+Si les PV de ce Champion se trouvent sous 50 % lorsqu'il se fait cibler par une compétence ennemie, possède 100 % de chances d'Esquiver cette compétence et tous les effets qui l'accompagnent. Cette Esquive garantie passe ensuite en temps de recharge.`,
 		  cooldown: 4,
           isPassive: true,
         },

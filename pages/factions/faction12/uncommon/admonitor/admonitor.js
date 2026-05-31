@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shield Wall",
-          description: `Attacks 1 enemy. Places a [Shield] buff on this Champion for 1 turn equal to the 10% of the damage inflicted.<br><br><br>Shield Multiplier: Damage Dealt*0.1`,
-          damage: "5.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Damage +10%"],
+          name: "Mur de Boucliers",
+          description: `Attaque un ennemi. Place 1 tour de buff de ${BUFFS.SHIELD} sur ce Champion, égal à 10 % des dégâts infligés.`,
+          damage: "5.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cover",
-          description: `Places a 50% [Ally Protection] buff on a target ally for 2 turns.`,
+          name: "Couvrir",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur une cible alliée.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

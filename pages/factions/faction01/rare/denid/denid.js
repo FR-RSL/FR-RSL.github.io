@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skull Mangler",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Broyeur de crânes",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Boomstick",
-          description: `Attacks all enemies. Places a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Bâton de feu",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Pig-Headed [P]",
-          description: `Places a [Shield] buff on this Champion for 2 turns, equal to 10% of this Champion’s MAX HP, when hit by an enemy under a [Provoke] debuff.<br><br>Shield Multiplier: 0.1*HP`,
+          name: "Têtu comme une mule [P]",
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 10 % de ses PV MAX, lorsqu'il est frappé par un ennemi sous débuff ${DEBUFFS.PROVOKE}.`,
           isPassive: true
         }
       ],

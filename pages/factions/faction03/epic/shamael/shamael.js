@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wreak Revenge",
-          description: `Attacks 1 enemy. Has a 50% chance of decreasing the duration of a random buff on the target by 1 turn.<br><br>Every time an enemy places a debuff on an ally, uses this skill against that enemy. These counterattacks will only deal 50% of the normal damage and cannot be critical.<br><br>If there are multiple Champions in the team with this Skill, only one Champion's counterattack will activate.`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Damage +15%"],
+          name: "Vengeance Dévastatrice",
+          description: `Attaque un ennemi. Possède 50 % de chances de réduire d'1 tour la durée d'un buff aléatoire de la cible.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cow the Horrors",
-          description: `Attacks 1 enemy 3 times. Will ignore 25% of the target's DEF. Will ignore a further 25% of the target's DEF for each buff on this Champion. Places a [True Fear] debuff on all enemies for 1 turn if this attack kills an enemy.`,
-          damage: "2*ATK",
+          name: "Intimide les Horreurs",
+          description: `Attaque 3 fois un ennemi. Ignorera 25 % de la DÉF de la cible. Ignorera 25 % supplémentaires de la DÉF de la cible pour chaque buff dont bénéficie ce Champion. Place un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur tous les ennemis si cette attaque tue un ennemi.`,
+          damage: "2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +15%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dauntless [P]",
-          description: `Each critical hit fills this Champion's Turn Meter by 7.5%. Whenever an ally receives a [Fear] or a [True Fear] debuff from an enemy, this skill will instantly remove the debuff and fill the team Leader's Turn Meter by 15%.`,
+          name: "Tête Brûlée [P]",
+          description: `Chaque coup critique remplit le Compteur de Tour de ce Champion de 7,5 %. Dès qu'un allié reçoit un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR} de la part d'un ennemi, cette compétence retirera instantanément le débuff et remplira le Compteur de Tour du chef d'équipe de 15 %.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Doom Tower by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de la Tour du Malheur de 60`,
 };

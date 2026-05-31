@@ -4,27 +4,27 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Humble",
-          description: `Attacks 1 enemy 2 times. Each hit has a 40% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Damage inflicted is proportional to DEF.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1.7*DEF",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +15%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Singing Steel",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If the target is under a [Decrease ATK] debuff, it will place a [Sleep] debuff for 1 turn. Damage inflicted is proportional to DEF.`,
+          name: "Acier Chantant",
+          description: `Attaque tous les ennemis. Offre 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours. Si la cible est affligée d'un débuff de Réduction d'ATQ], placera un débuff de ${DEBUFFS.SLEEP} d'1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Preemptive Strike",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter by 50%. If the attack fully depletes the Turn Meter, it will place a [Stun] debuff for 2 turns. Damage inflicted is proportional to DEF.`,
+          name: "Frappe Préventive",
+          description: `Attaque un ennemi. Réduit de 50 % le Compteur de Tours de la cible. Si l'attaque vide totalement le Compteur de Tours, elle placera un débuff d'${DEBUFFS.STUN} de 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "5.3*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in all Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%`,
 };

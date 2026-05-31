@@ -3,25 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Whirling Hammers",
-          description: `Attacks 1 enemy. <br>Increases this Champion's DEF by 4% each time this Skill is used. Stacks up to 20%.`,
+          name: "Marteaux Tournoyants",
+          description: `Attaque un ennemi. 
+Augmente de 4 % la DÉF de ce Champion à chaque fois que cette Compétence est utilisée. S'additionne jusqu'à 20 %.`,
           damage: "2.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Chest Thump",
-          description: `Has a 75% chance of placing a [Provoke] debuff on all enemies for 1 turn.<br>Places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Frappe-Poitrine",
+          description: `Possède 75 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis.
+Place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Iron Hide [P]",
-          description: `Has a 25% chance of decreasing damage inflicted on this Champion by 50% each time this Champion is attacked.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Peau de Fer [P]",
+          description: `Possède 25 % de chances de réduire de 50 % les dégâts infligés à ce Champion à chaque fois que ce Champion se fait attaquer.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],
@@ -39,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Arena by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des batailles d'Arène de 30%`,
 };

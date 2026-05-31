@@ -3,12 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Epee des clairieres",
-          description: `
-            Attaque un ennemi. 
-            Transfere tous les débuffs de ce Champion sur la cible.
-			Soigne ce Champion de 5% de ses PV MAX pour chaque débuff transfere
-          `,
+          name: "Épée des clairières",
+          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible. Soigne ce Champion de 5 % de ses PV MAX pour chaque débuff transféré.`,
           damage: "2.5*DEF",
           levelInfo: [
             "Dégâts +5%",
@@ -19,13 +15,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "La rouille te consume",
-          description: `
-        	Attaque tous les ennemis.
-			Possède 80% de chances de placer un débuff
-			<span class='gbt'>Reduction d'ATQ</span> de 50% pendant 2 tours.<br><br>
-			Vole également tous les débuffs <span class='gbt'>Soins continus</span> de chaque ennemi.
-			Il est impossible de resister a cet effet.
-          `,
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+Vole également tous les buffs ${BUFFS.HEALS} de chaque ennemi. Il est impossible de résister à cet effet.`,
 		  damage: "3.3*DEF",
           cooldown: 4,
           levelInfo: [
@@ -38,12 +30,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Appel de la nature",
-          description: `
-            Place un buff <span class='gbt'>Raillerie</span>,
-			un buff <span class='gbt'>Augmentation de DEF</span> de 60%
-			et un buff <span class='gbt'>Renforcer</span> de 25%
-			sur ce Champion pendant 2 tours.
-          `,
+          description: `Place un buff ${BUFFS.TAUNT}, un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -52,12 +39,8 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Preux de vignes [P]",
-          description: `
-            Des qu'un allié perd 10% ou plus de ses PV MAX suite a une seule frappe,
-			place sur cet allié un buff <span class='gbt'>Bouclier</span>
-			equivalent a 10% de ses PV MAX pendant 2 tours.
-          `,
+          name: "Preux des vignes [P]",
+          description: `Dès qu'un allié perd 10 % ou plus de ses PV MAX suite à une seule frappe, place sur cet allié un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX pendant 2 tours.`,
           cooldown: 1,
           levelInfo: [
             "Temps de recharge -1",

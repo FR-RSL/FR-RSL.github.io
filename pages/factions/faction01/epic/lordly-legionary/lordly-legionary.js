@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Press the Fight",
-          description: `Attacks 1 enemy 2 times. Places an extra hit if the target is under a 50% [Heal Reduction] debuff. Places 2 extra hits if the target is under a 100% [Heal Reduction] debuff.`,
-          damage: "0.75*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Durcir le Combat",
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si la cible est affligée d'un débuff ${DEBUFFS.HEALS} de 50 %. Place deux frappes supplémentaires si la cible est affligée d'un débuff ${DEBUFFS.HEALS} de 100 %.`,
+          damage: "0.75*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Outflank",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Decreases the target's Turn Meter by 20% if the [Decrease SPD] debuff is placed.`,
-          damage: "5.8*ATK",
+          name: "Déborder",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Réduit de 20 % le Compteur de Tour de la cible si le débuff ${DEBUFFS.SPD} est placé.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Legion's Orders",
-          description: `Places a 30% [Reflect Damage] buff and a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Ordres de la Légion",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.REFLECT_DAM} de 30 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 1: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

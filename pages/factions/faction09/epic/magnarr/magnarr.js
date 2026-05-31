@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Superheated Hammer",
-          description: `Attacks 1 enemy. Has a 45% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Has a 100% chance instead if the target is under a [HP Burn] debuff.`,
+          name: "Marteau Surchauffé",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN}.`,
           damage: "0.23*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Percussive Pound",
-          description: `Attacks all enemies. Places an extra hit on enemies without [HP Burn] debuffs. Has a 50% chance of placing a [Stun] debuff for 1 turn on enemies under [HP Burn] debuffs.`,
+          name: "Frappe Percutante",
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis sans débuff ${DEBUFFS.BURN}. Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis affligés de débuffs ${DEBUFFS.BURN}.`,
           damage: "0.22*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fan the Flames",
-          description: `Attacks 1 enemy. Applies a [Debuff Spread] effect, taking 2 random debuffs from the target and placing them on all enemies under [HP Burn] debuffs. Also increases duration of [HP Burn] debuffs on all enemies by 1 turn.<br><br>Will not spread [Fear], [True Fear], [Freeze], [Provoke], [Sleep], or [Stun] debuffs.`,
+          name: "Attiser les Flammes",
+          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuffs] qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis sous débuff ${DEBUFFS.BURN}. Augmente également d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur tous les ennemis.
+
+[Ne propagera pas les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP} ou ${DEBUFFS.STUN}.]`,
           damage: "0.37*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fleshmelter [P]",
-          description: `This Champion heals by 1% of their MAX HP every time anyone in the battle takes damage from a [HP Burn] debuff.<br><br>Heal Multiplier: 0.01*HP`,
+          name: "Fond les Chairs [P]",
+          description: `Ce Champion soigne à hauteur d'1 % de ses PV MAX chaque fois qu'un Champion participant à la bataille subit des dégâts dus à un débuff ${DEBUFFS.BURN}.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Doom Tower by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors de la Tour du Malheur de 30%`,
 };

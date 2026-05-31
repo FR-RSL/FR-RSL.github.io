@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Venom Arrow",
-          description: `Attacks 1 enemy. Places a 5% [Poison] debuff for 2 turns if the attack is critical. Has a 25% chance of granting an Extra Turn.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Flèche Venimeuse",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours si cette attaque passe en critique. Possède 25 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Impressive Shot",
-          description: `Attacks 1 enemy. Fills the Turn Meter of all allies by 20%. Has an extra 25% chance of inflicting a critical hit.`,
-          damage: "5.7*ATK",
+          name: "Tir Impressionnant",
+          description: `Attaque un ennemi. Remplit de 20 % le Compteur de Tours de tous les alliés. Possède 25 % de chances supplémentaires de porter un coup critique.`,
+          damage: "5.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Thorns",
-          description: `Attacks 4 times at random. Each hit has a 35% chance to ignore DEF.`,
-          damage: "1.3*ATK",
+          name: "Épines",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 35 % de chances d'ignorer la DÉF.`,
+          damage: "1.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 20%`,
 };

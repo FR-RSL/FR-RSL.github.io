@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ax Pirouette",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit will ignore 10% of the target’s DEF. Each critical hit has a 75% chance of stealing 1 random buff from the target.`,
-          damage: "1.25*ATK",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          name: "Pirouette de hache",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe ignorera 10 % de la DÉF de la cible. Chaque frappe critique a 75 % de chances de voler un buff aléatoire à la cible.`,
+          damage: "1.25*ATQ",
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shatter Limbs",
-          description: `Attacks 1 enemy 2 times. <br><br>The damage inflicted by this skill increases by 10% for each debuff on the target (stacks up to 100%). <br><br>Each hit has a 75% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.4*ATK",
+          name: "Fracasse-membres",
+          description: `Attaque 2 fois un ennemi. 
+
+Les dégâts infligés par cette compétence augmentent de 10 % pour chaque débuff sur la cible (s'accumule jusqu'à 100 %). 
+
+Chaque frappe a 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "For Hrothglime!",
-          description: `Attacks all enemies. Before attacking, places a 50% [Increase ATK] buff on all allies for 2 turns. <br><br>Has a 40% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "3.7*ATK",
+          name: "Pour Hrothglime !",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. 
+
+A 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "3.7*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fight Dirty [P]",
-          description: `Allies deal 15% more damage to targets under a [Heal Reduction] or a [Stun] debuff placed by this Champion. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Combat déloyal [P]",
+          description: `Les alliés infligent 15 % de dégâts en plus aux cibles affligées d'un débuff ${DEBUFFS.HEALS} ou ${DEBUFFS.STUN} placé par cette Championne. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true
         }
       ],
@@ -48,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 20%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 20%`,
 };

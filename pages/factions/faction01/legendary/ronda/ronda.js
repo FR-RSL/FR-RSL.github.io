@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Flaming Flurry",
-          description: `Attacks 1 enemy 3 times. Places an extra hit if the target has less than 50% HP after the third hit.`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Déluge de flammes",
+          description: `Attaque 3 fois un ennemi. Place une frappe supplémentaire si la cible possède moins de 50 % de PV après la troisième frappe.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Phase Rushdown",
-          description: `Attacks 1 enemy 3 times. Will ignore [Shield] buffs and 30% of the target's DEF. <br><br>Places a [Block Passive Skills] debuff for 2 turns before attacking. This debuff cannot be resisted. <br><br>Also places a [Block Active Skills] debuff for 2 turns after attacking. This debuff cannot be resisted.`,
-          damage: "1.9*ATK",
+          name: "Phase d'attaque",
+          description: `Attaque 3 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD} et 30 % de la DÉF de la cible. 
+
+Place un débuff ${DEBUFFS.LOCK_PASSIF} pendant 2 tours avant d'attaquer. Il est impossible de résister à ce débuff.
+
+Place également un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours après l'attaque. Il est impossible de résister à ce débuff.`,
+          damage: "1.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fury Tremor",
-          description: `Attacks all enemies 2 times. Damage increases by 30% if this Champion has more than 50% HP. <br><br>[Passive Effect] Immune to Turn Meter reduction effects from enemies when this skill is not on cooldown. <br><br>Decreases all Turn Meter reduction effects from enemies used against this Champion by 50% when this skill is on cooldown.`,
-          damage: "1.9*ATK",
+          name: "Frisson de furie",
+          description: `Attaque 2 fois tous les ennemis. Les dégâts augmentent de 30 % si cette Championne a plus de 50 % de PV.
+
+${PASSIVE}
+
+Immunisée contre les effets de réduction du Compteur de Tour utilisés par les ennemis quand cette compétence n'est pas en temps de recharge. 
+
+Réduit de 50 % tous les effets de réduction du Compteur de Tour que les ennemis utilisent contre cette Championne lorsque cette compétence est en temps de recharge.`,
+          damage: "1.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "In Your Corner",
-          description: `Has a 15% chance to join an attack whenever an ally attacks an enemy. This Champion will attack with their default skill. <br><br>At the start of each Round, places a [Shield] buff on this Champion for 2 turns equal to 40% of their MAX HP.<br><br>Shield Multiplier: 0.4*HP`,
+          name: "De ton côté",
+          description: `Possède 15 % de chances de rejoindre une attaque dès qu'un allié attaque un ennemi. Cette Championne attaquera avec sa compétence par défaut.
+
+Au début de chaque round, place sur cette Championne un buff ${BUFFS.SHIELD} équivalent à 40 % de ses PV MAX pendant 2 tours.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

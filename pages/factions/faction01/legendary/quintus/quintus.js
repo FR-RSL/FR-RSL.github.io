@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Encore Performance",
-          description: `Attacks 1 enemy. Places an extra hit if the target has no buffs. If this attack is critical, repeats the attack once.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Rappel",
+          description: `Attaque un ennemi. Place une frappe supplémentaire si la cible ne possède pas de buff. Si cette attaque passe en critique, répète une fois l'attaque.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Strip Away",
-          description: `Attacks 1 enemy. Removes all buffs, then places a 60% [Decrease DEF] debuff on the target for 2 turns before attacking. These effects cannot be resisted or blocked.<br><br>Damage inflicted by this skill cannot be decreased by enemy Passive skills or Masteries, except by the Passive skills of Bosses. Damage inflicted by this skill cannot be increased by either this Champion's Masteries or ally Passive skills, except when attacking Bosses.<br><br>Resets the cooldown of the [Crowd Favorite] skill if this attack kills an enemy.`,
-          damage: "5.5*ATK",
+          name: "Enlever",
+          description: `Attaque un ennemi. Retire tous les buffs, puis place un débuff ${DEBUFFS.DEF} de 60 % sur la cible pendant 2 tours avant d'attaquer. Il est impossible de résister à ces effets ou de les bloquer. 
+
+Les dégâts infligés par cette compétence ne peuvent pas être réduits par les Compétences Passives ni les Maîtrises des ennemis, sauf les Compétences Passives des Boss. Les dégâts infligés par cette compétence ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ni les compétences Passives des alliés, sauf lors d'attaques sur les Boss.
+
+Réinitialise le compteur de tour de la compétence [Favori du public] si cette attaque tue un ennemi.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Crowd Favorite",
-          description: `Attacks all enemies. Places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 3 turns before attacking. <br><br>Resets the cooldown of the [Strip Away] skill if this attack kills an enemy.`,
-          damage: "3.8*ATK",
+          name: "Favori du public",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 3 tours. 
+
+Réinitialise le compteur de tour de la compétence [Enlever] si cette attaque tue un ennemi.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Percussion [P]",
-          description: `Each of this Champion’s skills deals additional pure damage. The amount of pure damage dealt is equal to 10% of the target’s MAX HP for each buff on them. The additional pure damage dealt will ignore [Shield] buffs.`,
+          description: `Chacune des compétences de ce Champion inflige des dégâts bruts supplémentaires. La quantité de dégâts bruts infligés est équivalente à 10 % des PV MAX de la cible pour chaque buff qu'elle possède. Les dégâts bruts supplémentaires infligés ignoreront les buffs ${BUFFS.SHIELD}.`,
           damage: "(0.1*Target Buffs)*Target HP",
           isPassive: true
         }
@@ -49,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 35%`,
 };

@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Soulsuck Tendrils",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Leech] debuff for 2 turns.<br><br>Has a 50% chance of placing a [Leech] debuff for 2 turns on 2 random enemies if this Champion has full HP.`,
-          damage: "4.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Vrilles Aspire-âme",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours sur 2 ennemis pris au hasard si ce Champion possède tous ses PV.`,
+          damage: "4.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fateful Trickster",
-          description: `Attacks 1 enemy. Has a 60% chance of stealing all buffs from the target.<br><br>Also has a 60% chance of stealing 50% of the target's max Turn Meter.`,
-          damage: "5.8*ATK",
+          name: "Farceur Fatidique",
+          description: `Attaque un ennemi. Possède 60 % de chances de voler tous les buffs de la cible.
+
+Possède également 60 % de chances de voler 50 % du Compteur de Tour max. de la cible.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Wild Surge",
-          description: `Attacks all enemies 2 times. Each hit has a 75% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. The first hit on each target also has a 75% chance of decreasing the target's Turn Meter by 10%.<br><br>The second hit on each target also has a 75% chance of placing a 25% [Weaken] debuff for 2 turns if this Champion has full HP.`,
-          damage: "2.3*ATK",
+          name: "Déferlement Sauvage",
+          description: `Attaque 2 fois tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. La première frappe sur chaque cible possède également 75 % de chances de réduire le Compteur de Tour de la cible de 10 %.
+
+La seconde frappe sur chaque cible possède également 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours si ce Champion possède tous ses PV.`,
+          damage: "2.3*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Enchanter [P]",
-          description: `Whenever 4 or more buffs are placed on the enemy team in a single turn, places a [Shield] buff on this Champion equal to 30% of this Champion's MAX HP for 2 turns.<br><br>Shield Multiplier: 0.3*HP`,
+          name: "Enchanteur [P]",
+          description: `Dès que 4 buffs ou plus sont placés sur l'équipe ennemie lors d'un même tour, place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 30 % de ses PV MAX pendant 2 tours.`,
           cooldown: 3,
           isPassive: true
         }

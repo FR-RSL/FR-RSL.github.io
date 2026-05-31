@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pestilent Censer",
-          description: `Attacks 3 times at random. Each hit has a 40% chance of placing a [Bomb] debuff for 2 turns. <br><br>[Bomb] debuffs placed by this skill on enemies whose MAX HP is equal to or higher than 200,000 will deal double damage.<br><br><br>Bomb Multiplier: 3*ATK`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Encensoir pestilentiel",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.BOMB} pendant 2 tours. 
+
+Les débuffs ${DEBUFFS.BOMB} placés par cette compétence sur des ennemis dont les PV MAX sont supérieurs ou égaux à 200 000 infligeront le double de dégâts.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Verminlord's Command",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. <br><br>Also has a 75% chance of decreasing the detonation countdown of all [Bomb] debuffs by 1 turn, and increasing the duration of all [Poison] debuffs by 1 turn.`,
-          damage: "4.6*ATK",
+          name: "Ordre du Roi-souris",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+Possède également 75 % de chances de réduire d'1 tour le compte à rebours de détonation de tous les débuffs ${DEBUFFS.BOMB} et d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON}.`,
+          damage: "4.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unclean Banquet",
-          description: `Attacks all enemies. Has a 75% chance of placing 2 [Bomb] debuffs on each target for 2 turns, then grants an Extra Turn.<br><br>[Bomb] debuffs placed by this skill on enemies whose MAX HP is equal to or higher than 200,000 will deal double damage.<br><br><br>Bomb Multiplier: 5*ATK`,
-          damage: "4.5*ATK",
+          name: "Banquet impur",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer 2 débuffs ${DEBUFFS.BOMB} sur chaque cible pendant 2 tours, puis accorde un Tour supplémentaire.
+
+Les débuffs ${DEBUFFS.BOMB} placés par cette compétence sur des ennemis dont les PV MAX sont supérieurs ou égaux à 200 000 infligeront le double de dégâts.`,
+          damage: "4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rat Plague [P]",
-          description: `Every time a [Bomb] debuff placed by this Champion detonates or is removed, places two 5% [Poison] debuffs for 2 turns. These debuffs are protected.`,
+          name: "Peste de rat [P]",
+          description: `Chaque fois qu'un débuff ${DEBUFFS.BOMB} placé par ce Champion détonne ou est retiré, place deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours. Ces débuffs sont protégés.`,
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

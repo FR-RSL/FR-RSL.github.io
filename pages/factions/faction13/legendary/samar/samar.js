@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crystal Flesh",
-          description: `Attacks 1 enemy. Heals by 15% of the damage inflicted if this Champion has 50% HP or less. Fills this Champion’s Turn Meter by 15% if he has more than 50% HP.<br><br><br>Heal Multiplier: 0.15*Damage Dealt`,
+          name: "Chair Cristalline",
+          description: `Attaque un ennemi. Soigne de 15 % des dégâts infligés si ce Champion possède 50 % de PV ou moins. Remplit le Compteur de Tour de ce Champion de 15 % s'il possède plus de 50 % de PV.`,
           damage: "0.25*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Emerald Curse",
-          description: `Attacks 1 enemy.<br>Inflicts bonus damage equal to the difference in HP percentage levels between this Champion and the target (+1% damage for every 1% difference).<br>Inflicts bonus damage equal to the difference in number of buffs on this Champion and the target (+10% damage per buff).`,
+          name: "Malédiction d'Émeraude",
+          description: `Attaque un ennemi.
+Inflige des dégâts bonus équivalents à la différence entre le niveau de pourcentage de PV de ce Champion et celui de la cible (+1 % de dégâts par 1 % de différence).
+Inflige des dégâts bonus égaux à la différence entre le nombre de buffs de ce Champion et celui de la cible (+10 % de dégâts par buff).`,
           damage: "0.35*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Boon Subversion",
-          description: `Attacks all enemies. Has an 80% chance of stealing 2 random buffs before attacking. Places an extra hit on enemies that have any buffs left.`,
+          name: "Joyeuse Subversion",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de voler 2 buffs aléatoires avant d'attaquer. Place une frappe supplémentaire sur les ennemis à qui il reste des buffs.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Diamond Skin [P]",
-          description: `[Passive Effect]<br><br>Places a [Block Damage] buff on this Champion for 1 turn at the start of each Round. <br><br>[Active Effect]<br><br>Blocks incoming damage and places a [Block Damage] buff on this Champion for 1 turn when they receive a hit that would drop their HP below 30%.`,
+          name: "Peau Diamant [P]",
+          description: `${PASSIVE}
+
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 round au début de chaque Manche. 
+
+${ACTIVE}
+
+Bloque les dégâts en approche et place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour lorsqu'il subit une frappe qui ferait tomber ses PV sous 30 %.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 30%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%`,
 };

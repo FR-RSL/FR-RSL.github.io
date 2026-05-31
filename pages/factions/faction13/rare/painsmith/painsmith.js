@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pickaxe Crunch",
-          description: `Attacks 1 enemy.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Craquement de Pic",
+          description: `Attaque un ennemi.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Utter Destruction",
-          description: `Attacks 1 enemy. Enemies killed by this skill cannot be revived.<br><br>Places a [Block Debuffs] buff on this Champion for 2 turns if this attack kills an enemy.`,
-          damage: "5.9*ATK",
+          name: "Destruction Absolue",
+          description: `Attaque un ennemi. Les ennemis tués par cette compétence ne peuvent pas être ranimés.
+
+Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion si cette attaque tue un ennemi.`,
+          damage: "5.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Helpless Victim",
-          description: `Attacks 1 enemy. Damage increases by 15% if the target has no active buffs.`,
-          damage: "6*ATK",
+          name: "Victime Impuissante",
+          description: `Attaque un ennemi. Dégâts augmentés de 15 % si la cible ne possède aucun buff actif.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 21%`,
 };

@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hand of Doom",
-          description: `Attacks all enemies. Has a 30% chance of stealing 1 random buff from each enemy.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Main Mortelle",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de voler 1 buff aléatoire sur chaque ennemi.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Command",
-          description: `Places a 50% [Increase ATK] buff and a 30% [Increase C. RATE] buff on all allies for 2 turns.`,
+          name: "Adjonction",
+          description: `Place un buff d'${BUFFS.ATK} de 50 % et un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rebirth",
-          description: `Removes all debuffs from all allies, then heals them and fills their Turn Meters. The amount by which each ally is healed increases according to the number of debuffs removed from them. The amount by which each ally's Turn Meter is filled increases according to the number of debuffs removed from them.<br><br><br>Heal Multiplier: 0.25*Target Max HP+0.05*Target Max HP*unappliedStatusEffectsCount`,
+          name: "Renaissance",
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne et remplit leurs Compteurs de Tour. La quantité de soin reçue par chaque allié augmente en fonction du nombre de débuffs qui lui ont été retirés. La quantité de remplissage du Compteur de Tour de chaque allié augmente en fonction du nombre de débuffs qui lui ont été retirés.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 33%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 33%`,
 };

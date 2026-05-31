@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Defiled Earth",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff on the enemy for 2 turns.`,
-          damage: "4.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Terre profanée",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur l'ennemi pendant 2 tours.`,
+          damage: "4.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Locus of Diabolism",
-          description: `Attacks all enemies. Has a 75% chance of placing a 30% [Decrease C. RATE] debuff and a 25% [Decrease C. DMG] debuff on all enemies for 2 turns.`,
-          damage: "4.6*ATK",
+          name: "Lieu diabolique",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % et un débuff ${DEBUFFS.CDAM} de 25 % sur tous les ennemis pendant 2 tours.`,
+          damage: "4.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Brimstone Boon",
-          description: `Removes 1 random debuff from all allies. <br><br>Then places a 30% [Increase C.RATE] buff and a 30% [Increase С. DMG] buff on all allies for 2 turns.`,
+          name: "Bénédiction de soufre",
+          description: `Retire 1 débuff aléatoire sur tous les alliés. 
+
+Place ensuite un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Blood for Blood [P]",
-          description: `Heals an ally by 10% of their MAX HP when they are hit with a critical hit.<br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Sang pour sang [P]",
+          description: `Soigne un allié de 10 % de ses PV MAX lorsqu'il se fait frapper par un coup critique.`,
           isPassive: true
         }
       ],

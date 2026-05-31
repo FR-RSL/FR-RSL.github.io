@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skyfall Arrow",
-          description: `Attacks all enemies. This attack will not trigger counterattacks. <br><br>Fills this Champion's Turn Meter by 5% for each living enemy after the attack.`,
-          damage: "2.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Flèche tombée du ciel",
+          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques. 
+
+Remplit le Compteur de Tour de ce Champion de 5 % pour chaque ennemi en vie après l'attaque.`,
+          damage: "2.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Falcon Shot",
-          description: `Attacks all enemies 2 times. The first hit has a 75% chance of placing a [Block Buffs] debuff for 2 turns. The second hit has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. <br><br>Fills this Champion's Turn Meter by 5% for each living enemy after the attack.`,
-          damage: "1.5*ATK+0.035*Target Max HP",
+          name: "Tir de faucon",
+          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+Remplit le Compteur de Tour de ce Champion de 5 % pour chaque ennemi en vie après l'attaque.`,
+          damage: "1.5*ATQ+0.035*Target Max HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Forever Marked",
-          description: `Places a 50% [Increase ATK] buff, a 50% [Increase ACC] buff and a 30% [Increase SPD] buff on this Champion for 3 turns. Then grants an Extra Turn.`,
+          name: "Marqué à jamais",
+          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 3 tours. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "No Foe Too Great [P]",
-          description: `Increases this Champion’s MAX HP by 20% for each enemy killed or Hydra Head decapitated by this Champion (stacks up to 50,000).`,
+          name: "Aucun ennemi trop grand [P]",
+          description: `Augmente les PV MAX de ce Champion de 20 % pour chaque ennemi tué ou Tête d'Hydre décapitée par ce Champion (s'accumule jusqu'à 50 000).`,
           isPassive: true
         }
       ],

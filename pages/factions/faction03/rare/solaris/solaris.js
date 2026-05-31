@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cleansing Light",
-          description: `Attacks 1 enemy. Has a 30% chance of removing one random buff from the target.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Lumière Purificatrice",
+          description: `Attaque un ennemi. Possède 30 % de chances de retirer un buff aléatoire à la cible.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Solar Shield",
-          description: `Attacks 1 enemy. Places a [Shield] buff on this Champion equal to 20% of the damage inflicted for 2 turns.<br><br><br>Shield Multiplier: 0.2*Damage Dealt`,
-          damage: "5.7*ATK",
+          name: "Bouclier Solaire",
+          description: `Attaque un ennemi. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % des dégâts infligés pendant 2 tours.`,
+          damage: "5.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blinding Bash",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "6.4*ATK",
+          name: "Coup Aveuglant",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "6.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

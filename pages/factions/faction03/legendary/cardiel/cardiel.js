@@ -3,33 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cow the Wicked",
-          description: `Attacks 1 enemy. Heals all allies by 7.5% of their MAX HP.<br><br>Also places a [True Fear] debuff for 1 turn if the target is a Champion from the Demonspawn, Undead Hordes, or Knights Revenant Factions.<br><br><br>Heal Multiplier: 0.075*Target Max HP`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Heal +5%", "Level 4: Damage +5%", "Level 5: Heal +5%", "Level 6: Damage +10%", "Level 7: Heal +10%"],
+          name: "Intimide le Malfaisant",
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 7,5 % de leurs PV max.
+
+Place également un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour si la cible est un Champion des Factions Rejetons Démoniaques, Morts-vivants ou Revenants Chevaliers.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Soins +5%", "Dégâts +5%", "Soins +5%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Angelsong",
-          description: `Removes all debuffs from all allies, then places a [Block Debuffs] buff and a [Revive On Death] buff on all allies for 2 turns. The [Revive On Death] buffs cannot be removed.`,
+          name: "Chant Angélique",
+          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés pendant 2 tours. Les buffs ${BUFFS.REVIVE_ON_DEATH} ne peuvent pas être retirés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heavenly Host",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on all allies for 2 turns, then teams up with all allies to attack a target enemy. <br>Decreases the cooldown of this skill by 1 turn if an enemy is killed from this attack.`,
+          name: "Hôte Paradisiaque",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours, puis s'associe avec tous les alliés pour attaquer une cible ennemie. 
+Réduit d'1 tour le temps de recharge de cette compétence si un ennemi est tué lors de cette attaque.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fiend Warden [P]",
-          description: `Allies receive 20% less damage from Champions from the Demonspawn, Undead Hordes, or Knights Revenant Factions. <br><br>Whenever an ally attacks, has a 15% chance to team up with them and join their attack. This Champion will attack with their default skill. Always joins Sicia Flametongue's attacks if they are on the same team. <br><br>Can only join an ally's attack once per turn. Cardiel will not team up on ally attacks when they counterattack or when teaming up to attack with another Champion.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%"],
+          name: "Gardien de Démons [P]",
+          description: `Les alliés subissent 20 % de dégâts en moins de la part des Champions des Factions Rejetons Démoniaques, Morts-vivants ou Revenants Chevaliers. 
+
+Dès qu'un allié attaque, ce Champion possède 15 % de chances de faire équipe avec lui et de rejoindre l'attaque. Ce Champion attaquera avec sa compétence par défaut. Rejoint toujours les attaques de Sicia Languefeu si elle se trouve dans la même équipe. 
+
+Ne peut rejoindre une attaque alliée qu'une fois par tour. Cardiel ne s'associera pas à des attaques alliées lors d'une contre-attaque ou lorsqu'il fait équipe pour attaquer avec un autre Champion.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -47,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bare Fangs",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Damage +10%"],
+          name: "Montrer les Crocs",
+          description: `Attaque 1 ennemi. Offre 60 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +15%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Alpha",
-          description: `Places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

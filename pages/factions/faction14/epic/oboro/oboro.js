@@ -3,34 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spreading Chaos",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br>Will attack all enemies instead if the target is under 4 or more debuffs.`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Propagation de Chaos",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+Sinon, attaquera tous les ennemis si la cible est affligée de 4 débuffs ou plus.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mystic Smoke",
-          description: `Attacks 1 enemy 2 times. The second hit has a 75% chance of transferring all debuffs from this Champion to the target.<br><br>The first hit has a 75% chance of stealing all buffs from the target when attacking under a [Veil] or [Perfect Veil] buff.`,
-          damage: "3.15*ATK",
+          name: "Fumée Mystique",
+          description: `Attaque 2 fois un ennemi. La seconde frappe possède 75 % de chances de transférer tous les débuffs de ce Champion sur la cible.
+
+La première frappe possède 75 % de chances de voler tous les buffs de la cible lors d'une attaque sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          damage: "3.15*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ninja Arts",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns, then attacks 1 enemy. Places a [Perfect Veil] buff on this Champion for 2 turns if this attack is critical.`,
-          damage: "5.6*ATK",
+          name: "Arts Ninja",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours, puis attaque un ennemi. Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours si cette attaque passe en critique.`,
+          damage: "5.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Vanish [P]",
-          description: `Places a [Revive on Death] buff on this Champion for 3 turns whenever they receive a [Veil] or [Perfect Veil] buff.`,
+          name: "Volatilisé [P]",
+          description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} sur ce Champion pendant 3 tours chaque fois qu'il reçoit un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true
         }
       ],
@@ -48,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 33%`,
 };

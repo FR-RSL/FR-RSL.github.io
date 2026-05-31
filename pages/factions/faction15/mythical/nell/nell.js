@@ -4,40 +4,56 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Entrapment",
-          description: `Attacks 1 enemy. <br><br>Steals 10% of the target’s Turn Meter. Steals an additional 5% Turn Meter for each debuff on the enemy. <br><br>Also has a 75% chance of placing a [True Fear] debuff for 1 turn.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Ignore RES +15%"],
+          name: "Capture",
+          description: `Attaque un ennemi. 
+
+Vole 10 % du Compteur de Tour de la cible. Vole 5 % de Compteur de Tour supplémentaires pour chaque débuff sur l'ennemi. 
+
+Possède également 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour.`,
+          damage: "5*ATQ",
+          levelInfo: ["Ignorer la RES +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soporific Musk",
-          description: `Steals all buffs from all enemies. <br><br>Decreases each target's Turn Meter by 10%. Decreases each target's Turn Meter by an additional 5% for each debuff on them. <br><br>Also instantly activates one tick of all [Poison] debuffs on all enemies. <br><br>Then places a [Sleep] debuff for 1 turn on all enemies without [Poison] debuffs.`,
+          name: "Musc soporifique",
+          description: `Vole tous les buffs dont bénéficient tous les ennemis. 
+
+Réduit le Compteur de Tour de chaque cible de 10 %. Réduit le Compteur de Tour de chaque cible de 5 % supplémentaires pour chaque débuff dont elle est affligée. 
+
+Active également instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis. 
+
+Place ensuite un débuff ${DEBUFFS.SLEEP} pendant 1 tour sur tous les ennemis sans débuff ${DEBUFFS.POISON}.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sickle of Corruption",
-          description: `Attacks all enemies. <br><br>Places a 60% [Decrease DEF] debuff and a 25% [Weaken] debuff on all enemies for 2 turns. <br><br>Fills the Turn Meters of all allies by 20%.`,
-          damage: "5.2*ATK",
+          name: "Faucille de corruption",
+          description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. 
+
+Remplit le Compteur de Tour de tous les alliés de 20 %.`,
+          damage: "5.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Blackteeth's Buffet [P]",
-          description: `Whenever an enemy receives a buff, is healed, or has their Turn Meter increased by a skill, places a 5% [Poison] debuff on that enemy for 2 turns. Will ignore [Block Debuffs] buffs. <br><br>Increases this Champion's Turn Meter by 5% for each [Poison] debuff placed by this skill.`,
+          name: "Buffet de Dents-noires [P]",
+          description: `Dès qu'un ennemi reçoit un buff, est soigné ou voit son Compteur de Tour augmenté grâce à une compétence, place un débuff ${DEBUFFS.POISON} de 5 % sur cet ennemi pendant 2 tours. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}. 
+
+Augmente le Compteur de Tour de cette Championne de 5 % pour chaque débuff ${DEBUFFS.POISON} placé par cette compétence.`,
           isPassive: true
         }
       ],
@@ -53,7 +69,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in Arena by 100`,
+    description: `Augmente la statistique PRÉ des Alliés lors des les batailles d'Arène de 100`,
   },
   },
   form2: {
@@ -61,41 +77,49 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Bellyslash",
-          description: `Attacks 1 enemy 4 times. Each hit will ignore 30% of the target's DEF. Each hit will also decrease the target’s MAX HP by 25% of the damage inflicted. <br><br>If the target is not a Boss, also places a [Shield] buff on this Champion equal to 25% of the target’s MAX HP.<br><br><br>Shield Multiplier: 0.25*Target Max HP`,
-          damage: "1*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Coupe-ventre",
+          description: `Attaque 4 fois un ennemi. Chaque frappe ignorera 30 % de la DÉF de la cible. Chaque frappe réduira également les PV MAX de la cible de 25 % des dégâts infligés. 
+
+Si la cible n'est pas un Boss, place également un buff ${BUFFS.SHIELD} égal à 25 % des PV MAX de la cible sur cette Championne.`,
+          damage: "1*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Cut 'Em Up",
-          description: `Attacks 1 enemy 2 times. Deals 100% more damage to enemies under a [Stun], [Sleep], [Freeze], [Provoke], [Fear], [True Fear], or [Petrification] debuffs. <br><br>If the target is killed, instantly activates the [Feast of Terror] skill.`,
-          damage: "(!Disable Debuff*3*ATK)+(Disable Debuff*6*ATK)",
+          name: "Découpage",
+          description: `Attaque 2 fois un ennemi. Inflige 100 % de dégâts supplémentaires aux ennemis sous débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION}. 
+
+Si la cible est tuée, active instantanément la compétence [Festin de terreur].`,
+          damage: "(!Disable Debuff*3*ATQ)+(Disable Debuff*6*ATQ)",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Damage +20%"],
+          levelInfo: ["Dégâts +20%", "Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Feast of Terror",
-          description: `Attacks all enemies. <br><br>Places a [True Fear] debuff for 2 turns. This debuff cannot be resisted or blocked by enemies with 50% HP or less.`,
-          damage: "3.9*ATK",
+          name: "Festin de terreur",
+          description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours. Les ennemis ayant 50 % de PV ou moins ne peuvent pas résister à ce débuff ni le bloquer.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Ravenous Hunger [P]",
-          description: `Whenever this Champion kills an enemy using an active skill, grants this Champion an Extra Turn. <br><br>Each debuff placed by this Champion in either Form increases this Champion’s HP, ATK, and DEF by 2% (stacks up to 50%) and SPD by 2 (stacks up to 50) in their Alternate Form.`,
+          name: "Faim de loup [P]",
+          description: `Dès que cette Championne tue un ennemi à l'aide d'une compétence active, accorde un Tour supplémentaire à cette Championne. 
+
+Chaque débuff placé par cette Championne sous n'importe quelle Forme augmente les PV, l'ATQ et la DÉF de cette Championne de 2 % (s'accumule jusqu'à 50 %) et sa VIT de 2 points (s'accumule jusqu'à 50) sous sa Forme alternative.`,
           cooldown: 2,
           isPassive: true
         }
@@ -112,7 +136,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in Arena by 100`,
+    description: `Augmente la statistique PRÉ des Alliés lors des les batailles d'Arène de 100`,
   },
   },
 };

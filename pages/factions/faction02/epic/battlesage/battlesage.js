@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lightning Slash",
-          description: `Attacks all enemies.`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Balafre Éclair",
+          description: `Attaque tous les ennemis.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Nature's Touch",
-          description: `Places a 50% [Increase ATK] buff on all allies for 2 turns, then removes all debuffs on all allies. This buff cannot be removed.`,
+          name: "Toucher de la Nature",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés, puis retire tous les débuffs sur tous les alliés. Il est impossible de retirer ce buff.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mother's Embrace",
-          description: `Revive on Death Places a [Revive On Death] buff on a target ally for 3 turns. The ally will instantly revive if killed.`,
+          name: "Étreinte de Maman",
+          description: `Place, pendant 3 tours, un buff de ${BUFFS.REVIVE_ON_DEATH} sur la cible allié. L'allié sera ressuscité instantanément s'il se fait tuer.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

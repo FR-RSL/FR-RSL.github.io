@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lotus Kiss",
-          description: `Attacks 1 enemy 2 times. Each hit has a 40% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%"],
+          name: "Baiser du lotus",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Downsize",
-          description: `Attacks 1 enemy 2 times. Each hit has a 60% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3.1*ATK",
+          name: "Réduction",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3.1*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Confusion Reigns",
-          description: `Attacks all enemies. Has a 60% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Confusion ambiante",
+          description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 60`,
 };

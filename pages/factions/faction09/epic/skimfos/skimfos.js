@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Growing Hunger",
-          description: `Attacks 1 enemy 2 times. The first hit has a 35% chance of placing a 30% [Decrease SPD] debuff for 2 turns. The second hit has a 35% chance of decreasing the target's Turn Meter by 10%.`,
-          damage: "1.85*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Faim Croissante",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. La seconde frappe possède 35 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
+          damage: "1.85*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Curse Feeder",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. After attacking, transfers all debuffs except [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], [Petrification] from all allies to this Champion.`,
-          damage: "3.75*ATK",
+          name: "Maudis la Nourrice",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Après l'attaque, transfère sur ce Champion tous les débuffs de tous les alliés, sauf ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} et ${DEBUFFS.PETRIFICATION}.`,
+          damage: "3.75*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Clutch of Woe",
-          description: `Transfers all debuffs from this Champion to a target enemy, then attacks the target. Steals 100% of the target’s Turn Meter if this attack is critical.`,
-          damage: "5.6*ATK",
+          name: "Étreinte de Malheur",
+          description: `Transfère tous les débuffs de ce Champion sur une cible ennemie, puis attaque la cible. Vole 100 % du Compteur de Tour de la cible si cette attaque passe en critique.`,
+          damage: "5.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Twisted [P]",
-          description: `Heals this Champion by 5% of their MAX HP for each debuff on them at the start of each turn. <br><br>If this Champion is under 4 or more debuffs at the start of the turn, places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns.<br><br>Heal Multiplier: 0.05*Target Debuffs*Target Max HP`,
+          name: "Déformé [P]",
+          description: `Au début de chaque tour, soigne ce Champion de 5 % de ses PV MAX pour chaque débuff dont il est affligé. 
+
+Si ce Champion est affligé de 4 débuffs ou plus au début du tour, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Doom Tower by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Tour du Malheur de 30%`,
 };

@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Seeker Bolts",
-          description: `Attacks 2 times at random. Heals all allies by 3% of this Champion's HP with each hit on targets under [Decrease SPD] debuffs.<br><br><br>Heal Multiplier: 0.03*HP`,
-          damage: "1.65*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Carreaux Chercheurs",
+          description: `Attaque 2 fois au hasard. Soigne tous les alliés à hauteur de 3 % des PV du Champion lors de chaque frappe sur des cibles affligés de débuffs ${DEBUFFS.SPD}.`,
+          damage: "1.65*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spiteful Cut",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease SPD] debuff on the target for 2 turns. Has a 50% chance of placing a 30% [Decrease SPD] debuff on all enemies for 2 turns instead if this attack is critical.`,
-          damage: "4.3*ATK",
+          name: "Méchante Entaille",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer sur la cible un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Sinon, possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur tous les ennemis si cette attaque passe en critique.`,
+          damage: "4.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Unbreakable [P]",
-          description: `Decreases the damage all allies receive by 5%. This Champion will receive that damage instead. If there are multiple Champions in the team with this Skill, only one will activate.`,
+          name: "Incassable [P]",
+          description: `Réduit de 5 % les dégâts reçus par tous les alliés. Ce Champion recevra les dégâts à leur place. Si plusieurs Champions dans l'équipe disposent de cette Compétence, une seule sera activée.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 30%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 30%`,
 };

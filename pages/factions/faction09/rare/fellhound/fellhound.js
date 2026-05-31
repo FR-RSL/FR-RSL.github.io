@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ravage",
-          description: `Attacks all enemies. Has a 25% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "1.7*DEF+1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Ravager",
+          description: `Attaque tous les ennemis. Offre 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "1.7*DEF+1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flameborn Vigor",
-          description: `Places a 7.5% [Continuous Heal] buff and a 15% [Reflect Damage] buff on all allies for 2 turns.`,
+          name: "Vigueur Néflamme",
+          description: `Place un buff de ${BUFFS.HEALS} de 7,5 % et un buff de ${BUFFS.REFLECT_DAM} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Deflect",
-          description: `Places a [Block Damage] buff on an ally for 1 turn.`,
+          name: "Dévier",
+          description: `Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DAMAGE} sur un allié.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 19%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 19%`,
 };

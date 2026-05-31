@@ -3,12 +3,8 @@ const championData = {
       	spells: [
         {
           img: "assets/sort1.webp",
-          name: "Festin des Flammes",
-          description: `
-            Attaque un ennemi. Soigne ce Champion a hauteur de 25% des dégats infligés. Soigne, a la place, ce
-			Champion de 50% des dégats infligés si la cible est affligée d'un débuff de
-			<span class='gbt'>Brulure de PV</span>.
-          `,
+          name: "Intimidation",
+          description: `Attaque un ennemi.`,
           damage: "2.5*DEF",
           levelInfo: [
             "Dégâts +5%",

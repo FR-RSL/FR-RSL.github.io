@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bloodsucker",
-          description: `Attacks 1 enemy. Heals this Champion by 30% of the damage inflicted. <br><br>Will then attack enemies under [Leech] debuffs.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Parasite",
+          description: `Attaque 1 ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tornado",
-          description: `Places a 30% [Increase SPD] and a 30% [Increase C. DMG] buff on all allies for 2 turns. <br><br>Places a [True Fear] and a [Leech] debuff on all enemies for 2 turns.<br><br>Grants an Extra Turn.`,
+          name: "Tornade",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % et un buff d'${BUFFS.CRATE} de 30 % sur ce Champion et sur une cible alliée. Accorde un Tour Supplémentaire à ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Open Wounds",
-          description: `Attacks 1 enemy. Has an 80% chance of stealing all buffs from the target before attacking. <br><br>Places a 100% [Heal Reduction] debuff for 2 turns. <br><br>Also places two 15% [Continuous Heal] buffs on this Champion for 3 turns. <br><br>Damage increases by 50% against targets that have no buffs.`,
-          damage: "6.6*ATK",
+          name: "Plaies Ouvertes",
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours. Inflige 50 % de dégâts supplémentaires contre les cibles disposant de buffs.`,
+          damage: "6.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 34%`,
+  description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
 };

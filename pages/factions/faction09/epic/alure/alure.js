@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Psychic Whip",
-          description: `Attacks 3 times at random. Decreases the target's Turn Meter by 25% on each critical hit.`,
-          damage: "1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Fouet Psychique",
+          description: `Attaque 3 fois au hasard. Réduit de 25 % le Compteur de Tours de la cible lors de chaque coup critique.`,
+          damage: "1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Temptation",
-          description: `Attacks all enemies 2 times. Each hit has a 30% chance of placing a 30% [Decrease DEF] debuff for 1 turn. Places a [Sleep] debuff for 1 turn on targets under [Decrease DEF] debuffs.`,
-          damage: "1.7*ATK",
+          name: "Tentation",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour. Place un débuff de ${DEBUFFS.SLEEP} d'1 tour sur les cibles affligées de débuffs de ${DEBUFFS.DEF}.`,
+          damage: "1.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hellish Blaze",
-          description: `Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit. Will ignore 50% of the target's DEF.`,
-          damage: "4.6*ATK",
+          name: "Brasier Infernal",
+          description: `Attaque 1 ennemi. Possède 30 % de chances supplémentaires de porter un coup critique. Ignorera 50 % de la DÉF de la cible.`,
+          damage: "4.6*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 50`,
 };

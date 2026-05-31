@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thrust",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "75+2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Poussée",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
+          damage: "75+2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Blizzard",
-          description: `Attacks all enemies. Has a 60% chance of placing a 25% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.5*ATK",
+          description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +20%", "Level 6: Damage +15%", "Level 7: Buff/Debuff Chance +20%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +20%", "Dégâts +15%", "Chances de Buff/Debuff +20%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

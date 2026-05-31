@@ -3,34 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Doom Flasks",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 25% chance of increasing the duration of all [Poison] and [HP Burn] debuffs on the target by 1 turn.`,
-          damage: "2.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Flasques de ruine",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 25 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur la cible.`,
+          damage: "2.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Volatile Mixture",
-          description: `Attacks all enemies 2 times. <br><br>The first hit instantly activates one tick of all [Poison] and [HP Burn] debuffs on all enemies, and one tick of all [Continuous Heal] buffs on all allies. <br><br>The second hit has a 75% chance of destroying each target's MAX HP by 3% for each [Poison] and [HP Burn] debuff activated on them by this skill (stacks up to 60%). <br><br>Then fills the Turn Meters of all allies by 20%.`,
-          damage: "2.2*ATK",
+          name: "Mélange volatil",
+          description: `Attaque 2 fois tous les ennemis. 
+
+La première frappe active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis, et un déclenchement de tous les buffs ${BUFFS.HEALS} sur tous les alliés. 
+
+La seconde frappe a 75 % de chances de détruire les PV MAX de chaque cible de 3 % pour chaque débuff ${DEBUFFS.POISON} et ${DEBUFFS.BURN} activé sur elle par cette compétence (s'accumule jusqu'à 60 %). 
+
+Ensuite, remplit le Compteur de Tour de tous les alliés de 20 %.`,
+          damage: "2.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vengefire Flood",
-          description: `Attacks all enemies. <br><br>Has an 80% chance of placing two 5% [Poison] debuffs on all enemies for 2 turns. If any targets are under a [HP Burn] debuff, places three 5% [Poison] debuffs and a 25% [Weaken] debuff on them for 2 turns instead. <br><br>Also places two 15% [Continuous Heal] buffs on all allies for 2 turns.`,
-          damage: "4.4*ATK",
+          name: "Crue de feu-vengeur",
+          description: `Attaque tous les ennemis. 
+
+Possède 80 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours. Si une cible se trouve sous débuff ${DEBUFFS.BURN}, lui inflige au lieu de ça trois débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Place également deux buffs ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
+          damage: "4.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rigged To Blow [P]",
-          description: `The damage inflicted by [Poison] and [HP Burn] debuffs will ignore [Block Damage] and [Unkillable] buffs. <br><br>Whenever allies attack enemies with destroyed MAX HP, increases the damage dealt by 10%. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Truqué pour exploser [P]",
+          description: `Les dégâts infligés par les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} ignoreront les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. 
+
+Dès que des alliés attaquent des ennemis dont les PV MAX ont été détruits, augmente les dégâts infligés de 10 %. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -48,5 +64,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

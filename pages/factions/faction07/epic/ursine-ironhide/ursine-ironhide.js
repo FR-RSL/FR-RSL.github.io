@@ -3,35 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Confounding Crush",
-          description: `Attacks 1 enemy. Has a 35% chance of increasing the cooldown of one of the target's Skills by 1 turn at random.`,
+          name: "Fracas Déconcertant",
+          description: `Attaque un ennemi. Possède 35 % de chances d'augmenter d'1 tour le temps de recharge d'une des Compétences de la cible prise au hasard.`,
           damage: "4.2*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Beat Back",
-          description: `Attacks 1 enemy 2 times. Each hit has a 75% chance of decreasing the Turn Meter by 5%. Decreases the Turn Meter by 10% instead if the target is under a [Decrease ATK] debuff.`,
+          name: "Repousser",
+          description: `Attaque 2 fois un ennemi. Possède 75 % de chances de réduire le Compteur de Tour de 5 %. Sinon, réduit le Compteur de Tour de 10 % si la cible est affligée d'un débuff ${DEBUFFS.ATK}.`,
           damage: "3.2*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rampaging Swipe",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Coup Destructeur",
+          description: `Attaque tous les ennemis. Offre 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "3.9*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Ursine Brutality [P]",
-          description: `Each hit has a 50% chance of decreasing the target's Turn Meter by 7.5%. Each hit also has a 50% chance of putting one of the target's Skills on cooldown if the target is under a [Decrease C. RATE] debuff.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +20%"],
+          name: "Brutalité d'ours ${PASSIVE}",
+          description: `Chaque frappe possède également 50 % de chances de réduire le Compteur de Tour de la cible de 7,5 %. Chaque frappe possède également 50 % de chances de placer une des Compétences de la cible en temps de recharge si la cible souffre d'un débuff ${DEBUFFS.CRATE}.`,
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +20%"],
           isPassive: true
         }
       ],

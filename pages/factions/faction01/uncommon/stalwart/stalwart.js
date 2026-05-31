@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rattle",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Block Active Skills] debuff for 1 turn.`,
-          damage: "4.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Ébranler",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          damage: "4.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Headbutt",
-          description: `Attacks 1 enemy 2 times. Has a 25% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "3.2*ATK",
+          name: "Coup de Boule",
+          description: `Attaque 2 fois 1 ennemi. Possède 25 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "3.2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],

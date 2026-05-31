@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wind Cutter",
-          description: `Attacks all enemies.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Coupe-Vent",
+          description: `Attaque tous les ennemis.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fire Wave",
-          description: `Attacks all enemies 2 times. Has a 10% chance of placing a 50% [Heal Reduction] debuff for 1 turn. Places a 50% [Heal Reduction] debuff if the target's current HP is less than or equal to 40%.`,
-          damage: "1.8*ATK",
+          name: "Vague de Feu",
+          description: `Attaque 2 fois tous les ennemis. Possède 10 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 1 tour. Place un débuff de ${DEBUFFS.HEALS} de 50 % si les PV actuels de la cible sont inférieurs ou égaux à 40 %.`,
+          damage: "1.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

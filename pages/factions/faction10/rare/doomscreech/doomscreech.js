@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scrabbling Claws",
-          description: `Attacks 1 enemy 2 times. Has a 25% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "1.1*ATK+0.05*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%"],
+          name: "Griffes Grattantes",
+          description: `Attaque 2 fois un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "1.1*ATQ+0.05*HP",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Warning Screech",
-          description: `Fills the Turn Meter of all allies by 30%. Places a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Cri d'Avertissement",
+          description: `Remplit de 30 % le Compteur de Tours de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shelter",
-          description: `Attacks all enemies. Places a [Shield] buff equal to 30% MAX HP on this Champion for 2 turns. Damage increases according to this Champion's current HP.<br><br><br>Shield Multiplier: 0.3* HP`,
+          name: "Refuge",
+          description: `Attaque tous les ennemis. Place, sur ce Champion, un buff de ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. Les dégâts augmentent en fonction des PV actuels de ce Champion.`,
           damage: "0.1*HP",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 21%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 21%`,
 };

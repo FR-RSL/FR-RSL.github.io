@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Carve Through",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Creuser",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tender Mercies",
-          description: `Attacks 1 enemy. Inflicts 100% more damage against targets without any buffs.`,
-          damage: "4.6*ATK or 9.2*ATK (No Buffs)",
+          name: "Tendres pitiés",
+          description: `Attaque un ennemi. Inflige 100 % de dégâts supplémentaires contre les cibles sans buff.`,
+          damage: "4.6*ATQ or 9.2*ATQ (No Buffs)",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Isolate",
-          description: `Attacks 1 enemy 3 times. Each hit has a 50% chance of stealing 1 random buff from the target. <br><br>Places a [Block Buffs] debuff for 2 turns if the target has no buffs after this attack.`,
-          damage: "1.8*ATK",
+          name: "Isoler",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de voler un buff aléatoire sur la cible. 
+
+Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours si la cible ne possède pas de buff après cette attaque.`,
+          damage: "1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

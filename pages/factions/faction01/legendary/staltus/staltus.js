@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Axe of Glory",
-          description: `Attacks 1 enemy 2 times. If the target is under any debuff, each hit decreases the target's Turn Meter by 10%.`,
+          name: "Hache de gloire",
+          description: `Attaque 2 fois un ennemi. Si la cible se trouve sous un débuff, chaque frappe réduit le Compteur de Tour de la cible de 10 %.`,
           damage: "1.9*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Drakehunter Tactics",
-          description: `Attacks all enemies 2 times. Each hit has a 50% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Tactiques chasse-drake",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "2.1*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dragon Heart",
-          description: `Places a 60% [Increase DEF] buff on this Champion for 3 turns, then attacks all enemies. <br><br>Has a 75% chance of placing a 25% [Decrease C. DMG] debuff for 2 turns on enemies whose ATK is higher than their DEF. <br><br>Has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns on enemies whose ATK is equal to or lower than their DEF.`,
+          name: "Coeur de dragon",
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours, puis attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours sur les ennemis dont l'ATQ est plus élevée que leur DÉF. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les ennemis dont l'ATQ est inférieure ou égale à leur DÉF.`,
           damage: "4*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Untarnished [P]",
-          description: `Whenever an enemy attempts to place a [Weaken] debuff, a [Decrease DEF] debuff, or a [Poison] debuff on this Champion, reflects them back onto the attacker. Damage increases by 5% for each debuff on the target.`,
+          name: "Sans tache [P]",
+          description: `Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.WEAKEN}, ${DEBUFFS.DEF} ou ${DEBUFFS.POISON} sur ce Champion, les renvoie sur l'assaillant. 
+
+Les dégâts augmentent de 5 % pour chaque débuff dont est affligée la cible.`,
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in all Battles by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%`,
 };

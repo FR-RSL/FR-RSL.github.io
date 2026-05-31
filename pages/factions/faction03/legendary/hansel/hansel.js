@@ -3,34 +3,48 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Purge All Evil",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 25% [Weaken] debuff for 2 turns. <br><br>If Gretel Hagbane is on the same team, attacks all enemies instead. Has a 25% chance of placing a 25% [Weaken] debuff on all enemies for 2 turns. Also places an extra hit on enemies under any debuffs.`,
-          damage: "3.5*ATKMultiplier: 2.3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Purger le mal",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Si Gretel Fléau-Harpie se trouve dans la même équipe, attaque au lieu de ça tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. Place également une frappe supplémentaire sur les ennemis affligés de débuffs.`,
+          damage: "3.5*ATQMultiplier: 2.3*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sanctified Knives",
-          description: `Attacks 1 enemy 2 times. Will ignore [Shield] and [Unkillable] buffs. <br><br>Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "2.8*ATK",
+          name: "Couteaux sanctifiés",
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.UNKILLABLE}. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "2.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Baneful Burst",
-          description: `Attacks all enemies. Will ignore 15% of each target’s DEF. Also increases the cooldown of 1 random skill on each enemy by 2 turns. <br><br>If Gretel Hagbane is on the same team, will ignore 30% of each target’s DEF instead. Will also increase the cooldown of all enemy skills by 2 turns instead. This cooldown-increasing effect cannot be resisted.`,
-          damage: "3.5*ATK",
+          name: "Éclat funeste",
+          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible. Augmente également de 2 tours le temps de recharge d'une compétence aléatoire sur chaque ennemi. 
+
+Si Gretel Fléau-Harpie se trouve dans la même équipe, ignorera au lieu de ça 30 % de la DÉF de chaque cible. Augmentera également de 2 tours la durée du temps de recharge de toutes les compétences des ennemis. Il est impossible de résister à cet effet d'augmentation du temps de recharge.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Brotherly Bond [P]",
-          description: `[Passive Effect]<br><br>Reflects all [Fear] and [True Fear] debuffs from this Champion to the attacker.<br><br>If Gretel Hagbane is on the same team, also reflects all [Fear] and [True Fear] debuffs placed on Gretel Hagbane back to the attacker.<br><br>[Active Effect]<br><br>If Gretel Hagbane is on the same team and is killed by the enemy, instantly activates the [Baneful Burst] skill.`,
+          name: "Lien fraternel [P]",
+          description: `${PASSIVE}
+
+Renvoie tous les débuffs ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR} de ce Champion sur l'assaillant.
+
+Si Gretel Fléau-Harpie se trouve dans la même équipe, renvoie également les débuffs ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR} placés sur Gretel Fléau-Harpie sur l'assaillant.
+
+${ACTIVE}
+
+Si Gretel Fléau-Harpie se trouve dans la même équipe et qu'elle est tuée par l'ennemi, active instantanément [Éclat funeste].`,
           cooldown: 3,
           isPassive: true
         }
@@ -49,5 +63,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 33%`,
 };

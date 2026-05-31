@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bonebreaker",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Cassos",
+          description: `Attaque 1 ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "3.8*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spreading Ice",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Freeze] debuff for 1 turn. If the target has a [Freeze] debuff, has a 25% chance of placing it on another enemy.`,
+          name: "Propagation de Glace",
+          description: `Attaque 1 ennemi. Possède 75 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, possède 25 % de chances de le placer sur un autre ennemi.`,
           damage: "6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Tower of Power [P]",
-          description: `Increases the resistance of all allies by 15 for each active buff on this Champion.`,
+          name: "Tour de Puissance [P]",
+          description: `Augmente de 15 la résistance de tous les alliés pour chaque buff actif sur ce Champion.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Magic Ally ATK in All Battles by 20%`,
+  description: `Augmente la statistique ATQ des Alliés Magie lors de toutes les Batailles de 20%`,
 };

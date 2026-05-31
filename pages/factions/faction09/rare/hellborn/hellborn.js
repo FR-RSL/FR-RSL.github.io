@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shivering Malady",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Frissons du Mal",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crumbling Flesh",
-          description: `Attacks 1 enemy 3 times. Each hit has a 50% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "1.6*ATK",
+          name: "Chair Effritée",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "1.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Transmuter",
-          description: `Increases the duration of all ally buffs by 1 turn, then places a 15% [Increase C. RATE] buff on all allies for 2 turns.`,
+          description: `Augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

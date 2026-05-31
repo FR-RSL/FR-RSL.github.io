@@ -3,32 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mash and Mangle",
-          description: `Attacks 1 enemy. Has a 70% chance of applying a [Buff Spread] effect, taking 1 random buff from each ally and placing it on all allies.`,
-          damage: "5.7*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Écraser et broyer",
+          description: `Attaque un ennemi. A 70 % de chances d'appliquer un effet [Propagation de Buffs], prenant un buff aléatoire sur chaque allié pour le placer sur tous les alliés.`,
+          damage: "5.7*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Grub's Up!",
-          description: `Heals all allies by 20% of this Champion's MAX HP. <br><br>Places a 30% [Increase SPD] buff on all allies for 2 turns. <br><br>Also places a 15% [Continuous Heal] buff and a [Block Debuffs] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "À table !",
+          description: `Soigne tous tes alliés à hauteur de 20 % des PV MAX de ce Champion. 
+
+Place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.HEALS} de 15 % et un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Brothers' Generosity",
-          description: `Removes all debuffs from all allies. Increases the Turn Meters of all allies by 20% plus an additional 2% for each debuff removed. <br><br>Then places a 50% [Increase ACC] buff on all allies for 2 turns.`,
+          name: "Générosité fraternelle",
+          description: `Retire tous les débuffs sur tous les alliés. Augmente le Compteur de Tour de tous les alliés de 20 %, puis de 2 % supplémentaires pour chaque débuff retiré. 
+
+Place ensuite un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fill Your Bellies [P]",
-          description: `Increases allies' damage dealt by 10% if they currently have less HP than their target. If an ally's HP is equal to or greater than their target's, increases their damage dealt by 20% instead.<br><br>Increases this Champion's and each ally's MAX HP by 10% every time this Champion uses an active skill (stacks up to 50%). Resets each Round. <br><br>Also increases each ally's MAX HP by 5% every time they use an active skill (stacks up to 50%). Resets each Round. Will not increase the MAX HP of Bosses.`,
+          name: "Ventres pleins [P]",
+          description: `Augmente les dégâts infligés par les alliés de 10 % s'ils ont actuellement moins de PV que leur cible. Si les PV d'un allié sont supérieurs ou égaux à ceux de sa cible, augmente au lieu de cela les dégâts infligés de 20 %.
+
+Augmente de 10 % les PV MAX de ce Champion et de chaque allié chaque fois que ce Champion utilise une compétence active (s'accumule jusqu'à 50%). Se réinitialise à chaque Manche. 
+
+Augmente également les PV MAX de tous les alliés de 5 % chaque fois qu'ils utilisent une compétence active (s'accumule jusqu'à 50 %). Se réinitialise à chaque Manche. N'augmentera pas les PV MAX des Boss.`,
           isPassive: true
         }
       ],
@@ -46,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

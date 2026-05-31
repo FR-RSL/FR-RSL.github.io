@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Deprive",
-          description: `Attacks 1 enemy 2 times. Each hit has a 40% chance of stealing 1 random buff. Fills this Champion's Turn Meter by 10% for each buff stolen.`,
-          damage: "2.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Priver",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de voler un buff aléatoire. Remplit le Compteur de Tour de cette Championne de 10 % pour chaque buff volé.`,
+          damage: "2.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Greathoof Stampede",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease RES] debuff and a 50% [Decrease ACC] debuff for 2 turns. <br><br>Fills this Champion's Turn Meter by 10% for each debuff placed by this skill.`,
-          damage: "4.1*ATK",
+          name: "Charge de Beau-Sabot",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours. 
+
+Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff placé par cette compétence.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dance of War",
-          description: `Places a [Block Debuffs] buff and a 50% [Increase ACC] buff on all allies for 2 turns. <br><br>Also fills the Turn Meters of all allies by 20%.`,
+          name: "Danse guerrière",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Hoofbeats [P]",
-          description: `Fills this Champion's Turn Meter by 5% each time an ally buff is removed, transferred, stolen, or expires.`,
+          name: "Frappe de sabot [P]",
+          description: `Remplit le Compteur de Tour de cette Championne de 5 % chaque fois qu'un buff allié est retiré, transféré, volé ou expire.`,
           isPassive: true
         }
       ],

@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hopping Mad",
-          description: `Attacks 1 enemy 3 times. Each hit will fill this Champion’s Turn Meter by 5%.`,
-          damage: "ATK*(0.45*SPD/100)",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Bond dément",
+          description: `Attaque 3 fois un ennemi. Chaque coup remplira le Compteur de Tour de ce Champion de 5 %.`,
+          damage: "ATQ*(0.45*SPD/100)",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Night of the Rabbit",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Leech] debuff for 2 turns. <br><br>Heals this Champion by 10% of their MAX HP for each [Leech] debuff placed by this skill.<br><br><br>Heal Multiplier: 0.1*HP`,
-          damage: "ATK*(1.5+SPD/100)",
+          name: "Nuit du lapin",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. 
+
+Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.LEECH} placé par cette compétence.`,
+          damage: "ATQ*(1.5+SPD/100)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Keep Up If You Can",
-          description: `Attacks all enemies. Places a 30% [Increase SPD] buff and a 50% [Increase ACC] buff on all allies for 2 turns before attacking.`,
-          damage: "ATK*(1.5+SPD/100)",
+          name: "Suis si tu peux",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours avant d'attaquer.`,
+          damage: "ATQ*(1.5+SPD/100)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Built For Speed [P]",
-          description: `Each [Increase SPD] buff placed by this Champion increases this Champion's SPD by 5 (Stacks up to 100).`,
+          name: "Vitesse innée [P]",
+          description: `Chaque buff ${BUFFS.SPD} placé par ce Champion augmente sa VIT de 5 (s'accumule jusqu'à 100).`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

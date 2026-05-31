@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Burly Bash",
-          description: `Attacks 1 enemy 2 times. Each hit has a 10% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Coup Robuste",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 10 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.12*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "War Whoop",
-          description: `Places a 50% [Increase ATK] buff and a 30% [Increase C. RATE] buff on all allies for 2 turns.`,
+          name: "Cri Guerrier",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Eternal War",
-          description: `Revives 2 random allies with 50% HP and fills their Turn Meters by 50%. After the revival, places a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Guerre Éternelle",
+          description: `Ranime 2 alliés avec 50 % de PV et remplit leurs Compteurs de Tour de 50 %. Après la réanimation, place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

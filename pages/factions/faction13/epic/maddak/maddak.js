@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Portable Cannonade",
-          description: `Attacks 1 enemy.<br><br>Has a 80% chance of transferring 1 random debuff from this Champion to the target.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Canonnade portable",
+          description: `Attaque un ennemi. 
+
+A 80 % de chances de transférer 1 débuff aléatoire de ce Champion sur la cible.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Scattershot Barrage",
-          description: `Attacks all enemies.<br><br>Has a 75% chance of removing 1 random buff from all enemies.<br>Has a 75% chance of stealing 2 random buffs instead, if the target is under a [Block Buffs] or [Block Active Skills] debuff.`,
-          damage: "3.85*ATK",
+          name: "Barrage de tirs sporadiques",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de retirer 1 buff aléatoire à tous les ennemis. A 75 % de chances de voler au lieu de cela 2 buffs aléatoires si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS} ou ${DEBUFFS.LOCK_ACTIVE}.`,
+          damage: "3.85*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Beast Feller Level",
-          description: `Attacks 1 enemy 3 times.<br><br>The first hit has a 75% chance of placing a [Block Buffs] debuff for 2 turns. The second hit has a 75% chance of placing a [Block Active Skills] debuff for 2 turns. The third hit has a 50% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all other enemies.<br><br>Lvl. 2 Damage +10%<br>Lvl. 3 Damage +10%<br>Lvl. 4 Buff/Debuff Chance +10%<br>Lvl. 5 Buff/Debuff Chance +15%<br>Lvl. 6 Cooldown -1`,
-          damage: "2*ATK",
+          name: "Abatteur de bête",
+          description: `Attaque 3 fois un ennemi. 
+
+La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La deuxième frappe a 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. La troisième frappe a 50 % de chances d'appliquer un effet de [Propagation de Débuffs], qui prend 1 débuff aléatoire de la cible pour le placer sur tous les autres ennemis.`,
+          damage: "2*ATQ",
           cooldown: 5,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Eyes of a Sunseeker [P]",
-          description: `This Champion deals 15% more damage to enemies whose ACC is less than this Champion's.`,
+          name: "Yeux de Cherche-soleil [P]",
+          description: `Ce Champion inflige 15 % de dégâts supplémentaires aux ennemis dont la PRÉ est inférieure à la sienne.`,
           isPassive: true
         }
       ],
@@ -47,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Crypts by 33%.`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Factions de 33%`,
 };

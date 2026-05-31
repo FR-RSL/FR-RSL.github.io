@@ -3,32 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Antique Staff",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Increase DEF] buff for 1 turn on the ally with the lowest HP. Will not be placed on this Champion. Has a 100% chance instead if this attack is critical.`,
+          name: "Bâton antique",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un buff ${BUFFS.DEF} de 60 % pendant 1 tour sur l'allié ayant le moins de PV. Ne sera pas placé sur ce Champion. Sinon, possède 100 % de chances si cette attaque passe en critique.`,
           damage: "0.3*HP",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Souls of Old Stone",
-          description: `Removes 1 random debuff from all allies, then places a [Shield] buff on all allies for 2 turns equal to 20% of this Champion’s MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Âmes de Vieille Pierre",
+          description: `Retire un débuff aléatoire sur tous les alliés, puis place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +10%", "Level 5: Shield +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rune of Energy",
-          description: `Places a 50% [Increase RES] buff and a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Rune d'Énergie",
+          description: `Place un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Boragar's Blazon [P]",
-          description: `Allies receive 10% less damage from Champions whose RES is lower than or equal to theirs.`,
+          name: "Blason de Boragar [P]",
+          description: `Les alliés reçoivent 10 % de dégâts en moins de la part des Champions dont la RÉS est inférieure ou égale à la leur.`,
           isPassive: true
         }
       ],
@@ -46,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 50`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 50`,
 };

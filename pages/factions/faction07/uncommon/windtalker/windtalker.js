@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thunder",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a 25% [Decrease ACC] debuff for 1 turn.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Tonnerre",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 1 tour.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spiritual Wind",
-          description: `Places a 60% [Increase DEF] buff on a target ally for 2 turns. Heals the target by 20% of their MAX HP.<br><br><br>Heal Multiplier: 0.2*Target Max HP`,
+          name: "Vent Spirituel",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur ce Champion. Soigne la cible à hauteur de 20 % de ses PV MAX.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Cooldown -1", "Level 5: Heal +10%", "Level 6: Heal +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Temps de recharge -1", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

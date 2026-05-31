@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spear Crescent",
-          description: `Attacks 1 enemy. Places an extra hit if the target is under a [Weaken] debuff.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Croissant de lance",
+          description: `Attaque un ennemi. Place une frappe supplémentaire si un ennemi se trouve sous débuff ${DEBUFFS.WEAKEN}.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sapping Spear",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "6.2*ATK",
+          name: "Lance épuisante",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "6.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

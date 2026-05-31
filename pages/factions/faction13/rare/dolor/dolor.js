@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Banisher Axe",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Block Active Skills] debuff for 1 turn.`,
-          damage: "3.46*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +5%"],
+          name: "Hache d'Exil",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          damage: "3.46*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stern Punishment",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a [Stun] debuff for 1 turn if the target is under any debuff.`,
-          damage: "5.69*ATK",
+          name: "Punition Sévère",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour si la cible n'est affligée d'aucun débuff.`,
+          damage: "5.69*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Forebear's Boon",
-          description: `Places a 15% [Continuous Heal] buff on all allies for 2 turns. Also places a [Block Debuffs] buff on the target ally for 1 turn if they have less than 100% HP.`,
+          name: "Bénédiction d'Ancêtre",
+          description: `Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour sur l'allié ciblé s'il possède moins de 100 % de PV.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blood Call",
-          description: `Attacks 2 times at random. Has a 30% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Appel du Sang",
+          description: `Attaque 2 fois au hasard. Possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flames Within",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [HP Burn] debuff for 2 turns. <br><br>Heals all allies by 15% of their MAX HP if the [HP Burn] debuff is placed. Fills the Turn Meters of all allies by 15% if the [HP Burn] debuff is not placed.<br><br><br>Heal Multiplier: 0.15*Target Max HP`,
-          damage: "5*ATK",
+          name: "Flammes Internes",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+
+Soigne tous les alliés de 15 % de leurs PV MAX si le débuff ${DEBUFFS.BURN} est placé. Remplit le Compteur de Tour de tous les alliés de 15 % si le débuff ${DEBUFFS.BURN} n'est pas placé.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Battle Weirding",
-          description: `Places a 50% [Increase ACC] buff and a 30% [Increase C. DMG] buff on all allies for 2 turns.`,
+          name: "Étrangeté de Bataille",
+          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Doom Tower by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors de la Tour du Malheur de 50`,
 };

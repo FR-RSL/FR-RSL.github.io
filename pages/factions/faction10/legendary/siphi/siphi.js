@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Curse of Longing",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a [Sleep] debuff for 1 turn if the target’s Turn Meter is equal to or above 50%. This debuff cannot be resisted. Heals all allies by 5% of their MAX HP if the target’s Turn Meter is below 50%.<br><br><br>Heal Multiplier: 0.05*Target Max HP`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Malédiction du Désir",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} d'1 tour si le Compteur de Tour de la cible est supérieur ou égal à 50 %. Il est impossible de résister à ce débuff. Soigne tous les alliés de 5 % de leurs PV MAX si le Compteur de Tour de la cible se trouve sous 50 %.`,
+          damage: "5*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Whirlwind Romance",
-          description: `Places a [Block Debuffs] buff on all allies for 2 turns, then fills the Turn Meters of all allies by 10% and places a 60% [Increase DEF] buff and a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Romance Éclair",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours, puis remplit le Compteur de Tour de tous les alliés de 10 %, et place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Love Beyond Death",
-          description: `Revives a single ally with 55% HP and a full Turn Meter. Places a 50% [Increase ATK] buff and a 30% [Increase C. RATE] buff on that ally for 2 turns.`,
+          name: "Amour Éternel",
+          description: `Ranime un seul allié avec 55 % de PV et un Compteur de Tour plein. Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur cet allié pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Eternal Bond [P]",
-          description: `Heals each ally by 10% of their MAX HP at the start of their turn. <br><br>Has a 40% chance of removing any [Freeze], [Fear] and [True Fear] debuffs from each ally at the start of their turn. Removes all debuffs from Rotos the Lost Groom at the start of their turn if they are on the same team.<br><br><br>Heal Multiplier: 0.1*Target Max HP`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%"],
+          name: "Lien Éternel [P]",
+          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de leur tour. 
+
+A 40 % de chances de retirer les débuffs ${DEBUFFS.GEL}, ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR} des alliés au début de leur tour. Retire tous les débuffs de Rotos le Marié Égaré au début de son tour s'il se trouve dans la même équipe.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 80`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
 };

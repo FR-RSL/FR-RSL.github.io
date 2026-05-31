@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mistress of Mallets",
-          description: `Attacks 1 enemy. Fills this Champion’s Turn Meter by 15% if this attack is critical.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Maîtresse des Maillets",
+          description: `Attaque un ennemi. Remplit le Compteur de Tours de cette Championne de 15 % si l'attaque passe en critique.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Glory Hound",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical. Fills the Turn Meters of all allies by 30% if this attack kills an enemy.`,
-          damage: "3.3*ATK",
+          name: "Obsession glorieuse",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique. Remplit le Compteur de Tour de tous les alliés de 30 % si cette attaque tue un ennemi.`,
+          damage: "3.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "First to Fight",
-          description: `Attacks all enemies. Places a 30% [Increase C. DMG] buff on all allies for 2 turns. Also places a 50% [Increase ATK] buff on all allies for 2 turns if this attack is critical.`,
-          damage: "3.2*ATK",
+          name: "Première à combattre",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
+          damage: "3.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

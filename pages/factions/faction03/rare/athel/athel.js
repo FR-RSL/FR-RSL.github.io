@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Strike Down",
-          description: `Attacks 1 enemy 3 times. Each hit has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "1.3*ATK + 30",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +5%", "Level 7: Damage +5%", "Level 8: Buff/Debuff Chance +10%"],
+          name: "Foudroyer",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "1.3*ATQ + 30",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Divine Blades",
-          description: `Attacks all enemies. Has an extra 15% chance of inflicting a critical hit.`,
-          damage: "4.1*ATK",
+          name: "Lames Divines",
+          description: `Attaque tous les ennemis. Possède 15 % de chances supplémentaires de porter un coup critique.`,
+          damage: "4.1*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Higher Blessing",
-          description: `Places a 25% [Increase ATK] buff on this Champion for 2 turns. Places a 30% [Increase DEF] buff on this Champion for 2 turns if this Champion's current HP is less than 50%. Gains an Extra Turn.`,
+          name: "Bénédiction Supérieure",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur ce Champion. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 30 % sur ce Champion si les PV actuel de ce Champion sont inférieurs à 50 %. Reçoit un Tour Supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

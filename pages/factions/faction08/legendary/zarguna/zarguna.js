@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Battlethrum",
-          description: `Attacks 1 enemy 2 times. Heals this Champion by 5% of their MAX HP after each hit. <br><br>Each hit also has a 25% chance of placing a [Provoke] debuff on the target for 1 turn.<br><br><br>Heal Multiplier: 0.05*HP`,
+          name: "Tambour de guerre",
+          description: `Attaque 2 fois un ennemi. Soigne cette Championne de 5 % de ses PV MAX après chaque frappe. 
+
+Chaque frappe a également 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur la cible pendant 1 tour.`,
           damage: "0.13*HP",
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Soins +5%", "Soins +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Clanmother",
-          description: `Decreases the duration of all ally debuffs by 1 turn. <br><br>Places a 15% [Continuous Heal] buff on all allies for 2 turns. Also places a [Taunt] buff and an [Unkillable] buff on this Champion for 2 turns.`,
+          name: "Mère de clan",
+          description: `Réduit d'1 tour la durée de tous les débuffs des alliés. 
+
+Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.TAUNT} et un buff ${BUFFS.UNKILLABLE} sur cette Championne pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Maternal Force",
-          description: `Attacks all enemies. <br><br>Places a [Shield] buff on all allies, equal to 25% of this Champion’s MAX HP, for 2 turns. <br><br>Whenever a [Shield] buff placed by this Champion expires or is removed by damage, heals that ally by 15% of their MAX HP and places a 25% [Strengthen] buff on them for 1 turn.<br><br><br>Shield Multiplier: 0.25*HP`,
+          name: "Force maternelle",
+          description: `Attaque tous les ennemis. 
+
+Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 25 % des PV MAX de cette Championne pendant 2 tours. 
+
+Dès qu'un buff ${BUFFS.SHIELD} placé par cette Championne expire ou est retiré par des dégâts, soigne l'allié concerné de 15 % de ses PV MAX et lui accorde un buff ${BUFFS.STRENGTHEN} de 25 % pendant 1 tour.`,
           damage: "0.27*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Refuge From Pain [P]",
-          description: `Allies under [Shield] buffs receive 10% less damage.`,
+          name: "Refuge anti-douleur [P]",
+          description: `Les alliés sous buff ${BUFFS.SHIELD} reçoivent 10 % de dégâts en moins.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 30%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%`,
 };

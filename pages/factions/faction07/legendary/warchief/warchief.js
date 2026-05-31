@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brutal Force",
-          description: `Attacks 1 enemy 3 times. Each hit has a 25% chance of placing a [Provoke] debuff for 1 turn. <br><br>Each hit also heals this Champion and the ally with the lowest HP by 3% of this Champion's MAX HP.<br><br><br>Heal Multiplier: 0.03*HP`,
+          name: "Froid Glacial",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1*DEF",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%", "Level 4: Heal +10%", "Level 5: Heal +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +15%", "Dégâts +15%", "Soins +10%", "Soins +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Marauder",
-          description: `Attacks 1 enemy. <br><br>Steals all buffs from the target, and places a [Provoke] debuff on them for 3 turns. Also has a 50% chance of placing a [Provoke] debuff on all other enemies for 1 turn.<br><br>Then places a [Shield] buff on all allies for 2 turns. The value of the [Shield] is proportional to this Champion's DEF.<br><br><br>Shield Multiplier: 3*DEF`,
+          name: "Maraudeur",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.PROVOKE} de 2 tours sur tous les ennemis. Place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           damage: "4.3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +20%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Standstill [P]",
-          description: `Whenever an ally under a [Shield] buff is hit by an enemy, heals that ally by 25% of the damage dealt to the [Shield].<br><br>Increases this Champion's DEF by 10% for each enemy under a [Provoke] debuff. Will also increase this Champion's DEF by 5% for each enemy not under a [Provoke] debuff.<br><br>Heal Multiplier: 0.25*damageAbsorbedByShield`,
+          name: "Immobile [P]",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 % sur ce Champion, puis attaque un ennemi. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, attaque tous les ennemis et retire le débuff de ${DEBUFFS.GEL} sur la cible initiale. Les dégâts infligés sont proportionnels à la DÉF.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
 };

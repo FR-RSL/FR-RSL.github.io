@@ -3,26 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bloodied Mace",
-          description: `Attacks 1 enemy. <br><br>Has a 30% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "2.6*DEF+2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Massue Sanglante",
+          description: `Attaque un ennemi.
+
+Possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} de 2 tours.`,
+          damage: "2.6*DEF+2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Misdirect",
-          description: `Places a [Perfect Veil] buff and a 15% [Continuous Heal] buff on an ally for 2 turns.`,
+          name: "Tromper",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.VEIL} et un buff de ${BUFFS.HEALS} de 15 % sur un allié.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lordly Challenge",
-          description: `Places a [Counterattack] buff on this Champion for 2 turns. Has a 50% chance of placing a [Provoke] debuff on all enemies for 1 turn.`,
+          name: "Noble Défi",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} sur ce Champion.
+Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

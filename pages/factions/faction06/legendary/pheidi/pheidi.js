@@ -3,33 +3,45 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Zephyr Lance",
-          description: `Attacks 1 enemy 2 times. Each hit heals all allies by 5% of this Champion’s MAX HP. <br><br>Each hit also has a 75% chance to fill the Turn Meter of the ally with the lowest Turn Meter by 10%.<br><br><br>Heal Multiplier: 0.05*HP`,
+          name: "Lance zéphyr",
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne également tous tes alliés à hauteur de 5 % des PV MAX de ce Champion. 
+
+Chaque frappe a également 75 % de chances de remplir de 10 % le Compteur de Tour de l'allié dont le Compteur de Tour est le plus bas.`,
           damage: "0.13*HP",
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Heal +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Soins +10%", "Chances de Buff/Debuff +10%", "Soins +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "On Teal Wings",
-          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies. <br><br>Then has a 75% chance of placing a [Block Buffs] debuff and a 30% [Decrease SPD] debuff on all enemies for 2 turns. <br><br>Also fills the Turn Meters of all allies by 15%.`,
+          name: "Sur des ailes bleues",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs de tous les ennemis. 
+
+Ensuite, a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis pendant 2 tours. 
+
+Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
           damage: "0.21*HP",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sky Mirage",
-          description: `Places a 50% [Increase RES] buff and a [Perfect Veil] buff on all allies, except this Champion, for 2 turns. <br><br>Decreases the cooldown of all ally active skills, except this Champion's, by 3 turns. The cooldown of this skill cannot be decreased or reset.`,
+          name: "Mirage céleste",
+          description: `Place un buff ${BUFFS.RES} et un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés, sauf ce Champion, pendant 2 tours. 
+
+Réduit de 3 tours le temps de recharge de toutes les compétences alliées actives, sauf celles de ce Champion. Le temps de recharge de cette compétence ne peut être ni réduit ni réinitialisé.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dracospeed [P]",
-          description: `Turn Meter fill effects on allies under [Stun], [Freeze], [Sleep], [Provoke], [Fear], [True Fear], [Petrification], or [Sheep] debuffs are 30% more effective. <br><br>Whenever a [Sheep] debuff is removed or expires on an ally, heals that ally by 25% of their MAX HP and places a 30% [Increase SPD] buff on them for 1 turn. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Heal Multiplier: 0.25*Target Max HP`,
+          name: "Draco-vitesse [P]",
+          description: `Les effets de remplissage du Compteur de Tour dont bénéficient les alliés sous débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION} ou ${DEBUFFS.SLEEP} sont 30 % plus efficaces. 
+
+Dès qu'un débuff ${DEBUFFS.SHEEP} est retiré ou expire sur un allié, soigne cet allié de 25 % de ses PV MAX et lui accorde un buff ${BUFFS.SPD} de 30 % pendant 1 tour. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 80`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
 };

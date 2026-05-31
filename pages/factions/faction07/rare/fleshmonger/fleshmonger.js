@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thorough Butchery",
-          description: `Attacks 1 enemy 3 times.`,
-          damage: "1.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Boucherie Minutieuse",
+          description: `Attaque 3 fois un ennemi.`,
+          damage: "1.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fresh Meat",
-          description: `Places a 25% [Increase ATK] and a 15% [Increase C. RATE] buff on this Champion for 2 turns. Grants an Extra Turn.`,
+          name: "Viande Fraîche",
+          description: `Place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CRATE} de 15 % sur ce Champion pendant 2 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tornado Cleaver",
-          description: `Attacks all enemies. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Tornade de Fendoir",
+          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 23%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 23%`,
 };

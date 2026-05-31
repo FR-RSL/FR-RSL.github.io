@@ -3,35 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Seal Scroll",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a [Block Active Skills] debuff for 2 turns.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Parchemin scellé",
+          description: `Attaque 2 fois un ennemi. Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Thief of Blood",
-          description: `Attacks all enemies. Has an 80% chance of stealing all buffs from each enemy. <br><br>After stealing, applies a [Buff Spread] effect, taking all buffs from this Champion and placing them on all allies.`,
-          damage: "3*ATK",
+          name: "Voleur de Sang",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de voler tous les buffs de chaque ennemi. 
+
+Après le vol, applique un effet [Propagation de Buff], prenant tous les buffs sur ce Champion pour les placer sur tous les alliés.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dread Invocation",
-          description: `Can target dead or living enemies. <br> <br>If the target is dead, places [Block Revive] on them, then attacks all enemies. Each enemy will receive damage equal to 20% of the target enemy's MAX HP. If the target is a Boss' minion, the damage is equal to 20% of this Champion's MAX HP. This attack cannot be critical, and will ignore any [Shield] buffs and 100% of each target's DEF.<br> <br>If the target is alive, places a [True Fear] debuff on them for 2 turns and heals all allies by 20% of the target enemy's MAX HP. If the target is a Boss or a Boss' minion, the healing is equal to 20% of this Champion's MAX HP. The [True Fear] debuff cannot be resisted.<br><br><br>Heal Multiplier: Boss Minion: 0.2*HP or Champion: 0.2*Enemy Max HP`,
+          name: "Invocation de Terreur",
+          description: `Peut cibler les ennemis morts ou vivants. 
+
+Si la cible est morte, lui place un ${DEBUFFS.BLOCK_REA}, puis attaque tous les ennemis. Chaque ennemi recevra des dégâts équivalents à 20 % des PV MAX de l'ennemi ciblé. Si la cible est un sbire de Boss, les dégâts seront équivalents à 20 % des PV MAX de ce Champion. Cette attaque ne peut pas passer en critique et ignorera tous les buffs ${BUFFS.SHIELD}, ainsi que 100 % de la DÉF de chaque cible.
+
+Si la cible est vivante, lui place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours, puis soigne tous les alliés de 20 % des PV MAX de l'ennemi ciblé. Si la cible est un Boss ou un sbire de Boss, les dégâts seront équivalents à 20 % des PV MAX de ce Champion. Il est impossible de résister au débuff ${DEBUFFS.TRUE_FEAR}.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Soul Charge [P]",
-          description: `Revives 1 random ally with 30% HP and 30% Turn Meter each time an enemy is killed. <br><br>Revives 1 random ally with 30% HP and 30% Turn Meter each time a [Block Revive] debuff is placed on an enemy.`,
+          name: "Charge d'Âme [P]",
+          description: `Ranime 1 allié aléatoire avec 30 % de PV et 30 % de Compteur de Tour chaque fois qu'un ennemi est tué. 
+
+Ranime 1 allié aléatoire avec 30 % de PV et 30 % de Compteur de Tour chaque fois qu'un débuff ${DEBUFFS.BLOCK_REA} est placé sur un ennemi.`,
           cooldown: 2,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],

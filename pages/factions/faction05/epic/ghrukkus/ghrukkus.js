@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Beating Staff",
-          description: `Attacks 1 enemy 3 times. Each hit has a 15% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "1.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Bâton de Raclée",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+          damage: "1.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Toe the Line",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Also has a 40% chance of decreasing the target’s Turn Meter by 30%.`,
-          damage: "6.2*ATK",
+          name: "Rentrer dans le rang",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Possède également 40 % de chances de réduire le Compteur de Tour de la cible de 30 %.`,
+          damage: "6.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Harsh Discipline",
-          description: `Attacks all enemies. Has an 80% chance of placing a 50% [Decrease ATK] debuff and a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "4.25*ATK",
+          name: "Discipline sévère",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "4.25*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 24%`,
 };

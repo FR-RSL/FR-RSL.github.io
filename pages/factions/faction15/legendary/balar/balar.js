@@ -3,12 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Epines malignes",
-          description: `
-            Attaque un ennemi. Avant d'attaquer, place un buff <span class='gbt'>Bouclier</span>
-			sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est equivalent a 400% de l'ATQ de ce Champion.${RETURN}${RETURN}
-			A 50% de chances de placer un débuff <span class='gbt'>Sensibilite au Poison</span> de 25% pendant 2 tours.
-          `,
+          name: "Épines malignes",
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de ce Champion. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.POISON_S} de 25 % pendant 2 tours.`,
           damage: "3.8*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -19,11 +17,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tornade de vie",
-          description: `
-            Attaque un ennemi.<br><br>
-			A 75% de chances de placer un débuff <span class='gbt'>Sangsue</span> sur tous les ennemis pendant 2 tours.<br><br>
-			Active instantanement tous les débuffs <span class='gbt'>Poison</span> sur tous les ennemis.
-          `,
+          description: `Attaque un ennemi. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. 
+
+Active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.`,
           damage: "5.5*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -37,13 +35,11 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Croissance monstrueuse",
-          description: `
-            Attaque un ennemi.
-			Avant d'attaquer, place un buff <span class='gbt'>Augmentation de PRE</span> de 50% sur tous les alliés pendant 2 tours.<br><br>
-			A 75% de chances de placer un débuff <span class='gbt'>Reduction de RES</span> de 50% sur tous les ennemis pendant 2 tours.<br><br>
-			Place trois débuffs <span class='gbt'>Poison</span> de 5% sur la cible initiale pendant 2 tours. Si cette attaque est critique,
-			place au lieu de ca trois débuffs <span class='gbt'>Poison</span> de 5% sur tous les ennemis pendant 2 tours.
-          `,
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours. 
+
+Place trois débuffs ${DEBUFFS.POISON} de 5 % sur la cible initiale pendant 2 tours. Si cette attaque est critique, place au lieu de ça trois débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours.`,
           damage: "5.8*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -56,11 +52,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Abandonne au chaos [P]",
-          description: `
-            Augmente l'effet Ignorer la DEF de ce Champion de 1% pour chaque débuff <span class='gbt'>Poison</span> active instantanement par ce Champion (s'accumule jusqu'a 20%).<br><br>
-			Remplit le Compteur de Tour de ce Champion de 5% des qu'un débuff <span class='gbt'>Poison</span> est place sur un ennemi.
-          `,
+          name: "Abandonné au chaos [P]",
+          description: `Augmente l'effet Ignorer la DÉF de ce Champion de 1 % pour chaque débuff ${DEBUFFS.POISON} activé instantanément par ce Champion (s'accumule jusqu'à 20 %). 
+
+Remplit le Compteur de Tour de ce Champion de 5 % dès qu'un débuff ${DEBUFFS.POISON} est placé sur un ennemi.`,
           isPassive: true,
         },
       ],

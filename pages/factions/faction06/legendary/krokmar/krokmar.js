@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Meatsplitter",
-          description: `Attacks 1 enemy. Attacks all enemies 1 time if the first attack is critical.`,
+          name: "Fendeur de viande",
+          description: `Attaque 1 ennemi. Attaque une fois tous les ennemis si la première attaque passe en critique.`,
           damage: "0.18*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gnashing Bog",
-          description: `Attacks all enemies. Places a [Shield] buff on this Champion for 2 turns, equal to 20% of the damage inflicted. <br><br>Also heals this Champion by 10% of their MAX HP for each critical hit.<br><br><br>Shield Multiplier: 0.2*Damage DealtHeal Multiplier: 0.1*HP`,
+          name: "Marais grinçant",
+          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20 % des dégâts infligés. 
+
+Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
           damage: "0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Apex Predator",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on all allies for 3 turns, then grants an Extra Turn.`,
+          name: "Superprédateur",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Voracious Hunger [P]",
-          description: `Whenever this Champion attacks, decreases the target’s ATK or DEF by 5%, as well as ACC or RES by 5%, depending on which stat is the highest (stacks up to 30%).`,
+          name: "Faim insatiable [P]",
+          description: `Dès que ce Champion attaque, réduit l'ATQ ou la DÉF de la cible de 5 %, et sa PRÉ ou sa RÉS de 5 %, selon la statistique la plus élevée (s'accumule jusqu'à 30 %).`,
           isPassive: true
         }
       ],

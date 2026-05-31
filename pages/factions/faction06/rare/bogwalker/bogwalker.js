@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bone Katars",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Katars en Os",
+          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "3.8*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Combo Attack",
-          description: `Attacks all enemies. Places a 30% [Increase DEF] buff on all allies for 2 turns.`,
-          damage: "2*ATK+2.3*DEF",
+          name: "Attaque Combo",
+          description: `Attaque tous les ennemis. Place un buff d'${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
+          damage: "2*ATQ+2.3*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Damage +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Scout [P]",
-          description: `Places a 30% [Reflect Damage] buff on all allies for 1 turn when attacked with a critical hit.`,
+          name: "Éclaireur [P]",
+          description: `Place un buff de ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés, pendant 1 tour, si l'attaque passe en critique.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Dungeons by 25%`,
+  description: `Augmente la statistique PV des Alliés lors des Donjons de 25%`,
 };

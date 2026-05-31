@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hermit Cudgel",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Gourdin d'ermite",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "3.85*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sustained Beating",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Stun] debuff for 1 turn. Decreases the Turn Meters of enemies under [Stun] debuffs by 15%.`,
+          name: "Tabassage continu",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Réduit de 15 % le Compteur de Tour des ennemis sous débuffs ${DEBUFFS.STUN}.`,
           damage: "4.1*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +25%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +25%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unfaze",
-          description: `Removes all [Stun] debuffs from all allies, then places a 60% [Increase DEF] buff and a 25% [Increase RES] buff on all allies for 2 turns.`,
+          name: "Impassible",
+          description: `Retire tous les débuffs ${DEBUFFS.STUN} de tous les alliés, puis place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Finish the Foe [P]",
-          description: `Immune to [Stun] debuffs. <br><br>Increases the damage inflicted by all allies by 15% when attacking enemies under [Stun] debuffs.`,
+          name: "Finir l'ennemi [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}. 
+
+Augmente de 15 % les dégâts infligés par tous les alliés lorsqu'ils attaquent des ennemis sous débuffs ${DEBUFFS.STUN}.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 30%`,
 };

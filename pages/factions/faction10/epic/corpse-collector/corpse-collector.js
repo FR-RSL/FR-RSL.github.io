@@ -3,28 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Insidious Parasite",
-          description: `Attacks 1 enemy.<br><br>Has a 40% chance of placing a [Leech] debuff for 2 turns.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Parasite Insidieux",
+          description: `Attaque un ennemi.
+
+Possède 40 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hailfire",
-          description: `Attacks all enemies.<br><br>Has a 75% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ACC] debuff on all enemies for 2 turns.`,
-          damage: "2.5*ATK",
+          name: "Grêle de Feu",
+          description: `Attaque tous les ennemis.
+
+Possède 75 % de chances de placer, pendant 2 tours et sur tous les ennemis, un débuff de ${DEBUFFS.HEALS} de 100 % et un débuff de ${DEBUFFS.PRE} de 50 %.`,
+          damage: "2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Noxious Escape",
-          description: `Attacks 3 times at random.<br>Each hit has a 75% chance of placing a 5% [Poison] debuff for 2 turns.<br>Places a [Veil] buff on this Champion for 1 turn.`,
-          damage: "1.65*ATK",
+          name: "Fuite Toxique",
+          description: `Attaque 3 fois au hasard.
+Chaque frappe possède 75 % de chances de placer, pendant 2 tours, un débuff d'${DEBUFFS.POISON} de 5 %.
+Place un buff ${BUFFS.VEIL} sur ce Champion pendant 1 tour.`,
+          damage: "1.65*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Arena by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des batailles d'Arène de 40`,
 };

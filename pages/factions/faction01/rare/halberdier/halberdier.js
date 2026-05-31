@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hew",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Tailler",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bisect",
-          description: `Attacks 1 enemy. Will ignore [Shield] and [Block Damage] buffs.`,
-          damage: "4.8*ATK",
+          name: "Couper en Deux",
+          description: `Attaque 1 ennemi. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Cleaving Ax [P]",
-          description: `Increases C. DMG by 40%.`,
+          name: "Fil de Hache [P]",
+          description: `Augmente de 40 % les DÉG C.`,
           isPassive: true
         }
       ],

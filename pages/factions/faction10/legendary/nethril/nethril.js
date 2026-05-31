@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blood Harvest",
-          description: `Attacks 1 enemy 3 times. Has a 30% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Vendanges de Sang",
+          description: `Attaque 3 fois un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ghastly Horrors",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Stun] debuff on all enemies for 1 turn. Places a 30% [Decrease SPD] debuff for 2 turns if the target is not under a [Stun] debuff.`,
-          damage: "4.8*ATK",
+          name: "Horrible Terreur",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour sur tous les ennemis. Place un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours si la cible ne souffre pas du débuff d'${DEBUFFS.STUN}.`,
+          damage: "4.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bat Swarm",
-          description: `Attacks all enemies. Decreases the Turn Meter by 75%.`,
-          damage: "4*ATK",
+          name: "Nuée de Chauves-souris",
+          description: `Attaque tous les ennemis. Réduit de 75 % le Compteur de Tours.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

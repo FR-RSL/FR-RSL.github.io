@@ -3,35 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Nightmare",
-          description: `Attacks 1 enemy 2 times. Each hit decreases the target's Turn Meter by 7.5% if the target is under a [Fear] or a [True Fear] debuff. <br><br>Reduces the cooldown of this Champion's Taste of Despair [P] skill by 1 turn if this attack kills an enemy.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Cauchemar",
+          description: `Attaque 2 fois un ennemi. Chaque frappe réduit le Compteur de Tour de la cible de 7,5 % si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. 
+
+Réduit d'1 tour le temps de recharge de la compétence  
+Goût du Désespoir [P] de ce Champion si cette attaque tue un ennemi.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Haunted Machete",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Fear] debuff for 1 turn and a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns. <br><br>Has a 75% chance of placing a [True Fear] debuff on 2 enemies for 1 turn if this attack kills an enemy. One [True Fear] debuff will be placed on the enemy with the lowest Turn Meter, while one will be placed on the enemy with the highest Turn Meter.`,
-          damage: "5.8*ATK",
+          name: "Machette Hantée",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour et 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur 2 ennemis si cette attaque tue un ennemi. Un débuff ${DEBUFFS.TRUE_FEAR} sera placé sur l'ennemi ayant le Compteur de Tour le plus bas et un autre sera placé sur l'ennemi ayant le Compteur de Tour le plus élevé.`,
+          damage: "5.8*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Well-Used Axe",
-          description: `Revive on Death Attacks 1 enemy. Will ignore 35% of target's DEF if the target is under a [Fear] or a [True Fear] debuff. <br><br>Places a [Block Debuffs] buff for 1 turn, a 30% [Increase SPD] buff for 2 turns, and a [Revive On Death] buff for 2 turns on this Champion if this attack kills an enemy.`,
-          damage: "6*ATK",
+          name: "Hache Émoussée",
+          description: `Attaque un ennemi. Ignorera 35 % de la DÉF de la cible si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Taste of Despair [P]",
-          description: `6 Turns<br>Fills this Champion’s Turn Meter by 50% whenever an enemy’s HP drops below 20%.`,
-          levelInfo: ["Level 1: Cooldown -1", "Level 2: Cooldown -1"],
+          name: "Goût du Désespoir [P]",
+          description: `Remplit le Compteur de Tour de ce Champion de 50 % dès que les PV d'un ennemi tombent sous 20 %.`,
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],

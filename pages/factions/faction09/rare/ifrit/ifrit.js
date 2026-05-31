@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Feebleness Curse",
-          description: `Attacks 1 enemy. Places a 15% [Weaken] debuff for 1 turn.`,
-          damage: "5.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Sort d'Atrophie",
+          description: `Attaque un ennemi. Place un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 1 tour.`,
+          damage: "5.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Withering Bolt",
-          description: `Attacks 1 enemy. Places a 25% [Decrease ATK] debuff for 2 turns. Damage increases according to this Champion's MAX HP.`,
-          damage: "2.5*ATK+0.2*HP",
+          name: "Éclair Accablant",
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
+          damage: "2.5*ATQ+0.2*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Shadow Field [P]",
-          description: `Decreases the damage received by 50% if damage from a single hit exceeds 30% HP. Places a 30% [Decrease DEF] debuff for 2 turns on the attacker if the attack is critical.`,
+          name: "Champ d'Ombres [P]",
+          description: `Réduit de 50 % les dégâts subis si les dégâts d'une seule frappe dépassent 30 % de PV. Place un débuff de ${DEBUFFS.DEF} de 30 % sur l'assaillant, pendant 2 tours, si l'attaque passe en critique.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

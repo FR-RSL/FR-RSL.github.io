@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bring Hope",
-          description: `Attacks 1 enemy. Places a 7.5% [Continuous Heal] buff on the ally with the lowest HP for 1 turn.`,
+          name: "Porteur d'Espoir",
+          description: `Attaque 1 ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 7,5 % sur l'allié ayant le moins de PV.`,
           damage: "3.7*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Succor",
-          description: `Places a 15% [Continuous Heal] buff on all allies for 2 turns. Steals 1 buff from each enemy.`,
+          name: "Secours",
+          description: `Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Vole 1 buff sur chaque ennemi.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Divine Benefaction",
-          description: `Places a [Shield] buff on all allies equal to 25% of their MAX HP for 2 turns. Places a 60% [Increase DEF] buff on this Champion for 2 turns.<br><br><br>Shield Multiplier: 0.25*Target Max HP`,
+          name: "Bienfait Divin",
+          description: `Place, sur tous les alliés, un buff de ${BUFFS.SHIELD} équivalent à 25 % de leurs PV MAX pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Shield +25%", "Level 3: Shield +25%", "Level 4: Cooldown -1"],
+          levelInfo: ["Bouclier +25%", "Bouclier +25%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort4.webp",
-          name: "Stalwart Partner",
-          description: `Attacks all enemies 3 times. <br><br>[Only available when Juliana is on the same team.]`,
+          name: "Partenaire Fidèle",
+          description: `Attaque 3 fois tous les ennemis.
+
+[Uniquement disponible lorsque Juliana se trouve dans la même équipe.]`,
           damage: "1.4*DEF",
           cooldown: 3,
           isPassive: false

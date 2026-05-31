@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gigantic Cleavers",
-          description: `Attacks 1 enemy 2 times. <br><br>Has a 50% chance of placing a [Stun] debuff for 1 turn. The chance increases to 75% if the target's Turn Meter is equal to or higher than 50%.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Fendoirs Géants",
+          description: `Attaque 2 fois un ennemi. 
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 75 % si le Compteur de Tour de la cible est supérieur ou égal à 50 %.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hack to Bits",
-          description: `Attacks 1 enemy 4 times. <br><br>Each hit will ignore 20% of the target's DEF. Each critical hit has a 50% chance to decrease the cooldown of the Gore Maker skill by 1 turn.`,
-          damage: "1.5*ATK",
+          name: "Couper en Morceaux",
+          description: `Attaque 4 fois un ennemi. 
+
+Chaque frappe ignorera 20 % de la DÉF de la cible. Chaque coup critique offre 50 % de chances de réduire d'1 tour le temps de recharge de la compétence Faiseur de Carnage.`,
+          damage: "1.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gore Maker",
-          description: `Attacks all enemies. <br><br>Will ignore 20% of each target's DEF. Will ignore a further 5% of DEF for each buff on this Champion.`,
-          damage: "4*ATK",
+          name: "Faiseur de Carnage",
+          description: `Attaque tous les ennemis. 
+
+Ignorera 20 % de la DÉF de chaque cible. Ignorera 5 % de DÉF supplémentaires pour chaque buff sur ce Champion.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "War Machine [P]",
-          description: `Increases this Champion's SPD by 6 (stacks up to 30) and C. DMG by 7% (stacks up to 35%) for each enemy this Champion kills in a Round. Will not reset if this Champion is killed.<br><br>Whenever an enemy Champion is revived, fills this Champion's Turn Meter by 30% for each revived enemy, then places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 1 turn.`,
+          description: `Increases this Champion's SPD by 6 (stacks up to 30) and C. DMG by 7% (stacks up to 35%) for each enemy this Champion kills in a Round. Will not reset if this Champion is killed.<br><br>Whenever an enemy Champion is revived, fills this Champion's Turn Meter by 30% for each revived enemy, then places a 50% ${BUFFS.ATK} buff and a 30% ${BUFFS.CDAM} buff on this Champion for 1 turn.`,
           isPassive: true
         }
       ],

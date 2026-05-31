@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vile Physick",
-          description: `Attacks all enemies. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Vile drogue",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "3.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Savant's Savvy",
-          description: `Has a 75% chance of placing two 5% [Poison] debuffs and a 25% [Poison Sensitivity] debuff on all enemies for 2 turns. Also places a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Expertise de savant",
+          description: `Possède 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % sur tous les ennemis pendant 2 tours. Place également un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Chymistry",
-          description: `Increases the duration of all [Poison] debuffs and [HP Burn] debuffs on all enemies by 1 turn. Then, instantly activates one tick of all [Poison] debuffs and [HP Burn] debuffs on all enemies. <br><br>Places a 25% [Weaken] debuff for 2 turns on enemies not under [Poison] debuffs or [HP Burn] debuffs.`,
+          name: "Chymie",
+          description: `Augmente d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis. Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis. 
+
+Place pendant 2 tours un débuff ${DEBUFFS.WEAKEN} de 25 % sur les ennemis qui ne se trouvent pas sous débuff ${DEBUFFS.POISON} ou ${DEBUFFS.BURN}.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fumigator [P]",
-          description: `This Champion’s RES is increased by 5 for each [Poison] debuff on the enemy team.`,
+          name: "Fumigateur [P]",
+          description: `La RÉS de ce Champion est augmentée de 5 % pour chaque débuff ${DEBUFFS.POISON} dont est affligée l'équipe ennemie.`,
           isPassive: true
         }
       ],
@@ -46,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 50`,
 };

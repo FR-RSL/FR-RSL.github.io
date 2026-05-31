@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bodkin",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease DEF] debuff for 1 turn.`,
-          damage: "5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Poignard",
+          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          damage: "5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fire Arrow",
-          description: `Attacks 1 enemy. Destroys enemy MAX HP by 15% of damage dealt.`,
-          damage: "7.7*ATK",
+          name: "Flèche de Feu",
+          description: `Attaque un ennemi. Détruit les PV MAX des ennemis de 15 % des dégâts infligés.`,
+          damage: "7.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Salvo",
-          description: `Attacks all enemies.`,
-          damage: "4.8*ATK",
+          name: "Salve",
+          description: `Attaque tous les ennemis.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

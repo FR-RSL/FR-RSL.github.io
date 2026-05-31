@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lead the Charge",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 50% [Increase ATK] buff on a random ally for 2 turns.`,
+          name: "Sonne la Charge",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un buff ${BUFFS.ATK} de 50 % sur un allié pris au hasard pendant 2 tours.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blinding Assault",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a 50% [Decrease ACC] debuff and a [Leech] debuff on the target for 2 turns. This attack is always critical.`,
+          name: "Assaut Aveuglant",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.LEECH} sur la cible pendant 2 tours. Cette attaque passe toujours en critique.`,
           damage: "5.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stalwart Guardian",
-          description: `Places a 50% [Ally Protection] buff on the target for 2 turns and a 60% [Increase DEF] buff on the target and on this Champion for 2 turns. Also places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Gardien Fidèle",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur la cible pendant 2 tours et un buff ${BUFFS.DEF} de 60 % sur la cible et ce Champion pendant 2 tours. Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 20%`,
 };

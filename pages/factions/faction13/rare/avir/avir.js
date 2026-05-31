@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Flask of Vitreol",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Flasque de Vitriol",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Corroding Catalyst",
-          description: `Attacks all enemies. Has a 50% chance of placing a 25% [Decrease ATK] debuff for 2 turns. Also places a 15% [Decrease SPD] debuff for 1 turn on targets under [Poison] debuffs.`,
-          damage: "4.2*ATK",
+          name: "Catalyseur Corrosif",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours. Place un débuff ${DEBUFFS.SPD} de 15 % pendant 1 tour sur les cibles affligées de débuffs ${DEBUFFS.POISON}.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Buff/Debuff Chance +20%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vitalizing Potions",
-          description: `Fills the Turn Meters of all allies by 15% and heals all allies by 15% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.15*HP`,
+          name: "Potions Revigorantes",
+          description: `Remplit le compteur de tour de tous les alliés de 15 %, puis les soigne à hauteur de 15 % des PV MAX de ce Champion.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

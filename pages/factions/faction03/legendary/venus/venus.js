@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pining",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Clouer",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blind With Infatuation",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] and a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Aveuglé par Tocade",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % et un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burning Passion",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Passion Brûlante",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort4.webp",
-          name: "Pure Partner",
-          description: `Removes all buffs from all enemies. Has a 50% chance of granting an Extra Turn. <br><br>[Only available when Cupidus is on the same team.]`,
+          name: "Partenaire Pure",
+          description: `Retire tous les buffs de tous les ennemis. Possède 50 % de chances d'accorder un Tour Supplémentaire.
+
+[Uniquement disponible lorsque Cupidon se trouve dans la même équipe.]`,
           cooldown: 4,
           isPassive: false
         }
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

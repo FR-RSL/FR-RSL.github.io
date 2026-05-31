@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Castigate",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Punir",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "0.24*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Holy Equity",
-          description: `Heals the ally with the lowest HP by 20% of this Champion’s MAX HP, then equalizes the HP levels of all allies and grants this Champion an Extra Turn.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Sainte Équité",
+          description: `Soigne l'allié ayant le moins de PV de 20 % des PV MAX de ce Champion, puis égalise les niveaux de PV de tous les alliés et accorde un Tour supplémentaire à ce Champion.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rebuff [P]",
-          description: `Receives 15% less damage from enemies under [Provoke] debuffs.`,
+          name: "Rebuffade [P]",
+          description: `Reçoit 15 % de dégâts en moins de la part des ennemis sous débuff ${DEBUFFS.PROVOKE}.`,
           isPassive: true
         }
       ],

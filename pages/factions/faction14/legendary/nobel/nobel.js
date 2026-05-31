@@ -3,11 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Eclair Fracassant",
-          description: `
-            Attaque un ennemi. Possède 40% de chances de reduire d'1 tour la duree de 2 buffs aleatoires de la cible.<br><br>
-			Si la cible se trouve sous debuff <span class='gbt'>class<>
-          `,
+          name: "Sentir la Peur",
+          description: `Attaque un ennemi. Possède 40 % de chances de réduire d'1 tour la durée de 2 buffs aléatoires de la cible. 
+
+Si la cible se trouve sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit au lieu de ça la durée de tous les buffs de la cible d'1 tour.`,
           damage: "3.7*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -18,13 +17,14 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Deluge Brulant",
-          description: `
-            Attaque 3 fois au hasard. Chaque frappe Possède 75% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> pendant 3 tours.
-            Place également un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 2 tours.<br><br>
-            Lorsqu'elle est utilisee contre les Boss, activera instantanement les débuffs <span class='gbt'>Brulure de PV</span>, ont
-            les débuffs <span class='gbt'>Brulure de PV</span> places par cette compétence.
-          `,
+          name: "Héraut",
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. 
+
+Avant d'attaquer, si la cible est affligée d'un buff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.
+
+Après l'attaque, si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit d'1 tour le temps de recharge de la compétence Désarroi.
+
+Ensuite, remplit le Compteur de Tour de ce Champion de 25 %.`,
           cooldown: 4,
           damage: "2*ATQ",
           levelInfo: [
@@ -37,12 +37,10 @@ const championData = {
         },
         {
           img: "assets/sort3.webp",
-          name: "Entaille Cyan",
-          description: `
-            Attaque tous les ennemis. Possède 75% de chances de placer un débuff <span class='gbt'>Gel</span> pendant 1 tour.<br><br>
-            Lorsqu'elle cible un Boss, n'attaquera que le Boss et ignorera 50% de la DEF de la cible. Reduira également d'1 tour le
-            temps de recharge de la compétence <span class='gt'>Deluge Brulant</span>.
-          `,
+          name: "Désarroi",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de voler 50 % du Compteur de Tour actuel de la cible. 
+
+Si cette attaque tue une cible sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit d'1 tour le temps de recharge de la compétence Héraut.`,
           cooldown: 5,
           damage: "3*ATQ (Zone) | 3.9*ATQ (Monocible)",
           levelInfo: [
@@ -54,12 +52,8 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Escalade [P]",
-          description: `
-            Augmente l'ATQ de Ninja de 10% (jusqu'a 100%) et ses DEG C. de 5% (jusqu'a 25%) chaque fois qu'un seul ennemi se fait frapper par les trois
-            compétences Actives de Ninja lors d'un meme Round. Cet effet peut survenir plusieurs fois contre le meme ennemi.<br><br>
-            Lors de combats contre les Boss, augmentera par contre l'ATQ de Ninja de 20% (jusqu'a 100%) et ses DEG C. de 10% (jusqu'a 25%).
-          `,
+          name: "Désolation [P]",
+          description: `Dès que le Compteur de Tour d'un ennemi est réduit par n'importe quel Champion, possède 20 % de chances de placer un débuff ${DEBUFFS.FEAR} sur cet ennemi pendant 1 tour.`,
           isPassive: true,
         },
       ],

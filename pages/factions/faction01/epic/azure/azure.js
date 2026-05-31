@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lunge",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a [Stun] debuff for 1 turn. This chance increases to 100% if the target has an [Increase SPD] buff.`,
-          damage: "ATK*2.1",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Fente",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 100 % si la cible dispose d'un buff ${BUFFS.SPD}.`,
+          damage: "ATQ*2.1",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Aegis",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places a [Shield] buff on this Champion equal to 40% of this Champion's MAX HP for 2 turns. This buff cannot be removed.<br><br><br>Shield Multiplier: 0.4*HP`,
+          name: "Égide",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés, sauf sur ce Champion. Place, sur ce Champion, un buff de ${BUFFS.SHIELD} équivalent à 40 % des PV MAX de ce Champion pendant 2 tours. Il est impossible de retirer ce buff.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Coup de Grace",
-          description: `Attacks 1 enemy. Places an extra hit if the target has a [Stun] debuff. The extra hit is always critical. Steals 50% of the target's Turn Meter if they are not under a [Stun] debuff.`,
-          damage: "2*ATK+0.2*HP",
+          name: "Coup de Grâce",
+          description: `Attaque un ennemi. Place une frappe supplémentaire si la cible est affligée d'un débuff ${DEBUFFS.STUN}. La frappe supplémentaire passe toujours en critique. Vole 50 % du Compteur de Tour de la cible si elle ne se trouve pas sous débuff ${DEBUFFS.STUN}.`,
+          damage: "2*ATQ+0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Damage +10%", "Level 6: Damage +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

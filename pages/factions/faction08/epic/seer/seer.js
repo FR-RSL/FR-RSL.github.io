@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Knock Out",
-          description: `Attacks 1 enemy. Has a 15% chance of granting an Extra Turn.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Assommer",
+          description: `Attaque un ennemi. Possède 15 % de chances d'accorder un Tour Supplémentaire.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Clan Banner",
-          description: `Places a 30% [Increase C. RATE] buff on all allies for 2 turns. Places a 25% [Weaken] debuff on all enemies for 2 turns.`,
+          name: "Bannière de Clan",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés. Place, pendant 2 tours, un débuff d'${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Karma Burn",
-          description: `Removes all buffs from all allies and enemies, then attacks all enemies. Damage increases according to the number of removed buffs. Has a 50% chance of placing a [Sleep] debuff on all enemies for 1 turn. The chance of placing a [Sleep] debuff increases by 5% for each buff removed. Inflicts less damage to Bosses.`,
+          name: "Brûlure Karmique",
+          description: `Retire tous les buffs de tous les alliés et de tous les ennemis, puis attaque tous les ennemis. Les dégâts augmentent en fonction du nombre de buffs retirés. Possède 50 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour sur tous les ennemis. Les chances de placer un débuff de ${DEBUFFS.SLEEP} augmentent de 5 % pour chaque buff retiré. Inflige moins de dégâts aux Boss.`,
           damage: "Non-Boss: Enemy Max HP * (0.1+0.03*Buffs) OR Boss: Enemy Max HP * (0.1+0.005*Buffs)",
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

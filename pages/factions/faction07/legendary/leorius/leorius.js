@@ -3,34 +3,48 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lion's Twinclaws",
-          description: `Attacks 1 enemy 2 times. Each hit has a 60% chance of placing a 60% [Decrease DEF] debuff for 2 turns.<br><br>Damage increases by 20% if the target has less than 60% HP.`,
-          damage: "1.65*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Doubles griffes du Lion",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.
+
+Dégâts augmentés de 20 % si la cible possède moins de 60 % de PV.`,
+          damage: "1.65*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rage of the Pride",
-          description: `Attacks all enemies 2 times.<br><br>[Passive Effect]<br><br>This Champion is immune to [Stun], [Freeze], [Sleep], [Provoke], [Fear], [True Fear], [Petrification] debuffs when this Skill is not on cooldown.`,
-          damage: "2*ATK",
+          name: "Rage de la Troupe",
+          description: `Attaque 2 fois tous les ennemis.
+
+${PASSIVE}
+
+Ce Champion est immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} et ${DEBUFFS.PETRIFICATION} lorsque cette Compétence n'est pas en recharge.`,
+          damage: "2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Awesome Roar",
-          description: `Attacks all enemies. Has an 80% chance of placing a [True Fear] debuff for 1 turn. <br><br>Before attacking, has an 80% chance of placing a 25% [Weaken] debuff on all enemies for 2 turns.`,
-          damage: "3.85*ATK",
+          name: "Rugissement terrifiant",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. 
+
+Avant d'attaquer, possède 80 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.`,
+          damage: "3.85*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "True Grit [P]",
-          description: `[Active Effect]<br><br>Instantly places an [Unkillable] buff on this Champion for 1 turn before receiving a fatal hit.<br><br>[Passive Effect]<br><br>Damage increases as the Champion's HP decreases (by 1% for every 1% of HP lost).`,
+          name: "Courage Absolu [P]",
+          description: `${ACTIVE}
+
+Place instantanément un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion avant qu'il reçoive un coup fatal.
+
+${PASSIVE}
+
+Les dégâts augmentent à mesure que les PV du Champion baissent (+1 % par 1 % de PV perdus).`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +63,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 24%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 24%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Recoup",
-          description: `Attacks 1 enemy. Places a 7.5% [Continuous Heal] buff on this Champion for 1 turn if the hit is critical.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Recouvrer",
+          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 7,5 % sur ce Champion si la frappe passe en critique.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Toxin Flurry",
-          description: `Attacks all enemies 2 times. Each hit has a 50% chance of placing a 2.5% [Poison] debuff for 2 turns.`,
-          damage: "1.75*ATK",
+          name: "Déluge de Toxines",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          damage: "1.75*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Scorch Shot",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "6*ATK",
+          name: "Tir Brûlant",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Campaign by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Campagne de 21%`,
 };

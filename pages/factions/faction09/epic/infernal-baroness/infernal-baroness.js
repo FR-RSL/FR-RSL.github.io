@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Life Syphon",
-          description: `Attacks all enemies.<br><br>Heals the ally with the lowest HP by 5% of the damage inflicted.<br><br><br>Heal Multiplier: 0.05*Damage Dealt`,
+          name: "Siphon de Vie",
+          description: `Attaque tous les ennemis.
+
+Soigne l'allié ayant le moins de PV de 5 % des dégâts infligés.`,
           damage: "2.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Clinging Dark",
-          description: `Attacks all enemies.<br><br>Has a 50% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns.`,
+          name: "Sombre Crampon",
+          description: `Attaque tous les ennemis.
+
+Possède 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.`,
           damage: "4.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Disappear",
-          description: `Places a [Perfect Veil] buff on an ally for 3 turns.`,
+          name: "Disparition",
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} sur un allié pendant 3 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

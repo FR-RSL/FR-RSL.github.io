@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Nobleman's Mace",
-          description: `Attacks 1 enemy 2 times. The first hit has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns. The second hit has a 40% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Masse du Noble",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. La seconde frappe possède 40 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ring True",
-          description: `Removes all debuffs from this Champion, then attacks all enemies.`,
-          damage: "4.2*ATK",
+          name: "Vraisemblable",
+          description: `Retire tous les débuffs sur ce Champion, puis attaque tous les ennemis.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unshakable Valor",
-          description: `Attacks 1 enemy. Will ignore 30% of the target’s DEF. <br><br>Places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns if this attack kills an enemy. These buffs cannot be removed.`,
-          damage: "6.7*ATK",
+          name: "Valeur inébranlable",
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. 
+
+Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si cette attaque tue un ennemi. Il est impossible de retirer ces buffs.`,
+          damage: "6.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 20%`,
 };

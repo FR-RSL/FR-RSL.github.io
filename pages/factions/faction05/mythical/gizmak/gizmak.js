@@ -4,40 +4,52 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Magma Hurl",
-          description: `Attacks 1 enemy. <br><br>Increases the duration of any [HP Burn] debuffs on the target by 1 turn. If the target is not under a [HP Burn] debuff, decreases the duration of 2 random buffs on that enemy by 1 turn instead. These effects cannot be resisted if this attack is critical. <br><br>Then, attacks all enemies not under [HP Burn] debuffs, except the initial target. Decreases the duration of 2 random buffs on all enemies hit by 1 turn. This effect cannot be resisted if this attack is critical.`,
-          damage: "5.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Lancer de magma",
+          description: `Attaque un ennemi. 
+
+Augmente d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur la cible. Si la cible n'est pas sous débuff ${DEBUFFS.BURN}, réduit d'1 tour la durée de 2 buffs aléatoires sur cet ennemi à la place. Il est impossible de résister à ces effets si cette attaque passe en critique. 
+
+Ensuite, attaque tous les ennemis qui ne sont pas sous débuffs ${DEBUFFS.BURN}, sauf la cible initiale. Réduit d'1 tour la durée de 2 buffs aléatoires sur tous les ennemis frappés. Il est impossible de résister à cet effet si cette attaque passe en critique.`,
+          damage: "5.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flames of Resentment",
-          description: `Attacks all enemies. <br><br>Before attacking, increases the duration of all [HP Burn] debuffs on all enemies by 1 turn, then instantly activates one tick of all [HP Burn] debuffs on all enemies. This effect cannot be resisted if this Champion's C.RATE is 100% or higher. <br><br>Finally, increases the duration of all debuffs on all enemies by 1 turn, and places a 30% [Decrease SPD] debuff on all enemies for 2 turns. These effects cannot be resisted if this attack is critical.`,
-          damage: "5.8*ATK",
+          name: "Flammes de ressentiment",
+          description: `Attaque tous les ennemis. 
+
+Avant d'attaquer, augmente d'1 tour la durée de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis, puis active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis. Il est impossible de résister à cet effet si le TAUX C. de ce Champion est supérieur ou égal à 100 %. 
+
+Enfin, augmente d'1 tour la durée de tous les débuffs sur tous les ennemis, puis place un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ces effets si cette attaque est critique.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Let Me At 'Em!",
-          description: `Places a 30% [Increase С.DMG] buff, a 30% [Increase C.RATE] buff and a 30% [Increase SPD] buff on all allies for 3 turns. <br><br>Then, grants an Extra Turn.`,
+          name: "Laissez-les moi !",
+          description: `Place un buff ${BUFFS.CDAM} de 30 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 3 tours. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spark of Anger [P]",
-          description: `Before any Champion takes their turn in a Round, places a [HP Burn] debuff on all enemies for 2 turns. Occurs once per Round. This effect cannot be resisted if this Champion's C.RATE is 100% or higher. <br><br>Also before the start of this Champion's turn, has a 50% chance of placing a [HP Burn] debuff on all enemies for 1 turn. This effect cannot be resisted if this Champion's C.RATE is 100% or higher.`,
+          name: "Étincelle de colère [P]",
+          description: `Avant qu'un Champion joue son tour dans une Manche, place un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. Se produit une fois par Manche. Il est impossible de résister à cet effet si le TAUX C. de ce Champion est supérieur ou égal à 100 %. 
+
+Également avant le début du tour de ce Champion, a 50 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 1 tour. Il est impossible de résister à cet effet si le TAUX C. de ce Champion est supérieur ou égal à 100 %.`,
           cooldown: 1,
           isPassive: true
         }
@@ -54,7 +66,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/crit.webp",
-    description: `Increases Ally C.RATE in All Battles by 27%`,
+    description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 27%`,
   },
   },
   form2: {
@@ -62,40 +74,56 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Totemic Vengeance",
-          description: `Attacks 1 enemy. If this Champion’s HP or the initial target’s HP is equal to or lower than 50%, attacks all enemies instead.<br><br>Increases the duration of 2 random debuffs on the target by 1 turn. If attacking all enemies, increases the duration of 2 random debuffs on all enemies by 1 turn instead. This effect cannot be resisted if this attack is critical.`,
+          name: "Vengeance totémique",
+          description: `Attaque un ennemi. Si les PV de ce Champion ou les PV de la cible initiale sont inférieurs ou égaux à 50 %, attaque tous les ennemis à la place.
+
+Augmente d'1 tour la durée de 2 débuffs aléatoires de la cible. En cas d'attaque sur tous les ennemis, augmente d'1 tour la durée de 2 débuffs aléatoires sur tous les ennemis à la place. Il est impossible de résister à cet effet si cette attaque passe en critique.`,
           damage: "0.14*HP+0.7*DEFMultiplier: 0.2*HP+0.7*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +20%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "KABOOM!",
-          description: `Attacks all enemies. <br><br>Before attacking, places a 60% [Decrease DEF] debuff on all enemies for 2 turns. This debuff cannot be resisted if the target is under a [HP Burn] debuff. <br><br>Places an extra hit on enemies under [HP Burn] debuffs. <br><br>Grants an Extra Turn if this attack kills an enemy.`,
+          name: "BOUM !",
+          description: `Attaque tous les ennemis. 
+
+Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff si la cible se trouve sous débuff ${DEBUFFS.BURN}. 
+
+Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.BURN}. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "0.23*HP+0.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Ungodly Fury",
-          description: `Places a [Pain Link] debuff on a target enemy for 2 turns. This debuff cannot be removed, resisted, or blocked. <br><br>When calculating the damage inflicted by the [Pain Link] debuff, 75% of the attacker's skill multiplier is reflected. The damage inflicted by the [Pain Link] debuff will ignore 100% of the target’s DEF. <br><br>Also places a [Taunt] buff and an [Unkillable] buff on this Champion for 2 turns. Finally, places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.`,
+          name: "Furie impie",
+          description: `Place un débuff ${DEBUFFS.PAIN_LINK} sur l'ennemi ciblé pendant 2 tours. Il est impossible de retirer ce débuff, d'y résister et de le bloquer. 
+
+Lors du calcul des dégâts infligés par le débuff ${DEBUFFS.PAIN_LINK}, 75 % du multiplicateur de compétence de l'assaillant sont reflétés. Les dégâts infligés par le débuff ${DEBUFFS.PAIN_LINK} ignoreront 100 % de la DÉF de la cible. 
+
+Place également un buff ${BUFFS.TAUNT} et un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours. Enfin, place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Burning Juggernaut [P]",
-          description: `Will ignore 15% of a target’s DEF if this Champion’s HP or the target’s HP is equal to or greater than 50%. If this Champion’s HP or the target’s HP is less than 50%, will ignore 25% of the target’s DEF instead. <br><br>Will also ignore [Block Damage] and [Shield] buffs when attacking enemies under [HP Burn] debuffs. <br><br>Inflicts 20% more damage to enemies not under a [HP Burn] debuff.`,
+          name: "Mastodonte brûlant [P]",
+          description: `Ignorera 15 % de la DÉF d'une cible si les PV de ce Champion ou les PV de la cible sont supérieurs ou égaux à 50 %. Si les PV de ce Champion ou les PV de la cible sont inférieurs à 50 %, ignorera 25 % de la DÉF de la cible à la place. 
+
+Ignorera également les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.SHIELD} lors des attaques sur les ennemis sous débuffs ${DEBUFFS.BURN}. 
+
+Inflige 20 % de dégâts en plus aux ennemis qui ne sont pas sous débuff ${DEBUFFS.BURN}.`,
           isPassive: true
         }
       ],
@@ -111,7 +139,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/crit.webp",
-    description: `Increases Ally C.RATE in All Battles by 27%`,
+    description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 27%`,
   },
   },
 };

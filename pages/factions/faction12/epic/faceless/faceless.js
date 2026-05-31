@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fireball",
-          description: `Attacks 1 enemy. Has a 15% chance of placing an extra hit.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Boule de feu",
+          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lightning",
-          description: `Places a 30% [Increase C. RATE] buff on this Champion for 2 turns, then attacks 1 enemy.`,
-          damage: "5.5*ATK",
+          name: "Éclair",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 %, puis attaque un ennemi.`,
+          damage: "5.5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ice Bolt",
-          description: `Attacks 1 enemy. Will ignore [Shield] and [Block Damage] buffs as well as DEF.`,
-          damage: "3*ATK",
+          name: "Éclair de Glace",
+          description: `Attaque un ennemi. Ignorera le ${BUFFS.SHIELD} et les buffs de ${BUFFS.BLOCK_DAMAGE}, ainsi que la DÉF.`,
+          damage: "3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 21%`,
 };

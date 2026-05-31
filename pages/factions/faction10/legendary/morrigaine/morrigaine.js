@@ -3,32 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Haunt With Hesitation",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Hanter avec réserve",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "4.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shriek of the Banshee",
-          description: `Has a 75% chance of stealing all buffs from a target enemy. <br><br>Also has a 75% chance of placing a [True Fear] debuff on all enemies for 1 turn. Will place a 50% [Decrease ACC] debuff for 2 turns instead if the target is a Boss.`,
+          name: "Hurlement de Banshee",
+          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie. 
+
+Possède également 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Placera sinon un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours si la cible est un Boss.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Velocimancy",
-          description: `Has a 75% chance of decreasing the Turn Meters of all enemies by 20%. <br><br>Fills the Turn Meters of all allies by 20% and places a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Vélocimancie",
+          description: `Possède 75 % de chances de réduire de 20 % le Compteur de Tour de tous les ennemis. 
+
+Remplit le Compteur de tour de tous les alliés de 20 % et place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "She Who Is Death [P]",
-          description: `At the start of each turn, places a 100% [Heal Reduction] debuff for 2 turns on the enemy with the lowest HP. This debuff cannot be removed, transferred, spread, or have its duration increased or decreased by enemies or allies.`,
+          name: "La morte [P]",
+          description: `Au début de chaque tour, place pendant 2 tours un débuff ${DEBUFFS.HEALS} de 100 % sur l'ennemi ayant le moins de PV. Il est impossible pour les ennemis ou les alliés de retirer, transférer ou propager ce buff, et d'augmenter ou de réduire sa durée.`,
           isPassive: true
         }
       ],
@@ -46,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

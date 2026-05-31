@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sword of Suns",
-          description: `Attacks 1 enemy. <br><br>Places a 60% [Decrease DEF] debuff for 2 turns. This debuff cannot be resisted when Vlad the Nightborn is on the same team.<br><br>Places an extra hit if the target is under any debuff.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Épées solaires",
+          description: `Attaque un ennemi. 
+
+Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff si Vlad le Nocturne se trouve dans la même équipe.
+
+Place une frappe supplémentaire si la cible se trouve sous un débuff.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rune Shatter",
-          description: `Attacks all enemies 2 times. Each hit will ignore 15% of each target's DEF.<br><br>Each hit will ignore an additional 10% of each target's DEF for every [Leech], [Decrease DEF], and [Block Active Skills] debuff they are under.<br><br>If a target is under [Leech], [Decrease DEF], and [Block Active Skills] debuffs simultaneously, each hit will ignore 75% of their DEF instead.`,
-          damage: "2.5*ATK",
+          name: "Fracas de Runes",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe ignorera 15 % de la DÉF de chaque cible.
+
+Chaque frappe ignorera 10 % supplémentaires de la DÉF de chaque cible pour chaque débuff ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} dont elle est affligée.
+
+Si une cible est sous débuffs ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} simultanément, chaque frappe ignorera au lieu de ça 75 % de sa DÉF.`,
+          damage: "2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Quietude",
-          description: `Attacks 1 enemy. Before attacking, steals all buffs from the target and transfers all debuffs from this Champion to the target. This effect cannot be resisted when Vlad the Nightborn is on the same team.<br><br>Resets the cooldown of this skill if the target is killed.`,
-          damage: "6.5*ATK",
+          name: "Quiétude",
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible et transfère tous les débuffs de ce Champion sur la cible. Il est impossible de résister à cet effet si Vlad le Nocturne se trouve dans la même équipe.
+
+Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Exalted [P]",
-          description: `Enemies from the Undead Horde, Demonspawn, and Knights Revenant Factions killed by this Champion cannot be revived. <br><br>[All enemies killed by this Champion cannot be revived when Vlad the Nightborn is on the same team.]`,
+          name: "Exalté [P]",
+          description: `Les ennemis des Factions des Morts-vivants, Rejetons Démoniaques et Revenants Chevaliers tués par ce Champion ne peuvent pas être ranimés. 
+
+[Les ennemis tués par ce Champion ne peuvent pas être ranimés lorsque Vlad le Nocturne se trouve dans la même équipe.]`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Arena by 35%`,
+  description: `Augmente la statistique ATQ des Alliés lors des batailles d'Arène de 35%`,
 };

@@ -4,22 +4,21 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Crocs Conduits",
-          description: `Attaque un ennemi. Possede 75% de chances de transferer sur la cible un debuff aleatoire de ce Champion.`,
+          description: `Attaque un ennemi. Possède 75 % de chances de transférer sur la cible un débuff aléatoire de ce Champion.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Sombres Benedictions",
-          description: `Soigne un allie a hauteur de 20% des PV MAX de ce Champion. Remplit egalement le Compteur de Tour de la cible de 30% si cette Competence la soigne entierement. Place un buff ${BUFFS.VEIL} sur la cible pendant 1 tour si cette Competence ne la soigne pas entierement.`,
+          name: "Sombres Bénédictions",
+          description: `Soigne un allié à hauteur de 20 % des PV MAX de ce Champion. Remplit également de 30 % le Compteur de Tour de la cible si cette Compétence la soigne entièrement. Place un buff ${BUFFS.VEIL} d'1 tour sur la cible si cette Compétence ne la soigne pas entièrement.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
           name: "Retour dans les Rangs",
-          description: `Ranime un allie avec 30% de PV et 30% de Compteur de Tour.${RETURN}${RETURN}
-Place un buff ${BUFFS.UNKILLABLE} pendant 1 tour et un buff ${BUFFS.HEALS} de 15% pendant 2 tours sur l'allie ranime.`,
+          description: `Ranime un allié tombé avec 30 % de PV, puis remplit de 30 % son Compteur de Tour. Place également un buff ${BUFFS.UNKILLABLE} d'1 tour sur la cible et un buff ${BUFFS.HEALS} de 15 % pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         }

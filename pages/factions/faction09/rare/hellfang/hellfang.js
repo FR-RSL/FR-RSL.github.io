@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Tear",
-          description: `Attacks 1 enemy. Has a 15% chance of putting the target's skills on cooldown.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Accroc",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer les compétences de la cible en recharge.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hunter's Mark",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 25% [Weaken] debuff for 1 turn.`,
-          damage: "5.1*ATK",
+          name: "Marque du Chasseur",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 1 tour.`,
+          damage: "5.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Chilling Howl",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Freeze] debuff for 1 turn.<br><br>[Only available when Hound Spawn is on the same team.]`,
-          damage: "3.5*ATK",
+          name: "Hurlement Effrayant",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.
+
+[Uniquement disponible lorsque Rejeton de Cabot est dans la même équipe.]`,
+          damage: "3.5*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 21%`,
 };

@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vanity Fists",
-          description: `Attacks 1 enemy 2 times. Each hit has a 35% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Poings vaniteux",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.12*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Explosive Temper",
-          description: `Attacks all enemies. Removes all [Increase DEF] buffs from enemies before attacking. Places an extra hit if this attack kills an enemy.`,
+          name: "Colère explosive",
+          description: `Attaque tous les ennemis. Retire tous les buffs ${BUFFS.DEF} des ennemis avant d'attaquer. Place une frappe supplémentaire si cette attaque tue un ennemi.`,
           damage: "0.29*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Roar of Victory",
-          description: `Places a 50% [Increase ACC] buff on all allies for 3 turns. Also places a 30% [Increase C. DMG] buff on this Champion for 3 turns, then grants an Extra Turn.`,
+          name: "Rugissement victorieux",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 3 tours. Place également un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 3 tours, puis accorde un tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Affronted [P]",
-          description: `Decreases the damage this Champion receives from critical hits by 20%. Counterattacks the attacker when hit with a critical hit.<br><br>Has a 50% chance of counterattacking the attacker when hit with a strong, normal or weak hit.`,
+          name: "Offensé [P]",
+          description: `Réduit de 20 % les dégâts que ce Champion reçoit des coups critiques. Contre-attaque l'assaillant lorsque ce Champion est frappé par un coup critique.
+
+Possède 50 % de chances de contre-attaquer l'assaillant lorsque ce Champion est atteint par une frappe puissante, normale ou faible.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%`,
 };

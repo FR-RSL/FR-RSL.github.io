@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Frost Piercer",
-          description: `Attacks 3 times at random. Each hit has a 30% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "1.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Perceur de givre",
+          description: `Attaque 3 fois de façon aléatoire. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          damage: "1.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dancing Razor",
-          description: `Attacks 1 enemy 4 times. The first and the second hit have a 50% chance to place a 50% [Decrease ATK] debuff for 2 turns. The third and the fourth hit have a 50% chance to place a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "1.35*ATK",
+          name: "Rasoir dansant",
+          description: `Attaque 4 fois un ennemi. 
+
+La première et la deuxième frappe possèdent 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+La troisième et la quatrième frappe possèdent 50 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "1.35*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Chromatic Cross",
-          description: `Attacks all enemies 2 times. Each hit has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Heals this Champion by 30% of the damage dealt.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "1.8*ATK",
+          name: "Croix chromatique",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Coldblooded Drive [P]",
-          description: `Whenever an ally places a [Freeze] debuff, this Champion has a 30% chance to attack the target with their default skill.`,
+          name: "Volonté cruelle [P]",
+          description: `Dès qu'un allié place un débuff ${DEBUFFS.GEL}, ce Champion possède 30 % de chances d'attaquer la cible avec sa compétence par défaut.`,
           isPassive: true
         }
       ],

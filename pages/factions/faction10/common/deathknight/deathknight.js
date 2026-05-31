@@ -3,16 +3,16 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Decrepit Hatchet",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "5.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Damage +10%"],
+          name: "Hachette décrépite",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          damage: "5.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Payback [P]",
-          description: `Has a 30% chance of counterattacking when hit.`,
+          name: "Vengeance [P]",
+          description: `Possède 30 % de chances de contre-attaquer lorsque touché.`,
           isPassive: true
         }
       ],

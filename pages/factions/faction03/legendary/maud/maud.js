@@ -3,33 +3,47 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blessed Spear",
-          description: `Attacks 1 enemy. <br><br>Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns. <br><br>Also has an 80% chance of placing a 50% [Increase ATK] buff on the ally with the highest ATK for 1 turn.`,
-          damage: "4.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Lance bénie",
+          description: `Attaque un ennemi. 
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+Possède également 80 % de chances de placer un buff ${BUFFS.ATK} de 50 % sur l'allié ayant l'ATQ la plus élevée pendant 1 tour.`,
+          damage: "4.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Anointed Phalanx",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of decreasing the duration of all enemy buffs by 2 turns. <br><br>Then, increases the duration of all ally buffs by 1 turn. Also heals all allies by 20% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.2*HP`,
-          damage: "4*ATK",
+          name: "Phalange sacrée",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis. 
+
+Augmente ensuite la durée de tous les buffs des alliés d'1 tour. Soigne également tous tes alliés à hauteur de 20 % des PV MAX de cette Championne.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Psalm of Revival",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter. <br><br>If an ally’s DEF is equal to or higher than their ATK, places a 60% [Increase DEF] buff on them for 2 turns. <br><br>If an ally’s ATK is higher than their DEF, places a 50% [Increase ATK] buff on them for 2 turns instead.`,
+          name: "Psaume de renaissance",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. 
+
+Si la DÉF d'un allié est supérieure ou égale à son ATQ, lui accorde un buff ${BUFFS.DEF} de 60 % pendant 2 tours. 
+
+Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff ${BUFFS.ATK} de 50 % pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Shining Evensong [P]",
-          description: `Removes 1 random debuff from all allies at the start of this Champion's turn.<br><br>Places a 15% [Continuous Heal] buff on the ally with the lowest HP for 1 turn at the end of this Champion's turn.`,
+          name: "Vêpres éclatantes [P]",
+          description: `Au début du tour de cette Championne, retire un débuff aléatoire sur tous les alliés.
+
+À la fin du tour de cette Championne, place un buff ${BUFFS.HEALS} de 15 % pendant 1 tour sur l'allié ayant le moins de PV.`,
           isPassive: true
         }
       ],
@@ -47,5 +61,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

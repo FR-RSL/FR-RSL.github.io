@@ -4,41 +4,51 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Stoke Anguish",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit decreases the target's DEF by 2% (stacks up to 20%). <br><br>Each hit also steals 10% of the target's Turn Meter.`,
+          name: "Attiser l'angoisse",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe réduit la DÉF de la cible de 2 % (s'accumule jusqu'à 20 %). 
+
+Chaque frappe vole également 10 % du Compteur de Tour de la cible.`,
           damage: "0.11*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Agony Overwhelming",
-          description: `Attacks all enemies. Removes all buffs from all enemies and places a [Block Active Skills] debuff on them for 2 turns. <br><br>Also steals 20% of the Turn Meter from each enemy under a [Block Active Skills] debuff.`,
+          name: "Agonie accablante",
+          description: `Attaque tous les ennemis. Retire tous les buffs sur tous les ennemis et leur inflige un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. 
+
+Vole également 20 % du Compteur de Tour de chaque ennemi sous débuff ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "0.22*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Thief of Joy",
-          description: `Attacks 1 enemy. Steals 100% of the target’s Turn Meter. <br><br>Also, puts the target's skills on cooldown.`,
+          name: "Voleur de joie",
+          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible. 
+
+Place également les compétences de la cible en recharge.`,
           damage: "0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Dramatis Miserae [P]",
-          description: `Whenever this Champion loses 30% HP or more in a single turn, deals damage to the attacker equal to 30% of this Champion’s MAX HP. Occurs once per turn. <br><br>Also when this Champion loses 30% HP or more in a single turn, places a [Shield] buff on them, equal to 30% of this Champion’s MAX HP, for 2 turns.<br><br>Shield Multiplier: 0.3*HP`,
+          description: `Dès que ce Champion perd 30 % de PV ou plus lors d'un seul tour, inflige des dégâts équivalents à 30 % des PV MAX de ce Champion à l'assaillant. Se produit une fois par tour. 
+
+De plus, lorsque ce Champion perd 30 % de PV ou plus lors d'un seul tour, lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
           damage: "0.3*HP",
           isPassive: true
         }
@@ -55,7 +65,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in All Battles by 80`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -63,40 +73,56 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Volatile Performer",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 50% chance of placing a [Bomb] debuff for 2 turns. <br><br>Heals this Champion by 10% of their MAX HP for each [Bomb] debuff placed.<br><br><br>Bomb Multiplier: 0.15*HPHeal Multiplier: 0.1*HP`,
+          name: "Artiste instable",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.BOMB} pendant 2 tours. 
+
+Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BOMB} placé.`,
           damage: "0.12*HP",
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Explosive Showstopper",
-          description: `Attacks all enemies. <br><br>Places 2 [Bomb] debuffs on all enemies for 2 turns. <br><br>Instantly detonates all [Bomb] debuffs on enemies with [Stone Skin] buffs or enemies whose HP is less than this Champion’s HP. <br><br>Then, places a [Stun] debuff for 1 turn on all enemies who had their [Bomb] debuffs detonated by this skill.<br><br><br>Bomb Multiplier: 0.33*HP`,
+          name: "Clou du spectacle explosif",
+          description: `Attaque tous les ennemis. 
+
+Place 2 débuffs ${DEBUFFS.BOMB} sur tous les ennemis pendant 2 tours. 
+
+Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur les ennemis dotés de buffs ${BUFFS.STONE_SKIN} ou les ennemis dont les PV sont inférieurs aux PV de ce Champion. 
+
+Ensuite, place un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis dont les débuffs ${DEBUFFS.BOMB} ont explosé à cause de cette compétence.`,
           damage: "0.25*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Killer Encore",
-          description: `Heals this Champion by 50% of their MAX HP. <br><br>Also places a 25% [Weaken] debuff on all enemies for 2 turns. <br><br>Then grants an Extra Turn.<br><br><br>Heal Multiplier: 0.5*HP`,
+          name: "Rappel mortel",
+          description: `Soigne ce Champion à hauteur de 50 % de ses PV MAX. 
+
+Place également un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours sur tous les ennemis. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%"],
+          levelInfo: ["Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "The Last Laugh [P]",
-          description: `Has a 100% chance to reflect all [Bomb] debuffs placed on this Champion back to an attacker. Also has a 30% chance to reflect all other debuffs placed on this Champion back to an attacker. <br><br>Heals this Champion by 20% of their MAX HP whenever an enemy is killed by a [Bomb] debuff.<br><br>Heal Multiplier: 0.2*HP`,
+          name: "Rira bien [P]",
+          description: `Possède 100 % de chances de renvoyer sur un assaillant tous les débuffs ${DEBUFFS.BOMB} placés sur ce Champion. Possède également 30 % de chances de renvoyer sur un assaillant tous les autres débuffs placés sur ce Champion. 
+
+Soigne ce Champion de 20 % de ses PV MAX chaque fois qu'un ennemi est tué par un débuff ${DEBUFFS.BOMB}.`,
           isPassive: true
         }
       ],
@@ -112,7 +138,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in All Battles by 80`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

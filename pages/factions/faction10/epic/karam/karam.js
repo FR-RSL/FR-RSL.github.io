@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bloodstained Swords",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Épées Sanglantes",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fit of Rage",
-          description: `Attacks 1 enemy. Has an extra 15% chance of inflicting a critical hit. Damage increases by 50% if this Champion has more than 50% HP.`,
-          damage: "6.1*ATK",
+          name: "Accès de Rage",
+          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup critique. Dégâts augmentés de 50 % si ce Champion possède plus de 50 % de PV.`,
+          damage: "6.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rot Away",
-          description: `Attacks 1 enemy. Instantly activates all [Poison] debuffs on the target.`,
-          damage: "6.5*ATKMultiplier: Poison Debuff Count*0.5Multiplier: Poison Debuff Count",
+          name: "Pourrir",
+          description: `Attaque un ennemi. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur la cible.`,
+          damage: "6.5*ATQMultiplier: Poison Debuff Count*0.5Multiplier: Poison Debuff Count",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 40`,
 };

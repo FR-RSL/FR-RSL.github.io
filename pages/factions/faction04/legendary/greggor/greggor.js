@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Desert Ax",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Hache du désert",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Earthcleave",
-          description: `Attacks all enemies. <br><br>Decreases the duration of all enemy buffs by 1 turn, and increases the duration of all ally buffs by 1 turn. <br><br>Also places a [Shield] buff on all allies for 2 turns, equal to 20% of this Champion’s MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Fendre la terre",
+          description: `Attaque tous les ennemis. 
+
+Réduit d'1 tour la durée de tous les buffs des ennemis, puis augmente d'1 tour la durée de tous les buffs des alliés. 
+
+Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 20 % des PV MAX de ce Champion.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bestial Yell",
-          description: `Places a 50% [Increase ATK] buff and a 50% [Increase ACC] buff on all allies for 2 turns.<br><br>[Barbarians Unity]<br><br>1 Faction ally:<br>Decreases the cooldown of all ally skills, except this Champion’s, by 1 turn.<br><br>2 Faction allies:<br>Fills the Turn Meters of all allies by 20%.<br><br>3 Faction allies:<br>Activates an [Instant Turn] effect on the ally with the highest C. DMG, except this Champion.`,
+          name: "Hurlement bestial",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Desert Monolith [P]",
-          description: `When attacked, has a 20% chance of placing a [Provoke] debuff on the attacker for 1 turn. Occurs once per hit.<br><br>[Barbarians Unity]<br><br>1 Faction ally:<br>Allies deal 25% more damage to enemies under [Stun], [Sleep], [Fear], [True Fear], [Provoke], [Freeze], and [Petrification] debuffs. If there are multiple Champions on the team with this skill, this effect will only activate once.<br><br>2 Faction allies:<br>Allies ignore 50% of target’s RES when applying [Stun], [Sleep], [Fear], [True Fear], [Provoke], [Freeze], and [Petrification] debuffs.<br><br>3 Faction allies:<br>When counterattacking, instant effects and debuffs placed by ally skills cannot be resisted or blocked.`,
+          name: "Monolithe du désert [P]",
+          description: `Lorsqu'il se fait attaquer, possède 20 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour. Se produit une fois par frappe.`,
           isPassive: true
         }
       ],
@@ -47,9 +51,9 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-defence.webp",
-  description: `Increases Ally DEF in All Battles by 25%
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%
 
-[Barbarians only]
+(ne s'applique qu'à la Faction des Barbares)
 
-Increases Ally ACC in All Battles by 40`,
+Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

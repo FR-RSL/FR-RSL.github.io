@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Savage Fury",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Furie Sauvage",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           damage: "3.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Maximum Carnage",
-          description: `Attacks 3 times at random. Each hit has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
+          name: "Carnage Maximum",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           damage: "2*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Spirit Appeasement",
-          description: `Revives an ally with 40% HP and 40% Turn Meter, then heals all allies by 15% of their MAX HP.<br><br><br>Heal Multiplier: 0.15*Target Max HP`,
+          name: "Apaisement de l'Esprit",
+          description: `Ranime un allié avec 40 % de PV et un Compteur de Tour à 40 %, puis soigne tous les alliés de 15 % de leurs PV MAX.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 20%`,
 };

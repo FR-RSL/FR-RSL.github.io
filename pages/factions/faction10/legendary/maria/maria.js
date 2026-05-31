@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hematic Blades",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 33% chance of granting an Extra Turn. Cannot gain more than one Extra Turn. Cannot gain an Extra Turn if the target is a Boss.`,
-          damage: "0.7*ATK",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%"],
+          name: "Lames hématiques",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 33 % de chances d'accorder un Tour supplémentaire. Ne peut pas gagner plus d'un Tour supplémentaire. Ne peut pas gagner de Tour supplémentaire si la cible est un Boss.`,
+          damage: "0.7*ATQ",
+          levelInfo: ["Dégâts +15%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sanguine Fissure",
-          description: `Attacks 1 enemy. <br><br>Will ignore 33% of the target’s DEF. Will ignore 99% of the target’s DEF, [Stone Skin] and [Block Damage] buffs instead if this skill is used on a Turn number that is divisible by 3. <br><br>If the target is killed, increases the cooldowns of all enemy skills by 3 turns. This effect cannot be resisted if this skill is used on a Turn number that is divisible by 3.`,
-          damage: "5*ATK",
+          name: "Fissure sanguine",
+          description: `Attaque un ennemi. 
+
+Ignorera 33 % de la DÉF de la cible. Ignorera au lieu de cela 99 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.STONE_SKIN} et ${BUFFS.BLOCK_DAMAGE}, si cette compétence est utilisée lors d'un Tour dont le nombre est divisible par 3. 
+
+Si la cible est tuée, augmente de 3 tours les temps de recharge de toutes les compétences ennemies. Il est impossible de résister à cet effet si cette compétence est utilisée lors d'un Tour dont le nombre est divisible par 3.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gorescream",
-          description: `Attacks 1 enemy. Before attacking, removes all buffs from all enemies. This effect cannot be resisted by enemies with a number of buffs that is divisible by 3. Will attack all remaining enemies with less than 66% HP.  <br><br>Grants an Extra Turn if this Champion is under a number of buffs that is divisible by 3.`,
-          damage: "5*ATK",
+          name: "Cri de carnage",
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs de tous les ennemis. Les ennemis qui ont un nombre de buffs divisible par 3 ne peuvent pas résister à cet effet. Attaquera tous les ennemis restants qui ont moins de 66 % de PV.  
+
+Accorde un Tour supplémentaire si cette Championne bénéficie d'un nombre de buffs divisible par 3.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Say Her Name [P]",
-          description: `Each subsequent hit from this Champion deals 33% more damage (stacks up to 99%). Resets after the 99% damage bonus is applied. <br><br>Each subsequent hit this Champion receives deals 33% (11% from Bosses) less damage. Stacks up to 3 times. Resets after the damage reduction is applied for the third time.<br><br>Whenever an enemy is revived, revives this Champion with 33% HP and 66% Turn Meter. After being revived, places a [True Fear] debuff on all enemies for 2 turns. This debuff cannot be resisted or blocked.`,
+          name: "Dis son nom [P]",
+          description: `Chaque frappe suivante de cette Championne inflige 33 % de dégâts supplémentaires (s'accumule jusqu'à 99 %). Se réinitialise lorsque le bonus de dégâts de 99 % est appliqué. 
+
+Chaque frappe suivante que cette Championne reçoit inflige 33 % de dégâts en moins (11 % contre les Boss). S'accumule jusqu'à 3 fois. Se réinitialise lorsque la réduction des dégâts est appliquée pour la troisième fois.
+
+Dès qu'un ennemi est ranimé, ranime cette Championne avec 33 % de PV et 66 % de Compteur de Tour. Après qu'elle est ranimée, place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 2 tours. Il est impossible de bloquer ce débuff et d'y résister.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

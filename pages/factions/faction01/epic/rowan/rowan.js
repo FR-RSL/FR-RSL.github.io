@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Slash",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "ATK*(1.9+SPD/100)",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Balafre",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "ATQ*(1.9+SPD/100)",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Scourge",
-          description: `Attacks 3 times at random. Each hit has a 40% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "1.8*ATK",
+          name: "Chancre",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "1.8*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blade Surge",
-          description: `Attacks 1 enemy 4 times. Each hit has a 75% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "1.4*ATK",
+          name: "Élan de Lame",
+          description: `Attaque 4 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "1.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 50`,
 };

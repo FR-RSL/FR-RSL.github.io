@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ram",
-          description: `Attacks 1 enemy. Damage increases according to how much HP this Champion has lost. This attack cannot be a strong, critical, or weak hit.`,
-          damage: "ATK*(2.5+3*(1-Current HP %))",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Bélier",
+          description: `Attaque un ennemi. Les dégâts augmentent en fonction de la quantité de PV perdus par ce Champion. Cette attaque ne peut pas être un coup puissant, critique ou faible.`,
+          damage: "ATQ*(2.5+3*(1-Current HP %))",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "War Drum",
-          description: `Places a [Provoke] debuff on all enemies for 1 turn. Places a 30% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Tambour de Guerre",
+          description: `Place un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis. Place un buff d'${BUFFS.DEF} de 30 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Determined",
-          description: `Places an [Unkillable] buff on this Champion for 2 turns.`,
+          name: "Déterminé",
+          description: `Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 27%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 27%`,
 };

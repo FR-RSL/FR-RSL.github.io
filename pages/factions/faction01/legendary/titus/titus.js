@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ravenblade",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a [Block Active Skills] debuff for 2 turns. This effect cannot be resisted if this Champion is under a [Shield] buff. <br><br>Whenever an ally counterattacks, teams up with allies to attack, or instantly activates a skill, also has a 40% chance to place a [Block Active Skills] debuff for 2 turns on the target enemy. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Lame de corbeau",
+          description: `Attaque un ennemi. 
+
+A 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}. 
+
+Dès qu'un allié contre-attaque, fait équipe avec les alliés pour attaquer, ou active instantanément une compétence. A également 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} sur l'ennemi ciblé pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Student of War",
-          description: `Attacks 1 enemy. This attack is always critical if this Champion is under a [Shield] buff. This attack also gains a damage boost equal to the percentage difference between this Champion's MAX HP and the value of any [Shield] buffs on them. <br><br>Removes all debuffs from all allies if the target is killed. If the target survives, places a [Provoke] debuff on all enemies for 1 turn instead. This effect cannot be resisted if this Champion is under a [Shield] buff.`,
+          name: "Étudiant de la guerre",
+          description: `Attaque un ennemi. Cette attaque est toujours critique si ce Champion se trouve sous buff ${BUFFS.SHIELD}. Cette attaque gagne également un boost de dégâts égal à la différence en pourcentage entre les PV MAX de ce Champion et la valeur des buffs ${BUFFS.SHIELD} dont il bénéficie.
+
+Retire tous les débuffs sur tous les alliés si la cible est tuée. Si la cible survit, place au lieu de cela un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}.`,
           damage: "5.5*DEF*(1+SHIELDS_SUM_VALUE/HP)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Androc's Confidant",
-          description: `Places a 50% [Ally Protection] buff, a 50% [Increase ATK] buff, and a 30% [Increase SPD] buff on a single ally for 2 turns. Also fills that ally’s Turn Meter by 40%. <br><br>Instantly activates this skill at the end of an ally’s turn if that ally has no buffs and their HP is lower than 100%. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Confident d'Androc",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SPD} de 30 % sur un seul allié pendant 2 tours. Remplit également le Compteur de Tour de cet allié de 40 %. 
+
+Active instantanément cette compétence à la fin du tour d'un allié si cet allié n'a pas de buff et que ses PV sont inférieurs à 100 %. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "For Lord & Land [P]",
-          description: `Each time an enemy hits an ally, that ally’s next attack will deal 10% more damage for each hit they take (stacks up to 100%). The damage increase resets after that ally deals damage.`,
+          name: "Pour seigneur et terre [P]",
+          description: `Chaque fois qu'un ennemi frappe un allié, l'attaque suivante de cet allié infligera 10 % de dégâts supplémentaires pour chaque frappe qu'il subit (s'accumule jusqu'à 100 %). L'augmentation des dégâts se réinitialise après que cet allié a infligé des dégâts.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Void Ally HP in all Battles by 40%`,
+  description: `Augmente la statistique PV des Alliés Néant lors de toutes les Batailles de 40%`,
 };

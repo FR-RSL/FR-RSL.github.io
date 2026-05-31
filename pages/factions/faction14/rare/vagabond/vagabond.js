@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dreamer's Curse",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Damage +10%"],
+          name: "Malédiction du Rêveur",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ominous Visit",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Block Buffs] debuff for 1 turn.<br><br>Also fills this Champion’s Turn Meter by 15% and fills the Turn Meter of the ally with the highest Turn Meter by 15%.`,
-          damage: "6*ATK",
+          name: "Visite Menaçante",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 1 tour.
+
+Remplit également de 15 % le Compteur de Tour de ce Champion, ainsi que le Compteur de Tour de l'allié qui a le Compteur de Tour le plus élevé.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Join the Troupe",
-          description: `Fills the Turn Meters of all allies by 15% and places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Rejoindre la Troupe",
+          description: `Remplit le Compteur de tour de tous les alliés de 15 % et place un buff ${BUFFS.ATK} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Arena by 30`,
+  description: `Augmente la statistique PRÉ des Alliés lors des batailles d'Arène de 30`,
 };

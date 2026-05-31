@@ -4,40 +4,58 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ignition Arc",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 50% chance of increasing the duration of all debuffs on the target by 1 turn.<br><br>Each hit has a 100% chance to increase the duration of a [HP Burn] debuff on the target by 1 turn instead, if the initial chance does not activate.`,
+          name: "Arc d'ignition",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 50 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.
+
+Chaque frappe a 100 % de chances d'augmenter d'1 tour la durée d'un débuff ${DEBUFFS.BURN} sur la cible si les chances initiales ne se sont pas activées.`,
           damage: "0.09*HP",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pyroclast Storm",
-          description: `Attacks all enemies. <br><br>Instantly activates one tick of all [HP Burn] debuffs on all enemies and allies. <br><br>Whenever a [HP Burn] debuff is activated on an enemy by this skill, decreases their RES by 10 (stacks up to 100). Whenever a [HP Burn] debuff is activated on an ally by this skill, increases their RES by 10 (stacks up to 100). <br><br>Also fills the Turn Meters of all allies by 5% for each [HP Burn] debuff activated on enemies.`,
+          name: "Tempête pyroclaste",
+          description: `Attaque tous les ennemis. 
+
+Active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis et alliés. 
+
+Dès que cette compétence active un débuff ${DEBUFFS.BURN} sur un ennemi, réduit sa RÉS de 10 points (s'accumule jusqu'à 100). Dès que cette compétence active un débuff ${DEBUFFS.BURN} sur un allié, augmente sa RÉS de 10 points (s'accumule jusqu'à 100). 
+
+Remplit également le Compteur de Tour de tous les alliés de 5 % pour chaque débuff ${DEBUFFS.BURN} activé sur les ennemis.`,
           damage: "0.26*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Wreathed in Flame",
-          description: `Places a 25% [Weaken] debuff and a [HP Burn] debuff on all enemies for 2 turns. <br><br>Also places a [HP Burn] debuff on all allies for 2 turns. This debuff cannot be blocked or resisted.<br><br>Then fills the Turn Meters of all allies by 30%.`,
+          name: "Couronné de flammes",
+          description: `Place un débuff ${DEBUFFS.WEAKEN} de 25 % et un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. 
+
+Place également un buff ${DEBUFFS.BURN} sur tous les alliés pendant 2 tours. Il est impossible de résister à ce débuff et de le bloquer.
+
+Remplit ensuite le Compteur de Tour de tous les alliés de 30 %.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Ignore RES +20%"],
+          levelInfo: ["Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "By Fire Be Healed [P]",
-          description: `Each [HP Burn] debuff placed by this Champion while in their Base Form increases their MAX HP and DEF by 5% (stacks up to 25% across both Forms and will not reset).<br><br>[HP Burn] debuffs placed on allies heal them instead of damaging them.<br><br>Allies deal 3% more damage for each active [HP Burn] debuff. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Heal Multiplier: 0.03*Target Max HP`,
+          name: "Que le feu te soigne [P]",
+          description: `Chaque débuff ${DEBUFFS.BURN} placé par ce Champion sous sa Forme de base augmente ses PV MAX et sa DÉF de 5 % (s'accumule jusqu'à 25 % pour les deux Formes et ne se réinitialisera pas).
+
+Les débuffs ${DEBUFFS.BURN} placés sur les alliés les soignent au lieu de leur infliger des dégâts.
+
+Les alliés infligent 3 % de dégâts en plus pour chaque débuff ${DEBUFFS.BURN} actif. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -53,7 +71,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -61,41 +79,57 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Thunderstar",
-          description: `Attacks 1 enemy 2 times. Has a 25% chance of repeating each hit.<br><br>Each hit also places a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Étoile de tonnerre",
+          description: `Attaque 2 fois un ennemi. A 25 % de chances de répéter chaque frappe.
+
+Chaque frappe place également un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "1.9*DEF",
-          levelInfo: ["Level 2: Buff/Debuff Chance +15%", "Level 3: Damage +20%"],
+          levelInfo: ["Chances de Buff/Debuff +15%", "Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Magma Geyser",
-          description: `Attacks 1 enemy. <br><br>Applies a [Debuff Spread] effect, taking all debuffs from the target and placing them on all enemies.<br><br>Then, repeats the attack on all enemies. Increases the duration of all debuffs on all enemies by 1 turn.<br><br>Both attacks will ignore 20% of each target's DEF.`,
+          name: "Geyser de magma",
+          description: `Attaque un ennemi. 
+
+Applique un effet de [Propagation de Débuffs], prenant tous les débuffs sur la cible pour les placer sur tous les ennemis.
+
+Ensuite, répète l'attaque sur tous les ennemis. Augmente d'1 tour la durée de tous les débuffs de tous les ennemis.
+
+Les deux attaques ignoreront 20 % de la DÉF de chaque cible.`,
           damage: "4.9*DEFMultiplier: 3.7*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +20%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Cataclysm Smash",
-          description: `Attacks all enemies. Before attacking, places a 60% [Increase DEF] buff and a 30% [Increase C. DMG] buff on all allies for 2 turns. <br><br>Places a [Provoke] debuff for 1 turn. If the target of this skill is a Boss, places a [Provoke] debuff for 2 turns instead. <br><br>This attack cannot be a weak hit when hitting enemies under a [HP Burn] debuff.`,
+          name: "Écrasement de cataclysme",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours. 
+
+Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Si la cible de cette compétence est un Boss, place au lieu de ça un débuff ${DEBUFFS.PROVOKE} pendant 2 tours. 
+
+Cette attaque ne peut pas être une frappe faible lorsqu'elle touche des ennemis sous débuff ${DEBUFFS.BURN}.`,
           damage: "4.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +20%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "By Fire Be Broken [P]",
-          description: `Each [HP Burn] debuff placed by this Champion's Base Form increases this Champion's MAX HP and DEF by 5% (stacks up to 25% across both Forms and will not reset).<br><br>All of this Champion's skills will ignore 20% of the enemy's DEF if they are under a [HP Burn] debuff.<br><br>[HP Burn] debuffs placed on allies heal them instead of damaging them.<br><br>Heal Multiplier: 0.03*Target Max HP`,
+          name: "Que le feu te brise [P]",
+          description: `Chaque débuff ${DEBUFFS.BURN} placé par ce Champion sous sa Forme de base augmente les PV MAX et la DÉF de ce Champion de 5 % (s'accumule jusqu'à 25 % pour les deux Formes et ne se réinitialisera pas).
+
+Toutes les compétences de ce Champion ignoreront 20 % de la DÉF de l'ennemi si ce dernier se trouve sous débuff ${DEBUFFS.BURN}.
+
+Les débuffs ${DEBUFFS.BURN} placés sur les alliés les soignent au lieu de leur infliger des dégâts.`,
           isPassive: true
         }
       ],
@@ -111,7 +145,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

@@ -4,21 +4,21 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Faucher",
-          description: `Attaque un ennemi. Soigne cette Championne a hauteur de 50% des degats infliges.`,
+          description: `Attaque 1 ennemi. Soigne à hauteur de 50 % des dégâts infligés.`,
           damage: "3.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Renforcer",
-          description: `Place un buff ${BUFFS.ATK} de 50% sur tous les allies pendant 2 tours.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
           name: "Sombre Cadeau",
-          description: `Retire tous les debuffs sur tous les allies et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les allies pendant 1 tour.`,
+          description: `Retire tous les débuffs sur tous les alliés. Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1"],
         }

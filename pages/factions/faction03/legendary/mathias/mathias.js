@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Darken the Sky",
-          description: `Attacks 1 enemy 3 times. Each hit has a 30% chance of removing 1 random buff from the target. <br><br>Each hit also heals this Champion by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
+          name: "Assombrir le ciel",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances de retirer un buff aléatoire à la cible. 
+
+Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infligés.`,
           damage: "0.07*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Deathwhirl",
-          description: `Attacks all enemies. Places an extra hit on enemies under no buffs. The extra hit will ignore 20% of the target’s DEF. <br><br>Each hit also heals all allies by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
+          name: "Tourbillon mortel",
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis qui ne bénéficient d'aucun buff. Chaque frappe supplémentaire ignorera 20 % de la DÉF de la cible. 
+
+Chaque frappe soigne également tous les alliés à hauteur de 20 % des dégâts infligés.`,
           damage: "0.2*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Face the Blackflail!",
-          description: `Places a 50% [Increase RES] buff and a 30% [Reflect Damage] buff on all allies for 2 turns. <br><br>Also places a [Taunt] buff on this Champion for 2 turns.`,
+          name: "Affrontez le Fléau-noir !",
+          description: `Place un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.TAUNT} sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Red Mist [P]",
-          description: `Counterattacks with the Darken the Sky skill when hit while under a [Taunt] buff placed by this Champion.`,
+          name: "Brume rouge [P]",
+          description: `Contre-attaque avec la compétence Assombrir le ciel lorsqu'il est frappé en bénéficiant d'un buff ${BUFFS.TAUNT} placé par ce Champion.`,
           isPassive: true
         }
       ],

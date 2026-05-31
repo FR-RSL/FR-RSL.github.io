@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thunder Strike",
-          description: `Attacks 1 enemy 2 times. Each hit decreases the target's Turn Meter by 5%.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Coup de Foudre",
+          description: `Attaque 2 fois un ennemi. Chaque coup réduit de 5 % le Compteur de Tours de la cible.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pilgrim's Shield",
-          description: `Places a 30% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Bouclier de Pèlerin",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 30 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

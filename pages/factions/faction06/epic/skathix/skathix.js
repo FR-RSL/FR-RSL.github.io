@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Leg Wrack",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Varech de Jambe",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Transfer Rush",
-          description: `Attacks all enemies. Has a 75% chance of stealing one random buff from each enemy.`,
-          damage: "4.1*ATK",
+          name: "Transfert d'Assaut",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de voler 1 buff aléatoire à chaque ennemi.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Scales of the Ages",
-          description: `Removes all debuffs from all allies, then places a [Block Debuffs] buff and a [Shield] buff on all allies for 2 turns. The [Shield] buff is equal to 20% of this Champion's MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Écailles des Âges",
+          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.BLOCK_DEBUFFS} et un ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 20 % des PV MAX de ce Champion.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Last Gasp [P]",
-          description: `Places a [Block Damage] buff on this Champion for 1 turn whenever their HP drops below 30%.`,
+          name: "Ultime Halètement [P]",
+          description: `Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour lorsque ses PV tombent sous 30 %.`,
           cooldown: 6,
           isPassive: true
         }
@@ -48,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

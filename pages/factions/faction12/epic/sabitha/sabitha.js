@@ -3,32 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dawnspear",
-          description: `Attacks 1 enemy.<br><br>Heals the ally with the lowest HP by 10% of this Champion's MAX HP.<br><br><br>Heal Multiplier: 0.1*HP`,
-          damage: "4.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Lance de l'aube",
+          description: `Attaque un ennemi.
+
+Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Championne.`,
+          damage: "4.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fortifying Ray",
-          description: `Places a 60% [Increase DEF] buff and a 50% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Rayon fortifiant",
+          description: `Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shimmer of Life",
-          description: `Revives an ally with 25% HP and 100% Turn Meter. <br><br>Also places a [Block Damage] buff on that ally for 2 turns.`,
+          name: "Chatoiement de vie",
+          description: `Ranime un allié avec 25 % de PV et 100 % de Compteur de Tour. 
+
+Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cet allié pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rising Fate [P]",
-          description: `Whenever this Champion revives an ally, decreases the cooldown of one of this Champion's skills by 1 turn.`,
+          name: "Destin prometteur [P]",
+          description: `Dès que cette Championne ranime un allié, réduit d'1 tour le temps de recharge d'une des compétences de cette Championne.`,
           isPassive: true
         }
       ],
@@ -46,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

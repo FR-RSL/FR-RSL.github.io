@@ -4,15 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Catalyseur de bataille",
-          description: `
-            Attaque tous les ennemis.
-            Possède 50% de chances de placer un débuff
-            <span class='gbt'>Reduction d'ATQ</span> de 50% pendant 2 tours.<br><br>
-            L'allié ayant les DEG C. les plus eleves se joint également
-            a l'attaque sur l'ennemi ayant le moins de PV.
-            L'allié qui rejoint l'attaque utilisera sa 
-            compétence par defaut.
-          `,
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+
+L'allié ayant les DÉG C. les plus élevés se joint également à l'attaque sur l'ennemi avant le moins de PV. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.`,
           damage: "3*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -23,13 +17,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Fumees du graal",
-          description: `
-            Place un buff <span class='gbt'>Nuage de poison</span>, un buff
-            <span class='gbt'>Augmentation de VIT</span> de 30% et deux buffs
-            <span class='gbt'>Soins continus</span> de 15% sur une cible allié pendant 2 tours.<br><br>
-            Remplit également le Compteur de la cible de 50%.
-          `,
+          name: "Fumées du graal",
+          description: `Place un buff ${BUFFS.POISON_CLOUD}, un buff ${BUFFS.SPD} de 30 % et deux buffs ${BUFFS.HEALS} de 15 % sur une cible alliée pendant 2 tours. 
+
+Remplit également le Compteur de Tour de la cible de 50 %.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",
@@ -39,12 +30,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tumeur maligne",
-          description: `
-            Attaque tous les ennemis. Possède 75% de chances de placer un
-            débuff <span class='gbt'>Reduction de DEF</span> de 60% et un débuff
-            <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
-            Ignorera les buffs <span class='gbt'>Blocage des débuffs</span>.
-          `,
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}.`,
           damage: "4.5*ATQ",
           cooldown: 5,
           levelInfo: [
@@ -56,12 +44,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Yncensee [P]",
-          description: `
-            Augmente la PRE de cette Championne de 10 points 
-            pour chaque buff sur chaque ennemi.<br><br>
-            Des qu'un ennemi recoit un buff, reduit son Compteur de Tour de 10%.
-          `,
+          name: "Yncensée [P]",
+          description: `Augmente la PRÉ de cette Championne de 10 points pour chaque buff sur chaque ennemi. 
+
+Dès qu'un ennemi reçoit un buff, son Compteur de Tour est réduit de 10 %.`,
           isPassive: true,
         },
       ],

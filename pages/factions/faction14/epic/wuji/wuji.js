@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dire Twinblade",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns. <br><br>[Will target all enemies instead of 1 when counterattacking with this skill.]`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Terrible double-lame",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+[Ciblera tous les ennemis au lieu d'1 lors d'une contre-attaque avec cette compétence.]`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "World of Darkness",
-          description: `Attacks all enemies. Has a 55% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Monde des ténèbres",
+          description: `Attaque tous les ennemis. Possède 55 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shinobi Arts",
-          description: `Places a [Perfect Veil] buff and a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Arts de shinobi",
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.COUNTER} sur cette Championne pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 20%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 20%`,
 };

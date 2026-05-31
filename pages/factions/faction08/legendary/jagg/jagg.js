@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Razorwheel",
-          description: `Attacks 1 enemy. Steals 10% of the target’s Turn Meter. <br><br>Has a 25% chance of repeating this skill.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Roue-rasoir",
+          description: `Attaque un ennemi. Vole 10 % du Compteur de Tour de la cible. 
+
+Possède 25 % de chances de répéter cette compétence.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shred The Flesh",
-          description: `Attacks 1 enemy 2 times. Before attacking, transfers all debuffs from this Champion to the target. Damage from the first hit increases by 10% for each debuff transferred. <br><br>Then applies a [Debuff Spread] effect, taking 2 random debuffs from the target and placing them on all enemies. Damage from the second hit increases by 5% for each debuff transferred, and each debuff applied through the [Debuff Spread] effect.`,
-          damage: "3*ATK+(3*ATK*0.1*Debuffs Transffered)Multiplier: 3*ATK+(3*ATK*0.05*Debuffs Applied to Enemy Team (Current Turn))",
+          name: "Déchirer la chair",
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, transfère tous les débuffs de ce Champion sur la cible. Les dégâts de la première frappe augmentent de 10 % pour chaque débuff transféré. 
+
+Applique ensuite un effet [Propagation de Débuffs], qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis. Les dégâts de la deuxième frappe augmentent de 5 % pour chaque débuff transféré et chaque débuff appliqué grâce à l'effet [Propagation de Débuffs].`,
+          damage: "3*ATQ+(3*ATQ*0.1*Debuffs Transffered)Multiplier: 3*ATQ+(3*ATQ*0.05*Debuffs Applied to Enemy Team (Current Turn))",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lace",
-          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies. Damage increases by 5% for each buff removed. <br><br>Fills this Champion’s Turn Meter by 15% for each enemy killed by this skill.`,
-          damage: "4*ATK",
+          name: "Tempête lacérante",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs de tous les ennemis. Les dégâts augmentent de 5 % pour chaque buff retiré. 
+
+Remplit le Compteur de Tour de ce Champion de 15 % pour chaque ennemi tué par cette compétence.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rev Up The Saw [P]",
-          description: `At the start of this Champion’s turn, places a 50% [Increase ACC] buff and a 30% [Increase C. DMG] buff on them for 1 turn. <br><br>At the end of this Champion’s turn, places a 30% [Decrease C. RATE] debuff and a 25% [Decrease C. DMG] debuff on the enemy with the highest C. DMG for 1 turn.`,
+          name: "Relancer la scie [P]",
+          description: `Au début du tour de ce Champion, lui accorde un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CDAM} de 30 % pendant 1 tour. 
+
+À la fin du tour de ce Champion, place sur l'ennemi ayant les DÉG C. les plus élevés un débuff ${DEBUFFS.CRATE} de 30 % et un débuff ${DEBUFFS.CDAM} de 25 % pendant 1 tour.`,
           isPassive: true
         }
       ],

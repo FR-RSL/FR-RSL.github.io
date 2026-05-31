@@ -3,34 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fiery Battleaxe",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br><br>Has a 100% chance of placing a 60% [Decrease DEF] debuff for 2 turns on the target before attacking if the target is under a [HP Burn] debuff.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Hache de feu",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Possède également 100 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.BURN}.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cunning Chaos",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 3 turns.<br><br>Has a 75% chance of placing a [Stun] debuff for 1 turn on targets with 50% Turn Meter or more.<br><br>Has a 75% chance of placing a 30% [Decrease SPD] debuff for 3 turns on targets with less than 50% Turn Meter.`,
-          damage: "4*ATK",
+          name: "Chaos futé",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 3 tours.
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les cibles ayant 50 % de Compteur de Tour ou moins.
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 3 tours sur les cibles ayant 50 % de Compteur de Tour ou moins.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burning Regret",
-          description: `Attacks 1 enemy. Damage increases by 40% for each active [HP Burn] debuff in the battle (up to 400%). <br>Also has a 75% chance of decreasing the target’s Turn Meter by 15%. Decreases the target’s Turn Meter by an additional 15% for each active [HP Burn] debuff in the battle.`,
-          damage: "5.5*ATK",
+          name: "Regrets brûlants",
+          description: `Attaque un ennemi. Augmente les dégâts de 40 % pour chaque débuff ${DEBUFFS.BURN} actif lors du combat (jusqu'à 400 %). 
+Possède également 75 % de chances de réduire le Compteur de Tour de la cible de 15 %. Réduit le Compteur de Tour de la cible de 15 % supplémentaires pour chaque débuff ${DEBUFFS.BURN} actif lors du combat.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Inner Heat [P]",
-          description: `Whenever an ally receives a [Freeze] debuff, has a 50% chance of replacing it with a [HP Burn] for 2 turns instead. This debuff cannot be blocked or removed.<br><br>Whenever any ally or enemy is under a [HP Burn] debuff, this Champion is immune to [Stun], [Sleep], [Freeze], [Fear], [True Fear], [Provoke], [Petrification] debuffs.`,
+          name: "Chaleur interne [P]",
+          description: `Lorsqu'un allié reçoit un débuff ${DEBUFFS.GEL}, possède 50 % de chances de le remplacer par un débuff ${DEBUFFS.BURN} pendant 2 tours. Il est impossible de bloquer ou de retirer ce débuff.
+
+Lorsqu'un allié ou un ennemi se trouve sous débuff ${DEBUFFS.BURN}, ce Champion est immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.GEL}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} et ${DEBUFFS.PETRIFICATION}.`,
           isPassive: true
         }
       ],

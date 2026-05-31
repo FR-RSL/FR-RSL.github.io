@@ -3,33 +3,45 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pulverizing Pummel",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 30% chance of decreasing the detonation countdown of all [Bomb] debuffs on the target by 1 turn. <br><br>Also has a 30% chance of placing a [Stun] debuff on the target for 1 turn.`,
-          damage: "ATK*1.5",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Tabassage écrasant",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 30 % de chances de réduire d'1 tour le compte à rebours de détonation de tous les débuffs ${DEBUFFS.BOMB} sur la cible. 
+
+A également 30 % de chances de placer un débuff ${DEBUFFS.STUN} sur la cible pendant 1 tour.`,
+          damage: "ATQ*1.5",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Battlefield Sapper",
-          description: `Has a 75% chance of placing 2 [Bomb] debuffs on each enemy that detonate after 2 turns. <br><br>Fills this Champion’s Turn Meter by 25% for each enemy with a [Bomb] debuff.<br><br><br>Bomb Multiplier: 5*ATK`,
+          name: "Sapeur de champ de bataille",
+          description: `A 75 % de chances de placer sur chaque ennemi 2 débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours. 
+
+Remplit le Compteur de Tour de ce Champion de 25 % pour chaque ennemi affligé d'un débuff ${DEBUFFS.BOMB}.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mangonel Maul",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of decreasing the detonation countdown of all [Bomb] debuffs by 1 turn. <br><br>Also has a 75% chance of placing a [Block Active Skills] debuff for 2 turns.`,
-          damage: "ATK*4.35",
+          name: "Merlin mangonneau",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de réduire d'1 tour le compte à rebours de détonation de tous les débuffs ${DEBUFFS.BOMB}. 
+
+A également 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          damage: "ATQ*4.35",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Bomb Breacher [P]",
-          description: `Fills all allies’ Turn Meters by 5% each time a [Bomb] debuff detonates. <br><br>Has a 20% chance of activating an [Instant Turn] effect on this Champion whenever an ally or an enemy is killed by a [Bomb] debuff.`,
+          name: "Attentat à la bombe [P]",
+          description: `Remplit de 5 % les Compteurs de Tour de tous les alliés à chaque fois qu'un débuff ${DEBUFFS.BOMB} explose. 
+
+A 20 % de chances d'activer un effet ${INSTANT} sur ce Champion dès qu'un allié ou un ennemi est tué par un débuff ${DEBUFFS.BOMB}.`,
           isPassive: true
         }
       ],
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Briar Arrows",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random buff from the target. Also has a 10% chance of granting this Champion an Extra Turn.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Flèches de ronces",
+          description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 buff aléatoire sur la cible. Possède également 10 % de chances d'accorder un Tour supplémentaire à ce Champion.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Squall of Shafts",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Grants an Extra Turn if a 60% [Decrease DEF] debuff is placed on all enemies by this skill.`,
-          damage: "3.9*ATK",
+          name: "Rafale de tiges",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Accorde un Tour supplémentaire si un débuff ${DEBUFFS.DEF} de 60 % est placé sur tous les ennemis par cette compétence.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hunt The Mists",
-          description: `Places a 50% [Increase ATK] buff and a 50% [Increase ACC] buff on this Champion for 3 turns, then grants an Extra Turn.`,
+          name: "Chasser les brumes",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur ce Champion pendant 3 tours, puis accorde un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

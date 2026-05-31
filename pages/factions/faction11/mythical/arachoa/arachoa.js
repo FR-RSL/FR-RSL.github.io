@@ -4,40 +4,50 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mesmeric Fangs",
-          description: `Attacks 1 enemy 2 times.<br><br>Each hit decreases the target’s Turn Meter by 5%. Each hit decreases the target’s Turn Meter by an additional 5% if the target is under any debuffs placed by this Champion.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          name: "Crocs hypnotiques",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe réduit le Compteur de Tour de la cible de 5 %. Chaque frappe réduit le Compteur de Tour de la cible de 5 % supplémentaires si la cible est affligée de débuffs placés par cette Championne.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Moon-Spider Maw",
-          description: `Attacks all enemies.<br><br>Decreases the Turn Meters of all enemies by 50%. Decreases the Turn Meters of all enemies by 100% instead if this skill is used on an Extra Turn or Instant Turn.<br><br>Places a [True Fear] debuff for 1 turn. Places a [True Fear] debuff for 2 turns instead against enemies whose Turn Meter is fully decreased by this skill and Bosses.`,
-          damage: "5.3*ATK",
+          name: "Mâchoire d'araignée-lune",
+          description: `Attaque tous les ennemis. 
+
+Réduit les Compteurs de Tour de tous les ennemis de 50 %. Réduit au lieu de cela les Compteurs de Tour de tous les ennemis de 100 % si cette compétence est utilisée lors d'un Tour supplémentaire ou d'un Tour instantané. 
+
+Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Place au lieu de cela un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours contre les ennemis dont le Compteur de Tour est totalement réduit par cette compétence et contre les Boss.`,
+          damage: "5.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dark Trance",
-          description: `Removes all buffs from all enemies.<br><br>Places a 60% [Decrease DEF] debuff and a [Block Active Skills] debuff on all enemies for 2 turns.<br><br>Grants an Extra Turn if 8 or more debuffs were placed by this skill.`,
+          name: "Sombre transe",
+          description: `Retire tous les buffs dont disposent les ennemis. 
+
+Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.LOCK_ACTIVE} sur tous les ennemis pendant 2 tours. 
+
+Accorde un Tour supplémentaire si 8 débuffs ou plus ont été placés par cette compétence.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spiderscuttle [P]",
-          description: `Increases this Champion’s SPD by 4 for each debuff placed by this Champion and by 2 for each debuff resisted when this Champion attempts to place debuffs (stacks up to 100). Only counts debuffs placed by this Champion’s skills.`,
+          name: "Fuite d'araignée [P]",
+          description: `Augmente la VIT de cette Championne de 4 points pour chaque débuff placé par cette Championne et de 2 points pour chaque débuff auquel l'ennemi résiste lorsque cette Championne essaie de placer des débuffs (s'accumule jusqu'à 100). Ne comptabilise que les débuffs placés par les compétences de cette Championne.`,
           isPassive: true
         }
       ],
@@ -53,7 +63,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in all Battle by 80.`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -61,41 +71,57 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Astral Ravage",
-          description: `Attacks 1 enemy 2 times.<br><br>Fills this Champion’s Turn Meter by 5% for each critical hit. Fills this Champion’s Turn Meter by additional 5% for each critical hit, if the target is under a [Block Active Skills] debuff or a [Decrease DEF] debuff.<br><br>If this attack kills an enemy, grants an Extra Turn instead.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Ravage astral",
+          description: `Attaque 2 fois un ennemi. 
+
+Remplit le Compteur de Tour de cette Championne de 5 % pour chaque frappe critique. Remplit le Compteur de Tour de cette Championne de 5 % supplémentaires pour chaque frappe critique si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}. 
+
+Si cette attaque tue un ennemi, accorde au lieu de cela un Tour supplémentaire.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Deaththread Spin",
-          description: `Attacks 1 enemy 3 times. Will always use this skill instead of the default skill when counterattacking. This skill cannot be blocked by [Block Active Skills] debuffs.<br><br>Will ignore [Shield] and [Block Damage] buffs. Additionally ignores [Unkillable] buffs if the target is under a [Block Active Skills] debuff or a [Decrease DEF] debuff.<br><br>Fills this Champion’s Turn Meter by 15% for each critical hit.`,
-          damage: "1.7*ATK+0.05*TRG_HP",
+          name: "Tissage de fil mortel",
+          description: `Attaque 3 fois un ennemi. Utilisera toujours cette compétence au lieu de la compétence par défaut lors d'une contre-attaque. Cette compétence ne peut pas être bloquée par les débuffs ${DEBUFFS.LOCK_ACTIVE}. 
+
+Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. De plus, ignore les buffs ${BUFFS.UNKILLABLE} si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}. 
+
+Remplit le Compteur de Tour de cette Championne de 15 % pour chaque frappe critique.`,
+          damage: "1.7*ATQ+0.05*TRG_HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Gossamer Execution",
-          description: `Attacks 1 enemy 4 times.<br><br>Each hit will ignore 15% of the target's DEF. Each hit will ignore 30% DEF instead if the target is under a [Block Active Skills] debuff or a [Decrease DEF] debuff.<br><br>Fills this Champion’s Turn Meter by 20% for each critical hit.<br><br>Then places a [Perfect Veil] buff on this Champion for 2 turns.`,
-          damage: "1.9*ATK",
+          name: "Exécution arachnéenne",
+          description: `Attaque 4 fois un ennemi. 
+
+Chaque frappe ignorera 15 % de la DÉF de la cible. Chaque frappe ignorera 30 % de DÉF si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}. 
+
+Remplit le Compteur de Tour de cette Championne de 20 % pour chaque frappe critique. 
+
+Ensuite, place un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.`,
+          damage: "1.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Great Web Mistress [P]",
-          description: `This Champion is immune to [Stun], [Sleep], [Fear], [True Fear], [Provoke], [Freeze], and [Petrification] debuffs while under a [Veil] or [Perfect Veil] buff.<br><br>This Champion also cannot receive critical hits while under a [Veil] or [Perfect Veil] buff.`,
+          name: "Maîtresse de la toile [P]",
+          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.GEL} et ${DEBUFFS.PETRIFICATION} lorsqu'elle se trouve sous buff ${BUFFS.PERFECT_VEIL}. 
+
+Cette Championne ne peut pas non plus recevoir de frappes critiques lorsqu'elle se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true
         }
       ],
@@ -111,7 +137,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in all Battle by 80.`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

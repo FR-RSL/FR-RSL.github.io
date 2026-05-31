@@ -3,25 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Maul",
-          description: `Attacks 1 enemy. Has a 55% chance of decreasing the duration of all buffs on the target by 1 turn.<br><br>Also has an 80% chance of placing a [Block Active Skills] debuff for 1 turn.`,
+          name: "Mutiler",
+          description: `Attaque un ennemi. A 55 % de chances de réduire d'1 tour la durée de tous les buffs de la cible.
+
+A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ice Pillar",
-          description: `Attacks all enemies. Places a [Block Buffs] debuff and a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Pilier de Glace",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Thick Skin [P]",
-          description: `Immune to [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], [Sheep], and [Petrification] debuffs. <br><br>Decreases the damage taken by all allies that are under 1 or more buffs by 15%. Decreases the damage taken by all allies that are under no active buffs by 25%.`,
+          name: "Peau Épaisse [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SHEEP} et ${DEBUFFS.PETRIFICATION}.
+
+Réduit de 15 % les dégâts subis par tous les alliés qui possèdent 1 ou plusieurs buffs. Réduit de 25 % les dégâts subis par tous les alliés ne possédant aucun buff.`,
           isPassive: true
         }
       ],
@@ -39,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 40%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 40%`,
 };

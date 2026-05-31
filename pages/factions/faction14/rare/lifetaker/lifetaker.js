@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bleeding Serum",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Sérum Hémorragique",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Leg Bind",
-          description: `Attacks 1 enemy 3 times. Each hit has a 50% chance of decreasing the target’s Turn Meter by 10%. The third hit has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2.3*ATK",
+          name: "Liens de Jambe",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède également 50 % de chances de réduire le Compteur de Tour de la cible de 10 %. La troisième frappe possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "2.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Diamond Body",
-          description: `Places a [Veil] buff on this Champion for 1 turn and a 30% [Reflect Damage] buff on this Champion for 2 turns.`,
+          name: "Corps de Diamant",
+          description: `Place sur ce Champion un buff ${BUFFS.VEIL} pendant 1 tour et un buff ${BUFFS.REFLECT_DAM} de 30 %, pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

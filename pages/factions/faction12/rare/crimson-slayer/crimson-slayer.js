@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bring Silence",
-          description: `Attacks 3 times at random. Each hit has a 30% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Porteuse de Silence",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flowing Sword",
-          description: `Attacks 1 enemy. Has a 70% chance of decreasing the target's Turn Meter by 50%. Fills this Champion's Turn Meter equal to the amount the target loses.`,
-          damage: "6.4*ATK",
+          name: "Épée Fluide",
+          description: `Attaque un ennemi. Possède 70 % de chances de réduire de 50 % le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion d'une valeur équivalent à la somme des pertes de la cible.`,
+          damage: "6.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Copious Bleed",
-          description: `Attacks all enemies. Has an 80% chance of placing a 50% [Heal Reduction] debuff for 1 turn.`,
-          damage: "3.8*ATK",
+          name: "Copieuse Hémorragie",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 1 tour.`,
+          damage: "3.8*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 17%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 17%`,
 };

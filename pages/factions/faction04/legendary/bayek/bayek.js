@@ -3,39 +3,49 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Khopesh Strike",
-          description: `Attacks 1 enemy. <br><br>Places a [Leech] debuff for 2 turns. <br><br>Fills this Champion's Turn Meter by 20%.`,
+          name: "Frappe de khépesh",
+          description: `Attaque un ennemi. 
+
+Place un débuff ${DEBUFFS.LEECH} pendant 2 tours. 
+
+Remplit le Compteur de Tour de ce Champion de 20 %.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Desert Zephyr",
-          description: `Attacks all enemies. <br><br>Places a 50% [Decrease ACC] debuff and a 50% [Decrease RES] debuff for 2 turns. Also places a [Provoke] debuff on all enemies for 1 turn. If a target is under 3 or more debuffs, places a [Provoke] debuff for 2 turns instead.`,
+          name: "Zéphyr du désert",
+          description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours. Place également un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Si la cible est affligée de 3 débuffs ou plus, place au lieu de cela un débuff ${DEBUFFS.PROVOKE} pendant 2 tours.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Prayer of the Medjay",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns. Also places a [Perfect Veil] buff and a 60% [Increase DEF] buff on all allies except this Champion for 2 turns. <br><br>Places a 60% [Increase DEF] buff on this Champion for 3 turns.<br><br>Then grants an Extra Turn.`,
+          name: "Prière du Medjaÿ",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.DEF} de 60 % sur tous les alliés sauf ce Champion pendant 2 tours. 
+
+Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Siwa's Pride [P]",
-          description: `This Champion and their allies cannot receive critical hits from enemies whose ACC is equal to or lower than their own ACC.`,
+          name: "Tout est permis [P]",
+          description: `Dès que les PV d'un ennemi tombent sous 25 % après avoir reçu des dégâts de n'importe quel Assassin, il reçoit des dégâts bonus supplémentaires proportionnels à la DÉF de ce Champion. Ces dégâts bonus ignoreront 100 % de la DÉF de la cible et ne peuvent pas être critiques.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Everything is Permitted [P]",
-          description: `Whenever an enemy's HP drops below 25% after receiving damage from any Assassin, they receive additional bonus damage proportional to this Champion's ATK. This bonus damage will ignore 100% of the target's DEF and cannot be critical.`,
+          name: "Fierté de Siwa [P]",
+          description: `Ce Champion et ses alliés ne peuvent pas recevoir de frappes critiques de la part des ennemis dont la PRÉ est inférieure ou égale à leur propre PRÉ.`,
           isPassive: true
         }
       ],
@@ -53,5 +63,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 70`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 70`,
 };

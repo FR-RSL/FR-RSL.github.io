@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Unbearable Assault",
-          description: `Attacks 1 enemy 2 times. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns after the first hit. Places an extra hit if the [Decrease DEF] debuff is placed.`,
-          damage: "1.35*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Assaut Insoutenable",
+          description: `Attaque 2 fois un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours après la première frappe. Place un coup supplémentaire si le débuff ${DEBUFFS.DEF} est placé.`,
+          damage: "1.35*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Enduring Warrior",
-          description: `Attacks 1 enemy. Before attacking, places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns if this Champion's DEF is higher than the target's DEF. Decreases the cooldown of this Skill by 1 turn if the target has more than 50% HP after the attack.`,
-          damage: "6.1*ATK",
+          name: "Guerrier Tenace",
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si sa DÉF est plus élevée que la DÉF de la cible. Réduit de 1 tour le temps de recharge de cette Compétence si la cible possède plus de 50 % de PV après l'attaque.`,
+          damage: "6.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Army Breaker",
-          description: `Attacks 1 enemy, then attacks all enemies except the initial target if there are 3 or more enemies alive.<br><br>Inflicts 20% more damage on the first hit if the target has higher MAX HP than this Champion.`,
-          damage: "7*ATKMultiplier: 4.5*ATK",
+          name: "Briseur d'Armée",
+          description: `Attaque un ennemi, puis attaque tous les ennemis sauf la cible initiale s'il reste 3 ennemis vivants ou plus.
+
+Inflige 20 % de dégâts supplémentaires lors de la première frappe si la cible possède des PV MAX plus élevés que ce Champion.`,
+          damage: "7*ATQMultiplier: 4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Vendetta [P]",
-          description: `Will ignore 7.5% of enemy DEF for each time this Champion attacks the same target enemy in consecutive attacks or Turns. Stacks up to 30%. <br><br>The stack will be lost and reset if this Champion targets and attacks a different enemy.`,
+          description: `Ignorera 7,5 % de la DÉF de l'ennemi chaque fois que ce Champion attaque la même cible ennemie lors d'attaques ou de Tours consécutifs. S'accumule jusqu'à 30 %. 
+
+L'accumulation sera perdue et réinitialisée si ce Champion cible et attaque un ennemi différent.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 30%`,
 };

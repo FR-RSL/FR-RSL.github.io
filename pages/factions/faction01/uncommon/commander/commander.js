@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Holy Fire",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "3.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Damage +10%", "Level 8: Buff/Debuff Chance +5%"],
+          name: "Feu Sacré",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "3.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Quickheal",
-          description: `Heals the ally with the lowest HP by 40% of this Champion's HP. Completely fills the target's Turn Meter if the ally is fully healed. This Champion's Turn Meter cannot be filled by this Skill.<br><br><br>Heal Multiplier: 0.4*HP`,
+          name: "Soin Rapide",
+          description: `Soigne, à hauteur de 40 % des PV de ce Champion, l'allié ayant le moins de PV. Remplit totalement le Compteur de Tours de la cible si l'allié possède toute sa vie. Le Compteur de Tours de ce Champion ne peut pas être rempli par cette Compétence.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

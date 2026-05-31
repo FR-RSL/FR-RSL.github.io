@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Whirling Axe",
-          description: `Attack all enemies. Places a 25% [Increase ATK] buff on this Champion for 2 turns if this attack is critical.`,
-          damage: "ATK*3",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Hache Tournoyante",
+          description: `Attaque tous les ennemis. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur ce Champion si cette attaque passe en critique.`,
+          damage: "ATQ*3",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Skullclobber",
-          description: `Attacks 1 enemy. Places a [Stun] debuff for 1 turn.`,
-          damage: "ATK*6.5",
+          name: "Cogne-crâne",
+          description: `Attaque un ennemi. Place un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "ATQ*6.5",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Withstand [P]",
-          description: `Revives this Champion to 30% HP when killed and places a [Block Damage] buff for 1 turn.`,
+          name: "Résister [P]",
+          description: `Ranime ce Champion avec 30 % de PV lorsqu'il se fait tuer et place un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour.`,
           cooldown: 8,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],

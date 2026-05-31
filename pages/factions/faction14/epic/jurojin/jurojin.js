@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Monk's Spade",
-          description: `Attacks 1 enemy. Has a 45% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Pelle de Moine",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "0.24*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fated Duel",
-          description: `Places a [Shield] buff on this Champion for 2 turns equal to 25% of their MAX HP, then attacks 1 enemy. Places a [Provoke] debuff for 1 turn. <br><br>If the target’s MAX HP is equal to or lower than this Champion’s, the [Provoke] debuff cannot be resisted.<br><br><br>Shield Multiplier: 0.25*HP`,
+          name: "Duel Prédestiné",
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 25 % de ses PV MAX pendant 2 tours, puis attaque 1 ennemi. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+
+Si les PV de la cible sont inférieurs ou égaux à ceux de ce Champion, il est impossible de résister au buff ${DEBUFFS.PROVOKE}.`,
           damage: "0.32*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Shield +5%", "Level 4: Damage +5%", "Level 5: Shield +5%", "Level 6: Damage +10%", "Level 7: Shield +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "True Smite",
-          description: `Attacks 1 enemy. Will ignore 25% of the target’s DEF. Will also ignore [Unkillable] and [Block Damage] buffs.`,
+          name: "Vraie Frappe",
+          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Ignorera également les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
           damage: "0.34*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Smiles at Death [P]",
-          description: `Will receive 25% less damage from enemy attacks when this Champion’s HP drops to 50% or below.`,
+          name: "Sourit à la Mort [P]",
+          description: `Recevra 25 % de dégâts en moins suite aux attaques ennemies lorsque les PV de ce Champion tombent à 50 % ou moins.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

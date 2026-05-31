@@ -3,35 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Molten Punch",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease C. RATE] debuff for 2 turns.`,
+          name: "Frappe en Fusion",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.`,
           damage: "4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pyroclasm",
-          description: `Attacks all enemies. Has a 20% chance of placing a [HP Burn] debuff for 2 turns. The chance of placing the debuff increases by 20% for each alive enemy.`,
+          name: "Pyroclasme",
+          description: `Attaque tous les ennemis. Possède 20 % de chances de placer un débuff ${DEBUFFS.BURN} de 2 tours. Les chances de placer un débuff augmentent de 20 % pour chaque ennemi vivant.`,
           damage: "3.5*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Pyretic Release",
-          description: `Attacks all enemies. Has a 50% chance of increasing the cooldowns of all skills by 2 turns on enemies under [HP Burn] debuffs. Also places a [Shield] buff equal to 20% of this Champion's MAX HP on all allies for 2 turns.<br><br>[Instantly activates this skill when this Champion is revived by Rian the Conjurer.]<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Libération Pyrétique",
+          description: `Attaque tous les ennemis. Possède 50 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis sous débuff ${DEBUFFS.BURN}. Place également, sur tous les alliés, un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.
+
+[Active instantanément cette compétence lorsque ce Champion est ranimé par Rian l'Illusionniste.]`,
           damage: "3.5*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Shield +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Shield +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Bouclier +5%", "Chances de Buff/Debuff +5%", "Bouclier +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fiery Swath [P]",
-          description: `Has a 10% chance of placing a [Fear] debuff on an enemy for 1 turn whenever they receive damage from a [HP Burn] debuff placed on themselves.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%"],
+          name: "Ravage Ardent [P]",
+          description: `Possède 10 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur un ennemi lorsqu'il subit des dégâts dus à un débuff ${DEBUFFS.BURN}.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

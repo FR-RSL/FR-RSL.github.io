@@ -3,26 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thunderous Whallop",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Provoke] debuff for 1 turn if the target's HP percentage is lower than this Champion's.`,
+          name: "Beigne Fracassante",
+          description: `Attaque un ennemi.
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si le pourcentage de PV de la cible est inférieur à celui de ce Champion.`,
           damage: "0.15*HP",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hold Fast",
-          description: `Places a 60% [Increase DEF] buff on this Champion for 2 turns. Grants an Extra Turn.`,
+          name: "Tiens Fermement",
+          description: `Place un buff d'${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.
+Accorde un Tour Supplémentaire.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Covered Retreat",
-          description: `Places a [Veil] buff on all allies except this Champion for 2 turns.`,
+          name: "Retraite Protégée",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.VEIL} sur tous les alliés, sauf sur ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,26 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lightning Sanction",
-          description: `Attacks 1 enemy. <br><br>Has a 35% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Sanction Éclair",
+          description: `Attaque un ennemi. 
+
+Offre 35 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fill With Blessing",
-          description: `Heals an ally by 30% of this Champion’s MAX HP.<br><br>Places a [Shield] buff equal to any surplus heal for 2 turns if the target is fully healed by this Skill.<br><br><br>Heal Multiplier: 0.3*HPShield Multiplier: Remaining Heal Amount`,
+          name: "Plein de Grâces",
+          description: `Soigne un allié à hauteur de 30 % des PV MAX de ce Champion.
+
+Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à n'importe quel surplus de soins si la cible est totalement soignée par cette Compétence.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Heal +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Brim With Life",
-          description: `Places a 7.5% [Continuous Heal] buff on all allies for 2 turns.<br>Places a [Shield] buff equal to 10% of the target’s HP on all allies for 2 turns If an ally’s HP is full.<br><br><br>Shield Multiplier: 0.1*Target Max HP`,
+          name: "Déborde de Vie",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 7,5 % sur tous les alliés.
+Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de la cible sur tous les alliés si les PV d'un allié sont pleins.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +45,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 13%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 13%`,
 };

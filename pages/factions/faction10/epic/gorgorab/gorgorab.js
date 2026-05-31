@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Misfortune",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random buff.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Malchance",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de retirer 1 buff aléatoire.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Resurge",
-          description: `Fills the Turn Meter of all allies by 15%. Places a 50% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Nouvel Élan",
+          description: `Remplit de 15 % le Compteur de Tours de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Animate",
-          description: `Revives any dead allies with 25% HP, then heals all allies by 25%. The heal will happen even if there are no dead allies.<br><br><br>Heal Multiplier: 0.25*Target Max HP`,
+          name: "Animer",
+          description: `Ranime tous les alliés morts avec 25 % de PV, puis soigne tous les alliés de 25 %. Le soin survient même si aucun allié n'est mort.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 23%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 23%`,
 };

@@ -4,40 +4,48 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Foecrusher",
-          description: `Attacks 1 enemy. Before attacking, removes all buffs from the target.<br><br>Increases the cooldown of a random skill on the target by 2 turns, even if this attack lands as a weak hit.`,
-          damage: "0.28*HP+1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          name: "Écrase-ennemi",
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible.
+
+Augmente de 2 tours le temps de recharge d'une compétence aléatoire de la cible même si cette attaque est une frappe faible.`,
+          damage: "0.28*HP+1*ATQ",
+          levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hammerquake",
-          description: `Attacks all enemies. Places a [Provoke] debuff on all enemies for 1 turn. This debuff will ignore [Block Debuffs] buff and can be placed even if this attack lands as a weak hit.<br><br>Also places a protected [Unkillable] buff and a [Counterattack] buff on this Champion for 3 turns.`,
-          damage: "0.25*HP+1*ATK",
+          name: "Marteau-séisme",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} et peut être placé même si cette attaque est une frappe faible.
+
+Place également un buff ${BUFFS.UNKILLABLE} protégé et un buff ${BUFFS.COUNTER} sur cette Championne pendant 3 tours.`,
+          damage: "0.25*HP+1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bonded by Blood",
-          description: `Removes all debuffs from all allies and places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.<br><br>Also places a [Shield] buff on all allies equal to 30% of this Champion's MAX HP for 2 turns. Increases the value of the [Shield] by an additional 3% of this Champion's MAX HP per each debuff removed by this skill.<br><br><br>Shield Multiplier: ((0.03*removedEffectsCount)+0.3)*HP`,
+          name: "Liés par le sang",
+          description: `Retire tous les débuffs sur tous les alliés et place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf cette Championne pendant 2 tours. 
+
+Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de cette Championne pendant 2 tours. Augmente la valeur du ${BUFFS.SHIELD} de 3 % supplémentaires des PV MAX de cette Championne pour chaque débuff retiré par cette compétence.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Kill or Cure [P]",
-          description: `When attacked, decreases the duration of all buffs on the attacker by 1 turn. Occurs once per hit.<br><br>Also heals all allies except this Champion by 50% of the damage taken, and heals this Champion by 25% of the damage taken, whenever this Champion is hit. Occurs once per hit.<br><br>Heal Multiplier: 0.5*Damage Dealt`,
+          name: "Tuer ou soigner [P]",
+          description: `Lorsqu'elle est attaquée, réduit d'1 tour la durée de tous les buffs de l'assaillant. Se produit une fois par frappe. 
+
+Soigne également tous les alliés sauf cette Championne à hauteur de 50 % des dégâts subis, et soigne cette Championne de 25 % des dégâts subis, dès que cette Championne est frappée. Se produit une fois par frappe.`,
           isPassive: true
         }
       ],
@@ -53,7 +61,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -61,39 +69,51 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Magma Slam",
-          description: `Attacks all enemies. Has a 25% chance of repeating the attack. Will ignore [Block Damage] buffs.`,
-          damage: "2.7*ATK+0.12*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Cognement de magma",
+          description: `Attaque tous les ennemis. A 25 % de chances de répéter l'attaque. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "2.7*ATQ+0.12*HP",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Calamitous Maul",
-          description: `Attacks all enemies. Damage of this skill increases by 10% for each buff on this Champion and on the target.<br><br>Will ignore 30% of the target's DEF. Will ignore 50% of the target's DEF instead if this Champion has more buffs than the target.`,
-          damage: "4*ATK+0.12*HP",
+          name: "Massue calamiteuse",
+          description: `Attaque tous les ennemis. Les dégâts de cette compétence augmentent de 10 % pour chaque buff sur cette Championne et sur la cible.
+
+Ignorera 30 % de la DÉF de la cible. Ignorera au lieu de cela 50 % de la DÉF de la cible si cette Championne a plus de buffs que la cible.`,
+          damage: "4*ATQ+0.12*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Cornered Animal",
-          description: `Removes all debuffs from this Champion.<br><br>Places a 50% [Increase ATK] buff, a 30% [Increase C. DMG] buff, and a 30% [Increase C. RATE] buff on all allies for 3 turns.<br><br>Grants an Extra Turn.<br><br>[This skill unlocks when this Champion has 3 or more debuffs, or when this Champion has 50% or less HP.]`,
+          name: "Brume pourpre [P]",
+          description: `Dès qu'un allié attaque, cette Championne a 50 % de chances de faire équipe avec lui et de rejoindre l'attaque. 
+
+Cette Championne inflige plus de dégâts à mesure que ses PV diminuent (1 % supplémentaire par tranche de 1 % de PV perdus). 
+
+Cette Championne reçoit moins de dégâts à mesure que ses PV diminuent (0,5 % de moins par tranche de 1 % de PV perdus).`,
           cooldown: 2,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Crimson Haze [P]",
-          description: `Whenever an ally attacks, this Champion has a 50% chance to team up with them and join their attack.<br><br>This Champion inflicts more damage as their HP decreases (by 1% for every 1% of HP lost).<br><br>This Champion receives less damage as their HP decreases (by 0.5% for every 1% of HP lost).`,
+          name: "Animal acculé",
+          description: `Retire tous les débuffs dont cette Championne est affligée. 
+
+Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 3 tours.
+
+Accorde un Tour supplémentaire.
+
+[Cette compétence se débloque lorsque cette Championne a 3 débuffs ou plus, ou lorsque cette Championne a 50 % de PV ou moins.]`,
           isPassive: true
         }
       ],
@@ -109,7 +129,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/hp.webp",
-    description: `Increases Ally HP in All Battles by 35%`,
+    description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

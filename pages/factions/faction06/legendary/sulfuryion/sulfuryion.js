@@ -3,32 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Volcanic Rend",
-          description: `Attacks 1 enemy. Fills this Champion’s Turn Meter by 15%. <br><br>Also fills the Turn Meters of all allies, except this Champion, by 10%, when attacking a target under a [HP Burn] debuff.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Déchirure volcanique",
+          description: `Attaque un ennemi. Remplit le Compteur de Tour de ce Champion de 15 %. 
+
+Remplit également le Compteur de Tour de tous les alliés sauf ce Champion de 10 % lorsqu'il attaque une cible sous débuff ${DEBUFFS.BURN}.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blazing Barrier",
-          description: `Places a [HP Burn] debuff on all enemies for 3 turns, and instantly activates one tick of all [HP Burn] debuffs on all enemies. <br><br>Then places a [Shield] buff on all allies for 2 turns equal to the damage inflicted by the [HP Burn] activation. The value of the [Shield] buff cannot exceed 25,000 HP.<br><br><br>Shield Multiplier: Total Burn Damage`,
+          name: "Barrière ardente",
+          description: `Place un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 3 tours, puis active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis. 
+
+Place ensuite sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent aux dégâts infligés par l'activation de ${DEBUFFS.BURN}. La valeur du buff ${BUFFS.SHIELD} ne peut pas dépasser 25 000 PV.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Shield +10%", "Level 3: Cooldown -1", "Level 4: Shield +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Bouclier +10%", "Temps de recharge -1", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rise From Ash",
-          description: `Revives all dead allies with 50% HP and 40% Turn Meter. <br><br>Grants an Extra Turn.`,
+          name: "Renaître de ses cendres",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 40 % de Compteur de Tour. 
+
+Accorde un Tour supplémentaire.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Pyroclastic Boon [P]",
-          description: `Fills the Turn Meters of all allies by 5% for each [HP Burn] debuff placed. <br><br>Whenever a [HP Burn] debuff is activated, heals all allies by 5% of their MAX HP. Whenever a [HP Burn] debuff is activated on Skavag, Tainted Skavag, Spiderlings, or Tainted Spiderlings, heals all allies by 1% of their MAX HP. <br><br>Whenever a [HP Burn] debuff is removed from an enemy, places a 50% [Decrease RES] debuff on that enemy for 1 turn. <br><br>Whenever an ally is killed by an enemy under a [HP Burn] debuff, fills this Champion’s Turn Meter by 20%. <br><br>Increases this Champion’s SPD by 7 for each active [HP Burn] debuff.<br><br>Heal Multiplier: Spider: 1% * Target Max HP or Other: 5% * Target Max HP`,
+          name: "Don pyroclastique [P]",
+          description: `Pour chaque débuff ${DEBUFFS.BURN} placé, remplit le Compteur de Tour de tous les alliés de 5 %. 
+
+Dès qu'un débuff ${DEBUFFS.BURN} est activé, soigne tous les alliés de 5 % de leurs PV MAX. Dès qu'un débuff ${DEBUFFS.BURN} est activé sur Skavag, Skavag corrompue, les Bébés Araignées ou les Bébés Araignées corrompus, soigne tous les alliés de 1 % de leurs PV MAX. 
+
+Dès qu'un débuff ${DEBUFFS.BURN} est retiré sur un ennemi, place un débuff ${DEBUFFS.RES} de 50 % sur cet ennemi pendant 1 tour. 
+
+Dès qu'un allié est tué par un ennemi sous débuff ${DEBUFFS.BURN}, remplit le Compteur de Tour de ce Champion de 20 %. 
+
+Augmente la VIT de ce Champion de 7 points pour chaque débuff ${DEBUFFS.BURN} actif.`,
           isPassive: true
         }
       ],
@@ -46,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

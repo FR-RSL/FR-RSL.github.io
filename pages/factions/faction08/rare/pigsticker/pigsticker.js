@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vile Substance",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Substance Ignoble",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Heartless Curse",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 20% of the damage inflicted.`,
-          damage: "5.8*ATK",
+          name: "Malédiction Cruelle",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 20 % des dégâts infligés.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Septic Spearhead",
-          description: `Attacks 1 enemy 2 times. Destroys the target's MAX HP by 30% of the damage inflicted.`,
-          damage: "3*ATK",
+          name: "Fer de Lance Infecté",
+          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Doom Tower by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Tour du Malheur de 21%`,
 };

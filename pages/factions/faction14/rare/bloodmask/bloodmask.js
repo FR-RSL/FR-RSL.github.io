@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bone Crunch",
-          description: `Attacks 1 enemy. Has a 35% chance of decreasing the target’s Turn Meter by 10%.`,
+          name: "Craquement d'Os",
+          description: `Attaque un ennemi. Possède 35 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
           damage: "0.19*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Foot Stomp",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
+          name: "Piétinement",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
           damage: "0.27*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Skull Fracture",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Fracture du Crâne",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.28*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,32 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Zephyr of Conquest",
-          description: `Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Zéphyr de conquête",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "2.7*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dread Dominion",
-          description: `Has a 75% chance to place a [Block Buffs] debuff and a [True Fear] debuff on all enemies for 2 turns. <br><br>If the target is a Boss, has a 75% chance to place a [Block Buffs] debuff and a 30% [Decrease SPD] debuff on them instead.`,
+          name: "Règne de terreur",
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 2 tours. 
+
+Si la cible est un Boss, possède au lieu de ça 75 % de chances de lui infliger un débuff |Blocage des Buffs] et un débuff ${DEBUFFS.SPD} de 30 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Icon of Domination",
-          description: `Removes all debuffs from a single ally (except this Champion) and places 2 [Intercept] stacks on them. <br><br>Also fills the target ally’s Turn Meter by 50% and resets the cooldowns of all their skills.`,
+          name: "Icône de domination",
+          description: `Retire tous les débuffs sur un seul allié (sauf cette Championne) et lui accorde 2 piles d'${BUFFS.INTERCEPT}. 
+
+Remplit également le Compteur de Tour de l'allié ciblé de 50 % et réinitialise les temps de recharge de toutes ses compétences.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Authority Manifest [P]",
-          description: `This Champion is immune to [Sheep] debuffs.<br><br>Each debuff placed by this Champion decreases a target's Turn Meter by 5% and permanently decreases their RES and ACC by 10 (stacks up to 100).`,
+          name: "Manifeste d'autorité [P]",
+          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.SHEEP}.
+
+Chaque débuff placé par cette Championne réduit le Compteur de Tour d'une cible de 5 %, et réduit de façon permanente sa RÉS et sa PRÉ de 10 points (s'accumule jusqu'à 100).`,
           isPassive: true
         }
       ],
@@ -46,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 24%`,
 };

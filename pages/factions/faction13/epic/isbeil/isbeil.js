@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fyrshot",
-          description: `Attacks 1 enemy. <br><br>Has a 50% chance of decreasing the duration of a [Bomb] debuff by 1 turn. <br><br>Also has a 25% chance of placing a [Bomb] debuff on a random enemy for 1 turn. Instantly detonates the [Bomb] debuff placed on that random enemy.<br><br>All [Bomb] debuffs placed by this skill on enemies whose MAX HP is higher than 200,000 will deal 20% more damage.<br><br><br>Bomb Multiplier: (Target Max HP>200000)*4.2*ATK+(Target Max HP<=200000)*3.5*ATK`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Coup de feu",
+          description: `Attaque un ennemi. 
+
+Possède 50 % de chances de réduire d'1 tour la durée d'un débuff ${DEBUFFS.BOMB}. 
+
+Possède également 25 % de chances de placer un débuff ${DEBUFFS.BOMB} sur un ennemi aléatoire pendant 1 tour. Fait exploser instantanément le débuff ${DEBUFFS.BOMB} placé sur cet ennemi aléatoire.
+
+Tous les débuffs ${DEBUFFS.BOMB} placés par cette compétence sur des ennemis dont les PV MAX sont supérieurs ou égaux à 200 000 infligeront 20 % de dégâts en plus.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tracer Slugs",
-          description: `Attacks 1 enemy 2 times. <br><br>The first hit has a 75% chance of placing 2 [Bomb] debuffs that detonate after 2 turns. The second hit has a 55% chance of applying a [Debuff Spread] effect, taking 1 [Bomb] debuff and placing it on all other enemies.<br><br>All [Bomb] debuffs placed by this skill on enemies whose MAX HP is higher than 200,000 will deal 50% more damage.<br><br><br>Bomb Multiplier: (Target Max HP>200000)*7.5*ATK+(Target Max HP<=200000)*5*ATK`,
-          damage: "2.7*ATK",
+          name: "Balles témoin",
+          description: `Attaque 2 fois un ennemi. 
+
+La première frappe possède 75 % de chances de placer deux débuffs ${DEBUFFS.BOMB} qui détonent après 2 tours. La seconde frappe possède 55 % de chances d'appliquer un effet [Propagation de Débuffs] qui prend 1 débuff ${DEBUFFS.BOMB} pour le placer sur tous les autres ennemis.
+
+Tous les débuffs ${DEBUFFS.BOMB} placés par cette compétence sur des ennemis dont les PV MAX sont supérieurs ou égaux à 200 000 infligeront 50 % de dégâts en plus.`,
+          damage: "2.7*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Eruptive Volley",
-          description: `Attacks all enemies. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns. <br><br>Grants an Extra Turn if [Weaken] was placed on all enemies by this skill.`,
-          damage: "3.8*ATK",
+          name: "Salve éruptive",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Accorde un Tour supplémentaire si un débuff ${DEBUFFS.WEAKEN} a été placé sur tous les ennemis par cette compétence.`,
+          damage: "3.8*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Explosive Phoenix [P]",
-          description: `Places a [Revive On Death] buff on this Champion for 2 turns when an enemy dies from a [Bomb] debuff.`,
+          name: "Phénix explosif [P]",
+          description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours lorsqu'un ennemi meurt à cause d'un débuff ${DEBUFFS.BOMB}.`,
           cooldown: 6,
           isPassive: true
         }
@@ -49,5 +61,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Dispelling Blow",
-          description: `Attacks 1 enemy. Has a 25% chance of removing 1 random buff from the target.`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Frappe Dissipante",
+          description: `Attaque un ennemi. Possède 25 % de chances de retirer un buff aléatoire sur chaque cible.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Exploit Weakness",
-          description: `Attacks 1 enemy. Places a 15% [Increase C. RATE] buff on all allies for 2 turns.`,
-          damage: "5.1*ATK",
+          name: "Exploitation de Faiblesse",
+          description: `Attaque un ennemi. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés.`,
+          damage: "5.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Recall",
-          description: `Revives an ally with 50% of their HP. Places a [Shield] buff on the target equal to 20% of the target's HP.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Rappel",
+          description: `Ranime un allié avec 50 % de ses PV. Place, sur la cible, un buff de ${BUFFS.SHIELD} équivalent à 20 % des PV de la cible.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 23%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 23%`,
 };

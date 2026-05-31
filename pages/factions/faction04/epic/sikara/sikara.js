@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Followup Volley",
-          description: `Attacks 1 enemy. Fills this Champion’s Turn Meter by 25% if this attack is critical.`,
-          damage: "5.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Volée de Suivi",
+          description: `Attaque un ennemi. Remplit de 25 % le Compteur de Tour de ce Champion si l'attaque passe en critique.`,
+          damage: "5.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Aura Puncture",
-          description: `Attacks all enemies 3 times. Each hit has a 40% chance of removing 1 random buff from the target.`,
-          damage: "1.4*ATK",
+          name: "Perce-Aura",
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 40 % de chances de retirer un buff aléatoire de la cible.`,
+          damage: "1.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Enfeebling Tips",
-          description: `Attacks all enemies. Has a 60% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "4.3*ATK",
+          name: "Pointes de Faiblesse",
+          description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "4.3*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1", "Level 9: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Devoted Sister [P]",
-          description: `Revives this Champion with 75% HP when killed.<br><br>[Only available when Alika is on the same team.]`,
+          name: "Sur Dévouée [P]",
+          description: `Ranime cette Championne avec 75 % de PV lorsqu'elle est tuée.
+
+[Uniquement disponible lorsque Alika se trouve dans la même équipe.]`,
           cooldown: 7,
           isPassive: true
         }

@@ -4,16 +4,11 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Volute de sommeil",
-          description: `
-            Attaque un ennemi.<br><br>
-			Possède 50% de chances de placer un débuff
-			<span class='gbt'>Sommeil</span> pendant 1 tour.<br><br>
-			Si la cible se trouve sous un débuff 
-			<span class='gbt'>Reduction de VIT</span> ou <span class='gbt'>Affaiblissement</span>
-			place par cette Championne, Possède au lieu de ca 75%
-			de chances de placer un débuff <span class='gbt'>Sommeil</span>
-			pendant 1 tour.
-          `,
+          description: `Attaque un ennemi. 
+
+Possède 50 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. 
+
+Si la cible se trouve sous un débuff ${DEBUFFS.SPD} ou ${DEBUFFS.WEAKEN} placé par cette Championne, possède au lieu de ça 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.`,
           damage: "5.4*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -24,13 +19,12 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Eclat printanier",
-          description: `
-            Attaque tous les ennemis.<br><br>
-			Possède 75% de chances de placer un débuff <span class='gbt'>Reduction de VIT</span>
-			de 30% et un débuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
-			Reduit également les Compteurs de Tour de tous les ennemis de 15%.
-          `,
+          name: "Éclat printanier",
+          description: `Attaque tous les ennemis.
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+
+Réduit également les Compteurs de Tour de tous les ennemis de 15 %.`,
 		  damage: "4.9*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -43,14 +37,10 @@ const championData = {
         },
         {
           img: "assets/sort3.webp",
-          name: "Chant-reve beni",
-          description: `
-            Place un buff <span class='gbt'>Augmentation de VIT</span> de 30%
-			et un buff <span class='gbt'>Augmentation d'ATQ</span> de 50% 
-			sur tous les alliés pendant 3 tours.
-			Remplit également le Compteurs de Tour de tous les alliés de 15%.<br><br>
-			Accorde ensuite un Tour supplémentaire.
-          `,
+          name: "Chant-rêve béni",
+          description: `Place un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 3 tours. Remplit également les Compteurs de Tour de tous les alliés de 15 %. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -60,12 +50,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Floraison de vie [P]",
-          description: `
-            Des que cette Championne ou un allié voit son Compteur de Tour augmente,
-			soigne tous les alliés en fonction de leurs PV MAX.
-			La valeur du soin en pourcentage est egale a la moitie
-			de l'augmentation du Compteur de Tour.
-          `,
+          description: `Dès que cette Championne ou un allié voit son Compteur de Tour augmenté, soigne tous les alliés en fonction de leurs PV MAX. La valeur du soin en pourcentage est égale à la moitié de l'augmentation du Compteur de Tour.`,
 		  cooldown: 1,
           isPassive: true,
         },

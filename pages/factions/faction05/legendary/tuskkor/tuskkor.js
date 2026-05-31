@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Foe Mangler",
-          description: `Attacks 1 enemy 2 times. <br><br>Has a 25% chance of granting an Extra Turn.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Broyeur d'adversaire",
+          description: `Attaque 2 fois un ennemi. 
+
+A 25 % de chances d'accorder un Tour supplémentaire.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hatchet Barrage",
-          description: `Attacks all enemies. The damage inflicted by this skill increases by 10% for each buff on this Champion. <br><br>Decreases the cooldown of this skill by 1 turn if this attack kills an enemy. If this attack kills 2 or more enemies, grants this Champion an Extra Turn instead.`,
-          damage: "4*ATK*(1+0.1*Active Buff Count)",
+          name: "Barrage de hachette",
+          description: `Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 10 % pour chaque buff dont bénéficie ce Champion. 
+
+Réduit d'1 tour le temps de recharge de cette compétence si cette attaque tue un ennemi. Si cette attaque tue 2 ennemis ou plus, accorde au lieu de ça un Tour supplémentaire à ce Champion.`,
+          damage: "4*ATQ*(1+0.1*Active Buff Count)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "First Ax's Fury",
-          description: `Attacks 1 enemy 2 times. Before attacking, places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns.<br><br>Will ignore [Shield] buffs. <br><br>Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "3*ATK",
+          name: "Furie de Prime-hache",
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.
+
+Ignorera les buffs ${BUFFS.SHIELD}. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Brutal Vehemence [P]",
-          description: `Each Extra Turn this Champion gets increases their C. DMG by 10% (stacks up to 50%). <br><br>Each Extra Turn this Champion gets also decreases the damage they receive by 5% (stacks up to 50%).`,
+          name: "Véhémence brutale [P]",
+          description: `Chaque Tour supplémentaire qu'obtient ce Champion augmente ses DÉG C. de 10 % (s'accumule jusqu'à 50 %). 
+
+Chaque Tour supplémentaire qu'obtient ce Champion réduit également les dégâts qu'il reçoit de 5 % (s'accumule jusqu'à 50 %).`,
           isPassive: true
         }
       ],
@@ -48,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

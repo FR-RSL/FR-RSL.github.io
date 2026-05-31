@@ -3,32 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heartburst",
-          description: `Attacks all enemies. <br><br>Places a 60% [Decrease DEF] debuff for 2 turns. <br><br>Also fills the Turn Meters of all allies by 5%.`,
-          damage: "2.77*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Éclat de Coeur",
+          description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Remplit également le Compteur de Tour de tous les alliés de 5 %.`,
+          damage: "2.77*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Off With Their Heads!",
-          description: `Removes all buffs from all enemies. Then places a [Deathbrand] debuff on the initial target for 2 turns. Also places a [True Fear] debuff on all enemies for 1 turn. <br><br>Fills this Champion’s Turn Meter by 5% for each buff removed by this skill.`,
+          name: "Qu'on leur coupe la tête !",
+          description: `Retire tous les buffs dont disposent les ennemis. Place ensuite un débuff ${DEBUFFS.DEATHBRAND} sur la cible initiale pendant 2 tours. Place également un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. 
+
+Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff retiré par cette compétence.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Queenly Command",
-          description: `Teams up with all allies to attack a single enemy. Before attacking, places a 50% [Increase ATK] buff on all allies for 2 turns. <br><br>Decreases the cooldown of this Champion's Off With Their Heads! skill by 2 turns if the target is killed.`,
+          name: "Ordre de reine",
+          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. 
+
+Réduit de 2 tours le temps de recharge de la compétence Qu'on leur coupe la tête ! de cette Championne si la cible est tuée.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Hail To The Queen [P]",
-          description: `For every 10 buffs the enemy team receives, grants this Champion an Extra Turn.<br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Gloire à la Reine [P]",
+          description: `Pour tous les 10 buffs que l'équipe ennemie reçoit, accorde un Tour supplémentaire à cette Championne.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true
         }
       ],
@@ -46,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 70`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 70`,
 };

@@ -3,35 +3,55 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Breaking Story",
-          description: `Attacks 1 enemy. <br><br>Has a 50% chance of placing a [Stun], [Freeze], [Sleep], [Provoke], [Fear], [True Fear], or [Petrification] on the target for 1 turn. <br><br>Then places a [Perfect Veil] buff on this Champion for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Flash info",
+          description: `Attaque un ennemi. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} sur la cible pendant 1 tour. 
+
+Ensuite, place un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Explosive Scoop",
-          description: `Attacks 1 enemy. <br><br>Has a 75% chance of stealing all buffs from the target. Also has a 75% chance of stealing 100% of the target's current Turn Meter. Then has a 75% chance of placing a [Nullify] debuff and a [Seal] debuff on the target for 2 turns.<br><br>[Passive Effect]<br><br>Has a 25% chance of activating the Explosive Scoop skill on an enemy when they gain an Extra Turn or Instant Turn effect. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
-          damage: "5.5*ATK",
+          name: "Scoop explosif",
+          description: `Attaque un ennemi. 
+
+A 75 % de chances de voler tous les buffs de la cible. A également 75 % de chances de voler 100 % du Compteur de Tour actuel de la cible. Ensuite, a 75 % de chances de placer un débuff [Annuler] et un débuff ${DEBUFFS.SCEAU} sur la cible pendant 2 tours.
+
+${PASSIVE}
+
+A 25 % de chances d'activer la compétence Scoop explosif sur un ennemi lorsqu'il gagne un Tour supplémentaire ou un effet de Tour instantané. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Live on the Scene!",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns. <br><br>Also decreases the Turn Meters of all enemies by 20%. <br><br>Then grants an Extra Turn.`,
+          name: "En direct sur les lieux !",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+
+Réduit également le Compteur de Tour de tous les ennemis de 20 %. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Ace Reporter [P]",
-          description: `[Passive Effect]<br><br>Decreases all enemies' Turn Meters by 10% whenever an enemy has their skill activated, teams up with allies to attack, gains an Extra Turn or an Instant Turn, has their skills' cooldowns decreased, gets their Shield's value increased, gets their destroyed HP restored, has their HP swapped by allies or by themselves, Evades an enemy effect or skill, has their Turn Meter equalized, or has their HP balanced from a skill. Occurs once per skill. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>[Active Effect]<br><br>Whenever enemies remove, transfer, or decrease the duration of any debuff to 0, decreases the Turn Meters of all enemies by 25%. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Journaliste émérite [P]",
+          description: `${PASSIVE}
+
+Réduit le Compteur de Tour de tous les ennemis de 10 % dès qu'un ennemi a sa compétence activée, fait équipe avec ses alliés pour attaquer, gagne un Tour supplémentaire ou un Tour instantané, voit les temps de recharge de ses compétences réduits, bénéficie d'une augmentation de la valeur de son Bouclier, voit ses PV détruits rétablis, voit ses PV échangés par ses alliés ou lui-même, Esquive un effet ou une compétence d'un ennemi, voit son Compteur de Tour égalisé ou voit ses PV équilibrés grâce à une compétence. Se produit une fois par compétence. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.
+
+${ACTIVE}
+
+Dès que les ennemis retirent, transfèrent ou réduisent la durée d'un débuff à 0, réduit de 25 % les Compteurs de Tour de tous les ennemis. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -49,5 +69,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 28%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 28%`,
 };

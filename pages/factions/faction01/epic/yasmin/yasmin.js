@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Resounding Smash",
-          description: `Attacks 1 enemy. Places an extra hit if the target has no active buffs.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          name: "Fracas Retentissant",
+          description: `Attaque un ennemi.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Touch of Vigor",
-          description: `Heals an ally by 40% of their MAX HP. Heals by 60% instead if the ally has 50% HP or less.<br><br><br>Heal Multiplier: 0.4*Target Max HP +((Current HP %<=0.5)*0.2*Target Max HP)`,
+          name: "Touche de Vigueur",
+          description: `Soigne un allié à hauteur de 40 % de ses PV max. Par contre, soigne de 60 % si l'allié possède 50 % de PV ou moins.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lulling Chant",
-          description: `Has a 50% chance of removing all buffs from all enemies. Then places a [Sleep] debuff for 1 turn on all enemies who have active buffs.`,
+          name: "Chant Berçant",
+          description: `Possède 50 % de chances de retirer tous les buffs sur tous les ennemis. Place ensuite un débuff ${DEBUFFS.SLEEP} d'1 tour sur tous les ennemis ne possédant pas de buff actif.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

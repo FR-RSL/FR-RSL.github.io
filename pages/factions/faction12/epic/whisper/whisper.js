@@ -3,34 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Softening Drive",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Amollir la Volonté",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Charged Assault",
-          description: `Attacks 1 enemy. Places a 50% [Increase ATK] buff and a 30% [Increase C. RATE] buff on this Champion for 2 turns before attacking if the target has higher MAX HP than this Champion. Will ignore DEF if the target is under a [Weaken] debuff.`,
-          damage: "3.8*ATK",
+          name: "Assaut Chargé",
+          description: `Attaque un ennemi. Avant d'attaquer, place sur ce Champion un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % pendant 2 tours si la cible possède des PV MAX plus élevés que ceux de ce Champion. Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.WEAKEN}.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unyielding Flurry",
-          description: `Attacks 1 enemy 2 times. Grants an Extra Turn if the target is under [Decrease DEF] and [Weaken] debuffs.`,
-          damage: "2.6*ATK",
+          name: "Déluge Inflexible",
+          description: `Attaque 2 fois un ennemi. Accorde un Tour Supplémentaire si la cible est affligée de débuffs ${DEBUFFS.DEF} et ${DEBUFFS.WEAKEN}.`,
+          damage: "2.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Unrelenting [P]",
-          description: `Has a 10% chance of granting an Extra Turn whenever this Champion lands a critical hit. Increases damage inflicted on Bosses by 20%.`,
+          name: "Implacable [P]",
+          description: `Possède 10 % de chances d'accorder un Tour Supplémentaire dès que ce Champion porte un coup critique. Augmente de 20 % les dégâts infligés sur les Boss.`,
           isPassive: true
         }
       ],
@@ -48,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 29%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 29%`,
 };

@@ -3,27 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Angry Mallet",
-          description: `Attacks 1 enemy.<br>Places a [Shield] buff on this Champion equal to 10% of their MAX HP for 2 turns.<br><br><br>Shield Multiplier: 0.1*HP`,
+          name: "Maillet Furieux",
+          description: `Attaque un ennemi.
+Place sur ce Champion un buff de ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX pendant 2 tours.`,
           damage: "0.1*HP+0.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Shield +5%", "Level 6: Shield +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Bouclier +5%", "Bouclier +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "No Coming Back",
-          description: `Attacks 1 enemy.<br>Places a 50% [Heal Reduction] debuff for 2 turns.`,
+          name: "Sans Retour",
+          description: `Attaque un ennemi.
+Place un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
           damage: "0.2*HP+1.5*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shoulder the Weight",
-          description: `Places a 25% [Ally Protection] buff on all allies for 2 turns.<br>Places a 30% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Assumer le Poids",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 25 % sur tous les alliés.
+Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 30 % sur ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Dungeons by 25%`,
+  description: `Augmente la statistique PV des Alliés lors des Donjons de 25%`,
 };

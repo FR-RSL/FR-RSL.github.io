@@ -3,26 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thorned Riposte",
-          description: `Attacks 1 enemy 3 times. Each hit has a 20% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
-          damage: "1.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Riposte épineuse",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          damage: "1.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Treeshield's Favor",
-          description: `Heals all allies by 15% of their MAX HP. <br><br>Also places a 30% [Increase DEF] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.15*Target Max HP`,
+          name: "Grâce d'Arbre-bouclier",
+          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max. 
+
+Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Root Rejuvenation",
-          description: `Revives 2 random allies with 25% HP and 25% Turn Meter. <br><br>Also places a [Shield] buff on all revived allies for 2 turns, equal to 20% of their MAX HP.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Jouvence de racine",
+          description: `Ranime 2 alliés aléatoires avec 25 % de PV et 25 % de Compteur de Tour. 
+
+Place également sur tous les alliés ranimés un buff ${BUFFS.SHIELD} valant 20 % de leurs PV MAX pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 15%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 15%`,
 };

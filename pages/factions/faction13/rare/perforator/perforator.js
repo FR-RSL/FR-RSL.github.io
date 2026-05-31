@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vermin Slayer",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 5% [Poison] debuff for 1 turn.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Tueur de Parasites",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 1 tour.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hardened Tips",
-          description: `Attacks 1 enemy. Will ignore 50% of the target's DEF. Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "4.1*ATK",
+          name: "Embouts Durcis",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Scare Off [P]",
-          description: `Has a 35% chance of placing a [Fear] debuff on the target for 1 turn when this Champion inflicts a critical hit.`,
+          name: "Effrayer [P]",
+          description: `Possède 35 % de chances de placer un débuff de ${DEBUFFS.FEAR} d'1 tour sur la cible lorsque ce Champion inflige un coup critique.`,
           cooldown: 2,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],

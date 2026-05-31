@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Black Hand",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a [Leech] debuff for 2 turns. The chance increases by 5% for each alive enemy.`,
-          damage: "5.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Main Noire",
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Les chances augmentent de 5 % pour chaque ennemi vivant.`,
+          damage: "5.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Maelstrom Wrack",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Also has a 50% chance of placing a [Block Buffs] debuff for 2 turns. The chance of placing the [Block Buffs] debuff increases by 5% for each alive enemy.`,
-          damage: "4.8*ATK",
+          name: "Maelström de Varech",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Possède également 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Les chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} augmentent de 5 % pour chaque ennemi vivant.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Uugo's Brew",
-          description: `Removes all [Heal Reduction] debuffs from all allies, then removes 1 random debuff from all allies, then heals all allies by 20% of this Champion’s MAX HP.<br><br>If all allies are dead, revives them with 50% HP, then fills their Turn Meters by 50% instead.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Infusion d'Uugo",
+          description: `Retire tous les débuffs ${DEBUFFS.HEALS} sur tous les alliés, retire 1 débuff aléatoire sur tous les alliés, puis soigne tous les alliés de 20 % des PV MAX de ce Champion.
+
+Si tous les alliés sont morts, les ranime avec 50 % de leurs PV, puis remplit leurs Compteurs de Tour de 50 %.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +5%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Final Spite [P]",
-          description: `Places a 30% [Increase SPD] buff and a [Block Damage] buff on this Champion for 1 turn whenever this Champion’s last living ally is killed.`,
+          name: "RanCoeur ultime [P]",
+          description: `Place sur ce Champion un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour dès que le dernier allié vivant de ce Champion se fait tuer.`,
           cooldown: 5,
           isPassive: true
         }

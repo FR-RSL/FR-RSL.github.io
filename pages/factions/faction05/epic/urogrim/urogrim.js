@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skullstaff",
-          description: `Attacks 1 enemy 2 times. Each hit has a 25% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Bâton-Crâne",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tingly Tincture",
-          description: `Removes all debuffs from an ally, then heals them by 40% of their MAX HP.<br><br><br>Heal Multiplier: 0.4*Target Max HP`,
+          name: "Teinture Irritante",
+          description: `Retire tous les débuffs d'un allié, puis le soigne de 40 % de ses PV MAX.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bizarre Vapors",
-          description: `Places two 5% [Poison] debuffs on all enemies for 2 turns. Also places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Drôles de Vapeurs",
+          description: `Place deux débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours. Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

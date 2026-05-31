@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ravaging Leech",
-          description: `Attacks 1 enemy. Heals this Champion by 30% of the damage inflicted.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Sangsue Ravageuse",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lay Waste",
-          description: `Attacks all enemies. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns. Also places a 50% [Decrease ATK] debuff for 2 turns on those enemies who receive a [Weaken] debuff.`,
-          damage: "4*ATK",
+          name: "Dévastation",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Place également un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours sur les ennemis ayant reçu un débuff ${DEBUFFS.WEAKEN}.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Calamity Torrent",
-          description: `Attacks 1 enemy. Will ignore 30% of the target’s DEF. Destroys the target’s MAX HP by 50% of the damage inflicted.<br><br>Places a [Block Damage] buff on this Champion for 1 turn if this attack kills an enemy.`,
-          damage: "5.6*ATK",
+          name: "Flot de Calamités",
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. Détruit les PV MAX de la cible de 50 % des dégâts infligés.
+
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
+          damage: "5.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Mass Murder [P]",
-          description: `Increases this Champion’s ATK by 10% each time they use an Active Skill (stacks up to 100%). Resets each round.`,
+          name: "Tuerie [P]",
+          description: `Augmente l'ATQ de ce Champion de 10 % chaque fois qu'il utilise une Compétence Active (s'additionne jusqu'à 100%). Se réinitialise à chaque round.`,
           isPassive: true
         }
       ],

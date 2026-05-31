@@ -4,41 +4,53 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Excoriating Edge",
-          description: `Attacks 1 enemy 2 times. <br><br>The first hit transfers all debuffs from this Champion to the target. The second hit then increases the duration of all debuffs on the target by 1 turn.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +10%"],
+          name: "Fil écorchant",
+          description: `Attaque 2 fois un ennemi. 
+
+La première frappe transfère tous les débuffs de ce Champion sur la cible. La seconde frappe augmente ensuite d'1 tour la durée de tous les débuffs de la cible.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Seraphic Wave",
-          description: `Attacks all enemies. Each critical hit fills this Champion’s Turn Meter by 25%. <br><br>Resets the cooldown of the Rage of the Nephilim skill if this attack kills an enemy. <br><br>Resets the cooldown of all of this Champion’s skills if this attack kills 2 or more enemies.`,
-          damage: "4.6*ATK",
+          name: "Vague séraphique",
+          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25 %. 
+
+Réinitialise le temps de recharge de la compétence Rage du Nephel si cette attaque tue un ennemi. 
+
+Réinitialise le temps de recharge de toutes les compétences de ce Champion si cette attaque tue 2 ennemis ou plus.`,
+          damage: "4.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rage of the Nephilim",
-          description: `Attacks 1 enemy. Ignores 50% of the target's DEF. Will attack all remaining enemies with any surplus damage if the initial target is killed. <br><br>Fully heals this Champion if the initial hit kills an enemy.<br><br><br>Heal Multiplier: 1*HP`,
-          damage: "6*ATKMultiplier: Remaining Damage Amount",
+          name: "Rage du Nephel",
+          description: `Attaque un ennemi. Ignore 50 % de la DÉF de la cible. Si la cible initiale est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. 
+
+Soigne totalement ce Champion si la frappe initiale tue un ennemi.`,
+          damage: "6*ATQMultiplier: Remaining Damage Amount",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph [P]",
-          description: `Transforms this Champion into their Alternate Form, whenever their last living ally is killed. <br><br>Then grants an Extra Turn.`,
+          name: "Métamorphe [P]",
+          description: `Fait passer ce Champion à sa Forme alternative lorsque tous les alliés sont morts et que ce Champion est vivant.
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Stay the Blade [P]",
-          description: `If this Champion is about to get killed by a fatal hit, blocks incoming damage and places a [Block Damage] buff on this Champion for 2 turns. <br><br>Then, heals this Champion by 50% of their MAX HP and fills their Turn Meter by 100%.<br><br>Heal Multiplier: 0.5*HP`,
+          name: "Stopper la lame [P]",
+          description: `Si ce Champion est sur le point de se faire tuer par un coup fatal, bloque les dégâts en approche et place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours. 
+
+Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour de 100 %.`,
           cooldown: 3,
           isPassive: true
         }
@@ -55,7 +67,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -63,39 +75,41 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Burn It Out",
-          description: `Attacks all enemies. Heals all allies by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +10%"],
+          name: "Consumer",
+          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 20 % des dégâts infligés.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Nephilic Ward",
-          description: `Removes all debuffs from all allies. <br><br>Then heals all allies by 30% of their MAX HP and places a [Block Debuffs] buff on them for 2 turns.<br><br><br>Heal Multiplier: 0.3*Target Max HP`,
+          name: "Parade néphélique",
+          description: `Retire tous les débuffs sur tous les alliés. 
+
+Soigne ensuite une cible alliée de 30 % de ses PV MAX, puis lui accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Light of the Beyond",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter, then places a [Block Damage] buff on all allies for 2 turns.`,
+          name: "Lumière de l'au-delà",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour, puis place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Shield of Defiance [P]",
-          description: `Decreases damage taken from skills by 20%.`,
+          name: "Bouclier de défi [P]",
+          description: `Réduit les dégâts infligés par des compétences de 20 %.`,
           isPassive: true
         }
       ],
@@ -111,7 +125,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

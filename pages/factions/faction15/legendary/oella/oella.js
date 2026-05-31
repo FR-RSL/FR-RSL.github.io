@@ -3,14 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Volettement agite",
-          description: `
-            Attaque un ennemi. 
-            Possède 80% de chances de placer un débuff <span class='gbt'>Reduction de VIT</span>
-			de 30% pendant 2 tous.
-			Il est impossible de resister a ce débuff
-			si <span class='gold-t'>Ultan la Carapace</span> se trouve dans la meme equipe.
-          `,
+          name: "Volettement agité",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Il est impossible de résister à ce débuff si Ultan la Carapace se trouve dans la même équipe.`,
           damage: "4.5*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -20,11 +14,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Main printaniere",
-          description: `
-            Soigne tous tes alliés a hauteur de 30% de leurs PV MAX.<br><br>
-			Augmente d'1 tour la durée de tous les buffs alliés.
-          `,
+          name: "Main printanière",
+          description: `Soigne tous tes alliés à hauteur de 30 % de leurs PV MAX. 
+
+Augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 4,
           levelInfo: [
             "Soins +5%",
@@ -36,11 +29,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Morphose",
-          description: `
-            Remplit le Compteur de Tour de tous les alliés de 30%.<br><br>
-			Place également un buff <span class='gbt'>Augmentation de RES</span>
-			de 50% sur tous les alliés pendant 2 tours.
-          `,
+          description: `Remplit le Compteur de Tour de tous les alliés de 30 %. 
+
+Place également un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -51,13 +42,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Sans entraves [P]",
-          description: `
-            Des qu'un allié perd 15% ou plus de ses PV MAX
-			suite a une seule frappe, place un buff <span class='gbt'>Soins Continus</span>
-			de 15% sur cet allié pendant 1 tour.
-			Place un buff <span class='gbt'>Soins Continus</span> de 15% pendant 2 tours sur cet allié,
-			puis l'active instantanement si <span class='gold-t'>Ultan la Carapace</span> se trouve dans la meme equipe.
-          `,
+          description: `Dès qu'un allié perd 15 % ou plus de ses PV MAX suite à une seule frappe, place un buff ${BUFFS.HEALS} de 15 % sur cet allié pendant 1 tour. Place un buff ${BUFFS.HEALS} de 15 % pendant 2 tours sur cet allié, puis l'active instantanément si Ultan la Carapace se trouve dans la même équipe. 
+
+Ne peut arriver à un allié qu'une fois par tour.`,
           isPassive: true,
         },
       ],

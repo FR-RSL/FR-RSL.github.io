@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grasscutter",
-          description: `Attacks 1 enemy. Has a 50% chance of stealing 1 random buff from the target.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Coupe-herbe",
+          description: `Attaque un ennemi. Possède 50 % de chances de voler un buff aléatoire à la cible.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Quivergrass Vortex",
-          description: `Attacks all enemies. Before attacking, removes all debuffs from this Champion. <br><br>Has a 75% chance of removing a random buff from all enemies.`,
-          damage: "4.2*ATK",
+          name: "Tornade d'herbes",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les débuffs sur cette Championne. 
+
+Possède 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ax Leap",
-          description: `Attacks 1 enemy. <br><br>Damage increases by 30% if this Champion has no active debuffs. Will also ignore [Unkillable] buffs if this Champion has no active debuffs.`,
-          damage: "6.2*ATK",
+          name: "Bond de hache",
+          description: `Attaque un ennemi. 
+
+Les dégâts augmentent de 30 % si cette Championne n'est affligée d'aucun débuff actif. Ignorera également les buffs ${BUFFS.UNKILLABLE} si cette Championne n'est affligée d'aucun débuff actif.`,
+          damage: "6.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Rippling Grass [P]",
-          description: `This Champion’s ACC is increased by 50 if they have no active debuffs.`,
+          name: "Herbe ondulante [P]",
+          description: `La PRÉ de cette Championne augmente de 50 si elle n'est affligée d'aucun débuff actif.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 30%`,
 };

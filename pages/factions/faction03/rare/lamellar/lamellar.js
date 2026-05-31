@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sacred Flame",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
+          name: "Flamme Bénie",
+          description: `Attaque 1 ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
           damage: "0.14*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crystal Burst",
-          description: `Attacks all enemies. Places a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Rafale de Cristal",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "0.1*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Diehard [P]",
-          description: `Decreases the damage taken by this Champion by 30% when their HP drops below 30%.`,
+          name: "Irréductible [P]",
+          description: `Réduit de 30 % les dégâts reçus par ce Champion lorsque ses PV tombent sous 30 %.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 22%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 22%`,
 };

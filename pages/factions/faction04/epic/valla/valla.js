@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Piercing Blade",
-          description: `Attacks 1 enemy 2 times. Increases the inflicted damage by 15% if the target is under a [Shield] buff.`,
+          name: "Lame Vive",
+          description: `Attaque 2 fois un ennemi. Augmente de 15 % les dégâts infligés si la cible se trouve sous buff ${BUFFS.SHIELD}.`,
           damage: "1.55*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crush The Wall",
-          description: `Removes all [Shield] buffs on all enemies, then attacks all enemies. Has a 30% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns.`,
+          name: "Broyer le Mur",
+          description: `Retire tous les buffs ${BUFFS.SHIELD} sur tous les ennemis, puis attaque tous les ennemis. Possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fortified Core",
-          description: `Places a [Shield] buff on this Champion for 3 turns equal to 20% of their MAX HP. Also places a 60% [Increase DEF] buff on this Champion for 3 turns and fills this Champion’s Turn Meter by 50%.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Coeur Fortifié",
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 20 % de ses PV MAX pendant 3 tours. Place également un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours, puis remplit de 50 % son Compteur de Tour.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Resolute Defense [P]",
-          description: `Decreases the damage received by this Champion by 15% while under a [Shield] buff.`,
+          name: "Défense Résolue [P]",
+          description: `Réduit de 15 % les dégâts reçus par ce Champion lorsqu'il se trouve sous buff ${BUFFS.SHIELD}.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 45`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 45`,
 };

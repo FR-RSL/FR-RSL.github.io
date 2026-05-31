@@ -3,28 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crypt Arrows",
-          description: `Attacks 1 enemy 2 times.<br><br>Each hit has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Flèches de Crypte",
+          description: `Attaque 2 fois un ennemi.
+
+Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gravestorm",
-          description: `Attacks 1 enemy. Attacks all enemies 1 time if this attack is critical.`,
-          damage: "5.6*ATKMultiplier: 2.5*ATK",
+          name: "Tempêtombe",
+          description: `Attaque un ennemi. Attaque une fois tous les ennemis si la première attaque passe en critique.`,
+          damage: "5.6*ATQMultiplier: 2.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tomb Stalker",
-          description: `Attacks 1 enemy.<br><br>Places a [Perfect Veil] buff on this Champion for 2 turns if this attack is critical.`,
-          damage: "6.1*ATK",
+          name: "Traqueur de Tombeau",
+          description: `Attaque un ennemi.
+
+Place un buff ${BUFFS.PERFECT_VEIL} de 2 tours sur ce Champion si cette attaque passe en critique.`,
+          damage: "6.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 19%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 19%`,
 };

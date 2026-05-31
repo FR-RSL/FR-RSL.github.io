@@ -3,36 +3,52 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rimefire",
-          description: `Attacks all enemies. Has a 15% chance of placing a [Freeze] debuff for 1 turn.<br><br>Instantly activates this Skill whenever an enemy under both a [Freeze] and a [HP Burn] debuff takes damage from the [HP Burn] debuff.`,
+          name: "Feu givré",
+          description: `Attaque tous les ennemis. Possède 15 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+
+Active instantanément cette Compétence dès qu'un ennemi sous débuff ${DEBUFFS.GEL} et ${DEBUFFS.BURN} subit des dégâts d'un débuff ${DEBUFFS.BURN}.`,
           damage: "2*DEF",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Iceberg Crush",
-          description: `Removes all buffs from a target enemy, then attacks the target 2 times. Steals all buffs instead if the target is under a [Freeze] debuff.<br><br>Will ignore DEF if the target is under both a [Freeze] and a [HP Burn] debuff.`,
+          name: "Fracas d'Iceberg",
+          description: `Retire tous les buffs d'un ennemi ciblé, puis attaque 2 fois la cible. Sinon, vole tous les buffs si la cible se trouve sous débuff ${DEBUFFS.GEL}.
+
+Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.GEL} et ${DEBUFFS.BURN}.`,
           damage: "3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blizzard Rage",
-          description: `Attacks all enemies. Places a [Block Buffs] debuff and a 100% [Heal Reduction] debuff for 2 turns on enemies under [Freeze] debuffs.<br><br>Has a 60% chance of placing a [Provoke] debuff for 1 turn on enemies not under [Freeze] debuffs. <br><br>Decreases the cooldown of 1 random Skill of each ally by 1 turn for every enemy attacked under both a [Freeze] and a [HP Burn] debuff.`,
+          name: "Rage du Blizzard",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours sur les ennemis sous débuff ${DEBUFFS.GEL}.
+
+Possède 60 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur les ennemis ne se trouvant pas sous débuff ${DEBUFFS.GEL}.
+
+Réduit d'1 tour le temps de recharge d'une Compétence aléatoire sur chaque allié pour chaque ennemi attaqué sous débuffs ${DEBUFFS.GEL} et ${DEBUFFS.BURN}.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Wintry Wind [P]",
-          description: `[Passive Effect]<br><br>Has a 20% chance of placing a [Freeze] debuff on the enemy each time they receive a buff or have their Turn Meter filled. The 20% chance applies up to twice per enemy turn (once for buffs, once for Turn Meter fills) in cases where an enemy receives multiple of these effects at the same time. <br><br>Does not work with effects from Artifact Sets, Turn Meter filling effects from Masteries, healing, or those buffs or effects that take place at the start of a Round.<br><br>[Active Effect]<br><br>Revives this Champion to 100% HP when killed and places a [Freeze] debuff on this Champion for 1 turn.`,
+          name: "Vent Hivernal [P]",
+          description: `${PASSIVE}
+
+Possède 20 % de chances de placer un débuff ${DEBUFFS.GEL} sur l'ennemi chaque fois qu'il reçoit un buff ou que son Compteur de Tour est rempli. Les 20 % de chances s'appliquent jusqu'à deux fois par tour ennemi (une fois pour les buffs, une fois pour le remplissage de Compteur de Tour) si un ennemi reçoit plusieurs de ces effets simultanément. 
+
+Ne fonctionne pas avec les effets des Jeux d'Artéfacts, les effets de remplissage du Compteur de Tour des Maîtrises, les soins, ou les buffs ou effets prenant place au début d'un round.
+
+${ACTIVE}
+
+Ranime ce Champion avec 100 % de PV lorsqu'il se fait tuer, puis place un débuff ${DEBUFFS.GEL} d'1 tour sur ce Champion.`,
           cooldown: 8,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: true
         }
       ],
@@ -50,5 +66,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%`,
 };

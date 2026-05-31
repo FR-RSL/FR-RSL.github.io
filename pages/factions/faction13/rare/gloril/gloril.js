@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scale Hacker",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.68*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Craque-écailles",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "1.68*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Prey Acquired",
-          description: `Attacks 1 enemy. Damage increases by 5% for each debuff on the target.`,
-          damage: "6.1*ATK*(1+0.05*Target Debuffs)",
+          name: "Proie Acquise",
+          description: `Attaque un ennemi. Les dégâts augmentent de 5 % pour chaque débuff dont est affligée la cible.`,
+          damage: "6.1*ATQ*(1+0.05*Target Debuffs)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heroic Company",
-          description: `Attacks 1 enemy. Places a 15% [Increase C. RATE] buff on all allies for 2 turns if this attack is critical.`,
-          damage: "6.04*ATK",
+          name: "Compagnie Héroïque",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.CRATE} de 15 % sur tous les alliés pendant 2 tours si cette attaque passe en critique.`,
+          damage: "6.04*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 30`,
 };

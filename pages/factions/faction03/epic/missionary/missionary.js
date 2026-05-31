@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crashing Halberd",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Hallebarde Écrasante",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "In the Thick",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 1 turn. Has a 100% chance of placing a [Provoke] debuff for 1 turn, and a 50% [Decrease ATK] debuff for 2 turns, if this Champion's current HP is higher than the target's current HP.`,
+          name: "Au Coeur",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour, et un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours, si les PV actuels de ce Champion sont plus élevés que les PV actuels de la cible.`,
           damage: "0.32*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Humble the Faithless",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter by 50%. Has a 75% chance of placing a 100% [Heal Reduction] debuff for 2 turns. Also has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Rend Humble l'Infidèle",
+          description: `Attaque un ennemi. Réduit le Compteur de Tour de la cible de 50 %. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "0.36*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Dungeons by 33%`,
+  description: `Augmente la statistique PV des Alliés lors des Donjons de 33%`,
 };

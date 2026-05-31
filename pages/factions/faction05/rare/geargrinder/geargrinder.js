@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gears of Gore",
-          description: `Attacks 1 enemy. Places a 7.5% [Continuous Heal] buff on this Champion for 1 turn if this attack is critical.`,
+          name: "Engrenages Sanglants",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.HEALS} de 7,5 % sur ce Champion pendant 1 tour si cette attaque passe en critique.`,
           damage: "0.15*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Healing Splatter",
-          description: `Heals all allies by 15% of their MAX HP.<br><br><br>Heal Multiplier: 0.15*Target Max HP`,
+          name: "Giclées Curatives",
+          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +5%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Necrocogs",
-          description: `Revives a dead ally with 50% HP and 50% Turn Meter.`,
+          name: "Nécro Rouages",
+          description: `Ranime un allié mort avec 50 % de PV et 50 % de Compteur de Tour.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 25%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 25%`,
 };

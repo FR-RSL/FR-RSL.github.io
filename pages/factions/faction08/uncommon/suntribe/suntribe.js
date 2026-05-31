@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Inscribed Axes",
-          description: `Attacks 1 enemy. Heals this Champion by 10% of the damage inflicted.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Haches Gravées",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10 % des dégâts infligés.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spirits' Verdict",
-          description: `Sacrifices HP equal to 10% of this Champion's MAX HP, then heals a target ally by 10% of their MAX HP. Also has a 40% chance of placing a 7.5% [Continuous Heal] buff on that ally for 1 turn.<br><br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Verdict des Esprits",
+          description: `Sacrifie des PV équivalents à 10 % des PV MAX de ce Champion, puis soigne une cible alliée de 10 % de ses PV MAX. Possède également 40 % de chances de placer un buff ${BUFFS.HEALS} de 7,5 % sur cet allié pendant 1 tour.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

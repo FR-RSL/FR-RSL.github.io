@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thunder Cleave",
-          description: `Attacks 1 enemy.<br><br>Fills this Champion's Turn Meter by 10%. Fills by an additional 2% for each buff on the target.`,
-          damage: "0.27*HP+1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Fente Fracassante",
+          description: `Attaque un ennemi.
+
+Remplit le Compteur de Tour de ce Champion de 10 %. Remplit de 2 % supplémentaires pour chaque buff sur la cible.`,
+          damage: "0.27*HP+1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Enchanted Axe",
-          description: `Attacks 1 enemy.<br><br>Will ignore 50% of the target's DEF.<br><br>Grants an Extra Turn if this attack kills an enemy.`,
-          damage: "0.3*HP+1.8*ATK",
+          name: "Hache Enchantée",
+          description: `Attaque un ennemi.
+
+Ignorera 50 % de la DÉF de la cible.
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          damage: "0.3*HP+1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Regal Force",
-          description: `Attacks 1 enemy.<br><br>Will ignore [Shield], [Strengthen], [Unkillable], [Ally Protection], and [Block Damage] buffs.<br><br>Decreases the cooldown of the Enchanted Axe skill by 2 turns if this attack kills an enemy.`,
-          damage: "0.35*HP+1.8*ATK",
+          name: "Force Royale",
+          description: `Attaque un ennemi.
+
+Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.STRENGTHEN}, ${BUFFS.UNKILLABLE}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.BLOCK_DAMAGE}.
+
+Réduit le temps de recharge de la compétence [Hache enchantée] de 2 tours si cette attaque tue un ennemi.`,
+          damage: "0.35*HP+1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fabled Skill [P]",
-          description: `Increases this Champion's ATK by 50% each time this Champion kills an enemy. Stacks up to 100%. <br><br>Immune to [Decrease ATK] and [Block Active Skills] debuffs.`,
+          name: "Habileté Fabuleuse [P]",
+          description: `Augmente l'ATQ de ce Champion de 50 % chaque fois que ce Champion tue un ennemi. S'accumule jusqu'à 100 %. 
+
+Immunisé contre les débuffs ${DEBUFFS.ATK} et ${DEBUFFS.LOCK_ACTIVE}.`,
           isPassive: true
         }
       ],
@@ -48,5 +60,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 25%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 25%`,
 };

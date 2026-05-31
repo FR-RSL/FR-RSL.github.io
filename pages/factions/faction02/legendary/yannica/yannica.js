@@ -3,28 +3,32 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Even the Odds",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing a [Leech] debuff for 2 turns. <br><br>Attacks all enemies 2 times instead if this Champion is under a [Veil] buff.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Rétablir l'Équilibre",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.
+
+Sinon, si ce Champion possède un buff ${BUFFS.VEIL}, attaque 2 fois tous les ennemis.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Baffling Speed",
-          description: `Attacks 1 enemy. Places a [Perfect Veil] buff on this Champion for 3 turns if this attack is critical. Grants an Extra Turn.`,
-          damage: "6.3*ATK",
+          name: "Vitesse Déroutante",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.PERFECT_VEIL} de 3 tours sur ce Champion si cette attaque passe en critique. Accorde un Tour Supplémentaire.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Elven Judgment",
-          description: `Attacks all enemies. Will ignore [Shield] buffs. <br><br>Removes [Shield] buffs from targets if this Champion is under a [Veil] buff or [Perfect Veil] buff, then deals extra damage equal to 15% of the value of the removed [Shield] buffs.`,
-          damage: "3.6*ATK",
+          name: "Jugement Elfique",
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD}.
+
+Retire les buffs ${BUFFS.SHIELD} des cibles si ce Champion dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, puis inflige des dégâts supplémentaires équivalents à 15 % de la valeur des buffs ${BUFFS.SHIELD} retirés.`,
+          damage: "3.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +46,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

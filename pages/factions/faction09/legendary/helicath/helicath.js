@@ -4,12 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Griffe Pyroclastique",
-			description: `
-				Attaque deux fois un ennemi.
-				Chaque frappe Possède 30% de chances de placer un débuff <span class='gbt'>Affaiblissement</span>
-				de 25% pendant 2 tours.
-				Ignorera les buffs <span class='gbt'>Bouclier</span> et <span class='gbt'>Blocage des Degats</span>.
-			`,
+			description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
 			damage: "1.8*DEF",
 			levelInfo: [
 				"Dégâts +5%",
@@ -21,11 +16,7 @@ const championData = {
         {
 			img: "assets/sort2.webp",
 			name: "Vents de la fosse",
-			description: `
-				Attaque tous les ennemis.
-				Place un buff <span class='gbt'>Bouclier</span> sur tous les alliés pendant 2 tours.
-				La valeur du ${BUFFS.SHIELD} est equivalent a 350% de la DEF de ce Champion.
-			`,
+			description: `Attaque tous les ennemis. Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
 			damage: "3.8*DEF",
 			levelInfo: [
 				"Dégâts +5%",
@@ -39,13 +30,13 @@ const championData = {
         {
 			img: "assets/sort3.webp",
 			name: "Fervents serviteurs",
-			description: `
-				<span class='gbt'>Effet Actif</span><br><br>
-				Place un buff <span class='gbt'>Blocage des Degats</span> sur tous les alliés pendant 2 tours.<br><br>
-				<span class='gbt'>Effet Passif</span><br><br>
-				Lorsqu'un buff <span class='gbt'>Blocage des Degats</span> place sur un allié par ce Champion est retire ou vole, ou qu'il expire, place un buff 
-				<span class='gbt'>Augmentation de DEF</span> de 60% sur cet allié pendant 2 tours.
-			`,
+			description: `${ACTIVE}
+
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.
+
+${PASSIVE}
+
+Lorsqu'un buff ${BUFFS.BLOCK_DAMAGE} placé sur un allié par ce Champion est retiré ou volé, ou qu'il expire, place un buff ${BUFFS.DEF} de 60 % sur cet allié pendant 2 tours.`,
 			levelInfo: [
 				"Temps de recharge -1",
 				"Temps de recharge -1",
@@ -55,11 +46,9 @@ const championData = {
         {
         	img: "assets/passif1.webp",
         	name: "Festin d'agonie [P]",
-        	description: `
-				Augmente la DEF de ce Champion de 5% pour chaque allié sous buff <span class='gbt'>Blocage des Degats</span>.<br><br>
-				Contre-attaque avec la compétence par defaut des qu'un allié se fait frapper lorsqu'il est sous buff <span class='gbt'>Blocage des Degats</span>.
-				Ne peut survenir qu'une fois par tour ennemi.
-        	`,
+        	description: `Augmente la DÉF de ce Champion de 5 % pour chaque allié sous buff ${BUFFS.BLOCK_DAMAGE}.
+
+Contre-attaque avec la compétence par défaut dès qu'un allié se fait frapper lorsqu'il est sous buff ${BUFFS.BLOCK_DAMAGE}. Ne peut survenir qu'une fois par tour ennemi.`,
           	isPassive: true,
         },
       ],

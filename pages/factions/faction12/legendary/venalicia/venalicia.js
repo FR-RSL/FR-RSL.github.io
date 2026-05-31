@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Torturous Bolts",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 50% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%"],
+          name: "Atroces vis",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Purge The Impure",
-          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies. <br><br>Has a 75% chance of placing a [Block Buffs] debuff and a 60% [Decrease DEF] debuff on all enemies for 2 turns.`,
-          damage: "6*ATK",
+          name: "Purger l'impur",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs de tous les ennemis. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mother Knows Best",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter. If all other allies are dead, revives them with 75% HP and 75% Turn Meter instead, and decreases the cooldown of all revived ally skills by 1 turn. <br><br>Also increases the cooldown of all enemy skills by 2 turns.`,
+          name: "Maman a raison",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Si tous les autres alliés sont morts, les ranime au lieu de cela avec 75 % de PV et 75 % de Compteur de Tour, et réduit d'1 tour le temps de recharge de toutes les compétences des alliés ranimés. 
+
+Augmente également de 2 tours les temps de recharge de toutes les compétences des ennemis.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Warped Benevolence [P]",
-          description: `Fills this Champion's Turn Meter by 20% whenever an ally dies. <br><br>Heals this Champion by 20% of their MAX HP whenever they are attacked by an enemy under a [Pain Link] debuff. Occurs once per turn. <br><br>Places a [Pain Link] debuff for 2 turns on enemies who deal damage equal to 25% or more of an ally’s MAX HP with a single skill. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>Heal Multiplier: 0.2*HP`,
+          name: "Bienfaisance pervertie [P]",
+          description: `Remplit le Compteur de Tour de cette Championne de 20 % dès qu'un allié meurt. 
+
+Soigne cette Championne de 20 % de ses PV MAX dès qu'elle est attaquée par un ennemi sous débuff ${DEBUFFS.PAIN_LINK}. Se produit une fois par tour. 
+
+Place un débuff ${DEBUFFS.PAIN_LINK} pendant 2 tours sur les ennemis qui infligent des dégâts équivalents à 25 % ou plus des PV MAX d'un allié avec une seule compétence. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

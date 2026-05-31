@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Censorious Bludgeon",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 25% [Decrease C. DMG] debuff for 2 turns.`,
+          name: "Gourdin sévère",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +15%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mind Prison",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn if the target does not have any active buffs. Has a 75% chance of placing a [Stun] debuff for 2 turns if the target does have any active buffs.`,
+          name: "Prison spirituelle",
+          description: `Attaque un ennemi. Possède 75% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour si la cible ne possède aucun buff actif. Possède 75% de chances de placer un débuff ${DEBUFFS.STUN} pendant 2 tours si la cible possède des buffs actifs.`,
           damage: "5.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Pointed Justice",
-          description: `Attacks all enemies. Has a 75% chance of decreasing the duration of all enemy buffs by 2 turns. <br><br>Increases the duration of all [Increase DEF] buffs on allies by 1 turn.`,
+          name: "Justice pointue",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis. 
+
+Augmente d'1 tour la durée de tous les buffs ${BUFFS.DEF} sur les alliés.`,
           damage: "3.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Heartstrong [P]",
-          description: `At the start of each turn, places a 50% [Ally Protection] buff for 2 turns on the ally with the lowest MAX HP. Will not be placed on this Champion. <br><br>Also places a 25% [Strengthen] buff and a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Coeur-fort [P]",
+          description: `Au début de chaque tour, place sur l'allié ayant le moins de PV MAX un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours. Ne sera pas placé sur cette Championne.
+
+Place également un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.DEF} de 60 % sur cette Championne pendant 2 tours.`,
           cooldown: 5,
           isPassive: true
         }

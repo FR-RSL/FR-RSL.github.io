@@ -4,27 +4,27 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Rage",
-          description: `Attacks 1 enemy 2 times. Has a 15% chance of stealing 1 random buff from the target.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          description: `Attaque 2 fois un ennemi. Possède 15 % de chances de voler 1 buff aléatoire de la cible.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Holy Flame",
-          description: `Attacks 4 times at random. Each hit places a 5% [Poison] debuff for 2 turns.`,
-          damage: "1.65*ATK",
+          name: "Flamme Sacrée",
+          description: `Attaque 4 fois au hasard. Chaque frappe place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "1.65*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Brand",
-          description: `Attacks 1 enemy. Places a [Block Active Skills] debuff for 2 turns.`,
-          damage: "5.45*ATK",
+          name: "Marque",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          damage: "5.45*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 21%`,
 };

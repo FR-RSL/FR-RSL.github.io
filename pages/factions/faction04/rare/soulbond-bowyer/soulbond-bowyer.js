@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ancestral Guidance",
-          description: `Attacks all enemies. Has an additional 25% chance of inflicting a critical hit.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Aide Ancestrale",
+          description: `Attaque tous les ennemis. Possède 25 % de chances supplémentaires de porter un coup critique.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Infused Arrow",
-          description: `Attacks 1 enemy. Has an additional 25% chance of inflicting a critical hit. Will ignore 75% of the target’s DEF.`,
-          damage: "4*ATK",
+          name: "Flèche Imprégnée",
+          description: `Attaque un ennemi. Possède 25 % de chances supplémentaires de porter un coup critique. Ignorera 75 % de la DÉF de la cible.`,
+          damage: "4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Soulbound Shot",
-          description: `Attacks 1 enemy. Has an additional 25% chance of inflicting a critical hit. Also has a 75% chance of fully depleting the target’s Turn Meter.`,
-          damage: "6*ATK",
+          name: "Tir Chaînâme",
+          description: `Attaque un ennemi. Possède 25 % de chances supplémentaires de porter un coup critique. Possède également 75 % de chances de vider complètement le Compteur de Tour de la cible.`,
+          damage: "6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +10%", "Level 9: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 12%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 12%`,
 };

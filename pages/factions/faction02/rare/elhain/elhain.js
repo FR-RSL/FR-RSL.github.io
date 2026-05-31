@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Keen Shot",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical.`,
-          damage: "2.2*ATK + 100",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Tir Appliqué",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique.`,
+          damage: "2.2*ATQ + 100",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lightning Arrow",
-          description: `Attacks 1 enemy, then all enemies. Has an extra 15% chance of inflicting a critical hit. Places a 30% [Increase C. RATE] buff on this Champion for 3 turns if a target is killed.`,
-          damage: "2.2*ATK",
+          name: "Flèche Éclair",
+          description: `Attaque 1 ennemi, puis tous les ennemis. Possède 15 % de chances supplémentaires de porter un coup critique. Place un buff d'${BUFFS.CRATE} de 30 % sur ce Champion, pendant 3 tours, si la cible est tuée.`,
+          damage: "2.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Valley of Death",
-          description: `Attacks all enemies 2 times.`,
-          damage: "2.2*ATK",
+          name: "Vallée de la Mort",
+          description: `Attaque 2 fois tous les ennemis.`,
+          damage: "2.2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -43,5 +43,5 @@ const championData = {
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
   description: `
-Increases Ally HP in all Battles by 15%`,
+Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

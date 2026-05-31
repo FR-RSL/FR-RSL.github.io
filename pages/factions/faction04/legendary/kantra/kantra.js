@@ -3,25 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bane Hatchet",
-          description: `Attacks 1 enemy 2 times. Each hit has a 40% chance of stealing 1 random buff from the target.`,
+          name: "Hachette du Fléau",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de voler un buff aléatoire à la cible.`,
           damage: "1.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Chaos Tempest",
-          description: `Attacks all enemies 3 times. Each hit has a 50% chance of placing one of the following debuffs for 2 turns: a [Block Buffs] debuff, a 50% [Decrease ATK] debuff, a 30% [Decrease SPD] debuff, a 25% [Weaken] debuff, a 50% [Decrease ACC] debuff, or a 100% [Heal Reduction] debuff.`,
+          name: "Tempête du Chaos",
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un des débuffs suivants pendant 2 tours : un débuff de ${DEBUFFS.BLOCK_BUFFS}, un débuff de ${DEBUFFS.ATK} de 50 %, un débuff de ${DEBUFFS.SPD} de 30 %, un débuff d'${DEBUFFS.WEAKEN} de 25 %, un débuff de ${DEBUFFS.PRE} de 50 % ou un débuff de ${DEBUFFS.HEALS} de 100 %.`,
           damage: "1*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "No Escape [P]",
-          description: `Decreases each enemy's ACC by 10 for each debuff they are under.<br><br>This Champion will receive 4% less damage for each debuff on the attacker.<br><br>Heals this Champion by 1,250 HP each time a debuff expires on an enemy.<br><br>Has a 75% chance of placing a Provoke debuff for 1 turn on enemies under 5 or more debuffs at the start of this Champion's turn.<br><br>This Champion can place debuffs on weak hits.<br><br>Heal Multiplier: 1250`,
+          name: "Pas d'Échappatoire [P]",
+          description: `Réduit de 10 la PRÉ de chaque ennemi pour chaque débuff dont ils sont affligés.
+
+Ce Champion subira 4 % de dégâts en moins pour chaque débuff se trouvant sur l'assaillant.
+
+Soigne ce Champion de 1 250 PV à chaque fois qu'un débuff expire sur un ennemi.
+
+Possède 75 % de chances de placer un débuff Provocation d'1 tour sur les ennemis affligés de 5 débuffs au début du tour de ce Champion.
+
+Ce Champion peut placer des débuffs lors de frappes faibles.`,
           isPassive: true
         }
       ],
@@ -39,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

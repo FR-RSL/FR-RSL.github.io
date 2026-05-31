@@ -4,34 +4,34 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames de poignet",
-          description: `Attaque un ennemi. Soigne ce Champion a hauteur de 30% des degats infliges.${RETURN}${RETURN}
-${PASSIVE}
-Lorsque ce Champion reussit a Esquiver une competence ennemie et tous ses effets assoicies, contre-attaque avec cette competence.
-Ne peut pas produire qu'une fois par tour`,
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés.
+
+${PASSIVE} 
+
+Lorsque ce Champion réussit à Esquiver une compétence ennemie et tous ses effets associés, contre-attaque avec cette compétence. Ne peut se produire qu'une fois par tour.`,
           damage: "0.26*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Disque intelligent",
-          description: `Attaque 2 fois tous les ennemis. Apres avoir frappe l'ennemi selectionne initialement, tous les autres ennenis seront frappes dans un ordre aleatoire.${RETURN}${RETURN}
-Pour la premiere frappe, les degats recus par l'ennemi selectionne initialement augmenteront de 75%.
-Chaque ennemi frappe apres la frappe initiale recevra 15% de degats bonus en moins (se reduit jusqu'a 15% de degats bonus).${RETURN}
-Detruit egalement les PV MAX de chaque ennemi de 30% des degats infliges (s'accumule jusqu'a 50%).${RETURN}${RETURN}
-Pour la seconde frappe, les degats recus par l'ennemi selectionne initialement augmenteront de 15%. Chaque ennemi frappe apres la frappe initiale recevra 15% de degats bonus en plus (s'accumule jusqu'a 75% de degats bonus).${RETURN}${RETURN}
-Cette attaque ignore 15% de la DEF de chaque cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+          description: `Attaque 2 fois tous les ennemis. Après avoir frappé l'ennemi sélectionné initialement, tous les autres ennemis seront frappés dans un ordre aléatoire. Pour la première frappe, les dégâts reçus par l'ennemi sélectionné initialement augmenteront de 75 %. Chaque ennemi frappé après la frappe initiale recevra 15 % de dégâts bonus en moins (se réduit jusqu'à 15 % de dégâts bonus). Détruit également les PV MAX de chaque ennemi de 30 % des dégâts infligés (s'accumule jusqu'à 50 %).
+
+Pour la seconde frappe, les dégâts reçus par l'ennemi sélectionné initialement augmenteront de 15 %. Chaque ennemi frappé après la frappe initiale recevra 15 % de dégâts bonus en plus (s'accumule jusqu'à 75 % de dégâts bonus).
+
+Cette attaque ignore 15 % de la DÉF de chaque cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "0.19*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
-          name: "Lancer de combi-baton",
-          description: `Attaque un ennemi. Avant d'attaquer, place un debuff ${DEBUFFS.HUNTER} pendant 1 tour. Il est impossible de resister a ce debuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
+          name: "Lancer de combi-bâton",
+          description: `Attaque un ennemi. Avant d'attaquer, place un débuff ${DEBUFFS.HUNTER} pendant 1 tour. Il est impossible de résister à ce débuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
 
-Si cette attaque tue un ennemi, place un debuff ${DEBUFFS.BLOCK_REA} sur la cible et un debuff ${DEBUFFS.HUNTER} sur un ennemi vivant aleatoire pendant 1 tour. Il est impossible de resister au debuff ${DEBUFFS.HUNTER} si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
+Si cette attaque tue un ennemi, place un débuff ${DEBUFFS.BLOCK_REA} sur la cible et un débuff ${DEBUFFS.HUNTER} sur un ennemi vivant aléatoire pendant 1 tour. Il est impossible de résister au débuff ${DEBUFFS.HUNTER} si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
 
-Si cette attaque ne tue pas un ennemi, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours, puis remplit son Compteur de Tour de 50%.`,
+Si cette attaque ne tue pas un ennemi, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours, puis remplit son Compteur de Tour de 50 %.`,
           damage: "0.38*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -39,11 +39,11 @@ Si cette attaque ne tue pas un ennemi, place un buff ${BUFFS.PERFECT_VEIL} sur c
         {
           img: "assets/sort4.webp",
           name: "Voile de Yautja [P]",
-          description: `Au debut de chaque Round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
+          description: `Au début de chaque Tour, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour. 
 
-Avant que ce Champion joue un tour, a egalement 50% de chances initiales d'Esquiver une competence ennemie et tous ses effets associes. Ces chances initiales passent a 0% apres le premier tour de ce Champion dans une Manche.${RETURN}${RETURN}
+Avant que ce Champion joue un tour, a également 50 % de chances initiales d'Esquiver une compétence ennemie et tous ses effets associés. Ces chances initiales passent à 0 % après le premier tour de ce Champion dans une Manche.
 
-Des que ce Champion tue un ennemi, accorde a ce Champion 20% de chances d'Esquiver les competences ennemies et les effets associes (s'accumule jusqu'a 60%).`,
+Dès que ce Champion tue un ennemi, accorde à ce Champion 20 % de chances d'Esquiver les compétences ennemies et les effets associés (s'accumule jusqu'à 60 %).`,
           isPassive: true,
         }
   ],

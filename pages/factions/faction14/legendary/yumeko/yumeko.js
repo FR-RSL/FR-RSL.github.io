@@ -3,33 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wereclaws",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit steals 7.5% of the target’s Turn Meter if this Champion has 50% HP or more.<br><br>Each hit heals this Champion by 30% of the damage inflicted if this Champion has less than 50% HP.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Griffes-garous",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe vole 7,5 % du Compteur de tour de la cible si ce Champion possède 50 % de PV ou moins.
+
+Chaque frappe soigne ce Champion de 30 % des dégâts infligés si ce Champion possède moins de 50 % de PV.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Destiny's Mirror",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a [Hex] debuff for 3 turns. <br><br>[Passive Effect]<br><br>Whenever an enemy tries to place debuffs on either this Champion or an ally, has a 55% chance of transferring those debuffs to a random enemy under a [Hex] debuff placed by this Champion. This happens before any debuffs are placed on the initial target. <br><br>Has a 30% chance instead against Bosses. <br><br>Whenever someone fills the Turn Meter of an enemy under a [Hex] debuff placed by this Champion, this Champion's Turn Meter will be filled instead. Only available when Karato Foxhunter is on the same team.`,
-          damage: "6*ATK",
+          name: "Miroir du Destin",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours. 
+
+${PASSIVE}
+
+Dès qu'un ennemi essaie de placer des débuffs sur ce Champion ou sur un allié, possède 55 % de chances de transférer ces débuffs sur un ennemi aléatoire sous débuff ${DEBUFFS.HEX} placé par ce Champion. Cela survient avant que des débuffs ne soient placés sur la cible initiale. 
+
+Sinon, possède 30 % de chances contre les Boss. 
+
+Dès que quelqu'un remplit le Compteur de Tour d'un ennemi sous débuff ${DEBUFFS.HEX} placé par ce Champion, le Compteur de Tour de ce Champion sera rempli à la place. Uniquement disponible lorsque Karato le Chasseur se trouve dans la même équipe.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dance of Time",
-          description: `Decreases the cooldowns of all ally skills by 3 turns and increases the cooldowns of all enemy skills by 3 turns.<br>Will not decrease the cooldowns of this Champion's skills. This skill can have its cooldown reset or reduced by other skills.`,
+          name: "Danse du Temps",
+          description: `Réduit de 3 tours les temps de recharge de toutes les compétences des alliés et augmente de 3 tours les temps de recharge de toutes les compétences des ennemis.
+Ne réduira pas les temps de recharge des compétences de cette Championne. Cette compétence peut voir son temps de recharge réinitialisé ou réduit par d'autres compétences.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Deep Cover [P]",
-          description: `Places a [Perfect Veil] buff on this Champion for 2 turns at the start of each Round.<br><br>This Champion is immune to all enemy debuffs if they are under a [Veil] or [Perfect Veil] buff. <br><br>Whenever a [Veil] or a [Perfect Veil] buff is placed on an enemy, has a 75% chance of stealing the buff. This happens before the buff is placed on the initial target. Only available when Karato Foxhunter is on the same team.`,
+          name: "Sous Couverture [P]",
+          description: `Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.
+
+Ce Champion est immunisé contre tous débuffs des ennemis s'il se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+
+Dès qu'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} est placé sur un ennemi, possède 75 % de chances de voler le buff. Cela survient avant que le buff ne soit placé sur la cible initiale. Uniquement disponible lorsque Karato le Chasseur se trouve dans la même équipe.`,
           isPassive: true
         }
       ],
@@ -47,5 +64,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

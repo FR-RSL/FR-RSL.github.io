@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pinpoint Thrust",
-          description: `Attacks 1 enemy. Places a 25% [Increase ACC] buff on this Champion for 2 turns.`,
+          name: "Estocade localisée",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.PRE} de 25 % sur ce Champion pendant 2 tours.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spur Claw",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Griffe éperon",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.9*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Protect the Crowned",
-          description: `Places a 15% [Strengthen] buff on all allies for 2 turns. <br><br>Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Protéger la Couronnée",
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

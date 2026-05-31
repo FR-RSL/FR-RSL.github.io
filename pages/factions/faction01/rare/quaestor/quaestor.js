@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Undaunted Assault",
-          description: `Attacks 1 enemy. Inflicts 30% extra C. DMG if this Champion has less than 50% HP.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Assaut Vaillant",
+          description: `Attaque un ennemi. Inflige 30 % de DÉG C. supplémentaires si ce Champion possède moins de 50 % de PV.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Guiding Example",
-          description: `Attacks 1 enemy. Places a 15% [Increase C. DMG] buff on all allies for 2 turns if this attack is critical.`,
-          damage: "5.7*ATK",
+          name: "Exemple Influent",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.CDAM} de 15 % sur tous les alliés pendant 2 tours si cette attaque passe en critique.`,
+          damage: "5.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Depletion",
-          description: `Attacks 1 enemy. Has a 75% chance of removing 2 random buffs from the target.`,
-          damage: "6*ATK",
+          name: "Épuisement",
+          description: `Attaque un ennemi. Possède 75 % de chances de retirer 2 buffs pris au hasard sur la cible.`,
+          damage: "6*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

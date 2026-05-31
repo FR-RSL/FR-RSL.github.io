@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Impale and Impede",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Empaler et entraver",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Huntsman's Gambit",
-          description: `Attacks 1 enemy 2 times. The first hit has a 75% chance of decreasing the target’s Turn Meter by 50%. The second hit has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns. <br><br>Also places a [Perfect Veil] buff on this Champion for 2 turns.`,
-          damage: "2.8*ATK",
+          name: "Tactique de chasseur",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de réduire le Compteur de Tour de la cible de 50 %. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
+          damage: "2.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cry of the Shrike",
-          description: `Attacks all enemies. Damage increases by 5% for each debuff on the target.`,
-          damage: "3.7*ATK*(1+0.05*Target Debuffs)",
+          name: "Cri de la Pie",
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 5 % pour chaque débuff dont est affligée la cible.`,
+          damage: "3.7*ATQ*(1+0.05*Target Debuffs)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Unforseen [P]",
-          description: `Will ignore [Shield] buffs when attacking under a [Perfect Veil] buff.`,
+          name: "Inattendu [P]",
+          description: `Ignorera les buffs ${BUFFS.SHIELD} lors d'une attaque sous buff ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true
         }
       ],

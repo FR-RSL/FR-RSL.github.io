@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thunderous Maul",
-          description: `Attacks 1 enemy. Heals this Champion by 20% of the damage dealt. <br><br>Has a 40% chance of increasing the duration of 2 random debuffs on the target Champion by 1 turn.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
+          name: "Merlin tonnant",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 20 % des dégâts infligés. 
+
+Possède 40 % de chances d'augmenter d'1 tour la durée de 2 débuffs aléatoires dont le Champion ciblé est affligé.`,
           damage: "0.26*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crack the Sky",
-          description: `Attacks all enemies. Has a 75% chance of removing 2 random buffs from all enemies. <br><br>Has a 75% chance of removing all buffs from all enemies, even if this attack lands as a weak hit, if Jetni the Giant is on the same team. <br><br>Also places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Fissurer le ciel",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis. 
+
+Possède 75 % de chances de retirer tous les buffs sur tous les ennemis, même si cette attaque est une frappe faible, si Jetni la Géante est dans la même équipe. 
+
+Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           damage: "0.27*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Resounding Rally",
-          description: `Fully heals a target ally. <br><br>Also places a [Block Damage] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 1*Target Max HP`,
+          name: "Appel retentissant",
+          description: `Soigne totalement une cible alliée. 
+
+Place également un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Trammel",
-          description: `When attacked, has a 50% chance of placing a 30% [Decrease SPD] debuff on the attacker for 2 turns. <br><br>The chance increases to 100% if Jetni the Giant is on the same team.`,
+          name: "Entrave",
+          description: `Lorsque le Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur l'assaillant pendant 2 tours. 
+
+Les chances passent à 100 % si Jetni la Géante se trouve dans la même équipe.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 60`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Axe Throw",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 30% [Decrease DEF] debuff for 1 turn.`,
-          damage: "ATK*3",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Jeté de Hache",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          damage: "ATQ*3",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Meteor",
-          description: `Attacks all enemies.`,
-          damage: "ATK*3",
+          name: "Météore",
+          description: `Attaque tous les ennemis.`,
+          damage: "ATQ*3",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burn",
-          description: `Attacks 1 enemy. This skill always inflicts a critical hit.`,
-          damage: "ATK*5.2",
+          name: "Brûlure",
+          description: `Attaque un ennemi. Cette Compétence inflige toujours un coup critique.`,
+          damage: "ATQ*5.2",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Wars by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Faction de 30`,
 };

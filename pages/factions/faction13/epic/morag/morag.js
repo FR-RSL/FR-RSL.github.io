@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Raw Iron Slab",
-          description: `Attacks 1 enemy 2 times. Each hit will ignore [Shield] buffs.`,
+          name: "Plaque de fer brute",
+          description: `Attaque 2 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}.`,
           damage: "1.85*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Outrage",
-          description: `Attacks all enemies. Places a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Affront",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           damage: "3.9*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Raider Captain",
-          description: `Teams up with 2 random allies to attack a single enemy. The allies joining the attack will always use their default skills. <br><br>Grants an Extra Turn if any enemy is killed.`,
+          name: "Capitaine des pillards",
+          description: `Fais équipe avec 2 alliés aléatoires pour attaquer un seul ennemi. Les alliés rejoignant l'attaque utiliseront toujours leurs compétences par défaut. 
+
+Octroie un Tour supplémentaire si un ennemi est tué.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Test This Might [P]",
-          description: `Counterattacks when hit while under a [Strengthen] buff placed by this Champion.`,
+          name: "Teste cette force [P]",
+          description: `Contre-attaque lorsqu'elle est frappée alors qu'elle bénéficie d'un buff ${BUFFS.STRENGTHEN} placé par cette Championne.`,
           isPassive: true
         }
       ],

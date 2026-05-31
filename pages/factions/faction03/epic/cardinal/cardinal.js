@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Evaporation",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Évaporation",
+          description: `Attaque un ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mending Touch",
-          description: `Heals a target ally by 30% of their MAX HP. Places a 60% [Increase DEF] buff for 2 turns.<br><br><br>Heal Multiplier: 0.3*Target Max HP`,
+          name: "Toucher de Guérison",
+          description: `Soigne une cible alliée à hauteur de 30 % de ses PV max. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Redemption",
-          description: `Revives all dead allies, heals them by 25% of their MAX HP, and boosts their Turn Meter to max.`,
+          name: "Rédemption",
+          description: `Ranime tous les alliés morts, les soigne de 25 % de leurs PV max et booste leurs Compteurs de Tour jusqu'au maximum.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

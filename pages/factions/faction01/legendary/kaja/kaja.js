@@ -3,32 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Firecracker",
-          description: `Attacks 1 enemy. Heals this Champion by 10% of their MAX HP. If any Timits are on the same team, heals all of them by the same amount.<br><br><br>Heal Multiplier: 0.1*HP`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%", "Level 4: Damage +10%", "Level 5: Heal +10%"],
+          name: "Pétard",
+          description: `Attaque un ennemi. Soigne cette Championne à hauteur de 10 % de ses PV MAX. Si un Timit se trouve dans la même équipe, les soigne tous de la même quantité.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Back With A Bang",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter, then places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on them for 2 turns. <br><br>If Timit the Fool is on the same team and dead, revives them with full HP and a full Turn Meter. <br><br>If Timit the Fool is on the same team and alive, resets the cooldown and instantly activates their Kegs of Dread skill.`,
+          name: "Retour en trombe",
+          description: `Ranime tous les alliés morts avec 50 % de PV et un Compteur de Tour de 50 %, puis leur accorde un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % pendant 2 tours.
+
+Si Timit le Bouffon se trouve dans la même équipe et qu'il est mort, le ranime avec tous ses PV et un Compteur de Tour plein.
+
+Si Timit le Bouffon se trouve dans la même équipe et qu'il est vivant, réinitialise le temps de recharge de sa compétence Fûts de terreur et l'active instantanément.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Royal Flush",
-          description: `Fills the Turn Meter of all allies by 20%. <br><br>Also removes two random debuffs from each ally. If Timit the Fool is on the same team, removes all debuffs from all allies. <br><br>Then, places a [Block Debuffs] buff on all allies for 1 turn.`,
+          name: "Quinte flush royale",
+          description: `Remplit le Compteur de Tour de tous les alliés de 20 %. 
+
+Retire également deux débuffs aléatoires sur chaque allié. Si Timit le Bouffon se trouve dans la même équipe, retire tous les débuffs sur tous les alliés. 
+
+Ensuite, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dynamic Duo [P]",
-          description: `All Turn Meter reduction effects from enemies are decreased by 50% when used against this Champion. <br><br>If Timit the Fool is on the same team, this Champion is immune to Turn Meter reduction effects from enemies. If an enemy tries to decrease this Champion's Turn Meter when Timit the Fool is on the same team, fills this Champion's Turn Meter by the same percentage instead.`,
+          name: "Duo de choc [P]",
+          description: `Tous les effets de réduction du Compteur de Tour des ennemis sont réduits de 50 % lorsqu'ils sont utilisés contre cette Championne.
+
+Si Timit le Bouffon se trouve dans la même équipe, cette Championne est immunisée contre les effets de réduction du Compteur de Tour utilisés par les ennemis. Si un ennemi essaie de réduire le Compteur de Tour de cette Championne lorsque Timit le Bouffon se trouve dans la même équipe, remplit au lieu de ça le Compteur de Tour de cette Championne du même pourcentage.`,
           isPassive: true
         }
       ],
@@ -46,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Admonish",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "5.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Admonester",
+          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
+          damage: "5.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Divine Light",
-          description: `Heals a target ally by 20% of their MAX HP. Heals all allies except the target by 10% of the target's MAX HP.<br><br><br>Heal Multiplier: 0.2*Target Max HP`,
+          name: "Lumière Divine",
+          description: `Soigne une cible alliée à hauteur de 20 % de ses PV max. Soigne tous tes alliés, sauf la cible, à hauteur de 10 % des PV MAX de la cible.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bless Weapons",
-          description: `Places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Armes Bénies",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

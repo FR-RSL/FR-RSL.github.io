@@ -4,9 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Annihilation",
-          description: `
-            Attaque un ennemi. Offre 45% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours.
-          `,
+          description: `Attaque 1 ennemi. Possède 15 % de chances supplémentaires de porter un coup critique.`,
           damage: "0.2*PV",
           levelInfo: [
             "Dégâts +5%",
@@ -18,10 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Trembleterre",
-          description: `
-            Attaque tous les ennemis.
-			Place un debuff de ${DEBUFFS.PRE} et un debuff ${DEBUFFS.ATK} de 50% pendant 2 tours.
-          `,
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.PRE} de 50 % et un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "0.23*PV",
           cooldown: 4,
           levelInfo: [
@@ -33,11 +28,8 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Spherepine [P]",
-          description: `
-            Au debut de chaque tour, place sur ce Champion un buff ${BUFFS.SHIELD} equivalent a 20% de ses PV MAX pendant 2 tours.
-			Placera un debuff ${DEBUFFS.SPD} de 15% pendant 1 tour sur tout ennemi attaquant ce Champion.
-          `,
+          name: "Sphèrépine [P]",
+          description: `Au début de chaque tour, place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX pendant 2 tours. Placera un débuff ${DEBUFFS.SPD} de 15 % pendant 1 tour sur tout ennemi attaquant ce Champion.`,
           isPassive: true,
           cooldown: 2,
           levelInfo: [
@@ -59,8 +51,6 @@ const championData = {
 
   	const aura = {
     img: "../../../../../../assets/images/auras/hp.webp",
-    description: `
-      Augmente la statistique PV des Alliés dans les Donjons de 50%.
-    `,
+    description: `Bénéficie d'une immunité contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.LOCK_PASSIF}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION}, ${DEBUFFS.BERSERK}, ${DEBUFFS.UNFEEBLE}, [Annuler], ${DEBUFFS.TRAP}, ${DEBUFFS.FATIGUE} et ${DEBUFFS.HUNTER}. Bénéficie également d'une immunité contre les effets d'échange de PV et d'équilibrage des PV, ainsi que les effets augmentant les temps de recharge.`,
   };
 

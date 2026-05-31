@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Skull Rattle",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Ébranle Crâne",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "3.8*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Battle Shout",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Cri de Bataille",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "4.9*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Turn to Ash",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns. This debuff cannot be resisted.`,
+          name: "Réduire en Cendres",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours. Il est impossible de résister à ce débuff.`,
           damage: "5.6*DEF",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%`,
 };

@@ -4,10 +4,9 @@ const championData = {
     {
       img: "assets/sort1.webp",
       name: "Part de New York",
-      description: `
-        Attaque 2 fois un ennemi. Lors d'une contre-attaque, répètera cette attaque sur un ennemi aleatoire.<br><br>
-        Ignorera 3% de la DEF de la cible pour chaque buff dont bénéficie ce Champion (s'accumule jusqu'a 15%).
-      `,
+      description: `Attaque 2 fois un ennemi. Lors d'une contre-attaque, répétera cette attaque sur un ennemi aléatoire. 
+
+Ignorera 3 % de la DÉF de la cible pour chaque buff dont bénéficie ce Champion (s'accumule jusqu'à 15 %).`,
       damage: "1.7*DEF",
       levelInfo: [
         "Dégâts +5%",
@@ -18,10 +17,9 @@ const championData = {
     {
       img: "assets/sort2.webp",
       name: "Carap-As !",
-      description: `
-        Place un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours et un buff ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés sauf ce Champion pendant 2 tours.<br><br>
-        Place également un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.
-      `,
+      description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours et un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. 
+
+Place également un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
       cooldown: 5,
       levelInfo: [
         "Temps de recharge -1",
@@ -31,10 +29,9 @@ const championData = {
     {
       img: "assets/sort3.webp",
       name: "Tortues ensembles",
-      description: `
-        Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 5% pour chaque buff sur tous les alliés et ennemis.<br><br>
-        Retire tous les buffs sur tous les ennemis si cette attaque tue un ennemi. Il est impossible de résister a cet effet.
-      `,
+      description: `Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff sur tous les alliés et ennemis. 
+
+Retire tous les buffs sur tous les ennemis si cette attaque tue un ennemi. Il est impossible de résister à cet effet.`,
       damage: "3.4*DEF",
       cooldown: 4,
       factions: [
@@ -52,10 +49,10 @@ const championData = {
     },
     {
       img: "assets/passif1.webp",
-      name: "Heros en semi-carapace [P]",
-      description: `
-        Place un buff ${BUFFS.STONE_SKIN} sur ce Champion pendant 1 tour à chaque fois que des frappes d'ennemis font passer ses PV sous 50%. Se produit une fois par compétence.<br><br>Quand ce Champion attaque, les <span class='gold-t'>Leonardo</span>, <span class='gold-t'>Donatello</span>, <span class='gold-t'>Michelangelo</span> et <span class='gold-t'>Raphael</span> allies se joindront a l'attaque.
-      `,
+      name: "Héros en semi-carapace [P]",
+      description: `Place un buff ${BUFFS.STONE_SKIN} sur ce Champion pendant 1 tour à chaque fois que des frappes d'ennemis font passer ses PV sous 50 %. Se produit une fois par compétence. 
+
+Dès que Leonardo, Donatello, Michelangelo ou Raphael attaque, ce Champion se joint à cette attaque.`,
       isPassive: true,
     },
   ],

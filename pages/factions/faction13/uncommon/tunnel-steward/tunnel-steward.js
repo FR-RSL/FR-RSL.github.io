@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vermin Killer",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 2.5% [Poison] debuff for 2 turns.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Damage +5%"],
+          name: "Tueur de Vermines",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Intensify",
-          description: `Attacks 1 enemy. Has a 50% chance of increasing the duration of 2 random debuffs on the target by 1 turn.`,
-          damage: "5.5*ATK",
+          name: "Intensifier",
+          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter d'1 tour la durée de 2 débuffs de la cible pris au hasard.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Damage +5%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

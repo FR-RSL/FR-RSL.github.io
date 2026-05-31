@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ensorcelled Axe",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Hache Ensorcelée",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fey Protection",
-          description: `Attacks 1 enemy 3 times. Each hit has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns if the target is under a [Heal Reduction] debuff. Places a [Shield] buff on this Champion for 3 turns equal to 30% of the damage inflicted.<br><br><br>Shield Multiplier: 0.3*Damage Dealt`,
-          damage: "1.8*ATK",
+          name: "Protection de Fée",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.HEALS}. Place sur ce Champion un buff ${BUFFS.SHIELD} de 3 tours équivalent à 30 % des dégâts infligés.`,
+          damage: "1.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Paranoia [P]",
-          description: `Places a [Counterattack] buff on this Champion for 1 turn at the start of each Round. Places a [Counterattack] buff on this Champion for 1 turn at the end of their turn.`,
+          name: "Paranoïa [P]",
+          description: `Place, au début de chaque round, un buff de ${BUFFS.COUNTER} d'1 tour sur ce Champion. Place, à la fin de son Tour, un buff de ${BUFFS.COUNTER} d'1 tour sur ce Champion.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 32%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 32%`,
 };

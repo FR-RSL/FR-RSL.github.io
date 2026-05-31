@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Death's Caress",
-          description: `Attacks 1 enemy 2 times. Each hit has an 80% chance of placing a 5% [Poison] debuff for 2 turns if the target is under a [Poison Sensitivity] debuff.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Caresse de la Mort",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 80 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours si la cible souffre d'un débuff ${DEBUFFS.POISON_S}.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cruel Exultation",
-          description: `Attacks 1 enemy. Fills the Turn Meters of all allies by 2% for each debuff on the target.`,
-          damage: "6.5*ATK",
+          name: "Cruelle Allégresse",
+          description: `Attaque un ennemi. Pour chaque débuff sur la cible, remplit de 2 % le Compteur de Tour de tous les alliés.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Frost Blight",
-          description: `Attacks 1 enemy. Places a 25% [Poison Sensitivity] debuff for 2 turns.`,
-          damage: "5*ATK",
+          name: "Plaie Glaciale",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.POISON_S} de 25 % pendant 2 tours.`,
+          damage: "5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 35`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 35`,
 };

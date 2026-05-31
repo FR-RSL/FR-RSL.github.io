@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rapacious Staff",
-          description: `Attacks 1 enemy 2 times. Heals the ally with the lowest HP by 5% of this Champion’s MAX HP after each hit.<br><br><br>Heal Multiplier: 0.05*HP`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%"],
+          name: "Bâton rapace",
+          description: `Attaque 2 fois un ennemi. Après chaque frappe, soigne l'allié ayant le moins de PV de 5 % des PV MAX de ce Champion.`,
+          damage: "3*ATQ",
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shed Skin",
-          description: `Removes all debuffs from all allies, then heals them by 10% of their MAX HP. Heals each ally by an extra 5% of their MAX HP for each debuff removed from them. <br><br>Also places a [Block Debuffs] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: (0.1*Target Max HP)+(0.05*Target Max HP*unappliedStatusEffectsCount)`,
+          name: "Peau muée",
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne de 10 % de leurs PV MAX. Soigne chaque allié de 5 % de ses PV MAX supplémentaires pour chaque débuff qui lui est retiré. 
+
+Place également un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Immortal Serpent",
-          description: `Revives all dead allies with 50% HP and 50% Turn Meter, then places a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Serpent immortel",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour, puis place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Overlay [P]",
-          description: `Allies receive 5% less damage from skills for each buff on them. Stacks up to 25%.`,
+          name: "Couverture [P]",
+          description: `Les alliés reçoivent 5 % de dégâts en moins à cause des compétences pour chaque buff qu'ils possèdent. S'accumule jusqu'à 25 %.`,
           isPassive: true
         }
       ],
@@ -46,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 60`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

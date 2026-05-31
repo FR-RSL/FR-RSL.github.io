@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "All-Out Attack",
-          description: `Attacks 1 enemy. Fills this Champion's Turn Meter by 30% if this attack is critical.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Attaque Totale",
+          description: `Attaque un ennemi. Remplit de 30 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Havoc",
-          description: `Attacks 1 enemy. Grants an Extra Turn if the target is killed.`,
-          damage: "5.6*ATK",
+          name: "Dévastation",
+          description: `Attaque un ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "5.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sweep",
-          description: `Attacks all enemies 2 times. Will ignore 20% of each target's DEF.`,
-          damage: "1.5*ATK",
+          name: "Balayage",
+          description: `Attaque 2 fois tous les ennemis. Ignorera 20 % de la DÉF de chaque cible.`,
+          damage: "1.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         }
       ],

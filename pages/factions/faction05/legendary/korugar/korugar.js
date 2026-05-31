@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Strange Animus",
-          description: `Attacks 1 enemy. Heals this Champion by 10% of their MAX HP.<br><br><br>Heal Multiplier: 0.1*HP`,
+          name: "Étrange hostilité",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
           damage: "0.21*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%", "Level 4: Damage +10%", "Level 5: Heal +10%"],
+          levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bell's Toll",
-          description: `Attacks all enemies. Has a 75% chance of filling the Turn Meters of all allies by 30%. <br><br>Also has a 75% chance of removing all debuffs from all allies.`,
+          name: "Pour qui sonne le glas",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de remplir le Compteur de Tour de tous les alliés de 30 %. 
+
+Possède également 75 % de chances de retirer tous les débuffs sur tous les alliés.`,
           damage: "0.24*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Conduit of Agonies",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Also places a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Conduit de tortures",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Violence Locus [P]",
-          description: `Increases this Champion’s RES by 20 and DEF by 10% for each [Ally Protection] buff on allies. Also increases ally RES by 15 and DEF by 5% for each [Ally Protection] buff on allies. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead. <br><br>Counterattacks whenever an ally under an [Ally Protection] buff is attacked. Can occur once per enemy turn.`,
+          name: "Lieu de violence [P]",
+          description: `Augmente la RÉS de ce Champion de 20 points et sa DÉF de 10 % pour chaque buff ${BUFFS.ALLY_PROTECT} sur les alliés. Augmente également la RÉS des alliés de 15 points et leur DÉF de 5 % pour chaque buff ${BUFFS.ALLY_PROTECT} sur les alliés. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort. 
+
+Contre-attaque dès qu'un allié sous buff ${BUFFS.ALLY_PROTECT} se fait attaquer. Peut se produire une fois par tour ennemi.`,
           isPassive: true
         }
       ],
@@ -47,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 30%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%`,
 };

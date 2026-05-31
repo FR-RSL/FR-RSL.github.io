@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Transference",
-          description: `Attacks 1 enemy. Transfers all debuffs from this Champion to the target.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Transfert",
+          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Exhaustion",
-          description: `Attacks 1 enemy. Fully depletes the target's Turn Meter.`,
-          damage: "6*ATK",
+          name: "Éreintement",
+          description: `Attaque un ennemi. Vide totalement le Compteur de Tours de la cible.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Energize",
-          description: `Places a 30% [Increase SPD] buff on all allies for 2 turns. Fills the Turn Meter of all allies by 30%. Decreases the Turn Meter of all enemies by 30%.`,
+          name: "Stimuler",
+          description: `Place un buff d'${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Remplit de 30 % le Compteur de Tours de tous les alliés. Réduit de 30% le Compteur de Tours de tous les ennemis.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 24%`,
 };

@@ -4,41 +4,55 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thirsting Sword",
-          description: `Attacks 1 enemy.<br><br>Heals all allies by 5% of their MAX HP. Heals all allies by an additional 5% of their MAX HP if this Champion attacks a target under a [Leech] debuff.`,
+          name: "Épée assoiffée",
+          description: `Attaque un ennemi. 
+
+Soigne tous tes alliés de 5 % de leurs PV MAX. Soigne tous les alliés de 5 % supplémentaires de leurs PV MAX si cette Championne attaque une cible sous débuff ${DEBUFFS.LEECH}.`,
           damage: "4*DEF",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Deathplunge",
-          description: `Attacks all enemies.<br><br>Heals all allies by 15% of this Champion’s MAX HP. The value of the heal increases by 5% for each [Leech] debuff on the enemy team.<br><br>If a Champion receives any surplus heal, places a [Shield] buff on that Champion for 2 turns. The value of the [Shield] is equal to the amount of surplus heal received, up to 30% of the Champion’s MAX HP.`,
+          name: "Fente mortelle",
+          description: `Attaque tous les ennemis. 
+
+Soigne tous les alliés de 15 % des PV MAX de cette Championne. La valeur du soin augmente de 5 % pour chaque débuff ${DEBUFFS.LEECH} dont est affligée l'équipe ennemie. 
+
+Si un Champion reçoit un surplus de soins, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de soins en surplus reçus, jusqu'à 30 % des PV MAX du Champion.`,
           damage: "3.7*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Heal +20%"],
+          levelInfo: ["Dégâts +20%", "Soins +20%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "All-Consuming Roar",
-          description: `Attacks all enemies.<br><br>Places a [Leech] debuff for 2 turns and a [Provoke] debuff for 1 turn on all enemies.<br><br>Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Rugissement dévorant",
+          description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.LEECH} pendant 2 tours et un débuff ${DEBUFFS.PROVOKE} pendant 1 tour sur tous les ennemis. 
+
+Place également un buff ${BUFFS.COUNTER} sur cette Championne pendant 2 tours.`,
           damage: "4*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore resistance +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Battle Revelry [P]",
-          description: `Each time this Champion hits an enemy under a [Leech] debuff, increases this Champion’s DEF and HP by 5% (stacks up to 50%).<br><br>When attacked by enemies whose ATK is higher than or equal to their DEF, has a 100% chance to place a 50% [Decrease ATK] debuff for 2 turns. When attacked by enemies whose DEF is higher than their ATK, has a 100% chance to place a 60% [Decrease DEF] debuff for 2 turns instead.<br><br>When attacked by enemies under a [Leech] debuff, has a 50% chance to place a [Provoke] debuff for 1 turn.`,
+          name: "Réjouissance du combat [P]",
+          description: `Chaque fois que cette Championne frappe un ennemi sous débuff ${DEBUFFS.LEECH}, augmente la DÉF et les PV de cette Championne de 5 % (s'accumule jusqu'à 50 %). 
+
+Lorsqu'elle est attaquée par des ennemis dont l'ATQ est supérieure ou égale à leur DÉF, a 100 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Lorsqu'elle est attaquée par des ennemis dont la DÉF est supérieure à leur ATQ, a au lieu de cela 100 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.
+
+Lorsqu'elle est attaquée par des ennemis sous débuff ${DEBUFFS.LEECH}, a 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           isPassive: true
         }
       ],
@@ -54,7 +68,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/defence.webp",
-    description: `Increases Ally DEF in all Battles by 35%`,
+    description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -62,41 +76,55 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Blade Axel",
-          description: `Attacks 1 enemy.<br><br>Places a [Block Buffs] debuff for 2 turns. This debuff cannot be resisted if the target’s HP is lower than this Champion’s.`,
+          name: "Axel de lames",
+          description: `Attaque un ennemi. 
+
+Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de résister à ce débuff si les PV de la cible sont inférieurs à ceux de cette Championne.`,
           damage: "0.23*HP",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Frenzied Execution",
-          description: `Attacks 1 enemy.<br><br>Will ignore [Stone Skin] buffs. The damage inflicted by this skill increases by 50% if the target's HP is lower than this Champion's.<br><br>Resets the cooldown of this skill if the target is killed.`,
+          name: "Exécution frénétique",
+          description: `Attaque un ennemi. 
+
+Ignorera les buffs ${BUFFS.STONE_SKIN}. Les dégâts infligés par cette compétence augmentent de 50 % si les PV de la cible sont inférieurs à ceux de cette Championne. 
+
+Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
           damage: "0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Soul Separator",
-          description: `Attacks 1 enemy. Before attacking, places a 30% [Increase C.DMG] buff on all allies for 2 turns.<br><br>Steals 50% of the target’s Turn Meter. Steals 100% Turn Meter instead if the target’s HP is lower than this Champion’s.<br><br>Destroys the target’s HP by 25%. Destroys 50% HP if the target’s HP is lower than this Champion’s.`,
+          name: "Séparateur d'âme",
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours. 
+
+Vole 50 % du Compteur de Tour de la cible. Vole au lieu de cela 100 % du Compteur de Tour si les PV de la cible sont inférieurs à ceux de cette Championne. 
+
+Détruit les PV MAX de la cible de 25 % des dégâts infligés. Détruit les PV MAX de la cible de 50 % des dégâts infligés si les PV MAX de la cible sont moins élevés que ceux de cette Championne.`,
           damage: "0.28*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore resistance +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Rage Nexus [P]",
-          description: `Will ignore 15% of a target’s DEF if the target’s HP is lower than this Champion’s. Will also ignore 15% of the target’s DEF if the target is under a [Leech] debuff.<br><br>Every third skill this Champion uses will attack all enemies instead.<br><br>This Champion joins every third attacking skill used by allies. This Champion will use their default skill when joining in that skill.`,
+          name: "Liaison de rage [P]",
+          description: `Ignorera 15 % de la DÉF d'une cible si les PV de la cible sont inférieurs à ceux de cette Championne. Ignorera également 15 % de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.LEECH}. 
+
+Chaque troisième compétence que cette Championne utilise attaquera au lieu de cela tous les ennemis. 
+
+Cette Championne rejoint chaque troisième compétence d'attaque utilisée par les alliés. Cette Championne utilisera sa compétence par défaut lorsqu'elle rejoint cette compétence.`,
           isPassive: true
         }
       ],
@@ -112,7 +140,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/defence.webp",
-    description: `Increases Ally DEF in all Battles by 35%`,
+    description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ruination",
-          description: `Attacks all enemies. Destroys each target's MAX HP by 30% of the damage inflicted.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Perte",
+          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 30 % des dégâts infligés.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloodletting",
-          description: `Attacks 1 enemy 3 times. Each hit places a 5% [Poison] debuff on all enemies for 2 turns.`,
-          damage: "1.9*ATK",
+          name: "Saignée",
+          description: `Attaque 3 fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours.`,
+          damage: "1.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cursehold",
-          description: `Attacks 1 enemy. Critical damage increases by 20% for each Poison debuff on the target. Stacks up to 100%.`,
-          damage: "6.2*ATK",
+          name: "Prismaudite",
+          description: `Attaque un ennemi. Les dégâts critiques augmentent de 20 % pour chaque débuff Poison dont est affligée la cible. S'additionne jusqu'à 100 %.`,
+          damage: "6.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 27%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 27%`,
 };

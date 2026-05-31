@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Branch of Alacrity",
-          description: `Attacks 1 enemy. Places a 15% [Increase SPD] buff on the ally with the highest Turn Meter, except this Champion, for 1 turn.`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Branche d'alacrité",
+          description: `Attaque un ennemi. Place également pendant 1 tour un buff ${BUFFS.SPD} de 15 % sur l'allié ayant le Compteur de Tour le plus élevé, sauf cette Championne.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Daggerleaf",
-          description: `Attacks all enemies. Has a 25% chance of placing a 15% [Decrease SPD] debuff on all enemies for 2 turns.`,
-          damage: "4*ATK",
+          name: "Feuille-dague",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % sur tous les ennemis pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

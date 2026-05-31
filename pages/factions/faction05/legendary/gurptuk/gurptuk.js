@@ -3,32 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Biotic Staff",
-          description: `Attacks 1 enemy 2 times. Places a 15% [Continuous Heal] buff for 1 turn on all allies under [Poison] debuffs.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Bâton Biotique",
+          description: `Attaque 2 fois un ennemi. Place, pendant 1 tour, un buff ${BUFFS.HEALS} de 15 % sur tous les alliés souffrant de débuffs ${DEBUFFS.POISON}.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Druidic Boon",
-          description: `Removes all debuffs except [Poison] debuffs from an ally, then heals them by 30% of their MAX HP and places a [Shield] buff on the target equal to 20% of their MAX HP for 2 turns.<br><br><br>Heal Multiplier: 0.30*Target Max HPShield Multiplier: 0.2*Target Max HP`,
+          name: "Bénédiction Druidique",
+          description: `Retire tous les débuffs, sauf les débuffs ${DEBUFFS.POISON} d'un allié, puis le soigne de 30 % de ses PV MAX avant de placer sur la cible un buff de ${BUFFS.SHIELD} de 2 tours équivalent à 20 % de ses PV MAX.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Shield +5%", "Level 4: Heal +10%", "Level 5: Shield +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Bouclier +5%", "Soins +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cloud of Spores",
-          description: `Places three 2.5% [Poison] debuffs on all allies for 3 turns. These debuffs cannot be resisted or blocked. <br>Also has an 80% chance of placing a [Block Buffs] debuff on all enemies for 2 turns.`,
+          name: "Nuage de Spores",
+          description: `Place trois débuffs ${DEBUFFS.POISON} de 2,5 % sur tous les alliés pendant 3 tours. Il est impossible de résister à ces débuffs ou de les bloquer. 
+Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} de 2 tours sur tous les ennemis.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Symbiotes [P]",
-          description: `Allies under [Poison] debuffs inflict 7.5% more damage for each [Poison] debuff on them, stacking up to a maximum of 30%. This damage increase applies to all of their skills.<br><br>Also increases each ally's RES by 15 for each [Poison] debuff on them.`,
+          description: `Les alliés affligés de débuffs ${DEBUFFS.POISON} infligent 7,5 % de dégâts supplémentaires pour chaque débuff ${DEBUFFS.POISON} dont ils souffrent, s'additionnant jusqu'à un maximum de 30 %. Cette augmentation des dégâts s'applique à toutes leurs compétences.
+
+Augmente également de 15 la RÉS de chaque allié pour chaque débuff ${DEBUFFS.POISON} dont ils sont affligés.`,
           isPassive: true
         }
       ],
@@ -46,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 50`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 50`,
 };

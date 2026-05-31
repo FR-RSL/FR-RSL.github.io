@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "The Harder They Fall",
-          description: `Attacks 1 enemy 2 times. Has an additional 30% chance of inflicting a critical hit if the target is under a [Decrease DEF] debuff.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Dure sera la Chute",
+          description: `Attaque 2 fois un ennemi. Possède 30 % de chances supplémentaires de placer un coup critique si la cible souffre d'un débuff ${DEBUFFS.DEF}.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soften Them Up",
-          description: `Places a [Counterattack] and a 25% [Increase ATK] buff on this Champion for 2 turns. Grants an Extra Turn.`,
+          name: "Ramollis-les",
+          description: `Place un buff ${BUFFS.COUNTER} et un buff ${BUFFS.ATK} de 25 % sur ce Champion pendant 2 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Furious Defense [P]",
-          description: `Has a 20% chance of placing a 30% [Decrease DEF] debuff for 2 turns when attacking targets with higher DEF than this Champion. Has a 20% chance of decreasing the damage taken by 20% when attacked by enemies with higher ATK than this Champion.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Défense Furieuse [P]",
+          description: `Possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours si les cibles attaquées possèdent plus de DÉF que ce Champion. Possède 20 % de chances de réduire de 20 % les dégâts reçus lorsque ce Champion est attaqué par des ennemis ayant une ATQ plus élevée que ce lui.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],

@@ -3,11 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Feu Fantome",
-          description: `
-            Attaque tous les ennemis. Place un débuff de <span class='gbt'>Poison</span> de 5% pendant 1 tour
-			si cette attaque passe en critique.
-          `,
+          name: "Feu Fantôme",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 1 tour si cette attaque passe en critique.`,
           damage: "3*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -19,10 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Regard Abyssal",
-          description: `
-            Attaque tous les ennemis. Retire tous les buffs. Place un débuff de
-			<span class='gbt'>Sommeil</span> pendant 1 tour.
-          `,
+          description: `Attaque tous les ennemis. Retire tous les buffs. Place un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
           damage: "3.6*ATQ",
           cooldown: 5,
           levelInfo: [
@@ -35,13 +29,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Sceau de Magie",
-          description: `
-            Réinitialise tous les temps de recharge de toutes les compétences alliées. Remplit de 20% le
-			Compteur de Tours de tous les alliés, sauf celui de ce Champion. Ne réinitialisera pas ou ne réduira
-			pas les temps de recharge des compétences de ce Champion. Ne réinitialisera pas non plus ou ne
-			réduira pas les temps de recharge des compétences d’aucun autre Champion
-			avec cette compétence.
-          `,
+          description: `Réinitialise les temps de recharge de toutes les compétences des alliés. Ne réinitialisera pas ou ne réduira pas les temps de recharge des compétences de ce Champion. Le temps de recharge de cette compétence ne peut pas être réduit ou réinitialisé.`,
           cooldown: 7,
           levelInfo: [
             "Temps de recharge -1",

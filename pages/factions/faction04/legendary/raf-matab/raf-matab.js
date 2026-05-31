@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Elderspear",
-          description: `Attacks 1 enemy. Has a 50% chance of increasing the cooldown of one of the target’s skills by 2 turns at random. The chance increases to 100% if the target has 50% HP or less.`,
+          name: "Lance ancestrale",
+          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire de la cible. Ces chances passent à 100 % si la cible possède 50 % de PV ou moins.`,
           damage: "0.22*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stampede",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Provoke] debuff for 1 turn. Also places a [Block Damage] buff on this Champion for 1 turn.`,
+          name: "Cavalcade",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour.`,
           damage: "0.25*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Shield of the Clans",
-          description: `Places a 50% [Increase RES] buff and a 30% [Reflect Damage] buff on all allies for 2 turns.`,
+          name: "Bouclier des Clans",
+          description: `Place un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Brawny Surge [P]",
-          description: `This Champion’s RES is increased by 50 whenever their active skills are not on cooldown.`,
+          name: "Déferlement musclé [P]",
+          description: `La RÉS de ce Champion augmente de 50 lorsque ses compétences actives ne sont pas en cours de recharge.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 60`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

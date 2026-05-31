@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Death Dive",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns. The chance increases to 50% if the target is under a [Hex] debuff. <br><br>Places a [Perfect Veil] buff on this Champion for 1 turn if this attack kills an enemy under a [Hex] debuff.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Plongeon Mortel",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Ces chances passent à 50 % si la cible est affligée d'un débuff ${DEBUFFS.HEX}. 
+
+Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour si cette attaque tue un ennemi sous débuff ${DEBUFFS.HEX}.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Feather Barrage",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns, then attacks all enemies. Has a 75% chance of placing a [Block Active Skills] debuff for 2 turns on targets under [Hex] debuffs.`,
-          damage: "4.5*ATK",
+          name: "Barrage de Plumes",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours sur les cibles affligées de débuffs ${DEBUFFS.HEX}.`,
+          damage: "4.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sky Punishment",
-          description: `Places a 50% [Increase ACC] buff on this Champion for 2 turns, then attacks all enemies. Has a 75% chance of placing a [Hex] debuff for 3 turns.<br><br>Has a 100% chance of placing a [Fear] debuff for 1 turn instead on enemies under [Hex] debuffs.`,
-          damage: "4.7*ATK",
+          name: "Punition Céleste",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours.
+
+Sinon, possède 100 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour sur les cibles affligées de débuffs ${DEBUFFS.HEX}.`,
+          damage: "4.7*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Countermand [P]",
-          description: `Counterattacks with the default skill every time this Champion loses 30% HP or more in a single turn. Always counterattacks when attacked if 2 or more allies are dead.`,
+          name: "Contrordre [P]",
+          description: `Contre-attaque avec la compétence par défaut chaque fois que ce Champion perd 30 % de PV ou plus lors d'un seul tour. Contre-attaque toujours lorsqu'il est attaqué si 2 alliés ou plus sont morts.`,
           isPassive: true
         }
       ],

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hunt Down",
-          description: `Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Pourchasser",
+          description: `Attaque un ennemi. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Armor Breaker",
-          description: `Places a 60% [Decrease DEF] debuff for 2 turns, then attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "5.3*ATK",
+          name: "Brisarmure",
+          description: `Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours, puis attaque 1 ennemi. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          damage: "5.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Charged Shot",
-          description: `Attacks 1 enemy. Places a 30% [Decrease SPD] debuff for 2 turns. Decreases the target's Turn Meter by 50%. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "6.1*ATK",
+          name: "Tir Chargé",
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours. Réduit de 50 % le Compteur de Tour de la cible. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          damage: "6.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Faction Wars by 20%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Cryptes de Faction de 20%`,
 };

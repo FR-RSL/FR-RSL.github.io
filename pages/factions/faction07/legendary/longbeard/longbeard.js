@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Unstoppable Force",
-          description: `Attacks 1 enemy. Will ignore [Shield] and [Block Damage] buffs.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Force Irrésistible",
+          description: `Attaque 1 ennemi. Ignorera le ${BUFFS.SHIELD} et les buffs de ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Brittleness Curse",
-          description: `Attacks 1 enemy. Places a 25% [Weaken] debuff for 2 turns.`,
-          damage: "6.3*ATK",
+          name: "Malédiction de Fragilité",
+          description: `Attaque 1 ennemi. Place un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "6.3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Horde's Fury",
-          description: `Attacks 1 enemy with 4 allies. Increases the damage inflicted by allies by 20%.`,
+          name: "Fureur de la Horde",
+          description: `Attaque 1 ennemi avec 4 alliés. Augmente de 20 % les dégâts infligés par les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Dungeons by 23%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Donjons de 23%`,
 };

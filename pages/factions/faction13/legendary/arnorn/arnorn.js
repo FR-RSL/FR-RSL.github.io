@@ -3,13 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fente eclatente",
-          description: `
-            Attaque 2 fois un ennemi.
-            Les degats augmentent de 5% pour chaque buff sur la cible.<br><br>
-            Chaque frappe a 35% de chances de placer un débuff
-            <span class='gbt'>Etourdissement</span> pendant 1 tour.
-          `,
+          name: "Fente éclatante",
+          description: `Attaque 2 fois un ennemi. Les dégâts augmentent de 5 % pour chaque buff sur la cible. 
+
+Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "1.75*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -21,13 +18,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Force de miroitement",
-          description: `
-            Attaque 2 fois un ennemi.
-            Les degats infliges par cette compétence augmentent de 10%
-            par tranche de 10% de PV perdus par ce Champion.<br><br>
-            Si la cible beneficie de 2 buffs ou plus, ignorera également 35% de la DEF de la cible.<br><br>
-            Accorde un Tour supplémentaire si cette attaque tue un ennemi.
-          `,
+          description: `Attaque 2 fois un ennemi. Les dégâts infligés par cette compétence augmentent de 10 % par tranche de 10 % de PV perdus par ce Champion. 
+
+Si la cible bénéficie de 2 buffs ou plus, ignorera également 35 % de la DÉF de la cible. 
+
+Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "2.7*ATQ",
           cooldown: 5,
           levelInfo: [
@@ -40,13 +35,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Courroux de Hrothglime",
-          description: `
-            Attaque tous les ennemis.
-            Ignorera les buffs <span class='gbt'>Augmentation de DEF</span>,
-            <span class='gbt'>Renforcer</span> et <span class='gbt'>Bouclier</span>.<br><br>
-            Si cette attaque tue au moins 1 ennemi, reduit le Compteur de Tour de tous les ennemis de 50%.
-            Il est impossible de resister a cet effet.
-          `,
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.DEF}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}. 
+
+Si cette attaque tue au moins 1 ennemi, réduit le Compteur de Tour de tous les ennemis de 50 %. Il est impossible de résister à cet effet.`,
           damage: "3.4*ATQ",
           cooldown: 6,
           levelInfo: [
@@ -58,20 +49,16 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Roi dore [P]",
-          description: `
-            <span class='gbt'>Effet Passif</span><br><br>
-            Augmente l'ATQ de ce Champion de 5% pour chaque buff actif
-            sur l'equipe ennemie (s'accumule jusqu'a 100%).<br><br>
-            <span class='gbt'>Effet Actif</span><br><br>
-            Empeche la mort de ce Champion et le garde vivant avec 1 PV lorsqu'il
-            est frappe par un coup fatal. Lui accorde un buff
-            <span class='gbt'>Peau de Pierre</span> pendant 1 tour.
-            Active ensuite la compétence <span class='gbt'>Courroux de Hrothglime</span>.
-            Ceci ne placera pas la compétence <span class='gbt'>Courroux de Hrothglime</span> en temps de recharge.<br><br>
-            Si plusieurs Champions de l'equipe disposent de cette compétence,
-            cet effet ne sera active qu'une fois.
-          `,
+          name: "Roi doré [P]",
+          description: `${PASSIVE}
+
+Augmente l'ATQ de ce Champion de 5 % pour chaque buff actif sur l'équipe ennemie (s'accumule jusqu'à 100 %). 
+
+${ACTIVE}
+
+Empêche la mort de ce Champion et le garde vivant avec 1 PV lorsqu'il est frappé par un coup fatal. Lui accorde un buff ${BUFFS.STONE_SKIN} pendant 1 tour. Active ensuite instantanément la compétence [Courroux de Hrothglime]. Ceci ne placera pas la compétence [Courroux de Hrothglime] en temps de recharge. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, cet effet ne sera activé qu'une fois.`,
           cooldown: 4,
           isPassive: true,
         },

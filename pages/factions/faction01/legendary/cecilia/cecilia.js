@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Snow Hurricane",
-          description: `Attacks 1 enemy. Heals all allies by 10% of their MAX HP.`,
+          name: "Ouragan de neige",
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 10 % de leurs PV max.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Verglas Wave",
-          description: `Attacks all enemies 2 times. The damage dealt by this skill increases by 5% for each ally above 50% HP.<br><br>Places a [Perfect Veil] buff on all allies except this Champion for 2 turns.`,
+          name: "Vague de verglas",
+          description: `Attaque 2 fois tous les ennemis. Les dégâts infligés par cette compétence augmentent de 5 % pour chaque allié dont les PV sont supérieurs à 50 %. 
+
+Place un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf cette Championne pendant 2 tours.`,
           damage: "2*DEF+0.05*TRG_HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Yuletide Abeyance",
-          description: `Attacks all enemies. Before attacking, places a 60% [Increase DEF] buff on all allies for 2 turns.<br><br>Places a 25% [Strengthen] buff and a [Counterattack] buff on all allies for 2 turns.`,
+          name: "Vacance de Yuletide",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.
+
+Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.COUNTER} sur tous les alliés pendant 2 tours.`,
           damage: "4.4*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spirit Of Giving [P]",
-          description: `[Active Effect]<br><br>Places a [Revive on Death] buff for 1 turn on an ally when that ally’s HP falls below 50%. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>[Passive Effect]<br><br>At the start of this Champion’s turn, removes one random debuff from a random ally and fills their Turn Meter by 10%.`,
+          name: "Esprit généreux [P]",
+          description: `${ACTIVE}
+
+Place un buff ${BUFFS.REVIVE_ON_DEATH} d'1 tour sur un allié dès que les PV de cet allié tombent sous 50 %. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.
+
+${PASSIVE}
+
+Au début du tour de cette Championne, retire un débuff aléatoire sur un allié aléatoire et remplit de 10 % son Compteur de Tour.`,
           cooldown: 6,
           isPassive: true
         }
@@ -48,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in all Battle by 30%.`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%`,
 };

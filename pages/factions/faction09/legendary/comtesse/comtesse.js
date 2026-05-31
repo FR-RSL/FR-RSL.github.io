@@ -4,11 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Caresse Pourrissante",
-          description: `
-            Attaque 2 fois un ennemi.
-			Possède 30% de chances de placer un débuff
-			<span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.
-          `,
+          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           damage: "1.6*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -19,12 +15,8 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Fange de Misere",
-          description: `
-            Attaque 3 fois tous les ennemis. Chaque frappe posséde 75% de chances de placer un débuff 
-			<span class='gbt'>Réduction de VIT</span> de 30% pendant 2 tours. 
-			Chaque frappe posséde également 75% de chances de réduire le Compteur de Tour de l'ennemi de 10%.
-          `,
+          name: "Fange de Misère",
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Chaque frappe possède également 75 % de chances de réduire le Compteur de Tour de l'ennemi de 10 %.`,
           cooldown: 5,
           damage: "1.15*ATQ",
           levelInfo: [
@@ -37,13 +29,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Dilatation du Temps",
-          description: `
-            Attaque tous les
-			ennemis. Possède 75% de chances de placer un débuff 
-			<span class='gbt'>Blocage des Compétences Actives</span> pendant 2 tours.
-			<br><br> Réduit également d’1 tour les temps de recharge de toutes
-			les compétences alliées, sauf celles de ce Champion.
-          `,
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+
+Réduit également d'1 tour les temps de recharge de toutes les compétences alliées, sauf celles de ce Champion.`,
           cooldown: 7,
           damage: "4*ATQ",
           levelInfo: [
@@ -56,13 +44,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Damnee [P]",
-          description: `
-            Au début de chaque tour,
-			retire un débuff aléatoire sur <span class='gold-t'>Astralon</span> et ce
-			Champion.<br><br> Uniquement disponible lorsque <span class='gold-t'>Astralon</span> se
-			trouve dans l’équipe.
-          `,
+          name: "Damnée [P]",
+          description: `Au début de chaque tour, retire un débuff aléatoire sur Astralon et ce Champion.
+
+Uniquement disponible lorsque Astralon se trouve dans l'équipe.`,
           isPassive: true,
         },
         {

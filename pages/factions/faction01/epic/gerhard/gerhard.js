@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ringing Blow",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn. Has a 40% chance of placing a [Stun] debuff for 1 turn instead if the target has more than 75% Turn Meter.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Damage +5%"],
+          name: "Coup Retentissant",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Par contre, possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour si la cible possède plus de 75 % de Compteur de Tour.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Show of Valor",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns, then attacks 1 enemy. <br><br>Will ignore 25% of the target’s DEF. Will ignore 50% of the target’s DEF instead if the target is under an [Increase DEF] buff.`,
-          damage: "5.5*ATK",
+          name: "Témoignage de Valeur",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours, puis attaque un ennemi. 
+
+Ignorera 25 % de la DÉF de la cible. Par contre, ignorera 50 % de la DÉF de la cible si la cible dispose d'un buff ${BUFFS.DEF}.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Exemplar [P]",
-          description: `Immune to [Fear], [True Fear], [Freeze], [Provoke], [Sleep], [Stun], [Petrification] debuffs.`,
+          name: "Modèle [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} et ${DEBUFFS.PETRIFICATION}.`,
           cooldown: 5,
-          levelInfo: ["Level 1: Cooldown -1", "Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Doom Tower by 50`,
+  description: `Augmente la statistique RÉS des Alliés lors de la Tour du Malheur de 50`,
 };

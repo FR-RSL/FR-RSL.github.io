@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Censer Whirl",
-          description: `Attacks all enemies. <br><br>Heals all allies by 5% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.05*HP`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Tourbillon d'encensoir",
+          description: `Attaque tous les ennemis. 
+
+Soigne tous tes alliés à hauteur de 5 % des PV MAX de ce Champion.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Incense of Inspiration",
-          description: `Places a 50% [Increase ATK] buff and a 25% [Strengthen] buff on all allies for 2 turns. <br><br>Fills the Turn Meters of all allies by 15%.`,
+          name: "Encens d'inspiration",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours. 
+
+Remplit le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Revival Mandate",
-          description: `Revives an ally with 50% HP and 50% Turn Meter. Also places a 50% [Increase ATK] buff on that ally for 1 turn. <br><br>Then activates the revived ally’s default skill, targeting the enemy with the lowest HP.`,
+          name: "Mandat de renaissance",
+          description: `Ranime un allié avec 50 % de PV et 50 % de Compteur de Tour. Place également un buff ${BUFFS.ATK} de 50 % sur cet allié pendant 1 tour. 
+
+Active ensuite la compétence par défaut de l'allié ranimé, ciblant l'ennemi qui a le moins de PV.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Sentenced to Life [P]",
-          description: `If an enemy is killed by an ally’s default skill after being revived by the [Revival Mandate] skill, resets the cooldown of the [Revival Mandate] skill.`,
+          name: "Condamné à la vie [P]",
+          description: `Si un ennemi est tué par la compétence par défaut d'un allié après avoir été ranimé par la compétence [Mandat de renaissance], réinitialise le temps de recharge de la compétence [Mandat de renaissance].`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 25%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 25%`,
 };

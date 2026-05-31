@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Daze Powder",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "3.65*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Poudre d'Hébétement",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "3.65*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Venom Kunai",
-          description: `Attacks 1 enemy 3 times. Each hit has a 75% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "1.95*ATK",
+          name: "Venin Kunaï",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "1.95*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blood Boil",
-          description: `Attacks 1 enemy. Has a 75% chance of instantly activating one tick of all [Poison] debuffs and [HP Burn] debuffs on the target. Also has a 75% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "5.5*ATK",
+          name: "Bouillon de Sang",
+          description: `Attaque un ennemi. A 75 % de chances d'activer instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} se trouvant sur la cible. A également 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 50`,
 };

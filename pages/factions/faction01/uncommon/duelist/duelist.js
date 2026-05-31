@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Elan",
-          description: `Attacks 1 enemy. Heals by 20% of the damage inflicted.<br><br><br>Heal Multiplier: Damage Dealt*0.2`,
-          damage: "3.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Heal +10%", "Level 5: Damage +10%", "Level 6: Damage +15%", "Level 7: Heal +15%"],
+          name: "Élégance",
+          description: `Attaque 1 ennemi. Soigne à hauteur de 20 % des dégâts infligés.`,
+          damage: "3.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Soins +10%", "Dégâts +10%", "Dégâts +15%", "Soins +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stunning Slice",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "5.6*ATK",
+          name: "Fente Magnifique",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          damage: "5.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Damage +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

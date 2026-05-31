@@ -3,39 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heckler of Legends",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Provoke] debuff for 1 turn. The chance increases to 55% against Legendary Champions.`,
+          name: "Gêneur de légendes",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Ces chances passent à 55 % contre les Champions Légendaires.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rats Off To Ya",
-          description: `Attacks all enemies. Has an 80% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Also has an 80% chance of placing a [Fear] debuff for 1 turn on each Legendary Champion.`,
+          name: "Faits comme un rat",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 80 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour sur chaque Champion Légendaire.`,
           damage: "4*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Get Comfy Everyone",
-          description: `Places a [Shield] buff and a 15% [Continuous Heal] buff on all allies for 2 turns.<br><br>The value of the [Shield] buff is proportional to this Champion’s DEF.<br><br><br>Shield Multiplier: 2.5*DEF`,
+          name: "Mettez-vous à l'aise",
+          description: `Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.
+
+La valeur du buff ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Too Awesome To Die [P]",
-          description: `Whenever an ally is attacked, has a 100% chance of completely blocking 1 hit, decreasing the incoming damage to zero. This Champion will receive that damage instead. It will also redirect any debuffs from the hit to this Champion. The chance of blocking a hit and redirecting the debuffs decreases to 50% if the attacker is a Boss. Does not work if the attack on the ally was an AoE attack.<br><br>Whenever an enemy is healed, heals this Champion by 20% of that heal.<br><br>Heal Multiplier: 0.2*CurrentHealMultiplier`,
+          name: "Dédaigne la mort [P]",
+          description: `Dès qu'un allié se fait attaquer, possède 100 % de chances de totalement bloquer un coup, réduisant les dégâts en approche à zéro. Ce Champion recevra ces dégâts à sa place. Tous les débuffs de la frappe seront également redirigés sur ce Champion. Les chances de bloquer une frappe et de rediriger les débuffs sont réduites à 50 % si l'assaillant est un Boss. Ne fonctionne pas si l'attaque sur l'allié était une attaque de zone.
+
+Dès qu'un ennemi est soigné, soigne ce Champion de 20 % de ce soin.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Didn't Need 'Em [P]",
-          description: `Increases this Champion’s HP, DEF, and SPD by 10% for each dead ally.`,
+          name: "Pas besoin d'eux [P]",
+          description: `Augmente les PV, la DÉF et la VIT de ce Champion de 10 % pour chaque allié mort.`,
           isPassive: true
         }
       ],
@@ -53,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 30%`,
 };

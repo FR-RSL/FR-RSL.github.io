@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bile",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 50% [Increase ATK] buff on all allies for 2 turns.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Fiel",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un buff d'${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shock",
-          description: `Attacks all enemies. Has a 20% chance of removing 1 random buff from each target.`,
-          damage: "4.2*ATK",
+          name: "Choc",
+          description: `Attaque tous les ennemis. Possède 20 % de chances de retirer 1 buff aléatoire de chaque cible.`,
+          damage: "4.2*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Unbury",
-          description: `Revives an ally with 50% HP. Places a [Shield] buff on the revived Champion for 2 turns equal to 20% of their MAX HP.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Déterré",
+          description: `Ranime un allié en lui donnant 50 % de PV. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} d'une valeur de 20 % de ses PV MAX. sur le Champion ressuscité.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Wars by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Faction de 30`,
 };

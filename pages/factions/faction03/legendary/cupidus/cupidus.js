@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heartbreaker",
-          description: `Attacks all enemies. Damage increases by 15% if the target has any debuffs.`,
-          damage: "2.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Bourreau des Coeurs",
+          description: `Attaque tous les ennemis. Dégâts augmentés de 15 % si la cible souffre de débuffs.`,
+          damage: "2.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flames of Passion",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "4*ATK",
+          name: "Flammes de Passion",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Flameout",
-          description: `Places a 50% [Increase ATK] buff on this Champion for 2 turns, then attacks 1 enemy.<br><br>Has a 50% chance of placing a [HP Burn] debuff on all enemies for 2 turns if this attack kills an enemy. This debuff cannot be resisted.`,
-          damage: "6.6*ATK",
+          name: "Tocade",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 %, puis attaque un ennemi.
+
+Possède 50 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours sur tous les ennemis si cette attaque tue un ennemi. Il est impossible de résister à ce débuff.`,
+          damage: "6.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Punishing Partner [P]",
-          description: `Attacks inflict 25% more damage.<br><br>Always counterattacks when attacked.<br><br>[Only available when Venus is on the same team.]`,
+          name: "Partenaire Punitif [P]",
+          description: `Les attaques infligent 25 % de dégâts supplémentaires.
+
+Contre-attaque toujours lorsqu'il est attaqué.
+
+[Uniquement disponible lorsque Vénus se trouve dans la même équipe.]`,
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in All Battles by 33%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 33%`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spymaster's Blade",
-          description: `Attacks 1 enemy. Has a 40% chance of decreasing the duration of 2 random buffs on the target by 1 turn.`,
+          name: "Lame du Maître-espion",
+          description: `Attaque un ennemi. Possède 40 % de chances de réduire d'1 tour la durée de 2 débuffs aléatoires de la cible.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Directed Sabotage",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Block Buffs] debuff for 2 turns.`,
+          name: "Sabotage dirigé",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cloak and Dagger",
-          description: `Places a [Counterattack] buff on this Champion for 2 turns. Also has a 75% chance of placing a [Provoke] debuff for 1 turn on 2 random enemies.`,
+          name: "Secret",
+          description: `Place un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur 2 ennemis aléatoires pendant 1 tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

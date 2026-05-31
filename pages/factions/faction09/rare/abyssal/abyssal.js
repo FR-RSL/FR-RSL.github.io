@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Void Gaze",
-          description: `Attacks all enemies. Has a 15% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Prunelle de Néant",
+          description: `Attaque tous les ennemis. Possède 15 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Abyssal Renewal",
-          description: `Heals all allies by 15% of their MAX HP.<br><br><br>Heal Multiplier: 0.15*Target Max HP`,
+          name: "Renouveau Abyssal",
+          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +10%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Wards of Madness",
-          description: `Places a 30% [Increase DEF] buff and a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Pupilles de la Folie",
+          description: `Place un buff ${BUFFS.DEF} de 30 % et un buff ${BUFFS.ATK} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 16%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 16%`,
 };

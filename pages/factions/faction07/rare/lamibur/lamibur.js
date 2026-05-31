@@ -3,27 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pressing Advance",
-          description: `Attacks 1 enemy 2 times. Each hit has a 25% chance of filling a random ally’s Turn Meter by 5%.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Avancée pressante",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de remplir le Compteur de Tour d'un allié aléatoire de
+5 %.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rain of Gore",
-          description: `Attacks all enemies. Places a 15% [Continuous Heal] buff on all allies for 2 turns.`,
-          damage: "3.4*ATK",
+          name: "Pluie de carnage",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
+          damage: "3.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bestial Communion",
-          description: `Heals a target ally by 25% of their MAX HP and places a [Revive on Death] buff on them for 2 turns.<br><br><br>Heal Multiplier: 0.25*Target Max HP`,
+          name: "Communion bestiale",
+          description: `Soigne une cible alliée à hauteur de 25 % de ses PV MAX, puis lui accorde un buff ${BUFFS.REVIVE_ON_DEATH} pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 10%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 10%`,
 };

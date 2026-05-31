@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Nightmare Juggernaut",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 15% [Continuous Heal] buff on this Champion for 1 turn if this attack is critical.`,
+          name: "Mastodonte Cauchemar",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour si cette attaque passe en critique.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Chemical Stench",
-          description: `Attacks all enemies. Has a 30% chance of placing a [Provoke] debuff for 2 turns.`,
+          name: "Puanteur Chimique",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 2 tours.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Canister [P]",
-          description: `Whenever this Champion is attacked, heals all allies except this Champion by 20% of the damage received.<br><br>Heal Multiplier: 0.2*Damage Dealt`,
+          name: "Bonbonne [P]",
+          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés sauf ce Champion à hauteur de 20 % des dégâts reçus.`,
           isPassive: true
         }
       ],

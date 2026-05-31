@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Round Up",
-          description: `Attacks all enemies.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Rameuter",
+          description: `Attaque tous les ennemis.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tender Meat",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 15% of the damage inflicted.`,
-          damage: "4.8*ATK",
+          name: "Viande Tendre",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 15 % des dégâts infligés.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Slobbering Rush",
-          description: `Attacks 1 enemy. Will ignore 50% of the target's DEF.<br><br>Has a 50% chance of granting an Extra Turn if this attack is critical.`,
-          damage: "3.1*ATK",
+          name: "Ruée Salivante",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.
+
+Possède 50 % de chances d'accorder un Tour Supplémentaire si cette attaque passe en critique.`,
+          damage: "3.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

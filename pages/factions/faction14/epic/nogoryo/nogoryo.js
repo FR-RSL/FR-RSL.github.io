@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Double Kamas",
-          description: `Attacks 1 enemy 2 times. Places an extra hit if this Champion is under an [Increase ATK] buff. Each hit has a 20% chance of placing a [Block Active Skills] debuff for 2 turns.`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Doubles kamas",
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si ce Champion se trouve sous buff ${BUFFS.ATK}. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Abduct By Night",
-          description: `Attacks 1 enemy. Places a [Block Buffs] debuff for 2 turns.<br><br>If this Champion is under an [Increase ATK] buff, steals all buffs from the target enemy before attacking.`,
-          damage: "5.2*ATK",
+          name: "Enlèvement nocturne",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.
+
+Si ce Champion se trouve sous buff ${BUFFS.ATK}, vole tous les buffs de l'ennemi ciblé avant d'attaquer.`,
+          damage: "5.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Faster Than The Eye",
-          description: `Attacks all enemies. Decreases the cooldown of this skill by 1 turn when attacking under an [Increase ATK] buff.`,
-          damage: "4.5*ATK",
+          name: "Plus rapide que l'il",
+          description: `Attaque tous les ennemis. Réduit d'1 tour le temps de recharge de cette compétence lors d'une attaque sous buff ${BUFFS.ATK}.`,
+          damage: "4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Murderer's Lust [P]",
-          description: `Places a 50% [Increase ATK] buff on this Champion for 2 turns whenever an enemy’s HP drops below 30%. This buff cannot be removed.`,
+          name: "Désir d'assassin [P]",
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 30 %. Il est impossible de retirer ce buff.`,
           cooldown: 3,
           isPassive: true
         }

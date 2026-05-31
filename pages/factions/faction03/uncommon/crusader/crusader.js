@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hack",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Charcuter",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rally",
-          description: `Attacks 1 enemy with 1 random ally. The ally joining the attack use their default skill.`,
+          name: "Rallier",
+          description: `Attaque 1 ennemi avec 1 allié choisi au hasard. L'allié rejoignant l'attaque utilise sa compétence par défaut.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

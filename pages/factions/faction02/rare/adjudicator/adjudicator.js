@@ -3,28 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Isolation Cell",
-          description: `Attacks 1 enemy. <br><br>Has a 20% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Cellule d'Isolation",
+          description: `Attaque un ennemi.
+
+Possède 20 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Slowing Sanction",
-          description: `Attacks 1 enemy. <br><br>Has a 50% chance of decreasing the Turn Meter by 20%.`,
-          damage: "5.9*ATK",
+          name: "Sanction Ralentissante",
+          description: `Attaque un ennemi.
+
+Possède 50 % de chances de réduire de 20 % le Compteur de Tour.`,
+          damage: "5.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Penalize",
-          description: `Attacks 2 times at random. <br><br>Has a 50% chance of increasing the cooldown of one of the target's Skills by 1 turn at random.`,
-          damage: "2.7*ATK",
+          name: "Pénaliser",
+          description: `Attaque 2 fois au hasard.
+
+Possède 50 % de chances d'augmenter de 1 tour le temps de recharge d'une des Compétences de la cible prise au hasard.`,
+          damage: "2.7*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Arena by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des batailles d'Arène de 40`,
 };

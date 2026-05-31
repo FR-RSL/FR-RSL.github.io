@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Reekblade",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 25% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
+          name: "Lame puante",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "0.13*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spearstench",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a 50% [Decrease ACC] debuff on all enemies for 2 turns. <br><br>Also increases the duration of all ally buffs by 1 turn.`,
+          name: "Lance de pestilence",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours. 
+
+Augmente également la durée de tous les buffs des alliés d'1 tour.`,
           damage: "0.25*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +15%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Healing Spritz",
-          description: `Removes 2 random debuffs from all allies, and heals them by 10% of their MAX HP. <br><br>Also places a 50% [Increase ACC] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.10*Target Max HP`,
+          name: "Giclée de soin",
+          description: `Retire 2 débuffs aléatoires sur tous les alliés, puis les soigne de 10 % de leurs PV MAX. 
+
+Place également un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Antibiotic Spray [P]",
-          description: `Decreases the damage all allies receive from [Poison] debuffs by 50%.`,
+          name: "Bombe antibiotique [P]",
+          description: `Réduit de 50 % les dégâts que tous les alliés reçoivent des débuffs ${DEBUFFS.POISON}.`,
           isPassive: true
         }
       ],
@@ -47,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

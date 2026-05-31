@@ -4,32 +4,32 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Perdition",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Penance",
-          description: `Attacks all enemies. Has a 55% chance of placing a 50% [Decrease ATK] debuff for 2 turns. This debuff cannot be resisted by targets under [HP Burn] debuffs.`,
-          damage: "4.5*ATK",
+          name: "Pénitence",
+          description: `Attaque tous les ennemis. Possède 55 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Les cibles sous débuff ${DEBUFFS.BURN} ne peuvent pas résister à ce débuff.`,
+          damage: "4.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Always Watched",
-          description: `Decreases the duration of all debuffs on all allies by 1 turn, then places a 15% [Strengthen] buff on all allies for 2 turns. This buff cannot be removed or stolen.`,
+          name: "Toujours surveillé",
+          description: `Réduit d'1 tour la durée de tous les débuffs sur les alliés, puis place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours. Il est impossible de retirer ou de voler ce buff.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Burn With Shame [P]",
-          description: `Every time an enemy under a [HP Burn] debuff gets a turn, decreases the duration of 2 random buffs on that enemy by 1 turn.`,
+          name: "Brûler de honte [P]",
+          description: `Chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} obtient un tour, réduit d'1 tour la durée de 2 buffs aléatoires sur cet ennemi.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 35`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 35`,
 };

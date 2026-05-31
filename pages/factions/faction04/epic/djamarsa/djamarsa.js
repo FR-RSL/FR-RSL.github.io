@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Night's Finger",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Sleep] debuff for 1 turn. <br><br>If Crohnam is on the same team, and the [Sleep] debuff was resisted or blocked, places a 30% [Decrease SPD] debuff instead for 2 turns. This debuff cannot be blocked.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Doigt de la nuit",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. 
+
+Si Crohnam se trouve dans la même équipe et que le débuff ${DEBUFFS.SLEEP} a été bloqué ou qu'on lui a résisté, place un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours à la place. Il est impossible de bloquer ce débuff.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Radiant Moon",
-          description: `Heals a target ally by 30% of their MAX HP and fills their Turn Meter by 30%. <br><br>If this skill is used on Crohnam, Crohnam will instantly activate their Berserker's Delight skill.<br><br><br>Heal Multiplier: 0.3*Target Max HP`,
+          name: "Lune rayonnante",
+          description: `Soigne une cible alliée de 30 % de ses PV max et remplit son Compteur de Tour de 30 %. 
+
+Si cette compétence est utilisée sur Crohnam, Crohnam activera instantanément sa compétence Régal de berserker.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Moonlit March",
-          description: `Revives all dead allies with 30% HP and 30% Turn Meter.`,
+          name: "Marche clair de lune",
+          description: `Ranime tous les alliés morts avec 30 % de PV et 30 % de Compteur de Tour.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Phasing [P]",
-          description: `Whenever an ally uses an Active Skill, has a 20% chance of decreasing the cooldown of that skill by 1 turn.`,
+          name: "Synchronisme [P]",
+          description: `Dès qu'un allié utilise une Compétence Active, possède 20 % de chances de réduire d'1 tour le temps de recharge de cette compétence.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 20%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 20%`,
 };

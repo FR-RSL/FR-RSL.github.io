@@ -4,16 +4,18 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames Maudites",
-          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
-Chaque frappe possede 35% de chances d'augmenter d'1 tour la duree de tous les debuffs.`,
+          description: `Attaque 3 fois un ennemi.
+
+Chaque frappe offre 35 % de chances d'augmenter d'1 tour la durée de tous les débuffs.`,
           damage: "1.3*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Maitre de la Detresse",
-          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
-Chaque frappe possede 50% de chances de placer un debuff ${DEBUFFS.BLOCK_BUFFS}, un debuff ${DEBUFFS.ATK} de 50% et un debuff ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
+          name: "Maître de la Détresse",
+          description: `Attaque 2 fois un ennemi.
+
+Chaque frappe possède 50 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.BLOCK_BUFFS}, un débuff de ${DEBUFFS.ATK} de 50 % et un débuff de ${DEBUFFS.HEALS} de 100 %.`,
           damage: "2.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
@@ -21,9 +23,9 @@ Chaque frappe possede 50% de chances de placer un debuff ${DEBUFFS.BLOCK_BUFFS},
         {
           img: "assets/sort3.webp",
           name: "Vizir des Poisons",
-          description: `Attaque un ennemi.${RETURN}${RETURN}
-Applique un effet de <span class="grn-t">[Propagation de Debuff]</span>, prenant 2 debuffs aleatoires sur la cible pour les placer sur tous les ennemis.${RETURN}${RETURN}
-Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours si la cible est affligee de 2 debuffs ou plus.`,
+          description: `Attaque un ennemi.
+
+Applique un effet de [Propagation de Débuff], prenant 2 débuffs aléatoires sur la cible pour les placer sur tous les ennemis.`,
           damage: "6.6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -31,7 +33,7 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours si la cible 
         {
           img: "assets/sort4.webp",
           name: "Assassin Invisible [P]",
-          description: `Au debut de chaque Round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} de 2 tours sur ce Champion au début de chaque round.`,
           isPassive: true,
         }
   ],

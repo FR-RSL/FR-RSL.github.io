@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bolts of Scorn",
-          description: `Attacks 1 enemy. Has an 80% chance of stealing 1 random buff from the target. Has an 80% chance of placing a [Block Buffs] debuff for 1 turn if the target has no active buffs.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Carreaux de Mépris",
+          description: `Attaque un ennemi. Possède 80 % de chances de voler un buff aléatoire à la cible. Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} d'1 tour si la cible ne possède aucun buff actif.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Triple Puncture",
-          description: `Attacks 1 enemy 3 times. Will ignore [Increase DEF] buffs, [Shield] buffs, and [Block Damage] buffs, as well as 50% of the target's DEF.`,
-          damage: "1.8*ATK",
+          name: "Triple Perforation",
+          description: `Attaque 3 fois un ennemi. Ignorera les buffs ${BUFFS.DEF}, ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}, ainsi que 50 % de la DÉF de la cible.`,
+          damage: "1.8*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Majesty",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Stun] debuff for 1 turn. Decreases each target's Turn Meter by 50% if the [Stun] debuff is not placed.`,
-          damage: "3.7*ATK",
+          name: "Majesté",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Réduit le Compteur de Tour de chaque cible de 50 % si le débuff ${DEBUFFS.STUN} n'est pas placé.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         }
       ],

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Relentless Strike",
-          description: `Attacks 1 enemy 2 times. Grants an Extra Turn if the target is killed.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Frappe Implacable",
+          description: `Attaque 2 fois 1 ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloodletter",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Heals this Champion by 10% of the damage inflicted.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
-          damage: "6.5*ATK",
+          name: "Saigneur",
+          description: `Attaque 1 ennemi. Offre 60 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Soigne ce Champion à hauteur de 10 % des dégâts infligés.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burning Hatred",
-          description: `Places a 50% [Increase ATK] buff, a 30% [Increase C. RATE] buff, and a 30% [Increase SPD] buff on this Champion for 2 turns. Grants an Extra Turn.`,
+          name: "Haine Ardente",
+          description: `Place un buff d'${BUFFS.ATK} de 50 %, un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours. Octroie un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Faction Wars by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des Cryptes de Faction de 20%`,
 };

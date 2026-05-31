@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gilded Weapons",
-          description: `Attacks 1 enemy 2 times. The first hit has a 20% chance of filling this Champion’s Turn Meter by 10%. The second hit has a 20% chance of decreasing the target’s Turn Meter by 10%.`,
+          name: "Armes Dorées",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 20 % de chances de remplir le Compteur de Tour de ce Champion de 10 %. La seconde frappe possède 20 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
           damage: "0.12*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Splattering Hacks",
-          description: `Attacks 1 enemy 2 times. The first hit places a [Shield] equal to 25% of the damage inflicted on all allies for 2 turns. The second hit heals all allies by 10% of the damage inflicted.<br><br><br>Shield Multiplier: 0.25*Damage DealtHeal Multiplier: 0.1*Damage Dealt`,
+          name: "Coupes Éclaboussantes",
+          description: `Attaque 2 fois un ennemi. La première frappe place sur tous les alliés un ${BUFFS.SHIELD} équivalent à 25 % des dégâts infligés pendant 2 tours. La seconde frappe soigne tous les alliés à hauteur de 10 % des dégâts infligés.`,
           damage: "0.17*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Serpent Axes",
-          description: `Attacks 1 enemy 2 times. The first hit has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns and a 75% chance of removing any [Increase ATK] buffs from the target.<br><br>The second hit has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns and a 75% chance of removing any [Increase DEF] buffs from the target.`,
+          name: "Haches Serpents",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours et 75 % de chances de retirer les buffs ${BUFFS.ATK} sur la cible.
+
+La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours et 75 % de chances de retirer les buffs ${BUFFS.DEF} sur la cible.`,
           damage: "0.18*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         }
       ],

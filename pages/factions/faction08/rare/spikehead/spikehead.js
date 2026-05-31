@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Stomp",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Piétiner",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Battle Cry",
-          description: `Places a 15% [Increase C. RATE] buff and a 50% [Increase ATK] buff on this Champion for 2 turns.`,
+          name: "Cri Guerrier",
+          description: `Place un buff d'${BUFFS.CRATE} de 15 % et un buff d'${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rip",
-          description: `Attacks 1 enemy 3 times. Has an extra 20% chance of inflicting a critical hit.`,
-          damage: "1.4*ATK",
+          name: "Déchirure",
+          description: `Attaque 3 fois un ennemi. Possède 20 % de chances supplémentaires de porter un coup critique.`,
+          damage: "1.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Arena by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des batailles d'Arène de 30%`,
 };

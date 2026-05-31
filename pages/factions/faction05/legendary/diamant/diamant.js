@@ -3,33 +3,47 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "The Hand of Diamant",
-          description: `Attacks all enemies. <br><br>Heals all allies by 5% of this Champion’s MAX HP. Heals by an additional 2% of this Champion’s MAX HP for each buff on this Champion.<br><br><br>Heal Multiplier: 0.05*HP+(0.02*HP*Active Buff Count)`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%", "Level 4: Damage +10%", "Level 5: Heal +10%"],
+          name: "La main de Diamant",
+          description: `Attaque tous les ennemis. 
+
+Soigne tous tes alliés à hauteur de 5 % des PV MAX de ce Champion. Soigne de 2 % supplémentaires des PV MAX de ce Champion pour chaque buff sur ce Champion.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Charitable Donation",
-          description: `Attacks all enemies. <br><br>Increases the duration of all ally buffs by 1 turn. <br><br>Fills the Turn Meter of all allies by 20%.`,
-          damage: "4*ATK",
+          name: "Don charitable",
+          description: `Attaque tous les ennemis. 
+
+Augmente d'1 tour la durée de tous les buffs alliés. 
+
+Remplit le Compteur de Tour de tous les alliés de 20 %.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Protection Racket",
-          description: `Places 3 [Intercept] stacks on a target ally. <br><br>Also places a 50% [Increase RES] buff and a 25% [Strengthen] buff on all allies for 2 turns.`,
+          name: "Trafic de protection",
+          description: `Place 3 piles d'${BUFFS.INTERCEPT} sur un allié ciblé. 
+
+Place également un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Kingpin [P]",
-          description: `Has a 50% chance to convert a debuff into a buff before it is placed on an ally. Works with the following debuffs: <br><br>- Converts a 25% and 50% [Decrease ATK] debuffs into a 50% [Increase ATK] buff<br>- Converts a 30% and 60% [Decrease DEF] debuffs into a 60% [Increase DEF] buff<br>- Converts a 15% and 30% [Decrease SPD] debuffs into a 30% [Increase SPD] buff<br>- Converts a 15% and 25% [Decrease C. RATE] debuffs into a 30% [Increase C. RATE] buff<br>- Converts a 15% and 25% [Decrease C. DMG] debuffs into a 30% [Increase C. DMG] buff`,
+          name: "Pilier [P]",
+          description: `A 50 % de chances de convertir un débuff en buff avant qu'il ne soit placé sur un allié. Fonctionne avec les débuffs suivants : 
+
+- Convertit les débuffs ${DEBUFFS.ATK} de 25 % et 50 % en un buff ${BUFFS.ATK} de 50 %
+- Convertit les débuffs ${DEBUFFS.DEF} de 30 % et 60 % en un buff ${BUFFS.DEF} de 60 %
+- Convertit les débuffs ${DEBUFFS.SPD} de 15 % et 30 % en un buff ${BUFFS.SPD} de 30 %
+- Convertit les débuffs ${DEBUFFS.CRATE} de 15 % et 25 % en un buff ${BUFFS.CRATE} de 30 %
+- Convertit les débuffs ${DEBUFFS.CDAM} de 15 % et 25 % en un buff ${BUFFS.CDAM} de 30 %`,
           isPassive: true
         }
       ],
@@ -47,5 +61,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%`,
 };

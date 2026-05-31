@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Psychic Overload",
-          description: `Attacks 1 enemy. Has a 75% chance of increasing the cooldown of 1 of the target’s skills, at random, by 1 turn. Has a 25% chance of placing a [Stun] debuff on the target for 1 turn if a skill has its cooldown increased to the max.<br><br>If the cooldown increase is successful, will also decrease the cooldown of one random skill (by 1 turn) of the ally with the highest Turn Meter and a skill on cooldown.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Surcharge Psychique",
+          description: `Attaque un ennemi. Possède 75 % de chances d'augmenter d'1 tour le temps de recharge d'une compétence choisie au hasard de la cible. Possède 25 % de chances de placer un débuff ${DEBUFFS.STUN} sur la cible pendant 1 tour si le temps de recharge d'une compétence est augmenté jusqu'au maximum.
+
+Si l'augmentation du temps de recharge réussit, réduira également (d'1 tour) le temps de recharge d'une compétence aléatoire de l'allié qui a le Compteur de Tour le plus élevé et une compétence en recharge.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Drake's Fury",
-          description: `Attacks 1 enemy 4 times.<br><br>The first hit has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. The second hit has a 75% chance of placing a 25% [Weaken] debuff for 2 turns. The third hit has a 75% chance of placing a a 30% [Decrease SPD] debuff for 2 turns. The fourth hit has a 75% chance of placing a [Block Buffs] debuff for 2 turns.<br><br>Also has a 75% chance of placing a [True Fear] debuff on all enemies (excluding the initial target) for 1 turn if the target has 4 or more debuffs after the attack.`,
-          damage: "1.8*ATK",
+          name: "Furie du Drake",
+          description: `Attaque 4 fois un ennemi.
+
+La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. La deuxième frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. La troisième frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. La quatrième frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.
+
+Possède également 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis (sauf la cible initiale) pendant 1 tour si la cible a 4 débuffs ou plus après l'attaque.`,
+          damage: "1.8*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blood Wings",
-          description: `Attacks all enemies. Has an 80% chance of removing all buffs from all enemies before attacking.<br><br>Also has an 80% chance of placing a [Block Active Skills] debuff for 2 turns on enemies without Passive skills.<br><br>Also has an 80% chance of placing a [Block Passive Skills] debuff for 2 turns on enemies with Passive skills.`,
-          damage: "5*ATK",
+          name: "Ailes Sanglantes",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de retirer tous les buffs de tous les ennemis avant d'attaquer.
+
+Possède également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours sur les ennemis qui ne disposent pas de compétences passives.
+
+Possède également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_PASSIF} pendant 2 tours sur les ennemis qui disposent de compétences passives.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Arrogance [P]",
-          description: `Whenever an enemy places a [Stun], [Sleep], [Freeze], [Fear], [True Fear], or [Provoke] debuff on this Champion, will instantly fill this Champion’s Turn Meter by 30% and place a 30% [Increase SPD] buff and a [Shield] buff on them for 2 turns. The [Shield] buff is equal to 30% of this Champion’s MAX HP.<br><br>Shield Multiplier: 0.3*HP`,
+          description: `Dès qu'un ennemi place un débuff ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.GEL}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PROVOKE} sur ce Champion, remplira instantanément le Compteur de Tour de ce Champion de 30 % et placera un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.SHIELD} sur lui pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30 % des PV MAX de ce Champion.`,
           isPassive: true
         }
       ],
@@ -48,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 80`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
 };

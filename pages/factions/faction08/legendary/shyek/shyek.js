@@ -3,32 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Kill Command",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br><br>Then, teams up with any ally Terrorbeasts, Goremasks, Hound Spawns, Hellfangs, Fellhounds, Stitched Beasts, and Kro'khad the Throatrippers to attack. The allies joining the attack will use their default skills.`,
+          name: "Ordre de tuer",
+          description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Ensuite, fait équipe avec les Bêteffroyables, Masquegores, Rejetons de Cabot, Crocs Infernaux, Chiens Cruels, Bêtes Suturées et Kro'khad Coupe-gorge alliés pour attaquer. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Pack Alpha",
-          description: `Removes all debuffs from this Champion and heals them by 50% of their MAX HP. <br><br>Then, places a [Shield] buff on this Champion for 2 turns. The value of the [Shield] is equal to any surplus heal. The [Shield] buff cannot be removed, stolen, or transferred if at least one Terrorbeast, Goremask, Hound Spawn, Hellfang, Fellhound, Stitched Beast, or Kro'khad the Throatripper is on the same team. <br><br>Finally, places a [Taunt] buff and a 30% [Reflect Damage] buff on this Champion for 2 turns. These buffs cannot be removed, stolen, or transferred if at least one Terrorbeast, Goremask, Hound Spawn, Hellfang, Fellhound, Stitched Beast, or Kro'khad the Throatripper is on the same team.<br><br><br>Heal Multiplier: 0.5*HPShield Multiplier: Remaining Heal Amount`,
+          name: "Alpha de meute",
+          description: `Retire tous les débuffs sur ce Champion, puis le soigne de 50 % de ses PV MAX. 
+
+Ensuite, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à tout surplus de soin. Il est impossible de retirer, voler et transférer le buff ${BUFFS.SHIELD} si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe. 
+
+Enfin, place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 tours. Il est impossible de retirer, voler et transférer ces buffs si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blood Howl",
-          description: `Fills the Turn Meters of all allies by 25%. <br><br>Also has an 80% chance of placing a [Block Buffs] debuff on all enemies for 2 turns. This debuff cannot be resisted if at least one Terrorbeast, Goremask, Hound Spawn, Hellfang, Fellhound, Stitched Beast, or Kro'khad the Throatripper is on the same team.`,
+          name: "Hurlement sanglant",
+          description: `Remplit les Compteurs de Tour de tous les alliés de 25 %. 
+
+A également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "We Hunt As One [P]",
-          description: `When attacked, places a [Hex] debuff on the attacker for 1 turn. Ally attacks on targets under a [Hex] debuff placed by this Champion deal 20% more damage. <br><br>When this Champion is attacked, all ally Terrorbeasts, Goremasks, Hound Spawns, Hellfangs, Fellhounds, Stitched Beasts, and Kro'khad the Throatrippers will counterattack.`,
+          name: "Nous chassons unis [P]",
+          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.HEX} sur l'assaillant pendant 1 tour. Les attaques lancées par des alliés sur des cibles affligées d'un débuff ${DEBUFFS.HEX} placé par ce Champion infligent 20 % de dégâts en plus. 
+
+Lorsque ce Champion se fait attaquer, les Bêteffroyables, Masquegores, Rejetons de Cabot, Crocs Infernaux, Chiens Cruels, Bêtes Suturées et Kro'khad Coupe-gorge alliés contre-attaqueront.`,
           isPassive: true
         }
       ],
@@ -46,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

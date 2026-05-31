@@ -3,15 +3,15 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Eclair Energetique",
-          description: `Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
+          name: "Éclair Énergétique",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "4.5*ATQ",
           levelInfo: ["Chances de Buff/Debuff +1%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +20%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Petrifier",
-          description: `Attaque tous les ennemis. Possède 75% de chances de placer un debuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
+          name: "Pétrifier",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "ATQ*(2 + VIT/100)",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -19,8 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Esprits Ancestraux",
-          description: `Attaque tous les ennemis. Possede 75% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Il est impossible de resister a ce debuff.${RETURN}${RETURN}
-Place egalement un buff ${BUFFS.ATK} de 50% sur tous les allies pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Offre 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
           damage: "3.8*ATQ",
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

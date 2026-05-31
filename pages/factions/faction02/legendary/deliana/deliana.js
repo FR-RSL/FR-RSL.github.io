@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heart Stealer",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Leech] debuff for 2 turns.`,
+          name: "Voleuse de Coeur",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "0.22*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Withering Scorn",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 50% [Decrease RES] debuff for 2 turns. <br><br>If the target is under a [Block Buffs] debuff, also applies a [Debuff Spread] effect, taking any [Decrease RES] debuff on the target and placing it on all enemies.`,
+          name: "Mépris flétrissant",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours. 
+
+Si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS}, applique également un effet de [Propagation de Débuff], prenant tout débuff ${DEBUFFS.RES} sur la cible pour le placer sur tous les ennemis.`,
           damage: "0.35*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Know Your Place",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Block Buffs] debuff on each enemy for 2 turns. <br><br>Heals all allies by 5% of their MAX HP for each [Block Buffs] debuff placed by this skill. <br><br>Fills this Champion’s Turn Meter by 10% for each [Block Buffs] debuff attempt blocked or resisted by the enemy team.<br><br><br>Heal Multiplier: 0.05*Target Max HP`,
+          name: "Rester à sa place",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours. 
+
+Soigne tous les alliés de 5 % de leurs PV MAX pour chaque débuff ${DEBUFFS.BLOCK_BUFFS} placé par cette compétence. 
+
+Remplit le Compteur de Tour de cette Championne de 10 % pour chaque tentative de débuff ${DEBUFFS.BLOCK_BUFFS} à laquelle l'équipe ennemie a résisté ou qu'elle a bloquée.`,
           damage: "0.3*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +15%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Magnificent [P]",
-          description: `[Passive Effect] <br><br>Increases this Champion’s ACC by 2 for every 1,000 HP this Champion has. <br><br>[Active Effect]<br><br>Places a 25% [Strengthen] buff on all allies for 2 turns every time this Champion’s HP drops below 50%.`,
+          name: "Magnifique [P]",
+          description: `${PASSIVE}
+
+Augmente la PRÉ de cette Championne de 2 par tranche de 1 000 PV qu'elle possède. 
+
+${ACTIVE}
+
+Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours lorsque les PV de cette Championne tombent sous 50 %.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +61,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in all Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

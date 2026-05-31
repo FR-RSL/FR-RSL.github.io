@@ -3,26 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pierce",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 30% [Reflect Damage] buff on a random ally for 2 turns.`,
+          name: "Transpercer",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer, pour 2 tours, un buff de ${BUFFS.REFLECT_DAM} sur un allié pris au hasard.`,
           damage: "3.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Aegis",
-          description: `Places a 15% [Continuous Heal] buff, a 30% [Increase SPD] buff, and a 30% [Reflect Damage] buff on a target ally for 3 turns. <br><br>Also places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Égide",
+          description: `Place un buff ${BUFFS.HEALS} de 15 %, un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur une cible alliée pendant 3 tours. 
+
+Place également, pendant 2 tours, un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf sur ce Champion. Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Second Wind [P]",
-          description: `[Passive Effect] <br><br>Places a [Shield] buff on this Champion equal to 10% of their MAX HP for 2 turns whenever this Champion loses 10% or more of their MAX HP from a single hit.<br><br>[Active Effect]<br><br>Places a 15% [Continuous Heal] buff on this Champion for 2 turns every time their HP drops below 50%.<br><br><br>Shield Multiplier: 0.1*HP`,
+          name: "Second Vent [P]",
+          description: `${PASSIVE}
+
+Place, pendant 2 tours, sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX dès que ce Champion perd 10 %, ou plus, de ses PV MAX lors d'une seule frappe.
+
+${ACTIVE}
+
+Place, pendant 2 tours, un buff ${BUFFS.HEALS} de 15 % sur ce Champion à chaque fois que ses PV tombent en-dessous de 50 %.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -40,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 33%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hammerblows",
-          description: `Attacks 1 enemy 3 times.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Martèlements",
+          description: `Attaque 3 fois 1 ennemi.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Steel Crusher",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 25% [Decrease ATK] debuff on the target for 2 turns.`,
-          damage: "7.5*ATK",
+          name: "Broyeur d'Acier",
+          description: `Attaque 1 ennemi. Offre 40 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          damage: "7.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Demoralizing Display",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Provoke] debuff on the target for 1 turn.`,
-          damage: "7.4*ATK",
+          name: "Spectacle Démoralisant",
+          description: `Attaque 1 ennemi. Possède 50 % de chances de placer sur la cible un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "7.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Magic Ally HP in all Battles by 17%`,
+  description: `Augmente la statistique PV des Alliés Magie lors de toutes les Batailles de 17%`,
 };

@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Three Visitations",
-          description: `Attacks 1 enemy 3 times. Each hit has a 20% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Trois Apparitions",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bedevil",
-          description: `Attacks 1 enemy. Places a [Stun] debuff for 2 turns. Grants an Extra turn and resets the cooldown of this skill if Yumeko is on the same team and this skill kills an enemy.`,
-          damage: "6.5*ATK",
+          name: "Perturber",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 2 tours. Accorde un Tour supplémentaire et réinitialise le temps de recharge de cette compétence si Yumeko se trouve dans la même équipe et que cette compétence tue un ennemi.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Suppression Ward",
-          description: `Attacks all enemies. Has an 80% chance of placing a [Block Active Skills] debuff for 2 turns. This debuff cannot be resisted if Yumeko is on the same team.`,
-          damage: "4.65*ATK",
+          name: "Suppression",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à ce débuff si Yumeko se trouve dans la même équipe.`,
+          damage: "4.65*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Stoicism [P]",
-          description: `Damage inflicted by this Champion cannot be decreased by enemy Passive skills or Masteries, except by the Passive skills of Bosses. <br><br>Damage inflicted by this Champion cannot be increased by either this Champion's Masteries or ally Passive skills, except when attacking Bosses.<br><br>Whenever Yumeko dies, instantly grants a turn to this Champion and resets the cooldowns of each of this Champion’s skills.`,
+          name: "Stoïcisme [P]",
+          description: `Les dégâts infligés par ce Champion ne peuvent pas être réduits par les Compétences Passives ou les Maîtrises des ennemis, sauf par les Compétences Passives des Boss. 
+
+Les dégâts infligés par ce Champion ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ou les compétences Passives des alliés, sauf lors d'attaques sur les Boss.
+
+Dès que Yumeko meurt, accorde instantanément un tour à ce Champion et réinitialise le temps de recharge de chacune de ses compétences.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 20%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 20%`,
 };

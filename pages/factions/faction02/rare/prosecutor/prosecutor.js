@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sap Initiative",
-          description: `Attacks 1 enemy 2 times. Each hit has a 20% chance of decreasing the target’s Turn Meter by 10%.`,
-          damage: "1.85*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Saper l'initiative",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20 % de chances de réduire le Compteur de Tour de la cible de 10 %.`,
+          damage: "1.85*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Halt Proceedings",
-          description: `Attacks all enemies. Has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "3.8*ATK",
+          name: "Arrêter les poursuites",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Prosecute",
-          description: `Attacks 1 enemy 3 times. Places a 50% [Increase ACC] buff on this Champion for 2 turns before attacking. <br><br>Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "1.9*ATK",
+          name: "Intenter une action",
+          description: `Attaque 3 fois un ennemi. Place un buff ${BUFFS.PRE} de 50 % sur cette Championne pendant 2 tours avant d'attaquer. 
+
+Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

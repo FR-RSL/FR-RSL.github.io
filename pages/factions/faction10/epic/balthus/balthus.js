@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shield Strike",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Frappe de Bouclier",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "4.15*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Doomwheels",
-          description: `Attacks all enemies. Has a 75% chance of placing a 30% [Decrease C. RATE] debuff for 2 turns.`,
+          name: "Roues du Destin",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.`,
           damage: "4.2*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Driven to Slaughter",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 2 turns. <br><br>Also heals this Champion by 20% of their MAX HP.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Mené à l'Abattoir",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 2 tours. 
+
+Soigne également ce Champion à hauteur de 20 % de ses PV MAX.`,
           damage: "6.4*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Enchanted Shields [P]",
-          description: `Reflects 30% of the damage this Champion receives back to the attacker.`,
+          name: "Boucliers Envoûtés [P]",
+          description: `Renvoie sur l'assaillant 30 % des dégâts reçus par ce Champion.`,
           isPassive: true
         }
       ],
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 30%`,
 };

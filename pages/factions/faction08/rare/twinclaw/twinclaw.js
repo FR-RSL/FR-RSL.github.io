@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Disfigure",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Défigurer",
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tendon Carve",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "5.3*ATK",
+          name: "Taille-tendon",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "5.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Tear to Shreds",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Block Active Skills] debuff for 2 turns. The chance increases to 100% if the target is under a [Heal Reduction] debuff.`,
-          damage: "5.8*ATK",
+          description: `Attacks 1 enemy. Has a 50% chance of placing a ${DEBUFFS.LOCK_ACTIVE} debuff for 2 turns. The chance increases to 100% if the target is under a ${DEBUFFS.HEALS} debuff.`,
+          damage: "5.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

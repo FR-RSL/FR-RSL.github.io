@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Author of Fates",
-          description: `Attacks 1 enemy. Transfers 1 random debuff from this Champion to the target. Also has a 75% chance of stealing 1 random buff from the target.`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Auteur de Destinées",
+          description: `Attaque un ennemi. Transfère un débuff aléatoire de ce Champion sur la cible. Possède également 75 % de chances de voler un buff aléatoire à la cible.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Holy Word",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns, then attacks all enemies. Places a 100% [Heal Reduction] debuff on all enemies for 2 turns. Also has a 75% chance of placing a [Block Buffs] debuff on all enemies for 2 turns. <br><br>Champions from the Demonspawn, Undead Horde, and Knights Revenant Factions cannot resist these debuffs.`,
-          damage: "4.8*ATK",
+          name: "Verbe sacré",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis attaque tous les ennemis. Place un débuff ${DEBUFFS.HEALS} de 100 % sur tous les ennemis pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. 
+
+Les Champions des Factions des Rejetons Démoniaques, des Morts-vivants et des Revenants Chevaliers ne peuvent pas résister à ces débuffs.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gleam of Glory",
-          description: `Heals all allies by 30% of their MAX HP, then places a 60% [Increase DEF] buff on all allies for 2 turns. If 4 or more allies are alive, also places a [Shield] buff on each ally for 2 turns equal to 30% of their MAX HP.<br><br><br>Heal Multiplier: 0.3*Target Max HPShield Multiplier: 0.3*Target Max HP`,
+          name: "Reflet de Gloire",
+          description: `Soigne tous les alliés de 30 % de leurs PV MAX, puis place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Si 4 alliés ou plus sont en vie, place également sur chaque allié un buff ${BUFFS.SHIELD} égal à 30 % de ses PV MAX pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Splendor [P]",
-          description: `Removes all [Decrease DEF] debuffs and [Weaken] debuffs from this Champion at the start of each turn.`,
+          description: `Removes all ${DEBUFFS.DEF} debuffs and ${DEBUFFS.WEAKEN} debuffs from this Champion at the start of each turn.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 50`,
 };

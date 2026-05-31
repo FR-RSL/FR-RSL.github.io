@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mocking Blow",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Coup Goguenard",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Intercede",
-          description: `Places a 50% [Ally Protection] on the most injured ally for 2 turns. Grants an Extra Turn.`,
+          name: "Intercéder",
+          description: `Place, pendant 2 tours, une ${BUFFS.ALLY_PROTECT} de 50 % sur l'allié le plus sévèrement blessé. Accorde un Tour supplémentaire.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Take Vengeance",
-          description: `Places a [Counterattack] buff on this Champion for 2 turns. Heals this Champion by 15%.<br><br><br>Heal Multiplier: 0.15*HP`,
+          name: "Se venger",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.COUNTER} sur ce Champion. Soigne ce Champion de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

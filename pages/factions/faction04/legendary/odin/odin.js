@@ -4,11 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Dard de Gungnir",
-          description: `
-            Attaque un ennemi.
-            Possède 50% de chances de placer un débuff <span class='gbt'>Fou furieux</span> pendant 2 tours.<br><br>
-			Il est impossible de placer ce débuff sur les Boss.
-          `,
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BERSERK} pendant 2 tours. 
+
+Il est impossible de placer ce débuff sur les Boss.`,
           damage: "5*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -18,12 +16,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Tempete de familiers",
-          description: `
-            Retire tous les buffs dont disposent les ennemis.<br><br>
-			Possède 80% de chances de placer un débuff <span class='gbt'>Reduction de DEF</span> de 60% sur tous les ennemis pendant 2 tours.
-			Possède également 80% de chances de placer un débuff <span class='gbt'>Etourdissement</span> sur tous les ennemis pendant 1 tour.
-          `,
+          name: "Tempête de familiers",
+          description: `Retire tous les buffs dont disposent les ennemis. 
+
+Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Possède également 80 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
           levelInfo: [
             "Chances de Buff/débuff +10%",
@@ -34,17 +30,17 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Jugement asgardien",
-          description: `
-            Attaque un ennemi.
-			Avant d'attaquer, vole tous les buffs de la cible.
-			Les degats infliges par cette compétence dependent du Type de la cible :<br><br>
-			ATQ : Infligera des degats bases sur 500% de l'ATQ de la cible.<br><br>
-			DEF : Infligera des degats bases sur 500% de la DEF de la cible.<br><br>
-			PV/Soutien/Boss : Infligera des degats bases sur 35% des PV MAX de la cible.<br>10% des PV MAX contre les Boss<br><br>
-			Cette attaque ignorera également 100% de la DEF de la cible.<br><br>
-			Si la cible a ete tuee par cette compétence, ranime un allié mort aleatoire
-			avec 50% de PV et 50% de Compteur de Tour.
-          `,
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Les dégâts infligés par cette compétence dépendent du Type de la cible :
+
+ATQ : infligera des dégâts basés sur l'ATQ de la cible
+
+DÉF : infligera des dégâts basés sur la DÉF de la cible
+
+PV/Soutien/Boss : infligera des dégâts basés sur les PV MAX de la cible. 
+
+Cette attaque ignorera également 100 % de la DÉF de la cible. 
+
+Si la cible a été tuée par cette compétence, ranime un allié mort aléatoire avec 50 % de PV et 50 % de Compteur de Tour.`,
           cooldown: 4,
           levelInfo: [
             "Dégâts +10%",
@@ -55,12 +51,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Sagesse d'Odin [P]",
-          description: `
-            Tous les 9 tours, place un buff <span class='gbt'>Blocage des Degats</span>
-			sur ce Champion pendant 1 tour, puis applique également un effet
-			<span class='gbt'>Propagation de Buff</span>, prenant tous les buffs
-			de ce Champion pour les placer sur tous les alliés.
-          `,
+          description: `Tous les 9 tours, place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour, puis applique également un effet [Propagation de Buff], prenant tous les buffs de ce Champion pour les placer sur tous les alliés.`,
           isPassive: true,
         },
       ],

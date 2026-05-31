@@ -3,27 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thornblade",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 30% chance of placing a [Provoke] debuff for 1 turn. Each hit also heals the ally with the lowest HP by 3% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.03*HP`,
+          name: "Lame épineuse",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Chaque frappe soigne également l'allié qui a le moins de PV à hauteur de 3 % des PV MAX de ce Champion.`,
           damage: "0.1*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gallant Knave",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of stealing 2 random buffs from each target. <br><br>Places a 15% [Continuous Heal] buff on all allies except this Champion for 2 turns. Also places an [Unkillable] buff and a [Taunt] buff on this Champion for 2 turns.`,
+          name: "Vaillant valet",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de voler 2 buffs aléatoires à chaque cible. 
+
+Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.TAUNT} sur ce Champion pendant 2 tours.`,
           damage: "0.24*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stout Defense",
-          description: `Swaps HP with a target enemy, and places a 100% [Heal Reduction] on that enemy for 2 turns. This debuff cannot be removed, transferred, or have its duration decreased by enemies.<br><br>Then equalizes the HP levels of all allies. The HP levels of all allies will be brought up to the level of the ally with the highest HP. <br><br>Also places a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Défense robuste",
+          description: `Échange ses PV avec une cible ennemie, puis place une ${DEBUFFS.HEALS} de 100 % sur cet ennemi pendant 2 tours. Il est impossible de retirer et de transférer ce débuff, et de voir sa durée réduite par des ennemis.
+
+Équilibre ensuite les niveaux de PV de tous les alliés. Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié qui a le plus de PV. 
+
+Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 30%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%`,
 };

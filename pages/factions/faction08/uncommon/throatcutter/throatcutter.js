@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cleaver",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%", "Level 7: Damage +10%"],
+          name: "Fendoir",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gratuitous Death",
-          description: `Attacks 1 enemy. Grants an Extra Turn if the target is killed.`,
-          damage: "6.3*ATK",
+          name: "Mort Gratuite",
+          description: `Attaque un ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

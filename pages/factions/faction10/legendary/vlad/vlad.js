@@ -3,34 +3,42 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thirsting Blade",
-          description: `Attacks 1 enemy. Destroys the target’s MAX HP by 30% of the damage inflicted. Also heals this Champion by 30% of the damage inflicted.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Lame assoiffée",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés. Soigne également ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Exsanguinate",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Leech] debuff for 2 turns.<br><br>Also has a 75% chance of stealing 50% of the Turn Meter from Champions from the Banner Lord, Sacred Order, or High Elf Factions. Has a 75% chance of decreasing the Turn Meter by 50% instead against targets not from those Factions.`,
-          damage: "4.7*ATK",
+          name: "Rendre exsangue",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.
+
+Possède également 75 % de chances de voler 50 % du Compteur de Tour des Champions Seigneurs de l'Oriflamme, de l'Ordre Sacré ou Hauts Elfes. Sinon, possède 75 % de chances de réduire le Compteur de Tour de 50 % contre les cibles qui n'appartiennent pas à ces Factions.`,
+          damage: "4.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mind Shroud",
-          description: `Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff and a [Block Active Skills] debuff for 2 turns.<br><br>Places a [Perfect Veil] buff on this Champion for 2 turns.`,
-          damage: "4*ATK",
+          name: "Voile d'Esprit",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+
+Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Notorious [P]",
-          description: `Places a [Revive On Death] buff on this Champion for 2 turns every time this Champion kills an enemy. <br><br>Also fully heals this Champion and fills their Turn Meter by 50% every time they kill an enemy. <br><br>[Will only heal and fill this Champion’s Turn Meter when Konstantin the Dayborn is on the same team.]<br><br>Heal Multiplier: 1*HP`,
+          name: "Tristement célèbre [P]",
+          description: `Place un buff ${BUFFS.REVIVE_ON_DEATH} sur ce Champion pendant 2 tours lorsqu'il tue un ennemi. 
+
+Soigne également totalement ce Champion et remplit son Compteur de Tour de 50 % chaque fois qu'il tue un ennemi. 
+
+[Ne soignera et ne remplira le Compteur de Tour de ce Champion que lorsque Konstantin le Diurne se trouve dans la même équipe.]`,
           isPassive: true
         }
       ],
@@ -48,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 24%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 24%`,
 };

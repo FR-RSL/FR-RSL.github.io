@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spirit Thrust",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br><br>If the target is a Boss, this debuff cannot be resisted.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Coup spirituel",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Si la cible est un Boss, il est impossible de résister à ce débuff.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spirit Step Slash",
-          description: `Attacks 1 enemy. Every second use of this skill in a Round will attack all enemies instead. <br><br>Will also ignore 25% of the target’s DEF. If the target is a Boss, will ignore 100% of the target’s DEF.`,
-          damage: "4*ATK",
+          name: "Coup mobile spirituel",
+          description: `Attaque un ennemi. Chaque deuxième utilisation de cette compétence lors d'un round attaquera tous les ennemis à la place. 
+
+Ignorera également 25 % de la DÉF de la cible. Si la cible est un Boss, ignorera 100 % de la DÉF de la cible.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Overhead Slash",
-          description: `Attacks all enemies. Before attacking, places a 30% [Increase C. DMG] buff and a 30% [Increase SPD] buff on this Champion for 2 turns.`,
-          damage: "4.1*ATK",
+          name: "Coup vertical",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours.`,
+          damage: "4.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Rathalos Mastery [P]",
-          description: `Inflicts 50% more damage against targets under [HP Burn] debuffs. <br><br>Receives 25% less damage from enemies under [HP Burn] debuffs. <br><br>Every fifth skill used by this Champion deals 200% more damage.`,
+          description: `Inflicts 50% more damage against targets under ${DEBUFFS.BURN} debuffs. <br><br>Receives 25% less damage from enemies under ${DEBUFFS.BURN} debuffs. <br><br>Every fifth skill used by this Champion deals 200% more damage.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 30%`,
 };

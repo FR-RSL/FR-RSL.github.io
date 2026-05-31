@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Fendoir de chair",
           description: `Attaque un ennemi.${RETURN}${RETURN}
-A 80% de chances de placer un debuff ${DEBUFFS.ATK} de 50% et un debuff ${DEBUFFS.PAIN_LINK} pendant 2 tours.`,
+A 80% de chances de placer un debuff ${DEBUFFS.ATQ} de 50% et un debuff ${DEBUFFS.PAIN_LINK} pendant 2 tours.`,
           damage: "3.9*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },

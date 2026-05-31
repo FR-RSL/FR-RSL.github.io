@@ -4,26 +4,28 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Kanabo Jutsu",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn.`,
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Reckless Sweep",
-          description: `Attacks all enemies. Has a 50% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Balayage Téméraire",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "0.2*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Roaring Challenge",
-          description: `Has a 50% chance of placing a [Provoke] debuff for 1 turn.<br><br>Places a [Shield] buff on this Champion for 2 turns equal to 20% of their MAX HP. Also places a 15% [Reflect Damage] buff on all allies except this Champion for 2 turns.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Clameur de Défi",
+          description: `Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.
+
+Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 20 % de ses PV MAX pendant 2 tours. Place également un buff ${BUFFS.REFLECT_DAM} de 15 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

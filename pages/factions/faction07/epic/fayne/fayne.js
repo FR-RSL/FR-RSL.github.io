@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Exotic Blades",
-          description: `Attacks 1 enemy 2 times. Each hit has a 35% chance of stealing 5% of the target’s current Turn Meter.`,
-          damage: "1.55*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Lames Exotiques",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de voler 5 % du Compteur de Tour actuel de la cible.`,
+          damage: "1.55*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flower's Tears",
-          description: `Attacks 1 enemy. Has a 75% chance of placing two 5% [Poison] debuffs and a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "4.8*ATK",
+          name: "Larmes Florales",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "4.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Flowing Style",
-          description: `Attacks 1 enemy 3 times. The first hit has a 75% chance of placing a 60% [Decrease DEF] debuff for 3 turns. The second hit has a 75% chance of placing a 25% [Weaken] debuff for 3 turns. The third hit heals this Champion by 4% of their MAX HP for every debuff on the target.<br><br><br>Heal Multiplier: 0.04*HP*Target Debuffs`,
-          damage: "1.8*ATK",
+          name: "Style Fluide",
+          description: `Attaque 3 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 3 tours. La deuxième frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 3 tours. La troisième frappe soigne ce Champion de 4 % de ses PV MAX pour chaque débuff sur la cible.`,
+          damage: "1.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heavy Blow",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Coup Violent",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "0.28*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lower Visor",
-          description: `Places a 15% [Continuous Heal] buff and a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Visière Basse",
+          description: `Place un buff ${BUFFS.HEALS} de 15 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Last Breath",
-          description: `Attacks all enemies. Damage increases according to the amount of HP this Champion has lost.`,
+          name: "Dernier Souffle",
+          description: `Attaque tous les ennemis. Les dégâts augmentent en fonction de la quantité de PV que ce Champion a perdus.`,
           damage: "0.25*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Valorous [P]",
-          description: `Places an [Unkillable] buff on this Champion for 1 turn if incoming damage exceeds 15% MAX HP in one attack.`,
+          name: "Valeureux [P]",
+          description: `Place un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion si les dégâts reçus dépassent 15 % des PV MAX en une seule attaque.`,
           cooldown: 2,
           isPassive: true
         }

@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Deathplume",
-          description: `Attacks 1 enemy. Has a 50% chance of stealing 1 random buff from the target.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Plume mortelle",
+          description: `Attaque un ennemi. Possède 50 % de chances de voler un buff aléatoire à la cible.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hemobomb",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of decreasing the duration of all enemy buffs by 1 turn. Also has a 75% chance of increasing the duration of all ally buffs by 1 turn.`,
-          damage: "3.5*ATK",
+          name: "Hémo-bombe",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de réduire d'1 tour la durée de tous les buffs ennemis. Possède également 75 % de chances d'augmenter d'1 tour la durée de tous les buffs alliés.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blood Transfusion",
-          description: `Revives 2 random allies with 30% HP and 30% Turn Meter. <br><br>Places a [Shield] buff on all revived allies for 2 turns equal to 30% of this Champion's MAX HP.<br><br><br>Shield Multiplier: 0.3*HP`,
+          name: "Transfusion sanguine",
+          description: `Ranime 2 alliés aléatoires avec 30 % de PV et 30 % de Compteur de Tour. 
+
+Place sur tous les alliés ranimés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +45,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 50`,
 };

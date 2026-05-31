@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hack and Slash",
-          description: `Attacks 1 enemy 3 times.`,
-          damage: "1.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Taille et Tranche",
+          description: `Attaque 3 fois un ennemi.`,
+          damage: "1.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rise to Duty",
-          description: `Places a 25% [Increase ATK] buff and a 30% [Increase C. RATE] buff on this Champion for 2 turns, then attacks all enemies.<br><br>[Has a 75% chance of placing a [Bomb] debuff that will detonate after 3 turns when Fenax is on the same team.]<br><br><br>Bomb Multiplier:`,
-          damage: "3.9*ATK",
+          name: "À la hauteur du Devoir",
+          description: `Place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis.
+
+[Possède 75 % de chances de placer un débuff ${DEBUFFS.BOMB} qui explosera après 3 tours lorsque Fenax se trouve dans la même équipe.]`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Awesome Presence",
-          description: `Places a [Counterattack] buff on this Champion for 2 turns. Has a 75% chance of placing a 25% [Weaken] debuff on enemies for 2 turns.`,
+          name: "Présence Imposante",
+          description: `Place, pendant 2 tours, un buff ${BUFFS.COUNTER} sur ce Champion. Possède 75 % de chances de placer, pendant 2 tours, un débuff d'${DEBUFFS.WEAKEN} de 25 % sur les ennemis.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Dungeons by 15%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des Donjons de 15%`,
 };

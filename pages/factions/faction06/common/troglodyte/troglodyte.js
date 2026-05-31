@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Acid Blade",
-          description: `Attacks 1 enemy 2 times. Has a 20% chance of placing a 25% [Decrease ATK] debuff for 1 turn. Damage inflicted is proportional to DEF.`,
+          name: "Lame Acide",
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cross Slash",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.5*ATK + 50",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Balafre Croisée",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "1.5*ATQ + 50",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hellraiser",
-          description: `Attacks all enemies. Has an extra 15% chance of inflicting a critical hit. Places a 30% [Increase SPD] buff on this Champion for 2 turns.`,
-          damage: "4.5*ATK",
+          name: "Fauteur de Troubles",
+          description: `Attaque tous les ennemis. Possède 15 % de chances de porter un coup critique. Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % sur ce Champion.`,
+          damage: "4.5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cursed Blade",
-          description: `Attacks 4 times at random. Has a 30% chance of placing a 30% [Decrease DEF] debuff for 2 turns. Has a 30% chance of placing a 60% [Decrease DEF] debuff for 2 turns if the target has more than 2 debuffs.`,
-          damage: "1.6*ATK",
+          name: "Lame Maudite",
+          description: `Attaque 4 fois au hasard. Possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours. Possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours si la cible est affligée de plus de 2 débuffs.`,
+          damage: "1.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

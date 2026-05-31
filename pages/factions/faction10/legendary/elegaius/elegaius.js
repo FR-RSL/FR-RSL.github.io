@@ -3,36 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spirits of Spite",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Block Active Skills] debuff for 2 turns.`,
+          name: "Esprits malveillants",
+          description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "0.18*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Dead Stop",
-          description: `Attacks 1 enemy. Puts the target's skills on cooldown. Also places a [Block Buffs] debuff for 2 turns.<br><br>If there are any enemy Champions that share the same Affinity as the initial target, also puts all their skills on cooldown and places a [Block Buffs] debuff on them for 2 turns.`,
+          name: "Arrêt complet",
+          description: `Attaque un ennemi. Place les compétences de la cible en recharge. Place également un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.
+
+S'il y a des Champions ennemis qui ont la même Affinité que la cible initiale, place également toutes leurs compétences en recharge et leur inflige un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
           damage: "0.27*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ghost Rage",
-          description: `Attacks all enemies. Has a 75% chance of removing all buffs. <br><br>Also has a 75% chance of decreasing all enemies' Turn Meters by 20%. Decreases each enemy's Turn Meter by an additional 10% for each buff removed.`,
+          name: "Rage fantomatique",
+          description: `Attaque tous les ennemis. A 75 % de chances de retirer tous les buffs. 
+
+A également 75 % de chances de réduire les Compteurs de Tour de tous les ennemis de 20 %. Réduit le Compteur de Tour de chaque ennemi de 10 % supplémentaires pour chaque buff retiré.`,
           damage: "0.2*HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Spurned by Death [P]",
-          description: `Prevents this Champion's death and keeps them alive on 1 HP when hit by a fatal hit.<br><br>If this skill prevents this Champion's death, heals them by 30% of their MAX HP, fills their Turn Meter by 30%, and places a [Shield] buff on them equal to 30% of their MAX HP for 2 turns.<br><br>Will not prevent this Champion's death if they are under a [Heal Reduction] debuff.<br><br><br>Shield Multiplier: 0.3*HPHeal Multiplier: 0.3*HP`,
+          name: "Rejetée par la Mort [P]",
+          description: `Empêche la mort de cette Championne et la garde vivante avec 1 PV lorsqu'elle est frappée par un coup fatal.
+
+Si cette compétence empêche la mort de cette Championne, elle la soigne de 30 % de ses PV MAX, remplit son Compteur de Tour de 30 % et lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % de ses PV MAX pendant 2 tours.
+
+N'empêchera pas la mort de cette Championne si elle est affligée d'un débuff ${DEBUFFS.HEALS}.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -50,5 +58,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 60`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

@@ -3,26 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Nature's Cycle",
-          description: `Attacks 1 enemy. Has a 30% chance of increasing the duration of a random buff on a random ally by 1 turn.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Cycle de la Nature",
+          description: `Attaque un ennemi. Possède 30 % de chances d'augmenter d'1 tour la durée d'un buff aléatoire d'un allié choisi au hasard.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Overgrowth",
-          description: `Heals all allies by 15% of their MAX HP and places a [Shield] buff equal to 15% of their MAX HP on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.15*Target Max HPShield Multiplier: 0.15*Target Max HP`,
+          name: "Prolifération",
+          description: `Soigne tous les alliés de 15 % de leurs PV MAX, puis place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 15 % de leurs PV MAX pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Shield +5%", "Level 4: Heal +10%", "Level 5: Shield +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Bouclier +5%", "Soins +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Attunement",
-          description: `Places a [Perfect Veil] buff and a 50% [Increase ATK] buff for 2 turns on all allies whose ATK is higher than their DEF. <br> <br>Places a [Block debuffs] buff for 1 turn and a 60% [Increase DEF] buff for 2 turns and on all allies whose DEF is higher than their ATK.`,
+          name: "Harmonisation",
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.ATK} de 50 % pendant 2 tours sur tous les alliés dont l'ATQ est plus élevée que la DÉF. 
+ 
+Place un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour et un buff ${BUFFS.DEF} de 60 % pendant 2 tours sur tous les alliés dont la DÉF est plus élevée que l'ATQ.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grave Whispers",
-          description: `Attacks 1 enemy. Has a 70% chance of placing a 60% [Decrease DEF] debuff for 2 turns if 1 or more allies are dead, a 30% [Decrease SPD] debuff for 2 turns if 2 or more allies are dead, and a 50% [Decrease ACC] debuff for 2 turns if 3 or more allies are dead.<br><br>Damage inflicted is proportional to DEF.`,
+          name: "Murmures de Tombe",
+          description: `Attaque un ennemi. Possède 70 % de chances de placer 2 tours de débuff de ${DEBUFFS.DEF} de 60 % si un ou plusieurs alliés sont morts, 2 tours de débuff de ${DEBUFFS.SPD} de 30 % si 2 alliés ou plus sont morts, et 2 tours de débuff de ${DEBUFFS.PRE} de 50 % si 3 alliés ou plus sont morts.
+
+Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "4.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Vile Insults",
-          description: `Places a 30% [Reflect Damage] buff on this Champion for 2 turns, then attacks 1 enemy. Has an 80% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Insultes Abominables",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion, puis attaque un ennemi. Possède 80 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "6.2*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Grim Revenge",
-          description: `Attacks all enemies. This attack will always be critical if there are 2 or more dead allies. Damage increases according to the number of dead allies.`,
+          name: "Revanche Lugubre",
+          description: `Attaque tous les ennemis. Cette attaque passera toujours en critique si 2 alliés ou plus sont morts. Les dégâts augmentent en fonction du nombre d'alliés morts.`,
           damage: "(4+Allies Dead)*DEF",
           cooldown: 7,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 70`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 70`,
 };

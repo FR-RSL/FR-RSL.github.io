@@ -3,35 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Graceful Guide",
-          description: `Attacks 1 enemy. Places a 15% [Continuous Heal] buff on the ally with the lowest HP for 2 turns.`,
-          damage: "4.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Guide Gracieuse",
+          description: `Attaque un ennemi. Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV.`,
+          damage: "4.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mending Ways",
-          description: `Attacks 1 enemy. Heals this Champion and the ally with the lowest HP by 30% of this Champion's MAX HP. Has a 75% chance of placing a 100% [Heal Reduction] debuff and a [Leech] debuff on all enemies for 2 turns. <br><br>These debuffs cannot be resisted if Khoronar is on the same team.<br><br><br>Heal Multiplier: 0.3*HP`,
-          damage: "5.5*ATK",
+          name: "Degrés de Guérison",
+          description: `Attaque un ennemi. Soigne cette Championne et l'allié ayant le moins de PV à hauteur de 30 % des PV MAX de cette Championne. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.
+
+Il est impossible de résister à ces débuffs lorsque Khoronar se trouve dans la même équipe.`,
+          damage: "5.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Beauty's Allure",
-          description: `Heals all allies by 40% of their MAX HP. Places a [Block Debuffs] buff on all allies for 2 turns. <br><br>If a Champion is fully healed by this skill, also places a [Shield] buff on them for 2 turns equal to 25% of the Champion's HP.<br><br><br>Heal Multiplier: 0.4*Target Max HP<br>Shield Multiplier: 0.25*Target Max HP`,
+          name: "Attrait de la Beauté",
+          description: `Soigne tous tes alliés à hauteur de 40 % de leurs PV MAX. Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.
+
+Si un Champion est totalement soigné par cette compétence, lui accorde également un buff ${BUFFS.SHIELD} équivalent à 25 % des PV du Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Lover's Sacrifice [P]",
-          description: `Fills the Turn Meters of all allies by 20% and heals them by 20% of this Champion's MAX HP when this Champion is killed. <br><br>Revives this Champion with 75% HP when killed if Khoronar is on the same team.<br><br><br>Heal Multiplier: 0.2*HP`,
+          name: "Sacrifice d'Amante [P]",
+          description: `Remplit le Compteur de Tour de tous les alliés de 20 %, puis les soigne à hauteur de 20 % des PV MAX de cette Championne lorsqu'elle est tuée. 
+
+Ranime cette Championne avec 75 % de PV lorsqu'elle est tuée si Khoronar se trouve dans la même équipe.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -49,5 +55,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

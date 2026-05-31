@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Disarm",
-          description: `Attacks 1 enemy 2 times. Has a 35% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Damage inflicted is proportional to DEF.`,
+          name: "Désarmer",
+          description: `Attaque 2 fois un ennemi. Offre 35 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +15%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +15%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Head Hunter",
-          description: `Attacks 1 enemy. Places a 30% [Increase C. RATE] buff on all allies for 3 turns if the target is killed. Damage inflicted is proportional to DEF.`,
-          damage: "3.7*DEF+ATK",
+          name: "Chasseur de Têtes",
+          description: `Attaque un ennemi. Place, pendant 3 tours, un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés si la cible est tuée. Les dégâts infligés sont proportionnels à la DÉF.`,
+          damage: "3.7*DEF+ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Massacre",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Block Buffs] debuff for 1 turn. Damage increases according to this Champion's MAX HP.`,
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} d'1 tour. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
           damage: "DEF+0.23*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 15%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 15%`,
 };

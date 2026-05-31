@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Booncatcher",
-          description: `Attacks 1 enemy. Has a 30% chance of stealing 1 random buff.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Attrape-aubaine",
+          description: `Attaque un ennemi. Possède 30 % de chances de voler 1 buff aléatoire.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Revelation",
-          description: `Attacks all enemies. Has a 25% chance of removing any [Veil] or [Perfect Veil] buffs from all enemies. <br><br>Also has a 75% chance of removing 1 random buff from all enemies.`,
-          damage: "3.8*ATK",
+          name: "Révélation",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de retirer tous les buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} sur tous les ennemis. 
+
+Possède également 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Focused Force",
-          description: `Attacks 1 enemy 2 times. Will ignore [Shield] buffs. <br><br>Resets the cooldown of this skill if this attack kills an enemy.`,
-          damage: "2.9*ATK",
+          name: "Force focalisée",
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. 
+
+Réinitialise le compteur de tour de cette compétence si cette attaque tue un ennemi.`,
+          damage: "2.9*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Hunt the Haughty [P]",
-          description: `Increases this Champion’s ACC by 10 for each buff on each enemy.`,
+          name: "Chasse le hautain [P]",
+          description: `Augmente la PRÉ de ce Champion de 10 points pour chaque buff sur chaque ennemi.`,
           isPassive: true
         }
       ],
@@ -48,5 +52,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 20%`,
 };

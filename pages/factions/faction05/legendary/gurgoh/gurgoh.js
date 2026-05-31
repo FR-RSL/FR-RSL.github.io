@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Icebreaker",
-          description: `Attacks 1 enemy 2 times. Places an extra hit if the target has a [Freeze] debuff.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Brise-glace",
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si un ennemi souffre d'un débuff de ${DEBUFFS.GEL}.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bonechiller",
-          description: `Removes all buffs from all enemies. Has an 80% chance of placing a [Freeze] debuff on all enemies for 1 turn. Grants an Extra Turn.`,
+          name: "Glace les Os",
+          description: `Retire tous les buffs dont disposent les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Accorde un Tour supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Avalanche",
-          description: `Attacks all enemies. Places a 60% [Decrease DEF] debuff on all enemies for 2 turns.<br><br>Places an extra hit if the target is under a [Freeze] debuff.`,
-          damage: "4*ATK",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.
+
+Place une frappe supplémentaire si un ennemi se trouve sous débuff ${DEBUFFS.GEL}.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Frost Embrace [P]",
-          description: `When hit by an enemy, has a 30% chance of placing a [Freeze] debuff on the attacker for 1 turn. <br><br>Increases the damage inflicted by allies against enemies under a [Freeze] debuff by 25%.`,
+          name: "Étreinte Gelée [P]",
+          description: `Lorsque ce Champion est frappé par un ennemi, a 30 % de chances de placer un débuff ${DEBUFFS.GEL} sur l'assaillant pendant 1 tour. 
+
+Augmente de 25 % les dégâts infligés par les alliés contre les ennemis sous débuff ${DEBUFFS.GEL}.`,
           isPassive: true
         }
       ],
@@ -47,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 30%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 30%`,
 };

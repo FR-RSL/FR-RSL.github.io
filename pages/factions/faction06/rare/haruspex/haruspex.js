@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Infected Liver",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a 2.5% [Poison] debuff for 2 turns.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Foie Infecté",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sign of Swiftness",
-          description: `Fills the Turn Meters of all allies by 15%. Places a 15% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Signe de Promptitude",
+          description: `Remplit de 15 % le Compteur de Tours de tous les alliés. Place un buff d'${BUFFS.SPD} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fate Reweaved",
-          description: `Revives a dead ally with 30% HP, then fills their Turn Meter by 30%.`,
+          name: "Destin Retissé",
+          description: `Ranime un allié tombé avec 30 % de PV, puis remplit de 30 % son Compteur de Tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 15%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 15%`,
 };

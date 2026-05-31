@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wallop",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "0.1*HP+ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Beigne",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "0.1*HP+ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Amok",
-          description: `Removes 1 random debuff from all allies. Places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Déchaîné",
+          description: `Retire 1 débuff aléatoire sur tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Blood Burst [P]",
-          description: `When healed, will attack all enemies inflicting damage proportional to any surplus heal. Damage inflicted is equal to 50% of any surplus heal.`,
+          name: "Rafale Sanglante [P]",
+          description: `Lorsqu'il reçoit un soin, attaquera tous les ennemis en infligeant des dégâts proportionnels à tout les soins en surplus. Les dégâts infligés sont équivalents à 50 % des soins en surplus.`,
           damage: "Remaining Heal Amount*0.5",
           cooldown: 1,
           isPassive: true
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 16%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 16%`,
 };

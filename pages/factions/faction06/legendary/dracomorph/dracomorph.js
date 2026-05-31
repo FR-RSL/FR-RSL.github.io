@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Seeping Pain",
-          description: `Attacks 1 enemy. Damage increases by 10% for each debuff on the target. Will attack 1 random enemy with any surplus damage if the target is killed. Damage inflicted is equal to triple the surplus damage. The surplus damage cannot be critical.`,
-          damage: "3.5*ATKMultiplier: Remaining Damage Amount*3",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Douleur Suintante",
+          description: `Attaque un ennemi. Les dégâts augmentent de 10 % pour chaque débuff dont est affligée la cible. Si la cible est tuée, attaquera un ennemi pris au hasard avec l'excédent de dégâts. Les dégâts infligés sont équivalents au triple de l'excédent de dégâts. Les dégâts excédentaires ne peuvent pas passer en critique.`,
+          damage: "3.5*ATQMultiplier: Remaining Damage Amount*3",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Poison Jaws",
-          description: `Attacks 4 times at random. Each hit places a 5% [Poison] debuff for 3 turns.`,
-          damage: "1.3*ATK",
+          name: "Mâchoires de Poison",
+          description: `Attaque 4 fois au hasard. Chaque frappe place, pour 3 tours, un débuff de ${DEBUFFS.POISON} de 5 %.`,
+          damage: "1.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Baleful Eye",
-          description: `Places a 25% [Weaken] debuff and a 60% [Decrease DEF] debuff on all enemies for 2 turns.`,
+          name: "il Funeste",
+          description: `Place un débuff d'${DEBUFFS.WEAKEN} de 25 % et un débuff de ${DEBUFFS.DEF} de 60 %, pendant 2 tours, sur tous les ennemis.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 50`,
 };

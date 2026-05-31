@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Feast of Flame",
-          description: `Attacks 1 enemy. Heals this Champion by 25% of the damage inflicted. Heals this Champion by 50% of the damage inflicted instead if the target is under a [HP Burn] debuff.<br><br><br>Heal Multiplier: !RelationTargetHasEffectOfKind(AoEContinuousDamage_KindId)*0.25*Damage Dealt+RelationTargetHasEffectOfKind(AoEContinuousDamage_KindId)*0.5*Damage Dealt`,
+          name: "Festin de Flammes",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 25 % des dégâts infligés. Soigne, à la place, ce Champion de 50 % des dégâts infligés si la cible est affligée d'un débuff de ${DEBUFFS.BURN}.`,
           damage: "2.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Hellfire Torrent",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff on all enemies for 3 turns.`,
+          name: "Torrent Feu de l'enfer",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours sur tous les ennemis.`,
           damage: "3.6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Infernal Minions",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Sbires Infernaux",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf sur ce Champion. Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fires of Doom [P]",
-          description: `Decreases damage inflicted by enemies under [HP Burn] debuffs by 10%.`,
+          name: "Feux de Ruine [P]",
+          description: `Réduit de 10 % les dégâts infligés par les ennemis affligés de débuffs ${DEBUFFS.BURN}.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

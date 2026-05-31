@@ -3,25 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Split Arrow",
-          description: `Attacks 1 enemy 2 times. Each critical hit fills this Champion's Turn Meter by 5%.`,
-          damage: "2.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Flèche Scindée",
+          description: `Attaque 2 fois un ennemi. Chaque coup critique remplit le Compteur de Tours de ce Champion de 5 %.`,
+          damage: "2.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Projectile Burst",
-          description: `Attacks all enemies.<br><br>Each critical hit boosts this Champion’s Turn Meter by 15%.`,
-          damage: "3.9*ATK",
+          name: "Salve de Projectiles",
+          description: `Attaque tous les ennemis.
+
+Chaque coup critique remplit de 15 % le Compteur de Tour de ce Champion.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Agony Bonds [P]",
-          description: `Each critical hit heals this Champion by 15% of the damage inflicted.<br><br>Heal Multiplier: 0.15*Damage Dealt`,
+          name: "Liens d'Agonie [P]",
+          description: `Chaque coup critique soigne ce Champion à hauteur de 15 % des dégâts infligés.`,
           isPassive: true
         }
       ],
@@ -39,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in All Battles by 19%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 19%`,
 };

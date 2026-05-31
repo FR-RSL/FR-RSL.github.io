@@ -3,11 +3,10 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Eclair Fracassant",
-          description: `
-            Attaque un ennemi. Possède 45% de chances placer un débuff <span class='gbt'>Reduction de DEF</span> de 60% pendant 2 tours.<br><br>
-            Remplit également le Compteur de Tour de ce Champion de 15% lorsqu'elle est utilisee contre les Boss.
-          `,
+          name: "Éclair Fracassant",
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Remplit également le Compteur de Tour de ce Champion de 15 % lorsqu'elle est utilisée contre les Boss.`,
           damage: "3.7*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -18,13 +17,10 @@ const championData = {
         },
         {
           img: "assets/sort2.webp",
-          name: "Deluge Brulant",
-          description: `
-            Attaque 3 fois au hasard. Chaque frappe Possède 75% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> pendant 3 tours.
-            Place également un buff <span class='gbt'>Voile Parfait</span> sur ce Champion pendant 2 tours.<br><br>
-            Lorsqu'elle est utilisee contre les Boss, activera instantanement les débuffs <span class='gbt'>Brulure de PV</span>, ont
-            les débuffs <span class='gbt'>Brulure de PV</span> places par cette compétence.
-          `,
+          name: "Déluge Brûlant",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 3 tours. Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.
+
+Lorsqu'elle est utilisée contre les Boss, activera instantanément les débuffs ${DEBUFFS.BURN}, dont les débuffs ${DEBUFFS.BURN} placés par cette Compétence.`,
           cooldown: 4,
           damage: "2*ATQ",
           levelInfo: [
@@ -38,11 +34,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Entaille Cyan",
-          description: `
-            Attaque tous les ennemis. Possède 75% de chances de placer un débuff <span class='gbt'>Gel</span> pendant 1 tour.<br><br>
-            Lorsqu'elle cible un Boss, n'attaquera que le Boss et ignorera 50% de la DEF de la cible. Reduira également d'1 tour le
-            temps de recharge de la compétence <span class='gt'>Deluge Brulant</span>.
-          `,
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+
+Lorsqu'elle cible un Boss, n'attaquera que le Boss (pas tous les ennemis) et ignorera 50 % de la DÉF De la cible. Réduira également d'1 tour le temps de recharge de la compétence Déluge brûlant.`,
           cooldown: 5,
           damage: "3*ATQ (Zone) | 3.9*ATQ (Monocible)",
           levelInfo: [
@@ -55,11 +49,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Escalade [P]",
-          description: `
-            Augmente l'ATQ de Ninja de 10% (jusqu'a 100%) et ses DEG C. de 5% (jusqu'a 25%) chaque fois qu'un seul ennemi se fait frapper par les trois
-            compétences Actives de Ninja lors d'un meme Round. Cet effet peut survenir plusieurs fois contre le meme ennemi.<br><br>
-            Lors de combats contre les Boss, augmentera par contre l'ATQ de Ninja de 20% (jusqu'a 100%) et ses DEG C. de 10% (jusqu'a 25%).
-          `,
+          description: `Augmente l'ATQ de Ninja de 10 % (jusqu'à 100 %) et ses DÉG C. de 5 % (jusqu'à 25 %) chaque fois qu'un seul ennemi se fait frapper par les trois Compétences Actives de Ninja lors d'une même round. Cet effet peut survenir plusieurs fois contre le même ennemi.
+
+Lors de combats contre les Boss, augmentera par contre l'ATQ de Ninja de 20 % (jusqu'à 100 %) et ses DÉG C. de 10 % (jusqu'à 25 %).`,
           isPassive: true,
         },
       ],

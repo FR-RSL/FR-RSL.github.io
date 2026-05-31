@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mallet Crescendo",
-          description: `Attacks 1 enemy 3 times. Each hit has a 15% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Crescendo de Maillet",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "0.06*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tombfire",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [HP Burn] debuff for 2 turns.`,
+          name: "Feu Tombal",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} de 2 tours.`,
           damage: "0.22*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +10%", "Level 9: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Gloom Mist [P]",
-          description: `Decreases the damage enemies inflict with AoE attacks by 5%.`,
+          name: "Brume Morose [P]",
+          description: `Réduit de 5 % les dégâts infligés par les ennemis à l'aide d'attaques de zone.`,
           isPassive: true
         }
       ],

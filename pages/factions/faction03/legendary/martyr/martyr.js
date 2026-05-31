@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rush",
-          description: `Attacks 1 enemy. Has a 45% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Ruée",
+          description: `Attaque 1 ennemi. Offre 45 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "3.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bastion of Faith",
-          description: `Places a 60% [Increase DEF] buff and a [Counterattack] buff on all allies for 2 turns.`,
+          name: "Bastion de Foi",
+          description: `Place un buff d'${BUFFS.DEF} de 60 % et un buff de ${BUFFS.COUNTER} sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Suppression",
-          description: `Attacks all enemies. Places a 50% [Decrease ATK] debuff for 2 turns. Places a [Provoke] debuff for 1 turn.`,
+          name: "Répression",
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Place un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "4*DEF",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%`,
 };

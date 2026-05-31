@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bright Fury",
-          description: `Attacks 1 enemy. Has a 20% chance of decreasing the target's Turn Meter by 15%.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Furie Lumineuse",
+          description: `Attaque 1 ennemi. Possède 20 % de chances de réduire de 15 % le Compteur de Tours de la cible.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Undermine",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "5.3*ATK",
+          name: "Saper",
+          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "5.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Execution",
-          description: `Attacks 1 enemy. This attack deals 30% extra C. DMG.`,
-          damage: "5.35*ATK",
+          name: "Exécution",
+          description: `Attaque 1 ennemi. Cette attaque inflige 30 % de DÉG C. supplémentaires.`,
+          damage: "5.35*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

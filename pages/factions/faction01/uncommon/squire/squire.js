@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Overhead Swing",
-          description: `Attacks 1 enemy.`,
+          name: "Crochet Aérien",
+          description: `Attaque 1 ennemi.`,
           damage: "3.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Weapon Breaker",
-          description: `Attacks all enemies. Has a 30% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Briseur d'Arme",
+          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "3.9*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

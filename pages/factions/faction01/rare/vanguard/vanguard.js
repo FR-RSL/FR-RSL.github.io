@@ -3,25 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gathering Momentum",
-          description: `Attacks 1 enemy. Places a 30% [Decrease DEF] debuff for 1 turn if the target’s DEF is lower than this Champion’s.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Prise d'Élan",
+          description: `Attaque un ennemi.
+
+Place un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour si la DÉF actuelle de la cible est inférieure à celle de ce Champion.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Inescapable Wrath",
-          description: `Attacks 1 enemy. Places a [Provoke] debuff for 1 turn if the target is under a [Decrease DEF] debuff.`,
-          damage: "6.3*ATK",
+          name: "Courroux Inéluctable",
+          description: `Attaque un ennemi.
+
+Place un débuff de ${DEBUFFS.PROVOKE} d'1 tour si la cible souffre d'un débuff de ${DEBUFFS.DEF}.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dismay the Foe [P]",
-          description: `Decreases the duration of all buffs on the attacker when hit.`,
+          name: "Consterne l'Ennemi [P]",
+          description: `Réduit d'1 tour la durée de tous les buffs de l'assaillant lorsque ce Champion est frappé.`,
           isPassive: true
         }
       ],
@@ -40,5 +44,5 @@ const championData = {
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
   description: `
-Increases Ally RES in All Battles by 30`,
+Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 30`,
 };

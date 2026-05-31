@@ -3,32 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "United We Triumph",
-          description: `Attacks 1 enemy. One random ally will team up and join the attack. The ally joining the attack will always use their default skill. <br><br>If Taras the Fierce is on the same team, they will always be the one to join this Champion’s attack.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Unis nous triomphons",
+          description: `Attaque un ennemi. Un allié aléatoire fera équipe et rejoindra l'attaque. L'allié rejoignant l'attaque utilisera toujours sa compétence par défaut.
+
+Si Taras le Farouche se trouve dans la même équipe, il sera toujours celui qui rejoint l'attaque de cette Championne.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Font of Tenacity",
-          description: `Fully restores any allies’ decreased MAX HP, then heals all allies by 40% of this Champion’s MAX HP. <br><br>Places a [Shield] buff and a protected [Strengthen] buff on all allies for 2 turns. The value of the [Shield] buff is equal to 20% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.4*HP<br>Shield Multiplier: 0.2*HP`,
+          name: "Source de ténacité",
+          description: `Restaure totalement tous les PV MAX réduits des alliés, puis soigne tous les alliés de 40 % des PV MAX de cette Championne. 
+
+Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.STRENGTHEN} protégé sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20 % des PV MAX de cette Championne.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Shield +10%", "Level 4: Heal +10%", "Level 5: Shield +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Bouclier +10%", "Soins +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Nurtured Friendship",
-          description: `Removes all debuffs from all allies, then fills the Turn Meters of all allies by 15%. Fills the Turn Meters of each ally by an extra 5% for each debuff removed from them. <br><br>Increases the RES of all allies by 5 for each debuff removed. Grants an Extra Turn if 5 or more debuffs were removed.`,
+          name: "Amitié nourrie",
+          description: `Retire tous les débuffs sur tous les alliés, puis remplit les Compteurs de tour de tous les alliés de 15 %. Remplit le Compteur de Tour de chaque allié de 5 % supplémentaires pour chaque débuff qui leur a été retiré. 
+
+Augmente la RÉS de tous les alliés de 5 pour chaque débuff retiré. Accorde un Tour supplémentaire si 5 débuffs ou plus ont été retirés.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Giving All [P]",
-          description: `Revives all dead allies with 50% HP and 75% Turn Meter whenever this Champion is killed. <br><br>[Active Effect]<br><br>Places a [Block Damage] buff on all allies for 1 turn whenever an ally receives a [Bomb], [Poison] or [HP Burn] debuff.<br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Tout donner [P]",
+          description: `Ranime tous les alliés morts avec 50 % de PV et 75 % de Compteur de Tour dès que cette Championne est tuée.
+
+${ACTIVE}
+
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 1 tour dès qu'un allié reçoit un débuff ${DEBUFFS.BOMB}, ${DEBUFFS.POISON} ou ${DEBUFFS.BURN}.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           cooldown: 3,
           isPassive: true
         }
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in all Battles by 24%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 24%`,
 };

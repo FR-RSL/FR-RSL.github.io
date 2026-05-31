@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Whack",
-          description: `Attacks 1 enemy. Fills this Champion's Turn Meter by 20% if this attack is critical.`,
+          name: "Claque",
+          description: `Attaque un ennemi. Remplit de 20 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
           damage: "0.1*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lightning Strike",
-          description: `Attacks 1 enemy.`,
+          name: "Frappe Éclair",
+          description: `Attaque un ennemi.`,
           damage: "0.15*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Cannibalism [P]",
-          description: `Heals all allies by 10% of this Champion's MAX HP whenever this Champion inflicts a critical hit.<br><br>Heal Multiplier: 0.1*HP`,
+          name: "Cannibalisme [P]",
+          description: `Soigne tous les alliés de 10 % des PV MAX de ce Champion lorsqu'il porte un coup critique.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 33%`,
 };

@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Covetous Nails",
-          description: `Attacks 1 enemy 2 times. Each hit heals this Champion by 3% of their MAX HP.<br><br><br>Heal Multiplier: 0.03*HP`,
-          damage: "2.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Ongles envieux",
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne cette Championne de 3 % de ses PV MAX.`,
+          damage: "2.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Captivator",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Leech] debuff for 2 turns. Also has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns on targets with less than 50% Turn Meter.`,
-          damage: "4.4*ATK",
+          name: "Séductrice",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les cibles ayant 50 % de Compteur de Tour ou moins.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sanguine Exchange",
-          description: `Revive on Death Swaps HP with a target ally. If this Champion’s HP is equal to or higher than the target’s after the swap, places a [Revive On Death] buff on the target ally for 2 turns. If this Champion’s HP is lower than the target’s after the swap, places a [Revive On Death] buff on this Champion for 2 turns. Also places a 30% [Increase SPD] buff on all allies for 2 turns.`,
+          name: "Échange sanguin",
+          description: `Échange ses PV avec l'allié ciblé. Si les PV de cette Championne sont supérieurs ou égaux à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur la cible alliée pendant 2 tours. Si les PV de cette Championne sont inférieurs à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours.
+
+Place également un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {

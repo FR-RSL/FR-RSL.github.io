@@ -3,33 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Battering Skull",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Matraque Crâne",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bakemono Charge",
-          description: `Attacks all enemies. Has a 40% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Charge Bakemono",
+          description: `Attaque tous les ennemis. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Frightful Warcry",
-          description: `Places a 25% [Strengthen] buff on all allies for 2 turns. Also places a [Shield] buff for 2 turns on all allies with less than 50% HP. The [Shield] buff is equal to 15% of the target’s MAX HP.<br><br><br>Shield Multiplier: 0.15*Target Max HP`,
+          name: "Cri Effrayant",
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.SHIELD} pendant 2 tours sur les alliés ayant moins de 50 % de PV. Le buff ${BUFFS.SHIELD} est équivalent à 15 % des PV MAX de la cible.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Soulmonger [P]",
-          description: `Heals this Champion by 50% of their MAX HP whenever an ally or an enemy dies.<br><br>Heal Multiplier: 0.5*HP`,
+          name: "Marchand d'Âmes [P]",
+          description: `Soigne ce Champion de 50 % de ses PV MAX chaque fois qu'un allié ou un ennemi meurt.`,
           isPassive: true
         }
       ],
@@ -47,5 +47,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

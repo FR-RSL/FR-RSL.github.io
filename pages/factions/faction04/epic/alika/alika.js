@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gap Shot",
-          description: `Attacks 1 enemy. Has a 30% chance of placing an extra hit. This hit is always critical.`,
-          damage: "4.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +10%"],
+          name: "Tir à Blanc",
+          description: `Attaque un ennemi. Possède 30 % de chances de porter un coup supplémentaire. Cette attaque passe toujours en critique.`,
+          damage: "4.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "High Value Target",
-          description: `Attacks 1 enemy. Will ignore 50% of the target's DEF if their MAX HP is higher than this Champion's MAX HP.`,
-          damage: "6.3*ATK",
+          name: "Cible de Choix",
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible si ses PV MAX sont plus élevés que les PV MAX de ce Champion.`,
+          damage: "6.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Disorient",
-          description: `Attacks all enemies. Has a 75% chance of increasing the cooldowns of all enemy skills by 2 turns.`,
-          damage: "4*ATK",
+          name: "Désorienter",
+          description: `Attaque tous les ennemis. Possède 75 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Devoted Sister [P]",
-          description: `Revives this Champion with 75% HP when killed.<br><br>[Only available when Sikara is on the same team.]`,
+          name: "Sur Dévouée [P]",
+          description: `Ranime cette Championne avec 75 % de PV lorsqu'elle est tuée.
+
+[Uniquement disponible lorsque Sikara se trouve dans la même équipe.]`,
           cooldown: 7,
           isPassive: true
         }

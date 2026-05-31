@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pain Reversal",
-          description: `Attacks 1 enemy. Has a 70% chance of transferring 1 random debuff from this Champion to the target. <br><br>Also heals the ally with the lowest HP by 10% of their MAX HP.<br><br><br>Heal Multiplier: 0.1*Target Max HP`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Inversion de douleur",
+          description: `Attaque un ennemi. Possède 70 % de chances de transférer un débuff aléatoire de ce Champion sur la cible. 
+
+Soigne également l'allié ayant le moins de PV de 10 % de ses PV MAX.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Spinal Surge",
-          description: `Attacks all enemies. <br><br>If 3 or fewer enemies are alive, has a 75% chance of placing a [Block Buffs] debuff on each enemy for 2 turns. <br><br>If 4 or more enemies are alive, has a 75% chance of placing a [Block Buffs] debuff on each enemy for 3 turns.`,
-          damage: "3*ATK",
+          name: "Déferlement vertébral",
+          description: `Attaque tous les ennemis. 
+
+Si 3 ennemis ou moins sont vivants, possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours. 
+
+Si 4 ennemis ou plus sont vivants, possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 3 tours.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Death Perception",
-          description: `Removes 1 random debuff from all allies and places a 50% [Increase ACC] buff on them for 2 turns.`,
+          name: "Perception de mort",
+          description: `Retire un débuff aléatoire sur tous les alliés et leur accorde un buff ${BUFFS.PRE} de 50 % pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Skeletal Mirror [P]",
-          description: `Whenever an enemy attempts to place a debuff on this Champion, has a 20% chance to reflect it back onto the attacker.`,
+          name: "Miroir osseux [P]",
+          description: `Dès qu'un ennemi essaie de placer un débuff sur ce Champion, possède 20 % de chances de le renvoyer sur l'assaillant.`,
           isPassive: true
         }
       ],
@@ -47,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

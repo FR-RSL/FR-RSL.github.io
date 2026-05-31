@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crippler Round",
-          description: `Attacks 1 enemy. Has a 40% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.35*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Cartouche Paralysante",
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "4.35*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shot Spray",
-          description: `Attacks all enemies 2 times. Each hit has a 50% chance of placing a 50% [Decrease ACC] debuff for 2 turns.`,
-          damage: "2.27*ATK",
+          name: "Tir Épars",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          damage: "2.27*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Big Game Hunter",
-          description: `Attacks 1 enemy 3 times. Each hit has a 40% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "2.45*ATK",
+          name: "Chasse au Gros Gibier",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "2.45*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

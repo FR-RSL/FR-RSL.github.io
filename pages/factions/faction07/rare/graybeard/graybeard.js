@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Expose Weakness",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Exposer la Faiblesse",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} pendant 1 tour.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ice Crush",
-          description: `Attacks all enemies. Has a 25% chance of placing a [Freeze] debuff for 1 turn. Damage inflicted is proportional to DEF.`,
+          name: "Cage de Glace",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "4.1*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Temps de recharge -1", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bring It On!",
-          description: `Places a [Shield] buff on this Champion for 2 turns. Has an 80% chance of placing a [Counterattack] buff on this Champion for 2 turns.<br><br>The value of the [Shield] is proportional to DEF. This buff cannot be removed.<br><br><br>Shield Multiplier: 4*DEF`,
+          name: "Je t'attends !",
+          description: `Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. Possède 80 % de chances de placer un buff ${BUFFS.COUNTER} de 2 tours sur ce Champion.
+
+La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF. Il est impossible de retirer ce buff.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 30%`,
 };

@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wrath Hew",
-          description: `Attacks 1 enemy.`,
+          name: "Taille Colérique",
+          description: `Attaque 1 ennemi.`,
           damage: "3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Comrades in Arms",
-          description: `Places a 25% [Ally Protection] buff on the ally with the lowest HP for 2 turns. Grants an Extra Turn.`,
+          name: "Frères d'Armes",
+          description: `Place un buff de ${BUFFS.ALLY_PROTECT} de 25 % sur l'allié ayant le moins de PV, pendant 2 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 1: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

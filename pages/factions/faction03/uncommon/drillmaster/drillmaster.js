@@ -4,18 +4,18 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Piercing Shot",
-          description: `Attacks 1 enemy. Places a 25% [Increase ATK] buff on this Champion for 2 turns if the attack is critical.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          description: `Attacks 1 enemy. Places a 25% ${BUFFS.ATK} buff on this Champion for 2 turns if the attack is critical.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Double Tap",
           description: `Attacks 1 enemy 2 times.`,
-          damage: "4*ATK",
+          damage: "4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

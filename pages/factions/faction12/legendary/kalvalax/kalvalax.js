@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Oozing Greatsword",
-          description: `Attacks 1 enemy. Has a 40% chance of increasing the duration of all [Poison] debuffs on the target by 1 turn. Heals this Champion by 2.5% of their MAX HP for each [Poison] debuff on the target.<br><br><br>Heal Multiplier: EffectsAppliedOnRelationTargetCountOfKind(ContinuousDamage_KindId)*0.025*HP`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Espadon Suintant",
+          description: `Attaque un ennemi. Possède 40 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON} sur la cible. Soigne ce Champion de 2,5 % de ses PV MAX pour chaque débuff ${DEBUFFS.POISON} sur la cible.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Corruption Locus",
-          description: `Attacks 1 enemy. Places an extra hit for each [Poison] debuff on the target (up to 3 extra hits).`,
-          damage: "2*ATK",
+          name: "Centre de Corruption",
+          description: `Attaque un ennemi. Place une frappe supplémentaire pour chaque débuff ${DEBUFFS.POISON} sur la cible (jusqu'à 3 frappes supplémentaires).`,
+          damage: "2*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Storm of Vitriol",
-          description: `Attacks all enemies. Damage increases according to the number of [Poison] debuffs on each target.`,
-          damage: "(3.5*ATK)+(Poison Count*0.01*Target Max HP)",
+          name: "Tempête de Vitriol",
+          description: `Attaque tous les ennemis. Les dégâts augmentent en fonction du nombre de débuffs ${DEBUFFS.POISON} sur chaque cible.`,
+          damage: "(3.5*ATQ)+(Poison Count*0.01*Target Max HP)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
           name: "Pestilence [P]",
-          description: `Places four 5% [Poison] debuffs on all enemies for 2 turns at the start of each round. <br><br>Has a 50% chance of placing a 5% [Poison] debuff on all enemies for 1 turn at the start of each turn. <br><br>Whenever an enemy places a [Poison] debuff on this Champion, instantly removes it and replaces it with a 15% [Continuous Heal] buff for 2 turns instead.`,
+          description: `Au début de chaque round, place quatre débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours. 
+
+Possède 50 % de chances de placer au début de chaque tour un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 1 tour. 
+
+Dès qu'un ennemi place un débuff ${DEBUFFS.POISON} sur ce Champion, le retire instantanément et le remplace par un buff ${BUFFS.HEALS} de 15 % pendant 2 tours.`,
           cooldown: 1,
           isPassive: true
         }
@@ -49,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 19%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%`,
 };

@@ -3,27 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Head Crack",
-          description: `Attacks 1 enemy. <br><br>Has a 35% chance of placing a 25% [Decrease ACC] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Fêlure de crâne",
+          description: `Attaque un ennemi. 
+
+A 35 % de chances de placer un débuff ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Woundspiller Herbs",
-          description: `Attacks all enemies. <br><br>Has a 50% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "3.4*ATK",
+          name: "Herbes vide-blessures",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "3.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +15%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Grace of the Glen",
-          description: `Places a [Block Debuffs] buff on all allies for 1 turn. <br><br>Fills the Turn Meters of all allies by 15%.`,
+          name: "Grâce du vallon",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour. 
+
+Remplit le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

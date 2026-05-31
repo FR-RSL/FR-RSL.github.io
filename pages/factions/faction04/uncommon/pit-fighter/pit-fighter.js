@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "True Strike",
-          description: `Attacks 1 enemy. Has an extra 25% chance of placing a critical hit.`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Frappe Juste",
+          description: `Attaque un ennemi. Possède 25 % de chances supplémentaires de porter un coup critique.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Gust of Dust",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter by 50%.`,
-          damage: "5*ATK",
+          name: "Bourrasque de Poussière",
+          description: `Attaque un ennemi. Réduit de 50 % le Compteur de Tours de la cible.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

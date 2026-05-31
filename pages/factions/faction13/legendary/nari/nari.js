@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wee Filcher",
-          description: `Attacks 1 enemy. Has a 50% chance of stealing 1 random buff from the target.`,
+          name: "Petit chapardeur",
+          description: `Attaque un ennemi. Possède 50 % de chances de voler un buff aléatoire à la cible.`,
           damage: "2.1*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rainbow of Woe",
-          description: `Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ACC] debuff and a 50% [Decrease RES] debuff for 2 turns.`,
+          name: "Arc-en-ciel de malheur",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours.`,
           damage: "3.3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Irresistible Wealth",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Provoke] debuff for 1 turn. Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Richesse irrésistible",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           damage: "3.7*DEF",
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Joyful Song [P]",
-          description: `At the start of this Champion's turn, transfers 1 random buff from a random enemy to a random ally. <br><br>This Champion’s ACC is increased by 5 for each buff on each ally.`,
+          name: "Chanson joyeuse [P]",
+          description: `Au début du tour de ce Champion, transfère 1 buff aléatoire d'un ennemi pris au hasard à un allié pris au hasard. 
+
+La PRÉ de ce Champion est augmentée de 5 pour chaque buff sur chaque allié.`,
           isPassive: true
         }
       ],

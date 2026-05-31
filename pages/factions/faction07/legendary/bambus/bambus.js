@@ -3,33 +3,55 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bamboo Splinter",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns.<br><br>Will attack all enemies instead if the initial target is under 2 or more debuffs. This attack has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns.<br><br>Then places a [Sleep] debuff on this Champion for 1 turn. This debuff cannot be blocked or resisted.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Écharde de bambou",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Si la cible initiale est affligée de 2 débuffs ou plus, attaquera tous les ennemis au lieu de ça. Cette attaque possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Ensuite, place un débuff ${DEBUFFS.SLEEP} sur ce Champion pendant 1 tour. Il est impossible de résister à ce débuff ou de le bloquer.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Grovetender",
-          description: `Attacks all enemies. Before attacking, places a [Shield] buff on all allies equal to 30% of this Champion's MAX HP for 2 turns. Also increases the duration of all buffs on all allies by 1 turn.<br><br>After attacking, has a 75% chance of decreasing the duration of all enemy buffs by 1 turn, even if the attack lands as a weak hit. Also increases the value of any [Shield] buffs on all allies by 3% for each enemy buff that had its duration decreased by this skill.<br><br>Then places a [Sleep] debuff on this Champion for 1 turn. This debuff cannot be blocked or resisted.<br><br><br>Shield Multiplier: 0.3*Target Max HP`,
-          damage: "5.6*ATK",
+          name: "Soigne-bosquet",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place pendant 2 tours un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion sur tous les alliés. Augmente également d'1 tour la durée de tous les buffs de tous les alliés. 
+
+Après avoir attaqué, possède 75 % de chances de réduire d'1 tour la durée de tous les buffs ennemis, même si l'attaque est une frappe faible. Augmente également de 3 % la valeur des buffs ${BUFFS.SHIELD} sur tous les alliés pour chaque buff ennemi dont la durée a été réduite par cette compétence. 
+
+Ensuite, place un débuff ${DEBUFFS.SLEEP} sur ce Champion pendant 1 tour. Il est impossible de résister à ce débuff ou de le bloquer.`,
+          damage: "5.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Dream Sight",
-          description: `Target an enemy.<br><br>First, places a 50% [Increase ACC] buff and a 50% [Increase ATK] buff on all allies for 2 turns.<br><br>Then, has a 75% chance of placing an [Enfeeble] debuff and a 50% [Decrease ACC] debuff on all enemies for 2 turns. The [Enfeeble] debuff cannot be placed on Bosses. Has a 75% chance of placing a 50% [Decrease ATK] debuff on Bosses for 2 turns instead.<br><br>Finally, places a [Sleep] debuff on this Champion for 1 turn. This debuff cannot be blocked or resisted.`,
+          name: "Vision de rêve",
+          description: `Cible un ennemi.
+
+Place tout d'abord un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. 
+
+Ensuite, a 75 % de chances de placer un débuff ${DEBUFFS.UNFEEBLE} et un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours. Il est impossible de placer le buff ${DEBUFFS.UNFEEBLE} sur les Boss. Au lieu de cela, a 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur les Boss pendant 2 tours.  
+
+Enfin, place un débuff ${DEBUFFS.SLEEP} sur ce Champion pendant 1 tour. Il est impossible de résister à ce débuff ou de le bloquer.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +15%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Sleeping Sage [P]",
-          description: `[Passive Effect]<br><br>Has a 75% chance of transferring any debuffs placed on an ally to this Champion while they are under a [Sleep] debuff. Will not transfer [Block Revive], [Stun], [Freeze], [Fear], [True Fear], [Provoke], [Petrification], and [Sheep] debuffs.<br><br>At the start of this Champion's turn, remove any [Sleep] debuffs from this Champion.<br><br>[Active Effect]<br><br>Transfers all debuffs from this Champion to the enemy with the highest RES if a [Sleep] debuff was removed from this Champion by this Champion's passive skill or by an enemy attack. This effect cannot be resisted or blocked.`,
+          name: "Sage endormi [P]",
+          description: `${PASSIVE}
+
+Possède 75 % de chances de transférer sur ce Champion les débuffs placés sur un allié lorsqu'il se trouve sous débuff ${DEBUFFS.SLEEP}. Ne transférera pas les débuffs ${DEBUFFS.BLOCK_REA}, ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.PETRIFICATION}, et ${DEBUFFS.SHEEP}. 
+
+Au début du tour de ce Champion, retire les débuffs ${DEBUFFS.SLEEP} sur ce Champion.
+
+${ACTIVE}
+
+Transfère tous les débuffs de ce Champion sur l'ennemi qui a la RÉS la plus élevée si un débuff ${DEBUFFS.SLEEP} a été retiré de ce Champion par sa compétence passive ou par une attaque ennemie. Il est impossible de résister à cet effet et de le bloquer.`,
           isPassive: true
         }
       ],
@@ -47,5 +69,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

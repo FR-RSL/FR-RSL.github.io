@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Shackle Shot",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a 15% [Decrease SPD] debuff for 1 turn.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Tir de Chaînes",
+          description: `Attaque un ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 1 tour.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Freezing Arrow",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "6.5*ATK",
+          name: "Flèche Glaciale",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +20%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +20%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

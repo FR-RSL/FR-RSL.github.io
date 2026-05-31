@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Putrid Brazier",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Brasero Putride",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Heroes of Old",
-          description: `Places a 50% [Increase ATK] buff on all allies for 2 turns and fills the Turn Meters of all allies by 20%.`,
+          name: "Héros d'Antan",
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours, puis augmente le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Ghostwalk",
-          description: `Revives 2 random allies with 60% HP, then fills their Turn Meters by 40% and places a [Perfect Veil] buff on them for 2 turns.`,
+          name: "Marche Fantôme",
+          description: `Ranime 2 alliés pris au hasard avec 60 % de PV, puis remplit leurs Compteurs de Tour de 40 % et leur accorde un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

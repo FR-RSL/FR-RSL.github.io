@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bushwhack",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical. The extra hit places a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Déblayage",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique. Le coup supplémentaire place un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Flailing Pick",
-          description: `Attacks all enemies. Each critical hit fills this Champion’s Turn Meter by 7.5%.`,
-          damage: "3.3*ATK",
+          name: "Pic Agité",
+          description: `Attaque tous les ennemis. Chaque coup critique remplit de 7,5 % le Compteur de Tour de ce Champion.`,
+          damage: "3.3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Deep Ambush",
-          description: `Places a 50% [Increase ACC] buff on all allies for 2 turns, then attacks all enemies. Has a 75% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3*ATK",
+          name: "Embuscade Profonde",
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Damage +5%", "Level 8: Damage +10%", "Level 9: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],

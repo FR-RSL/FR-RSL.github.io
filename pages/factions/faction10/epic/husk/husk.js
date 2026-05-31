@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Burning Iron",
-          description: `Attacks 1 enemy 2 times. Has a 20% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "2.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Fer Brûlant",
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "2.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Despair",
-          description: `Attacks all enemies. Has a 35% chance of placing a [Stun] debuff for 1 turn. Damage inflicted is proportional to enemy MAX HP.`,
+          name: "Désespoir",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Les dégâts infligés sont proportionnels aux PV MAX de l'ennemi.`,
           damage: "0.1*Target Max HP",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Retaliate",
-          description: `Attacks 1 enemy. Damage increases according to this Champion's current HP.`,
+          name: "Riposter",
+          description: `Attaque 1 ennemi. Les dégâts augmentent en fonction des PV actuels de ce Champion.`,
           damage: "0.33*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Arena by 30%`,
+  description: `Augmente la statistique PV des Alliés lors des batailles d'Arène de 30%`,
 };

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crypt Touch",
-          description: `Attacks 1 enemy 2 times. Has a 20% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Toucher de Crypte",
+          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lifeleech",
-          description: `Attacks 1 enemy. Heals this Champion by 15% of damage inflicted.<br><br><br>Heal Multiplier: 0.15*Damage Dealt`,
-          damage: "5*ATK",
+          name: "Sangsue de Vie",
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 15 % des dégâts infligés.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gravefire",
-          description: `Attacks 1 enemy. Places a [HP Burn] debuff for 2 turns.`,
-          damage: "4.9*ATK",
+          name: "Feutombe",
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.BURN} de 2 tours.`,
+          damage: "4.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Force Ally ATK in All Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés Force lors de toutes les Batailles de 30%`,
 };

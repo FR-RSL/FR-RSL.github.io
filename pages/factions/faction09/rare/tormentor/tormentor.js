@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Endless Agonies",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical. The extra hit is always a normal hit.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Agonies Interminables",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique. La frappe supplémentaire est toujours un coup normal.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Infernal Miasma",
-          description: `Attacks 2 times at random. Each hit has a 50% chance of placing a 25% [Decrease ACC] debuff.`,
-          damage: "3.3*ATK",
+          name: "Miasme Infernal",
+          description: `Attaque 2 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          damage: "3.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Creeping Doom",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing a [Block Buffs] debuff for 2 turns. Places a [Stun] debuff for 1 turn if the target is under a [Block Buffs] debuff.`,
-          damage: "3.5*ATK",
+          name: "Ruine Insidieuse",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances d'appliquer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours. Place un débuff d'${DEBUFFS.STUN} d'1 tour si la cible souffre d'un débuff de ${DEBUFFS.BLOCK_BUFFS}.`,
+          damage: "3.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

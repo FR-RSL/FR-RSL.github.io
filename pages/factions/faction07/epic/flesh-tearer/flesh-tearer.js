@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Multiply Misery",
-          description: `Attacks 1 enemy. Has a 40% chance of transferring 1 random debuff from this Champion to the target.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%"],
+          name: "Multiplie la Misère",
+          description: `Attaque 1 ennemi. Possède 40 % de chances de transférer sur la cible 1 débuff aléatoire de ce Champion.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Warleader",
-          description: `Heals all allies by 30% of their MAX HP. Increases the duration of all ally buffs by 1 turn.<br><br><br>Heal Multiplier: 0.3*Target Max HP`,
+          name: "Chef de Guerre",
+          description: `Soigne tous tes alliés à hauteur de 30 % de leurs PV max. Augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +5%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lay Low",
-          description: `Attacks all enemies. Decreases the duration of all enemy buffs by 1 turn. Increases the duration of all enemy debuffs by 1 turn.`,
-          damage: "3.5*ATK",
+          name: "Profil Bas",
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Augmente d'1 tour la durée de tous les débuffs ennemis.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 27%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 27%`,
 };

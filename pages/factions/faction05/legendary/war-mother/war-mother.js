@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cry Havoc",
-          description: `Attacks 1 enemy 2 times. Each hit places a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "1.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%"],
+          name: "Cri Ravageur",
+          description: `Attaque 2 fois un ennemi. Chaque frappe place un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "1.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Special Brew",
-          description: `Attacks all enemies. Places two [Bomb] debuffs that detonate after 2 turns. Bomb damage increases by 100% against Bosses.<br><br><br>Bomb Multiplier: 5.5*ATK`,
-          damage: "4.25*ATK",
+          name: "Infusion Spéciale",
+          description: `Attaque tous les ennemis. Place deux débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours. Les dégâts de la Bombe augmentent de 100 % contre les Boss.`,
+          damage: "4.25*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mother's Touch",
-          description: `Attacks all enemies. Instantly detonates all [Bomb] debuffs if this Champion is under an [Increase ATK] buff.`,
-          damage: "4.5*ATK",
+          name: "Toucher Maternel",
+          description: `Attaque tous les ennemis. Fais exploser instantanément tous les débuffs ${DEBUFFS.BOMB} si ce Champion se trouve sous buff ${BUFFS.ATK}.`,
+          damage: "4.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 65`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 65`,
 };

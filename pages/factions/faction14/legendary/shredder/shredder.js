@@ -3,34 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rage of Saki",
-          description: `Attacks 1 enemy 3 times. <br><br>The second and third hits of this skill will ignore 5% and 10% of the target's DEF respectively. The second and third hits of this skill will deal 10% and 20% more C. DMG respectively.`,
+          name: "Rage de Saki",
+          description: `Attaque 3 fois un ennemi. 
+
+La deuxième et la troisième frappe de cette compétence ignoreront 5 % et 10 % de la DÉF de la cible, respectivement. La deuxième et la troisième frappe de cette compétence infligeront 10 % et 20 % supplémentaires des DÉG C., respectivement.`,
           damage: "0.1*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shadow Shinobi",
-          description: `Attacks all enemies 2 times. <br><br>Each critical hit destroys the enemy's DEF by 5% (stacks up to 30%). Each critical hit also increases this Champion’s MAX HP by 5% (stacks up to 30%). <br><br>Each hit has a 75% chance of placing a [Leech] debuff for 2 turns. This debuff cannot be resisted if this Champion is under a [Veil] or a [Perfect Veil] buff.`,
+          name: "Ombre de shinobi",
+          description: `Attaque 2 fois tous les ennemis. 
+
+Chaque frappe critique détruit la DÉF de l'ennemi de 5 % (s'accumule jusqu'à 30 %). Chaque frappe critique augmente également les PV MAX de ce Champion de 5 % (s'accumule jusqu'à 30 %). 
+
+Chaque frappe a 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Il est impossible de résister à ce débuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "0.16*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "This Is True Ninjutsu!",
-          description: `Attacks all enemies. Before attacking, steals all buffs from a single target enemy. This effect cannot be resisted if this Champion is under a [Veil] or a [Perfect Veil] buff. Fills this Champion's Turn Meter by 15% for each buff stolen. <br><br>Will ignore 15% of each enemy's DEF, as well as [Shield] and [Block Damage] buffs. If this Champion is under a [Veil] or [Perfect Veil] buff, will ignore 30% of each enemy's DEF instead.`,
+          name: "C'est le vrai ninjutsu !",
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs à une seule cible ennemie. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Remplit le Compteur de Tour de ce Champion de 15 % pour chaque buff volé. 
+
+Ignorera 15 % de la DÉF de chaque ennemi, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, ignorera au lieu de ça 30 % de la DÉF de chaque ennemi.`,
           damage: "0.27*HP",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dimensional Tyrant [P]",
-          description: `[Passive Effect]<br><br>Decreases all incoming damage by 30%. This damage is split equally among all allies, except this Champion.<br><br>Increases this Champion’s damage dealt by 15% for each dead ally.<br><br>[Active Effect]<br><br>Whenever this Champion loses 20% of their MAX HP in one attack, has a 100% chance to Evade the next attack. When this guaranteed Evade effect activates, places a [Perfect Veil] buff on this Champion for 2 turns and has a 50% chance of placing a [True Fear] debuff on all enemies for 1 turn. The [True Fear] debuff cannot be resisted.`,
+          name: "Tyran dimensionnel [P]",
+          description: `${PASSIVE}
+
+Réduit tous les dégâts en approche de 30 %. Ces dégâts sont divisés également entre tous les alliés, sauf ce Champion.
+
+Augmente les dégâts infligés par ce Champion de 15 % pour chaque allié mort.
+
+${ACTIVE}
+
+Dès que ce Champion perd 20 % de ses PV MAX lors d'une attaque, a 100 % de chances d'Esquiver l'attaque suivante. Dès que cet effet Esquive garanti s'active, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours et a 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Il est impossible de résister au débuff ${DEBUFFS.TRUE_FEAR}.`,
           cooldown: 1,
           isPassive: true
         }
@@ -49,5 +65,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hamstring Bite",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 15% [Decrease SPD] debuff for 2 turns.`,
-          damage: "4.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%"],
+          name: "Mord-cuisse",
+          description: `Attaque un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          damage: "4.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rabid Infection",
-          description: `Attacks all enemies. Has a 25% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "4.8*ATK",
+          name: "Infection Rabique",
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "4.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],

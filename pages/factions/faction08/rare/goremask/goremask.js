@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Snap",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%"],
+          name: "Cassé Net",
+          description: `Attaque 2 fois un ennemi.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Go for the Throat",
-          description: `Attacks 1 enemy. Damage increases by 20% if this attack is critical.`,
-          damage: "4.4*ATK",
+          name: "Sauter à la gorge",
+          description: `Attaque un ennemi. Les dégâts augmentent de 20 % si cette attaque passe en critique.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Damage +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tearing Jaws",
-          description: `Attacks 1 enemy. Will ignore [Shield] and [Block Damage] buffs.`,
-          damage: "4.8*ATK",
+          name: "Mâchoires Déchirantes",
+          description: `Attaque un ennemi. Ignorera le ${BUFFS.SHIELD} et les buffs de ${BUFFS.BLOCK_DAMAGE}.`,
+          damage: "4.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Arena by 25%`,
+  description: `Augmente la statistique PV des Alliés lors des batailles d'Arène de 25%`,
 };

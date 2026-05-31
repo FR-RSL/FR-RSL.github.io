@@ -3,11 +3,8 @@ const championData = {
       spells: [
         {
           img: "assets/sort1.webp",
-          name: "Buveur d'Ames",
-          description: `
-            Attaque un ennemi.
-            Accorde un Tour supplémentaire si cette attaque tue un ennemi.
-          `,
+          name: "Buveur d'Âmes",
+          description: `Attaque un ennemi. Accorde un Tour Supplémentaire si cette attaque tue un ennemi.`,
           damage: "3.8*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -19,11 +16,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Gel du Sang",
-          description: `
-            Attaque un ennemi. Vole 100% du Compteur de Tour de la cible.<br><br>
-            Reduit d'1 tour le temps de recharge de <span class='gbt'>Rage d'Oni</span> si la cible est immunisee contre les effets
-            de reduction du Compteur de Tour.
-          `,
+          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible.
+
+Réduit d'1 tour le temps de recharge de [Rage d'Oni] si la cible est immunisée contre les effets de réduction du Compteur de Tour.`,
           damage: "5.8*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -36,11 +31,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Rage d'Oni",
-          description: `
-            Attaque un ennemi. Place un débuff
-            <span class='gbt'>Reduction de DEF</span> de 60% et un débuff <span class='gbt'>Affaiblissement</span> de 25% pendant 2 tours.<br><br>
-            Attaquera 5 fois un ennemi au lieu d'1 a chaque 4eme utilisation de cette compétence contre la meme cible au cours d'un round.
-          `,
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.
+
+Attaquera 5 fois au lieu d'1 à chaque 4e utilisation de cette compétence contre la même cible au cours d'un round.`,
           damage: "5.7*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -53,9 +46,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Vigoureux [P]",
-          description: `
-            Tous les effets d'augmentation de Compteur de Tour sont augmentes de 50% lorsqu'ils sont utilises sur ce Champion.
-          `,
+          description: `Tous les effets de réduction de Compteur de Tour sont augmentés de 50 % lorsqu'ils sont utilisés sur ce Champion.`,
           isPassive: true,
         },
       ],

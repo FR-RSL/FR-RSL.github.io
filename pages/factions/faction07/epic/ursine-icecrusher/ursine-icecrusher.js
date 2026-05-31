@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Ravaging Paw",
-          description: `Attacks 1 enemy. Has a 10% chance of placing a [Block Active Skills] debuff for 1 turn.`,
+          name: "Patte Dévastatrice",
+          description: `Attaque un ennemi. Possède 10 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Howling Gale",
-          description: `Attacks all enemies. Has a 75% chance of placing a 30% [Decrease C. RATE] debuff for 2 turns.`,
+          name: "Vent Hurlant",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.`,
           damage: "3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Shroud of Winter [P]",
-          description: `Decreases the damage all allies receive from critical hits by 15%. Fills this Champion’s Turn Meter by 5% whenever an enemy lands a normal, strong, or weak hit.`,
+          name: "Voile Hivernal ${PASSIVE}",
+          description: `Réduit de 15 % les dégâts infligés par les coups critiques à tous les alliés. Remplit de 5 % le Compteur de Tour de ce Champion dès qu'un ennemi porte un coup normal, puissant ou faible.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

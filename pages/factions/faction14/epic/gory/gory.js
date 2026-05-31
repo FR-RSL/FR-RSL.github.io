@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cold Comfort",
-          description: `Attacks 1 enemy 2 times. Places an extra hit if the target is under a [Freeze] debuff. Heals this Champion by 10% of the damage inflicted.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Froide Consolation",
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si un ennemi se trouve sous débuff ${DEBUFFS.GEL}. Soigne ce Champion à hauteur de 10 % des dégâts infligés.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Frost Jutsu",
-          description: `Attacks 3 times at random. Each hit has a 75% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "2.1*ATK",
+          name: "Jutsu Gelé",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          damage: "2.1*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Frost Breaker",
-          description: `Attacks 1 enemy. Will ignore [Increase DEF] and [Shield] buffs. Will also ignore 50% of the target’s DEF if they are under a [Freeze] debuff. <br><br>Places a [Counterattack] buff and a 50% [Increase ATK] buff on this Champion for 2 turns if this attack kills an enemy.`,
-          damage: "5.6*ATK",
+          name: "Brise-Gel",
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.DEF} et ${BUFFS.SHIELD}. Ignorera également 50 % de la DÉF de la cible si elle est sous débuff ${DEBUFFS.GEL}. 
+
+Place sur ce Champion un buff ${BUFFS.COUNTER} et un buff ${BUFFS.ATK} de 50 % pendant 2 tours si cette attaque tue un ennemi.`,
+          damage: "5.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Dignity [P]",
-          description: `Counterattacks with the Cold Comfort skill whenever an enemy places a [Stun], [Sleep], [Freeze], [Provoke], [Fear], [True Fear], [Petrification] debuff on an ally.`,
+          name: "Dignité [P]",
+          description: `Contre-attaque avec la compétence Froide Consolation dès qu'un ennemi place un débuff ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} ou ${DEBUFFS.PETRIFICATION} sur un allié.`,
           isPassive: true
         }
       ],

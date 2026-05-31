@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mutilate",
-          description: `Attacks 1 enemy 2 times. Has a 15% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%"],
+          name: "Mutilation",
+          description: `Attaque 2 fois un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ancient Seal",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "7*ATK",
+          name: "Sceau Ancestral",
+          description: `Attaque 1 ennemi. Possède 80 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Death's Vigor",
-          description: `Attacks all enemies. Places a 15% [Increase C. RATE] buff on all allies for 2 turns.`,
-          damage: "4.2*ATK",
+          name: "Vigueur de la Mort",
+          description: `Attaque tous les ennemis. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés.`,
+          damage: "4.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

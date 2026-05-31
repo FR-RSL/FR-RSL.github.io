@@ -3,32 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Roll With The Times",
-          description: `Attacks all enemies. Heals this Champion by 5% of their MAX HP.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Suivre le cours du temps",
+          description: `Attaque tous les ennemis. Soigne ce Champion de 5 % de ses PV MAX.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Reclusive Sage",
-          description: `Heals all allies by 15% of this Champion's MAX HP, and fills the Turn Meters of all allies by 15%. <br><br>Also places a 25% [Increase RES] buff on all allies for 2 turns.`,
+          name: "Sage reclus",
+          description: `Soigne tous les alliés de 15 % des PV MAX de ce Champion et remplit de 15 % le Compteur de Tour de tous les alliés. 
+
+Place également un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "You've Much To Learn",
-          description: `Revives an ally with 75% HP and 50% Turn Meter. <br><br>Places an [Unkillable] buff and 30% [Reflect Damage] buff on that ally for 2 turns.`,
+          name: "Tu as beaucoup à apprendre",
+          description: `Ranime un allié avec 75 % de PV et 50 % de Compteur de Tour. 
+
+Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur cet allié pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Outliver Of Empires [P]",
-          description: `Heals this Champion by 25% of their MAX HP whenever an ally dies.<br><br>Heals all allies by 50% of this Champion's MAX HP whenever this Champion dies.`,
+          name: "Survivant aux empires [P]",
+          description: `Soigne ce Champion de 25 % de ses PV MAX chaque fois qu'un allié meurt. Soigne tous les alliés de 50 % des PV MAX de ce Champion lorsque ce Champion meurt.`,
           isPassive: true
         }
       ],
@@ -46,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Crypts by 45`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Factions de 45`,
 };

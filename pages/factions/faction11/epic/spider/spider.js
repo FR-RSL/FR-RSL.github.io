@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Possess",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random buff from the target.`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Skill 229001 name",
+          description: `Skill 229001 description`,
+          damage: "4*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Calamity",
-          description: `Attacks all enemies. Decreases the duration of all buffs by 1 turn. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
-          damage: "1.8*ATK+0.1*HP",
+          name: "Calamité",
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          damage: "1.8*ATQ+0.1*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Glowing Mark",
-          description: `Has a 60% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Has a 30% chance of placing a 15% [Weaken] debuff on all enemies for 1 turn.`,
+          name: "Marque Éclatante",
+          description: `Possède 60 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 60 % sur tous les ennemis. Possède 30 % de chances de placer, pendant 1 tour, un débuff d'${DEBUFFS.WEAKEN} de 15 % sur tous les ennemis.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 25%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 25%`,
 };

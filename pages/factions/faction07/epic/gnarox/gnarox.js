@@ -3,33 +3,39 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Knee-Smasher",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Écrase-genou",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "1.7*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Means To An End",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Arriver à ses fins",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bullish Fighter",
-          description: `Attacks all enemies. <br><br>Has a 50% chance of placing a [Provoke] debuff for 1 turn. This debuff cannot be resisted, if this Champion's DEF is lower than the target’s. <br><br>Places a 30% [Reflect Damage] buff on all allies for 2 turns.`,
+          name: "Combattant borné",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de résister à ce débuff si la DÉF de ce Champion est inférieure à celle de la cible. 
+
+Place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
           damage: "4*DEF",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Loathed Pariah [P]",
-          description: `Whenever an enemy attacks an ally under an [Ally Protection] buff, has a 15% chance of placing a [Provoke] debuff on the attacker for 1 turn.`,
+          name: "Paria abhorré [P]",
+          description: `Lorsqu'un ennemi attaque un allié sous buff ${BUFFS.ALLY_PROTECT}, a 15 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.`,
           isPassive: true
         }
       ],
@@ -47,5 +53,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 30%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 30%`,
 };

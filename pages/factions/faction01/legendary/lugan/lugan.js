@@ -3,33 +3,43 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crushing Blow",
-          description: `Attacks 1 enemy. Heals all allies by 25% of the damage inflicted.<br><br>Has a 50% chance of placing a [Stun] debuff for 1 turn.<br><br>When counterattacking, will also ignore 20% of the target's DEF.`,
+          name: "Coup Dévastateur",
+          description: `Attaque un ennemi. Soigne tous les alliés à hauteur de 25 % des dégâts infligés. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+
+Lorsque ce Champion contre-attaque, ignorera également 20 % de la DÉF de la cible.`,
           damage: "0.26*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bodyguard",
-          description: `Places a 60% [Increase DEF] buff, a 50% [Ally Protection] buff, and a [Shield] buff equal to 30% of this Champion's MAX HP on all allies for 2 turns.`,
+          name: "Garde du Corps",
+          description: `Place sur tous les alliés un buff ${BUFFS.DEF} de 60 %, un buff ${BUFFS.ALLY_PROTECT} de 50 % et un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Mark of Silence",
-          description: `Attacks all enemies. <br><br>Has an 80% chance of decreasing the duration of all enemy buffs by 2 turns. Also has an 80% chance of placing a [Block Active Skills] debuff for 2 turns.<br><br>Will ignore 25% of each target's DEF if this Champion is under a [Shield] buff.`,
+          name: "Marque de Silence",
+          description: `Attaque tous les ennemis. 
+
+A 80 % de chances de réduire de 2 tours la durée de tous les buffs dont bénéficient les ennemis. A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+
+Ignorera 25 % de la DÉF de chaque cible si ce Champion se trouve sous buff ${BUFFS.SHIELD}.`,
           damage: "0.3*HP",
           cooldown: 3,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Damage +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Stoic Solidarity [P]",
-          description: `Whenever an enemy attacks an ally under a [Shield] buff, counterattacks with this Champion's default skill.<br><br>The damage inflicted by this Champion increases by 10% for each active buff on allies placed by this Champion.`,
+          name: "Solidarité stoïque [P]",
+          description: `Dès qu'un ennemi attaque un allié sous buff ${BUFFS.SHIELD}, contre-attaque avec la compétence par défaut de ce Champion.
+
+Les dégâts infligés par ce Champion augmentent de 10 % pour chaque buff actif qui a été placé sur les alliés par ce Champion.`,
           isPassive: true
         }
       ],
@@ -47,5 +57,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 38%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 38%`,
 };

@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Crackling Blade",
-          description: `Attacks 1 enemy 2 times. Has a 55% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Lame Crépitante",
+          description: `Attaque 2 fois un ennemi. Possède 55 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ancestors' Power",
-          description: `Places a 50% [Increase ATK] buff, a 30% [Increase C. RATE] buff and a 30% [Increase SPD] buff on this Champion for 2 turns. Grants an Extra Turn.`,
+          name: "Puissance des Ancêtres",
+          description: `Place un buff d'${BUFFS.ATK} de 50 %, un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours. Accorde un Tour supplémentaire.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Juggernaut",
-          description: `Attacks 1 enemy 2 times. Damage increases according to the number of buffs on this Champion. If the target is killed, resets the cooldown of this skill.`,
-          damage: "3*ATK",
+          name: "Mastodonte",
+          description: `Attaque 2 fois un ennemi. Les dégâts augmentent en fonction du nombre de buffs se trouvant sur ce Champion. Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
+          damage: "3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Faction Wars by 42%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Cryptes de Faction de 42%`,
 };

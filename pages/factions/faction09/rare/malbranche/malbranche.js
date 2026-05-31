@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Gathering Inferno",
-          description: `Attacks 1 enemy. Decreases [Bomb] debuff detonation countdowns by 1 turn.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Forme-Brasier",
+          description: `Attaque un ennemi. Réduit d'1 tour le compte à rebours de la détonation du débuff de ${DEBUFFS.BOMB}.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bident Mastery",
-          description: `Attacks 1 enemy 2 times. Places a [Counterattack] buff on this Champion for 2 turns.`,
-          damage: "2.3*ATK",
+          name: "Maîtrise du Bident",
+          description: `Attaque 2 fois un ennemi. Place, pendant 2 tours, un buff ${BUFFS.COUNTER} sur ce Champion.`,
+          damage: "2.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Demonic Explosives",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a [Bomb] debuff that detonates after 3 turns.<br><br><br>Bomb Multiplier:`,
-          damage: "6.6*ATK",
+          name: "Explosifs Démoniaques",
+          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff de ${DEBUFFS.BOMB} qui détonera après 3 tours.`,
+          damage: "6.6*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Cooldown -1", "Level 8: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 16%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 16%`,
 };

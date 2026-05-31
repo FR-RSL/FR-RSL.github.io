@@ -3,35 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lulling Touch",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Sleep] debuff for 1 turn.`,
+          name: "Toucher Berçant",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
           damage: "2.4*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Disorienting Blast",
-          description: `Attacks all enemies. Has a 75% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Coup Désorientant",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Twisted Devotion",
-          description: `Places a 30% [Increase DEF] buff on all allies for 2 turns and a [Block Debuffs] buff on all allies for 2 turns.`,
+          name: "Dévouement Tordu",
+          description: `Place 2 tours de buff d'${BUFFS.DEF} de 30 % et 2 tours de buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort4.webp",
-          name: "Selfless Partner",
-          description: `Places a 50% [Ally Protection] buff on all allies for 2 turns. Places a [Block Damage] buff on this Champion for 1 turn. <br><br>[Only available when Temptress is on the same team.]`,
+          name: "Partenaire Altruiste",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés. Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DAMAGE} sur ce Champion.
+
+[Uniquement disponible lorsque Tentatrice se trouve dans la même équipe.]`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -49,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 25%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

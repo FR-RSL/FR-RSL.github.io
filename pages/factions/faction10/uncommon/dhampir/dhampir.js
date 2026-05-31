@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Deathblow",
-          description: `Attacks 1 enemy. Grants an Extra Turn if the target is killed.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Coup Mortel",
+          description: `Attaque 1 ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloody Feast",
-          description: `Attacks all enemies. Heals by 20% of the damage inflicted.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "3*ATK",
+          name: "Sanglant Festin",
+          description: `Attaque tous les ennemis. Soigne à hauteur de 20 % des dégâts infligés.`,
+          damage: "3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

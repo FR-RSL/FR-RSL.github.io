@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Icy Temper",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "3.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Humeur Glaciale",
+          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
+          damage: "3.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Diminish",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 25% of the damage inflicted.`,
-          damage: "5.4*ATK",
+          name: "Amoindrir",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 25 % des dégâts infligés.`,
+          damage: "5.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sow Confusion",
-          description: `Attacks 1 enemy. Places a 30% [Decrease DEF] debuff for 2 turns. Places a 30% [Decrease DEF] debuff on all enemies for 2 turns if this attack is critical.`,
-          damage: "5.9*ATK",
+          name: "Semer la Confusion",
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours. Place, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 30 % sur tous les ennemis si l'attaque passe en critique.`,
+          damage: "5.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

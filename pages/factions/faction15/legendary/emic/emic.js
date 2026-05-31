@@ -4,15 +4,11 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Vrille de racine",
-          description: `
-            Attaque un ennemi.<br><br>
-            Augmente la valeur de tous les buffs 
-            <span class='gbt'>Bouclier</span> sur ce Champion de 25%.
-            Augmente également la valeur des buffs <span class='gbt'>Bouclier</span>
-            sur l'allié ayant le moins de PV de 25%.<br><br>
-            La valeur augmentee du buff <span class='gbt'>Bouclier</span>
-            ne peut pas depasser 10 000 PV.
-          `,
+          description: `Attaque un ennemi.
+
+Augmente la valeur de tous les buffs ${BUFFS.SHIELD} sur ce Champion de 25 %. Augmente également la valeur des buffs ${BUFFS.SHIELD} sur l'allié ayant le moins de PV de 25 %.
+
+La valeur augmentée du buff ${BUFFS.SHIELD} ne peut pas dépasser 10 000 PV.`,
           damage: "0.24*PV",
           levelInfo: [
             "Dégâts +5%",
@@ -24,13 +20,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tremble-vigne",
-          description: `
-            Attaque tous les ennemis.<br><br>
-            Place sur tous les alliés un buff <span class='gbt'>Bouclier</span>
-            equivalent a 30% des PV MAX de ce Champion pendant 2 tours.<br><br>
-            Reduit d'1 tour le temps de recharde de toutes les compétences
-            des alliés, sauf celles de ce Champion.
-          `,
+          description: `Attaque tous les ennemis. 
+
+Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. 
+
+Réduit d'1 tour le temps de recharge de toutes les compétences des alliés, sauf celles de ce Champion.`,
           damage: "0.27*PV",
           cooldown: 4,
           levelInfo: [
@@ -42,14 +36,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Sanctuaire du Coeur-Tronc",
-          description: `
-            Place un buff <span class='gbt'>Invincible</span> sur tous
-            les alliés pendant 2 tours.<br><br>
-            Place également un buff <span class='gbt'>Bouclier</span> et un buff
-            sur ce Champion pendant 2 tours.
-            La valeur du <span class='gbt'>Bouclier</span> est egale a 30% 
-            des PV MAX de ce Champion.
-          `,
+          description: `Place un buff ${BUFFS.UNKILLABLE} sur tous les alliés pendant 2 tours. 
+
+Place également un buff ${BUFFS.TAUNT} et un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 30 % des PV MAX de ce Champion.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -58,15 +47,10 @@ const championData = {
         },
         {
           img: "assets/passif1.webp",
-          name: "Enchevetrement [P]",
-          description: `
-            Lorsque le Champion est attaque alors qu'il beneficie d'un buff
-            <span class='gbt'>Bouclier</span>, Possède 50% de chances d'augmenter de 2 tours
-            le temps de recharge d'une compétence aleatoire de l'assaillant.
-            Ne se produit qu'une fois par attaque.<br><br>
-            Des que les PV d'un allié tombent sous 20%,
-            augmente les degats infliges par cet allié de 20%.
-          `,
+          name: "Enchevêtrement [P]",
+          description: `Lorsque le Champion est attaqué alors qu'il bénéficie d'un buff ${BUFFS.SHIELD}, possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire de l'assaillant. Ne se produit qu'une fois par attaque. 
+
+Dès que les PV d'un allié tombent sous 20 %, augmente les dégâts infligés par cet allié de 20 %.`,
           levelInfo: [
             "Chance de Buff/débuff +10%",
             "Chance de Buff/débuff +15%",

@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Light of Scrutiny",
-          description: `Attacks 1 enemy. Has a 40% chance of removing 1 random buff. Has a 50% chance of stealing 1 random buff instead if the target has 3 or more buffs.`,
-          damage: "3.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Lumière de Surveillance",
+          description: `Attaque un ennemi. Possède 40 % de chances de retirer 1 buff aléatoire. Sinon, possède 50 % de chances de voler 1 buff aléatoire si la cible possède 3 buffs ou plus.`,
+          damage: "3.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Triumph Cry",
-          description: `Attacks all enemies. Has a 50% chance of placing a 15% [Weaken] debuff for 2 turns.`,
-          damage: "4.25*ATK",
+          name: "Cri de Triomphe",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          damage: "4.25*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Focused",
-          description: `Places a 25% [Increase ATK] buff and a 15% [Increase C. RATE] buff on this Champion for 3 turns, then attacks all enemies.`,
-          damage: "3.9*ATK",
+          name: "Concentrée",
+          description: `Place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CRATE} de 15 % sur ce Champion pendant 3 tours, puis attaque tous les ennemis.`,
+          damage: "3.9*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],

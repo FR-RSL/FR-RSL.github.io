@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lodestone Claw",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random debuff from all allies.`,
+          name: "Griffe aimant",
+          description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 débuff aléatoire sur tous les alliés.`,
           damage: "0.22*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Protector Effigy",
-          description: `Attacks all enemies. Places a [Shield] buff on all allies for 2 turns equal to 15% of this Champion’s MAX HP. Increases the duration of all buffs on all allies by 1 turn.<br><br><br>Shield Multiplier: 0.15*HP`,
+          name: "Effigie protectrice",
+          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion pendant 2 tours. Augmente d'1 tour la durée de tous les buffs de tous les alliés.`,
           damage: "0.24*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Shield +10%", "Level 4: Damage +10%", "Level 5: Shield +10%"],
+          levelInfo: ["Dégâts +10%", "Bouclier +10%", "Dégâts +10%", "Bouclier +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lure of Fools",
-          description: `Places a [Taunt] buff on this Champion for 1 turn. Also places a 25% [Strengthen] buff and a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Appât des fous",
+          description: `Place un buff ${BUFFS.TAUNT} sur ce Champion pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 20%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 20%`,
 };

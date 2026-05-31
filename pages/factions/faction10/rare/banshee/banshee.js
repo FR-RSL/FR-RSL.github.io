@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Grave Chill",
-          description: `Attacks all enemies. Has a 20% chance of placing a 30% [Decrease DEF] debuff for 1 turn.`,
-          damage: "2.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Froid Tombal",
+          description: `Attaque tous les ennemis. Offre 20 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          damage: "2.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Cursed Touch",
-          description: `Attacks all enemies. Has a 50% chance of removing 1 random buff from each target.`,
-          damage: "3.1*ATK",
+          name: "Toucher Maudit",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de retirer 1 buff aléatoire de chaque cible.`,
+          damage: "3.1*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Death Ray",
-          description: `Attacks 2 times at random. Each attack has a 50% chance of placing a [Block Active Skills] debuff for 1 turn.`,
-          damage: "2.8*ATK",
+          name: "Rayon Mortel",
+          description: `Attaque 2 fois au hasard. Chaque attaque possède 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          damage: "2.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 52`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 52`,
 };

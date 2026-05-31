@@ -3,34 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Enter the Morass",
-          description: `Attacks all enemies. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Entre dans le Bourbier",
+          description: `Attaque tous les ennemis. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "2*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Centuried Vigor",
-          description: `Attacks all enemies. Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places two 15% [Continuous Heal] buffs on this Champion for 1 turn. Increases the duration of all ally buffs by 1 turn.`,
+          name: "Vigueur des Siècles",
+          description: `Attaque tous les ennemis. Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf sur ce Champion. Place deux buffs de ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour. Augmente d'1 tour la durée de tous les buffs alliés.`,
           damage: "3*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Invincible Shell",
-          description: `Places a [Provoke] debuff on all enemies for 1 turn. <br>Places a 60% [Increase DEF] buff on this Champion for 2 turns. Places a 30% [Increase SPD] buff on all allies except this Champion for 2 turns.`,
+          name: "Carcasse Invincible",
+          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. 
+Place un buff d'${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % sur tous les alliés, sauf sur ce Champion.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Might of Ages [P]",
-          description: `At the start of each Round, places a [Shield] buff on all allies for 2 turns equal to 50% of this Champion’s MAX HP. Has a 75% chance of placing a 60% [Decrease DEF] debuff and a 50% [Decrease ATK] debuff on the attacker for 1 turn when hit.<br><br><br>Shield Multiplier: 0.5*HP`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%"],
+          name: "Puissance des Âges [P]",
+          description: `Au début de chaque round, place sur tous les alliés un buff de ${BUFFS.SHIELD} équivalent à 50 % des PV MAX de ce Champion pendant 2 tours. Lorsque le héros se fait frapper, possède 75 % de chances de placer, pendant 1 tour, un débuff de ${DEBUFFS.DEF} de 60 % et un débuff de ${DEBUFFS.ATK} de 50 % sur l'assaillant.`,
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],

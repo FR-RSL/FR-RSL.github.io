@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pity Slaying",
-          description: `Attacks 1 enemy 2 times. Each hit has a 15% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "1.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          name: "Tuer par Pitié",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "1.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Stay Vigilant",
-          description: `Attacks all enemies. Fills this Champion’s Turn Meter by 5% for each living enemy.`,
-          damage: "3.8*ATK",
+          name: "Rester vigilant",
+          description: `Attaque tous les ennemis. Remplit le Compteur de Tours de ce Champion de 5 % pour chaque ennemi en vie.`,
+          damage: "3.8*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bitter Tears",
-          description: `Places a [Counterattack] buff and a 25% [Increase ATK] buff on this Champion for 2 turns.`,
+          name: "Larmes amères",
+          description: `Place un buff ${BUFFS.COUNTER} et un buff ${BUFFS.ATK} de 25 % sur ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

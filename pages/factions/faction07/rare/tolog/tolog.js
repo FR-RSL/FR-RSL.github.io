@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Jagged Cut",
-          description: `Attacks 1 enemy 2 times. Each hit heals this Champion by 2% of their MAX HP.<br><br><br>Heal Multiplier: 0.02*HP`,
+          name: "Coupe irrégulière",
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion de 2 % de ses PV MAX.`,
           damage: "0.11*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Butcher's Block",
-          description: `Places a 30% [Increase DEF] buff on all allies for 2 turns and a 15% [Continuous Heal] buff on all allies for 1 turn.`,
+          name: "Bloc de boucher",
+          description: `Place sur tous les alliés un buff ${BUFFS.DEF} de 30 % pendant 2 tours et un buff ${BUFFS.HEALS} de 15 % pendant 1 tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Reviving Stew",
-          description: `Revives an ally with 30% HP and 30% Turn Meter. Places a 15% [Continuous Heal] buff on the revived ally for 1 turn.`,
+          name: "Ragoût revigorant",
+          description: `Ranime un allié avec 30 % de PV et 30 % de Compteur de Tour. Place un buff ${BUFFS.HEALS} de 15 % sur l'allié ranimé pendant 1 tour.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Feed the Herd [P]",
-          description: `Whenever a 15% [Continuous Heal] buff placed by an ally from the Skinwalkers Faction expires, is removed, or is stolen, places a 7.5% [Continuous Heal] buff on that ally for 1 turn. <br><br>If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Nourrir le troupeau [P]",
+          description: `Dès qu'un buff ${BUFFS.HEALS} de 15 % placé par un allié de la Faction des Marcheurs de Peau expire, est retiré ou est volé, place un buff ${BUFFS.HEALS} de 7,5 % sur cet allié pendant 1 tour. 
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],

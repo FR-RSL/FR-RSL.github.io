@@ -3,33 +3,45 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Glittering Slash",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a [Freeze] debuff for 1 turn. Also applies a [Debuff Spread] effect, taking all debuffs from the target and placing them on all enemies under [Freeze] debuffs.`,
+          name: "Entaille scintillante",
+          description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. Applique également un effet de [Propagation de Débuffs], qui prend tous les débuffs de la cible pour les placer sur tous les ennemis sous débuff ${DEBUFFS.GEL}.`,
           damage: "3.2*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Breath of Rime",
-          description: `Attacks all enemies. Steals all buffs from all enemies. <br><br>Places a 25% [Weaken] debuff for 2 turns.`,
+          name: "Souffle de Givre",
+          description: `Attaque tous les ennemis. Vole tous les buffs dont bénéficient tous les ennemis. 
+
+Place un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           damage: "3.3*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Everwinter",
-          description: `Places a [Block Debuffs] buff on all allies for 2 turns. <br><br>Has a 75% chance of placing a [Freeze] debuff on all enemies for 1 turn. <br><br>Fills the Turn Meters of all allies by 15%. Fills the Turn Meters of each ally by an extra 5% for each [Freeze] debuff placed by this skill.`,
+          name: "Hiver éternel",
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. 
+
+Remplit le Compteur de Tour de tous les alliés de 15 %. Remplit le Compteur de Tour de chaque allié de 5 % supplémentaires pour chaque débuff ${DEBUFFS.GEL} placé par cette compétence.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Timeless [P]",
-          description: `This Champion’s skills cannot be put on cooldown. <br><br>Whenever an enemy tries to put either this Champion’s skills or an ally's skills on cooldown, places a [Freeze] debuff on that enemy. Also has a 50% chance of denying the cooldown increase effect.<br><br>The [Freeze] debuff cannot be blocked or resisted. Will not deny cooldown increasing effects from Bosses.`,
+          name: "Intemporel [P]",
+          description: `Les compétences de cette Championne ne peuvent pas être placées en temps de recharge. 
+
+Dès qu'un ennemi essaie de placer les compétences de cette Championne ou celles d'un allié en temps de recharge, place un débuff ${DEBUFFS.GEL} sur cet ennemi. Il est impossible de bloquer le débuff ${DEBUFFS.GEL} et d'y résister. 
+
+A également 50 % de chances d'annuler l'effet d'augmentation du temps de recharge. Ces chances augmentent de 25 % pour chaque ennemi sous débuff ${DEBUFFS.GEL}. N'annulera pas les effets d'augmentation du temps de recharge des Boss.
+
+Dès qu'un ennemi essaie de placer les compétences de cette Championne ou celles d'un allié en temps de recharge, place un effet ${INSTANT} sur cette Championne. Se produit une fois par tour.`,
           isPassive: true
         }
       ],
@@ -47,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 60`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

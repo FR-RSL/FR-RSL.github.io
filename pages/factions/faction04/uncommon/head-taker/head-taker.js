@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Carve Up",
-          description: `Attacks 1 enemy.`,
-          damage: "5.2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Tailler en Pièces",
+          description: `Attaque un ennemi.`,
+          damage: "5.2*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Weakling!",
-          description: `Attacks 1 enemy. Has a 50% chance of decreasing the Turn Meter by 20%.`,
-          damage: "7.5*ATK",
+          name: "Mauviette !",
+          description: `Attaque un ennemi. Possède 50 % de chances de réduire de 20 % le Compteur de Tour.`,
+          damage: "7.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         }
       ],

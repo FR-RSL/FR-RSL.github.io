@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Batter",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns if this attack is critical.`,
-          damage: "3.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Battre",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours si l'attaque passe en critique.`,
+          damage: "3.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Precision Strike",
-          description: `Attacks 1 enemy. This attack deals 50% extra C. DMG.`,
-          damage: "5*ATK",
+          name: "Frappe de Précision",
+          description: `Attaque un ennemi. Cette attaque inflige 50 % de DÉG C. supplémentaires.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Killing Haze",
-          description: `Attacks 1 enemy. Places an extra hit if this attack is critical. Fills the Turn Meters of all allies by 15% if this attack kills an enemy.`,
-          damage: "5.3*ATK",
+          name: "Brume Tueuse",
+          description: `Attaque un ennemi. Place un coup supplémentaire si cette attaque passe en critique. Remplit de 15 % le Compteur de Tour de tous les alliés si cette attaque tue un ennemi.`,
+          damage: "5.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

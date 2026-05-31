@@ -4,24 +4,24 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Charge",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns. Damage inflicted is proportional to DEF.`,
+          description: `Attaque 1 ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "3.9*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Righteous Challenge",
-          description: `Attacks 4 times at random. Each hit has a 25% chance of placing a [Provoke] debuff for 1 turn. Places a [Block Damage] buff on this Champion for 1 turn. Damage inflicted is proportional to DEF.`,
+          name: "Défi juste",
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour. Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DAMAGE} sur ce Champion. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Contempt [P]",
-          description: `Attacks with this Champion's default skill whenever an enemy places a debuff on this Champion.`,
+          name: "Dédain [P]",
+          description: `Attaque avec la compétence par défaut de ce Champion dès qu'un ennemi place un débuff sur ce Champion.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Arena by 50`,
+  description: `Augmente la statistique RÉS des Alliés lors des batailles d'Arène de 50`,
 };

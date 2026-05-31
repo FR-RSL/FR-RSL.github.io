@@ -3,33 +3,41 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Plunging Beak",
-          description: `Attacks 1 enemy. Has a 50% chance of increasing the cooldown of one of the target’s Skills by 2 turns at random.`,
+          name: "Bec plongeant",
+          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences prise au hasard de la cible.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Befuddle",
-          description: `Attacks 1 enemy. Places a [Stun] debuff for 2 Turns. Will ignore [Block Debuffs] and [Block Damage] buffs.`,
+          name: "Dérouter",
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 2 tours. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} et ${BUFFS.BLOCK_DAMAGE}.`,
           damage: "4.9*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Gatewatch Stance",
-          description: `Places a 60% [Increase DEF] buff on this Champion for 3 turns and a [Counterattack] buff for 2 turns.`,
+          name: "Posture de sentinelle",
+          description: `Place sur ce Champion un buff ${BUFFS.DEF} de 60 % pendant 3 tours et un buff ${BUFFS.COUNTER} pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Laughing Gull [P]",
-          description: `[Passive Effect]<br><br>Increases this Champion’s DEF each time they counterattack. DEF resets every time this Champion gets a turn.<br><br>When attacking, converts this Champion’s RES into additional ACC.<br><br>[Active Effect]<br><br>At the end of this Champion’s turn, places a [Provoke] debuff for 1 turn on all enemies under [Increase ATK] buffs.`,
+          name: "Mouette rieuse [P]",
+          description: `${PASSIVE}
+
+Augmente la DÉF de ce Champion de 10 % chaque fois qu'il contre-attaque. La DÉF se réinitialise chaque fois que ce Champion joue un tour.
+
+Lorsqu'il attaque, convertit la RÉS de ce Champion en PRÉ supplémentaire.
+
+${ACTIVE}
+
+À la fin du tour de ce Champion, place un débuff ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis sous buffs ${BUFFS.ATK}.`,
           cooldown: 4,
           isPassive: true
         }
@@ -48,5 +56,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 80`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
 };

@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Molten Pummeling",
-          description: `Attacks 1 enemy. Has a 20% chance of decreasing the duration of all buffs by 1 turn.`,
+          name: "Tabassage en Fusion",
+          description: `Attaque un ennemi. Possède 20 % de chances de réduire d'1 tour la durée de tous les buffs.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fearless Charge",
-          description: `Places a 60% [Increase DEF] buff on all allies for 3 turns, then attacks 1 enemy. Has a 75% chance of placing a [Stun] debuff for 1 turn. Has a 75% chance of placing a [Stun] debuff for 2 turns instead if the target is under two or more buffs.`,
+          name: "Charge Intrépide",
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours, puis attaque 1 ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 2 tours si la cible possède deux buffs ou plus.`,
           damage: "5.1*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Battle Storm",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Provoke] debuff for 1 turn.<br><br>Also places a 50% [Decrease ATK] debuff on all enemies for 2 turns if Iron Brago is under an [Increase DEF] buff.`,
+          name: "Tempête de Bataille",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.
+
+Place également un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours si Brago d'Acier se trouve sous buff ${BUFFS.DEF}.`,
           damage: "3.7*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
@@ -48,5 +50,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Doom Tower by 34%`,
+  description: `Augmente la statistique DEF des Alliés lors de la Tour du Malheur de 34%`,
 };

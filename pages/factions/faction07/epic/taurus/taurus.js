@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Metabolize",
-          description: `Attacks 1 enemy. Heals by 20% of the damage inflicted if the target has a [Poison] debuff.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Métaboliser",
+          description: `Attaque un ennemi. Soigne de 20 % des dégâts infligés si la cible est affligée d'un débuff de ${DEBUFFS.POISON}.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tendon Slash",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.`,
-          damage: "6.5*ATK",
+          name: "Coupe-Tendon",
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          damage: "6.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Toxic Nova",
-          description: `This Champion receives damage equal to 99% of their current HP. Places an [Unkillable] buff on this Champion for 2 turns. Has an 80% chance of placing four 5% [Poison] debuffs on all enemies for 2 turns.`,
+          name: "Nova Toxique",
+          description: `Ce Champion reçoit des dégâts équivalents à 99 % de ses PV actuels. Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours. Possède 80 % de chances de placer quatre débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Faction Wars by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Cryptes de Faction de 40`,
 };

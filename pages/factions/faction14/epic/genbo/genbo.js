@@ -3,33 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Twin Soulswords",
-          description: `Attacks 1 enemy 2 times. Each hit steals any [Increase ATK] buffs. Each hit also has a 30% chance of stealing 1 random buff.<br><br>The [Increase ATK] buff steal cannot be resisted.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Lames Surs",
+          description: `Attaque 2 fois un ennemi. Chappe frappe vole tous les buffs ${BUFFS.ATK}. Chaque frappe possède également 30 % de chances de voler un buff aléatoire.
+
+Il est impossible de résister au vol de buff ${BUFFS.ATK}.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Heartless Blitz",
-          description: `Attacks all enemies. Has an 80% chance of decreasing the duration of all buffs by 1 turn. This effect cannot be resisted on critical hits.`,
-          damage: "4*ATK",
+          name: "Raid Cruel",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de réduire d'1 tour la durée de tous les buffs. Il est impossible de résister à cet effet lors de frappes critiques.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sword Trance",
-          description: `Places a 30% [Increase C. RATE] buff and a 30% [Increase C. DMG] buff on this Champion for 3 turns, then grants an Extra Turn.`,
+          name: "Transe d'Épée",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Flinty [P]",
-          description: `Immune to [Decrease ATK] debuffs. Will ignore [Unkillable] buffs when attacking under an [Increase ATK] buff.`,
+          name: "Intransigeant [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.ATK}. Ignorera les buffs ${BUFFS.UNKILLABLE} lors d'attaques sous buff ${BUFFS.ATK}.`,
           isPassive: true
         }
       ],
@@ -47,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Arena by 20%`,
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 20%`,
 };

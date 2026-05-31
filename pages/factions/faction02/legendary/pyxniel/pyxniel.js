@@ -3,36 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mistress of Glamours",
-          description: `Attacks 1 enemy. Places a [Perfect Veil] buff for 1 turn on the ally with the lowest HP.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Damage +10%"],
+          name: "Maîtresse des Charmes",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.PERFECT_VEIL} pendant 1 tour sur l'allié ayant le moins de PV.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Grip of Winter",
-          description: `Places a 60% [Increase DEF] buff and a 15% [Continuous Heal] buff on all allies for 2 turns, then attacks all enemies under [Freeze] debuffs. Places a 25% [Weaken] debuff for 2 turns on all enemies under [Freeze] debuffs.`,
-          damage: "4.3*ATK",
+          name: "Emprise Hivernale",
+          description: `Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours, puis attaque tous les ennemis sous débuff ${DEBUFFS.GEL}. Place un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours sur tous les ennemis affligés de débuffs ${DEBUFFS.GEL}.`,
+          damage: "4.3*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Icicle Barrage",
-          description: `Attacks all enemies. Has an 80% chance of placing a [Freeze] debuff for 1 turn.`,
-          damage: "4.6*ATK",
+          name: "Barrage Stalactite",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          damage: "4.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Frostweaver [P]",
-          description: `[Passive Effect] <br><br>Immune to [Freeze] debuffs. <br><br>Fills this Champion's Turn Meter by 25% every time an ally receives a [Freeze] debuff. <br><br>[Active Effect] <br><br>At the end of each enemy or ally turn, removes all [Freeze] debuffs from all allies. <br><br>If there are multiple Champions in the team with this Skill, only one will remove the [Freeze] debuffs from all allies.`,
+          name: "Tisse-gel [P]",
+          description: `${PASSIVE}
+
+Immunisé contre les débuffs ${DEBUFFS.GEL}.
+
+Remplit le Compteur de Tour de ce Champion de 25 % chaque fois qu'un allié reçoit un débuff ${DEBUFFS.GEL}.
+
+${ACTIVE}
+
+À la fin de chaque tour ennemi ou allié, retire tous les débuffs ${DEBUFFS.GEL} se trouvant sur les alliés. 
+
+Si plusieurs Champions dans l'équipe disposent de cette Compétence, une seule retirera les débuffs ${DEBUFFS.GEL} se trouvant sur les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -51,5 +61,5 @@ const championData = {
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
   description: `
-Increases Ally RES in all Battles by 60`,
+Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 60`,
 };

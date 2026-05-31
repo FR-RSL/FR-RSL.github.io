@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Poisonous Evocation",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a 2.5% [Poison] debuff on the target for 2 turns.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +5%"],
+          name: "Évocation Empoisonnée",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.POISON} de 2,5 % sur la cible.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Malediction",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random buff from the target. Places a 15% [Continuous Heal] buff on this Champion for 2 turns if a buff is removed.`,
-          damage: "5*ATK",
+          name: "Malédiction",
+          description: `Attaque un ennemi. Possède 50 % de chances de retirer un buff aléatoire sur la cible. Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion si le buff est retiré.`,
+          damage: "5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Manglestorm",
-          description: `Attacks all enemies. Places a 30% [Decrease DEF] debuff on the target for 2 turns.`,
-          damage: "3.5*ATK",
+          name: "Broitempête",
+          description: `Attaque tous les ennemis. Place, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 30 % sur la cible.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

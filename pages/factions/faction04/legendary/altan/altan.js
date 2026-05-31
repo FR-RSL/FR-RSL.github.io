@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Searing Blow",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Coup Brûlant",
+          description: `Attaque un ennemi. Offre 60% de chances de placer un débuff de ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wall of Flame",
-          description: `Attacks 1 enemy. Places a 60% [Increase DEF] buff on all allies for 2 turns. Places a [Shield] buff on all allies for 2 turns equal to 20% of their MAX HP if this attack kills an enemy.<br><br><br>Shield Multiplier: 0.2*Target Max HP`,
+          name: "Mur de Flammes",
+          description: `Attaque un ennemi. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur tous les alliés. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} égal à 20 % de leurs PV MAX. sur tous les alliés si cette attaque tue un ennemi.`,
           damage: "5.6*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Fiery Rebirth [P]",
-          description: `Revives a random ally with 30% HP every time this Champion kills an enemy. Resets the cooldowns on this Champion's Skills if this Champion kills an enemy and all allies are alive.`,
+          name: "Réveil Ardent [P]",
+          description: `Ranime un allié choisi au hasard avec 30 % de PV à chaque fois que ce Champion tue un ennemi. Réinitialise les temps de recharge des Compétences de ce Champion si ce Champion tue un ennemi et que tous les alliés sont en vie.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%`,
 };

@@ -3,34 +3,50 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Corruption Scepter",
-          description: `Attacks 1 enemy. <br><br>Has a 30% chance of randomly increasing the cooldown of one of the target’s skills by 2 turns. <br><br>This effect cannot be resisted if Wight Queen Ankora is on the same team.`,
+          name: "Sceptre de corruption",
+          description: `Attaque un ennemi. 
+
+Possède 30 % de chances d'augmenter aléatoirement le temps de recharge d'une compétence de la cible de 2 tours. 
+
+Il est impossible de résister à cet effet si Ankora Reine Spectre se trouve dans la même équipe.`,
           damage: "0.24*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Desecration Blast",
-          description: `Attacks all enemies. Will ignore 25% of the target’s DEF. Places an extra hit on targets under [Shield] or [Strengthen] buffs. <br><br>Damage inflicted by this skill cannot be decreased by enemy Passive skills or Masteries, except by the Passive skills of Bosses. Damage inflicted by this skill cannot be increased by either this Champion's Masteries or ally Passive skills, except when attacking Bosses.`,
+          name: "Souffle de profanation",
+          description: `Attaque tous les ennemis. Ignorera 25 % de la DÉF de la cible. Place une frappe supplémentaire sur les cibles sous buffs ${BUFFS.SHIELD} ou ${BUFFS.STRENGTHEN}. 
+
+Les dégâts infligés par cette compétence ne peuvent pas être réduits par les Compétences Passives ou Maîtrises des ennemis, sauf les Compétences Passives des Boss. Les dégâts infligés par cette compétence ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ni les compétences Passives des alliés, sauf lors d'attaques sur les Boss.`,
           damage: "0.28*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Spirits, Claim You",
-          description: `Attacks 1 enemy 2 times. Increases the damage inflicted with this skill by 10% for each buff on the target (stacks up to 50%) and by an additional 10% for each buff on this Champion (stacks up to 50%). <br><br>If this attack kills a target under 3 or more buffs, places a [Block Revive] debuff. <br><br>Also grants an Extra Turn if this attack kills an enemy when Wight Queen Ankora is on the same team.`,
+          name: "Esprits, entendez-moi",
+          description: `Attaque 2 fois un ennemi. Augmente les dégâts infligés par cette compétence de 10 % pour chaque buff sur la cible (s'accumule jusqu'à 50 %) et de 10 % supplémentaires pour chaque buff sur ce Champion (s'accumule jusqu'à 50 %). 
+
+Si cette attaque tue une cible qui dispose de 3 buffs ou plus, place un débuff ${DEBUFFS.BLOCK_REA}. 
+
+Accorde également un Tour supplémentaire si cette attaque tue un ennemi lorsque Ankora Reine Spectre se trouve dans la même équipe.`,
           damage: "0.2*HP+(0.2*HP*0.1*Active Target Buffs)+(0.2*HP*0.1*Active Buff Count)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Mantle of Undeath [P]",
-          description: `This Champion will receive 50% less damage when attacked by enemies, including Bosses and their minions, out of their active turn. <br><br>If Wight Queen Ankora is on the same team, this Champion will receive no damage when attacked by enemies out of their active turn <br><br>[This effect does not apply against Bosses and their minions].<br><br>This Champion’s skills will also ignore [Shield] and [Strengthen] buffs.`,
+          name: "Cape de mort-vie [P]",
+          description: `Ce Champion recevra 50 % de dégâts en moins lorsqu'il se fait attaquer par les ennemis, y compris les Boss et leurs sbires, en dehors de leur tour actif. 
+
+Si Ankora Reine Spectre se trouve dans la même équipe, ce Champion ne recevra aucun dégât lorsqu'il se fait attaquer par des ennemis en dehors de leur tour actif. 
+
+[Cet effet ne s'applique pas contre les Boss et leurs sbires].
+
+Les compétences de ce Champion ignoreront également les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}.`,
           isPassive: true
         }
       ],
@@ -48,5 +64,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

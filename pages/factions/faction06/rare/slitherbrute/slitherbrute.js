@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Rusty Gash",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
-          damage: "ATK*3.5",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Entaille Rouillée",
+          description: `Attaque 1 ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          damage: "ATQ*3.5",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Essence Snatch",
-          description: `Attacks 1 enemy and steals 1 random buff from them.`,
-          damage: "ATK*5.5",
+          name: "Arrachage d'Essence",
+          description: `Attaque 1 ennemi et vole 1 buff pris au hasard.`,
+          damage: "ATQ*5.5",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Punish Hubris",
-          description: `Attacks 1 enemy. Decreases the target's Turn Meter equal to the amount of buffs on the target.`,
-          damage: "ATK*5.9",
+          name: "Punir l'Hubris",
+          description: `Attaque 1 ennemi. Réduction du Compteur de Tours de la cible égale à la quantité de buffs se trouvant sur la cible.`,
+          damage: "ATQ*5.9",
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 40`,
 };

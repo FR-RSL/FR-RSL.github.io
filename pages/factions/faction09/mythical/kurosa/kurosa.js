@@ -4,39 +4,51 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Surge of Chaos",
-          description: `Attacks all enemies. <br><br>Heals all allies. The value of the heal is proportional to this Champion's ATK.<br><br><br>Heal Multiplier: 2*ATK`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%"],
+          name: "Déferlement de chaos",
+          description: `Attaque tous les ennemis. 
+
+Soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ de cette Championne.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Anything for Siroth",
-          description: `Removes all debuffs from all allies.<br><br>Then places a 50% [Increase ATK] buff and a [Shield] buff on all allies for 2 turns.<br>The value of the [Shield] is proportional to this Champion's ATK.<br><br><br>Shield Multiplier: 3*ATK`,
+          name: "Tout pour Siroth",
+          description: `Retire tous les débuffs sur tous les alliés.
+
+Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours.
+La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de cette Championne.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Running Rampant",
-          description: `Places a [Taunt] buff and a 25% [Fortify] buff on this Champion for 2 turns.<br>Also places an [Unkillable] buff on all allies except this Champion for 2 turns.`,
+          name: "Propagation",
+          description: `Place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.FORTIFY} de 25 % sur cette Championne pendant 2 tours.
+Place également un buff ${BUFFS.UNKILLABLE} sur tous les alliés sauf cette Championne pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Collector of Pawns [P]",
-          description: `[Passive Effect]<br><br>Receives 15% less damage for each alive ally.<br><br>[Active Effect]<br><br>Instantly transforms this Champion into their Alternate Form whenever their last living ally is killed.`,
+          name: "Collectrice de pions [P]",
+          description: `${PASSIVE}
+
+Reçoit 15 % de dégâts en moins pour chaque allié vivant.
+
+${ACTIVE}
+
+Fait instantanément passer cette Championne à sa Forme alternative dès que son dernier allié vivant est tué. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: true
         }
@@ -53,7 +65,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -61,40 +73,46 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Destroyer of All",
-          description: `Attacks 1 enemy 3 times. <br><br>If this attack kills an enemy, deals pure damage to all other enemies. If the other enemies are not Bosses or minions, the amount of pure damage dealt is equal to 30% of the initial target's MAX HP. If the other enemies are Bosses or minions, the pure damage dealt is equal to 10% of their MAX HP instead. This attack cannot be critical.`,
-          damage: "1.3*ATKMultiplier: Boss/Minion: 0.1*Enemy Max HP or Champion: 0.3 * Target Max HP",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Destructrice de tout",
+          description: `Attaque 3 fois un ennemi. 
+
+Si cette attaque tue un ennemi, inflige des dégâts bruts à tous les autres ennemis. Si les autres ennemis ne sont pas des Boss ou des sbires, la quantité de dégâts bruts infligés est égale à 30 % des PV MAX de la cible initiale. Si les autres ennemis sont des Boss ou des sbires, les dégâts bruts infligés sont égaux à 10 % de leurs PV MAX. Cette attaque ne peut pas être critique.`,
+          damage: "1.3*ATQMultiplier: Boss/Minion: 0.1*Enemy Max HP or Champion: 0.3 * Target Max HP",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Icon of Havoc",
-          description: `Attacks all enemies. Before attacking, steals all buffs from all enemies. Targets whose ATK is lower than this Champion’s ATK cannot resist this effect. Also places a 25% [Weaken] debuff on all enemies for 2 turns. Targets whose ATK is equal to or lower than this Champion’s ATK cannot resist this effect.`,
-          damage: "4*ATK",
+          name: "Icône de dévastation",
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis. Les cibles dont l'ATQ est inférieure à l'ATQ de cette Championne ne peuvent pas résister à cet effet. Place également un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. Les cibles dont l'ATQ est inférieure ou égale à l'ATQ de cette Championne ne peuvent pas résister à cet effet.`,
+          damage: "4*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Ruthless Agent",
-          description: `Places a 15% [Shatter] buff and a 30% [Increase C. RATE] buff on this Champion for 3 turns. <br><br>Places a [True Fear] debuff on all enemies for 1 turn. Targets whose ATK is equal to or lower than this Champion’s ATK cannot resist this effect. <br><br>Grants an Extra Turn.`,
+          name: "Agente impitoyable",
+          description: `Place un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 3 tours. 
+
+Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Les cibles dont l'ATQ est inférieure ou égale à l'ATQ de cette Championne ne peuvent pas résister à cet effet. 
+
+Accorde un Tour supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Vile Murderess [P]",
-          description: `Deals 15% more damage for each dead ally. Each critical hit boosts this Champion’s Turn Meter by 10% for each dead ally.`,
+          name: "Vile meurtrière [P]",
+          description: `Inflige 15 % de dégâts supplémentaires pour chaque allié mort. Chaque coup critique booste le Compteur de Tour de cette Championne de 10 % pour chaque allié mort.`,
           isPassive: true
         }
       ],
@@ -110,7 +128,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/attack.webp",
-    description: `Increases Ally ATK in All Battles by 35%`,
+    description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

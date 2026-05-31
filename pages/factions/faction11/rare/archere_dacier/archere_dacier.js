@@ -3,15 +3,15 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fleches Liantes",
-          description: `Attaque 2 fois un ennemi. Possede 35% de chances de placer un debuff ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
+          name: "Flèches Liantes",
+          description: `Attaque 2 fois un ennemi. Offre 35 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
           damage: "1.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Frisson de la Chasse",
-          description: `Attaque 2 fois un ennemi. Soigne cette Championne de 50% des degats infliges lors de chaque coup critique`,
+          description: `Attaque 2 fois un ennemi. Soigne ce Champion de 50 % des dégâts infligés lors de chaque coup critique.`,
           damage: "2.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Gros Gibier",
-          description: `Attaque tous les ennemis.`,
+          description: `Attaque tous les ennemis. Les dégâts augmentent en fonction des PV MAX de l'ennemi.`,
           damage: "3*ATQ + 0.02*PV MAX Ennemi",
           cooldown: 7,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],

@@ -4,40 +4,50 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pride's Bite",
-          description: `Attacks 1 enemy. Places a 60% [Increase DEF] buff on all allies for 1 turn.`,
+          name: "Morsure de la meute",
+          description: `Attaque un ennemi. Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 1 tour.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Radiant Claw",
-          description: `Attacks all enemies. Increases the duration of all ally buffs by 1 turn. Also heals all allies by 4% of their MAX HP for every buff on them that had its duration increased.<br><br><br>Heal Multiplier: 0.04*Target Max HP*increasedTurnsCountByRelation`,
+          name: "Griffe rayonnante",
+          description: `Attaque tous les ennemis. 
+
+Augmente d'1 tour la durée de tous les buffs alliés. Soigne également tous les alliés de 4 % de leurs PV MAX pour chaque buff dont la durée a été augmentée.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Rock of Werinbur",
-          description: `Places a 50% [Increase RES] buff, a 25% [Strengthen] buff, and a 15% [Continuous Heal] buff on all allies for 2 turns. Places an additional 15% [Continuous Heal] buff on all allies with less than 50% HP for 2 turns. Also fills the Turn Meter of all allies by 15%.`,
+          name: "Rocher de Werinbur",
+          description: `Place un buff ${BUFFS.RES} de 50 %, un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. 
+
+Place pendant 2 tours un buff ${BUFFS.HEALS} de 15 % sur tous les alliés qui ont moins de 50 % de PV.
+
+Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Knights of the Wild [P]",
-          description: `Increases each ally's RES by 10 for each buff on all allies. Critical hits inflicted by allies fill the Turn Meters of all allies by 5%. Occurs once per skill. If there are multiple Champions on the team with this skill, only one will activate.`,
+          name: "Chevaliers sauvages [P]",
+          description: `Augmente la RÉS de chaque allié de 10 points pour chaque buff sur tous les alliés.
+
+Les coups critiques infligés par les alliés remplissent les Compteurs de Tour de tous les alliés de 5 %. Se produit une fois par compétence.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -53,7 +63,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/defence.webp",
-    description: `Increases Ally DEF in all Battles by 35%`,
+    description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%`,
   },
   },
   form2: {
@@ -61,41 +71,49 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Gildthorn Assault",
-          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff on all enemies for 1 turn.`,
+          name: "Assaut d'Épine-dorée",
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 1 tour.`,
           damage: "3.6*DEF",
-          levelInfo: ["Level 2: Damage +20%"],
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Palisade Breaker",
-          description: `Attacks all enemies. Places a 50% [Decrease RES] debuff, a 25% [Weaken] debuff, and an [Enfeeble] debuff on all enemies for 2 turns. If enemies have 50% HP or less, the [Enfeeble] debuff cannot be removed. Also decreases the Turn Meter of all enemies by 15%.`,
+          name: "Brise-palissade",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.RES} de 50 %, un débuff ${DEBUFFS.WEAKEN} de 25 % et un débuff ${DEBUFFS.UNFEEBLE} sur tous les ennemis pendant 2 tours. 
+
+Si les ennemis possèdent 50 % de PV ou moins, il est impossible de retirer le débuff ${DEBUFFS.UNFEEBLE}.
+
+Réduit également le Compteur de Tour de tous les ennemis de 15 %.`,
           damage: "4*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Roar of Kitherus",
-          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies and places a [Block Buffs] debuff on all enemies without buffs for 2 turns. If the target is a Boss, the damage inflicted is equal to 10% of their MAX HP.`,
+          name: "Rugissement de Kitherus",
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs de tous les ennemis et place un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis sans buff pendant 2 tours. Si la cible est un Boss, les dégâts infligés sont équivalents à 10 % de ses PV MAX.`,
           damage: "0.1*Target Max HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Lionheart [P]",
-          description: `Increases each ally's ACC by 10 for each buff on all enemies. Each critical hit inflicted by allies decreases the Turn Meters of all enemies by 5%. If there are multiple Champions on the team with this skill, only one will activate.`,
+          name: "Coeur-de-lion [P]",
+          description: `Augmente la PRÉ de chaque allié de 10 points pour chaque buff sur tous les ennemis.
+
+Chaque coup critique infligé par les alliés réduit les Compteurs de Tour de tous les ennemis de 5 %.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
         }
       ],
@@ -111,7 +129,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/defence.webp",
-    description: `Increases Ally DEF in all Battles by 35%`,
+    description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%`,
   },
   },
 };

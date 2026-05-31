@@ -3,25 +3,33 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hook",
-          description: `Attacks 1 enemy. Has a 60% chance of placing a [Provoke] debuff for 1 turn if this attack is critical.`,
-          damage: "2.6*ATK+2*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Balafre vivifiante",
+          description: `Attaque un ennemi. 
+
+Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
+          damage: "2.6*ATQ+2*DEF",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Glaive Swing",
-          description: `Attacks all enemies. Has a 50% chance of placing a 25% [Decrease ATK] debuff for 2 turns. Has a 50% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "4.4*ATK",
+          name: "Épées englouties",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Les chances augmentent de 5 % pour chaque ennemi vivant.`,
+          damage: "4.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Regeneration [P]",
-          description: `Heals this Champion by 10% HP at the start of their turn. This Heal can be critical.<br><br>Heal Multiplier: 0.1*HP`,
+          name: "Défenseur d'Agaris",
+          description: `Attaque un ennemi. 
+
+Soigne ce Champion à hauteur de 20 % des dégâts infligés. Soigne au lieu de cela ce Champion de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}. 
+
+Détruit les PV MAX de la cible de 20 % des dégâts infligés. Détruit au lieu de cela les PV MAX de la cible de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
           cooldown: 2,
           isPassive: true
         }
@@ -40,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in Faction Wars by 30`,
+  description: `Augmente la statistique RÉS des Alliés lors des Cryptes de Faction de 30`,
 };

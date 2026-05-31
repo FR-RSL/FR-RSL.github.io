@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Yeux de granite",
           description: `Attaque un ennemi.${RETURN}${RETURN}
-Possede 25% de chances de placer un debuff ${DEBUFFS.ATK} de 50% pendant 2 tours.${RETURN}${RETURN}
+Possede 25% de chances de placer un debuff ${DEBUFFS.ATQ} de 50% pendant 2 tours.${RETURN}${RETURN}
 Vole 10% du Compteur de Tour de la cible.`,
           damage: "4.95*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

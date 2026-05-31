@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Regle la Visee",
-          description: `Attaque un ennemi. Place un buff ${BUFFS.ATK} de 25% sur cette Championne pendant 2 tours si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Place un buff ${BUFFS.ATQ} de 25% sur cette Championne pendant 2 tours si cette attaque passe en critique.`,
           damage: "7.6*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

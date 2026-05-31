@@ -4,39 +4,53 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sacred Lance",
-          description: `Attacks 1 enemy. Heals all allies. The value of the heal is proportional to their RES and 5% of their MAX HP. Has a 35% chance of applying a [Buff Spread] effect, taking 1 random buff from each ally and placing it on all allies.`,
-          damage: "ATK*(6+RES/1000)",
-          levelInfo: ["Level 2: Heal +20%", "Level 3: Buff/Debuff Chance +15%"],
+          name: "Lance sacrée",
+          description: `Attaque un ennemi. 
+
+Soigne tous les alliés. La valeur du soin est proportionnelle à leur RÉS et 5 % de leurs PV MAX. 
+
+A 35 % de chances d'appliquer un effet [Propagation de Buffs], prenant un buff aléatoire sur chaque allié pour le placer sur tous les alliés.`,
+          damage: "ATQ*(6+RES/1000)",
+          levelInfo: ["Soins +20%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Symbol of Hope",
-          description: `Removes all debuffs from all allies. Then places a 50% [Increase ATK] buff and a 50% [Increase RES] buff on all allies for 3 turns. Also fills the Turn Meters of all allies by 15%.`,
+          name: "Symbole d'espoir",
+          description: `Retire tous les débuffs sur tous les alliés. Place ensuite un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 3 tours. 
+
+Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Faith Restored",
-          description: `Revives a single ally with 75% HP, and places an [Unkillable] buff on that ally for 2 turns. Then activates an [Instant Turn] effect on the revived ally.`,
+          name: "Foi retrouvée",
+          description: `Ranime un seul allié avec 75 % de PV, puis place un buff ${BUFFS.UNKILLABLE} sur cet allié pendant 2 tours. 
+
+Active ensuite un effet ${INSTANT} sur l'allié ranimé.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Eternally Adored [P]",
-          description: `[Passive Effect]<br>Increases all allies’ damage against enemies whose RES is lower than theirs by 15%. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>[Active Effect]<br>Whenever an enemy is revived, instantly activates the Faith Restored skill on a random dead ally. If no allies are dead, instantly activates the Symbol of Hope skill instead. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Lames radieuses",
+          description: `Attaque tous les ennemis. Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. 
+
+Dès que cette Championne contre-attaque, augmente l'effet Ignorer la DÉF de cette compétence de 5 % (s'accumule jusqu'à 25 %).
+
+${PASSIVE}
+
+Inflige le double de dégâts lors d'une contre-attaque.`,
           cooldown: 3,
           isPassive: true
         }
@@ -53,7 +67,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in all battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -61,28 +75,37 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Radiant Blades",
-          description: `Attacks all enemies. This attack deals single-target damage to each target individually, rather than AoE damage. Whenever this Champion counterattacks, increases the Ignore DEF effect of this skill by 5% (stacks up to 25%).<br><br>[Passive Effect]<br>Deals double damage when counterattacking.`,
-          damage: "ATK*(2.9+RES/1000)",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Percé par la lumière",
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole 25 % du Compteur de Tour de chaque ennemi. Il est impossible de résister à cet effet.
+
+Les dégâts infligés par cette compétence augmentent de 35 % contre les ennemis dont la RÉS est inférieure à celle de cette Championne. 
+
+Place ensuite un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 2 tours.`,
+          damage: "ATQ*(2.9+RES/1000)",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Pierced By Light",
-          description: `Attacks all enemies. Before attacking, steals 25% of each enemy’s Turn Meter. This effect cannot be resisted. The damage inflicted by this skill increases by 35% against enemies whose RES is lower than this Champion’s. Then places a [Block Damage] buff on this Champion for 2 turns.`,
-          damage: "ATK*(4.4+RES/1000)",
+          name: "Balayage séraphique",
+          description: `Attaque 3 fois un ennemi. 
+
+Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. Ignorera également 35 % de la DÉF contre les cibles dont la RÉS est inférieure à celle de cette Championne.
+ 
+
+Si la cible est tuée et que sa RÉS est inférieure à celle de cette Championne, lui inflige un débuff ${DEBUFFS.BLOCK_REA}. Si la cible n'est pas tuée, accorde au lieu de ça un Tour supplémentaire.`,
+          damage: "ATQ*(4.4+RES/1000)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Seraphic Swoop",
-          description: `Attacks 1 enemy 3 times. Will ignore [Shield], [Block Damage], and [Unkillable] buffs. Will also ignore 35% DEF against targets whose RES is lower than this Champion’s.<br><br>If the target is killed and has lower RES than this Champion, places a [Block Revive] debuff on them. If the target isn’t killed, grants an Extra Turn instead.`,
-          damage: "ATK*(2+RES/1000)",
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
+          damage: "ATQ*(2+RES/1000)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
@@ -95,7 +118,7 @@ const championForms = {
         {
           img: "assets/passif2.webp",
           name: "Lumaya's Glory [P]",
-          description: `Decreases the damage this Champion receives from enemies whose RES is lower than this Champion’s by 15%. <br><br>Places on this Champion a protected [Counterattack] buff for 1 turn at the end of their turn.`,
+          description: `Decreases the damage this Champion receives from enemies whose RES is lower than this Champion’s by 15%. <br><br>Places on this Champion a protected ${BUFFS.COUNTER} buff for 1 turn at the end of their turn.`,
           isPassive: true
         }
       ],
@@ -111,7 +134,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in all battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

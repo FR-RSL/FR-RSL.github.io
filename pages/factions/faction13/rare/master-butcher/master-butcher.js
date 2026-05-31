@@ -3,34 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mash",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a [Provoke] debuff for 1 turn.`,
-          damage: "4.3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Écrabouiller",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          damage: "4.3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Barking Orders",
-          description: `Places a [Provoke] debuff on the target enemy for 2 turns. Places a 15% [Increase C. RATE] buff on all allies for 2 turns. Places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Ordres Aboyés",
+          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur la cible ennemie pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Heat Exchange [P]",
-          description: `When attacked, heals all allies equal to the amount of damage taken.<br>[Does not work against Bosses.]<br><br><br>Heal Multiplier: Damage Dealt`,
+          name: "Échange de Chaleur [P]",
+          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés de la quantité de dégâts subis.
+[Ne fonctionne pas contre les Boss.]`,
           cooldown: 3,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
-          name: "Pyre [P]",
-          description: `Revives a random ally with full HP when this Champion is killed.`,
+          name: "Bûcher [P]",
+          description: `Ranime un allié choisi au hasard avec tous ses PV si ce Champion est tué.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: true
         }
       ],

@@ -3,19 +3,19 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Anchor Hook",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Stun] debuff for 1 turn. The chance of placing the [Stun] debuff increases by 5% for each debuff on the target.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Crochet d'Ancrage",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Les chances de placer un débuff ${DEBUFFS.STUN} augmentent de 5 % pour chaque débuff se trouvant sur la cible.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wretched Stench",
-          description: `Attacks all enemies. Has an 85% chance of placing a 30% [Decrease DEF] debuff for 2 turns. Also has a 25% chance of placing a [Fear] debuff for 1 turn on enemies under [Decrease DEF] debuffs.`,
-          damage: "3.64*ATK",
+          name: "Puanteur Abjecte",
+          description: `Attaque tous les ennemis. Possède 85 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours. Possède également 25 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur les ennemis souffrant de débuffs ${DEBUFFS.DEF}.`,
+          damage: "3.64*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {

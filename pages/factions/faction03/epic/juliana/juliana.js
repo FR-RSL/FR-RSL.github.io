@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Battledance",
-          description: `Attacks 1 enemy 2 times. Each critical hit fills this Champion's Turn Meter by 10%.`,
-          damage: "2.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          name: "Danse de bataille",
+          description: `Attaque 2 fois un ennemi. Chaque coup critique remplit de 10 % le Compteur de Tour de ce Champion.`,
+          damage: "2.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lethal Partner",
-          description: `Places a 30% [Increase C. RATE] buff on this Champion for 2 turns, then attacks 1 enemy 2 times. Places a 5% [Poison] debuff on the target for 3 turns if this attack is critical.<br><br>[Will ignore 50% of the target's DEF when Romero is on the same team.]`,
-          damage: "3*ATK",
+          name: "Partenaire Mortelle",
+          description: `Place un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque deux fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % pendant 3 tours sur la cible si cette attaque passe en critique.
+
+[Ignorera 50 % de la DÉF de la cible quand Roméro se trouve dans la même équipe.]`,
+          damage: "3*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fire of Purgation",
-          description: `Attacks 1 enemy. Removes all buffs from the target. Has a 75% chance of placing a [HP Burn] debuff for 3 turns.`,
-          damage: "6*ATK",
+          name: "Feu de Purge",
+          description: `Attaque un ennemi. Retire tous les buffs de la cible. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 3 tours.`,
+          damage: "6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         }
       ],
@@ -42,5 +44,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Arena by 20%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des batailles d'Arène de 20%`,
 };

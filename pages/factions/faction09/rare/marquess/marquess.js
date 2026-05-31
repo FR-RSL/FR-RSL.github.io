@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Disdainful Swipe",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
+          name: "Balayage Dédaigneux",
+          description: `Attaque 1 ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "DEF*5",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crush the Weak",
-          description: `Attacks all enemies. Has a 35% chance of placing a 15% [Weaken] debuff for 2 turns. Deals extra damage to enemies with the [Weaken] debuff.`,
+          name: "Écraser les Faibles",
+          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours. Inflige des dégâts supplémentaires aux ennemis affligés d'un débuff d'Affaiblissement.`,
           damage: "DEF*4.6Multiplier: 3*DEF",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Freeze Solid",
-          description: `Attacks 1 enemy. Has a 75% chance of placing a [Freeze] debuff for 1 turn.`,
+          name: "Geler à pierre fendre",
+          description: `Attaque 1 ennemi. Possède 75 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
           damage: "DEF*6.5",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Cooldown -1", "Level 7: Damage +10%", "Level 8: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 15%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 15%`,
 };

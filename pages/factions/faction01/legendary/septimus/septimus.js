@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Behead",
-          description: `Attacks 1 enemy. Will ignore 30% of the target's DEF.<br><br>Grants an Extra Turn and resets the cooldown on this Champion's Holy Sword skill if the target is killed. The cooldown will be reset even if this attack is a counterattack.`,
-          damage: "3.6*ATK",
-          levelInfo: ["Level 2: +5% Damage", "Level 3: +5% Damage", "Level 4: +5% Damage", "Level 5: +10% Damage"],
+          name: "Décapiter",
+          description: `Attaque 1 ennemi. Accorde un Tour Supplémentaire et réinitialise le temps de recharge de la Compétence Épée Sacrée de ce Champion si la cible est tuée.`,
+          damage: "3.6*ATQ",
+          levelInfo: ["+5% Damage", "+5% Damage", "+5% Damage", "+10% Damage"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Holy Sword",
-          description: `Attacks all enemies. Will ignore [Shield] and [Block Damage] buffs. Damage increases according to enemies' MAX HP.`,
-          damage: "3.5*ATK+0.1*TRG_HP",
+          name: "Épée Sacrée",
+          description: `Attaque 1 ennemi. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. Les dégâts augmentent en fonction des PV MAX de l'ennemi.`,
+          damage: "3.5*ATQ+0.1*TRG_HP",
           cooldown: 3,
-          levelInfo: ["Level 2: +5% Damage", "Level 3: +5% Damage", "Level 4: +5% Damage", "Level 5: +10% Damage"],
+          levelInfo: ["+5% Damage", "+5% Damage", "+5% Damage", "+10% Damage"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Giant Killer [P]",
-          description: `Has a 30% chance of increasing the duration of all debuffs on the target by 1 turn whenever this Champion attacks. This effect cannot be resisted.<br><br>The damage inflicted by this Champion's skills increases by 30% if the enemy's MAX HP is higher than this Champion's MAX HP.`,
+          name: "Tueur Géant [P]",
+          description: `Chaque attaque offre 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible. Les dégâts infligés par chaque attaque augmentent de 30 % si les PV actuels de l'ennemi sont supérieurs à 50 %.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in all Battles by 30%`,
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%`,
 };

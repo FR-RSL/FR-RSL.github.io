@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blessed Missiles",
-          description: `Attacks 1 enemy. <br><br>Has a 40% chance of placing a [Block Buffs] debuff for 2 turns.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Missiles Bénis",
+          description: `Attaque un ennemi.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Whiplash",
-          description: `Attacks 1 enemy. <br><br>Has a 75% chance of placing a [Stun] debuff for 1 turn.`,
-          damage: "5.9*ATK",
+          name: "Coup du Lapin",
+          description: `Attaque un ennemi. 
+
+Possède 75 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          damage: "5.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%", "Level 7: Buff/Debuff Chance +15%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Fiend Purge",
-          description: `Attacks 1 enemy with 2 random allies.<br><br>Damage inflicted by this Champion and any allies joining this attack will be increased by 20% if the target is under a [Fear], [True Fear], [Freeze], [Provoke], [Sleep], [Stun], or [Petrification] debuff. Allies joining the attack use their default skills.`,
+          name: "Purge-Démon",
+          description: `Attaque 1 ennemi avec 2 alliés choisis au hasard.
+
+Les dégâts infligés par ce Champion et tous les alliés rejoignant cette attaque augmenteront de 20 % si la cible se trouve sous débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION}. Les alliés rejoignant l'attaque utilisent leurs compétences par défaut.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

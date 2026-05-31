@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spin Throw",
-          description: `Attacks 1 enemy 2 times. Each hit has a 25% chance to ignore DEF by 50%.`,
-          damage: "ATK*1.7",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +10%"],
+          name: "Lancé Tournoyant",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances d'ignorer de 50 % la DÉF.`,
+          damage: "ATQ*1.7",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Firebolt",
-          description: `Attacks 1 enemy. Removes 1 random buff from the target. Fills this Champion's Turn Meter by 30%.`,
-          damage: "ATK*5",
+          name: "Éclair de Feu",
+          description: `Attaque un ennemi. Retire 1 buff aléatoire sur une cible. Remplit de 30 % le Compteur de Tours de ce Champion.`,
+          damage: "ATQ*5",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Pin Down",
-          description: `Attacks 1 enemy. Puts the target's skills on cooldown.`,
-          damage: "ATK*5.5",
+          name: "Clouer au Sol",
+          description: `Attaque un ennemi. Place les compétences de la cible en recharge.`,
+          damage: "ATQ*5.5",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Dungeons by 21%`,
+  description: `Augmente la statistique ATQ des Alliés lors des Donjons de 21%`,
 };

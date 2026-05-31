@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Arena Arts",
-          description: `Attacks 1 enemy. Places a [Shield] buff on this Champion for 2 turns equal to 5% of the damage inflicted if this attack is critical.<br><br><br>Shield Multiplier: 0.05*Damage Dealt`,
-          damage: "4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Shield +5%", "Level 4: Damage +5%", "Level 5: Shield +5%", "Level 6: Damage +5%", "Level 7: Shield +5%", "Level 8: Damage +5%", "Level 9: Shield +5%"],
+          name: "Arts d'Arène",
+          description: `Attaque un ennemi. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 5 % des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
+          damage: "4*ATQ",
+          levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Crowd Pleaser",
-          description: `Attacks 1 enemy. Destroys the target's MAX HP by 30% of the damage dealt. Places a [Shield] buff on this Champion for 2 turns equal to 30% of the damage inflicted if this attack is critical.<br><br><br>Shield Multiplier: 0.3*Damage Dealt`,
-          damage: "6.5*ATK",
+          name: "Favori des Foules",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 30 % des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
+          damage: "6.5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Shield +5%", "Level 4: Damage +5%", "Level 5: Shield +5%", "Level 6: Damage +5%", "Level 7: Shield +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Showoff [P]",
-          description: `Increases the damage inflicted by this Champion equal to the percentage of MAX HP destroyed on the target.`,
+          name: "Frimeur [P]",
+          description: `Augmente les dégâts infligés par ce Champion à hauteur du pourcentage de PV MAX détruits sur la cible.`,
           isPassive: true
         }
       ],
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/attack.webp",
-  description: `Increases Ally ATK in Doom Tower by 25%`,
+  description: `Augmente la statistique ATQ des Alliés lors de la Tour du Malheur de 25%`,
 };

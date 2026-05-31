@@ -3,10 +3,10 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Heavy Chop",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 25% [Decrease ACC] debuff for 1 turn. Damage inflicted is proportional to DEF.`,
+          name: "Plus un Pas",
+          description: `Attaque un ennemi.`,
           damage: "4.2*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         }
       ],

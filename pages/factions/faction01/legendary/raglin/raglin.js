@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Repent",
-          description: `Attacks 1 enemy 3 times. Fills the Turn Meter of 3 random allies by 15%. Allies can only have their Turn Meter filled once per turn by this Skill.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Repentir",
+          description: `Attaque 3 fois un ennemi. Remplit de 15 % le Compteur de Tour de 3 alliés pris au hasard. Les alliés ne peuvent remplir leur Compteur de Tour qu'une fois grâce à cette Compétence.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mercy",
-          description: `Removes all debuffs from all allies, and places a 50% [Increase ACC] buff and a 50% [Increase ATK] buff on all allies for 2 turns. <br><br>Then heals all allies. The value of the heal is proportional to this Champion's ATK and HP.<br><br><br>Heal Multiplier: (4*ATK)+(0.2*HP)`,
+          name: "Clémence",
+          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % % sur tous les alliés pendant 2 tours.
+
+Ensuite, soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ et aux PV de cette Championne.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Heal +10%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Soins +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Miracle",
-          description: `Revives an ally with 75% HP and 100% Turn Meter. Also decreases the cooldowns of all the revived ally's skills by 3 turns.`,
+          description: `Ranime un allié avec 75 % de PV et 100 % de Compteur de Tour. Réduit également de 3 tours les temps de recharge de toutes les compétences des alliés ranimés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Blessed Invocation [P]",
-          description: `This Champion is immune to [Block Active Skills] debuffs and cooldown increasing effects.`,
+          name: "Invocation bénie [P]",
+          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.LOCK_ACTIVE} et les effets d'augmentation des temps de recharge.`,
           isPassive: true
         }
       ],
@@ -46,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in all Battles by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%`,
 };

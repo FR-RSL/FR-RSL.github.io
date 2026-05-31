@@ -4,17 +4,20 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sous la peau",
-          description: `Attaque 2 fois un ennemi. Chaque frappe a 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Chaque frappe ignorera 50% de la RES de la cible si <span class="gold-t">Oella</span> se trouve dans la meme equipe.${RETURN}${RETURN}
-Si la cible est sous buff ${BUFFS.DEF}, chaque frappe a 80% de chances de le retirer. Il est impossible de résister a cet effet.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Chaque frappe ignorera également 50 % de la RÉS de la cible si Oella se trouve dans la même équipe.
+
+Si la cible est sous buff ${BUFFS.DEF}, chaque frappe a 80 % de chances de le retirer. Il est impossible de résister à cet effet.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Inversion deferlante",
-          description: `Retire tous les debuffs sur ce Champion et le soigne de 20% de ses PV MAX. Soigne ce Champion de 20% supplementaires de ses PV MAX pour chaque debuff retire.${RETURN}${RETURN}
-Ensuite, place un buff ${BUFFS.SHIELD} équivalent a 400% de l'ATQ de ce Champion sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} augmente également de 5% (Multiplicatif) pour chaque debuff retire.${RETURN}${RETURN}
-Enfin, attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. Les degats augmentent de 20% pour chaque debuff retirer par cette Competence.`,
+          name: "Inversion déferlante",
+          description: `Retire tous les débuffs sur ce Champion et le soigne de 20 % de ses PV MAX. Soigne ce Champion de 20 % supplémentaires de ses PV MAX pour chaque débuff retiré. 
+
+Ensuite, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de ce Champion. La valeur du ${BUFFS.SHIELD} augmente également de 5 % pour chaque débuff retiré. 
+
+Enfin, attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. Les dégâts augmentent de 20 % pour chaque débuff retiré par cette compétence.`,
           damage: "5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -22,18 +25,21 @@ Enfin, attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. Les degats augment
         {
           img: "assets/sort3.webp",
           name: "Spores de sommeil",
-          description: `Attaque tous les ennemis.${RETURN}${RETURN}
-Place un debuff ${DEBUFFS.SLEEP} et un debuff ${DEBUFFS.SPD} de 30% sur tous les ennemis pendant 2 tours. Si <span class="gold-t">Oella</span> se trouve dans la meme equipe, placera un debuff ${DEBUFFS.STUN} au lieu d'un debuff ${DEBUFFS.SLEEP} et ignorera 50% de la RES de chaque cible.${RETURN}${RETURN}
-Remplit le Compteur de Tour de ce Champion de 15% des qu'un debuff ${DEBUFFS.SLEEP} ou ${DEBUFFS.STUN} place par cette competence expire.${RETURN}${RETURN}
-Si <span class="gold-t">Oella</span> se trouve dans la meme équipe, accorde un Tour supplémentaire a ce Champion.`,
+          description: `Attaque tous les ennemis. 
+
+Possède 100 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Si Oella se trouve dans la même équipe, placera un débuff ${DEBUFFS.STUN} au lieu d'un débuff ${DEBUFFS.SLEEP} et ignorera 50 % de la RÉS de chaque cible.
+
+Remplit le Compteur de Tour de ce Champion de 15 % dès qu'un débuff ${DEBUFFS.SLEEP} ou ${DEBUFFS.STUN} placé par cette compétence expire.
+
+Si Oella se trouve dans la même équipe, accorde un Tour supplémentaire à ce Champion.`,
           damage: "4.1*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
           img: "assets/sort4.webp",
-          name: "Metabolisme [P]",
-          description: `Possede 15% de chances de reduire d'1 tour le temps de recharge d'une des competences de ce Champion chaque fois qu'il est soigne par un buff ${BUFFS.HEALS}. Les chances augmentent a 30% si <span class="gold-t">Oella</span> se trouve dans le meme equipe.`,
+          name: "Métabolisme [P]",
+          description: `Possède 15 % de chances de réduire d'1 tour le temps de recharge d'une des compétences de ce Champion chaque fois qu'il est soigné par un buff ${BUFFS.HEALS}. Les chances augmentent de 30 % si Oella se trouve dans la même équipe.`,
           isPassive: true,
         }
   ],

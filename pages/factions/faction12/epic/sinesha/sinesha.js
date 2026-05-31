@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Burning Wave",
-          description: `Attacks all enemies. Places an extra hit on enemies with less than 50% HP after the first hit.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Vague Brûlante",
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis ayant moins de 50 % de PV après la première frappe.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Vaporize",
-          description: `Attacks 1 enemy. Puts the target's skills on cooldown. Heals the ally with the lowest HP by 25%.<br><br><br>Heal Multiplier: Target Max HP*0.25`,
-          damage: "6.9*ATK",
+          name: "Évaporer",
+          description: `Attaque un ennemi. Place les compétences de la cible en recharge. Soigne l'allié ayant le moins de PV à hauteur de 25 %.`,
+          damage: "6.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Immortality",
-          description: `Equalizes the HP of all allies. The HP levels of all allies will be brought up to the level of the ally with the highest HP. Then heals the target ally by 10% of their MAX HP.<br><br><br>Heal Multiplier: 0.1*Target Max HP`,
+          name: "Immortalité",
+          description: `Équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront placés au niveau de celui de l'allié ayant le plus de PV. Soigne ensuite la cible alliée à hauteur de 10 % de ses PV max.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Heal +10%", "Level 3: Heal +10%", "Level 4: Heal +15%", "Level 5: Heal +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +10%", "Soins +10%", "Soins +15%", "Soins +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Faction Wars by 31%`,
+  description: `Augmente la statistique PV des Alliés lors des Cryptes de Faction de 31%`,
 };

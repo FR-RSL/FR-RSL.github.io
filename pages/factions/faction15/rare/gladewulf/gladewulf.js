@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Phantom Pack",
-          description: `Attacks 1 enemy 3 times. <br><br>Each hit has a 35% chance of placing a 30% [Decrease SPD] debuff for 2 turns.`,
+          name: "Meute spectrale",
+          description: `Attaque 3 fois un ennemi. 
+
+Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "DEF*1.05",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ghostly Roots",
-          description: `Attack all enemies. <br><br>Has a 50% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Racines fantomatiques",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "DEF*3",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Arooo!",
-          description: `Places a [Counterattack] buff on this Champion for 2 turns. Also places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.`,
+          name: "Arooo !",
+          description: `Place un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours. Place également un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Safety in Numbers [P]",
-          description: `Decreases the damage this Champion receives by 5% for each ally under an [Ally Protection] buff placed by this Champion.`,
+          name: "L'union fait la force [P]",
+          description: `Réduit les dégâts reçus par ce Champion de 5 % pour chaque allié sous buff ${BUFFS.ALLY_PROTECT} placé par ce Champion.`,
           isPassive: true
         }
       ],

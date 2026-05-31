@@ -3,27 +3,31 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Foresight Slash",
-          description: `Attacks 1 enemy. Has a 40% chance of increasing the duration of 2 random buffs on each individual ally by 1 turn.`,
+          name: "Coup prévoyant",
+          description: `Attaque un ennemi. Possède 40 % de chances d'augmenter d'1 tour la durée de 2 buffs aléatoires sur chaque allié individuel.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Reaping Slash",
-          description: `Attacks all enemies. Places a 60% [Increase DEF] buff and a [Shield] buff on all allies for 2 turns. The [Shield] is equal to 30% of this Champion’s MAX HP. <br><br>If the target is a Boss, these buffs are protected.<br><br><br>Shield Multiplier: 0.3*HP`,
+          name: "Coup fructueux",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30 % des PV MAX de ce Champion. 
+
+Si la cible est un Boss, ces buffs sont protégés.`,
           damage: "0.22*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Shield +10%", "Level 4: Shield +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Bouclier +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cleanser Booster",
-          description: `Removes all debuffs from all allies, and places a [Block Debuffs] buff on all allies for 2 turns.<br><br>If a Boss is present in the current Round, this buff is protected.`,
+          name: "Booster purificateur",
+          description: `Retire tous les débuffs de tous les alliés et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.
+
+Si un Boss est présent dans le round en cours, ce buff est protégé.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
@@ -47,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 30%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 30%`,
 };

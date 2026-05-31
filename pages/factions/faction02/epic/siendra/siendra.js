@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Luminant Strike",
-          description: `Attacks 1 enemy. <br><br>Has a 25% chance of stealing 1 random buff from the target. If this attack is critical, has a 100% chance of stealing 1 random buff from the target instead.`,
-          damage: "3.8*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Frappe éclairante",
+          description: `Attaque un ennemi. 
+
+A 25 % de chances de voler un buff aléatoire à la cible. Si cette attaque est critique, a au lieu de ça 100 % de chances de voler un buff aléatoire sur la cible.`,
+          damage: "3.8*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Blinding Thrust",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 75% chance of stealing 15% of the target's Turn Meter. If a hit is critical, has a 75% chance of stealing 30% of the target’s Turn Meter instead.`,
-          damage: "2.8*ATK",
+          name: "Coup aveuglant",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe a 75 % de chances de voler 15 % du Compteur de Tour de la cible. Si une frappe est critique, a au lieu de ça 75 % de chances de voler 30 % du Compteur de Tour de la cible.`,
+          damage: "2.8*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Resplendent Burst",
-          description: `Attacks all enemies. Before attacking, places a 50% [Increase ACC] buff and a 30% [Increase C. RATE] buff on this Champion for 2 turns. <br><br>Increases the duration of all buffs on this Champion by 1 turn if this attack is critical.`,
-          damage: "3.85*ATK",
+          name: "Rafale resplendissante",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 2 tours. 
+
+Augmente d'1 tour la durée de tous les buffs de cette Championne si cette attaque est critique.`,
+          damage: "3.85*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Lightward's Boon [P]",
-          description: `Increases this Champion’s ATK by 2% for each buff they receive (stacks up to 30%).`,
+          name: "Bénédiction de pupille [P]",
+          description: `Augmente l'ATQ de cette Championne de 2 % pour chaque buff qu'elle reçoit (s'accumule jusqu'à 30 %).`,
           isPassive: true
         }
       ],
@@ -48,5 +54,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in all Battles by 15%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 15%`,
 };

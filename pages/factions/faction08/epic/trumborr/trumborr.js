@@ -3,34 +3,38 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Double Whammy",
-          description: `Attacks 1 enemy 2 times. The first hit has a 30% chance of placing a 25% [Weaken] debuff for 2 turns. The second hit has a 30% chance of placing a [Leech] debuff for 2 turns.`,
+          name: "Coup double",
+          description: `Attaque 2 fois un ennemi. La première frappe possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. La seconde frappe possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "1.8*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Vigor Explosion",
-          description: `Attacks all enemies. <br><br>Removes 1 random debuff from all allies before attacking. Damage increases by 5% for each debuff removed.`,
+          name: "Explosion de vigueur",
+          description: `Attaque tous les ennemis. 
+
+Retire 1 débuff aléatoire sur tous les alliés avant d'attaquer. Les dégâts augmentent de 5 % pour chaque débuff retiré.`,
           damage: "3.9*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Wall of Muscle",
-          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. <br><br>Places a 60% [Increase DEF] buff on this Champion for 2 turns.`,
+          name: "Mur de muscles",
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. 
+
+Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Shrug Off [P]",
-          description: `Whenever this Champion is attacked, has a 20% chance of decreasing the duration of all debuffs on this Champion by 1 turn.`,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%"],
+          name: "Ignorer [P]",
+          description: `Lorsque ce Champion se fait attaquer, possède 20 % de chances de réduire d'1 tour la durée de tous les débuffs sur ce Champion.`,
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }
       ],

@@ -4,40 +4,56 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Song of Steel",
-          description: `Attacks 1 enemy. Places an extra hit if the target is under a [Deathbrand] debuff. <br><br>Decreases the target’s HP and DEF by 10% (stacks up to 30%). This effect does not work against Bosses.`,
-          damage: "ATK*4",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Chant d'acier",
+          description: `Attaque un ennemi. Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEATHBRAND}. 
+
+Réduit les PV et la DÉF de la cible de 10 % (s'accumule jusqu'à 30 %). Cet effet ne fonctionne pas contre les Boss.`,
+          damage: "ATQ*4",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "White-Hot Rage",
-          description: `Attacks 1 enemy. Before attacking, places a [Block Passive Skills] debuff for 1 turn. Will ignore 50% of the target’s DEF, as well as [Block Damage] and [Unkillable] buffs.<br><br>If the initial target is killed, will repeat the attack against all enemies and ignore 25% of each target’s DEF. Will also decrease the cooldown of the Arctic Howl skill by 2 turns if the initial target is killed while under a [Deathbrand] debuff.`,
-          damage: "ATK*6",
+          name: "Rage incandescente",
+          description: `Attaque un ennemi. Avant d'attaquer, place un débuff ${DEBUFFS.LOCK_PASSIF} pendant 1 tour. Ignorera 50 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. 
+
+Si la cible initiale est tuée, répétera l'attaque contre tous les ennemis et ignorera 25 % de la DÉF de chaque cible. Réduira également de 2 tours le temps de recharge de la compétence Hurlement polaire si la cible initiale est tuée lorsqu'elle se trouve sous débuff ${DEBUFFS.DEATHBRAND}.`,
+          damage: "ATQ*6",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Arcitc Howl",
-          description: `Places a 50% [Increase ATK] buff and a 50% [Increase ACC] buff on all allies for 3 turns. <br><br>Places a [Deathbrand] debuff on all enemies for 2 turns. Then grants an Extra Turn.`,
+          name: "Hurlement polaire",
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 3 tours. 
+
+Place un débuff ${DEBUFFS.DEATHBRAND} sur tous les ennemis pendant 2 tours. 
+
+Accorde ensuite un Tour supplémentaire.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Will Of The Tundra [P]",
-          description: `[Passive Effect] <br><br>Enemies under a [Deathbrand] debuff receive 20% more damage and inflict 20% less damage. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>This Champion is immune to [Freeze], [Stun], and [Provoke] debuffs.<br><br>[Active Effect] <br><br>Whenever this Champion is killed, revives them with 50% HP, 100% Turn Meter, and places a [Block Damage] buff on them for 1 turn.`,
+          name: "Volonté de la toundra [P]",
+          description: `${PASSIVE}
+
+Les ennemis sous débuff ${DEBUFFS.DEATHBRAND} reçoivent 20 % de dégâts en plus et infligent 20 % de dégâts en moins. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.
+
+Ce Champion est immunisé contre les débuffs ${DEBUFFS.GEL}, ${DEBUFFS.STUN} et ${DEBUFFS.PROVOKE}. 
+
+${ACTIVE}
+
+Dès que ce Champion est tué, le ranime avec 50 % de PV et 100 % de Compteur de Tour, puis lui accorde un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour.`,
           cooldown: 5,
           isPassive: true
         }
@@ -54,7 +70,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in All Battles by 80`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -62,40 +78,54 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Tempest Of Swords",
-          description: `Attacks 1 enemy 2 times. Places a [Stun] debuff for 1 turn. <br><br>If this Champion’s MAX HP is equal to or higher than the target’s, this debuff cannot be resisted.`,
-          damage: "0.12*HP+1.4*ATK",
-          levelInfo: ["Level 2: Damage +20%"],
+          name: "Tempête d'épées",
+          description: `Attaque 2 fois un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+
+Si les PV de MAX de ce Champion sont supérieurs ou égaux à ceux de la cible, il est impossible de résister à ce débuff.`,
+          damage: "0.12*HP+1.4*ATQ",
+          levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Goading Roar",
-          description: `Places a [Provoke] debuff on all enemies for 1 turn. If the target is a Boss, places a [Provoke] debuff for 2 turns instead. If this Champion’s MAX HP is equal to or higher than the target’s, these debuffs cannot be resisted.<br><br>Places a 25% [Strengthen] buff on all allies for 2 turns. Also places a [Counterattack] buff on this Champion for 2 turns.`,
+          name: "Rugissement provoquant",
+          description: `Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Si la cible est un Boss, place au lieu de ça un débuff ${DEBUFFS.PROVOKE} pendant 2 tours. Si les PV MAX de ce Champion sont supérieurs ou égaux à ceux de la cible, il est impossible de résister à ces débuffs. 
+
+Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Glacial Rupture",
-          description: `Attacks all enemies. Before attacking, places a 60% [Decrease DEF] debuff on all enemies for 2 turns. If this Champion’s MAX HP is equal to or higher than the target’s, this debuff cannot be resisted.<br><br>This attack deals single-target damage to each target individually, rather than AoE damage. Will ignore 30% of each target’s DEF. Places an extra hit on Bosses, and enemies under [Stun] or [Provoke] debuffs. If a target is a Boss, or is under [Stun] or [Provoke] debuffs, will ignore 50% DEF instead.`,
-          damage: "0.35*HP+1.4*ATK",
+          name: "Rupture glaciale",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Si les PV de MAX de ce Champion sont supérieurs ou égaux à ceux de la cible, il est impossible de résister à ce débuff. 
+
+Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera 30 % de la DÉF de chaque cible. Place une frappe supplémentaire sur les Boss et les ennemis sous débuffs ${DEBUFFS.STUN} et ${DEBUFFS.PROVOKE}. Si une cible est un Boss, ou se trouve sous débuffs ${DEBUFFS.STUN} ou ${DEBUFFS.PROVOKE}, ignorera au lieu de cela 50 % de la DÉF.`,
+          damage: "0.35*HP+1.4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Bear-Heart [P]",
-          description: `[Passive Effect] <br><br>Every time a Champion is killed, increases this Champion’s HP and DEF by 20% (stacks up to 100%). Immune to [Freeze], [Stun] and [Provoke] debuffs.<br><br>[Active Effect] <br><br>Whenever an enemy attempts to place a [Freeze], [Stun] or [Provoke] debuff on this Champion, instantly activates the Glacial Rupture skill. This will not put the Glacial Rupture skill on cooldown.`,
+          name: "Coeur d'ours [P]",
+          description: `${PASSIVE}
+
+Chaque fois qu'un Champion est tué, augmente de 20 % les PV et la DÉF de ce Champion (s'accumule jusqu'à 100 %). 
+
+Immunisé contre les débuffs ${DEBUFFS.GEL}, ${DEBUFFS.STUN} et ${DEBUFFS.PROVOKE}.
+
+${ACTIVE}
+
+Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN} ou ${DEBUFFS.PROVOKE} sur ce Champion, active instantanément la compétence Rupture glaciale. Ceci ne placera pas la compétence Rupture glaciale en temps de recharge.`,
           cooldown: 2,
           isPassive: true
         }
@@ -112,7 +142,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/acc.webp",
-    description: `Increases Ally ACC in All Battles by 80`,
+    description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

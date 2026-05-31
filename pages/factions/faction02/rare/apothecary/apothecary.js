@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Scatterbolt",
-          description: `Attacks 3 times at random.`,
-          damage: "1.4*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Éclair Éparpillé",
+          description: `Attaque 3 fois au hasard.`,
+          damage: "1.4*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Soothing Chant",
-          description: `Heals a target ally by 35% HP. This Heal can be critical.<br><br><br>Heal Multiplier: 0.35*Target Max HP`,
+          name: "Mélopée Apaisante",
+          description: `Soigne de 35 % de PV la cible alliée. Ce Soin peut passer en critique.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Boon of Speed",
-          description: `Places a 30% [Increase SPD] buff on all allies for 2 turns. Fills the Turn Meter of all allies by 15%.`,
+          name: "Aubaine de Vitesse",
+          description: `Place un buff d'${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Remplit de 15 % le Compteur de Tours de tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 21%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 21%`,
 };

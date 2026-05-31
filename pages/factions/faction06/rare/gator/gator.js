@@ -3,26 +3,26 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hex Smash",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 50% [Heal Reduction] debuff for 2 turns.`,
-          damage: "5.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Frappe Ensorcelée",
+          description: `Attaque 1 ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          damage: "5.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Radiate Frenzy",
-          description: `Places a 25% [Increase ATK] buff on all allies for 2 turns.`,
+          name: "Répandre la Frénésie",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Defy the Witch",
-          description: `Removes all debuffs from all allies.`,
+          name: "Défier la Sorcière",
+          description: `Retire tous les débuffs sur tous les alliés.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Magic Ally C.RATE in All Battles by 22%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés Magie lors de toutes les Batailles de 22%`,
 };

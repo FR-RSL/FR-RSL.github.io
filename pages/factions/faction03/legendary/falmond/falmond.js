@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mournsword",
-          description: `Attacks 1 enemy. <br><br>Heals this Champion by 50% of the damage inflicted. If there is any surplus heal, places a [Shield] buff on this Champion for 2 turns equal to the surplus heal. <br><br>Will attack using the Burning Courage skill instead if the target is from the Corrupted Alliance.<br><br><br>Heal Multiplier: 0.5*Damage DealtShield Multiplier: Remaining Heal Amount`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          name: "Lamedeuil",
+          description: `Attaque un ennemi. 
+
+Soigne ce Champion à hauteur de 50 % des dégâts infligés. S'il y a un excédent de soin, place un buff ${BUFFS.SHIELD} équivalent au soin excédentaire sur ce Champion pendant 2 tours. 
+
+Attaquera au lieu de ça avec la compétence Courage ardent si la cible est issue de l'Alliance des Corrompus.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "In Lumaya's Name",
-          description: `Attack all enemies. <br><br>Damage inflicted by this skill increases by 5% for each buff and debuff on the target. Will ignore 25% DEF of targets that have no buffs.`,
-          damage: "3.7*ATK",
+          name: "Au nom de Lumaya",
+          description: `Attaque tous les ennemis. 
+
+Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff et débuff sur la cible. Ignorera 25 % de la DÉF des cibles qui ne disposent pas de buffs.`,
+          damage: "3.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Burning Courage",
-          description: `Attacks 1 enemy. Before attacking, removes all buffs from the target. Damage increases by 20% for each buff removed.<br><br>[Sacred Order Unity]<br><br>1 Faction ally:<br>Before attacking, steals all buffs from the target instead. This effect cannot be resisted. Damage increases by 20% for each buff stolen.<br><br>2 Faction allies:<br>The damage inflicted by this skill increases by 20% for each turn taken by an ally or enemy before this Champion’s next turn. Resets at the end of this Champion’s turn.<br><br>3 Faction allies:<br>Will attack all remaining enemies with any surplus damage if the initial target is killed. This attack cannot be critical. If the initial target survives, places a guaranteed [True Fear] debuff on all enemies for 1 turn.`,
-          damage: "6*ATK+(0.2*6*ATK*HeroCounterWithId(2))Multiplier: Remaining Damage Amount",
+          name: "Courage ardent",
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible. Les dégâts augmentent de 20 % pour chaque buff retiré.`,
+          damage: "6*ATQ+(0.2*6*ATQ*HeroCounterWithId(2))Multiplier: Remaining Damage Amount",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Til My Last Breath [P]",
-          description: `Decreases the damage from hits taken by this Champion by 10% for each turn taken by an ally or enemy before this Champion's next turn. Resets at the end of this Champion's next turn.<br><br>[Sacred Order Unity]<br><br>1 Faction ally:<br>Fills an ally’s Turn Meter by 2% whenever they place a buff or debuff.<br><br>2 Faction allies:<br>Places a [Revive On Death] buff for 1 turn on an ally whenever their HP drops below 50%.<br><br>3 Faction allies:<br>All allies are immune to cooldown increasing effects.`,
+          name: "Jusqu'au dernier soupir [P]",
+          description: `Réduit les dégâts des frappes subies par ce Champion de 10 % pour chaque tour joué par un allié ou un ennemi avant le prochain tour de ce Champion. Se réinitialise à la fin du prochain tour de ce Champion.`,
           isPassive: true
         }
       ],
@@ -48,9 +54,9 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-attack.webp",
-  description: `Increases Ally ATK in All Battles by 30%
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%
 
-[Sacred Order only]
+(ne s'applique qu'à la Faction de l'Ordre Sacré)
 
-Increases Ally C.RATE in all battles by 15%`,
+Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 15%`,
 };

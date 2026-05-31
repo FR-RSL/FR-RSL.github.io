@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Claws Upon Claws",
-          description: `Attacks 1 enemy 3 times. Each critical hit has a 50% chance of decreasing the target’s Turn Meter by 3%.`,
-          damage: "0.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Damage +5%", "Level 8: Damage +10%", "Level 9: Buff/Debuff Chance +10%"],
+          name: "Griffes sur Griffes",
+          description: `Attaque 3 fois un ennemi. Chaque coup critique possède également 50 % de chances de réduire le Compteur de Tour de la cible de 3 %.`,
+          damage: "0.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Devitalize",
-          description: `Attacks 1 enemy 2 times. Each hit has an 85% chance of placing a 100% [Heal Reduction] debuff for 2 turns.`,
-          damage: "2.7*ATK",
+          name: "Dévitaliser",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 85 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          damage: "2.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Vanish to Shadows",
-          description: `Places a [Perfect Veil] buff and a 30% [Reflect Damage] buff on this Champion for 2 turns.`,
+          name: "Évanouie dans l'Ombre",
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Dungeons by 40`,
+  description: `Augmente la statistique PRÉ des Alliés lors des Donjons de 40`,
 };

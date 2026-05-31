@@ -3,25 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Hefty Flail",
-          description: `Attacks 1 enemy 2 times.<br>Each hit has a 15% chance of placing a 15% [Weaken] debuff for 2 turns.`,
+          name: "Fléau Lourd",
+          description: `Attaque 2 fois un ennemi.
+Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
           damage: "1.5*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Meteoric Ignition",
-          description: `Attacks 1 enemy.<br>Has a 75% chance of placing a [HP Burn] debuff for 2 turns.`,
+          name: "Contact Fulgurant",
+          description: `Attaque un ennemi.
+Possède 75 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
           damage: "5.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Punishing Defenses [P]",
-          description: `When attacked, has a 30% chance of extending the duration of all debuffs on the attacker by 1 turn.`,
+          name: "Défenses Punitives [P]",
+          description: `Lorsqu'il y a une attaque, possède 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs de l'assaillant.`,
           isPassive: true
         }
       ],
@@ -39,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 17%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 17%`,
 };

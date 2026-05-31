@@ -3,24 +3,24 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Bullseye",
-          description: `Attacks 1 enemy. Grants an Extra Turn if the target is killed.`,
-          damage: "3*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Dans le Mille",
+          description: `Attaque un ennemi. Octroie un Tour Supplémentaire si la cible est tuée.`,
+          damage: "3*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Exhortation",
-          description: `Removes 1 random debuff from all allies. Has a 60% chance of placing a 30% [Increase SPD] on all allies for 2 turns.`,
+          description: `Retire 1 débuff aléatoire sur tous les alliés. Possède 60 % de chances de placer une ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 3,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Avenger [P]",
-          description: `Counterattacks the attacker when an ally is attacked.`,
+          name: "Vengeresse [P]",
+          description: `Contre-attaque l'assaillant lorsqu'un allié se fait attaquer.`,
           cooldown: 1,
           isPassive: true
         }
@@ -39,5 +39,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in Dungeons by 16%`,
+  description: `Augmente la statistique VIT des Alliés lors des Donjons de 16%`,
 };

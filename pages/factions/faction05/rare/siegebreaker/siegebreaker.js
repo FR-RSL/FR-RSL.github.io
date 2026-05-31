@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Pelting Blows",
-          description: `Attacks 1 enemy 2 times.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%"],
+          name: "Coups Écorchants",
+          description: `Attaque 2 fois 1 ennemi.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Electrocute",
-          description: `Attacks 1 enemy. Has an 80% chance of placing a [Block Active Skills] debuff for 1 turn if this attack is critical.`,
-          damage: "6.6*ATK",
+          name: "Électrocuter",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour si cette attaque passe en critique.`,
+          damage: "6.6*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Heavenly Roar",
-          description: `Places a 30% [Increase C. RATE] buff on this Champion for 2 turns, then attacks all enemies. Has a 50% Chance of decreasing the Turn Meter by 30% if this attack is critical.`,
-          damage: "4.6*ATK",
+          name: "Hurlement Divin",
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 % sur ce Champion, puis attaque tous les ennemis. Possède 50 % de chances de réduire le Compteur de Tours de 30 % si cette attaque passe en critique.`,
+          damage: "4.6*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

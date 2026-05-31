@@ -3,12 +3,10 @@ const championData = {
   spells: [
     {
       img: "assets/sort1.webp",
-      name: "Laceration rapide",
-      description: `
-        Attaque un ennemi.<br><br>
-        Remplit le Compteur de Tour de tous les alliés de 10% si cette
-        attaque est critique.
-      `,
+      name: "Lacération rapide",
+      description: `Attaque un ennemi. 
+
+Remplit le Compteur de Tour de tous les alliés de 10 % si cette attaque est critique.`,
       damage: "3.2*ATQ",
       levelInfo: [
         "Dégâts +10%",
@@ -18,13 +16,11 @@ const championData = {
     {
       img: "assets/sort2.webp",
       name: "Tacticien surnaturel",
-      description: `
-        Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires
-        si le Compteur de Tour de la cible est inferieur a 50%.<br><br>
-        Ignorera un pourcentage de la DEF de la cible equivalent au Compteur
-        de Tour actuel de la cible.<br><br>
-        Reinitialise le temps de recharge de cette compétence si la cible est tuee.
-      `,
+      description: `Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires si le Compteur de Tour de la cible est inférieur à 50 %. 
+
+Ignorera un pourcentage de la DÉF de la cible équivalent au Compteur de Tour actuel de la cible. 
+
+Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
       damage: "2*ATQ",
       cooldown: 4,
       levelInfo: [
@@ -36,12 +32,10 @@ const championData = {
     },
     {
       img: "assets/sort3.webp",
-      name: "Premonition decisive",
-      description: `
-        Attaque un ennemi.<br><br>
-        Vole 100% du Compteur de Tour actuel de la cible et place un débuff
-        <span class='gbt'>Peur Absolue</span> pendant 2 tours.
-      `,
+      name: "Prémonition décisive",
+      description: `Attaque un ennemi.
+
+Vole 100 % du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.`,
       damage: "5*ATQ",
       cooldown: 5,
       factions: [
@@ -61,12 +55,8 @@ const championData = {
     },
     {
       img: "assets/passif1.webp",
-      name: "Fleau du Mikage [P]",
-      description: `
-        Remplit le Compteur de Tour de ce Champion de 15% des qu'un Champion
-        ennemi joue un tour. Si plusieurs Champions de l'equipe disposent de
-        cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
-      `,
+      name: "Fléau du Mikage [P]",
+      description: `Remplit le Compteur de Tour de ce Champion de 15 % dès qu'un Champion ennemi joue un tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
       factions: [
         `
         Les effets d'augmentation du Compteur de Tour sur les alliés sont 20% plus efficaces.

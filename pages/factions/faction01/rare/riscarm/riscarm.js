@@ -3,27 +3,29 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Thundering Impact",
-          description: `Attacks 1 enemy. Has a 20% chance of placing a [Stun] debuff for 1 turn.`,
+          name: "Impact tonnant",
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "3.45*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Tower Above",
-          description: `Attacks all enemies. Places a [Shield] buff on this Champion for 2 turns equal to 20% of their MAX HP.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Surplomber",
+          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 20 % de ses PV MAX pendant 2 tours.`,
           damage: "3.8*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Stand Proud",
-          description: `Places a [Counterattack] buff on a target ally for 2 turns. Also places a 30% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Fière allure",
+          description: `Place un buff ${BUFFS.COUNTER} sur une cible alliée pendant 2 tours. 
+
+Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +43,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Faction Wars by 20%`,
+  description: `Augmente la statistique DEF des Alliés lors des Cryptes de Faction de 20%`,
 };

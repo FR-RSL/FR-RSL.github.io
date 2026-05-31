@@ -3,26 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Inspiring Violence",
-          description: `Attacks 1 enemy. Has a 50% chance of removing 1 random debuff from a random ally.<br><br>Cannot remove a debuff from this Champion.`,
+          name: "Violence Exaltante",
+          description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 débuff pris au hasard sur un allié choisi au hasard.
+
+Impossible de retirer un débuff dont ce Champion est affligé.`,
           damage: "0.15*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Damage +5%", "Level 8: Damage +10%", "Level 9: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sheer Grit",
-          description: `Places a [Shield] buff on all allies equal to 20% of this Champion’s MAX HP for 2 turns. Also places a 15% [Continuous heal] buff on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.20*HP`,
+          name: "Pur Courage",
+          description: `Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours. Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Shield +5%", "Level 3: Shield +5%", "Level 4: Shield +5%", "Level 5: Shield +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Bouclier +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Glorious Return",
-          description: `Revives 2 random allies with 20% HP and 20% Turn Meter. Also places a [Shield] buff on the revived allies for 2 turns equal to 30% of their MAX HP.<br><br><br>Shield Multiplier: 0.30*Target Max HP`,
+          name: "Retour Glorieux",
+          description: `Ranime 2 alliés choisis au hasard avec 20 % de PV et 20 % de Compteur de Tour. Place également sur les alliés ranimés un buff ${BUFFS.SHIELD} valant 30 % de leurs PV MAX pendant 2 tours.`,
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -40,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 15%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%`,
 };

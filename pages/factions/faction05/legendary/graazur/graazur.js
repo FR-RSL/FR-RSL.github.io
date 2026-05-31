@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Defend The Wall!",
-          description: `Attacks all enemies. Places a [Shield] buff on all allies except this Champion for 1 turn. The value of the [Shield] is proportional to this Champion’s DEF.<br><br><br>Shield Multiplier: 1.1*DEF`,
+          name: "Défendez le mur !",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.SHIELD} sur tous les alliés sauf ce Champion pendant 1 tour. La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
           damage: "3.1*DEF",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Shield +10%", "Level 4: Damage +10%", "Level 5: Shield +10%"],
+          levelInfo: ["Dégâts +10%", "Bouclier +10%", "Dégâts +10%", "Bouclier +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Healing Bombardment",
-          description: `Attacks all enemies. Heals this Champion by 10% of the damage dealt. <br><br>Increases the duration of all buffs on all allies by 1 turn.<br><br><br>Heal Multiplier: 0.1*Damage Dealt`,
+          name: "Bombardement curatif",
+          description: `Attaque tous les ennemis. Soigne ce Champion à hauteur de 10 % des dégâts infligés. 
+
+Augmente d'1 tour la durée de tous les buffs de tous les alliés.`,
           damage: "0.1*Target Max HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Let None Pass!",
-          description: `Attacks all enemies. Has a 75% chance of placing a [Provoke] debuff for 1 turn. <br><br>Also places a 50% [Increase RES] buff and a 60% [Increase DEF] buff on all allies for 2 turns.`,
+          name: "Personne ne passera !",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+
+Place également un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           damage: "4*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "This Wall Won't Fall! [P]",
-          description: `[Passive Effect]<br><br>Whenever this Champion is attacked, heals all allies except this Champion by 70% of the damage received. Only heals by 35% of the damage received from Boss attacks. This effect has no cooldown. <br><br>[Active Effect]<br><br>Places an [Unkillable] buff on this Champion for 1 turn before receiving a fatal hit.<br><br>Heal Multiplier: 0.7*Damage Dealt`,
+          name: "Ce mur résistera [P]",
+          description: `${PASSIVE}
+
+Lorsque ce Champion se fait attaquer, soigne tous les alliés sauf ce Champion à hauteur de 70 % des dégâts reçus. Soigne uniquement à hauteur de 35 % des dégâts reçus lors des attaques de Boss. Cet effet n'a pas de temps de recharge. 
+
+${ACTIVE}
+
+Place instantanément un buff ${BUFFS.UNKILLABLE} pendant 1 tour sur ce Champion avant qu'il reçoive un coup fatal.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in All Battles by 33%`,
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%`,
 };

@@ -3,28 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Brittleness Bane",
-          description: `Attacks 1 enemy.<br><br>Has a 60% chance of placing a 50% [Decrease ATK] debuff for 2 turns.<br><br>Has a 100% chance instead if the target is under a [HP Burn] debuff or a [Freeze] debuff.`,
-          damage: "3.7*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Fléau de Fragilité",
+          description: `Attaque un ennemi.
+
+Possède 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.
+
+Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.`,
+          damage: "3.7*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Death Fires",
-          description: `Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns.`,
-          damage: "3.9*ATK",
+          name: "Feux Mortels",
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Elemental Unity",
-          description: `Attacks all enemies. Places a [Freeze] debuff for 1 turn and a [HP Burn] debuff for 3 turns on targets already under [HP Burn] debuffs. The [HP Burn] debuff cannot be resisted.`,
-          damage: "3.6*ATK",
+          name: "Unité Élémentaire",
+          description: `Attaque tous les ennemis.
+
+Place un débuff de ${DEBUFFS.GEL} d'1 tour sur chaque cible si la cible souffre d'un débuff de ${DEBUFFS.BURN}.`,
+          damage: "3.6*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         }
       ],
@@ -42,5 +48,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in All Battles by 33%`,
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 33%`,
 };

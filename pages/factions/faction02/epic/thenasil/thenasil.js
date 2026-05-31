@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Spring Lullaby",
-          description: `Attacks 1 enemy. Has a 15% chance of placing a [Sleep] debuff for 1 turn.`,
-          damage: "5.2*ATK",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +10%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Berceuse de Source",
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
+          damage: "5.2*ATQ",
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Oak-Skinned",
-          description: `Places a 60% [Increase DEF] buff on all allies for 2 turns. Heals all allies by 25% of this Champion's MAX HP.<br><br><br>Heal Multiplier: 0.25*HP`,
+          name: "Peau de Chêne",
+          description: `Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Soigne tous tes alliés à hauteur de 25 % des PV MAX de ce Champion.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Wither",
-          description: `Attacks all enemies. Decreases the duration of all enemy buffs by 1 turn.`,
-          damage: "4*ATK",
+          name: "Flétrir",
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis.`,
+          damage: "4*ATQ",
           cooldown: 6,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
   description: `
-Increases Ally RES in Dungeons by 70`,
+Augmente la statistique RÉS des Alliés lors des Donjons de 70`,
 };

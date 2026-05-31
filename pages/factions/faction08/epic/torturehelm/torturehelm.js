@@ -4,24 +4,24 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Pillage",
-          description: `Attacks 1 enemy. Has a 30% chance of stealing 1 random buff from the target. Damage is proportional to ATK and DEF.`,
-          damage: "1.9*ATK+3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +10%"],
+          description: `Attaque un ennemi. Possède 30 % de chances de voler un buff aléatoire à la cible. Les dégâts sont proportionnels à l'ATQ et la DÉF.`,
+          damage: "1.9*ATQ+3*DEF",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Bloodlust",
-          description: `Attacks 1 enemy. Damage is proportional to this Champion's MAX HP and increases according to the number of dead allies.`,
+          name: "Soif de Sang",
+          description: `Attaque un ennemi. Les dégâts sont proportionnels aux PV MAX de ce Champion et augmentent en fonction du nombre d'alliés morts.`,
           damage: "0.3*HP*(1+Allies Dead)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Unkillable [P]",
-          description: `Revives this Champion with 50% HP when killed.`,
+          name: "Invincible [P]",
+          description: `Ranime ce Champion avec 50 % de PV lorsqu'il se fait tuer.`,
           cooldown: 3,
           isPassive: true
         }
@@ -40,5 +40,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/hp.webp",
-  description: `Increases Ally HP in Dungeons by 33%`,
+  description: `Augmente la statistique PV des Alliés lors des Donjons de 33%`,
 };

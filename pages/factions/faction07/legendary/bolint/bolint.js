@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Blockade Destroyer",
-          description: `Attacks 1 enemy 2 times. <br><br>After the second hit, heals all allies by 5% of this Champion’s MAX HP. <br><br>Also has a 10% chance of granting an Extra Turn.<br><br><br>Heal Multiplier: 0.05*HP`,
+          name: "Destructeur de blocus",
+          description: `Attaque 2 fois un ennemi. 
+
+Après la seconde frappe, soigne tous tes alliés à hauteur de 5 % des PV MAX de ce Champion. 
+
+Possède également 10 % de chances d'accorder un Tour supplémentaire.`,
           damage: "0.15*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%", "Level 4: Heal +10%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +10%", "Soins +10%", "Soins +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Fracture Force",
-          description: `Attacks 1 enemy. Has a 80% chance of placing a 60% [Decrease DEF] debuff for 2 turns. <br><br>After attacking the initial target, attacks all other enemies. Has a 80% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
+          name: "Force de fracture",
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+
+Après avoir attaqué la cible initiale, attaque tous les autres ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "0.5*HPMultiplier: 0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hammer Of Onungburg",
-          description: `Attacks all enemies 2 times. Each hit has a 100% chance of placing a [Stun] debuff for 1 turn.<br><br>[Skinwalkers Unity]<br><br>1 Faction ally:<br>Before attacking, has a 100% chance of removing all buffs from all enemies.<br><br>2 Faction allies:<br>Fills this Champion’s Turn Meter by 15% for each [Stun] debuff placed by this skill.<br><br>3 Faction allies:<br>This skill will ignore 50% of each target’s RES.`,
+          name: "Marteau d'Onungburg",
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe a 100 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.15*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Icon of Rebellion [P]",
-          description: `When an ally uses a multi-hit skill, each subsequent hit after the first deals 15% more damage.<br><br>[Skinwalkers Unity]<br><br>1 Faction ally:<br>Whenever an ally hits an enemy, has a 10% chance of placing a [Stun] debuff for 1 turn.<br><br>2 Faction allies:<br>Whenever an ally inflicts a critical hit, fills their Turn Meter by 5%.<br><br>3 Faction allies:<br>Allies will ignore 30% of DEF against enemies under a [Stun] debuff.`,
+          name: "Icône de rébellion [P]",
+          description: `Lorsqu'un allié utilise une compétence à frappes multiples, chaque frappe consécutive après la première inflige 15 % de dégâts supplémentaires.`,
           isPassive: true
         }
       ],
@@ -48,9 +54,9 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-speed.webp",
-  description: `Increases Ally SPD in Arena by 24%
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 24%
 
-[Skinwalkers only]
+(ne s'applique qu'à la Faction des Marcheurs de Peau)
 
-Increases Ally ACC in All Battles by 60`,
+Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

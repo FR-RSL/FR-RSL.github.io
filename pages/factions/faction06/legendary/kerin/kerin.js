@@ -3,34 +3,52 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Biting Infestation",
-          description: `Attacks all enemies. <br><br>Has a 50% chance of placing a 30% [Decrease SPD] debuff for 2 turns. <br><br>Steals 5% of each enemy’s Turn Meter. Steals 10% of each enemy’s Turn Meter instead, if they’re under a [Decrease SPD] debuff.`,
-          damage: "4.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Infestation mordante",
+          description: `Attaque tous les ennemis. 
+
+A 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Vole 5 % du Compteur de Tour de chaque ennemi. Vole au lieu de ça 10 % du Compteur de Tour de chaque ennemi qui se trouve sous débuff ${DEBUFFS.SPD}.`,
+          damage: "4.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Threshmaster",
-          description: `Attacks 1 enemy. <br><br>Puts all of the target’s skills on cooldown. <br><br>Has a 75% chance of decreasing the Turn Meters of all enemies under a [Sleep] debuff by 15%. Has a 75% chance of decreasing the Turn Meters of all enemies without a [Sleep] debuff by 30% instead.`,
-          damage: "7.5*ATK",
+          name: "Maître de battue",
+          description: `Attaque un ennemi. 
+
+Place toutes les compétences de la cible en recharge. 
+
+A 75 % de chances de réduire de 15 % les Compteurs de Tour de tous les ennemis sous débuff ${DEBUFFS.SLEEP}. A au lieu de ça 75 % de chances de réduire de 30 % les Compteurs de Tour de tous les ennemis sans débuff ${DEBUFFS.SLEEP}.`,
+          damage: "7.5*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sleepstingers",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a [Sleep] debuff on all enemies for 1 turn. Will ignore any [Block Debuffs] buffs. <br><br>Then grants an Extra Turn.`,
-          damage: "5.4*ATK",
+          name: "Dards de sommeil",
+          description: `Attaque tous les ennemis. 
+
+A 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}. 
+
+Accorde ensuite un Tour supplémentaire.`,
+          damage: "5.4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +15%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Weed Out [P]",
-          description: `[Passive Effect]<br><br>Whenever an enemy attempts to increase their Turn Meter, decreases the value of that Turn Meter fill effect by 25%. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>[Active Effect]<br><br>Whenever a [Sleep] debuff is removed or expires on a target, instantly activates the [Threshmaster] skill on that target. Does not work if a [Sleep] debuff is removed by damage. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          name: "Désherbage [P]",
+          description: `${PASSIVE}
+
+Dès qu'un ennemi essaie d'augmenter son Compteur de Tour, réduit de 25 % la valeur de cet effet de remplissage du Compteur de Tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.
+
+${ACTIVE}
+
+Dès qu'un débuff ${DEBUFFS.SLEEP} est retiré ou expire sur une cible, active instantanément la compétence [Maître de battue] sur cette cible. Ne fonctionne pas si un débuff ${DEBUFFS.SLEEP} est retiré par des dégâts. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           cooldown: 1,
           isPassive: true
         }
@@ -49,5 +67,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in Arena by 80`,
+  description: `Augmente la statistique PRÉ des Alliés lors des batailles d'Arène de 80`,
 };

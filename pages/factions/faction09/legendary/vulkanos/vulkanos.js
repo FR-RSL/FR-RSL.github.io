@@ -4,13 +4,11 @@ type: "Defense",
         {
 			img: "assets/sort1.webp",
 			name: "Lame en fusion",
-			description: `
-            	Attaque un ennemi.<br><br>
-            	Chaque fois que cette compétence est utilisee, augmente de maniere permanente
-				les degats infliges par cette compétence de 10% (s'accumule jusqu'a 100%).<br><br>
-				Possède 50% de chances de contre-attaquer avec cette compétence chaque fois qu'un ennemi
-				sous débuff <span class='gbt'>Brulure de PV</span> attaque ce Champion ou ses alliés.
-          	`,
+			description: `Attaque un ennemi. 
+
+Chaque fois que cette compétence est utilisée, augmente de manière permanente les dégâts infligés par cette compétence de 10 % (s'accumule jusqu'à 100 %). 
+
+Possède 50 % de chances de contre-attaquer avec cette compétence chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} attaque ce Champion ou ses alliés.`,
           	damage: "3.5*DEF",
           	levelInfo: [
             	"Dégâts +10%",
@@ -20,11 +18,9 @@ type: "Defense",
         {
           	img: "assets/sort2.webp",
           	name: "Terreur ardente",
-          	description: `
-            	Attaque tous les ennemis.<br><br>
-				Place un débuff <span class='gbt'>Peur</span> pendant 2 tours.
-				Les ennemis affliges d'un débuff <span class='gbt'>Brulure de PV</span> ne peuvent pas resister a ce débuff.
-          	`,
+          	description: `Attaque tous les ennemis. 
+
+Place un débuff ${DEBUFFS.FEAR} pendant 2 tours. Les ennemis affligés d'un débuff ${DEBUFFS.BURN} ne peuvent pas résister à ce débuff.`,
           	damage: "3.6*DEF",
           	cooldown: 4,
          	levelInfo: [
@@ -35,12 +31,10 @@ type: "Defense",
         },
         {
           	img: "assets/sort3.webp",
-          	name: "Brulure de demolition",
-          	description: `
-            	Attaque 2 fois un ennemi.<br><br>
-            	Les degats infliges par cette compétence augmentent de 10% pour les tours restants des débuffs
-				<span class='gbt'>Brulure de PV</span> sur l'equipe ennemie (s'accumule jusqu'a 100%).
-          	`,
+          	name: "Brûlure de démolition",
+          	description: `Attaque 2 fois un ennemi. 
+
+Les dégâts infligés par cette compétence augmentent de 10 % pour les tours restants des débuffs ${DEBUFFS.BURN} sur l'équipe ennemie (s'accumule jusqu'à 100 %).`,
           	damage: "3*DEF",
           	cooldown: 4,
           	factions: [
@@ -65,14 +59,12 @@ type: "Defense",
         },
         {
           	img: "assets/passif1.webp",
-          	name: "Feu demoniaque deferlant [P]",
-          	description: `
-            	Des qu'un ennemi recoit un buff ou que son Compteur de Tour est augmente, a 50% de chances
-				de placer un débuff <span class='gbt'>Brulure de PV</span> sur cet ennemi pendant 2 tours.<br><br>
-				Si un ennemi est deja afflige d'un débuff <span class='gbt'>Brulure de PV</span>, a au lieu de ca 50%
-				de chances de l'activer instantanement.<br><br>
-				Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
-          	`,
+          	name: "Feu démoniaque déferlant [P]",
+          	description: `Dès qu'un ennemi reçoit un buff ou que son Compteur de Tour est augmenté, a 50 % de chances de placer un débuff ${DEBUFFS.BURN} sur cet ennemi pendant 2 tours. 
+
+Si un ennemi est déjà affligé d'un débuff ${DEBUFFS.BURN}, a au lieu de cela 50 % de chances de l'activer instantanément.
+
+Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           	factions: [
             `
             	Il est impossible de bloquer et de resister aux débuffs <span class='gbt'>Brulure de PV</span>

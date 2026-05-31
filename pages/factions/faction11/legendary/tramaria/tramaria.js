@@ -4,35 +4,41 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bourbe de cauchemar",
-          description: `Attaque tous les ennemis. Possede 50% de chances de placer un debuff ${DEBUFFS.SPD} de 30% pendant 2 tours.${RETURN}${RETURN}
-Possede egalement 30% de chances de placer un debuff ${DEBUFFS.FEAR} pendant 1 tour sur les ennemis ayant 50% de Compteur de Tour ou moins.`,
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+
+Possède également 30 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour sur les ennemis ayant 50 % de Compteur de tour ou moins.`,
           damage: "3.5*ATQ",
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Maladie stagnante",
-          description: `Attaque tous les ennemis. Possede 80% de chances de placer un debuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
-Apres l'attaque, possede également 80% de chances de reduire le Compteur de Tour de chaque cible de 30%.`,
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+
+Après l'attaque, possède également 80 % de chances de réduire le Compteur de Tour de chaque cible de 30 %.`,
           damage: "4.5*ATQ",
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
-          name: "Au-dela des emotions",
-          description: `Retire tous les debuffs sur tous les allies, puis remplit les Compteurs de Tour de tous les allies de 15%.${RETURN}${RETURN}
-Place egalement un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les allies pendant 2 tours.${RETURN}${RETURN}
-Remplit le Compteur de Tour de chaque allie de 10% supplementaires pour chaque debuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} retire.${RETURN}${RETURN}
-Remplit le Compteur de Tour de chaque allie de 5% supplementaires pour tout autre debuff retire.`,
+          name: "Au-delà des émotions",
+          description: `Retire tous les débuffs sur tous les alliés, puis remplit les Compteurs de tour de tous les alliés de 15 %. 
+
+Place également un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.
+
+Remplit le Compteur de tour de chaque allié de 10 % supplémentaires pour chaque débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} retiré. 
+
+Remplit le Compteur de tour de chaque allié de 5 % supplémentaires pour tout autre débuff retiré.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         },
         {
           img: "assets/sort4.webp",
-          name: "Etrange [P]",
-          description: `Immunise contre les debuffs ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
-Remplit le Compteur de Tour de cette Championne de 20% des qu'un ennemi essaie de placer un debuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} sur cette Championne.`,
+          name: "Étrange [P]",
+          description: `Immunisé contre les débuffs ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR}.
+
+Remplit le Compteur de tour de cette Championne de 20 % dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} sur cette Championne.`,
           isPassive: true,
         }
   ],

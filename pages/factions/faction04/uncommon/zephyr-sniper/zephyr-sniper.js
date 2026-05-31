@@ -3,18 +3,18 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Suppressive Fire",
-          description: `Attacks all enemies. Has a 15% chance of increasing the cooldown of a random Skill on each target by 1 turn.`,
+          name: "Tir de Couverture",
+          description: `Attaque tous les ennemis. Possède 15 % de chances d'augmenter d'1 tour le temps de recharge d'une Compétence aléatoire de chaque cible.`,
           damage: "DEF*1.9",
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Damage +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Ranger's Skill",
-          description: `Places a 7.5% [Continuous Heal] buff on all allies for 2 turns.`,
+          name: "Compétence de Ranger",
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 7,5 % sur tous les alliés.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         }
       ],

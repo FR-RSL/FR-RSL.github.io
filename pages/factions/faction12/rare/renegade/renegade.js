@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Lingering Pain",
-          description: `Attacks 1 enemy. Has a 25% chance of placing a 100% [Heal Reduction] debuff for 1 turn.`,
-          damage: "1.2*ATK+SPD",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          name: "Douleur Persistante",
+          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 1 tour.`,
+          damage: "1.2*ATQ+SPD",
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Lash Out",
-          description: `Attacks at random 3 times. Has a 50% chance of placing a 15% [Decrease SPD] debuff for 2 turns. Places a 25% [Decrease ACC] debuff for 2 turns if the target has any active buffs.`,
-          damage: "1.8*ATK",
+          name: "À bras raccourcis",
+          description: `Attaque 3 fois au hasard. Offre 50 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours. Place un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours si la cible possède des buffs actifs.`,
+          damage: "1.8*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Sacrificial Ritual",
-          description: `Decreases the cooldown of all ally skills by 2 turns. This skill does not affect this Champion, or other Champions with this skill. This Champion will receive damage equal to 30% of their MAX HP. This will happen even if it kills this Champion. This skill's cooldown cannot be reduced or reset.`,
+          name: "Rituel Sacrificiel",
+          description: `Réduit de 2 tours le temps de recharge de toutes les compétences des alliés. Cette compétence n'affecte pas cette Championne, ni les autres Champions qui ont cette compétence. Cette Championne recevra des dégâts équivalents à 30 % de ses PV MAX. Ceci se produira même si cela tue cette Championne. Le temps de recharge de cette compétence ne peut pas être réduit ou réinitialisé.`,
           damage: "0.3*HP",
           cooldown: 7,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -42,5 +42,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

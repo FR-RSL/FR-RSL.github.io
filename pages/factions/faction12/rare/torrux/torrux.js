@@ -3,27 +3,35 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Festering Claymore",
-          description: `Attacks 1 enemy. Has a 35% chance of placing a [Leech] debuff for 2 turns.`,
+          name: "Claymore suppurante",
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "3.3*DEF",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Putrescent Cut",
-          description: `Attacks all enemies. Before attacking, places a 30% [Increase DEF] buff on all allies for 2 turns. <br><br>Has a 45% chance of placing a [Provoke] debuff for 1 turn.`,
+          name: "Coupe putride",
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours. 
+
+Possède 45 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.5*DEF",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +5%", "Level 7: Buff/Debuff Chance +10%", "Level 8: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Bladebreaker [P]",
-          description: `[Active Effect]<br><br>Places a [Block Damage] buff on this Champion for 1 turn if the incoming damage exceeds 20% of this Champion’s MAX HP. <br><br>[Passive Effect]<br><br>Counterattacks when hit by an enemy under a [Provoke] debuff.`,
+          name: "Brise-lame [P]",
+          description: `${ACTIVE}
+
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour si les dégâts en approche dépassent 20 % des PV MAX de ce Champion. 
+
+${PASSIVE}
+
+Contre-attaque lorsqu'il est frappé par un ennemi sous débuff ${DEBUFFS.PROVOKE}.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true
         }
       ],
@@ -41,5 +49,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/defence.webp",
-  description: `Increases Ally DEF in Dungeons by 25%`,
+  description: `Augmente la statistique DEF des Alliés lors des Donjons de 25%`,
 };

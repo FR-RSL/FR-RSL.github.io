@@ -3,34 +3,44 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Djinn Swords",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of increasing the duration of a random debuff on the target by 1 turn. <br><br>If Djamarsa is on the same team, each hit also increases the duration of any [HP Burn] debuffs on the target by 1 turn.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Épées de djinn",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible. 
+
+Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d'1 tour la durée de tout débuff ${DEBUFFS.BURN} sur la cible.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Berserker's Delight",
-          description: `Attacks 3 times at random. Each hit has an 80% chance of instantly activating any [HP Burn] debuffs on each target. Heals this Champion by 10% of their MAX HP for each [HP Burn] debuff activated by this skill.<br><br><br>Heal Multiplier: 0.1*HP`,
-          damage: "2*ATK",
+          name: "Régal de berserker",
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 80 % de chances d'activer instantanément un débuff ${DEBUFFS.BURN} sur la cible. Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BURN} activé par cette compétence.`,
+          damage: "2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Blazing Zephyr",
-          description: `Attacks all enemies. Has an 80% chance of placing a [HP Burn] debuff for 2 turns. <br><br>Fills this Champion’s Turn Meter by 15% for each [HP Burn] debuff placed by this skill.`,
-          damage: "4*ATK",
+          name: "Zéphyr ardent",
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+
+Remplit le Compteur de Tour de ce Champion de 15 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Simmering Anger [P]",
-          description: `[Passive Effect]<br><br>Every 10 times Active Skills are used in battle by either enemy or allied Champions, this Champion instantly activates the Berserker's Delight skill. This happens every 5 times Active Skills are used if Djamarsa is on the same team.<br><br>[Active Effect]<br><br>If Djamarsa is on the same team, revives this Champion with 50% HP and 50% Turn Meter when killed.`,
+          name: "Colère frémissante [P]",
+          description: `${PASSIVE}
+
+Toutes les 10 fois que des Compétences Actives sont utilisées au combat par des Champions ennemis ou alliés, ce Champion active instantanément la compétence Régal de berserker. Cela se produit toutes les 5 fois que des Compétences Actives sont utilisées si Djamarsa se trouve dans la même équipe.
+
+${ACTIVE}
+
+Si Djamarsa se trouve dans la même équipe, ranime ce Champion avec 50 % de PV et 50 % de Compteur de Tour lorsqu'il se fait tuer.`,
           cooldown: 4,
           isPassive: true
         }
@@ -49,5 +59,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/acc.webp",
-  description: `Increases Ally ACC in All Battles by 50`,
+  description: `Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 50`,
 };

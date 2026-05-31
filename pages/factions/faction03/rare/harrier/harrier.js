@@ -3,34 +3,36 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Trick Shot",
-          description: `Attacks 1 enemy. Has a 15% chance of placing an extra hit.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +10%"],
+          name: "Tir Dupant",
+          description: `Attaque 1 fois un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Puncture Bolts",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 30% [Decrease DEF] debuff for 2 turns.`,
-          damage: "2.5*ATK",
+          name: "Carreaux Perçants",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          damage: "2.5*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Deadeye's Strike",
-          description: `Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit.`,
-          damage: "5.5*ATK",
+          name: "Frappe d'Élite",
+          description: `Attaque 1 ennemi. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          damage: "5.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Skillful Partner [P]",
-          description: `Will ignore 50% of the target's DEF when this Champion inflicts a critical hit.<br><br>[Only available when Hospitaller is on the same team.]`,
+          name: "Compagne Douée ${PASSIVE}",
+          description: `Ignorera 50 % de la DÉF de la cible lorsque ce Champion infligera un coup critique.
+
+[Uniquement disponible lorsque Hospitalière se trouve dans la même équipe.]`,
           isPassive: true
         }
       ],

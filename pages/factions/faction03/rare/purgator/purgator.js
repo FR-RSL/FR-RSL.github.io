@@ -3,28 +3,28 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Doom Inescapable",
-          description: `Attacks 1 enemy 2 times. Will ignore [Shield] buffs.`,
-          damage: "1.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%"],
+          name: "Inévitable Destin",
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD}.`,
+          damage: "1.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Great Purge",
-          description: `Attacks all enemies. Inflicts 10% extra C. DMG for each debuff on this Champion. Stacks up to 50%.`,
-          damage: "3.2*ATK",
+          name: "Grande Purge",
+          description: `Attaque tous les ennemis. Inflige 10 % de DÉG C. supplémentaires pour chaque débuff sur ce Champion. S'accumule jusqu'à 50 %.`,
+          damage: "3.2*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Humble the Heathen",
-          description: `Attacks 1 enemy. Destroys the target’s MAX HP by 20% of the damage inflicted.`,
-          damage: "5*ATK",
+          name: "Rabaisser le Païen",
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 20 % des dégâts infligés.`,
+          damage: "5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

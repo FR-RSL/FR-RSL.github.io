@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Feint",
-          description: `Attacks 1 enemy. Has an extra 25% chance of inflicting a critical hit.`,
-          damage: "2.9*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          name: "Feinte",
+          description: `Attaque un ennemi. Possède 25 % de chances supplémentaires de porter un coup critique.`,
+          damage: "2.9*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Poisonous Lily",
-          description: `Attacks 1 enemy 3 times. Each hit has a 35% chance of placing a 5% [Poison] debuff for 2 turns.`,
-          damage: "1.7*ATK",
+          name: "Lis Empoisonné",
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          damage: "1.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Buff/Debuff Chance +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +10%"],
+          levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Lead the Charge",
-          description: `Attacks 1 enemy with 2 random allies. Allies joining the attack use their default skills.`,
+          name: "Sonne la Charge",
+          description: `Attaque 1 ennemi avec 2 alliés choisis au hasard. Les alliés rejoignant l'attaque utilisent leurs compétences par défaut.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/crit.webp",
-  description: `Increases Ally C.RATE in Arena by 16%`,
+  description: `Augmente la statistique TAUX DE C. des Alliés lors des batailles d'Arène de 16%`,
 };

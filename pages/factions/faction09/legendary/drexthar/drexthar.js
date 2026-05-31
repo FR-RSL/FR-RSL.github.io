@@ -3,13 +3,8 @@ const championData = {
       spells: [
         {
 			img: "assets/sort1.webp",
-			name: "Flammes Mysterieuses",
-			description: `
-				Attaque 3 fois un ennemi.
-				Possède 30% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> de 2 tours.
-				Soigne ce Champion de 20% des dégats infligés si la cible est affligée d'un
-				débuff <span class='gbt'>Brulure de PV</span>.
-			`,
+			name: "Flammes Mystérieuses",
+			description: `Attaque 3 fois un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.BURN} de 2 tours. Soigne ce Champion de 20 % des dégâts infligés si la cible est affligée d'un débuff ${DEBUFFS.BURN}.`,
 			damage: "1*DEF",
 			levelInfo: [
 				"Dégâts +5%",
@@ -19,14 +14,8 @@ const championData = {
         },
         {
 			img: "assets/sort2.webp",
-			name: "Fouet Brulant",
-			description: `
-				Attaque tous les ennemis. Possède 40% de chances de placer un débuff
-				<span class='gbt'>Provocation</span> pendant 1 tour.
-				Ces chances passent a 100% si la cible est affligee d'un débuff <span class='gbt'>Brulure de PV</span>.
-				Place également un débuff <span class='gbt'>Reduction d'ATQ</span> de 50% pendant 2 tours si le débuff 
-				<span class='gbt'>Provocation</span> est place.
-			`,
+			name: "Fouet Brûlant",
+			description: `Attaque tous les ennemis. Possède 40 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Ces chances passent à 100 % si la cible est affligée d'un débuff ${DEBUFFS.BURN}. Place également un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours si le débuff ${DEBUFFS.PROVOKE} est placé.`,
 			damage: "5.2*DEF",
 			cooldown: 4,
 			levelInfo: [
@@ -40,11 +29,7 @@ const championData = {
         {
         	img: "assets/passif1.webp",
         	name: "Sang de Feu [P]",
-        	description: `
-				Possède 55% de chances de placer un débuff <span class='gbt'>Brulure de PV</span> pendant 2 tours
-				sur l'assaillant lorsque le Champion est frappe. La RES de ce Champion augmente de 10 pour chaque ennemi
-				sous débuff <span class='gbt'>Brulure de PV</span>. S'accumule jusqu'a 50.
-        	`,
+        	description: `Possède 55 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours sur l'assaillant lorsque le Champion est frappé. La RÉS de ce Champion augmente de 10 pour chaque ennemi sous débuff ${DEBUFFS.BURN}. S'accumule jusqu'à 50.`,
 		  	levelInfo: [
             	"Chance de Buff/débuff +5%",
             	"Chance de Buff/débuff +5%",

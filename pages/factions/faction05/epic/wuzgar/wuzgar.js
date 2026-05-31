@@ -3,32 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Restorative Violence",
-          description: `Attacks 1 enemy 4 times. Each hit heals the ally with the lowest HP by 2% of this Champion’s MAX HP.<br><br><br>Heal Multiplier: 0.02*HP`,
+          name: "Violence revigorante",
+          description: `Attaque 4 fois un ennemi. Chaque frappe soigne l'allié ayant le moins de PV à hauteur de 2 % des PV MAX de ce Champion.`,
           damage: "0.07*HP",
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +5%", "Level 4: Heal +5%", "Level 5: Heal +5%"],
+          levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shaman's Gift",
-          description: `Heals all allies by 10% of this Champion’s MAX HP. <br><br>Also places a [Counterattack] buff on this Champion for 2 turns.<br><br><br>Heal Multiplier: 0.1*HP`,
+          name: "Cadeau de chaman",
+          description: `Soigne tous tes alliés à hauteur de 10 % des PV MAX de ce Champion. 
+
+Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Tusked Protection",
-          description: `Places a 30% [Reflect Damage] buff and a [Shield] buff equal to 20% of this Champion’s MAX HP on all allies for 2 turns.<br><br><br>Shield Multiplier: 0.2*HP`,
+          name: "Protection à défenses",
+          description: `Place sur tous les alliés un buff ${BUFFS.REFLECT_DAM} de 30 % et un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1", "Level 4: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Ogryn Restoration [P]",
-          description: `Restores destroyed MAX HP whenever this Champion heals themselves or an ally. The amount of HP restored is equal to 30% of the heal.`,
+          name: "Restauration d'Ogryn [P]",
+          description: `Restaure les PV MAX détruits dès que ce Champion se soigne ou soigne un allié. La quantité de PV restaurés est équivalente à 30 % du soin.`,
           isPassive: true
         }
       ],

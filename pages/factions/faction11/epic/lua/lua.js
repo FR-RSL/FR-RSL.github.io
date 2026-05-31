@@ -3,15 +3,15 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Fleche d'Echardes",
-          description: `Attaque un ennemi. Porte 50% des degats infliges sur tous les ennemis si cette attaque passe en critique.`,
+          name: "Flèche d'Échardes",
+          description: `Attaque 1 ennemi. Porte 50 % des dégâts infligés sur tous les ennemis si cette attaque passe en critique.`,
           damage: "2.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
         {
           img: "assets/sort2.webp",
-          name: "Grele de Fleches",
-          description: `Attaque 3 fois tous les ennemis. Chaque coup critique soigne cette Championne de 2.5% de ses PV MAX.`,
+          name: "Grêle de Flèches",
+          description: `Attaque 3 fois tous les ennemis. Chaque coup en critique soigne ce Champion de 2,5 % de PV.`,
           damage: "1.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -19,8 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tir Chanceux",
-          description: `Attaque un ennemi. Réduit de 100% le Compteur de Tour de la cible.
-Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
+          description: `Attaque 1 ennemi. Réduit de 100 % le Compteur de Tour de la cible. Ignorera le ${BUFFS.SHIELD} et les buffs de ${BUFFS.BLOCK_DAMAGE}.`,
           damage: "6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

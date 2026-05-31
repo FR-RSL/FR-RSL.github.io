@@ -3,25 +3,25 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Mangler Gauntlet",
-          description: `Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% [Decrease ATK] debuff for 2 turns.`,
-          damage: "1.46*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Damage +5%", "Level 7: Damage +5%", "Level 8: Buff/Debuff Chance +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Gantelet Massacreur",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          damage: "1.46*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Rip to Shreds",
-          description: `Attacks 1 enemy 3 times. Each hit places a 100% [Heal Reduction] debuff for 2 turns if this Champion has full HP. Each hit places a 50% [Heal Reduction] debuff for 2 turns if this Champion has less than 100% HP.`,
-          damage: "1.15*ATK",
+          name: "Mettre en Lambeaux",
+          description: `Attaque 3 fois un ennemi. Chaque frappe place un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours si ce Champion possède tous ses PV. Chaque frappe place un débuff ${DEBUFFS.HEALS} de 50 % pendant 2 tours si ce Champion possède moins de 100 % de PV.`,
+          damage: "1.15*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Bloody Mess [P]",
-          description: `Places a 25% [Increase ATK] buff on this Champion for 1 turn and decreases the cooldown of the Rip to Shreds skill every time this Champion’s HP drops below 50%.`,
+          name: "Amas Sanglant [P]",
+          description: `Place un buff ${BUFFS.ATK} de 25 % sur ce Champion pendant 1 tour et réduit le temps de recharge de la compétence Mettre en Lambeaux chaque fois que les PV de ce Champion tombent sous 50 %.`,
           isPassive: true
         }
       ],

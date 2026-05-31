@@ -3,33 +3,37 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Swamp Club",
-          description: `Attacks 1 enemy. Has a 30% chance of placing a 50% [Decrease ATK] debuff for 2 turns.`,
+          name: "Gourdin de Marais",
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
           damage: "0.2*HP",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Potent Stench",
-          description: `Attacks all enemies. Has a 50% chance of placing a [Provoke] debuff for 1 turn. The chance increases by 5% for each debuff on the enemy team.`,
+          name: "Odeur Nauséabonde",
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer 1 débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Les chances augmentent de 5 % pour chaque débuff sur l'équipe ennemie.`,
           damage: "0.2*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +5%", "Level 5: Damage +5%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Bog Blessing",
-          description: `Places a [Shield] buff equal to 15% of this Champion’s MAX HP and a 50% [Ally Protection] buff on all allies except this Champion for 2 turns.<br><br>Also heals this Champion by 25% of their MAX HP and places a 30% [Reflect Damage] buff on them for 3 turns.<br><br>The heal increases by 2.5% for each [Poison] debuff on the enemy team.<br><br><br>Shield Multiplier: 0.15*HPHeal Multiplier: (0.25+0.025*EnemyTeamAppliedEffectsTotalCountOfKind(ContinuousDamage_KindId))*HP`,
+          name: "Bénédiction de Marais",
+          description: `Place sur tous les alliés sauf ce Champion un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion et un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours.
+
+Soigne également ce Champion de 25 % de ses PV MAX, puis place un buff ${BUFFS.REFLECT_DAM} de 30 % pendant 3 tours.
+
+Le soin augmente de 2,5 % pour chaque débuff ${DEBUFFS.POISON} dont est affligée l'équipe ennemie.`,
           cooldown: 5,
-          levelInfo: ["Level 2: Heal +5%", "Level 3: Heal +10%", "Level 4: Shield +10%", "Level 5: Cooldown -1", "Level 6: Cooldown -1"],
+          levelInfo: ["Soins +5%", "Soins +10%", "Bouclier +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Toxic Blood [P]",
-          description: `When attacked, has a 50% chance of placing a 5% [Poison] debuff on the attacker for 2 turns. Occurs once per hit.`,
+          name: "Sang Toxique [P]",
+          description: `Lorsque ce Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours. Se produit une fois par frappe.`,
           isPassive: true
         }
       ],
@@ -47,5 +51,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/res.webp",
-  description: `Increases Ally RES in All Battles by 40`,
+  description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 40`,
 };

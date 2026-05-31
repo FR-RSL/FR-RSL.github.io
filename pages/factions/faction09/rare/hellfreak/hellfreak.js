@@ -3,27 +3,27 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Vile Blades",
-          description: `Attacks 1 enemy 2 times. Each hit has a 20% chance of placing a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "1.6*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +5%", "Level 7: Buff/Debuff Chance +5%", "Level 8: Damage +5%", "Level 9: Buff/Debuff Chance +5%"],
+          name: "Lames ignobles",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "1.6*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Mind Games",
-          description: `Attacks 1 enemy. Has a 50% chance of stealing all buffs from the target before attacking.`,
-          damage: "5.3*ATK",
+          name: "Guerre des nerfs",
+          description: `Attaque un ennemi. Avant d'attaquer, possède 50 % de chances de voler tous les buffs de la cible.`,
+          damage: "5.3*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Damage +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Worst Nightmare",
-          description: `Swaps HP with an enemy, then grants an Extra Turn.`,
+          name: "Pire cauchemar",
+          description: `Échange les PV avec un ennemi, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
         }
       ],
@@ -41,5 +41,5 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/speed.webp",
-  description: `Increases Ally SPD in All Battles by 10%`,
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 10%`,
 };

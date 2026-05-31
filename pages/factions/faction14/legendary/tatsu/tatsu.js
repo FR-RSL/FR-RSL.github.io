@@ -3,34 +3,46 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Transference Slash",
-          description: `Attacks 1 enemy 2 times. <br><br>Each hit transfers a random debuff from this Champion to the target. Fills this Champion’s Turn Meter by 5% for each transferred debuff.`,
-          damage: "1.8*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          name: "Balafre de transfert",
+          description: `Attaque 2 fois un ennemi. 
+
+Chaque frappe transfère un débuff aléatoire de cette Championne sur la cible. Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff transféré.`,
+          damage: "1.8*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Wraith Explosion",
-          description: `Attacks all enemies. <br><br>Has a 75% chance of placing a 50% [Decrease RES] debuff on all enemies for 2 turns and a [Sleep] debuff on all enemies for 1 turn.<br><br>Fills this Champion's Turn Meter by 10% for each debuff placed.`,
-          damage: "3.9*ATK",
+          name: "Explosion fantôme",
+          description: `Attaque tous les ennemis. 
+
+Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours et un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. 
+
+Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff placé.`,
+          damage: "3.9*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Buff/Debuff Chance +15%", "Level 6: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Purgation Blade",
-          description: `Attacks 1 enemy 2 times. <br><br>Before attacking, removes all debuffs from this Champion and steals all buffs from the target enemy. <br><br>Places a 50% [Increase ATK] buff and a 30% [Increase C. DMG] buff on this Champion for 2 turns if this attack kills an enemy. These buffs cannot be removed.`,
-          damage: "2.9*ATK",
+          name: "Lame de purge",
+          description: `Attaque 2 fois un ennemi. 
+
+Avant d'attaquer, retire tous les débuffs sur cette Championne et vole tous les buffs de la cible ennemie. 
+
+Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 2 tours si cette attaque tue un ennemi. Il est impossible de retirer ces buffs.`,
+          damage: "2.9*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Heightened Senses [P]",
-          description: `Immune to [Sleep] debuffs. <br><br>Increases this Champion's ACC by 10 and C. DMG by 3% for each buff on the enemy team.`,
+          name: "Sens en éveil [P]",
+          description: `Immunisée contre les débuffs ${DEBUFFS.SLEEP}. 
+
+Augmente la PRÉ de cette Champion de 10 points et ses DÉG C. de 3 % pour chaque buff dont l'équipe ennemie est affligée.`,
           isPassive: true
         }
       ],

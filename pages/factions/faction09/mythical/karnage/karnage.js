@@ -4,41 +4,55 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Sufferslash",
-          description: `Attacks 1 enemy 2 times. Has a 50% chance of removing 1 random buff from the target. <br><br>[Passive Effect]<br><br>Whenever an enemy hits this Champion or an ally, has a 50% chance to counterattack with this skill. This chance increases by 10% for each debuff on the enemy.`,
-          damage: "2.3*(ATK+ACC)",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Ignore RES +15%"],
+          name: "Entaille de souffrance",
+          description: `Attaque 2 fois un ennemi. Possède 50 % de chances de retirer 1 buff aléatoire sur la cible. 
+
+${PASSIVE}
+
+Dès qu'un ennemi frappe ce Champion ou un allié, possède 50 % de chances de contre-attaquer avec cette compétence. Ces chances augmentent de 10 % pour chaque débuff sur l'ennemi.`,
+          damage: "2.3*(ATQ+ACC)",
+          levelInfo: ["Dégâts +15%", "Ignorer la RES +15%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Devilish Accord",
-          description: `Attacks 1 enemy 2 times. <br><br>Before attacking, swaps HP with an enemy, then steals all buffs from them. Also transfers all debuffs from this Champion to the target, and places a [Seal] debuff on the target for 2 turns. This debuff cannot be removed. <br><br>This debuff cannot be resisted or blocked if the target has 50% HP or less.`,
-          damage: "3.5*(ATK+ACC)",
+          name: "Accord diabolique",
+          description: `Attaque 2 fois un ennemi. 
+
+Avant d'attaquer, échange ses PV avec un ennemi, puis vole tous ses buffs. Transfère également tous les débuffs de ce Champion sur la cible et place un débuff ${DEBUFFS.SCEAU} sur la cible pendant 2 tours. Il est impossible de retirer ce débuff. 
+
+Il est impossible de résister à ce débuff et de le bloquer si la cible possède 50 % de PV ou moins.`,
+          damage: "3.5*(ATQ+ACC)",
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Trinity of Pain",
-          description: `Attacks 1 enemy 3 times. The first hit places a [Block Passive Skills] debuff for 2 turns. This debuff cannot be removed. <br><br>The second hit places a [Block Active Skills] debuff for 2 turns. This debuff cannot be removed. <br><br>The third hit steals 100% of the target’s Turn Meter.`,
-          damage: "2.7*(ATK+ACC)",
+          name: "Trinité de douleur",
+          description: `Attaque 3 fois un ennemi. La première frappe place un débuff ${DEBUFFS.LOCK_PASSIF} pendant 2 tours. Il est impossible de retirer ce débuff. 
+
+La deuxième frappe place un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de retirer ce débuff. 
+
+La troisième frappe vole 100 % du Compteur de Tour de la cible.`,
+          damage: "2.7*(ATQ+ACC)",
           cooldown: 3,
-          levelInfo: ["Level 2: Ignore RES +15%", "Level 3: Ignore RES +15%"],
+          levelInfo: ["Ignorer la RES +15%", "Ignorer la RES +15%"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Avatar of Anarchy [P]",
-          description: `Each hit this Champion deals from skills has a 50% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies.<br><br>Whenever this Champion kills an enemy, has a 100% chance of applying a [Debuff Spread] effect, taking all debuffs from the target and placing them on all enemies. This effect cannot be resisted.`,
+          name: "Avatar d'anarchie [P]",
+          description: `Chaque frappe infligée par ce Champion possède 50 % de chances d'appliquer un effet de [Propagation de Débuffs] qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis.
+
+Dès que ce Champion tue un ennemi, possède 100 % de chances d'appliquer un effet de [Propagation de Débuffs], prenant tous les débuffs de la cible pour les placer sur tous les ennemis. Il est impossible de résister à cet effet.`,
           isPassive: true
         }
       ],
@@ -54,7 +68,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/speed.webp",
-    description: `Increases Ally SPD in Arena by 33%`,
+    description: `Augmente la statistique VIT des Alliés lors des les batailles d'Arène de 33%`,
   },
   },
   form2: {
@@ -62,41 +76,53 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Demon Stinger",
-          description: `Attacks 1 enemy 2 times. Heals this Champion by 20% of the damage inflicted. <br><br>[Passive Effect]<br><br>Whenever an enemy hits this Champion or an ally, has a 50% chance to counterattack with this skill. This chance increases by 10% for each debuff on the enemy.<br><br><br>Heal Multiplier: 0.2*Damage Dealt`,
-          damage: "1.8*(ATK+ACC)",
-          levelInfo: ["Level 2: Damage +15%", "Level 3: Damage +15%"],
+          name: "Dard de démon",
+          description: `Attaque 2 fois un ennemi. Soigne ce Champion à hauteur de 20 % des dégâts infligés. 
+
+${PASSIVE}
+
+Dès qu'un ennemi frappe ce Champion ou un allié, possède 50 % de chances de contre-attaquer avec cette compétence. Ces chances augmentent de 10 % pour chaque débuff sur l'ennemi.`,
+          damage: "1.8*(ATQ+ACC)",
+          levelInfo: ["Dégâts +15%", "Dégâts +15%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Singularity of Pain",
-          description: `Attack all enemies. Will ignore [Shield] buffs. <br><br>Will also ignore [Ally Protection] buffs when attacking enemies under 1 or more debuffs, and [Unkillable] buffs when attacking enemies under 2 or more debuffs.`,
-          damage: "4*(ATK+ACC)",
+          name: "Douleur singulière",
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD}. 
+
+Ignorera également les buffs ${BUFFS.ALLY_PROTECT} lorsqu'il attaque des ennemis affligés d'1 débuff ou plus et les buffs ${BUFFS.UNKILLABLE} lorsqu'il attaque des ennemis affligés de 2 débuffs ou plus.`,
+          damage: "4*(ATQ+ACC)",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Infernal Stars",
-          description: `Attacks all enemies 2 times. <br><br>If a target is killed by this skill while under 3 or more different debuffs, places a [Block Revive] debuff on them. <br><br>Also heals this Champion by 30% of the damage dealt.<br><br><br>Heal Multiplier: 0.3*Damage Dealt`,
-          damage: "2.5*(ATK+ACC)",
+          name: "Étoiles infernales",
+          description: `Attaque 2 fois tous les ennemis. 
+
+Si une cible est tuée par cette compétence lorsqu'elle se trouve sous 3 débuffs différents ou plus, lui inflige un débuff ${DEBUFFS.BLOCK_REA}. 
+
+Soigne également ce Champion à hauteur de 30 % des dégâts infligés.`,
+          damage: "2.5*(ATQ+ACC)",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer ce Champion à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Unending Karnage [P]",
-          description: `This Champion’s C. DMG increases by 1% for every 3 points of ACC they have. <br><br>Ignores 10% of the target’s DEF for each debuff they are under.`,
+          name: "Karnage éternel [P]",
+          description: `Les DÉG C. de ce Champion augmentent de 1 % par tranche de 3 points de PRÉ qu'il possède. 
+
+Ignore 10 % de la DÉF de la cible pour chaque débuff dont elle est affligée.`,
           isPassive: true
         }
       ],
@@ -112,7 +138,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/speed.webp",
-    description: `Increases Ally SPD in Arena by 33%`,
+    description: `Augmente la statistique VIT des Alliés lors des les batailles d'Arène de 33%`,
   },
   },
 };

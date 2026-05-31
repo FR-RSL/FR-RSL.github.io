@@ -3,34 +3,34 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Weft of Madness",
-          description: `Attacks 1 enemy. Has a 50% chance of applying a [Debuff Spread] effect, taking 1 random debuff from the target and placing it on all enemies under [Hex] debuffs.`,
-          damage: "3.5*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Buff/Debuff Chance +5%", "Level 4: Damage +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Damage +10%", "Level 7: Buff/Debuff Chance +10%"],
+          name: "Trame de Folie",
+          description: `Attaque un ennemi. Possède 50 % de chances d'appliquer un effet de [Propagation de Débuffs] qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.HEX}.`,
+          damage: "3.5*ATQ",
+          levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Shrieking Voices",
-          description: `Attacks all enemies. Increases the duration of all debuffs on all enemies by 1 turn.`,
-          damage: "3.7*ATK",
+          name: "Voix perçantes",
+          description: `Attaque tous les ennemis. Augmente d'1 tour la durée de tous les débuffs de tous les ennemis.`,
+          damage: "3.7*ATQ",
           cooldown: 3,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Melancholia",
-          description: `Attacks all enemies. Places a 60% [Decrease DEF] debuff for 2 turns.`,
-          damage: "3.7*ATK",
+          name: "Mélancolie",
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          damage: "3.7*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Feast of Woe [P]",
-          description: `When attacking enemies under [Decrease DEF] debuffs, has a 50% chance of placing a [Hex] debuff on them for 2 turns.`,
+          name: "Festin d'Infortune [P]",
+          description: `Lors d'une attaque sur des ennemis sous débuffs ${DEBUFFS.DEF}, possède 50 % de chances de leur placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
           isPassive: true
         }
       ],

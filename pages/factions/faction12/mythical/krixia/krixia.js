@@ -4,40 +4,43 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Swordspear Slash",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of increasing the duration of all debuffs on the target by 1 turn.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          name: "Entaille de lance-épée",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Doom Lantern",
-          description: `Places a 50% [Decrease RES] debuff and a [Block Buffs] debuff on all enemies for 2 turns. <br><br>Also decreases each target’s Turn Meter by 20%.`,
+          name: "Lanterne de ruine",
+          description: `Place un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. 
+
+Réduit également le Compteur de Tour de chaque cible de 20 %.`,
           cooldown: 4,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Deathly Apparition",
-          description: `Attacks all enemies. Removes all buffs from all enemies.<br>Also increases the cooldowns of all enemy skills by 3 turns.`,
-          damage: "4*ATK",
+          name: "Apparition mortelle",
+          description: `Attaque tous les ennemis. Retire tous les buffs dont disposent les ennemis.
+Augmente également de 3 tours la durée des temps de recharge de toutes les compétences des ennemis.`,
+          damage: "4*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta1.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme alternative. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Shadowvigil [P]",
-          description: `Immune to [Stun] debuffs. Increases this Champion’s ACC by 1 for every 2 RES they have.`,
+          name: "Sombre vigile [P]",
+          description: `Immunisée contre les débuffs ${DEBUFFS.STUN}. Augmente la PRÉ de cette Championne de 1 point par tranche de 2 RÉS qu'elle possède.`,
           isPassive: true
         }
       ],
@@ -53,7 +56,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in All Battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
   form2: {
@@ -61,40 +64,42 @@ const championForms = {
     spells: [
         {
           img: "assets/sort4.webp",
-          name: "Bladewing",
-          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of decreasing the duration of all debuffs on a random ally by 1 turn.`,
-          damage: "2*ATK",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%"],
+          name: "Aile-lame",
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de réduire d'1 tour la durée de tous les débuffs sur un allié aléatoire.`,
+          damage: "2*ATQ",
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort5.webp",
-          name: "Rain of Damnation",
-          description: `Attacks all enemies. Places a [Block Debuffs] buff and a 50% [Increase RES] buff on all allies for 2 turns. <br><br>Then, fills the Turn Meters of all allies by 20%.`,
-          damage: "4*ATK",
+          name: "Pluie de damnation",
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours. 
+
+Ensuite, remplit le Compteur de Tour de tous les alliés de 20 %.`,
+          damage: "4*ATQ",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort6.webp",
-          name: "Nightpurge",
-          description: `Removes all debuffs from all allies, then decreases the cooldown of all ally skills, except this Champion's, by 3 turns. This skill's cooldown cannot be reduced or reset.`,
+          name: "Purge nocturne",
+          description: `Retire tous les débuffs de tous les alliés, puis réduit de 3 tours le temps de recharge de toutes les compétences des alliés sauf celles de cette Championne. Le temps de recharge de cette compétence ne peut pas être réduit ou réinitialisé.`,
           cooldown: 6,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/meta2.webp",
-          name: "Metamorph",
-          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          name: "Métamorphe",
+          description: `Fait passer cette Championne à sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
           isPassive: false
         },
         {
           img: "assets/passif2.webp",
-          name: "Queen of the Dark [P]",
-          description: `Immune to [Sleep] debuffs. Increases this Champion’s SPD by 1 for every 10 RES they have (stacks up to 50).`,
+          name: "Reine des Ténèbres [P]",
+          description: `Immunisée contre les débuffs ${DEBUFFS.SLEEP}. Augmente la VIT de cette Championne de 1 point par tranche de 10 RÉS qu'elle possède (s'accumule jusqu'à 50).`,
           isPassive: true
         }
       ],
@@ -110,7 +115,7 @@ const championForms = {
       },
     aura: {
     img: "../../../../../assets/images/auras/res.webp",
-    description: `Increases Ally RES in All Battles by 80`,
+    description: `Augmente la statistique RÉS des Alliés lors de toutes les Batailles de 80`,
   },
   },
 };

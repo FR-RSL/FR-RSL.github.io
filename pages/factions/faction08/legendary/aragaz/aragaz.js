@@ -3,34 +3,40 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Wyldking Polearm",
-          description: `Attacks 1 enemy. Heals all allies with less than 50% HP back to 50% of their MAX HP.<br><br><br>Heal Multiplier: 0.5*Target Max HP-Target Current HP`,
+          name: "Arme d'hast du Roi-sauvage",
+          description: `Attaque un ennemi. Soigne tous les alliés ayant moins de 50 % de PV jusqu'à 50 % de leurs PV MAX.`,
           damage: "0.26*HP",
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Sacrificial Ploy",
-          description: `Attacks 1 ally. The damage dealt is equal to 50% of the target’s current HP. <br><br>Then places a [Shield] buff on that ally for 2 turns. The value of the [Shield] is equal to the amount of HP that ally is missing. <br><br>Also fills that ally’s Turn Meter by an amount equal to the HP% they are missing. Finally, fills this Champion’s Turn Meter by the same amount.<br><br><br>Shield Multiplier: Target Max HP-Target Current HP`,
+          name: "Stratagème sacrificiel",
+          description: `Attaque un allié. Les dégâts infligés sont égaux à 50 % des PV actuels de la cible. 
+
+Place ensuite un buff ${BUFFS.SHIELD} sur cet allié pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de PV qui manque à cet allié. 
+
+Remplit également le Compteur de Tour de cet allié d'une quantité égale au pourcentage de PV qui lui manque. Enfin, remplit le Compteur de Tour de ce Champion de la même valeur.`,
           damage: "0.5*Target Current HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Cooldown -1"],
+          levelInfo: ["Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Cackle of Blades",
-          description: `Attacks all enemies. <br><br>Has a 100% chance of placing a [Provoke] debuff on all enemies for 1 turn. Also places a 25% [Strengthen] buff on all allies for 2 turns.<br><br>[Orcs Unity]<br><br>1 Faction ally:<br>This Champion is immune to [Block Active Skills] debuffs and cooldown increasing effects.<br><br>2 Faction allies:<br>Instantly activates this skill whenever an ally's HP drops below 50% and that ally is still alive. Instantly activating this skill will not place it on cooldown.<br><br>3 Faction allies:<br>[Provoke] debuffs placed by this skill cannot be resisted.`,
+          name: "Ricanement de lames",
+          description: `Attaque tous les ennemis. 
+
+Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           damage: "0.3*HP",
           cooldown: 4,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/passif1.webp",
-          name: "Underdogs [P]",
-          description: `Allies with 50% or less HP deal 30% more damage.<br><br>[Orcs Unity]<br><br>1 Faction ally:<br>Allies with 50% or less HP receive 30% less damage.<br><br>2 Faction allies:<br>Whenever an ally or enemy dies, increases the HP, ATK, DEF, and SPD of all allies by 5% (stacks up to 25%).<br><br>3 Faction allies:<br>Whenever an ally kills an enemy, grants that ally an Instant Turn. Occurs once per ally per Round.`,
+          name: "Outsiders [P]",
+          description: `Les alliés ayant 50 % de PV ou moins infligent 30 % de dégâts en plus.`,
           cooldown: 1,
           isPassive: true
         }
@@ -49,9 +55,9 @@ const championData = {
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-defence.webp",
-  description: `Increases Ally DEF in All Battles by 33%
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%
 
-[Orcs only]
+(ne s'applique qu'à la Faction des Orcs)
 
-Increases Ally HP in All Battles by 25%`,
+Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

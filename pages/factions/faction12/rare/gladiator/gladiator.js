@@ -3,28 +3,30 @@ const championData = {
   spells: [
         {
           img: "assets/sort1.webp",
-          name: "Cleaving Axe",
-          description: `Attacks 1 enemy 2 times. Has a 30% chance of placing a 50% [Decrease ATK] debuff for 2 turns if the target's Turn Meter is more than or exactly 50% full.<br><br>Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns if the target's Turn Meter is less than 50% full.`,
-          damage: "2.1*ATK",
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +5%", "Level 4: Buff/Debuff Chance +5%", "Level 5: Buff/Debuff Chance +5%", "Level 6: Buff/Debuff Chance +10%"],
+          name: "Fente de Hache",
+          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % de 2 tours si le Compteur de Tours de la cible est plein à exactement 50 % ou plus.
+
+Possède 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours si le Compteur de Tours de la cible est inférieur à 50 %.`,
+          damage: "2.1*ATQ",
+          levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Capital Punishment",
-          description: `Attacks 2 times at random. Has an 80% chance of placing a [Stun] debuff if the target's Turn Meter is above or equal 75%.`,
-          damage: "3.5*ATK",
+          name: "Punition Capitale",
+          description: `Attaque 2 fois au hasard. Possède 80 % de chances de placer un débuff d'${DEBUFFS.STUN} si le Compteur de Tours de la cible est supérieur ou égal à 75 %.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +10%", "Level 3: Buff/Debuff Chance +10%", "Level 4: Buff/Debuff Chance +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
         },
         {
           img: "assets/sort3.webp",
           name: "Torture",
-          description: `Attacks all enemies.`,
-          damage: "3.5*ATK",
+          description: `Attaque tous les ennemis.`,
+          damage: "3.5*ATQ",
           cooldown: 5,
-          levelInfo: ["Level 2: Damage +5%", "Level 3: Damage +10%", "Level 4: Damage +10%", "Level 5: Cooldown -1"],
+          levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
         }
       ],

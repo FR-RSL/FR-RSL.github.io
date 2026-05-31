@@ -1,158 +1,117 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Defense",
-        spells: [
+    type: "Défense",
+    spells: [
         {
-            img: "assets/sort1.webp",
-            name: "Morsure de la meute",
-            description: `
-              Attaque un ennemi. Place un buff ${BUFFS.DEF} de 60% sur tous les allies pendant 1 tour.
-            `,
-            damage: "3.3*DEF",
-            levelInfo: [
-              "Dégâts +20%",
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Griffe rayonnante",
-            description: `
-              Attaque tous les ennemis.<br><br>
-			  Augmente d'1 tour la duree de tous les buffs allies. Soigne egalement tous les allies de 4% de leurs PV MAX pour chaque buff dont la duree a ete augmentee.
-            `,
-            damage: "3.5*DEF",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Rocher de Werinbur",
-            description: `
-              Place un buff ${BUFFS.RES} de 50%, un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.HEALS} de 15% sur tous les allies pendant 2 tours.<br><br>
-			  Place pendant 2 tours un buff ${BUFFS.HEALS} de 15% sur tous les allies qui ont moins de 50% de PV.<br><br>
-			  Remplit egalement le Compteur de Tour de tous les allies de 15%.
-            `,
-            cooldown: 5,
-            levelInfo: [
-              "Temps de recharge -1",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Sauveur etincelant [P]",
-            description: `
-              Augmente la RES de chaque allie de 10 pour chaque buff sur tous les allies.<br><br>
-			  Les coups critiques infliges par les allies remplissent les Compteurs de Tour de tous les allies de 5%. Se produit une fois par competence.<br><br>
-			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "20 640",
-          "ATQ": "859",
-          "DEF": "1 619",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort1.webp",
+          name: "Pride's Bite",
+          description: `Attacks 1 enemy. Places a 60% [Increase DEF] buff on all allies for 1 turn.`,
+          damage: "3.3*DEF",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "Soutien",
-        spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Assaut d'Epine-doree",
-            description: `
-              Attaque un ennemi. Possede 50% de chances de placer un debuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 1 tour.
-            `,
-            damage: "3.6*DEF",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Brise-palissade",
-            description: `
-              Attaque tous les ennemis. Place un debuff ${DEBUFFS.RES} de 50%, un debuff ${DEBUFFS.WEAKEN} de 25% et un debuff ${DEBUFFS.UNFEEBLE} sur tous les ennemis pendant 2 tours.<br><br>
-			  Si les ennemis possedent 50% de PV ou moins, il est impossible de retirer le debuff ${DEBUFFS.UNFEEBLE}.<br><br>
-			  Reduit egalement le Compteur de Tour de tous les ennemis de 15%.
-            `,
-            damage: "4*DEF",
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Rugissement de Kitherus",
-            description: `
-              Attaque tous les ennemis.
-			  Avant d'attaquer, retire tous les buffs de tous les ennemis et place un debuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis sans buff pendant 2 tours.
-			  Si la cible est un Boss, les degats infliges sont equivalents a 10% de ses PV MAX.
-            `,
-            damage: "4.4*DEF",
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Coeur-de-lion [P]",
-            description: `
-              Augmente la PRE de chaque allie de 10 pour chaque buff sur tous les ennemis.<br><br>
-			  Chaque coup critique inflige par les allies reduit les Compteurs de Tour de tous les ennemis de 5%.<br><br>
-			  Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "23 955",
-          "ATQ": "859",
-          "DEF": "1 398",
-          "VIT": "115",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "30",
-          "PRÉ": "20"
+          img: "assets/sort2.webp",
+          name: "Radiant Claw",
+          description: `Attacks all enemies. Increases the duration of all ally buffs by 1 turn. Also heals all allies by 4% of their MAX HP for every buff on them that had its duration increased.<br><br><br>Heal Multiplier: 0.04*Target Max HP*increasedTurnsCountByRelation`,
+          damage: "3.5*DEF",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Rock of Werinbur",
+          description: `Places a 50% [Increase RES] buff, a 25% [Strengthen] buff, and a 15% [Continuous Heal] buff on all allies for 2 turns. Places an additional 15% [Continuous Heal] buff on all allies with less than 50% HP for 2 turns. Also fills the Turn Meter of all allies by 15%.`,
+          cooldown: 5,
+          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Knights of the Wild [P]",
+          description: `Increases each ally's RES by 10 for each buff on all allies. Critical hits inflicted by allies fill the Turn Meters of all allies by 5%. Occurs once per skill. If there are multiple Champions on the team with this skill, only one will activate.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "20 640",
+        "ATQ": "859",
+        "DEF": "1 619",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "0"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/defence.webp",
-      description: `
-        Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in all Battles by 35%`,
+  },
+  },
+  form2: {
+    type: "Soutien",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Gildthorn Assault",
+          description: `Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff on all enemies for 1 turn.`,
+          damage: "3.6*DEF",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Palisade Breaker",
+          description: `Attacks all enemies. Places a 50% [Decrease RES] debuff, a 25% [Weaken] debuff, and an [Enfeeble] debuff on all enemies for 2 turns. If enemies have 50% HP or less, the [Enfeeble] debuff cannot be removed. Also decreases the Turn Meter of all enemies by 15%.`,
+          damage: "4*DEF",
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Roar of Kitherus",
+          description: `Attacks all enemies. Before attacking, removes all buffs from all enemies and places a [Block Buffs] debuff on all enemies without buffs for 2 turns. If the target is a Boss, the damage inflicted is equal to 10% of their MAX HP.`,
+          damage: "0.1*Target Max HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Lionheart [P]",
+          description: `Increases each ally's ACC by 10 for each buff on all enemies. Each critical hit inflicted by allies decreases the Turn Meters of all enemies by 5%. If there are multiple Champions on the team with this skill, only one will activate.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "23 955",
+        "ATQ": "859",
+        "DEF": "1 398",
+        "VIT": "115",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "30",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in all Battles by 35%`,
+  },
+  },
+};

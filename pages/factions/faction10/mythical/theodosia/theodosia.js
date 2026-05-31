@@ -1,167 +1,115 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Soutien",
-        spells: [
-          {
-            img: "assets/sort1.webp",
-            name: "Tempete de Serpentia",
-            description: `
-              Attaque un ennemi.<br><br>
-			  Soigne tous tes alliés a hauteur de 5% des PV MAX de cette Championne.<br><br>
-			  Remplit le Compteur de Tour de cette Championne de 5% pour chaque allié vivant
-			  et de 2,5% supplémentaires pour chaque ennemi vivant.
-            `,
-            damage: "0.27*PV",
-            levelInfo: [
-              "Dégâts +10%",
-			  "Soins +10%"
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Fortitude derangee",
-            description: `
-              Retire tous les débuffs sur tous les alliés,
-			  puis place un buff <span class='gbt'>Voile parfait</span>
-			  sur tous les alliés, sauf cette Championne, pendant 2 tours.<br><br>
-			  Place un buff <span class='gbt'>Peau de Pierre</span> sur cette Championne pendant 1 tour.
-            `,
-            cooldown: 4,
-            levelInfo: [
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Regeneration anormale",
-            description: `
-              Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.<br><br>
-			  Place un buff <span class='gbt'>Invincible</span> sur tous les alliés pendant 2 tours.
-            `,
-            cooldown: 6,
-            levelInfo: [
-              "Temps de recharge -1",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Protection haineuse [P]",
-            description: `
-              Tous les 7 tours, equilibre les PV de tous les alliés.
-			  Le niveau de PV ce cette Championne sera ramene au niveau de PV moyen de l'equipe.<br><br>
-			  Les alliés recevront 1% de degats en moins par tranche de 2% de PV perdus (s'accumule jusqu'a 25%).
-			  Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 470",
-          "ATQ": "925",
-          "DEF": "1 432",
-          "VIT": "115",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "0"
-        },
-      },
-      form2: {
-        type: "Soutien",
-        spells: [
+    type: "Soutien",
+    spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Je te trouverai...",
-			description: `
-              Attaque un ennemi.<br><br>
-			  Detruit la VIT de la cible de 3 points (s'accumule jusqu'a 30).<br><br>
-			  Reduit le Compteur de Tour de la cible de 5% pour chaque allié vivant 
-			  et de 2,5% supplémentaires pour chaque ennemi vivant.
-            `,
-            damage: "0.29*PV",
-            levelInfo: [
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Sinistre massacre",
-			description: `
-              Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.<br><br>
-			  Place un débuff <span class='gbt'>Blocage des Buffs</span> et un débuff <span class='gbt'>Reduction de DEF</span>
-			  de 60% sur tous les ennemis pendant 2 tours. Si la VIT d'un ennemi est inferieure a la VIT
-			  de cette Championne, ces débuffs seront proteges.
-            `,
-            damage: "0.27*PV",
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Murmure somnolent",
-			description: `
-              Place un débuff <span class='gbt'>Sommeil</span> pendant 1 tour
-			  et un débuff <span class='gbt'>Reduction de VIT</span> de 30% pendant 2 tours sur tous les ennemis.
-			  Si la VIT d'un ennemi est inferieure a la VIT de cette Championne, le débuff
-			  <span class='gbt'>Reduction de VIT</span> sera protege.<br><br>
-			  Reduit ensuite le Compteur de Tour de tous les ennemis de 25%.
-			`,
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-          name: "Ils sont inferieurs [P]",
-          description: `
-            Cette Championne est immunisee contre les débuffs <span class='gbt'>Blocage des compétences Actives</span>.<br><br>
-			Lorsque les alliés attaquent, leurs degats seront augmentes de 25% du Compteur de Tour actuel de leur cible.
-			Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.
-          `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 470",
-          "ATQ": "925",
-          "DEF": "1 432",
-          "VIT": "115",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "30",
-          "PRÉ": "20"
+          img: "assets/sort1.webp",
+          name: "Serpentia's Storm",
+          description: `Attacks 1 enemy. <br><br>Heals all allies by 5% of this Champion’s MAX HP. <br><br>Fills this Champion’s Turn Meter by 5% per each alive ally, and by an additional 2.5% per each alive enemy.<br><br><br>Heal Multiplier: 0.05*HP`,
+          damage: "0.27*HP",
+          levelInfo: ["Level 2: Damage +10%", "Level 3: Heal +10%"],
+          isPassive: false
         },
+        {
+          img: "assets/sort2.webp",
+          name: "Deranged Fortitude",
+          description: `Removes all debuffs from all allies, then places a [Perfect Veil] buff on all allies, except this Champion, for 2 turns. <br><br>Places a [Stone Skin] buff on this Champion for 1 turn.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort3.webp",
+          name: "Unnatural Regeneration",
+          description: `Revives all dead allies with 50% HP and 50% Turn Meter. <br><br>Places an [Unkillable] buff on all allies for 2 turns.`,
+          cooldown: 6,
+          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Heinous Protection [P]",
+          description: `Every 7 turns, equalizes the HP of all allies. The HP levels of all allies will be brought to the average HP level of the team.<br><br>Allies will receive 1% less damage for every 2% of HP lost (stacks up to 25%). If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 470",
+        "ATQ": "925",
+        "DEF": "1 432",
+        "VIT": "115",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "0"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/speed.webp",
-      description: `
-        Augmente la statistique VIT des Alliés lors de toutes les Batailles de 25%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/speed.webp",
+    description: `Increases Ally SPD in All Battles by 25%`,
+  },
+  },
+  form2: {
+    type: "Soutien",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "I Will Find You...",
+          description: `Attacks 1 enemy. <br><br>Destroys the target’s SPD by 3 (stacks up to 30). <br><br>Decreases the target’s Turn Meter by 5% per each alive ally, and by an additional 2.5% per each alive enemy.`,
+          damage: "0.29*HP",
+          levelInfo: ["Level 2: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Baleful Onslaught",
+          description: `Attacks all enemies. Before attacking, steals all buffs from all enemies. <br><br>Places a [Block Buffs] debuff and a 60% [Decrease DEF] debuff for 2 turns on all enemies. If an enemy’s SPD is lower than this Champion’s SPD, these debuffs will be protected.`,
+          damage: "0.27*HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Somnolent Whisper",
+          description: `Places a [Sleep] debuff for 1 turn and a 30% [Decrease SPD] debuff for 2 turns on all enemies. If an enemy’s SPD is lower than this Champion’s SPD, the [Decrease SPD] debuff will be protected. <br><br>Then decreases the Turn Meters of all enemies by 25%.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "They Are Beneath Me [P]",
+          description: `This Champion is immune to [Block Active Skills] debuffs.<br><br>When allies attack, their damage is increased by 25% of their target's current Turn Meter. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 470",
+        "ATQ": "925",
+        "DEF": "1 432",
+        "VIT": "115",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "30",
+        "PRÉ": "20"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/speed.webp",
+    description: `Increases Ally SPD in All Battles by 25%`,
+  },
+  },
+};

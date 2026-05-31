@@ -1,190 +1,118 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Soutien",
-        spells: [
+    type: "Soutien",
+    spells: [
         {
-            img: "assets/sort1.webp",
-            name: "Capture",
-            description: `
-              Attaque un ennemi.<br><br>
-              Vole 10% du Compteur de Tour de la cible.
-              Vole 5% de Compteur de Tour supplémentaires pour chaque débuff
-              sur l'ennemi.<br><br>
-              Possède également 75% de chances de placer un débuff
-              <span class='gbt'>Peur Absolue</span> pendant 1 tour.
-            `,
-            damage: "5*ATQ",
-            levelInfo: [
-              "Ignorer la RES +15%"
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Musc soporifique",
-            description: `
-              Vole tous les buffs dont beneficient les ennemis.<br><br>
-              Reduit le Compteur de Tour de chaque cible de 10%.
-              Reduit le Compteur de Tour de toutes les cibles
-              de 5% supplémentaires pour chaque débuff dont elles sont affligees.<br><br>
-              Active également instantanement tous les débuffs <span class='gbt'>Poison</span>
-              sur tous les ennemis.<br><br>
-              Place ensuite un débuff <span class='gbt'>Sommeil</span> pendant 1 tour
-              sur tous les ennemis sans débuff <span class='gbt'>Poison</span>.
-            `,
-            cooldown: 4,
-            levelInfo: [
-              "Temps de recharge -1"
-            ],
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Faucille de corruption",
-            description: `
-              Attaque tous les ennemis.<br><br>
-              Place un débuff <span class='gbt'>Reduction de DEF</span> de 60% et un débuff
-              <span class='gbt'>Affaiblissement</span> de 25% sur tous les ennemis pendant 2 tours.<br><br>
-              Remplit le Compteur de Tour de tous les alliés de 20%.
-            `,
-            damage: "5.2*ATQ",
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Buffet de Dents-noires [P]",
-            description: `
-              Des qu'un ennemi recoit un buff, est soigne ou voit son Compteur de Tour
-              augmente grace a une compétence, place un débuff <span class='gbt'>Poison</span>
-              de 5% sur cet ennemi pendant 2 tours. Ignorera les buffs <span class='gbt'>Blocage des débuffs</span>.<br><br>
-              Augmente le Compteur de Tour de cette Championne de 5% pour chaque débuff
-              <span class='gbt'>Poison</span> place par cette compétence.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "23 130",
-          "ATQ": "1 013",
-          "DEF": "1 299",
-          "VIT": "112",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "30",
-          "PRÉ": "20"
+          img: "assets/sort1.webp",
+          name: "Entrapment",
+          description: `Attacks 1 enemy. <br><br>Steals 10% of the target’s Turn Meter. Steals an additional 5% Turn Meter for each debuff on the enemy. <br><br>Also has a 75% chance of placing a [True Fear] debuff for 1 turn.`,
+          damage: "5*ATK",
+          levelInfo: ["Level 2: Ignore RES +15%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "Attaque",
-        spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Coupe-ventre",
-            description: `
-              Attaque 4 fois un ennemi.
-              Chaque frappe ignorera 30% de la DEF de la cible.
-              Chaque frappe reduira également les PV MAX de la cible
-              de 25% des degats infliges.<br><br>
-              Si la cible n'est pas un boss, place également un buff
-              <span class='gbt'>Bouclier</span> egal a 
-              25% des PV MAX de la cible sur cette Championne.
-            `,
-            damage: "1*ATQ",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Decoupage",
-            description: `
-              Attaque 2 fois un ennemi.
-              Inflige 100% de degats supplémentaires aux ennemis sous débuffs
-              <span class='gbt'>Etourdissement</span>,
-              <span class='gbt'>Sommeil</span>,
-              <span class='gbt'>Gel</span>,
-              <span class='gbt'>Provocation</span>,
-              <span class='gbt'>Peur</span>,
-              <span class='gbt'>Peur Absolue</span> ou
-              <span class='gbt'>Petrification</span>.<br><br>
-              Si la cible est tuee, active instantanement la compétence
-              <span class='gbt'>Festin de terreur</span>.
-            `,
-            damage: "3*ATQ",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Dégâts +20%",
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Festin de terreur",
-            description: `
-              Attaque tous les ennemis.<br><br>
-              Place un débuff <span class='gbt'>Peur Absolue</span> pendant 2 tours.
-              Les ennemis ayant 50% de PV ou moins ne peuvent pas resister a ce débuff
-              ni le bloquer.
-            `,
-            damage: "3.9*ATQ",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Faim de loup [P]",
-            description: `
-              Des que cette Championne tue un ennemi a l'aide d'une
-              compétence active, accorde un Tour supplémentaire
-              a cette Championne.<br><br>
-              Chaque débuff place par cette Championne sous n'importe
-              quelle forme augmente les PV, l'ATQ et la DEF de cette
-              Championne de 2% (s'accumule jusqu'a 50%) et sa VIT
-              de 2 points (s'accumule jusqu'a 50) sous sa Forme alternative.
-            `,
-            cooldown: 2,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "17 340",
-          "ATQ": "1 542",
-          "DEF": "1 156",
-          "VIT": "112",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "30",
-          "PRÉ": "0"
+          img: "assets/sort2.webp",
+          name: "Soporific Musk",
+          description: `Steals all buffs from all enemies. <br><br>Decreases each target's Turn Meter by 10%. Decreases each target's Turn Meter by an additional 5% for each debuff on them. <br><br>Also instantly activates one tick of all [Poison] debuffs on all enemies. <br><br>Then places a [Sleep] debuff for 1 turn on all enemies without [Poison] debuffs.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Sickle of Corruption",
+          description: `Attacks all enemies. <br><br>Places a 60% [Decrease DEF] debuff and a 25% [Weaken] debuff on all enemies for 2 turns. <br><br>Fills the Turn Meters of all allies by 20%.`,
+          damage: "5.2*ATK",
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Blackteeth's Buffet [P]",
+          description: `Whenever an enemy receives a buff, is healed, or has their Turn Meter increased by a skill, places a 5% [Poison] debuff on that enemy for 2 turns. Will ignore [Block Debuffs] buffs. <br><br>Increases this Champion's Turn Meter by 5% for each [Poison] debuff placed by this skill.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "23 130",
+        "ATQ": "1 013",
+        "DEF": "1 299",
+        "VIT": "112",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "30",
+        "PRÉ": "20"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/acc.webp",
-      description: `
-        Augmente la statistique PRE des Alliés dans les batailles d'Arene de 100.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in Arena by 100`,
+  },
+  },
+  form2: {
+    type: "Attaque",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Bellyslash",
+          description: `Attacks 1 enemy 4 times. Each hit will ignore 30% of the target's DEF. Each hit will also decrease the target’s MAX HP by 25% of the damage inflicted. <br><br>If the target is not a Boss, also places a [Shield] buff on this Champion equal to 25% of the target’s MAX HP.<br><br><br>Shield Multiplier: 0.25*Target Max HP`,
+          damage: "1*ATK",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Cut 'Em Up",
+          description: `Attacks 1 enemy 2 times. Deals 100% more damage to enemies under a [Stun], [Sleep], [Freeze], [Provoke], [Fear], [True Fear], or [Petrification] debuffs. <br><br>If the target is killed, instantly activates the [Feast of Terror] skill.`,
+          damage: "(!Disable Debuff*3*ATK)+(Disable Debuff*6*ATK)",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Feast of Terror",
+          description: `Attacks all enemies. <br><br>Places a [True Fear] debuff for 2 turns. This debuff cannot be resisted or blocked by enemies with 50% HP or less.`,
+          damage: "3.9*ATK",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Ravenous Hunger [P]",
+          description: `Whenever this Champion kills an enemy using an active skill, grants this Champion an Extra Turn. <br><br>Each debuff placed by this Champion in either Form increases this Champion’s HP, ATK, and DEF by 2% (stacks up to 50%) and SPD by 2 (stacks up to 50) in their Alternate Form.`,
+          cooldown: 2,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "17 340",
+        "ATQ": "1 542",
+        "DEF": "1 156",
+        "VIT": "112",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in Arena by 100`,
+  },
+  },
+};

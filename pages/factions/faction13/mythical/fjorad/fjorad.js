@@ -1,183 +1,117 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Soutien",
-        spells: [
-          {
-            img: "assets/sort1.webp",
-            name: "Morsure du loup",
-            description: `
-              Attaque 2 fois un ennemi. Chaque frappe a 50% de chances de placer un débuff 
-              <span class='gbt'>Gel</span> pendant 1 tour. Il est impossible de resister a ce debuff et de le bloquer si le Champion cible fait partie du Pacte Gaellen.<br><br>
-              Si la cible ne se trouve pas sous débuff <span class='gbt'>Gel</span>, 
-              repetera une fois l'attaque.
-            `,
-            damage: "2.6*ATQ",
-            levelInfo: [
-              "Dégâts +10%",
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Grand Capitaine",
-            description: `
-              Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
-              <span class='gbt'>Augmentation de VIT</span> de 30% sur tous les alliés pendant 2 tours.<br><br>
-              Reduit d'1 tour le temps de recharge de toutes les compétences des alliés, sauf celles de ce Champion.
-            `,
-            cooldown: 4,
-            levelInfo: ["Temps de recharge -1"]
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Rage du Coeur-de-loup",
-            description: `
-              Attaque tous les ennemis.<br><br>
-              Place un débuff <span class='gbt'>Gel</span> sur tous les ennemis
-              pendant 1 tour et un débuff <span class='gbt'>Réduction de la VIT</span> de 30%
-              sur tous les ennemis pendant 2 tours. Si un ennemi appartient au Pacte Gaellen, place au lieu
-              de ca un débuff <span class='gbt'>Gel</span> de 2 tours, et il est impossible de bloquer ce debuff et d'y resister.<br><br>
-Reduit egalement le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie du Pacte Gaellen, reduit son Compteur de Tour de 50%.${RETURN}${RETURN}
-              Accorde un Tour supplémentaire.
-            `,
-            damage: "5.6*ATQ",
-            cooldown: 5,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Se mange froid [P]",
-            description: `
-            Des que ce Champion ou un allie recoit un débuff d'un ennemi, a 30% de chances de placer un débuff
-            <span class='gbt'>Gel</span> sur cet ennemi pendant 1 tour.${RETURN}${RETURN}
-            Ces chances augmentent jusqu'a 100%, et il est impossible de bloquer ce debuff et d'y resister si la cible appartient au Pacte Gaellen.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 635",
-          "ATQ": "1 068",
-          "DEF": "1 277",
-          "VIT": "105",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "20"
-        },
-      },
-      form2: {
-        type: "PV",
-        spells: [
+    type: "Soutien",
+    spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Fente de givre",
-            description: `
-              Attaque un ennemi.${RETURN}${RETURN}
-              Ignorera 15% de la DEF de la cible. Si la cible se trouve sous debuff ${DEBUFFS.GEL}, ignorera au lieu de cela 35% de la DEF de la cible.${RETURN}${RETURN}
-              Si cette attaque tue un ennemi, reinitialise le temps de recharge d'une compétence aleatoire de ce Champion.
-            `,
-            damage: "0.28*PV",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Seisme de glacier",
-            description: `
-              Attaque tous les ennemis. Inflige une frappe supplémentaire aux ennemis sous débuffs
-              <span class='gbt'>Gel</span>,
-              <span class='gbt'>Etourdissement</span>,
-              <span class='gbt'>Peur</span>,
-              <span class='gbt'>Peur Absolue</span>,
-              <span class='gbt'>Provocation</span> ou
-              <span class='gbt'>Petrification</span>.<br><br>
-              Chaque frappe reduit les PV MAX de chaque cible de 25% des 
-              degats infliges (s'accumule jusqu'a 50%).<br><br>
-              Chaque frappe reduit également le Compteur de Tour de chaque cible de 25%.
-              Il est impossible de resister a cet effet si un ennemi se trouve sous débuff
-              <span class='gbt'>Gel</span>,
-              <span class='gbt'>Etourdissement</span>,
-              <span class='gbt'>Peur</span>,
-              <span class='gbt'>Peur Absolue</span>,
-              <span class='gbt'>Provocation</span> ou
-              <span class='gbt'>Petrification</span>.
-            `,
-            damage: "0.3*PV",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Disciple de Tormin",
-            description: `
-              Attaque un ennemi.<br><br>
-              Ignorera 50% de la DEF de la cible. Si la cible se trouve sous débuff
-              <span class='gbt'>Gel</span>, Ignorera au lieu de ca 100% de la DEF de la cible et les buffs ${BUFFS.BLOCK_DAMAGE}.<br><br>
-              Si la cible est tuee lorsqu'elle se trouve sous débuff
-              <span class='gbt'>Gel</span>, place également un débuff <span class='gbt'>Blocage de reanimation</span> sur elle et place un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
-Il est impossible pour les ennemis du Pacte Gaellen de bloquer le debuff ${DEBUFFS.GEL} et d'y resister.
-            `,
-            damage: "0.37*PV",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-          name: "Resolution glaciale [P]",
-          description: `
-            Contre-attaque avec la compétence <span class='gt'>Fente de givre</span>
-            des qu'un ennemi augmente le temps de recharge d'une des compétences de ce Champion.${RETURN}${RETURN}
-Lorsqu'un allie est tue, a 50% de chances de placer un debuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Ces changes augmentent jusqu'a 100% et il est impossible pour les ennemis du Pacte Gaellen de le bloquer ou d'y resister.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 635",
-          "ATQ": "925",
-          "DEF": "1 421",
-          "VIT": "100",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort1.webp",
+          name: "Bite of the Wolf",
+          description: `Attacks 1 enemy 2 times. Each hit has a 50% chance of placing a [Freeze] debuff for 1 turn. This debuff cannot be blocked or resisted if the target Champion is from the Gaellen Pact.<br><br>If the target is not under a [Freeze] debuff, will repeat the attack once.`,
+          damage: "2.6*ATK",
+          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          isPassive: false
         },
+        {
+          img: "assets/sort2.webp",
+          name: "Great Captain",
+          description: `Places a [Block Debuffs] buff and a 30% [Increase SPD] buff on all allies for 2 turns. <br><br>Decreases the cooldown of all ally skills, except this Champion’s, by 1 turn.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort3.webp",
+          name: "Wolfheart's Rage",
+          description: `Attacks all enemies. <br><br>Places a [Freeze] debuff on all enemies for 1 turn, and a 30% [Decrease SPD] debuff on all enemies for 2 turns. If an enemy is from the Gaellen Pact, places a [Freeze] debuff on them for 2 turns instead and this debuff cannot be blocked or resisted.<br><br>Also decreases the target's Turn Meter by 30%. If the enemy is from the Gaellen Pact, decreases their Turn Meter by 50% instead.<br><br>Grants an Extra Turn.`,
+          damage: "5.6*ATK",
+          cooldown: 5,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Best Served Cold [P]",
+          description: `Whenever this Champion or an ally receives a debuff from an enemy, has a 30% chance of placing a [Freeze] debuff on that enemy for 1 turn.<br><br>This chance increases to 100% and the debuff cannot be blocked or resisted if the target is from the Gaellen Pact.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 635",
+        "ATQ": "1 068",
+        "DEF": "1 277",
+        "VIT": "105",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "20"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/acc.webp",
-      description: `
-        Augmente la statistique PRE des Alliés lors de toutes les Batailles de 80.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in All Battles by 80`,
+  },
+  },
+  form2: {
+    type: "PV",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Rimecleave",
+          description: `Attacks 1 enemy.<br><br>Will ignore 15% of the target's DEF. If the target is under a [Freeze] debuff, ignores 35% of the target's DEF instead.<br><br>If this attack kills an enemy, resets the cooldown of one of this Champion's random skills.`,
+          damage: "0.28*HP",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Icequake",
+          description: `Attacks all enemies. Places an extra hit on enemies under [Freeze], [Stun], [Fear], [True Fear], [Provoke], or [Petrification] debuffs. <br><br>Each hit decreases each target’s MAX HP by 25% of the damage inflicted (stacks up to 50%). <br><br>Each hit also decreases each target’s Turn Meter by 25%. This effect cannot be resisted if an enemy is under [Freeze], [Stun], [Fear], [True Fear], [Provoke], or [Petrification] debuffs.`,
+          damage: "0.3*HPMultiplier: 0.28*HP",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Disciple of Tormin",
+          description: `Attacks 1 enemy. <br><br>Will ignore 50% of the target's DEF. If the target is under a [Freeze] debuff, will ignore 100% of the target's DEF and [Block Damage] buffs instead. <br><br>If the target is killed while under a [Freeze] debuff, also places a [Block Revive] debuff on them, and places a [Freeze] debuff on all enemies for 1 turn.<br><br>The [Freeze] debuff cannot be blocked or resisted by enemies from the Gaellen Pact.`,
+          damage: "0.37*HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Frosty Resolve [P]",
+          description: `Counterattacks with the Rimecleave skill whenever an enemy increases the cooldown of any of this Champion's skills.<br><br>Whenever an ally is killed, has a 50% chance of placing a [Freeze] debuff on all enemies for 1 turn. This chance increases to 100% and cannot be blocked or resisted by enemies from the Gaellen Pact.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 635",
+        "ATQ": "925",
+        "DEF": "1 421",
+        "VIT": "100",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "50",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in All Battles by 80`,
+  },
+  },
+};

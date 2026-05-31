@@ -44,6 +44,7 @@ function createSpellDescriptionHTML(spell, index) {
 
 // Fonction pour créer le HTML de description de l'aura
 function createAuraDescriptionHTML() {
+  const aura = championForms[currentForm].aura;
   return `
     <h4>Aura</h4>
     <div>${aura.description}</div>
@@ -681,6 +682,7 @@ function updateAura() {
   const auraImg = document.getElementById("aura-img");
   if (!auraImg) return;
 
+  const aura = championForms[currentForm].aura;
   auraImg.src = aura.img;
 
   const auraContainer = document.querySelector('.aura-container');
@@ -712,6 +714,7 @@ function updateAura() {
     <div class="spell-header"><span class="spell-name" style="background:linear-gradient(135deg,#ffb700,#e8790e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Aura</span></div>
     <div>${aura.description}</div>
   `;
+  // Note: aura is already resolved above from championForms[currentForm].aura
   auraContainer.appendChild(mobileAuraDescription);
 }
 

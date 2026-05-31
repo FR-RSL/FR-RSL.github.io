@@ -1,171 +1,116 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Defense",
-        spells: [
+    type: "Défense",
+    spells: [
         {
-            img: "assets/sort1.webp",
-            name: "Hache a photons",
-            description: `
-              Attaque 2 fois un ennemi.
-			  Place une frappe supplémentaire si la cible
-			  se trouve sous buff <span class='gbt'>Bouclier</span>.<br><br>
-			  Chaque frappe ignorera les buffs <span class='gbt'>Bouclier</span>.
-			`,
-            damage: "2*DEF",
-            levelInfo: [
-              "Dégâts +20%",
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Tonnerre retentissant",
-            description: `
-              Attaque tous les ennemis.
-			  Avant d'attaquer, place un buff <span class='gbt'>Augmentation de DEF</span>
-			  de 60% sur tous les alliés pendant 2 tours.<br><br>
-			  Place une frappe supplémentaire sur les cibles ayant moins de 50% de PV apres
-			  la premiere frappe. Si les PV de la cible sont superieurs ou egaux a 50% apres
-			  la premiere frappe, reduit plutot les PV MAX de la cible de 30% des degats infliges.
-			`,
-            damage: "4.2*DEF",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Temps de recharge -1"
-            ],
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Regard argent",
-            description: `
-              Place un débuff <span class='gbt'>Provocation</span> sur l'ennemi cible pendant 2 tours.
-			  Il est impossible de resister a ce débuff si la cible Possède moins de 50% de PV.<br><br>
-			  Place également sur tous les alliés un buff <span class='gbt'>Contre-attaque</span>
-			  pendant 2 tours et un buff <span class='gbt'>Blocage des Degats</span> pendant 1 tour.
-            `,
-            cooldown: 4,
-            levelInfo: [
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Cuirasse du soleil [P]",
-            description: `
-              Augmente la DEF de ce Champion de 5% chaque fois qu'il contre-attaque
-			  (s'accumule jusqu'a 100%). Se reinitialise a chaque round.
-			`,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "20 970",
-          "ATQ": "980",
-          "DEF": "1 476",
-          "VIT": "105",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort1.webp",
+          name: "Photon Ax",
+          description: `Attacks 1 enemy 2 times. Places an extra hit if the target is under a [Shield] buff. <br><br>Each hit will ignore [Shield] buffs.`,
+          damage: "2*DEF",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "PV",
-        spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Secousse d'eclair",
-            description: `
-              Attaque tous les ennemis.
-			  Place une frappe supplémentaire sur les ennemis
-			  sous débuff <span class='gbt'>Brulure de PV</span>.
-            `,
-            damage: "0.18*PV",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Eruption solaire",
-            description: `
-              Attaque tous les ennemis.
-			  Place un débuff <span class='gbt'>Brulure de PV</span> pendant 2 tours.
-			  Les ennemis sous buff <span class='gbt'>Peau de Pierre</span> ne peuvent pas resister a ce débuff.<br><br>
-			  Active ensuite instantanement les débuffs <span class='gbt'>Brulure de PV</span> sur les ennemis
-			  sous buff <span class='gbt'>Peau de Pierre</span>.<br><br>
-			  Place également un débuff <span class='gbt'>Peur absolue</span> sur tous les ennemis pendant 1 tour.
-            `,
-            damage: "0.3*PV",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Rayon regenerant",
-            description: `
-              Restaure totalement tous les PV MAX detruits des alliés,
-			  puis soigne tous les alliés de 30% des PV MAX de ce Champion.<br><br>
-			  Place également un buff <span class='gbt'>Renforcer</span> de 25% et un buff
-			  <span class='gbt'>Augmentation de RES</span> de 50% sur tous les alliés pendant 2 tours.
-            `,
-            cooldown: 5,
-            levelInfo: [
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Coeur de cieux [P]",
-            description: `
-              Augmente les PV de ce Champion de 6 points par tranche de 1 point de DEF
-			  dont il dispose lorsqu'il est sous sa Forme alternative.<br><br>
-			  Augmente de 20% les chances que les compétences des ennemis ne s'activent pas
-			  lorsqu'ils se trouve sous débuff <span class='gbt'>Peur</span> ou <span class='gbt'>Peur absolue</span>
-			  tout en etant affliges d'un débuff <span class='gbt'>Brulure de PV</span>.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "23 955",
-          "ATQ": "958",
-          "DEF": "1 299",
-          "VIT": "105",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort2.webp",
+          name: "Rolling Thunder",
+          description: `Attacks all enemies. Before attacking, places a 60% [Increase DEF] buff on all allies for 2 turns. <br><br>Places an extra hit on targets with less than 50% HP after the first hit. If the target’s HP is equal to or higher than 50% after the first hit, destroys the target’s MAX HP by 30% of the damage inflicted instead.`,
+          damage: "4.2*DEF",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Searing Glare",
+          description: `Places a [Provoke] debuff on a target enemy for 2 turns. This debuff cannot be resisted if the target has less than 50% HP.<br><br>Also places a [Counterattack] buff on all allies for 2 turns, and a [Block Damage] buff on all allies for 1 turn.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Cuirass of the Sun [P]",
+          description: `Increases this Champion's DEF by 5% each time they counterattack (stacks up to 100%). Resets each Round.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "20 970",
+        "ATQ": "980",
+        "DEF": "1 476",
+        "VIT": "105",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "50",
+        "PRÉ": "0"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/defence.webp",
-      description: `
-        Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in All Battles by 35%`,
+  },
+  },
+  form2: {
+    type: "PV",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Boltquake",
+          description: `Attacks all enemies. Places an extra hit on enemies under [HP Burn] debuffs.`,
+          damage: "0.18*HP",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Solar Flare",
+          description: `Attacks all enemies. Places a [HP Burn] debuff for 2 turns. This debuff cannot be resisted by enemies under a [Stone Skin] buff. <br><br>Then, instantly activates one tick of all [HP Burn] debuffs on enemies under a [Stone Skin] buff. <br><br>Also places a [True Fear] debuff on all enemies for 1 turn.`,
+          damage: "0.3*HP",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Revitalizing Ray",
+          description: `Fully restores all allies’ destroyed MAX HP, and heals all allies by 30% of this Champion’s MAX HP. <br><br>Also places a 25% [Strengthen] buff and a 50% [Increase RES] buff on all allies for 2 turns.<br><br><br>Heal Multiplier: 0.3*HP`,
+          cooldown: 5,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Heart of Heavens [P]",
+          description: `Increases this Champion’s HP by 6 for every 1 DEF they have when in their Alternate Form. <br><br>Increases the chance of enemy skills not activating when under [Fear] or [True Fear] debuffs by 20%, while also under a [HP Burn] debuff.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "23 955",
+        "ATQ": "958",
+        "DEF": "1 299",
+        "VIT": "105",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "50",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in All Battles by 35%`,
+  },
+  },
+};

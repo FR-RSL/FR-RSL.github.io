@@ -1,171 +1,117 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Attaque",
-        spells: [
-          {
-            img: "assets/sort1.webp",
-            name: "Zele brulant",
-            description: `
-              Attaque un ennemi.
-			  Place une frappe supplémentaire si la cible est affligee de débuffs.<br><br>
-			  A 25% de chances d'accorder un Tour supplémentaire.
-            `,
-            damage: "4*DEF + 1.2*ATQ",
-            levelInfo: ["Dégâts +20%"],
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Conflagration fidele",
-            description: `
-              Attaque 3 fois un ennemi.<br><br>
-			  Chaque frappe ignorera 25% de la DEF de la cible.
-			  Chaque frappe ignorera au lieu de ca 50% de la DEF de la cible
-			  si la cible est affligee d'un débuff <span class='gbt'>Brulure de PV</span> 
-			  ou <span class='gbt'>Gel</span>.<br><br>
-			  Chaque frappe detruit également la DEF et la RES de la cible de 3%
-			  (s'accumule jusqu'a 30%).<br><br>
-			  Place un débuff <span class='gbt'>Brulure de PV</span> sur tous les ennemis pendant 2 tours
-			  si la cible est tuee par cette compétence. Il est impossible de resister a ce débuff.
-            `,
-            damage: "1.8*DEF + 1.2*ATQ",
-            cooldown: 4,
-            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Pyro Maxima",
-            description: `
-              Attaque tous les ennemis.
-			  Cette attaque inflige a chaque chaque cible individuelle des degats sur cible unique
-			  plutot que des degats de zone. Ignorera les buffs <span class='gbt'>Bouclier</span>,
-			  <span class='gbt'>Blocage des Degats</span> et <span class='gbt'>Invincible</span>.<br><br>
-			  Active instantanement les débuffs <span class='gbt'>Brulure de PV</span> sur tous les ennemis.<br><br>
-              Place un débuff <span class='gbt'>Blocage de reanimation</span> sur les cibles tuees lorsqu'elles sont affligees
-			  d'un débuff <span class='gbt'>Brulure de PV</span> et <span class='gbt'>Gel</span>.
-            `,
-            damage: "4*DEF + 1.2*ATQ",
-            cooldown: 4,
-            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe [P]",
-            description: `
-              Fait passer ce Champion à sa Forme alternative.
-              Accorde ensuite un tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Maitresse elementaire [P]",
-            description: `
-              Cette Championne inflige 25% de degats en plus aux ennemis 
-			  affliges d'un débuff <span class='gbt'>Brulure de PV</span> ou <span class='gbt'>Gel</span>.
-			  Cette Championne inflige 100% de degats en plus contre les ennemis affliges
-			  simultanement de débuffs <span class='gbt'>Brulure de PV</span> et <span class='gbt'>Gel</span>.<br><br>
-			  Cette Championne ignore la reduction des degats accordee par les débuffs <span class='gbt'>Gel</span>.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          PV: "15 195",
-          ATQ: "1 509",
-          DEF: "1 332",
-          VIT: "104",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          RÉS: "30",
-          PRÉ: "0",
+    type: "Attaque",
+    spells: [
+        {
+          img: "assets/sort1.webp",
+          name: "Burning Zeal",
+          description: `Attacks 1 enemy. Places an extra hit if the target is under any debuffs. <br><br>Has a 25% chance of granting an Extra Turn.`,
+          damage: "4*DEF+1.2*ATK",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "Defense",
-        spells: [
-          {
-            img: "assets/sort4.webp",
-            name: "Decoupe glaciale",
-            description: `
-              Attaque un ennemi.<br><br>
-			  Place un buff <span class='gbt'>Protection d'allié</span> de 50% sur un allié aleatoire,
-			  sauf cette Championne, pendant 2 tours. Si l'allié se trouve deja sous buff
-			  <span class='gbt'>Protection d'allié</span>, le place sur un autre allié choisi de maniere aleatoire.<br><br>
-			  Soigne également cette Championne et les alliés sous buffs <span class='gbt'>Protection d'allié</span>.
-			  La valeur du soin est proportionnelle a la DEF de cette Championne.
-            `,
-            damage: "3*DEF + 0.8*ATQ",
-            levelInfo: [
-				"Dégâts +20%",
-				"Soins +20%"
-			],
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Vrilles gelees",
-            description: `
-              Place un buff <span class='gbt'>Blocage des débuffs</span> et un buff
-			  <span class='gbt'>Renforcer</span> de 25% sur tous les alliés pendant 2 tours.<br><br>
-			  Place un débuff <span class='gbt'>Piege</span> de 100% sur tous les ennemis pendant 2 tours.
-			  Les ennemis affliges d'un débuff <span class='gbt'>Brulure de PV</span> ou <span class='gbt'>Gel</span>
-			  ne peuvent pas resister a ce débuff.
-            `,
-            cooldown: 4,
-            levelInfo: ["Temps de recharge -1"],
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Tempete de lame-glace",
-            description: `
-              Attaque tous les ennemis. Avant d'attaquer, place une pile
-			  d'<span class='gbt'>Interception</span> sur tous les alliés.<br><br>
-			  Place un débuff <span class='gbt'>Gel</span> sur tous les ennemis
-			  pendant 1 tour. Il est impossible de resister a ce débuff.
-            `,
-            damage: "3*DEF + 0.8*ATQ",
-            cooldown: 4,
-            levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Reveil cryomantique [P]",
-            description: `
-              <span class='gbt'>Effet Passif</span><br><br>
-			  Les alliés affliges d'un débuff <span class='gbt'>Gel</span> recoivent 90% de degats en moins.<br><br>
-			  <span class='gbt'>Effet Actif</span><br><br>
-			  Une fois par Manche, ranime chaque allié, dont cette Championne, avec 100% de PV.
-			  Place un débuff <span class='gbt'>Gel</span> sur l'allié ranime pendant 1 tour.
-			  Il est impossible de bloquer ce débuff et d'y resister.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          PV: "17 835",
-          ATQ: "1 123",
-          DEF: "1 542",
-          VIT: "106",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          RÉS: "50",
-          PRÉ: "0",
+        {
+          img: "assets/sort2.webp",
+          name: "Faithful Conflagration",
+          description: `Attacks 1 enemy 3 times. <br><br>Each hit will ignore 25% of the target’s DEF. Each hit will ignore 50% of the target’s DEF instead, if the target is under a [HP Burn] debuff or a [Freeze] debuff. <br><br>Each hit also destroys the target's DEF and RES by 3% (stacks up to 30%). <br><br>Places a [HP Burn] debuff on all enemies for 2 turns, if the target is killed by this skill. This debuff cannot be resisted.`,
+          damage: "1.8*DEF+1.2*ATK",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Pyro Maxima",
+          description: `Attacks all enemies. This attack deals single-target damage to each target individually, rather than AoE damage. Will ignore [Shield], [Block Damage], and [Unkillable] buffs. <br><br>Instantly activates any [HP Burn] debuffs on all enemies. <br><br>Places a [Block Revive] debuff on targets that are killed while under a [HP Burn] debuff or a [Freeze] debuff.`,
+          damage: "4*DEF+1.2*ATK",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Elemental Mistress [P]",
+          description: `This Champion deals 25% more damage against enemies under a [HP Burn] debuff or a [Freeze] debuff. This Champion deals 100% more damage against enemies under both [HP Burn] and [Freeze] debuffs. <br><br>This Champion ignores the damage reduction granted by [Freeze] debuffs.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "15 195",
+        "ATQ": "1 509",
+        "DEF": "1 332",
+        "VIT": "104",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "0"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/attack.webp",
-      description: `
-        Augmente la statistique ATQ des Alliés dans les batailles d'Arene de 40%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/attack.webp",
+    description: `Increases Ally ATK in Arena by 40%`,
+  },
+  },
+  form2: {
+    type: "Défense",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Glacial Carve",
+          description: `Attacks 1 enemy. <br><br>Places a 50% [Ally Protection] buff on a random ally, except this Champion, for 2 turns. If the randomly selected ally is already under an [Ally Protection] buff, places it on another randomly selected ally. <br><br>Heals this Champion and any allies under [Ally Protection] buffs. The value of the heal is proportional to this Champion’s DEF.<br><br><br>Heal Multiplier: 1*DEF`,
+          damage: "3*DEF+0.8*ATK",
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Heal +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Frozen Tendrils",
+          description: `Places a [Block Debuffs] buff and a 25% [Strengthen] buff on all allies for 2 turns. <br><br>Places a 100% [Ensnare] debuff on all enemies for 2 turns. This debuff cannot be resisted by enemies under a [HP Burn] debuff or a [Freeze] debuff.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Iceblade Tempest",
+          description: `Attacks all enemies. Before attacking, places 1 [Intercept] stack on all allies. <br><br>Places a [Freeze] debuff on all enemies for 1 turn. This debuff cannot be resisted.`,
+          damage: "3*DEF+0.8*ATK",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Cryomantic Revival [P]",
+          description: `[Passive Effect]<br><br>Allies under a [Freeze] debuff receive 90% less damage. If there are multiple Champions on the team with this skill, only one will activate. This skill will not activate on duplicate copies of this Champion, if this particular Champion is dead.<br><br>[Active Effect]<br><br>Once per Round, revives each ally, including this Champion, with 100% HP. Places a [Freeze] debuff on the revived ally for 1 turn. This debuff cannot be resisted or blocked.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "17 835",
+        "ATQ": "1 123",
+        "DEF": "1 542",
+        "VIT": "106",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/attack.webp",
+    description: `Increases Ally ATK in Arena by 40%`,
+  },
+  },
+};

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arachoa Tourne-lune</title>
+  <title>Arachoa Moonspinner</title>
   <link rel="shortcut icon" href="../../../../../assets/images/logos/logo.webp">
   <link rel="stylesheet" href="../../../../../assets/css/main.css">
   <link rel="stylesheet" href="../../../../../assets/css/mythical.css">
+  <!-- Registre des thèmes de faction -->
   <script src="../../../../../assets/js/faction-theme-registry.js"></script>
 </head>
 <body>
@@ -22,38 +23,46 @@
       <a href="../../../../../pages/search/index.html" class="nav-pill">🔍 Recherche</a>
     </nav>
   </header>
-<div class="form-selector">
+  <div class="form-selector">
     <button class="form-btn active" data-form="form1">Forme de Base</button>
     <button class="form-btn" data-form="form2">Forme Alternative</button>
   </div>
+
   <div class="container">
     <div class="left-panel panel">
-      <h2 class="champion-name rarity-mythical">Arachoa Tourne-lune</h2>
+      <h2 class="champion-name">Arachoa Moonspinner</h2>
       <div class="champion-info">
         <div class="info-group">
-          <div class="rarity-box rarity-mythical">Mythique</div>
+          <div class="rarity-box">Mythique</div>
           <div class="type-badge" id="champion-type">Soutien</div>
         </div>
         <div class="info-group">
-          <img src="../../../../../assets/images/affinity/force.webp" alt="force" class="affinity-img">
+          <img src="../../../../../assets/images/affinity/force.webp" alt="Force" class="affinity-img">
         </div>
       </div>
       <div class="champion-image-container">
-        <img src="assets/arachoa.webp" alt="Arachoa" class="champion-img">
+        <img src="assets/arachoa.webp" alt="arachoa" class="champion-img">
       </div>
       <div class="stats">
         <h3>Statistiques</h3>
         <div class="stat-block" id="stats-content"></div>
       </div>
     </div>
+
     <div class="middle-panel panel">
       <h3 class="section-heading">Compétences</h3>
-      <div class="spells-container" id="spells-section"></div>
-      <div class="aura-container"><div class="aura"><img src="" alt="Aura" class="aura-img" id="aura-img"></div></div>
+      <div class="spells-container" id="spells-section">
+        <!-- Les sorts seront générés par JavaScript -->
+      </div>
+      <div class="aura-container">
+        <div class="aura">
+          <img src="" alt="Aura" class="aura-img" id="aura-img">
+        </div>
+      </div>
     </div>
   </div>
-<script src="../../../../../assets/js/constant.js"></script>
-  <script src="arachoa.js"></script>
+
+<script src="../../../../../assets/js/constant.js"></script><script src="arachoa.js"></script>
   <script src="../../../../../assets/js/champion-runtime-mythical.js"></script>
   <footer>
     <div class="footer-content">

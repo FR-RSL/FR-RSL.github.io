@@ -1,181 +1,117 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Defense",
-        spells: [
-          {
-            img: "assets/sort1.webp",
-            name: "Coupure d'aile",
-            description: `
-              Attaque un ennemi. Place un débuff
-              <span class='gbt'>Réduction de VIT</span> de 30% pendant 2 tours.<br><br>
-			  Lors d'une contre-attaque, les degats infliges par cette compétence
-			  sont bases sur la DEF ce ce Champion et les PV MAX de l'ennemi.
-            `,
-            damage: "3.6*DEF",
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Sarcasme tranchant",
-            description: `
-              Attaque tous les ennemis.<br><br>
-			  Place un débuff <span class='gbt'>Provocation</span> pendant 1 tour.
-			  Si la cible est un Boss, place au lieu de ca un débuff
-			  <span class='gbt'>Provocation</span> pendant 2 tours.<br><br>
-			  Place également un buff <span class='gbt'>Invincible</span> sur ce Champion
-			  pendant 1 tour et un buff <span class='gbt'>Contre-attaque</span> pendant 2 tours.
-            `,
-            damage: "4.7*DEF",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Appel de Crete-sang",
-            description: `
-              Retablit totalement les PV MAX detruits de tous les alliés.<br><br>
-			  Place également un buff <span class='gbt'>Ranimation apres la Mort</span> et un buff
-			  <span class='gbt'>Augmentation de DEF</span> de 60% sur tous les alliés pendant 2 tours.<br><br>
-			  Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-            levelInfo: [
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Regne sur le perchoir [P]",
-            description: `
-              Renvoie sur l'assaillant 50% des degats recus par ce Champion.<br><br>
-			  Si l'assaillant est un Boss, renvoie 100% des degats que recoit ce Champion.<br><br>
-			  Soigne également ce Champion a hauteur de 50% des degats recus.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 140",
-          "ATQ": "881",
-          "DEF": "1 498",
-          "VIT": "101",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "20"
-        },
-      },
-      form2: {
-        type: "Defense",
-        spells: [
+    type: "Défense",
+    spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Cri fulminant",
-            description: `
-              Attaque un ennemi.
-			  Place une frappe supplémentaire sur tous les ennemis sous débuffs
-			  <span class='gbt'>Reduction de DEF</span>.
-            `,
-            damage: "4*DEF (seul) | 3*DEF (zone)",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Ciel dechire",
-            description: `
-              Attaque tous les ennemis.<br><br>
-              Avant d'attaquer, place un débuff <span class='gbt'>Reduction de DEF</span>
-			  de 60% pendant 2 tours. Il est impossible de resister a cet effet.<br><br>
-			  Les degats augmentent de 10% pour chaque ennemi sous débuff
-			  <span class='gbt'>Reduction de DEF</span>.
-              Vole également 20% du Compteur de Tour de chaque ennemi.
-            `,
-            damage: "4.5*DEF",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%"
-            ]
-          },
-		  {
-            img: "assets/sort6.webp",
-            name: "Torture sonique",
-            description: `
-              Attaque tous les ennemis.<br><br>
-			  Ignorera 20% de la DEF de chaque ennemi n'ayant aucun buff.<br>
-			  Ignore les buffs <span class='gbt'>Blocage des Degats</span>.<br><br>
-              Les degats augmentent de 15% pour chaque buff sur chaque cible.<br><br>
-			  Reduit la durée de tous les buffs des ennemis de 2 tours.
-            `,
-            damage: "4.7*DEF",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Experience impie [P]",
-            description: `
-              Immunise contre les débuffs
-			  <span class='gbt'>Etourdissement</span>,
-			  <span class='gbt'>Gel</span>,
-			  <span class='gbt'>Sommeil</span>,
-			  <span class='gbt'>Peur</span>,
-			  <span class='gbt'>Peur Absolue</span>,
-			  <span class='gbt'>Provocation</span>,
-			  <span class='gbt'>Mouton</span> et 
-			  <span class='gbt'>Petrification</span>.<br><br>
-			  Reinitialise également de facon aleatoire le temps de recharge de l'une
-			  des compétences de ce Champion chaque fois qu'il tue un ennemi. Se produit une fois par compétence.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 140",
-          "ATQ": "881",
-          "DEF": "1 498",
-          "VIT": "101",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "30",
-          "PRÉ": "20"
+          img: "assets/sort1.webp",
+          name: "Wing Clip",
+          description: `Attacks 1 enemy. Places a 30% [Decrease SPD] debuff for 2 turns. <br><br>When counterattacking, the damage inflicted by this skill is based on this Champion’s DEF and the enemy’s MAX HP.`,
+          damage: "3.6*DEF",
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
         },
+        {
+          img: "assets/sort2.webp",
+          name: "Cutting Jibe",
+          description: `Attacks all enemies. <br><br>Places a [Provoke] debuff for 1 turn. If the target is a Boss, places a [Provoke] debuff for 2 turns instead. <br><br>Also places an [Unkillable] buff on this Champion for 1 turn and a [Counterattack] buff on them for 2 turns.`,
+          damage: "4.7*DEF",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort3.webp",
+          name: "Bloodcrest's Call",
+          description: `Fully restores all allies' destroyed MAX HP. <br><br>Also places a [Revive On Death] buff and a 60% [Increase DEF] buff on all allies for 2 turns.<br><br>Then, grants an Extra Turn.`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Rule the Roost [P]",
+          description: `Reflects 50% of the damage this Champion receives back to the attacker. <br><br>If the attacker is a Boss, reflects 100% of the damage this Champion receives.<br><br>Also heals this Champion by 50% of the damage received.<br><br>Heal Multiplier: 0.5*Damage Dealt`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 140",
+        "ATQ": "881",
+        "DEF": "1 498",
+        "VIT": "101",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "20"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/defence.webp",
-      description: `
-        Augmente la statistique DEF des Alliés lors de toutes les Batailles de 35%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in All Battles by 35%`,
+  },
+  },
+  form2: {
+    type: "Défense",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Fulminous Screech",
+          description: `Attacks 1 enemy. Places an extra hit on all enemies under [Decrease DEF] debuffs.`,
+          damage: "4*DEFMultiplier: 3*DEF",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Sundered Sky",
+          description: `Attacks all enemies. <br><br>Before attacking, places a 60% [Decrease DEF] debuff for 2 turns. This effect cannot be resisted.<br><br>Damage increases by 10% for each enemy under a [Decrease DEF] debuff. Also steals 20% of the Turn Meter from each enemy.`,
+          damage: "4.5*DEF",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Sonic Torture",
+          description: `Attacks all enemies. <br><br>Will ignore 20% of each target’s DEF if they have no buffs.<br>Ignores [Block Damage] buffs.<br><br>Damage increases by 15% for each buff on each target. <br><br>Decreases the duration of all enemy buffs by 2 turns.`,
+          damage: "4.7*DEF*(1+0.15*Active Target Buffs)",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Unholy Experiment [P]",
+          description: `Immune to [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], [Sheep], and [Petrification] debuffs.<br><br>Also randomly resets the cooldown of one of this Champion’s skills whenever they kill an enemy. Occurs once per skill.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 140",
+        "ATQ": "881",
+        "DEF": "1 498",
+        "VIT": "101",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "20"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/defence.webp",
+    description: `Increases Ally DEF in All Battles by 35%`,
+  },
+  },
+};

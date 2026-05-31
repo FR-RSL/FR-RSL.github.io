@@ -1,176 +1,118 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "Soutien",
-        spells: [
+    type: "Soutien",
+    spells: [
         {
-            img: "assets/sort1.webp",
-            name: "Attiser l'angoisse",
-            description: `
-              Attaque 2 fois un ennemi.<br><br>
-			  Chaque frappe reduit la DEF de la cible de 2% (s'accumule jusqu'a 20%).<br><br>
-			  Chaque frappe vole également 10% du Compteur de Tour de la cible.
-            `,
-            damage: "0.11*PV",
-            levelInfo: [
-              "Dégâts +10%",
-              "Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Agonie accablante",
-            description: `
-              Attaque tous les ennemis.
-              Retire tous les buffs sur tous les ennemis et leur inflige un débuff
-			  <span class='gbt'>Blocage des compétences actives</span> pendant 2 tours.<br><br>
-			  Vole également 20% du Compteur de Tour de chaque ennemi sous débuff
-			  <span class='gbt'>Blocage des compétences actives</span>.
-            `,
-            damage: "0.22*PV",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Voleur de joie",
-            description: `
-              Attaque un ennemi. Vole 100% du Compteur de Tour de la cible.<br><br>
-			  Place également les compétences de la cible en recharge.
-            `,
-            damage: "0.3*PV",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Dramatis Miserae [P]",
-            description: `
-              Des que ce Champion perd 30% de PV ou plus lors d'un seul tour, inflige des degats equivalents
-			  a 30% des PV MAX de ce Champion a l'assaillant. Se produit une fois par tour.<br><br>
-			  De plus, lorsque ce Champion perd 30% de PV ou plus lors d'un seul tour, lui accorde un buff
-			  <span class='gbt'>Bouclier</span> equivalent a 30% des PV MAX de ce Champion pendant 2 tours.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "21 975",
-          "ATQ": "1 035",
-          "DEF": "1 134",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "20"
+          img: "assets/sort1.webp",
+          name: "Stoke Anguish",
+          description: `Attacks 1 enemy 2 times. <br><br>Each hit decreases the target's DEF by 2% (stacks up to 20%). <br><br>Each hit also steals 10% of the target's Turn Meter.`,
+          damage: "0.11*HP",
+          levelInfo: ["Level 2: Damage +10%", "Level 3: Ignore RES +20%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "PV",
-        spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Artiste instable",
-            description: `
-              Attaque 2 fois un ennemi.<br><br>
-			  Chaque frappe Possède 50% de chances de placer un débuff
-			  <span class='gbt'>Bombe</span> equivalent a 15% Des PV MAX de ce Champion pendant 2 tours.<br><br>
-			  Soigne ce Champion de 10% de ses PV MAX pour chaque débuff <span class='gbt'>Bombe</span>
-			  place.
-            `,
-            damage: "0.12*PV | 0.15*PV (Bombe)",
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Clou du spectacle explosif",
-            description: `
-              Attaque tous les ennemis.<br><br>
-			  Place 2 débuffs <span class='gbt'>Bombe</span> equivalent a 33% des PV MAX de ce Champion sur tous les ennemis pendant 2 tours.<br><br>
-			  Fait exploser instantanement tous les débuffs <span class='gbt'>Bombe</span> sur les ennemis
-			  dotes de buffs <span class='gbt'>Peau de Pierre</span> ou les ennemis 
-			  dont les PV sont inferieurs aux PV de ce Champion.<br><br>
-			  Ensuite, place un débuff <span class='gbt'>Etourdissement</span> pendant 1 tour sur tous les ennemis
-			  dont les débuffs <span class='gbt'>Bombe</span> ont explose a cause de cette compétence.
-            `,
-            damage: "0.25*PV",
-            cooldown: 3,
-            levelInfo: [
-              "Dégâts +20%",
-              "Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Rappel mortel",
-            description: `
-              Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
-			  Place également un débuff <span class='gbt'>Affaiblissement</span> de 25%
-			  pendant 2 tours sur tous les ennemis.<br><br>
-			  Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-            levelInfo: [
-              "Niv. 1 : Ignorer la RES +20%",
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Rira bien [P]",
-            description: `
-              Possède 100% de chances de renvoyer sur un assaillant tous les débuffs
-			  <span class='gbt'>Bombe</span> places sur ce Champion.
-			  Possède également 30% de chances de renvoyer sur un assaillant tous les autres débuffs
-			  places sur ce Champion.<br><br>
-			  Soigne ce Champion de 20% de ses PV MAX chaque fois qu'un ennemi est tue par un débuff <span class='gbt'>Bombe</span>.
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "23 625",
-          "ATQ": "958",
-          "DEF": "1 321",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "30",
-          "PRÉ": "20"
+          img: "assets/sort2.webp",
+          name: "Agony Overwhelming",
+          description: `Attacks all enemies. Removes all buffs from all enemies and places a [Block Active Skills] debuff on them for 2 turns. <br><br>Also steals 20% of the Turn Meter from each enemy under a [Block Active Skills] debuff.`,
+          damage: "0.22*HP",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Thief of Joy",
+          description: `Attacks 1 enemy. Steals 100% of the target’s Turn Meter. <br><br>Also, puts the target's skills on cooldown.`,
+          damage: "0.3*HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%", "Level 4: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Dramatis Miserae [P]",
+          description: `Whenever this Champion loses 30% HP or more in a single turn, deals damage to the attacker equal to 30% of this Champion’s MAX HP. Occurs once per turn. <br><br>Also when this Champion loses 30% HP or more in a single turn, places a [Shield] buff on them, equal to 30% of this Champion’s MAX HP, for 2 turns.<br><br>Shield Multiplier: 0.3*HP`,
+          damage: "0.3*HP",
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "21 975",
+        "ATQ": "1 035",
+        "DEF": "1 354",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "20"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/acc.webp",
-      description: `
-        Augmente la statistique PRE des Alliés lors de toutes les Batailles de 80.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in All Battles by 80`,
+  },
+  },
+  form2: {
+    type: "PV",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Volatile Performer",
+          description: `Attacks 1 enemy 2 times. <br><br>Each hit has a 50% chance of placing a [Bomb] debuff for 2 turns. <br><br>Heals this Champion by 10% of their MAX HP for each [Bomb] debuff placed.<br><br><br>Bomb Multiplier: 0.15*HPHeal Multiplier: 0.1*HP`,
+          damage: "0.12*HP",
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Explosive Showstopper",
+          description: `Attacks all enemies. <br><br>Places 2 [Bomb] debuffs on all enemies for 2 turns. <br><br>Instantly detonates all [Bomb] debuffs on enemies with [Stone Skin] buffs or enemies whose HP is less than this Champion’s HP. <br><br>Then, places a [Stun] debuff for 1 turn on all enemies who had their [Bomb] debuffs detonated by this skill.<br><br><br>Bomb Multiplier: 0.33*HP`,
+          damage: "0.25*HP",
+          cooldown: 3,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Killer Encore",
+          description: `Heals this Champion by 50% of their MAX HP. <br><br>Also places a 25% [Weaken] debuff on all enemies for 2 turns. <br><br>Then grants an Extra Turn.<br><br><br>Heal Multiplier: 0.5*HP`,
+          cooldown: 4,
+          levelInfo: ["Level 2: Ignore RES +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "The Last Laugh [P]",
+          description: `Has a 100% chance to reflect all [Bomb] debuffs placed on this Champion back to an attacker. Also has a 30% chance to reflect all other debuffs placed on this Champion back to an attacker. <br><br>Heals this Champion by 20% of their MAX HP whenever an enemy is killed by a [Bomb] debuff.<br><br>Heal Multiplier: 0.2*HP`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "23 625",
+        "ATQ": "958",
+        "DEF": "1 321",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "20"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/acc.webp",
+    description: `Increases Ally ACC in All Battles by 80`,
+  },
+  },
+};

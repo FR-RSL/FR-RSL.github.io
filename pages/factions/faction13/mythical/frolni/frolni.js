@@ -1,162 +1,117 @@
-// Données des deux formes de Toshiro
 const championForms = {
   form1: {
-        type: "PV",
-        spells: [
+    type: "PV",
+    spells: [
         {
-            img: "assets/sort1.webp",
-            name: "Choc sismique",
-            description: `
-              Attaque un ennemi.
-              Ignorera 5% de la DEF de la cible pour chaque buff dont benificie ce Champion.`,
-            damage: "0.23*PV",
-            levelInfo: [
-              "Dégâts +20%",
-            ]
-          },
-          {
-            img: "assets/sort2.webp",
-            name: "Larcin sanglant",
-            description: `
-              Attaque un ennemi. Vole 2 buffs a une cible ennemie.
-              Il est impossible de resister a cet effet.<br><br>
-              Si cette attaque passe en critique, repete une fois l'attaque.`,
-            damage: "0.34*PV",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Temps de recharge -1"
-            ],
-          },
-          {
-            img: "assets/sort3.webp",
-            name: "Exterminer les faibles",
-            description: `
-              Attaque tous les ennemis. Les degats de cette
-              compétence augmentent de 30% si les PV MAX de ce Champion
-              sont plus eleves que les PV MAX de la cible.
-            `,
-            damage: "0.31*PV",
-            cooldown: 4,
-            levelInfo: [
-              "Dégâts +20%",
-              "Temps de recharge -1"
-            ],
-          },
-          {
-            img: "assets/meta1.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme alternative.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif1.webp",
-            name: "Science infinie [P]",
-            description: `
-              Les DEG C. de ce Champion sont augmentes de 1% par tranche de
-              1000 PV qu'il Possède.<br><br>
-              Augmente les PV MAX de ce Champion de 20% (s'accumule jusqu'a 100%)
-              et sa VIT de 20 (s'accumule jusqu'a 100). des que ce Champion tue un ennemi.
-              Se reinitialise a chaque round.`,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "22 305",
-          "ATQ": "980",
-          "DEF": "1 387",
-          "VIT": "100",
-          "TAUX C.": "15%",
-          "DÉG C.": "63%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort1.webp",
+          name: "Seismic Quake",
+          description: `Attacks 1 enemy. Will ignore 5% of the target’s DEF for each buff on this Champion.`,
+          damage: "0.23*HP",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
-      },
-      form2: {
-        type: "Defense",
-        spells: [
         {
-            img: "assets/sort4.webp",
-            name: "Arcs de douleur",
-            description: `
-              Attaque 2 fois un ennemi. Chaque frappe augmente 
-              la DEF de ce Champion de 5% (s'accumule jusqu'a 100%).
-            `,
-            damage: "1.79*DEF",
-            levelInfo: [
-              "Dégâts +20%"
-            ]
-          },
-          {
-            img: "assets/sort5.webp",
-            name: "Procedure de broyage",
-            description: `
-              Attaque un ennemi. Soigne ce Champion a hauteur de 50% de ses PV MAX.<br><br>
-              Equilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés
-              seront amenes au niveau de l'allié ayant le plus de PV.
-            `,
-            damage: "5.31*DEF",
-            cooldown: 5,
-            levelInfo: [
-              "Temps de recharge -1",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/sort6.webp",
-            name: "Moteur de guerre",
-            description: `
-              Place un buff <span class='gbt'>Protection d'allié</span> de 50%
-              sur tous les alliés sauf ce Champion pendant 2 tours.
-              Place également un buff <span class='gbt'>Invincible</span> sur ce Champion pendant 2 tours.<br><br>
-              Place ensuite un buff <span class='gbt'>Bouclier</span> de 2 tours sur les alliés
-              ayant moins de 50% de PV. La valeur du ${BUFFS.SHIELD} est equivalent a 350% de la DEF de ce Champion.
-            `,
-            cooldown: 5,
-            levelInfo: [
-              "Temps de recharge -1",
-              "Temps de recharge -1"
-            ]
-          },
-          {
-            img: "assets/meta2.webp",
-            name: "Metamorphe",
-            description: `
-              Fait passer ce Champion a sa Forme de base.
-              Accorde ensuite un Tour supplémentaire.
-            `,
-            cooldown: 4,
-          },
-          {
-            img: "assets/passif2.webp",
-            name: "Armure ensorcelee [P]",
-            description: `
-              Lorsqu'il est attaqué, renvoie sur l'assaillant 80% des degats recus par ce Champion.
-              Les débuffs places sur ce Champion detruisent la PRE de celui qui les produit de 10%
-              (s'accumule jusqu'a 50%).
-            `,
-            isPassive: true,
-          },
-        ],
-        stats: {
-          "PV": "21 975",
-          "ATQ": "837",
-          "DEF": "1 553",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DÉG C.": "50%",
-          "RÉS": "50",
-          "PRÉ": "0"
+          img: "assets/sort2.webp",
+          name: "Bloody Larceny",
+          description: `Attacks 1 enemy. Steals 2 buffs from a target enemy. This effect cannot be resisted. <br><br>If this attack is critical, repeats the attack once.`,
+          damage: "0.34*HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
+        {
+          img: "assets/sort3.webp",
+          name: "Exterminate the Weak",
+          description: `Attacks all enemies. Damage of this skill increases by 30% if this Champion's MAX HP is higher than each target's MAX HP.`,
+          damage: "0.31*HP",
+          cooldown: 4,
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif1.webp",
+          name: "Limitless Science [P]",
+          description: `This Champion’s C. DMG is increased by 1% for every 1,000 HP they have. <br><br>Increases this Champion’s MAX HP by 20% (stacks up to 100%) and SPD by 20 (stacks up to 100) whenever this Champion kills an enemy. Resets each Round.`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "22 305",
+        "ATQ": "980",
+        "DEF": "1 387",
+        "VIT": "100",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "50",
+        "PRÉ": "0"
       },
-    };
-
-    const aura = {
-      img: "../../../../../../assets/images/auras/hp.webp",
-      description: `
-        Augmente la statistique PV des Alliés lors de toutes les Batailles de 35%.
-      `,
-    };
+    aura: {
+    img: "../../../../../assets/images/auras/hp.webp",
+    description: `Increases Ally HP in All Battles by 35%`,
+  },
+  },
+  form2: {
+    type: "Défense",
+    spells: [
+        {
+          img: "assets/sort4.webp",
+          name: "Arcs of Pain",
+          description: `Attacks 1 enemy 2 times. Each hit increases this Champion’s DEF by 5% (stacks up to 100%).`,
+          damage: "1.79*DEF",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort5.webp",
+          name: "Pulverizing Procedure",
+          description: `Attacks 1 enemy. Heals this Champion by 50% of their MAX HP. <br><br>Balances the HP of all allies. The HP levels of all allies will be brought up to the level of the ally with the highest HP.<br><br><br>Heal Multiplier: 0.5*HP`,
+          damage: "5.31*DEF",
+          cooldown: 5,
+          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/sort6.webp",
+          name: "Engine of War",
+          description: `Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Also places an [Unkillable] buff on this Champion for 2 turns.<br><br>Then, places a [Shield] buff for 2 turns on all allies with less than 50% HP. The value of the [Shield] is proportional to this Champion's DEF.<br><br><br>Shield Multiplier: 3.5*DEF`,
+          cooldown: 5,
+          levelInfo: ["Level 2: Cooldown -1", "Level 3: Cooldown -1"],
+          isPassive: false
+        },
+        {
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
+          cooldown: 4,
+          isPassive: false
+        },
+        {
+          img: "assets/passif2.webp",
+          name: "Ensorcelled Plate [P]",
+          description: `When attacked, reflects 80% of the damage this Champion receives back to the attacker. Debuffs placed on this Champion decrease their producer's ACC by 10% (stacks up to 50%).`,
+          isPassive: true
+        }
+      ],
+    stats: {
+        "PV": "21 975",
+        "ATQ": "837",
+        "DEF": "1 553",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "50%",
+        "RÉS": "50",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/hp.webp",
+    description: `Increases Ally HP in All Battles by 35%`,
+  },
+  },
+};

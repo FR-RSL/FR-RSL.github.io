@@ -4,123 +4,115 @@ const championForms = {
     spells: [
         {
           img: "assets/sort1.webp",
-          name: "Echine de Haine",
-          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
-Repetera l'attaque contre l'ennemi qui a le Compteur de Tour le plus eleve si la cible initiale se trouve sous debuff ${DEBUFFS.LEECH}.`,
-          damage: "2.3*ATQ",
-          levelInfo: ["Dégâts +20%"],
+          name: "Hatespine",
+          description: `Attacks 1 enemy 2 times. Will repeat the attack against the enemy with the highest Turn Meter if the initial target is under a [Leech] debuff.`,
+          damage: "2.3*ATK",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
         {
           img: "assets/sort2.webp",
-          name: "Acier incarnat",
-          description: `Attaque tous les ennemis.${RETURN}${RETURN}
-Place un debuff ${DEBUFFS.STUN} pendant 1 tour et reduit de 50% le Compteur de Tour de tous les ennemis. Les cibles dont l'ATQ est inferieure a celle de cette Championne ne peuvent pas resister a ces effets.`,
-          damage: "4.5*ATQ",
+          name: "Crimson Steel",
+          description: `Attacks all enemies. Places a [Stun] debuff for 1 turn, and decreases the Turn Meters of all enemies by 50%. These effects cannot be resisted by targets whose ATK is lower than this Champion's.`,
+          damage: "4.5*ATK",
           cooldown: 4,
-          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
         {
           img: "assets/sort3.webp",
-          name: "Hemalestrom",
-          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les buffs des ennemis. Les cibles dont l'ATQ est inferieure a celle de cette Championne ne peuvent pas resister a cet effet.${RETURN}${RETURN}
-Place un debuff ${DEBUFFS.LEECH} et un debuff ${DEBUFFS.ATK} de 50% sur tous les ennemis pendant 2 tours. Les cibles dont l'ATQ est inferieure a celle de cette Championne ne peuvent pas resister a ces debuffs.`,
-          damage: "4.5*ATQ",
+          name: "Hemaelstrom",
+          description: `Attacks all enemies. Before attacking, removes all buffs from enemies. This effect cannot be resisted by targets whose ATK is lower than this Champion's.<br><br>Places a [Leech] debuff and a 50% [Decrease ATK] debuff on all enemies for 2 turns. These debuffs cannot be resisted by targets whose ATK is lower than this Champion's.`,
+          damage: "4.5*ATK",
           cooldown: 4,
-          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
         {
-          img: "assets/sort4.webp",
-          name: "Metamorphe [P]",
-          description: `Fait passer cette Championne a sa Forme alternative des qu'elle est ranime par une competence, un effet ou un buff ${BUFFS.REVIVE_ON_DEATH}.${RETURN}${RETURN}
-Accorde ensuite un Tour supplémentaire.`,
+          img: "assets/meta1.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Alternate Form whenever this Champion is revived by a skill, effect, or [Revive On Death] buff. Then grants an Extra Turn.`,
           cooldown: 4,
-          isPassive: true,
+          isPassive: false
         },
         {
-          img: "assets/sort5.webp",
-          name: "Moteur de meurtre [P]",
-          description: `Des qu'un ennemi voit son Compteur de Tour rempli, cette Championne inflige des degats bruts a cet ennemi, equivalent a 3% de ses PV MAX, par tranche de 10% de Compteur de Tour rempli.${RETURN}
-Infligera au lieu de cela 6% de ses PV MAX en degats bruts si l'ennemi se trouve sous debuff ${DEBUFFS.LEECH}.${RETURN}
-Ces degats ne peuvent pas etre critiques et ignoreront les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.ALLY_PROTECT}, ${BUFFS.SHIELD}, ${BUFFS.STRENGTHEN} et ${BUFFS.FERVEUR}, les piles d'${BUFFS.BONE_ARMOR}, ainsi que les competences ou effets qui modifient les degats.${RETURN}
-Si l'ennemi est un Boss, les degats ne peuvent pas depasser 50 000 PV par frappe.${RETURN}${RETURN}
-Des qu'un ennemi voit son Compteur de Tour rempli, detruit egalement 3 points de sa VIT par tranche de 10% de Compteur de Tour rempli (s'accumule jusqu'a 100).${RETURN}
-Detruira au lieu de cela 6 points de VIT par tranche de 10% de Compteur de Tour rempli si l'ennemi se trouve sous debuff ${DEBUFFS.LEECH}. Cet effet ne fonctionne pas contre les Boss.${RETURN}${RETURN}
-Ranime cette Championne avec 100% de PV tout les 2 tours si au moins un allie est en vie. Une fois par Manche, ranime instantanément cette Championne avec 100% de PV si tous les allies sont morts.`,
-          isPassive: true,
+          img: "assets/passif1.webp",
+          name: "Engine of Murder [P]",
+          description: `Whenever an enemy has their Turn Meter filled, this Champion inflicts pure damage on that enemy equal to 3% of their MAX HP for every 10% Turn Meter filled. Will inflict 6% of their MAX HP as pure damage instead, if the enemy is under a [Leech] debuff. This damage cannot be critical and will ignore [Stone Skin], [Ally Protection], [Shield], [Strengthen], and [Fervor] buffs, [Bone Armor] stacks, and any damage modifying skills or effects. If the enemy is a Boss, the damage cannot exceed 50,000 per hit.<br><br>Whenever an enemy has their Turn Meter filled, also destroys their SPD by 3 for every 10% Turn Meter filled (stacks up to 100). Will destroy 6 SPD for every 10% Turn Meter filled instead, if the enemy is under a [Leech] debuff. This effect does not work against bosses. Revives this Champion with 100% HP every 2 turns if at least one ally is alive. Once per Round, instantly revives this Champion with 100% HP if all allies are dead.`,
+          isPassive: true
         }
-    ],
+      ],
     stats: {
-          "PV": "18 165",
-          "ATQ": "1 487",
-          "DEF": "1 156",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DEG C.": "63%",
-          "RES": "30",
-          "PRE": "0"
-    }
+        "PV": "18 165",
+        "ATQ": "1 487",
+        "DEF": "1 156",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/attack.webp",
+    description: `Increases Ally ATK in all battles by 35%`,
+  },
   },
   form2: {
     type: "Attaque",
     spells: [
         {
-          img: "assets/sort_f2_1.webp",
-          name: "Aiguille de terreur",
-          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
-Ignorera 10% de la DEF de la cible. Ignorera au lieu de cela 20% de la DEF de la cible si l'ATQ de la cible est inferieure a celle de cette Championne.${RETURN}${RETURN}
-Les degats infliges par cette competence augmentent de 5% pour chaque debuff sur la cible.`,
-          damage: "ATQ*(0.5*VIT/100)",
-          levelInfo: ["Dégâts +20%"],
+          img: "assets/sort4.webp",
+          name: "Dreadneedle",
+          description: `Attacks 1 enemy 2 times. Will ignore 10% of the target's DEF. Will ignore 20% of the target's DEF instead if the target's ATK is lower than this Champion's. The damage inflicted by this skill increases by 5% for each debuff on the target.`,
+          damage: "ATK*(0.5*SPD/100)",
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
         {
-          img: "assets/sort_f2_2.webp",
-          name: "Epees dentelees",
-          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
-Ignorera 50% de la DEF de la cible. Ignorera au lieu de cela 100% de la DEF de la cible si l'ATQ de la cible est inferieure a celle de cette Championne.${RETURN}${RETURN}
-Ignorera egalement les buffs ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE} si la cible se trouve sous debuff ${DEBUFFS.HEALS}.${RETURN}${RETURN}
-Si cette competence tue un ennemi, soigne cette Championne de 100% de ses PV MAX et repetera l'attaque sur une cible aleatoire qui se trouve sous debuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. Se produit une fois par competence.`,
-          damage: "ATQ*(0.75*VIT/100)",
+          img: "assets/sort5.webp",
+          name: "Serrated Sword",
+          description: `Attacks 1 enemy 2 times. Will ignore 50% of the target's DEF. Will ignore 100% of the target's DEF instead if the target's ATK is lower than this Champion's. Will also ignore [Block Damage] and [Unkillable] buffs if the target is under a [Heal Reduction] debuff.<br><br>If this skill kills an enemy, heals this Champion by 100% of their MAX HP, and will repeat the attack on a random target under a [Fear] or [True Fear] debuff. Occurs once per skill.`,
+          damage: "ATK*(0.75*SPD/100)",
           cooldown: 4,
-          levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
+          levelInfo: ["Level 2: Damage +20%", "Level 3: Cooldown -1"],
+          isPassive: false
         },
         {
-          img: "assets/sort_f2_3.webp",
-          name: "Un millier d'ailes",
-          description: `Attaque tous les ennemis.${RETURN}${RETURN}
-Place un debuff ${DEBUFFS.HEALS} de 100% et un debuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 2 tours. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}. Les cibles dont l'ATQ est inferieure a celle de cette Championne ne peuvent pas resister a ces debuffs.${RETURN}${RETURN}
-Ignorera egalement 20% de la DEF de chaque cible si l'ATQ de la cible est inferieure a celle de cette Championne.`,
-          damage: "ATQ*(1+VIT/100)",
+          img: "assets/sort6.webp",
+          name: "A thousand Wings",
+          description: `Attacks all enemies. Places a 100% [Heal Reduction] debuff and a [True Fear] debuff on all enemies for 2 turns. Will ignore [Block Debuffs] buffs. These debuffs cannot be resisted by targets whose ATK is lower than this Champion's. Will also ignore 20% of each target's DEF if the target's ATK is lower than this Champion's.`,
+          damage: "ATK*(1+SPD/100)",
           cooldown: 3,
-          levelInfo: ["Dégâts +20%"],
+          levelInfo: ["Level 2: Damage +20%"],
+          isPassive: false
         },
         {
-          img: "assets/sort_f2_4.webp",
-          name: "Metamorphe",
-          description: `Fait passer cette Championne a sa Forme de base. Accorde ensuite un Tour supplémentaire.`,
+          img: "assets/meta2.webp",
+          name: "Metamorph",
+          description: `Transforms this Champion into their Base Form. Then grants an Extra Turn.`,
           cooldown: 4,
+          isPassive: false
         },
         {
-          img: "assets/sort_f2_5.webp",
-          name: "Alimentee par le sang [P]",
-          description: `Soigne cette Championne de 1% de ses PV MAX par tranche de 1% de Compteur de Tour rempli par les ennemis. Soignera au lieu de cela cette Championne de 2% de ses PV MAX par tranche de 1% de Compteur de Tour rempli par les ennemis si l'ATQ de cette Championne est plus elevee que celle de l'ennemi.${RETURN}${RETURN}
-Augmente la VIT de cette Championne de 3 points par tranche de par tranche de 1% de Compteur de Tour rempli par les ennemis (s'accumule jusqu'a 100). Augmentera au lieu de cela la VIT de cette Championne de 6 points par tranche de 1% de Compteur de Tour rempli par les ennemis si l'ATQ de cette Championne est plus elevee que celle de l'ennemi.`,
-          isPassive: true,
+          img: "assets/passif2.webp",
+          name: "Fueled by Blood [P]",
+          description: `Heals this Champion by 1% of their MAX HP for every 1% of Turn Meter filled by enemies. Will heal this Champion by 2% of their MAX HP for every 1% of Turn Meter filled by enemies instead, if this Champion's ATK is higher than the enemy's.<br><br>Increase this Champion's SPD by 3 for every 1% of Turn Meter filled by enemies (stacks up to 100). Will increase this Champion's SPD by 6 for every 1% of Turn Meter filled by enemies instead, if this Champion's ATK is higher than the enemy's.`,
+          isPassive: true
         }
-    ],
+      ],
     stats: {
-          "PV": "15 690",
-          "ATQ": "1 905",
-          "DEF": "903",
-          "VIT": "110",
-          "TAUX C.": "15%",
-          "DEG C.": "63%",
-          "RES": "30",
-          "PRE": "0"
-    }
-  }
-};
-
-const aura = {
-  img: "../../../../../assets/images/auras/attack.webp",
-  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 35%.`
+        "PV": "15 690",
+        "ATQ": "1 905",
+        "DEF": "903",
+        "VIT": "110",
+        "TAUX C.": "15%",
+        "DÉG C.": "63%",
+        "RÉS": "30",
+        "PRÉ": "0"
+      },
+    aura: {
+    img: "../../../../../assets/images/auras/attack.webp",
+    description: `Increases Ally ATK in all battles by 35%`,
+  },
+  },
 };

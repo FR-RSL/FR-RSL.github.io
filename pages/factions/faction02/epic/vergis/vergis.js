@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Égide",
-          description: `Place un buff ${BUFFS.HEALS} de 15 %, un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur une cible alliée pendant 3 tours. 
+          description: `Place un buff ${BUFFS.HEALS} de 15 %, un buff ${BUFFS.SPD} de 30 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur une cible alliée pendant 3 tours.${RETURN}${RETURN}
 
 Place également, pendant 2 tours, un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf sur ce Champion. Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,
@@ -24,7 +24,7 @@ Place également, pendant 2 tours, un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tou
           name: "Second Vent [P]",
           description: `${PASSIVE}
 
-Place, pendant 2 tours, sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX dès que ce Champion perd 10 %, ou plus, de ses PV MAX lors d'une seule frappe.
+Place, pendant 2 tours, sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX dès que ce Champion perd 10 %, ou plus, de ses PV MAX lors d'une seule frappe.${RETURN}${RETURN}
 
 ${ACTIVE}
 

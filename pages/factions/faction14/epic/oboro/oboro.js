@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Propagation de Chaos",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}
 Sinon, attaquera tous les ennemis si la cible est affligée de 4 débuffs ou plus.`,
           damage: "4.2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
@@ -13,7 +13,7 @@ Sinon, attaquera tous les ennemis si la cible est affligée de 4 débuffs ou plu
         {
           img: "assets/sort2.webp",
           name: "Fumée Mystique",
-          description: `Attaque 2 fois un ennemi. La seconde frappe possède 75 % de chances de transférer tous les débuffs de ce Champion sur la cible.
+          description: `Attaque 2 fois un ennemi. La seconde frappe possède 75 % de chances de transférer tous les débuffs de ce Champion sur la cible.${RETURN}${RETURN}
 
 La première frappe possède 75 % de chances de voler tous les buffs de la cible lors d'une attaque sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "3.15*ATQ",

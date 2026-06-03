@@ -4,11 +4,11 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tourbillon de dagues",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %. 
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %.${RETURN}${RETURN}
 
-Ensuite, a 50 % de chances d'appliquer un effet de [Propagation de Débuffs], qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %.`,
+Ensuite, a 50 % de chances d'appliquer un effet de ${PROP_DEBUFF}, qui prend 1 débuff aléatoire de la cible pour le placer sur tous les ennemis. Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 100 %.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -16,7 +16,7 @@ Ensuite, a 50 % de chances d'appliquer un effet de [Propagation de Débuffs], qu
         {
           img: "assets/sort2.webp",
           name: "En fumée",
-          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible. Ignorera au lieu de cela 30 % de la DÉF de la cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible. Ignorera au lieu de cela 30 % de la DÉF de la cible si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "4*ATQ",
@@ -27,7 +27,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. C
         {
           img: "assets/sort3.webp",
           name: "Vents de Bagdad",
-          description: `Attaque 2 fois un ennemi. Inflige 5 % de dégâts supplémentaires pour chaque buff et débuff sur ce Champion, et 5 % de dégâts supplémentaires pour chaque buff et débuff sur la cible (s'accumule jusqu'à 100 %). 
+          description: `Attaque 2 fois un ennemi. Inflige 5 % de dégâts supplémentaires pour chaque buff et débuff sur ce Champion, et 5 % de dégâts supplémentaires pour chaque buff et débuff sur la cible (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours et accorde un Tour supplémentaire.`,
           damage: "3.2*ATQ+(0.05*BUFF_COUNT+0.05*DEBUFF_COUNT+0.05*REL_TRG_BUFF_COUNT+0.05*REL_TRG_DEBUFF_COUNT)",
@@ -44,7 +44,7 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 3 tours et accorde u
         {
           img: "assets/passif1.webp",
           name: "Voleur magistral [P]",
-          description: `Dès que ce Champion est attaqué, vole 1 buff aléatoire à l'assaillant et transfère 1 débuff aléatoire de ce Champion sur l'assaillant. Ces effets ignoreront [Polymorphe]. Se produit une fois par compétence. 
+          description: `Dès que ce Champion est attaqué, vole 1 buff aléatoire à l'assaillant et transfère 1 débuff aléatoire de ce Champion sur l'assaillant. Ces effets ignoreront [Polymorphe]. Se produit une fois par compétence.${RETURN}${RETURN}
 
 Ignorera au lieu de cela 25 % de la RÉS de la cible lorsque ce Champion utilise des compétences s'il se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true

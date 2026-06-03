@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hiver réducteur",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+A 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 Active instantanément cette compétence dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
           damage: "2.7*ATQ",
@@ -16,9 +16,9 @@ Active instantanément cette compétence dès que ce Champion passe un tour à c
         {
           img: "assets/sort2.webp",
           name: "Blizzard de coups",
-          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}. 
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+A 75 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 Ranime un allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour si cette compétence n'a pas tué d'ennemi. Ranime tous les alliés avec 50 % de PV et 50 % de Compteur de Tour si cette compétence tue au moins un ennemi.`,
           damage: "4*ATQ",
@@ -29,7 +29,7 @@ Ranime un allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour si cette
         {
           img: "assets/sort3.webp",
           name: "Tâcher les neiges",
-          description: `Attaque un ennemi. Avant d'attaquer, vole la totalité du Compteur de Tour de la cible. Il est impossible de résister à cet effet s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. Égalise également la DÉF de la cible avec la DÉF de ce Champion pour cette attaque. 
+          description: `Attaque un ennemi. Avant d'attaquer, vole la totalité du Compteur de Tour de la cible. Il est impossible de résister à cet effet s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. Égalise également la DÉF de la cible avec la DÉF de ce Champion pour cette attaque.${RETURN}${RETURN}
 
 Les dégâts infligés par cette compétence augmentent de la quantité de Compteur de Tour volé.`,
           damage: "5.8*ATQ",
@@ -40,7 +40,7 @@ Les dégâts infligés par cette compétence augmentent de la quantité de Compt
         {
           img: "assets/passif1.webp",
           name: "Démon solitaire [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 50 % dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}. 
+          description: `Remplit le Compteur de Tour de ce Champion de 50 % dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 Dès que ce Champion passe un tour à cause d'un de ces débuffs, sa prochaine compétence active ignorera 50 % de la DÉF de la cible.`,
           isPassive: true

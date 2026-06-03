@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Écrase-ennemi",
-          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible.
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible.${RETURN}${RETURN}
 
 Augmente de 2 tours le temps de recharge d'une compétence aléatoire de la cible même si cette attaque est une frappe faible.`,
           damage: "0.28*HP+1*ATQ",
@@ -15,7 +15,7 @@ Augmente de 2 tours le temps de recharge d'une compétence aléatoire de la cibl
         {
           img: "assets/sort2.webp",
           name: "Marteau-séisme",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} et peut être placé même si cette attaque est une frappe faible.
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} et peut être placé même si cette attaque est une frappe faible.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.UNKILLABLE} protégé et un buff ${BUFFS.COUNTER} sur cette Championne pendant 3 tours.`,
           damage: "0.25*HP+1*ATQ",
@@ -26,7 +26,7 @@ Place également un buff ${BUFFS.UNKILLABLE} protégé et un buff ${BUFFS.COUNTE
         {
           img: "assets/sort3.webp",
           name: "Liés par le sang",
-          description: `Retire tous les débuffs sur tous les alliés et place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf cette Championne pendant 2 tours. 
+          description: `Retire tous les débuffs sur tous les alliés et place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de cette Championne pendant 2 tours. Augmente la valeur du ${BUFFS.SHIELD} de 3 % supplémentaires des PV MAX de cette Championne pour chaque débuff retiré par cette compétence.`,
           cooldown: 5,
@@ -43,7 +43,7 @@ Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 
         {
           img: "assets/passif1.webp",
           name: "Tuer ou soigner [P]",
-          description: `Lorsqu'elle est attaquée, réduit d'1 tour la durée de tous les buffs de l'assaillant. Se produit une fois par frappe. 
+          description: `Lorsqu'elle est attaquée, réduit d'1 tour la durée de tous les buffs de l'assaillant. Se produit une fois par frappe.${RETURN}${RETURN}
 
 Soigne également tous les alliés sauf cette Championne à hauteur de 50 % des dégâts subis, et soigne cette Championne de 25 % des dégâts subis, dès que cette Championne est frappée. Se produit une fois par frappe.`,
           isPassive: true
@@ -78,7 +78,7 @@ Soigne également tous les alliés sauf cette Championne à hauteur de 50 % des 
         {
           img: "assets/sort5.webp",
           name: "Massue calamiteuse",
-          description: `Attaque tous les ennemis. Les dégâts de cette compétence augmentent de 10 % pour chaque buff sur cette Championne et sur la cible.
+          description: `Attaque tous les ennemis. Les dégâts de cette compétence augmentent de 10 % pour chaque buff sur cette Championne et sur la cible.${RETURN}${RETURN}
 
 Ignorera 30 % de la DÉF de la cible. Ignorera au lieu de cela 50 % de la DÉF de la cible si cette Championne a plus de buffs que la cible.`,
           damage: "4*ATQ+0.12*HP",
@@ -96,9 +96,9 @@ Ignorera 30 % de la DÉF de la cible. Ignorera au lieu de cela 50 % de la DÉF d
         {
           img: "assets/sort6.webp",
           name: "Brume pourpre [P]",
-          description: `Dès qu'un allié attaque, cette Championne a 50 % de chances de faire équipe avec lui et de rejoindre l'attaque. 
+          description: `Dès qu'un allié attaque, cette Championne a 50 % de chances de faire équipe avec lui et de rejoindre l'attaque.${RETURN}${RETURN}
 
-Cette Championne inflige plus de dégâts à mesure que ses PV diminuent (1 % supplémentaire par tranche de 1 % de PV perdus). 
+Cette Championne inflige plus de dégâts à mesure que ses PV diminuent (1 % supplémentaire par tranche de 1 % de PV perdus).${RETURN}${RETURN}
 
 Cette Championne reçoit moins de dégâts à mesure que ses PV diminuent (0,5 % de moins par tranche de 1 % de PV perdus).`,
           cooldown: 2,
@@ -107,11 +107,11 @@ Cette Championne reçoit moins de dégâts à mesure que ses PV diminuent (0,5 %
         {
           img: "assets/passif2.webp",
           name: "Animal acculé",
-          description: `Retire tous les débuffs dont cette Championne est affligée. 
+          description: `Retire tous les débuffs dont cette Championne est affligée.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 3 tours.
+Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.CRATE} de 30 % sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
 
-Accorde un Tour supplémentaire.
+Accorde un Tour supplémentaire.${RETURN}${RETURN}
 
 [Cette compétence se débloque lorsque cette Championne a 3 débuffs ou plus, ou lorsque cette Championne a 50 % de PV ou moins.]`,
           isPassive: true

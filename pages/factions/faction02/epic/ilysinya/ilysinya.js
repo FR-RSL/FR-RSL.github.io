@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lumière d'excoriation",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Avant d'attaquer, possède 50 % de chances de retirer les buffs ${BUFFS.BLOCK_DEBUFFS} de tous les ennemis. 
+Avant d'attaquer, possède 50 % de chances de retirer les buffs ${BUFFS.BLOCK_DEBUFFS} de tous les ennemis.${RETURN}${RETURN}
 
 Possède également 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours après avoir attaqué.`,
           damage: "0.24*HP",
@@ -25,7 +25,7 @@ Possède également 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} 
         {
           img: "assets/sort3.webp",
           name: "Bouclier d'Aravia",
-          description: `Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de cette Championne pendant 2 tours. 
+          description: `Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

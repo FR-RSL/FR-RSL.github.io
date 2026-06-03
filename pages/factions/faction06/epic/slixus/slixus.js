@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lames d'irrévocabilité",
-          description: `Attaque 2 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.DEF} et ${BUFFS.STRENGTHEN}. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.DEF} et ${BUFFS.STRENGTHEN}.${RETURN}${RETURN}
 
 Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infligés.`,
           damage: "2.65*ATQ",
@@ -32,7 +32,7 @@ Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infl
         {
           img: "assets/passif1.webp",
           name: "Tueur sanctifié [P]",
-          description: `Augmente les DÉG C. de ce Champion de 10 % chaque fois qu'il tue un ennemi (s'accumule jusqu'à 30 %). Ces accumulations ne se réinitialiseront pas après la mort. 
+          description: `Augmente les DÉG C. de ce Champion de 10 % chaque fois qu'il tue un ennemi (s'accumule jusqu'à 30 %). Ces accumulations ne se réinitialiseront pas après la mort.${RETURN}${RETURN}
 
 Si la compétence Lames d'irrévocabilité de ce Champion tue un ennemi, la prochaine compétence qu'il utilise ignorera 30 % de la DÉF de la cible.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Puissance de Nain",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 80 % de chances de réduire le Compteur de Tour de la cible de 15 %. Si le Compteur de Tour n'est pas réduit, chaque frappe possède 80 % de chances de placer un débuff ${DEBUFFS.GEL} sur la cible pendant 1 tour.`,
           damage: "1.1*DEF",
@@ -18,9 +18,9 @@ Chaque frappe possède 80 % de chances de réduire le Compteur de Tour de la cib
         {
           img: "assets/sort2.webp",
           name: "Furie du Roi",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. 
+Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           damage: "3.5*DEF",
@@ -36,7 +36,7 @@ Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
         {
           img: "assets/sort3.webp",
           name: "Coup béni",
-          description: `Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 3 % (s'accumule jusqu'à 30 %). 
+          description: `Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 3 % (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 Chaque frappe soigne également ce Champion à hauteur de 30 % des dégâts infligés.`,
           damage: "1.5*DEF + 0.1*PV MAX Ennemi",

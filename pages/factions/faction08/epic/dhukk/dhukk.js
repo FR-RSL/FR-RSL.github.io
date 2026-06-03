@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Festival de Cris",
-          description: `Place un débuff ${DEBUFFS.PROVOKE} d'1 tour sur l'ennemi ciblé. Possède également 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur 2 ennemis choisis au hasard.
+          description: `Place un débuff ${DEBUFFS.PROVOKE} d'1 tour sur l'ennemi ciblé. Possède également 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur 2 ennemis choisis au hasard.${RETURN}${RETURN}
 
 Place sur ce Champion un buff ${BUFFS.REFLECT_DAM} de 30 % pendant 2 tours et un buff ${BUFFS.UNKILLABLE} pendant 1 tour.`,
           cooldown: 6,

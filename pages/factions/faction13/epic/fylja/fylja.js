@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Jugement des Anciens",
-          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 10 % des dégâts infligés. 
+          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 10 % des dégâts infligés.${RETURN}${RETURN}
 
 Ne peut pas détruire les PV MAX d'un seul ennemi de plus de 50 %.`,
           damage: "1.7*ATQ",

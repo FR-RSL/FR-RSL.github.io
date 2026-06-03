@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hache de Défense-noire",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Il est impossible de résister à ce débuff lorsque ce Champion attaque au cours de son tour actif.`,
           damage: "3*DEF + 0.2*PV",
@@ -18,7 +18,7 @@ Il est impossible de résister à ce débuff lorsque ce Champion attaque au cour
         {
           img: "assets/sort2.webp",
           name: "Ordres de l'Amiral",
-          description: `Retire tous les débuffs sur tous les alliés. 
+          description: `Retire tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
 Fait ensuite équipe avec tous les alliés pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.`,
           cooldown: 6,
@@ -31,7 +31,7 @@ Fait ensuite équipe avec tous les alliés pour attaquer un seul ennemi. Les all
         {
           img: "assets/sort3.webp",
           name: "Défenseur de Fer céleste",
-          description: `Retire tous les buffs d'une cible ennemie, puis lui inflige un débuff ${DEBUFFS.STUN} pendant 2 tours.
+          description: `Retire tous les buffs d'une cible ennemie, puis lui inflige un débuff ${DEBUFFS.STUN} pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 50 %. Remplit le Compteur de Tour de ce Champion de 10 % supplémentaires pour chaque buff retiré à la cible.`,
           cooldown: 5,
@@ -93,8 +93,8 @@ Remplit le Compteur de Tour de ce Champion de 50 %. Remplit le Compteur de Tour 
   const aura = {
     img: "../../../../../../assets/images/auras/sup-acc.webp",
     description: `
-      Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.<br><br>
-      Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%<br>
+      Augmente la statistique PRE des Alliés lors de toutes les Batailles de 60.<br><br>${RETURN}
+      Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%<br>${RETURN}
       (ne s'applique qu'a la Faction des Nains).
     `,
   };

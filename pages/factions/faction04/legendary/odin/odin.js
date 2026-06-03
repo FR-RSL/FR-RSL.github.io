@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Dard de Gungnir",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BERSERK} pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BERSERK} pendant 2 tours.${RETURN}${RETURN}
 
 Il est impossible de placer ce débuff sur les Boss.`,
           damage: "5*ATQ",
@@ -17,7 +17,7 @@ Il est impossible de placer ce débuff sur les Boss.`,
         {
           img: "assets/sort2.webp",
           name: "Tempête de familiers",
-          description: `Retire tous les buffs dont disposent les ennemis. 
+          description: `Retire tous les buffs dont disposent les ennemis.${RETURN}${RETURN}
 
 Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Possède également 80 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
@@ -30,15 +30,15 @@ Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous le
         {
           img: "assets/sort3.webp",
           name: "Jugement asgardien",
-          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Les dégâts infligés par cette compétence dépendent du Type de la cible :
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Les dégâts infligés par cette compétence dépendent du Type de la cible :${RETURN}${RETURN}
 
-ATQ : infligera des dégâts basés sur l'ATQ de la cible
+ATQ : infligera des dégâts basés sur l'ATQ de la cible${RETURN}${RETURN}
 
-DÉF : infligera des dégâts basés sur la DÉF de la cible
+DÉF : infligera des dégâts basés sur la DÉF de la cible${RETURN}${RETURN}
 
-PV/Soutien/Boss : infligera des dégâts basés sur les PV MAX de la cible. 
+PV/Soutien/Boss : infligera des dégâts basés sur les PV MAX de la cible.${RETURN}${RETURN}
 
-Cette attaque ignorera également 100 % de la DÉF de la cible. 
+Cette attaque ignorera également 100 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Si la cible a été tuée par cette compétence, ranime un allié mort aléatoire avec 50 % de PV et 50 % de Compteur de Tour.`,
           cooldown: 4,

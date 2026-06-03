@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tonalité d'effroi",
-          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible avant l'attaque. Il est impossible pour les Boss de résister à cet effet. 
+          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible avant l'attaque. Il est impossible pour les Boss de résister à cet effet.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il est impossible pour les Boss de résister à ce débuff.`,
           damage: "3.3*DEF",
@@ -14,9 +14,9 @@ A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il e
         {
           img: "assets/sort2.webp",
           name: "Dissonance sismique",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-Après la première frappe, a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs. 
+Après la première frappe, a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.${RETURN}${RETURN}
 
 Après la seconde frappe, a 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.`,
           damage: "2*DEF",

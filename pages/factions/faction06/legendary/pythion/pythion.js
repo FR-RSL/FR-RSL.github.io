@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Peau muée",
-          description: `Retire tous les débuffs sur tous les alliés, puis les soigne de 10 % de leurs PV MAX. Soigne chaque allié de 5 % de ses PV MAX supplémentaires pour chaque débuff qui lui est retiré. 
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne de 10 % de leurs PV MAX. Soigne chaque allié de 5 % de ses PV MAX supplémentaires pour chaque débuff qui lui est retiré.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 4,

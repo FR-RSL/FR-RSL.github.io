@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Langueur",
-          description: `Attaque un ennemi. Possède 75 % de chances de réduire d'1 tour la durée de tous les buffs de la cible.
+          description: `Attaque un ennemi. Possède 75 % de chances de réduire d'1 tour la durée de tous les buffs de la cible.${RETURN}${RETURN}
 
 Possède également 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
           damage: "6*ATQ",

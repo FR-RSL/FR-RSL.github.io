@@ -31,7 +31,7 @@ const championData = {
           name: "Blindé de cuivre [P]",
           description: `${PASSIVE}
 
-Dès qu'un allié disposant d'un buff ${BUFFS.BLOCK_DAMAGE} placé par ce Champion se fait attaquer, possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} sur l'assaillant pendant 1 tour.
+Dès qu'un allié disposant d'un buff ${BUFFS.BLOCK_DAMAGE} placé par ce Champion se fait attaquer, possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
 ${ACTIVE}
 

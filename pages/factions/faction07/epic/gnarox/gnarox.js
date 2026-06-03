@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Écrase-genou",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "1.7*DEF",
@@ -22,9 +22,9 @@ Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pend
         {
           img: "assets/sort3.webp",
           name: "Combattant borné",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de résister à ce débuff si la DÉF de ce Champion est inférieure à celle de la cible. 
+A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de résister à ce débuff si la DÉF de ce Champion est inférieure à celle de la cible.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
           damage: "4*DEF",

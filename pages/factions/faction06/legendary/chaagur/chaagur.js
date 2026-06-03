@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Stoppe-Coeur",
-          description: `Attaque 1 ennemi, puis attaque un autre ennemi pris au hasard. Si la cible se trouve sous débuff ${DEBUFFS.POISON}, ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. 
+          description: `Attaque 1 ennemi, puis attaque un autre ennemi pris au hasard. Si la cible se trouve sous débuff ${DEBUFFS.POISON}, ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi. Réinitialise le compteur de tour de la compétence Tempête de Venin si cette attaque tue deux ennemis.`,
           damage: "2.9*ATQ",
@@ -32,7 +32,7 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi. Réinitialise le
         {
           img: "assets/passif1.webp",
           name: "Agonie constante [P]",
-          description: `Attaque instantanément les ennemis avec la compétence par défaut dès qu'ils reçoivent des dégâts de débuffs ${DEBUFFS.POISON} placés par ce Champion. 
+          description: `Attaque instantanément les ennemis avec la compétence par défaut dès qu'ils reçoivent des dégâts de débuffs ${DEBUFFS.POISON} placés par ce Champion.${RETURN}${RETURN}
 
 Lors de frappes sur des ennemis sous débuffs ${DEBUFFS.POISON}, soigne ce Champion de 10 % des dégâts infligés.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Pique-Porc Flamboyant",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Sinon, possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour lors d'une contre-attaque avec cette compétence.`,
           damage: "2.65*DEF",
@@ -31,7 +31,7 @@ Sinon, possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 t
         {
           img: "assets/passif1.webp",
           name: "Moquerie [P]",
-          description: `Subis 20 % de dégâts en moins de la part d'ennemis sous débuff ${DEBUFFS.PROVOKE}. 
+          description: `Subis 20 % de dégâts en moins de la part d'ennemis sous débuff ${DEBUFFS.PROVOKE}.${RETURN}${RETURN}
 
 Possède 25 % de chances de contre-attaquer dès qu'un ennemi sous débuff ${DEBUFFS.PROVOKE} attaque ce Champion ou un allié.`,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],

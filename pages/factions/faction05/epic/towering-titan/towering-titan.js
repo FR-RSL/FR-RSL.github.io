@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Frères d'Armes [P]",
-          description: `Transférera, pendant la bataille, 50 % des dégâts infligés à Brisecage sur ce Champion.
+          description: `Transférera, pendant la bataille, 50 % des dégâts infligés à Brisecage sur ce Champion.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Brisecage se trouve dans la même équipe. S'il y a plusieurs Brisecage dans l'équipe, ce Champion ne transférera les dégâts que d'un d'entre eux.]`,
           cooldown: 2,

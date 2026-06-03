@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frappe de chant",
-          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.`,
           damage: "5*ATQ",
@@ -23,7 +23,7 @@ Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Havre de guérison",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, soigne tous les alliés à hauteur de 30 % de leurs PV MAX.`,
           cooldown: 6,

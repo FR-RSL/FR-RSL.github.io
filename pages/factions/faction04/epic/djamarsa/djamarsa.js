@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Doigt de la nuit",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. 
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.${RETURN}${RETURN}
 
 Si Crohnam se trouve dans la même équipe et que le débuff ${DEBUFFS.SLEEP} a été bloqué ou qu'on lui a résisté, place un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours à la place. Il est impossible de bloquer ce débuff.`,
           damage: "4*ATQ",
@@ -14,7 +14,7 @@ Si Crohnam se trouve dans la même équipe et que le débuff ${DEBUFFS.SLEEP} a 
         {
           img: "assets/sort2.webp",
           name: "Lune rayonnante",
-          description: `Soigne une cible alliée de 30 % de ses PV max et remplit son Compteur de Tour de 30 %. 
+          description: `Soigne une cible alliée de 30 % de ses PV max et remplit son Compteur de Tour de 30 %.${RETURN}${RETURN}
 
 Si cette compétence est utilisée sur Crohnam, Crohnam activera instantanément sa compétence Régal de berserker.`,
           cooldown: 4,

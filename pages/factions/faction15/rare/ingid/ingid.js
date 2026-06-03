@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ombre dévorante",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur tous les alliés pendant 2 tours.
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "3.65*ATQ",

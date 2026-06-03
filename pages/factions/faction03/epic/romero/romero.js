@@ -28,7 +28,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Partenaire Fidèle",
-          description: `Attaque 3 fois tous les ennemis.
+          description: `Attaque 3 fois tous les ennemis.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Juliana se trouve dans la même équipe.]`,
           damage: "1.4*DEF",

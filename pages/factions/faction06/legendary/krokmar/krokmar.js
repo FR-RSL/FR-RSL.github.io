@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Marais grinçant",
-          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20 % des dégâts infligés. 
+          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20 % des dégâts infligés.${RETURN}${RETURN}
 
 Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
           damage: "0.3*HP",

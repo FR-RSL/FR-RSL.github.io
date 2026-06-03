@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Stratagème sacrificiel",
-          description: `Attaque un allié. Les dégâts infligés sont égaux à 50 % des PV actuels de la cible. 
+          description: `Attaque un allié. Les dégâts infligés sont égaux à 50 % des PV actuels de la cible.${RETURN}${RETURN}
 
-Place ensuite un buff ${BUFFS.SHIELD} sur cet allié pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de PV qui manque à cet allié. 
+Place ensuite un buff ${BUFFS.SHIELD} sur cet allié pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de PV qui manque à cet allié.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de cet allié d'une quantité égale au pourcentage de PV qui lui manque. Enfin, remplit le Compteur de Tour de ce Champion de la même valeur.`,
           damage: "0.5*Target Current HP",
@@ -25,7 +25,7 @@ Remplit également le Compteur de Tour de cet allié d'une quantité égale au p
         {
           img: "assets/sort3.webp",
           name: "Ricanement de lames",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           damage: "0.3*HP",
@@ -55,9 +55,9 @@ Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les e
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-defence.webp",
-  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 33%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Orcs)
+(ne s'applique qu'à la Faction des Orcs)${RETURN}${RETURN}
 
 Augmente la statistique PV des Alliés lors de toutes les Batailles de 25%`,
 };

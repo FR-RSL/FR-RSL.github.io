@@ -13,7 +13,7 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Renaissance verdoyante",
-          description: `Retire tous les buffs dont disposent les ennemis. Augmente d'1 tour la durée de tous les buffs alliés. 
+          description: `Retire tous les buffs dont disposent les ennemis. Augmente d'1 tour la durée de tous les buffs alliés.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
@@ -63,7 +63,7 @@ Place ensuite un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés pendant 2 to
         {
           img: "assets/sort4.webp",
           name: "Lance-rocher",
-          description: `Attaque un ennemi. Réduit le Compteur de Tour de la cible de 30 %. 
+          description: `Attaque un ennemi. Réduit le Compteur de Tour de la cible de 30 %.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.HEALS} de 15 % sur cette Championne pendant 1 tour. Place également un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV, sauf cette Championne, pendant 1 tour.`,
           damage: "0.27*HP",
@@ -82,7 +82,7 @@ Place ensuite un buff ${BUFFS.HEALS} de 15 % sur cette Championne pendant 1 tour
         {
           img: "assets/sort6.webp",
           name: "Clameur du Bois de Brume",
-          description: `Place deux buffs ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. 
+          description: `Place deux buffs ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.TAUNT} sur cette Championne pendant 2 tours, ainsi qu'un buff ${BUFFS.STONE_SKIN} pendant 1 tour.`,
           cooldown: 5,
@@ -99,7 +99,7 @@ Place également un buff ${BUFFS.TAUNT} sur cette Championne pendant 2 tours, ai
         {
           img: "assets/passif2.webp",
           name: "Fouillis d'épine [P]",
-          description: `Lorsqu'elle est attaquée, place un débuff ${DEBUFFS.SPD} de 30 % sur l'assaillant pendant 2 tours. Se produit une fois par frappe. 
+          description: `Lorsqu'elle est attaquée, place un débuff ${DEBUFFS.SPD} de 30 % sur l'assaillant pendant 2 tours. Se produit une fois par frappe.${RETURN}${RETURN}
 
 Réduit également de 20 % les dégâts infligés par des compétences pour tous les alliés. Cette Championne recevra ces dégâts à la place.`,
           isPassive: true

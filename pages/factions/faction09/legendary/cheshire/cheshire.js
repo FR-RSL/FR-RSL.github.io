@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Griffe de phase",
-          description: `Attaque un ennemi. Si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, attaque tous les ennemis. 
+          description: `Attaque un ennemi. Si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, attaque tous les ennemis.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.`,
           damage: "ATQ*(1+SPD/100)",
@@ -14,9 +14,9 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.`,
         {
           img: "assets/sort2.webp",
           name: "Frénésie féline",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe réduira la VIT de l'ennemi d'1 %(s'accumule jusqu'à 10 %). Cet effet ne fonctionne pas contre les Boss. Chaque frappe augmentera également la VIT de ce Champion de 1 % (s'accumule jusqu'à 10 %). 
+Chaque frappe réduira la VIT de l'ennemi d'1 %(s'accumule jusqu'à 10 %). Cet effet ne fonctionne pas contre les Boss. Chaque frappe augmentera également la VIT de ce Champion de 1 % (s'accumule jusqu'à 10 %).${RETURN}${RETURN}
 
 Si cette compétence tue un ennemi, place pendant 2 tours un buff ${BUFFS.PERFECT_VEIL} sur ce Champion et l'allié qui a le Compteur de Tour le plus bas.`,
           damage: "ATQ*(0.5*SPD/100)",
@@ -27,7 +27,7 @@ Si cette compétence tue un ennemi, place pendant 2 tours un buff ${BUFFS.PERFEC
         {
           img: "assets/sort3.webp",
           name: "Hélice souriante",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "ATQ*(1+SPD/100)",

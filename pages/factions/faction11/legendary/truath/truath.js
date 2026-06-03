@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Infusion d'Animus",
-          description: `Soigne une cible alliée de 20 % des PV MAX de ce Champion, puis équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV. 
+          description: `Soigne une cible alliée de 20 % des PV MAX de ce Champion, puis équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV.${RETURN}${RETURN}
 
 Après avoir équilibré les PV, place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur la cible initiale pendant 2 tours.`,
           cooldown: 4,

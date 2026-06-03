@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tranchoir Écrasant",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}
 Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
@@ -13,7 +13,7 @@ Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
         {
           img: "assets/sort2.webp",
           name: "Proie à Abattre",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
           damage: "5.6*ATQ",

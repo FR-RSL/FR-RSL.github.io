@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Glacer le Sang",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
  
 Après l'attaque, possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours sur tous les ennemis sur lesquels cette compétence n'a pas placé de débuff ${DEBUFFS.ATK}.`,
           damage: "3.3*DEF",

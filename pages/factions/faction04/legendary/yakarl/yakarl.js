@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hache d'Hiver Total",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
 
 Ignorera 25 % de la DÉF de la cible contre les cibles sous débuffs ${DEBUFFS.GEL}.`,
           damage: "1.8*ATQ",
@@ -14,9 +14,9 @@ Ignorera 25 % de la DÉF de la cible contre les cibles sous débuffs ${DEBUFFS.G
         {
           img: "assets/sort2.webp",
           name: "Chevauche-Blizzard",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 3 tours et 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 3 tours et 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
  
-Vole également 100 % du Compteur de Tour de la cible et place un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 3 tours. 
+Vole également 100 % du Compteur de Tour de la cible et place un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 3 tours.${RETURN}${RETURN}
 
 Ignorera 50 % de la DÉF de la cible contre les cibles sous débuffs ${DEBUFFS.GEL}.`,
           damage: "6*ATQ",
@@ -38,9 +38,9 @@ Ignorera 50 % de la DÉF de la cible contre les cibles sous débuffs ${DEBUFFS.G
           name: "Seigneur de Glace [P]",
           description: `${PASSIVE}
  
-Augmente les dégâts qu'inflige ce Champion de 10 % pour chaque Champion en combat sous débuff ${DEBUFFS.GEL}.
+Augmente les dégâts qu'inflige ce Champion de 10 % pour chaque Champion en combat sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
-Réduit également les dégâts reçus par ce Champion de 10 % pour chaque Champion en combat sous débuff ${DEBUFFS.GEL}.
+Réduit également les dégâts reçus par ce Champion de 10 % pour chaque Champion en combat sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 ${ACTIVE}
  

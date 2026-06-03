@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lance de l'aube",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Championne.`,
           damage: "4.6*ATQ",
@@ -22,7 +22,7 @@ Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Cham
         {
           img: "assets/sort3.webp",
           name: "Chatoiement de vie",
-          description: `Ranime un allié avec 25 % de PV et 100 % de Compteur de Tour. 
+          description: `Ranime un allié avec 25 % de PV et 100 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cet allié pendant 2 tours.`,
           cooldown: 6,

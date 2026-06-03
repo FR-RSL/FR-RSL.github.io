@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Tireuse d'élite [P]",
-          description: `Immunisé contre les débuffs ${DEBUFFS.PRE}.
+          description: `Immunisé contre les débuffs ${DEBUFFS.PRE}.${RETURN}${RETURN}
 
 Augmente le TAUX C. de ce Champion de 0,05 % pour chaque point de PRÉ qu'il possède.`,
           isPassive: true

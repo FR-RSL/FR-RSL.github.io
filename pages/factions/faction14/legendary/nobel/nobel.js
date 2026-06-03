@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sentir la Peur",
-          description: `Attaque un ennemi. Possède 40 % de chances de réduire d'1 tour la durée de 2 buffs aléatoires de la cible. 
+          description: `Attaque un ennemi. Possède 40 % de chances de réduire d'1 tour la durée de 2 buffs aléatoires de la cible.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit au lieu de ça la durée de tous les buffs de la cible d'1 tour.`,
           damage: "3.7*ATQ",
@@ -18,11 +18,11 @@ Si la cible se trouve sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réd
         {
           img: "assets/sort2.webp",
           name: "Héraut",
-          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible.${RETURN}${RETURN}
 
-Avant d'attaquer, si la cible est affligée d'un buff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.
+Avant d'attaquer, si la cible est affligée d'un buff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Après l'attaque, si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit d'1 tour le temps de recharge de la compétence Désarroi.
+Après l'attaque, si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit d'1 tour le temps de recharge de la compétence Désarroi.${RETURN}${RETURN}
 
 Ensuite, remplit le Compteur de Tour de ce Champion de 25 %.`,
           cooldown: 4,
@@ -38,7 +38,7 @@ Ensuite, remplit le Compteur de Tour de ce Champion de 25 %.`,
         {
           img: "assets/sort3.webp",
           name: "Désarroi",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de voler 50 % du Compteur de Tour actuel de la cible. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de voler 50 % du Compteur de Tour actuel de la cible.${RETURN}${RETURN}
 
 Si cette attaque tue une cible sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}, réduit d'1 tour le temps de recharge de la compétence Héraut.`,
           cooldown: 5,

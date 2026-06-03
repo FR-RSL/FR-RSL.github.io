@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Brise-Gel",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.DEF} et ${BUFFS.SHIELD}. Ignorera également 50 % de la DÉF de la cible si elle est sous débuff ${DEBUFFS.GEL}. 
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.DEF} et ${BUFFS.SHIELD}. Ignorera également 50 % de la DÉF de la cible si elle est sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 Place sur ce Champion un buff ${BUFFS.COUNTER} et un buff ${BUFFS.ATK} de 50 % pendant 2 tours si cette attaque tue un ennemi.`,
           damage: "5.6*ATQ",

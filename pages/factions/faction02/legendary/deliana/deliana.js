@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mépris flétrissant",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS}, applique également un effet de [Propagation de Débuff], prenant tout débuff ${DEBUFFS.RES} sur la cible pour le placer sur tous les ennemis.`,
           damage: "0.35*HP",
@@ -23,9 +23,9 @@ Si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS}, applique également u
         {
           img: "assets/sort3.webp",
           name: "Rester à sa place",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours.${RETURN}${RETURN}
 
-Soigne tous les alliés de 5 % de leurs PV MAX pour chaque débuff ${DEBUFFS.BLOCK_BUFFS} placé par cette compétence. 
+Soigne tous les alliés de 5 % de leurs PV MAX pour chaque débuff ${DEBUFFS.BLOCK_BUFFS} placé par cette compétence.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 10 % pour chaque tentative de débuff ${DEBUFFS.BLOCK_BUFFS} à laquelle l'équipe ennemie a résisté ou qu'elle a bloquée.`,
           damage: "0.3*HP",
@@ -38,7 +38,7 @@ Remplit le Compteur de Tour de cette Championne de 10 % pour chaque tentative de
           name: "Magnifique [P]",
           description: `${PASSIVE}
 
-Augmente la PRÉ de cette Championne de 2 par tranche de 1 000 PV qu'elle possède. 
+Augmente la PRÉ de cette Championne de 2 par tranche de 1 000 PV qu'elle possède.${RETURN}${RETURN}
 
 ${ACTIVE}
 

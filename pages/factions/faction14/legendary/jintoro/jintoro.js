@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Gel du Sang",
-          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible.
+          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge de [Rage d'Oni] si la cible est immunisée contre les effets de réduction du Compteur de Tour.`,
           damage: "5.8*ATQ",
@@ -31,7 +31,7 @@ Réduit d'1 tour le temps de recharge de [Rage d'Oni] si la cible est immunisée
         {
           img: "assets/sort3.webp",
           name: "Rage d'Oni",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Attaquera 5 fois au lieu d'1 à chaque 4e utilisation de cette compétence contre la même cible au cours d'un round.`,
           damage: "5.7*ATQ",

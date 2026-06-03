@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Fausse Mort [P]",
-          description: `Ranime un allié choisi au hasard avec 30 % de PV chaque fois que ce Champion tue un ennemi. 
+          description: `Ranime un allié choisi au hasard avec 30 % de PV chaque fois que ce Champion tue un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff ${DEBUFFS.FEAR} sur tous les ennemis pendant 1 tour lorsqu'un allié est ranimé.`,
           isPassive: true

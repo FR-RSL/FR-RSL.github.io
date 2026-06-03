@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée vorpaline",
-          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si la cible a des compétences actives en recharge. 
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si la cible a des compétences actives en recharge.${RETURN}${RETURN}
 
 Chaque frappe a 80 % de chances de réduire d'1 tour la durée d'un buff aléatoire de la cible.`,
           damage: "1.7*ATQ",
@@ -14,9 +14,9 @@ Chaque frappe a 80 % de chances de réduire d'1 tour la durée d'un buff aléato
         {
           img: "assets/sort2.webp",
           name: "Cyclone mécanique",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis. 
+Possède 75 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis.${RETURN}${RETURN}
 
 Possède également 75 % de chances de réduire le Compteur de Tour de chaque cible de 15 %. Si au moins une des compétences de la cible voit son temps de recharge augmenté au maximum, réduit au lieu de ça son Compteur de Tour de 30 %.`,
           damage: "4.2*ATQ",
@@ -27,7 +27,7 @@ Possède également 75 % de chances de réduire le Compteur de Tour de chaque ci
         {
           img: "assets/sort3.webp",
           name: "Tueuse de reine",
-          description: `Attaque un ennemi. Ignorera 20 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 20 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Si la cible initiale est tuée, attaque également l'ennemi qui a les PV les plus bas. Ignorera également 20 % de la DÉF de la cible.`,
           damage: "5*ATQ",
@@ -40,7 +40,7 @@ Si la cible initiale est tuée, attaque également l'ennemi qui a les PV les plu
           name: "Tic-tac [P]",
           description: `${PASSIVE}
 
-Dès que cette Championne attaque, inflige 3 % de dégâts supplémentaires à chaque cible pour chaque tour restant sur les temps de recharge de toutes leurs compétences. Ces dégâts supplémentaires sont comptés individuellement pour chaque cible. 
+Dès que cette Championne attaque, inflige 3 % de dégâts supplémentaires à chaque cible pour chaque tour restant sur les temps de recharge de toutes leurs compétences. Ces dégâts supplémentaires sont comptés individuellement pour chaque cible.${RETURN}${RETURN}
 
 ${ACTIVE}
 

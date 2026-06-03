@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Service dans la mort",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe vole 10 % du Compteur de Tour de la cible. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours si le Compteur de Tour de la cible est totalement vidé.`,
           damage: "2*ATQ",
@@ -14,9 +14,9 @@ Chaque frappe vole 10 % du Compteur de Tour de la cible. Place un débuff ${DEBU
         {
           img: "assets/sort2.webp",
           name: "Invité importun",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.PETRIFICATION} pendant 1 tour. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours sur tous les ennemis qui ne sont pas sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.
+Place un débuff ${DEBUFFS.PETRIFICATION} pendant 1 tour. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours sur tous les ennemis qui ne sont pas sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -29,7 +29,7 @@ Active cette compétence dès qu'un ennemi sous débuff ${DEBUFFS.FEAR} ou ${DEB
         {
           img: "assets/sort3.webp",
           name: "Fioriture spectrale",
-          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de réduire de 3 tours la durée de tous les buffs ennemis. Accordera un Tour supplémentaire s'il n'y a aucun buff sur l'équipe ennemie avant l'attaque.
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de réduire de 3 tours la durée de tous les buffs ennemis. Accordera un Tour supplémentaire s'il n'y a aucun buff sur l'équipe ennemie avant l'attaque.${RETURN}${RETURN}
 
 A également 75 % de chances d'augmenter de 3 tours les temps de recharge de toutes les compétences des ennemis.`,
           damage: "4*ATQ",
@@ -40,7 +40,7 @@ A également 75 % de chances d'augmenter de 3 tours les temps de recharge de tou
         {
           img: "assets/passif1.webp",
           name: "Le meilleur fantôme [P]",
-          description: `Dès qu'un ennemi est ranimé, place un débuff ${DEBUFFS.TRUE_FEAR} sur cet ennemi pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, cet effet ne sera activé qu'une fois. 
+          description: `Dès qu'un ennemi est ranimé, place un débuff ${DEBUFFS.TRUE_FEAR} sur cet ennemi pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, cet effet ne sera activé qu'une fois.${RETURN}${RETURN}
 
 Retire les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR} et ${DEBUFFS.PETRIFICATION} sur ce Champion avant le début de son tour.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe éclairante",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 25 % de chances de voler un buff aléatoire à la cible. Si cette attaque est critique, a au lieu de ça 100 % de chances de voler un buff aléatoire sur la cible.`,
           damage: "3.8*ATQ",
@@ -14,7 +14,7 @@ A 25 % de chances de voler un buff aléatoire à la cible. Si cette attaque est 
         {
           img: "assets/sort2.webp",
           name: "Coup aveuglant",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 75 % de chances de voler 15 % du Compteur de Tour de la cible. Si une frappe est critique, a au lieu de ça 75 % de chances de voler 30 % du Compteur de Tour de la cible.`,
           damage: "2.8*ATQ",
@@ -25,7 +25,7 @@ Chaque frappe a 75 % de chances de voler 15 % du Compteur de Tour de la cible. S
         {
           img: "assets/sort3.webp",
           name: "Rafale resplendissante",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 2 tours. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs de cette Championne si cette attaque est critique.`,
           damage: "3.85*ATQ",

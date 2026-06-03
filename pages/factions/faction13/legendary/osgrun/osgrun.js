@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame d'obsidienne",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence active aléatoire sur la cible. 
+A 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence active aléatoire sur la cible.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de tous les alliés de 10 %.`,
           damage: "4.5*ATQ",
@@ -16,9 +16,9 @@ Remplit également le Compteur de Tour de tous les alliés de 10 %.`,
         {
           img: "assets/sort2.webp",
           name: "Magie d'Ireth",
-          description: `A 75 % de chances de retirer tous les buffs sur tous les ennemis. 
+          description: `A 75 % de chances de retirer tous les buffs sur tous les ennemis.${RETURN}${RETURN}
 
-Réduit de 20 % les Compteurs de Tour de tous les ennemis dont le Compteur de Tour est inférieur ou égal à 50 %. Si le Compteur de Tour d'un ennemi est rempli à plus de 50 %, le réduit à 50 %. 
+Réduit de 20 % les Compteurs de Tour de tous les ennemis dont le Compteur de Tour est inférieur ou égal à 50 %. Si le Compteur de Tour d'un ennemi est rempli à plus de 50 %, le réduit à 50 %.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis dont le Compteur de Tour a été réduit à 50 %.`,
           cooldown: 5,
@@ -28,7 +28,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis 
         {
           img: "assets/sort3.webp",
           name: "À la mort, sans capituler",
-          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SHATTER} de 7,5 % sur tous les alliés pendant 2 tours. 
+          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SHATTER} de 7,5 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Réduit d'1 tour les temps de recharge de toutes les compétences actives des alliés, sauf ce Champion, si la cible est tuée.`,
           cooldown: 6,
@@ -40,7 +40,7 @@ Réduit d'1 tour les temps de recharge de toutes les compétences actives des al
           name: "Sombres murmures [P]",
           description: `${PASSIVE}
 
-Les alliés infligent 20 % de dégâts supplémentaires contre les ennemis sous débuffs ${DEBUFFS.STUN}. 
+Les alliés infligent 20 % de dégâts supplémentaires contre les ennemis sous débuffs ${DEBUFFS.STUN}.${RETURN}${RETURN}
 
 ${ACTIVE}
 

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tambour de guerre",
-          description: `Attaque 2 fois un ennemi. Soigne cette Championne de 5 % de ses PV MAX après chaque frappe. 
+          description: `Attaque 2 fois un ennemi. Soigne cette Championne de 5 % de ses PV MAX après chaque frappe.${RETURN}${RETURN}
 
 Chaque frappe a également 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur la cible pendant 1 tour.`,
           damage: "0.13*HP",
@@ -14,7 +14,7 @@ Chaque frappe a également 25 % de chances de placer un débuff ${DEBUFFS.PROVOK
         {
           img: "assets/sort2.webp",
           name: "Mère de clan",
-          description: `Réduit d'1 tour la durée de tous les débuffs des alliés. 
+          description: `Réduit d'1 tour la durée de tous les débuffs des alliés.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.TAUNT} et un buff ${BUFFS.UNKILLABLE} sur cette Championne pendant 2 tours.`,
           cooldown: 5,
@@ -24,9 +24,9 @@ Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place
         {
           img: "assets/sort3.webp",
           name: "Force maternelle",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 25 % des PV MAX de cette Championne pendant 2 tours. 
+Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 25 % des PV MAX de cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Dès qu'un buff ${BUFFS.SHIELD} placé par cette Championne expire ou est retiré par des dégâts, soigne l'allié concerné de 15 % de ses PV MAX et lui accorde un buff ${BUFFS.STRENGTHEN} de 25 % pendant 1 tour.`,
           damage: "0.27*HP",

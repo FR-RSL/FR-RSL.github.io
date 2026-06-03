@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Offrande de Sang",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20 % des dégâts infligés.`,
           damage: "0.28*HP",

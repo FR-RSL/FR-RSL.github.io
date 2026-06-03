@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Né pour gagner",
-          description: `Attaque un ennemi. Retire tous les buffs de la cible.
+          description: `Attaque un ennemi. Retire tous les buffs de la cible.${RETURN}${RETURN}
 
 Retire tous les buffs de la cible avant d'attaquer lorsque des ennemis des Factions des Orcs et de la Tribu Ogryn sont ciblés.`,
           damage: "7*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Canonnade portable",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 80 % de chances de transférer 1 débuff aléatoire de ce Champion sur la cible.`,
           damage: "4*ATQ",
@@ -14,7 +14,7 @@ A 80 % de chances de transférer 1 débuff aléatoire de ce Champion sur la cibl
         {
           img: "assets/sort2.webp",
           name: "Barrage de tirs sporadiques",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 75 % de chances de retirer 1 buff aléatoire à tous les ennemis. A 75 % de chances de voler au lieu de cela 2 buffs aléatoires si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS} ou ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "3.85*ATQ",
@@ -25,9 +25,9 @@ A 75 % de chances de retirer 1 buff aléatoire à tous les ennemis. A 75 % de ch
         {
           img: "assets/sort3.webp",
           name: "Abatteur de bête",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La deuxième frappe a 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. La troisième frappe a 50 % de chances d'appliquer un effet de [Propagation de Débuffs], qui prend 1 débuff aléatoire de la cible pour le placer sur tous les autres ennemis.`,
+La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La deuxième frappe a 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. La troisième frappe a 50 % de chances d'appliquer un effet de ${PROP_DEBUFF}, qui prend 1 débuff aléatoire de la cible pour le placer sur tous les autres ennemis.`,
           damage: "2*ATQ",
           cooldown: 5,
           isPassive: false

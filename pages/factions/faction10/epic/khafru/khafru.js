@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ordre de Khafru",
-          description: `Attaque tous les ennemis. Avant d'attaquer, retire 1 débuff aléatoire sur tous les alliés. Les dégâts augmentent de 5 % pour chaque débuff retiré. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire 1 débuff aléatoire sur tous les alliés. Les dégâts augmentent de 5 % pour chaque débuff retiré.${RETURN}${RETURN}
 
 Soigne également chaque allié de 10 % des PV MAX de ce Champion si un débuff leur a été retiré.`,
           damage: "4.1*DEF",

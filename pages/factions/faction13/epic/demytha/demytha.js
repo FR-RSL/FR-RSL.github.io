@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lumière de Profondeurs",
-          description: `Augmente d'1 tour la durée de tous les buffs des alliés, puis réduit d'1 tour la durée de tous les débuffs des alliés.
+          description: `Augmente d'1 tour la durée de tous les buffs des alliés, puis réduit d'1 tour la durée de tous les débuffs des alliés.${RETURN}${RETURN}
 
 Soigne également tous les alliés à hauteur de 2,5 % de leurs PV max. Soigne de 2,5 % des PV MAX supplémentaires pour chaque tour ajouté ou retiré à la durée des buffs et débuffs par cette compétence.`,
           cooldown: 4,

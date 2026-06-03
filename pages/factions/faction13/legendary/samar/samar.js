@@ -12,8 +12,8 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Malédiction d'Émeraude",
-          description: `Attaque un ennemi.
-Inflige des dégâts bonus équivalents à la différence entre le niveau de pourcentage de PV de ce Champion et celui de la cible (+1 % de dégâts par 1 % de différence).
+          description: `Attaque un ennemi.${RETURN}
+Inflige des dégâts bonus équivalents à la différence entre le niveau de pourcentage de PV de ce Champion et celui de la cible (+1 % de dégâts par 1 % de différence).${RETURN}
 Inflige des dégâts bonus égaux à la différence entre le nombre de buffs de ce Champion et celui de la cible (+10 % de dégâts par buff).`,
           damage: "0.35*HP",
           cooldown: 4,
@@ -34,7 +34,7 @@ Inflige des dégâts bonus égaux à la différence entre le nombre de buffs de 
           name: "Peau Diamant [P]",
           description: `${PASSIVE}
 
-Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 round au début de chaque Manche. 
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 round au début de chaque Manche.${RETURN}${RETURN}
 
 ${ACTIVE}
 

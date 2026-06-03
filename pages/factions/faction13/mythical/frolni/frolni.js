@@ -13,7 +13,7 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Larcin sanglant",
-          description: `Attaque un ennemi. Vole 2 buffs à une cible ennemie. Il est impossible de résister à cet effet. 
+          description: `Attaque un ennemi. Vole 2 buffs à une cible ennemie. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
 Si cette attaque passe en critique, répète une fois l'attaque.`,
           damage: "0.34*HP",
@@ -40,7 +40,7 @@ Si cette attaque passe en critique, répète une fois l'attaque.`,
         {
           img: "assets/passif1.webp",
           name: "Science infinie [P]",
-          description: `Les DÉG C. de ce Champion sont augmentés de 1 % par tranche de 1 000 PV qu'il possède. 
+          description: `Les DÉG C. de ce Champion sont augmentés de 1 % par tranche de 1 000 PV qu'il possède.${RETURN}${RETURN}
 
 Augmente les PV MAX de ce Champion de 20 % (s'accumule jusqu'à 100 %) et sa VIT de 20 (s'accumule jusqu'à 100) dès que ce Champion tue un ennemi. Se réinitialise à chaque round.`,
           isPassive: true
@@ -75,7 +75,7 @@ Augmente les PV MAX de ce Champion de 20 % (s'accumule jusqu'à 100 %) et sa VIT
         {
           img: "assets/sort5.webp",
           name: "Procédure de broyage",
-          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 50 % de ses PV MAX. 
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 50 % de ses PV MAX.${RETURN}${RETURN}
 
 Équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV.`,
           damage: "5.31*DEF",
@@ -86,7 +86,7 @@ Augmente les PV MAX de ce Champion de 20 % (s'accumule jusqu'à 100 %) et sa VIT
         {
           img: "assets/sort6.webp",
           name: "Moteur de guerre",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours.
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.SHIELD} de 2 tours sur les alliés ayant moins de 50 % de PV. La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
           cooldown: 5,

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Bombardement curatif",
-          description: `Attaque tous les ennemis. Soigne ce Champion à hauteur de 10 % des dégâts infligés. 
+          description: `Attaque tous les ennemis. Soigne ce Champion à hauteur de 10 % des dégâts infligés.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs de tous les alliés.`,
           damage: "0.1*Target Max HP",
@@ -23,7 +23,7 @@ Augmente d'1 tour la durée de tous les buffs de tous les alliés.`,
         {
           img: "assets/sort3.webp",
           name: "Personne ne passera !",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
           damage: "4*DEF",
@@ -36,7 +36,7 @@ Place également un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.DEF} de 60 % su
           name: "Ce mur résistera [P]",
           description: `${PASSIVE}
 
-Lorsque ce Champion se fait attaquer, soigne tous les alliés sauf ce Champion à hauteur de 70 % des dégâts reçus. Soigne uniquement à hauteur de 35 % des dégâts reçus lors des attaques de Boss. Cet effet n'a pas de temps de recharge. 
+Lorsque ce Champion se fait attaquer, soigne tous les alliés sauf ce Champion à hauteur de 70 % des dégâts reçus. Soigne uniquement à hauteur de 35 % des dégâts reçus lors des attaques de Boss. Cet effet n'a pas de temps de recharge.${RETURN}${RETURN}
 
 ${ACTIVE}
 

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Siphon de Vie",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Soigne l'allié ayant le moins de PV de 5 % des dégâts infligés.`,
           damage: "2.5*DEF",
@@ -14,7 +14,7 @@ Soigne l'allié ayant le moins de PV de 5 % des dégâts infligés.`,
         {
           img: "assets/sort2.webp",
           name: "Sombre Crampon",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.`,
           damage: "4.5*DEF",

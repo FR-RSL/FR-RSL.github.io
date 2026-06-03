@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Flot de Calamités",
-          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. Détruit les PV MAX de la cible de 50 % des dégâts infligés.
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. Détruit les PV MAX de la cible de 50 % des dégâts infligés.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
           damage: "5.6*ATQ",

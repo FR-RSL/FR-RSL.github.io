@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Masque de Terreur",
-          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.
+          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de ce Champion de 15 %.`,
           damage: "0.2*HP",
@@ -22,7 +22,7 @@ Remplit également le Compteur de Tour de ce Champion de 15 %.`,
         {
           img: "assets/sort3.webp",
           name: "Étrange Transfert",
-          description: `Échange les PV avec un allié. 
+          description: `Échange les PV avec un allié.${RETURN}${RETURN}
 
 Si, après l'échange, les PV de ce Champion sont égaux ou supérieurs à ceux de la cible, remplit le Compteur de Tour de ce Champion de 40 %, place un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours et place un buff ${BUFFS.BLOCK_DAMAGE} sur l'allié ciblé pendant 1 tour. Si, après l'échange, les PV de ce Champion sont inférieurs à ceux de la cible, remplit le Compteur de Tour de la cible de 40 % et lui accorde un buff ${BUFFS.SPD} de 30 % pendant 2 tours, puis place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour. Place également deux buffs ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour.`,
           cooldown: 6,

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fente de Hache",
-          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % de 2 tours si le Compteur de Tours de la cible est plein à exactement 50 % ou plus.
+          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % de 2 tours si le Compteur de Tours de la cible est plein à exactement 50 % ou plus.${RETURN}${RETURN}
 
 Possède 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours si le Compteur de Tours de la cible est inférieur à 50 %.`,
           damage: "2.1*ATQ",

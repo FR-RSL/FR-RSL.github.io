@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Valeur inébranlable",
-          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si cette attaque tue un ennemi. Il est impossible de retirer ces buffs.`,
           damage: "6.7*ATQ",

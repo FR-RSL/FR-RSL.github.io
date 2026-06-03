@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Rugissement du Lion",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}
 Place également sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 25 % de ses PV MAX pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 4,

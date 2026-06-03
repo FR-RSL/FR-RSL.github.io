@@ -5,9 +5,9 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Attiser l'angoisse",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe réduit la DÉF de la cible de 2 % (s'accumule jusqu'à 20 %). 
+Chaque frappe réduit la DÉF de la cible de 2 % (s'accumule jusqu'à 20 %).${RETURN}${RETURN}
 
 Chaque frappe vole également 10 % du Compteur de Tour de la cible.`,
           damage: "0.11*HP",
@@ -17,7 +17,7 @@ Chaque frappe vole également 10 % du Compteur de Tour de la cible.`,
         {
           img: "assets/sort2.webp",
           name: "Agonie accablante",
-          description: `Attaque tous les ennemis. Retire tous les buffs sur tous les ennemis et leur inflige un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. 
+          description: `Attaque tous les ennemis. Retire tous les buffs sur tous les ennemis et leur inflige un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Vole également 20 % du Compteur de Tour de chaque ennemi sous débuff ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "0.22*HP",
@@ -28,7 +28,7 @@ Vole également 20 % du Compteur de Tour de chaque ennemi sous débuff ${DEBUFFS
         {
           img: "assets/sort3.webp",
           name: "Voleur de joie",
-          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible. 
+          description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible.${RETURN}${RETURN}
 
 Place également les compétences de la cible en recharge.`,
           damage: "0.3*HP",
@@ -46,7 +46,7 @@ Place également les compétences de la cible en recharge.`,
         {
           img: "assets/passif1.webp",
           name: "Dramatis Miserae [P]",
-          description: `Dès que ce Champion perd 30 % de PV ou plus lors d'un seul tour, inflige des dégâts équivalents à 30 % des PV MAX de ce Champion à l'assaillant. Se produit une fois par tour. 
+          description: `Dès que ce Champion perd 30 % de PV ou plus lors d'un seul tour, inflige des dégâts équivalents à 30 % des PV MAX de ce Champion à l'assaillant. Se produit une fois par tour.${RETURN}${RETURN}
 
 De plus, lorsque ce Champion perd 30 % de PV ou plus lors d'un seul tour, lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
           damage: "0.3*HP",
@@ -74,9 +74,9 @@ De plus, lorsque ce Champion perd 30 % de PV ou plus lors d'un seul tour, lui ac
         {
           img: "assets/sort4.webp",
           name: "Artiste instable",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.BOMB} pendant 2 tours. 
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.BOMB} pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BOMB} placé.`,
           damage: "0.12*HP",
@@ -86,11 +86,11 @@ Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BOMB} pla
         {
           img: "assets/sort5.webp",
           name: "Clou du spectacle explosif",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place 2 débuffs ${DEBUFFS.BOMB} sur tous les ennemis pendant 2 tours. 
+Place 2 débuffs ${DEBUFFS.BOMB} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur les ennemis dotés de buffs ${BUFFS.STONE_SKIN} ou les ennemis dont les PV sont inférieurs aux PV de ce Champion. 
+Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur les ennemis dotés de buffs ${BUFFS.STONE_SKIN} ou les ennemis dont les PV sont inférieurs aux PV de ce Champion.${RETURN}${RETURN}
 
 Ensuite, place un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis dont les débuffs ${DEBUFFS.BOMB} ont explosé à cause de cette compétence.`,
           damage: "0.25*HP",
@@ -101,9 +101,9 @@ Ensuite, place un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis do
         {
           img: "assets/sort6.webp",
           name: "Rappel mortel",
-          description: `Soigne ce Champion à hauteur de 50 % de ses PV MAX. 
+          description: `Soigne ce Champion à hauteur de 50 % de ses PV MAX.${RETURN}${RETURN}
 
-Place également un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours sur tous les ennemis. 
+Place également un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours sur tous les ennemis.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
@@ -120,7 +120,7 @@ Accorde ensuite un Tour supplémentaire.`,
         {
           img: "assets/passif2.webp",
           name: "Rira bien [P]",
-          description: `Possède 100 % de chances de renvoyer sur un assaillant tous les débuffs ${DEBUFFS.BOMB} placés sur ce Champion. Possède également 30 % de chances de renvoyer sur un assaillant tous les autres débuffs placés sur ce Champion. 
+          description: `Possède 100 % de chances de renvoyer sur un assaillant tous les débuffs ${DEBUFFS.BOMB} placés sur ce Champion. Possède également 30 % de chances de renvoyer sur un assaillant tous les autres débuffs placés sur ce Champion.${RETURN}${RETURN}
 
 Soigne ce Champion de 20 % de ses PV MAX chaque fois qu'un ennemi est tué par un débuff ${DEBUFFS.BOMB}.`,
           isPassive: true

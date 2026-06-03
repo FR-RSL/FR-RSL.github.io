@@ -29,9 +29,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Dégondé [P]",
-          description: `Immunisé contre les débuffs ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR}.
+          description: `Immunisé contre les débuffs ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
-Dès que les PV d'un allié tombent sous 50 % suite à une attaque ennemie, possède 50 % de chances de placer un débuff ${DEBUFFS.FEAR} sur l'assaillant pendant 1 tour.
+Dès que les PV d'un allié tombent sous 50 % suite à une attaque ennemie, possède 50 % de chances de placer un débuff ${DEBUFFS.FEAR} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
 Dès qu'un allié est tué par un ennemi, possède 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour.`,
           isPassive: true

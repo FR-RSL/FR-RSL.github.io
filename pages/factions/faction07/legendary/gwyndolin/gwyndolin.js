@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Boomerangs faucilles",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Place également un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours sur les ennemis affligés de 2 débuffs ou plus.`,
           damage: "3.5*ATQ",
@@ -23,9 +23,9 @@ Place également un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours sur les ennem
         {
           img: "assets/sort3.webp",
           name: "Dard de plume",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Possède 75 % de chances de voler tous les buffs ${BUFFS.BLOCK_DEBUFFS} dont disposent les ennemis. 
+Possède 75 % de chances de voler tous les buffs ${BUFFS.BLOCK_DEBUFFS} dont disposent les ennemis.${RETURN}${RETURN}
 
 Si au moins 1 buff ${BUFFS.BLOCK_DEBUFFS} a été volé à l'ennemi, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
           damage: "4*ATQ",
@@ -36,7 +36,7 @@ Si au moins 1 buff ${BUFFS.BLOCK_DEBUFFS} a été volé à l'ennemi, place un bu
         {
           img: "assets/passif1.webp",
           name: "Oiseau de proie [P]",
-          description: `Les DÉG C. de ce Champion augmentent de 1 % par tranche de 10 points de PRÉ qu'il possède. 
+          description: `Les DÉG C. de ce Champion augmentent de 1 % par tranche de 10 points de PRÉ qu'il possède.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire après que ce Champion utilise 3 compétences, quelles qu'elles soient.`,
           isPassive: true

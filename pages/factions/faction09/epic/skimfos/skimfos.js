@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Déformé [P]",
-          description: `Au début de chaque tour, soigne ce Champion de 5 % de ses PV MAX pour chaque débuff dont il est affligé. 
+          description: `Au début de chaque tour, soigne ce Champion de 5 % de ses PV MAX pour chaque débuff dont il est affligé.${RETURN}${RETURN}
 
 Si ce Champion est affligé de 4 débuffs ou plus au début du tour, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.`,
           isPassive: true

@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Vengeance Prédestinée",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}. Remplit le Compteur de Tour de ce Champion de 30 %. 
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}. Remplit le Compteur de Tour de ce Champion de 30 %.${RETURN}
 Sinon, remplit le Compteur de Tour de ce Champion de 60 % si la cible possède 50 % de PV ou moins après cette attaque. Réduit également d'1 tour le temps de recharge des compétences Raie d'Acier et Vengeance Prédestinée si cette attaque tue un ennemi.`,
           damage: "5.5*ATQ",
           cooldown: 4,
@@ -31,7 +31,7 @@ Sinon, remplit le Compteur de Tour de ce Champion de 60 % si la cible possède 5
         {
           img: "assets/passif1.webp",
           name: "Bushido [P]",
-          description: `Augmente la VIT de ce Champion de 10 et sa RÉS de 50 si le nombre de Champions dans l'équipe du Champion est inférieur ou égal au nombre d'ennemis dans l'équipe ennemie.
+          description: `Augmente la VIT de ce Champion de 10 et sa RÉS de 50 si le nombre de Champions dans l'équipe du Champion est inférieur ou égal au nombre d'ennemis dans l'équipe ennemie.${RETURN}${RETURN}
 
 [Cet effet fonctionne toujours lors des combats contre les Boss.]`,
           isPassive: true

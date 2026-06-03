@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Libération Pyrétique",
-          description: `Attaque tous les ennemis. Possède 50 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis sous débuff ${DEBUFFS.BURN}. Place également, sur tous les alliés, un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.
+          description: `Attaque tous les ennemis. Possède 50 % de chances d'augmenter de 2 tours les temps de recharge de toutes les compétences des ennemis sous débuff ${DEBUFFS.BURN}. Place également, sur tous les alliés, un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 [Active instantanément cette compétence lorsque ce Champion est ranimé par Rian l'Illusionniste.]`,
           damage: "3.5*DEF",

@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Recherche de terrain",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours. 
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours.${RETURN}${RETURN}
 
 Après l'attaque, place un débuff ${DEBUFFS.POISON_S} de 25 % sur les ennemis affligés de 2 débuffs ${DEBUFFS.POISON} ou plus.`,
           damage: "2*DEF",

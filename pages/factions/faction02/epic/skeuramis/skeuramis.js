@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Supériorité naturelle",
-          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Possède également 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Possède également 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 10 % pour chaque buff qui a vu sa durée réduite.`,
           damage: "0.25*HP",
@@ -23,7 +23,7 @@ Remplit le Compteur de Tour de ce Champion de 10 % pour chaque buff qui a vu sa 
         {
           img: "assets/sort3.webp",
           name: "Tenir la ligne",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. 
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 Place une ${BUFFS.COUNTER} et un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 2 tours.`,
           cooldown: 4,

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Renforçant",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Soigne l'allié ayant le moins de PV de 15 % des dégâts infligés.`,
           damage: "4*ATQ",
@@ -14,7 +14,7 @@ Soigne l'allié ayant le moins de PV de 15 % des dégâts infligés.`,
         {
           img: "assets/sort2.webp",
           name: "Chant de Triomphe",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Si l'attaque passe en critique, place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur les 2 alliés ayant le moins de PV.`,
           damage: "5.7*ATQ",

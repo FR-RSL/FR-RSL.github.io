@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lore de Guérison",
-          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 10 % de leurs PV max.
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 10 % de leurs PV max.${RETURN}${RETURN}
 
 Soigne chaque allié de 2,5 % supplémentaires pour chaque débuff dont est affligée la cible.`,
           damage: "5.7*ATQ",

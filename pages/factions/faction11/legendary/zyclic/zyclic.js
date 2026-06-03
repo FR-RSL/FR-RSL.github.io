@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coupeur de chitine",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 75 % de chances de voler un buff aléatoire à la cible. Il est impossible de résister à cet effet et de le bloquer.`,
           damage: "3.8*ATQ",
@@ -13,7 +13,7 @@ Possède 75 % de chances de voler un buff aléatoire à la cible. Il est impossi
         {
           img: "assets/sort2.webp",
           name: "Multitude affamée",
-          description: `Attaque un ennemi. Accorde un Tour supplémentaire si cette attaque tue un ennemi. 
+          description: `Attaque un ennemi. Accorde un Tour supplémentaire si cette attaque tue un ennemi.${RETURN}${RETURN}
 
 Si la cible initiale survit, place une frappe supplémentaire sur tous les ennemis.`,
           damage: "6*ATQ | 4*ATQ (Zone)",
@@ -23,7 +23,7 @@ Si la cible initiale survit, place une frappe supplémentaire sur tous les ennem
         {
           img: "assets/sort3.webp",
           name: "Festin insectoïde",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Les dégâts infligés par cette compétence augmentent de 10 % chaque fois qu'un ennemi reçoit un débuff. L'augmentation des dégâts se réinitialise chaque fois que cette compétence est utilisée.`,
           damage: "3*ATQ",

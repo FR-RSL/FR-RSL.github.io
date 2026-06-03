@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Moisson de Peur",
-          description: `Attaque 3 fois un ennemi. Chaque frappe a 50 % de chances de voler un buff aléatoire à la cible.
+          description: `Attaque 3 fois un ennemi. Chaque frappe a 50 % de chances de voler un buff aléatoire à la cible.${RETURN}${RETURN}
 
-Chaque frappe a également 50 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour.
+Chaque frappe a également 50 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour.${RETURN}${RETURN}
 
 Ces chances passent à 100 % si la cible ne possède aucun buff actif.`,
           damage: "0.06*HP",
@@ -16,9 +16,9 @@ Ces chances passent à 100 % si la cible ne possède aucun buff actif.`,
         {
           img: "assets/sort2.webp",
           name: "Rêves en Cendres",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Retire tous les buffs de chaque cible. Place ensuite un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.
+Retire tous les buffs de chaque cible. Place ensuite un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           damage: "0.16*HP",
@@ -29,9 +29,9 @@ Accorde ensuite un Tour supplémentaire.`,
         {
           img: "assets/sort3.webp",
           name: "Seigneur de Terreur",
-          description: `Attaque tous les ennemis. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.
+          description: `Attaque tous les ennemis. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.${RETURN}${RETURN}
 
-Place également un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours et réduit de 30 % le Compteur de Tour de chaque cible si le débuff ${DEBUFFS.TRUE_FEAR} est placé. 
+Place également un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours et réduit de 30 % le Compteur de Tour de chaque cible si le débuff ${DEBUFFS.TRUE_FEAR} est placé.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} irrésistible pendant 1 tour si le débuff ${DEBUFFS.TRUE_FEAR} n'est pas placé. Réduit également le Compteur de Tour de chaque cible de 30 %.`,
           damage: "0.21*HP",

@@ -5,9 +5,9 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Tempête de Serpentia",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne tous tes alliés à hauteur de 5 % des PV MAX de cette Championne. 
+Soigne tous tes alliés à hauteur de 5 % des PV MAX de cette Championne.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 5 % pour chaque allié vivant et de 2,5 % supplémentaires pour chaque ennemi vivant.`,
           damage: "0.27*HP",
@@ -17,7 +17,7 @@ Remplit le Compteur de Tour de cette Championne de 5 % pour chaque allié vivant
         {
           img: "assets/sort2.webp",
           name: "Fortitude dérangée",
-          description: `Retire tous les débuffs sur tous les alliés, puis place un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés, sauf cette Championne, pendant 2 tours. 
+          description: `Retire tous les débuffs sur tous les alliés, puis place un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés, sauf cette Championne, pendant 2 tours.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.STONE_SKIN} sur cette Championne pendant 1 tour.`,
           cooldown: 4,
@@ -27,7 +27,7 @@ Place un buff ${BUFFS.STONE_SKIN} sur cette Championne pendant 1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Régénération anormale",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. 
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.UNKILLABLE} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
@@ -44,7 +44,7 @@ Place un buff ${BUFFS.UNKILLABLE} sur tous les alliés pendant 2 tours.`,
         {
           img: "assets/passif1.webp",
           name: "Protection haineuse [P]",
-          description: `Tous les 7 tours, équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront ramenés au niveau de PV moyen de l'équipe.
+          description: `Tous les 7 tours, équilibre les PV de tous les alliés. Les niveaux de PV de tous les alliés seront ramenés au niveau de PV moyen de l'équipe.${RETURN}${RETURN}
 
 Les alliés recevront 1 % de dégâts en moins par tranche de 2 % de PV perdus (s'accumule jusqu'à 25 %). Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true
@@ -71,9 +71,9 @@ Les alliés recevront 1 % de dégâts en moins par tranche de 2 % de PV perdus (
         {
           img: "assets/sort4.webp",
           name: "Je te trouverai",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Détruit la VIT de la cible de 3 points (s'accumule jusqu'à 30). 
+Détruit la VIT de la cible de 3 points (s'accumule jusqu'à 30).${RETURN}${RETURN}
 
 Réduit le Compteur de Tour de la cible de 5 % pour chaque allié vivant et de 2,5 % supplémentaires pour chaque ennemi vivant.`,
           damage: "0.29*HP",
@@ -83,7 +83,7 @@ Réduit le Compteur de Tour de la cible de 5 % pour chaque allié vivant et de 2
         {
           img: "assets/sort5.webp",
           name: "Sinistre massacre",
-          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Si la VIT d'un ennemi est inférieure à la VIT de cette Championne, ces débuffs seront protégés.`,
           damage: "0.27*HP",
@@ -94,7 +94,7 @@ Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.DEF} de 60 % sur
         {
           img: "assets/sort6.webp",
           name: "Murmure somnolent",
-          description: `Place un débuff ${DEBUFFS.SLEEP} pendant 1 tour et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur tous les ennemis. Si la VIT d'un ennemi est inférieure à la VIT de cette Championne, le débuff ${DEBUFFS.SPD} sera protégé. 
+          description: `Place un débuff ${DEBUFFS.SLEEP} pendant 1 tour et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur tous les ennemis. Si la VIT d'un ennemi est inférieure à la VIT de cette Championne, le débuff ${DEBUFFS.SPD} sera protégé.${RETURN}${RETURN}
 
 Réduit ensuite le Compteur de Tour de tous les ennemis de 25 %.`,
           cooldown: 4,
@@ -111,7 +111,7 @@ Réduit ensuite le Compteur de Tour de tous les ennemis de 25 %.`,
         {
           img: "assets/passif2.webp",
           name: "Ils sont inférieurs [P]",
-          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.LOCK_ACTIVE}.
+          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.LOCK_ACTIVE}.${RETURN}${RETURN}
 
 Lorsque les alliés attaquent, leurs dégâts sont augmentés de 25 % du Compteur de Tour actuel de leur cible. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true

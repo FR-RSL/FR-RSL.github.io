@@ -16,7 +16,7 @@ const championData = {
         {
 			img: "assets/sort2.webp",
 			name: "Éruption de Flammes",
-			description: `Attaque tous les ennemis. A 80 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. A également 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours si au moins deux ennemis sont affligés de débuffs ${DEBUFFS.BURN}. 
+			description: `Attaque tous les ennemis. A 80 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. A également 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours si au moins deux ennemis sont affligés de débuffs ${DEBUFFS.BURN}.${RETURN}${RETURN}
 
 Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.`,
 			damage: "3.7*ATQ",
@@ -46,7 +46,7 @@ Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS
         {
         	img: "assets/passif1.webp",
         	name: "Métaphysique [P]",
-        	description: `Augmente la VIT de ce Champion de 3 et les dégâts infligés de 3 % pour chaque allié et ennemi se trouvant sous débuff ${DEBUFFS.BURN}. 
+        	description: `Augmente la VIT de ce Champion de 3 et les dégâts infligés de 3 % pour chaque allié et ennemi se trouvant sous débuff ${DEBUFFS.BURN}.${RETURN}
 Si Cardiel se trouve dans l'équipe, tous les alliés seront soignés de 3 % de leurs PV MAX grâce aux débuffs ${DEBUFFS.BURN} au lieu de subir des dégâts et de perdre des PV.`,
           	isPassive: true,
         },

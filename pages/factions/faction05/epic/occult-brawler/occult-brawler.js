@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Rasoir Sorcier",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
           damage: "4.5*ATQ",
@@ -23,7 +23,7 @@ Possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendan
         {
           img: "assets/passif1.webp",
           name: "Rituel de Ruine [P]",
-          description: `Place, au début de chaque tour et pendant 4 tours, un débuff de ${DEBUFFS.POISON} de 2,5 % sur ce Champion.
+          description: `Place, au début de chaque tour et pendant 4 tours, un débuff de ${DEBUFFS.POISON} de 2,5 % sur ce Champion.${RETURN}${RETURN}
 
 Possède 70 % de chances de placer, au début de chaque tour et pendant 4 tours, un débuff de ${DEBUFFS.POISON} de 5% sur un ennemi choisi au hasard.`,
           isPassive: true

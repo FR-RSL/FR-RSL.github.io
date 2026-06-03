@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Sage reclus",
-          description: `Soigne tous les alliés de 15 % des PV MAX de ce Champion et remplit de 15 % le Compteur de Tour de tous les alliés. 
+          description: `Soigne tous les alliés de 15 % des PV MAX de ce Champion et remplit de 15 % le Compteur de Tour de tous les alliés.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -22,7 +22,7 @@ Place également un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tou
         {
           img: "assets/sort3.webp",
           name: "Tu as beaucoup à apprendre",
-          description: `Ranime un allié avec 75 % de PV et 50 % de Compteur de Tour. 
+          description: `Ranime un allié avec 75 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur cet allié pendant 2 tours.`,
           cooldown: 6,

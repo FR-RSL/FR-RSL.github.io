@@ -31,9 +31,9 @@ const championData = {
           name: "Mouette rieuse [P]",
           description: `${PASSIVE}
 
-Augmente la DÉF de ce Champion de 10 % chaque fois qu'il contre-attaque. La DÉF se réinitialise chaque fois que ce Champion joue un tour.
+Augmente la DÉF de ce Champion de 10 % chaque fois qu'il contre-attaque. La DÉF se réinitialise chaque fois que ce Champion joue un tour.${RETURN}${RETURN}
 
-Lorsqu'il attaque, convertit la RÉS de ce Champion en PRÉ supplémentaire.
+Lorsqu'il attaque, convertit la RÉS de ce Champion en PRÉ supplémentaire.${RETURN}${RETURN}
 
 ${ACTIVE}
 

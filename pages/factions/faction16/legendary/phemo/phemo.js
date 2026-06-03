@@ -13,13 +13,13 @@ A 80% de chances de reduire le Compteur de Tour de la cible de 15%.`,
           img: "assets/sort2.webp",
           name: "Bon patre",
           description: `${ACTIVE}
-Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.SHIELD} sur tous les allies pendant 2 tours.
+Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.SHIELD} sur tous les allies pendant 2 tours.${RETURN}
 La valeur du ${BUFFS.SHIELD} est equivalent a 300% de la DEF de ce Champion.${RETURN}
-Ces buffs sont proteges s'il y a des allies morts quand cette competence est utilisee.${RETURN}${RETURN}${PASSIVE}
+Ces buffs sont proteges s'il y a des allies morts quand cette competence est utilisee.${RETURN}${RETURN}${PASSIVE}${RETURN}${RETURN}
 
-Active instantanement cette competence des qu'un allie est tue.
+Active instantanement cette competence des qu'un allie est tue.${RETURN}
 L'activation instantane de cette competence ne la placera pas en temps de recharge et fonctionnera meme quand cette competence est en temps de recharge.${RETURN}
-Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.
+Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee.${RETURN}
 Cette competence ne s'activera pas sur les copies en double de ce Champion si ce Champion specifique est mort.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Murmures de Tombe",
-          description: `Attaque un ennemi. Possède 70 % de chances de placer 2 tours de débuff de ${DEBUFFS.DEF} de 60 % si un ou plusieurs alliés sont morts, 2 tours de débuff de ${DEBUFFS.SPD} de 30 % si 2 alliés ou plus sont morts, et 2 tours de débuff de ${DEBUFFS.PRE} de 50 % si 3 alliés ou plus sont morts.
+          description: `Attaque un ennemi. Possède 70 % de chances de placer 2 tours de débuff de ${DEBUFFS.DEF} de 60 % si un ou plusieurs alliés sont morts, 2 tours de débuff de ${DEBUFFS.SPD} de 30 % si 2 alliés ou plus sont morts, et 2 tours de débuff de ${DEBUFFS.PRE} de 50 % si 3 alliés ou plus sont morts.${RETURN}${RETURN}
 
 Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "4.5*DEF",

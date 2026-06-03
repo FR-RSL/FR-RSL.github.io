@@ -13,7 +13,7 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Griffe rayonnante",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs alliés. Soigne également tous les alliés de 4 % de leurs PV MAX pour chaque buff dont la durée a été augmentée.`,
           damage: "3.5*DEF",
@@ -24,9 +24,9 @@ Augmente d'1 tour la durée de tous les buffs alliés. Soigne également tous le
         {
           img: "assets/sort3.webp",
           name: "Rocher de Werinbur",
-          description: `Place un buff ${BUFFS.RES} de 50 %, un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.RES} de 50 %, un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Place pendant 2 tours un buff ${BUFFS.HEALS} de 15 % sur tous les alliés qui ont moins de 50 % de PV.
+Place pendant 2 tours un buff ${BUFFS.HEALS} de 15 % sur tous les alliés qui ont moins de 50 % de PV.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
           cooldown: 5,
@@ -43,9 +43,9 @@ Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
         {
           img: "assets/passif1.webp",
           name: "Chevaliers sauvages [P]",
-          description: `Augmente la RÉS de chaque allié de 10 points pour chaque buff sur tous les alliés.
+          description: `Augmente la RÉS de chaque allié de 10 points pour chaque buff sur tous les alliés.${RETURN}${RETURN}
 
-Les coups critiques infligés par les alliés remplissent les Compteurs de Tour de tous les alliés de 5 %. Se produit une fois par compétence.
+Les coups critiques infligés par les alliés remplissent les Compteurs de Tour de tous les alliés de 5 %. Se produit une fois par compétence.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true
@@ -80,9 +80,9 @@ Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule se
         {
           img: "assets/sort5.webp",
           name: "Brise-palissade",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.RES} de 50 %, un débuff ${DEBUFFS.WEAKEN} de 25 % et un débuff ${DEBUFFS.UNFEEBLE} sur tous les ennemis pendant 2 tours. 
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.RES} de 50 %, un débuff ${DEBUFFS.WEAKEN} de 25 % et un débuff ${DEBUFFS.UNFEEBLE} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Si les ennemis possèdent 50 % de PV ou moins, il est impossible de retirer le débuff ${DEBUFFS.UNFEEBLE}.
+Si les ennemis possèdent 50 % de PV ou moins, il est impossible de retirer le débuff ${DEBUFFS.UNFEEBLE}.${RETURN}${RETURN}
 
 Réduit également le Compteur de Tour de tous les ennemis de 15 %.`,
           damage: "4*DEF",
@@ -109,9 +109,9 @@ Réduit également le Compteur de Tour de tous les ennemis de 15 %.`,
         {
           img: "assets/passif2.webp",
           name: "Coeur-de-lion [P]",
-          description: `Augmente la PRÉ de chaque allié de 10 points pour chaque buff sur tous les ennemis.
+          description: `Augmente la PRÉ de chaque allié de 10 points pour chaque buff sur tous les ennemis.${RETURN}${RETURN}
 
-Chaque coup critique infligé par les alliés réduit les Compteurs de Tour de tous les ennemis de 5 %.
+Chaque coup critique infligé par les alliés réduit les Compteurs de Tour de tous les ennemis de 5 %.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Mortel",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge de la compétence Couper en Deux si cette attaque tue un ennemi.`,
           damage: "4.3*ATQ",
@@ -14,7 +14,7 @@ Réduit d'1 tour le temps de recharge de la compétence Couper en Deux si cette 
         {
           img: "assets/sort2.webp",
           name: "Dissection",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
           damage: "6.7*ATQ",

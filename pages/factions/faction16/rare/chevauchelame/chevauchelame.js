@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Double balafre",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe critique ignorera 5 % de la DÉF de la cible.`,
           damage: "1.75*ATQ",
@@ -13,9 +13,9 @@ Chaque frappe critique ignorera 5 % de la DÉF de la cible.`,
         {
           img: "assets/sort2.webp",
           name: "Plongeon d'épée",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Répétera l'attaque contre tous les autres ennemis si ce Champion se trouve sous buff ${BUFFS.ATK}.`,
           damage: "5.55*ATQ | 3.65*ATQ (Zone)",
@@ -25,7 +25,7 @@ Répétera l'attaque contre tous les autres ennemis si ce Champion se trouve sou
         {
           img: "assets/sort3.webp",
           name: "Barrage empêtrant",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CDAM} de 15 % sur tous les alliés pendant 2 tours. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CDAM} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Chaque coup critique remplit le Compteur de Tour de ce Champion de 5 %.`,
           damage: "3.5*ATQ",

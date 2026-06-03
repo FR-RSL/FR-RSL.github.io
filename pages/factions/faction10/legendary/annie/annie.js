@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poupée Creuse",
-          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur cette Championne pendant 2 tours. Ignorera 25 % de la DÉF de la cible. 
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur cette Championne pendant 2 tours. Ignorera 25 % de la DÉF de la cible.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.
+Place également un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, remplit le Compteur de Tour de cette Championne de 30 %.`,
           damage: "2.7*ATQ",
@@ -25,9 +25,9 @@ Ensuite, remplit le Compteur de Tour de cette Championne de 30 %.`,
         {
           img: "assets/sort3.webp",
           name: "Goûter",
-          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Détruit les PV MAX de la cible de 25 % des dégâts infligés.
+          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Détruit les PV MAX de la cible de 25 % des dégâts infligés.${RETURN}${RETURN}
 
-Répétera l'attaque si la DÉF et les PV MAX de la cible sont plus élevés que ceux de cette Championne.
+Répétera l'attaque si la DÉF et les PV MAX de la cible sont plus élevés que ceux de cette Championne.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours si cette attaque tue un ennemi.`,
           damage: "5.7*ATQ",

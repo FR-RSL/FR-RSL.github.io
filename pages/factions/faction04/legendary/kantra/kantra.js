@@ -21,13 +21,13 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Pas d'Échappatoire [P]",
-          description: `Réduit de 10 la PRÉ de chaque ennemi pour chaque débuff dont ils sont affligés.
+          description: `Réduit de 10 la PRÉ de chaque ennemi pour chaque débuff dont ils sont affligés.${RETURN}${RETURN}
 
-Ce Champion subira 4 % de dégâts en moins pour chaque débuff se trouvant sur l'assaillant.
+Ce Champion subira 4 % de dégâts en moins pour chaque débuff se trouvant sur l'assaillant.${RETURN}${RETURN}
 
-Soigne ce Champion de 1 250 PV à chaque fois qu'un débuff expire sur un ennemi.
+Soigne ce Champion de 1 250 PV à chaque fois qu'un débuff expire sur un ennemi.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff Provocation d'1 tour sur les ennemis affligés de 5 débuffs au début du tour de ce Champion.
+Possède 75 % de chances de placer un débuff Provocation d'1 tour sur les ennemis affligés de 5 débuffs au début du tour de ce Champion.${RETURN}${RETURN}
 
 Ce Champion peut placer des débuffs lors de frappes faibles.`,
           isPassive: true

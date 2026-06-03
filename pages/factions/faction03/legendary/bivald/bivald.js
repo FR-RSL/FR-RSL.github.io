@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Merlin d'épine",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Soigne également l'allié ayant le moins de PV de 15 % des dégâts infligés.
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Soigne également l'allié ayant le moins de PV de 15 % des dégâts infligés.${RETURN}${RETURN}
 
 Le débuff ${DEBUFFS.PROVOKE} peut être placé même si cette attaque consiste en une frappe faible.`,
           damage: "0.25*HP",
@@ -14,7 +14,7 @@ Le débuff ${DEBUFFS.PROVOKE} peut être placé même si cette attaque consiste 
         {
           img: "assets/sort2.webp",
           name: "Sermon de pointes",
-          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours.
+          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Les débuffs ${DEBUFFS.LEECH} et ${DEBUFFS.PROVOKE} peuvent être placés même si cette attaque consiste en une frappe faible.`,
           damage: "0.15*HP",

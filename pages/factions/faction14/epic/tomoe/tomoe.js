@@ -21,9 +21,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Complicité totale",
-          description: `Place un buff ${BUFFS.COUNTER} sur une cible alliée pendant 2 tours. Si l'allié appartient à la Faction du Clan de l'Ombre, place un buff ${BUFFS.COUNTER} pendant 3 tours. 
+          description: `Place un buff ${BUFFS.COUNTER} sur une cible alliée pendant 2 tours. Si l'allié appartient à la Faction du Clan de l'Ombre, place un buff ${BUFFS.COUNTER} pendant 3 tours.${RETURN}${RETURN}
 
-Remplit le Compteur de tour de tous les alliés de 15 % et place un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours. 
+Remplit le Compteur de tour de tous les alliés de 15 % et place un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.CRATE} de 30 % pendant 2 tours sur les alliés de la Faction du Clan de l'Ombre.`,
           cooldown: 6,

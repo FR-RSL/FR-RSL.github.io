@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Maître du Fléau",
-          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.
+          description: `Attaque tous les ennemis. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ce Champion à hauteur de 25 % des dégâts infligés.`,
           damage: "3.6*DEF",

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Salve de Projectiles",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Chaque coup critique remplit de 15 % le Compteur de Tour de ce Champion.`,
           damage: "3.9*ATQ",

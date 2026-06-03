@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Massue Sanglante",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} de 2 tours.`,
           damage: "2.6*DEF+2*ATQ",
@@ -22,7 +22,7 @@ Possède 30 % de chances de placer un débuff ${DEBUFFS.LEECH} de 2 tours.`,
         {
           img: "assets/sort3.webp",
           name: "Noble Défi",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} sur ce Champion.
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} sur ce Champion.${RETURN}
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis.`,
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

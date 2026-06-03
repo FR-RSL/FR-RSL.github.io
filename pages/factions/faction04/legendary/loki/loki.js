@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flammes de malice",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis. 
+Possède 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis.${RETURN}${RETURN}
 
 Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances passent à 50 %.`,
           damage: "3.6*ATQ",
@@ -20,11 +20,11 @@ Si ce Champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances
         {
           img: "assets/sort2.webp",
           name: "Stratagème de trompeur",
-          description: `Sélectionne une cible.
+          description: `Sélectionne une cible.${RETURN}${RETURN}
 
-Si la cible est un ennemi, possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Si le Champion utilise cette compétence alors qu'il bénéficie d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de [Propagation de Débuffs], qui prend 2 débuffs aléatoires à la cible pour les placer sur tous les ennemis. 
+Si la cible est un ennemi, possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Si le Champion utilise cette compétence alors qu'il bénéficie d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de ${PROP_DEBUFF}, qui prend 2 débuffs aléatoires à la cible pour les placer sur tous les ennemis.${RETURN}${RETURN}
 
-Si la cible est un allié ou ce Champion, le soigne de 50 % des PV MAX de ce Champion et lui accorde un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours. Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de [Propagation de Buffs], qui prend un buff aléatoire à la cible et le place sur tous les alliés.`,
+Si la cible est un allié ou ce Champion, le soigne de 50 % des PV MAX de ce Champion et lui accorde un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours. Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, applique également un effet de ${PROP_BUFF}, qui prend un buff aléatoire à la cible et le place sur tous les alliés.`,
           cooldown: 4,
           levelInfo: [
             "Chances de Buff/débuff +10%",
@@ -35,9 +35,9 @@ Si la cible est un allié ou ce Champion, le soigne de 50 % des PV MAX de ce Cha
         {
           img: "assets/sort3.webp",
           name: "Éclair de bandit",
-          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie et 100 % de son Compteur de Tour. Il est impossible de résister à ces effets si ce champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie et 100 % de son Compteur de Tour. Il est impossible de résister à ces effets si ce champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
-Si le Compteur de Tour de la cible n'a pas été volé, remplit au lieu de ça les Compteurs de Tour de tous les alliés de 15 %. 
+Si le Compteur de Tour de la cible n'a pas été volé, remplit au lieu de ça les Compteurs de Tour de tous les alliés de 15 %.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -52,11 +52,11 @@ Place également un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tou
           name: "Pas brumeux [P]",
           description: `${PASSIVE}
 
-Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. 
+Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour lorsque ses PV tombent sous 50 %. 
+Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour lorsque ses PV tombent sous 50 %.${RETURN}${RETURN}
 
-Possède 15 % de chances d'Esquiver une compétence ennemie et tous les effets qui l'accompagnent. Si ce champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances d'Esquiver passent à 30 %. 
+Possède 15 % de chances d'Esquiver une compétence ennemie et tous les effets qui l'accompagnent. Si ce champion est sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, les chances d'Esquiver passent à 30 %.${RETURN}${RETURN}
 
 ${ACTIVE}
 

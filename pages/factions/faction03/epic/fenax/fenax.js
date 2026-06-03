@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Partenaire Austère",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Place un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour si la Compétence ne place pas un débuff ${DEBUFFS.BLOCK_BUFFS}.
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Place un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour si la Compétence ne place pas un débuff ${DEBUFFS.BLOCK_BUFFS}.${RETURN}${RETURN}
 
 [Réduit d'1 tour le compte à rebours de détonation du débuff ${DEBUFFS.BOMB} lorsque Tallia se trouve dans la même équipe.]`,
           damage: "3.5*ATQ",

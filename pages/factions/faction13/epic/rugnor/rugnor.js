@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frénésie Fou d'Or",
-          description: `Sacrifie des PV équivalents à 15 % des PV MAX de ce Champion, puis remplit le Compteur de Tour de ce Champion de 75% et lui accorde un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 3 tours. Il est impossible de retirer le buff ${BUFFS.SHIELD}.
+          description: `Sacrifie des PV équivalents à 15 % des PV MAX de ce Champion, puis remplit le Compteur de Tour de ce Champion de 75% et lui accorde un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 3 tours. Il est impossible de retirer le buff ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Le sacrifice de PV surviendra même si cela tue ce Champion, et il ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
           cooldown: 4,
@@ -22,7 +22,7 @@ Le sacrifice de PV surviendra même si cela tue ce Champion, et il ignorera les 
         {
           img: "assets/sort3.webp",
           name: "Lueur d'Avarice",
-          description: `Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours, puis attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 2 tours.
+          description: `Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours, puis attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 2 tours.${RETURN}${RETURN}
 
 Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours, avant d'attaquer.`,
           damage: "6*ATQ",
@@ -33,7 +33,7 @@ Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.
         {
           img: "assets/passif1.webp",
           name: "Terrible Rancune [P]",
-          description: `Réduit d'1 tour le temps de recharge de la compétence Lueur d'Avarice de ce Champion chaque fois que ce Champion perd 15 % de PV. 
+          description: `Réduit d'1 tour le temps de recharge de la compétence Lueur d'Avarice de ce Champion chaque fois que ce Champion perd 15 % de PV.${RETURN}${RETURN}
 
 La perte de PV est accumulée et suivie au cours de plusieurs tours, attaques ou frappes et n'est pas affectée par les soins ou d'autres augmentations des PV.`,
           isPassive: true

@@ -26,9 +26,9 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Regard de Pierre [P]",
-          description: `Dès que cette Championne est attaquée par un ennemi sous débuff ${DEBUFFS.HEX}, possède 50 % de chances d'appliquer un débuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour. 
+          description: `Dès que cette Championne est attaquée par un ennemi sous débuff ${DEBUFFS.HEX}, possède 50 % de chances d'appliquer un débuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
-Dès qu'un allié est attaqué par un ennemi sous débuff ${DEBUFFS.HEX}, possède 30 % de chances d'appliquer un débuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour. 
+Dès qu'un allié est attaqué par un ennemi sous débuff ${DEBUFFS.HEX}, possède 30 % de chances d'appliquer un débuff ${DEBUFFS.PETRIFICATION} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
 Augmente également la RÉS de cette Championne. La quantité dont elle est augmentée est égale à la quantité de PRÉ que possède cette Championne.`,
           isPassive: true,

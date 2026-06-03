@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Pillard d'Anhelt",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Augmente ensuite d'1 tour la durée de tous les débuffs des ennemis. Réduit également d'1 tour la durée de tous les débuffs des alliés.`,
           damage: "0.29*HP",
@@ -50,9 +50,9 @@ Augmente ensuite d'1 tour la durée de tous les débuffs des ennemis. Réduit é
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-hp.webp",
-  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%
+  description: `Augmente la statistique PV des Alliés lors de toutes les Batailles de 30%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Tribus Ogryn)
+(ne s'applique qu'à la Faction des Tribus Ogryn)${RETURN}${RETURN}
 
 Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%`,
 };

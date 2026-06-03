@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Grêle de rayons de soleil",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Après l'attaque, transfère tous les débuffs de l'allié ayant le plus de débuffs sur la cible. Ne transférera pas les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.PETRIFICATION} et ${DEBUFFS.SHEEP}.`,
           damage: "2.5*ATQ",
@@ -16,9 +16,9 @@ Après l'attaque, transfère tous les débuffs de l'allié ayant le plus de déb
         {
           img: "assets/sort2.webp",
           name: "Attaque étincelante",
-          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible. 
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible.${RETURN}${RETURN}
 
-L'allié ayant les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut et ignorera 35 % de la DÉF de la cible. 
+L'allié ayant les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut et ignorera 35 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Si l'ennemi est tué par l'allié qui rejoint cette attaque, active un effet ${INSTANT} sur cet allié.`,
           damage: "6.5*ATQ",
@@ -29,7 +29,7 @@ Si l'ennemi est tué par l'allié qui rejoint cette attaque, active un effet ${I
         {
           img: "assets/sort3.webp",
           name: "Rayonnement de renouveau",
-          description: `Ranime un allié mort avec 75 % de PV et 75 % de Compteur de Tour. 
+          description: `Ranime un allié mort avec 75 % de PV et 75 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PERFECT_VEIL} sur cet allié pendant 2 tours.`,
           cooldown: 6,

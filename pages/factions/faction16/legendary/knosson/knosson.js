@@ -6,7 +6,7 @@ const championData = {
           name: "Force de Lakon",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 Detruit 10% des PV MAX de la cible. Detruit au lieu de cela 20% des PV MAX de la cible si elle se trouve sous debuff ${DEBUFFS.PROVOKE} (s'accumule jusqu'a 50%).${RETURN}${RETURN}
-Chaque coup augmente le Compteur de Tour de ce Champion de 20%.
+Chaque coup augmente le Compteur de Tour de ce Champion de 20%.${RETURN}
 Augmente au lieu de cela le Compteur de Tour de 40% si la cible est affligee d'un debuff ${DEBUFFS.PROVOKE}.`,
           damage: "0.23*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +15%"],

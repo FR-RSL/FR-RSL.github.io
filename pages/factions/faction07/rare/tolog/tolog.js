@@ -28,7 +28,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Nourrir le troupeau [P]",
-          description: `Dès qu'un buff ${BUFFS.HEALS} de 15 % placé par un allié de la Faction des Marcheurs de Peau expire, est retiré ou est volé, place un buff ${BUFFS.HEALS} de 7,5 % sur cet allié pendant 1 tour. 
+          description: `Dès qu'un buff ${BUFFS.HEALS} de 15 % placé par un allié de la Faction des Marcheurs de Peau expire, est retiré ou est volé, place un buff ${BUFFS.HEALS} de 7,5 % sur cet allié pendant 1 tour.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true

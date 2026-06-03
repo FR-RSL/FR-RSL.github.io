@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Fière allure",
-          description: `Place un buff ${BUFFS.COUNTER} sur une cible alliée pendant 2 tours. 
+          description: `Place un buff ${BUFFS.COUNTER} sur une cible alliée pendant 2 tours.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

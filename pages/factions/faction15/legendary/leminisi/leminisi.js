@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Serres auriques",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Si la cible se trouve sous buff ${BUFFS.SHIELD}, chaque frappe a 25 % de chances de réduire la valeur du ${BUFFS.SHIELD} de 10 %. Ignorera également 50 % de la RÉS de la cible si la cible fait partie de l'Alliance corrompue. Si la cible ne se trouve pas sous débuff ${BUFFS.SHIELD}, chaque frappe ignorera 10 % de la DÉF de la cible.`,
           damage: "2.1*ATQ",
@@ -17,7 +17,7 @@ Si la cible se trouve sous buff ${BUFFS.SHIELD}, chaque frappe a 25 % de chances
         {
           img: "assets/sort2.webp",
           name: "Intercepter la menace",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 100 % de chances de retirer 2 buffs aléatoires à la cible. Ignorera également 50 % de la RÉS de la cible si la cible fait partie de l'Alliance corrompue. Cette compétence inflige une quantité de dégâts supplémentaires équivalente à la valeur du Compteur de Tour actuel de la cible (s'accumule jusqu'à 100 %).`,
           damage: "3*ATQ",
@@ -32,7 +32,7 @@ Chaque frappe a 100 % de chances de retirer 2 buffs aléatoires à la cible. Ign
         {
           img: "assets/sort3.webp",
           name: "Guerrière vénérée",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
 La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours. La seconde frappe a 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Ignorera également 50 % de la RÉS de la cible si la cible fait partie de l'Alliance corrompue.`,
           damage: "2*ATQ",
@@ -47,7 +47,7 @@ La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.HEALS} de 1
         {
           img: "assets/passif1.webp",
           name: "Fléau du mal [P]",
-          description: `Reçoit 15 % de dégâts en moins de la part des ennemis sous débuff ${DEBUFFS.HEALS}. 
+          description: `Reçoit 15 % de dégâts en moins de la part des ennemis sous débuff ${DEBUFFS.HEALS}.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 5 % dès qu'un ennemi reçoit un buff ${BUFFS.SHIELD} ou est soigné.`,
           isPassive: true,

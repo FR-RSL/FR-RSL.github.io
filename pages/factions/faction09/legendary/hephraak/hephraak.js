@@ -40,7 +40,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Prince de fierté [P]",
-          description: `Dès qu'un allié est tué par un ennemi, active instantanément la compétence Mépris d'Héphraak. Ne placera pas cette compétence en temps de recharge. 
+          description: `Dès qu'un allié est tué par un ennemi, active instantanément la compétence Mépris d'Héphraak. Ne placera pas cette compétence en temps de recharge.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
 		  cooldown: 5,

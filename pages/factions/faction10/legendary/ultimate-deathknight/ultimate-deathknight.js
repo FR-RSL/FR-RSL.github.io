@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Mettez-vous à l'aise",
-          description: `Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.
+          description: `Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 La valeur du buff ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.`,
           cooldown: 5,
@@ -31,7 +31,7 @@ La valeur du buff ${BUFFS.SHIELD} est proportionnelle à la DÉF de ce Champion.
         {
           img: "assets/passif1.webp",
           name: "Dédaigne la mort [P]",
-          description: `Dès qu'un allié se fait attaquer, possède 100 % de chances de totalement bloquer un coup, réduisant les dégâts en approche à zéro. Ce Champion recevra ces dégâts à sa place. Tous les débuffs de la frappe seront également redirigés sur ce Champion. Les chances de bloquer une frappe et de rediriger les débuffs sont réduites à 50 % si l'assaillant est un Boss. Ne fonctionne pas si l'attaque sur l'allié était une attaque de zone.
+          description: `Dès qu'un allié se fait attaquer, possède 100 % de chances de totalement bloquer un coup, réduisant les dégâts en approche à zéro. Ce Champion recevra ces dégâts à sa place. Tous les débuffs de la frappe seront également redirigés sur ce Champion. Les chances de bloquer une frappe et de rediriger les débuffs sont réduites à 50 % si l'assaillant est un Boss. Ne fonctionne pas si l'attaque sur l'allié était une attaque de zone.${RETURN}${RETURN}
 
 Dès qu'un ennemi est soigné, soigne ce Champion de 20 % de ce soin.`,
           isPassive: true

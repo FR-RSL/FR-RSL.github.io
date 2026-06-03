@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Faim Tordue [P]",
-          description: `Soigne tous les alliés de 5 % de leurs PV MAX chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} joue un tour. 
+          description: `Soigne tous les alliés de 5 % de leurs PV MAX chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} joue un tour.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de tous les alliés de 10 % chaque fois qu'un ennemi sous débuff ${DEBUFFS.GEL} joue un tour.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Doubles griffes du Lion",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Dégâts augmentés de 20 % si la cible possède moins de 60 % de PV.`,
           damage: "1.65*ATQ",
@@ -14,7 +14,7 @@ Dégâts augmentés de 20 % si la cible possède moins de 60 % de PV.`,
         {
           img: "assets/sort2.webp",
           name: "Rage de la Troupe",
-          description: `Attaque 2 fois tous les ennemis.
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -27,7 +27,7 @@ Ce Champion est immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, $
         {
           img: "assets/sort3.webp",
           name: "Rugissement terrifiant",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour.${RETURN}${RETURN}
 
 Avant d'attaquer, possède 80 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.`,
           damage: "3.85*ATQ",
@@ -40,7 +40,7 @@ Avant d'attaquer, possède 80 % de chances de placer un débuff d'${DEBUFFS.WEAK
           name: "Courage Absolu [P]",
           description: `${ACTIVE}
 
-Place instantanément un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion avant qu'il reçoive un coup fatal.
+Place instantanément un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion avant qu'il reçoive un coup fatal.${RETURN}${RETURN}
 
 ${PASSIVE}
 

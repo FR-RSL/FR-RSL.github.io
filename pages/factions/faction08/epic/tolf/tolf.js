@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Boucher Lame-Main",
-          description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion à hauteur de 30 % des dégâts infligés.
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion à hauteur de 30 % des dégâts infligés.${RETURN}${RETURN}
 
 Cette attaque ne peut pas passer en critique.`,
           damage: "0.21*HP",
@@ -14,9 +14,9 @@ Cette attaque ne peut pas passer en critique.`,
         {
           img: "assets/sort2.webp",
           name: "Étripage",
-          description: `Attaque un ennemi. Lorsqu'il n'attaque pas un Boss, inflige des dégâts purs et réduit les PV de la cible de 50 %. Sinon, inflige des dégâts basés sur les PV MAX de ce Champion et place un débuff ${DEBUFFS.STUN} d'1 tour si la cible possède déjà moins de 50 % de PV.
+          description: `Attaque un ennemi. Lorsqu'il n'attaque pas un Boss, inflige des dégâts purs et réduit les PV de la cible de 50 %. Sinon, inflige des dégâts basés sur les PV MAX de ce Champion et place un débuff ${DEBUFFS.STUN} d'1 tour si la cible possède déjà moins de 50 % de PV.${RETURN}${RETURN}
 
-Inflige des dégâts basés sur les PV MAX de ce Champion lorsqu'il attaque des Boss.
+Inflige des dégâts basés sur les PV MAX de ce Champion lorsqu'il attaque des Boss.${RETURN}${RETURN}
 
 Cette attaque ne peut pas passer en critique.`,
           damage: "0.32*HPMultiplier: 1*HP",

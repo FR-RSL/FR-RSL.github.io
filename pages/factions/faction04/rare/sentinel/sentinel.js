@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Balafre vivifiante",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
           damage: "2.6*ATQ+2*DEF",
@@ -14,7 +14,7 @@ Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DE
         {
           img: "assets/sort2.webp",
           name: "Épées englouties",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Les chances augmentent de 5 % pour chaque ennemi vivant.`,
           damage: "4.4*ATQ",
@@ -25,9 +25,9 @@ A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. L
         {
           img: "assets/passif1.webp",
           name: "Défenseur d'Agaris",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 20 % des dégâts infligés. Soigne au lieu de cela ce Champion de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}. 
+Soigne ce Champion à hauteur de 20 % des dégâts infligés. Soigne au lieu de cela ce Champion de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
 Détruit les PV MAX de la cible de 20 % des dégâts infligés. Détruit au lieu de cela les PV MAX de la cible de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
           cooldown: 2,

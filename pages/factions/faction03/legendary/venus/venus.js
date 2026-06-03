@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Partenaire Pure",
-          description: `Retire tous les buffs de tous les ennemis. Possède 50 % de chances d'accorder un Tour Supplémentaire.
+          description: `Retire tous les buffs de tous les ennemis. Possède 50 % de chances d'accorder un Tour Supplémentaire.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Cupidon se trouve dans la même équipe.]`,
           cooldown: 4,

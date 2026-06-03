@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Plaies Sanglantes",
-          description: `Attaque 2 fois tous les ennemis. Les dégâts augmentent en fonction de la quantité de PV perdue par ce Champion.
+          description: `Attaque 2 fois tous les ennemis. Les dégâts augmentent en fonction de la quantité de PV perdue par ce Champion.${RETURN}${RETURN}
 
 C'est une compétence secrète. Elle ne devient disponible que lorsque ce Champion a perdu 50 % de ses PV.`,
           damage: "(1.9+((1-Current HP %)*100)/30)*ATQ",

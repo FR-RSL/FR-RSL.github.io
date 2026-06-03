@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Entremise de héros",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 2 tours. Inflige le double de dégâts aux ennemis dont l'ATQ est supérieure ou égale à celle de ce Champion. 
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 2 tours. Inflige le double de dégâts aux ennemis dont l'ATQ est supérieure ou égale à celle de ce Champion.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -25,7 +25,7 @@ Dès qu'un ennemi attaque Marichka la Robuste, attaque cet ennemi en utilisant c
         {
           img: "assets/sort3.webp",
           name: "Pression constante",
-          description: `Attaque tous les ennemis. Les dégâts augmentent de 15 % pour chaque buff sur les alliés. Augmente ensuite d'1 tour la durée de tous les buffs des alliés. 
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 15 % pour chaque buff sur les alliés. Augmente ensuite d'1 tour la durée de tous les buffs des alliés.${RETURN}${RETURN}
 
 Soigne ce Champion de 5 % pour chaque buff dont la durée est augmentée. Restaure les PV MAX réduits d'une valeur équivalente à tous les soins en surplus.`,
           damage: "0.26*B_HP",
@@ -38,7 +38,7 @@ Soigne ce Champion de 5 % pour chaque buff dont la durée est augmentée. Restau
           name: "Battant féroce [P]",
           description: `${PASSIVE}
 
-Lorsque ce Champion est attaqué, réduit l'ATQ de l'ennemi de 10 % (jusqu'à 50 % ; 25 % contre les Boss). Ne peut se produire qu'une fois par compétence. La réduction d'ATQ se réinitialise après chaque round.
+Lorsque ce Champion est attaqué, réduit l'ATQ de l'ennemi de 10 % (jusqu'à 50 % ; 25 % contre les Boss). Ne peut se produire qu'une fois par compétence. La réduction d'ATQ se réinitialise après chaque round.${RETURN}${RETURN}
 
 ${ACTIVE}
 
@@ -48,7 +48,7 @@ Place un débuff ${DEBUFFS.FEAR} sur tous les ennemis des Factions Orcs, Tribus 
         {
           img: "assets/passif1.webp",
           name: "Élégance [P]",
-          description: `Tous les dégâts en approche dus à des compétences sont réduits de 50 %. 
+          description: `Tous les dégâts en approche dus à des compétences sont réduits de 50 %.${RETURN}${RETURN}
 
 Lorsque ce Champion est attaqué, ses PV MAX seront réduits de 25 % des dégâts initiaux de l'attaque (avant la réduction des dégâts).`,
           isPassive: true

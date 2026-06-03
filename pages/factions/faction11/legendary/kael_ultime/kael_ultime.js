@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Putrescence",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer trois débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours. Il est impossible de résister à ces débuffs. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer trois débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours. Il est impossible de résister à ces débuffs.${RETURN}${RETURN}
 
 Augmente également d'1 tour la durée de tous les débuffs ennemis. Il est impossible de résister à cet effet.`,
           damage: "4.6*ATQ",
@@ -21,7 +21,7 @@ Augmente également d'1 tour la durée de tous les débuffs ennemis. Il est impo
         {
           img: "assets/sort3.webp",
           name: "Ravages d'arcane",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours avant d'attaquer. 
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours avant d'attaquer.${RETURN}${RETURN}
 
 Possède également 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff. Remplit le Compteur de Tour de ce Champion de 10 % pour chaque débuff ${DEBUFFS.RES} placé par cette compétence.`,
           damage: "4.4*ATQ",

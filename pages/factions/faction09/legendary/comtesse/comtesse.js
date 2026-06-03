@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Dilatation du Temps",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Réduit également d'1 tour les temps de recharge de toutes les compétences alliées, sauf celles de ce Champion.`,
           cooldown: 7,
@@ -45,7 +45,7 @@ Réduit également d'1 tour les temps de recharge de toutes les compétences all
         {
           img: "assets/passif1.webp",
           name: "Damnée [P]",
-          description: `Au début de chaque tour, retire un débuff aléatoire sur Astralon et ce Champion.
+          description: `Au début de chaque tour, retire un débuff aléatoire sur Astralon et ce Champion.${RETURN}${RETURN}
 
 Uniquement disponible lorsque Astralon se trouve dans l'équipe.`,
           isPassive: true,
@@ -54,8 +54,8 @@ Uniquement disponible lorsque Astralon se trouve dans l'équipe.`,
           img: "assets/passif2.webp",
           name: "Malheur Canalise [P]",
           description: `
-            Remplit le Compteur de Tour
-			de ce Champion de 5% chaque fois qu'un allié recoit
+            Remplit le Compteur de Tour${RETURN}
+			de ce Champion de 5% chaque fois qu'un allié recoit${RETURN}
 			un débuff.
           `,
           isPassive: true,

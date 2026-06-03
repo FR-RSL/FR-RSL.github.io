@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Duel Prédestiné",
-          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 25 % de ses PV MAX pendant 2 tours, puis attaque 1 ennemi. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 25 % de ses PV MAX pendant 2 tours, puis attaque 1 ennemi. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Si les PV de la cible sont inférieurs ou égaux à ceux de ce Champion, il est impossible de résister au buff ${DEBUFFS.PROVOKE}.`,
           damage: "0.32*HP",

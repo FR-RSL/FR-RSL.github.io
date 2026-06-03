@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coups effrénés",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, chaque frappe possède 50 % de chances de réduire le Compteur de Tour de la cible de 15 %.
+Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, chaque frappe possède 50 % de chances de réduire le Compteur de Tour de la cible de 15 %.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.ATK} de 50 % pendant 2 tours sur ce Champion si l'attaque passe en critique.`,
           damage: "1.7*ATQ",
@@ -16,9 +16,9 @@ Place un buff ${BUFFS.ATK} de 50 % pendant 2 tours sur ce Champion si l'attaque 
         {
           img: "assets/sort2.webp",
           name: "Renversement",
-          description: `Attaque 3 fois un ennemi.
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe ignorera 25 % de la DÉF de la cible. Ignorera 25 % supplémentaires de la DÉF de la cible si elle se trouve également sous débuff ${DEBUFFS.SPD}.
+Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe ignorera 25 % de la DÉF de la cible. Ignorera 25 % supplémentaires de la DÉF de la cible si elle se trouve également sous débuff ${DEBUFFS.SPD}.${RETURN}${RETURN}
 
 Ignorera également 25 % supplémentaires de la DÉF de la cible si elle fait partie de la Faction des Seigneurs de l'Oriflamme ou des Revenants Chevaliers.`,
           damage: "1.95*ATQ",
@@ -29,11 +29,11 @@ Ignorera également 25 % supplémentaires de la DÉF de la cible si elle fait pa
         {
           img: "assets/sort3.webp",
           name: "Chasseur de Sorcières",
-          description: `Attaque 4 fois de façon aléatoire. 
+          description: `Attaque 4 fois de façon aléatoire.${RETURN}${RETURN}
 
-Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Les Champions des Factions des Seigneurs de l'Oriflamme et des Revenants Chevaliers ne peuvent pas résister à ces débuffs. 
+Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Les Champions des Factions des Seigneurs de l'Oriflamme et des Revenants Chevaliers ne peuvent pas résister à ces débuffs.${RETURN}${RETURN}
 
-Chaque frappe possède également 75 % de chances de voler 25 % du Compteur de Tour de la cible. Si la cible fait partie de la Faction des Seigneurs de l'Oriflamme ou des Revenants Chevaliers, vole au lieu de ça 50 % du Compteur de Tour.
+Chaque frappe possède également 75 % de chances de voler 25 % du Compteur de Tour de la cible. Si la cible fait partie de la Faction des Seigneurs de l'Oriflamme ou des Revenants Chevaliers, vole au lieu de ça 50 % du Compteur de Tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           damage: "1.75*ATQ",
@@ -44,7 +44,7 @@ Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`
         {
           img: "assets/passif1.webp",
           name: "Ruse de Chasseur [P]",
-          description: `Si ce Champion attaque une cible affligée d'un débuff ${DEBUFFS.HEX} et d'un débuff ${DEBUFFS.SPD}, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour. Cet effet ne s'activera pas lors d'une contre-attaque.
+          description: `Si ce Champion attaque une cible affligée d'un débuff ${DEBUFFS.HEX} et d'un débuff ${DEBUFFS.SPD}, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour. Cet effet ne s'activera pas lors d'une contre-attaque.${RETURN}${RETURN}
 
 Augmente également les DÉG C. de ce Champion de 30 % lorsqu'il attaque en bénéficiant d'un buff ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true

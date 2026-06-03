@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fureur de Pleine Lune",
-          description: `Attaque 6 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 3 tours. Soigne ce Champion à hauteur de 25 % des dégâts infligés.
+          description: `Attaque 6 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 3 tours. Soigne ce Champion à hauteur de 25 % des dégâts infligés.${RETURN}
 Soigne, à la place, ce Champion de 50 % des dégâts infligés si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.`,
           damage: "0.97*ATQ",
           cooldown: 5,
@@ -22,7 +22,7 @@ Soigne, à la place, ce Champion de 50 % des dégâts infligés si la cible est 
         {
           img: "assets/sort3.webp",
           name: "Hurlement du Chasseur",
-          description: `Place, pendant 3 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés, puis attaque 3 fois un ennemi.
+          description: `Place, pendant 3 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés, puis attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour. Possède 50 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur 2 ennemis pris au hasard si le débuff ${DEBUFFS.TRUE_FEAR} est placé.`,
           damage: "2.3*ATQ",
@@ -35,7 +35,7 @@ Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR}
           name: "Mode Bestial [P]",
           description: `${PASSIVE}
 
-Dégâts augmentés de 40 % lorsque les PV de ce Champion tombent sous 40 %.
+Dégâts augmentés de 40 % lorsque les PV de ce Champion tombent sous 40 %.${RETURN}${RETURN}
 
 ${ACTIVE}
 

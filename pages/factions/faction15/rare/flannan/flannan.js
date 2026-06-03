@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frapper l'enclume",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
-Chaque frappe possède également 35 % de chances de réduire le Compteur de Tour de la cible de 5 %. 
+Chaque frappe possède également 35 % de chances de réduire le Compteur de Tour de la cible de 5 %.${RETURN}${RETURN}
 
 Si la cible se trouve sous un débuff ${DEBUFFS.SPD} placé par ce Champion, réduit plutôt le Compteur de Tour de la cible de 10 %.`,
           damage: "1.6*DEF",

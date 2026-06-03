@@ -30,9 +30,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Pestilence [P]",
-          description: `Au début de chaque round, place quatre débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours. 
+          description: `Au début de chaque round, place quatre débuffs ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer au début de chaque tour un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 1 tour. 
+Possède 50 % de chances de placer au début de chaque tour un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 Dès qu'un ennemi place un débuff ${DEBUFFS.POISON} sur ce Champion, le retire instantanément et le remplace par un buff ${BUFFS.HEALS} de 15 % pendant 2 tours.`,
           cooldown: 1,

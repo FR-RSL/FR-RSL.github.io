@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Chemins de la nature",
-          description: `Possède 75 % de chances de retirer tous les débuffs sur tous les alliés.
+          description: `Possède 75 % de chances de retirer tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -40,7 +40,7 @@ Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.SPD} de 30 % sur tous le
         {
           img: "assets/passif1.webp",
           name: "Voile de feuilles [P]",
-          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de leur tour. 
+          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de leur tour.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} d'1 tour sur l'allié ayant le moins de PV à la fin du tour de cette Championne.`,
           isPassive: true,

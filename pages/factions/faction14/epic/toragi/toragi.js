@@ -21,9 +21,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Bénédiction de Marais",
-          description: `Place sur tous les alliés sauf ce Champion un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion et un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours.
+          description: `Place sur tous les alliés sauf ce Champion un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion et un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
-Soigne également ce Champion de 25 % de ses PV MAX, puis place un buff ${BUFFS.REFLECT_DAM} de 30 % pendant 3 tours.
+Soigne également ce Champion de 25 % de ses PV MAX, puis place un buff ${BUFFS.REFLECT_DAM} de 30 % pendant 3 tours.${RETURN}${RETURN}
 
 Le soin augmente de 2,5 % pour chaque débuff ${DEBUFFS.POISON} dont est affligée l'équipe ennemie.`,
           cooldown: 5,

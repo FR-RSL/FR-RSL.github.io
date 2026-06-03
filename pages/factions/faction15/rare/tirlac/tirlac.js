@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Diversion",
-          description: `Place un buff ${BUFFS.VEIL} sur tous les alliés sauf ce Champion pendant 1 tour. 
+          description: `Place un buff ${BUFFS.VEIL} sur tous les alliés sauf ce Champion pendant 1 tour.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 2 tours.`,
           cooldown: 6,

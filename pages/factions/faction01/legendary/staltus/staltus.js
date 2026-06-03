@@ -21,9 +21,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Coeur de dragon",
-          description: `Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours, puis attaque tous les ennemis. 
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours, puis attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours sur les ennemis dont l'ATQ est plus élevée que leur DÉF. 
+Possède 75 % de chances de placer un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours sur les ennemis dont l'ATQ est plus élevée que leur DÉF.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les ennemis dont l'ATQ est inférieure ou égale à leur DÉF.`,
           damage: "4*DEF",
@@ -34,7 +34,7 @@ Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 t
         {
           img: "assets/passif1.webp",
           name: "Sans tache [P]",
-          description: `Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.WEAKEN}, ${DEBUFFS.DEF} ou ${DEBUFFS.POISON} sur ce Champion, les renvoie sur l'assaillant. 
+          description: `Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.WEAKEN}, ${DEBUFFS.DEF} ou ${DEBUFFS.POISON} sur ce Champion, les renvoie sur l'assaillant.${RETURN}${RETURN}
 
 Les dégâts augmentent de 5 % pour chaque débuff dont est affligée la cible.`,
           isPassive: true

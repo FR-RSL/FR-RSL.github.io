@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Faucheur d'ivraie",
-          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Soigne tous tes alliés qui ont moins de 50 % de PV de 10 % des PV MAX de ce Champion.`,
           damage: "0.23*HP",
@@ -14,7 +14,7 @@ Soigne tous tes alliés qui ont moins de 50 % de PV de 10 % des PV MAX de ce Cha
         {
           img: "assets/sort2.webp",
           name: "Abatteur des faibles",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
 Chaque frappe ignorera 25 % de la DÉF contre les cibles qui ont moins de 50 % de PV. La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur chaque ennemi pendant 2 tours. La seconde frappe a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours. Chaque frappe ignorera 25 % de la RÉS contre les cibles qui ont moins de 50 % de PV.`,
           damage: "0.15*HP",

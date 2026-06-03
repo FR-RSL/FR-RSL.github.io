@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Éclat de Coeur",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de tous les alliés de 5 %.`,
           damage: "2.77*ATQ",
@@ -16,7 +16,7 @@ Remplit également le Compteur de Tour de tous les alliés de 5 %.`,
         {
           img: "assets/sort2.webp",
           name: "Qu'on leur coupe la tête !",
-          description: `Retire tous les buffs dont disposent les ennemis. Place ensuite un débuff ${DEBUFFS.DEATHBRAND} sur la cible initiale pendant 2 tours. Place également un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. 
+          description: `Retire tous les buffs dont disposent les ennemis. Place ensuite un débuff ${DEBUFFS.DEATHBRAND} sur la cible initiale pendant 2 tours. Place également un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff retiré par cette compétence.`,
           cooldown: 7,
@@ -26,7 +26,7 @@ Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff retiré 
         {
           img: "assets/sort3.webp",
           name: "Ordre de reine",
-          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. 
+          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Réduit de 2 tours le temps de recharge de la compétence Qu'on leur coupe la tête ! de cette Championne si la cible est tuée.`,
           cooldown: 6,
@@ -36,7 +36,7 @@ Réduit de 2 tours le temps de recharge de la compétence Qu'on leur coupe la t�
         {
           img: "assets/passif1.webp",
           name: "Gloire à la Reine [P]",
-          description: `Pour tous les 10 buffs que l'équipe ennemie reçoit, accorde un Tour supplémentaire à cette Championne.
+          description: `Pour tous les 10 buffs que l'équipe ennemie reçoit, accorde un Tour supplémentaire à cette Championne.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           isPassive: true

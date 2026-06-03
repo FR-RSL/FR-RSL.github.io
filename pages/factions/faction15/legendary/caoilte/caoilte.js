@@ -14,7 +14,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Feuilles mortes",
-          description: `Attaque 2 fois un ennemi. Si la cible initiale est tuée, attaque également l'ennemi ayant les PV les plus bas. 
+          description: `Attaque 2 fois un ennemi. Si la cible initiale est tuée, attaque également l'ennemi ayant les PV les plus bas.${RETURN}${RETURN}
 
 Les deux attaques ignoreront 50 % de la DÉF de la cible ainsi que les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
           damage: "2.1*ATQ",
@@ -29,9 +29,9 @@ Les deux attaques ignoreront 50 % de la DÉF de la cible ainsi que les buffs ${B
         {
           img: "assets/sort3.webp",
           name: "Douleur torrentielle",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Chaque frappe critique remplit le Compteur de Tour de ce Champion de 10 % et le soigne de 10 % de ses PV MAX (s'accumule jusqu'à 50 %). 
+Chaque frappe critique remplit le Compteur de Tour de ce Champion de 10 % et le soigne de 10 % de ses PV MAX (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour.`,
           damage: "3.9*ATQ",
@@ -48,7 +48,7 @@ Si cette attaque tue un ennemi, place un buff ${BUFFS.UNKILLABLE} sur ce Champio
           name: "Sentinelle corrompue [P]",
           description: `${PASSIVE}
 
-Dès que le Compteur de Tour de ce Champion ou d'un allié est réduit, augmente les dégâts de la prochaine attaque de ce Champion de 20 % (s'accumule jusqu'à 100 %). 
+Dès que le Compteur de Tour de ce Champion ou d'un allié est réduit, augmente les dégâts de la prochaine attaque de ce Champion de 20 % (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
 
 ${ACTIVE}
 

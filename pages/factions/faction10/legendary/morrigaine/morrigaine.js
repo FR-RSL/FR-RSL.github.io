@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Hurlement de Banshee",
-          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie. 
+          description: `Possède 75 % de chances de voler tous les buffs d'une cible ennemie.${RETURN}${RETURN}
 
 Possède également 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Placera sinon un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours si la cible est un Boss.`,
           cooldown: 4,
@@ -22,7 +22,7 @@ Possède également 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} su
         {
           img: "assets/sort3.webp",
           name: "Vélocimancie",
-          description: `Possède 75 % de chances de réduire de 20 % le Compteur de Tour de tous les ennemis. 
+          description: `Possède 75 % de chances de réduire de 20 % le Compteur de Tour de tous les ennemis.${RETURN}${RETURN}
 
 Remplit le Compteur de tour de tous les alliés de 20 % et place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,

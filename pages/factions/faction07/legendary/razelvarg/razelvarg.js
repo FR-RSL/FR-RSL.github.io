@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Nuit du lapin",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.LEECH} placé par cette compétence.`,
           damage: "ATQ*(1.5+SPD/100)",

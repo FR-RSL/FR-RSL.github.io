@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Chymie",
-          description: `Augmente d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis. Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis. 
+          description: `Augmente d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis. Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} et ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 Place pendant 2 tours un débuff ${DEBUFFS.WEAKEN} de 25 % sur les ennemis qui ne se trouvent pas sous débuff ${DEBUFFS.POISON} ou ${DEBUFFS.BURN}.`,
           cooldown: 5,

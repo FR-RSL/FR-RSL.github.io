@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Isoler",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de voler un buff aléatoire sur la cible. 
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de voler un buff aléatoire sur la cible.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours si la cible ne possède pas de buff après cette attaque.`,
           damage: "1.8*ATQ",

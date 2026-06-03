@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Spores de destinée",
-          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utilisent leurs compétences par défaut. 
+          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utilisent leurs compétences par défaut.${RETURN}${RETURN}
 
 Rétablit également totalement les PV MAX détruits de tous les alliés et place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
@@ -28,7 +28,7 @@ Rétablit également totalement les PV MAX détruits de tous les alliés et plac
         {
           img: "assets/sort3.webp",
           name: "Rythme exaltant",
-          description: `Remplit le Compteur de Tour de tous les alliés de 20 %. 
+          description: `Remplit le Compteur de Tour de tous les alliés de 20 %.${RETURN}${RETURN}
 
 Retire ensuite tous les débuffs de tous les alliés et place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -40,13 +40,13 @@ Retire ensuite tous les débuffs de tous les alliés et place un buff ${BUFFS.SP
         {
           img: "assets/passif1.webp",
           name: "Magie du Grand Chêne [P]",
-          description: `Au début du tour de ce Champion, place un buff sur chaque allié pendant 1 tour, en fonction de son Type :
+          description: `Au début du tour de ce Champion, place un buff sur chaque allié pendant 1 tour, en fonction de son Type :${RETURN}${RETURN}
 
-ATQ : un buff ${BUFFS.ATK} de 50 %
+ATQ : un buff ${BUFFS.ATK} de 50 %${RETURN}${RETURN}
 
-DÉF : un buff ${BUFFS.DEF} de 60 %
+DÉF : un buff ${BUFFS.DEF} de 60 %${RETURN}${RETURN}
 
-Soutien : un buff ${BUFFS.PRE} de 50 %
+Soutien : un buff ${BUFFS.PRE} de 50 %${RETURN}${RETURN}
 
 PV : un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de l'allié.`,
           cooldown: 1,

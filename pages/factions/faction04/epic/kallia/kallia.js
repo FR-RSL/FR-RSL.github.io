@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Marteau Surchauffé",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.${RETURN}${RETURN}
 
 [Soigne ce Champion de 20 % des dégâts infligés lorsque Atur se trouve dans la même équipe.]`,
           damage: "3.2*ATQ",
@@ -14,7 +14,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Malédiction de Nullité",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.${RETURN}${RETURN}
 
 [Soigne ce Champion de 10 % des dégâts infligés lorsque Atur se trouve dans la même équipe.]`,
           damage: "4*ATQ",
@@ -25,7 +25,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tempête de Flammes",
-          description: `Attaque 3 fois au hasard. Chaque frappe place un débuff ${DEBUFFS.BURN} pendant 2 tours.
+          description: `Attaque 3 fois au hasard. Chaque frappe place un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
  
 [Soigne ce Champion de 15 % des dégâts infligés lorsque Atur se trouve dans la même équipe.]`,
           damage: "2*ATQ",

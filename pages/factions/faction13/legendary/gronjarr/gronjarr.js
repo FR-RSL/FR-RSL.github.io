@@ -32,7 +32,7 @@ const championData = {
           name: "Gardien de flamme [P]",
           description: `${PASSIVE}
 
-Ce Champion ne recevra aucun dégât des débuffs ${DEBUFFS.BURN}. Au contraire, les débuffs ${DEBUFFS.BURN} soigneront ce Champion de 5 % des PV MAX chaque fois que le débuff s'active. 
+Ce Champion ne recevra aucun dégât des débuffs ${DEBUFFS.BURN}. Au contraire, les débuffs ${DEBUFFS.BURN} soigneront ce Champion de 5 % des PV MAX chaque fois que le débuff s'active.${RETURN}${RETURN}
 
 ${ACTIVE}
 

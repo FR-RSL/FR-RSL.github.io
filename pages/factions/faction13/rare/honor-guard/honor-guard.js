@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sonneur de Cloches",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours si la cible ne possède aucun buff actif.`,
           damage: "3.12*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
@@ -13,7 +13,7 @@ Possède 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 
         {
           img: "assets/sort2.webp",
           name: "Transfert de Destin",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de voler 2 buffs aléatoires à la cible.`,
           damage: "5.25*DEF",
@@ -24,7 +24,7 @@ Possède 50 % de chances de voler 2 buffs aléatoires à la cible.`,
         {
           img: "assets/sort3.webp",
           name: "Chaînes Astrales",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "5.1*DEF",

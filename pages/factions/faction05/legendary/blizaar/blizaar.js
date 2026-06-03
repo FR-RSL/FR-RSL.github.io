@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cryothérapie",
-          description: `Retire les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE} et ${DEBUFFS.PETRIFICATION} sur tous les alliés. 
+          description: `Retire les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE} et ${DEBUFFS.PETRIFICATION} sur tous les alliés.${RETURN}${RETURN}
 
-Ensuite, place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. 
+Ensuite, place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,
@@ -24,7 +24,7 @@ Place également un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf
         {
           img: "assets/sort3.webp",
           name: "Blizzard de pics",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
 
 Possède également 75 % de chances de réduire le Compteur de Tour de tous les ennemis de 30 %.`,
           damage: "4.3*DEF",
@@ -37,7 +37,7 @@ Possède également 75 % de chances de réduire le Compteur de Tour de tous les 
           name: "Abominable ogryneige [P]",
           description: `${PASSIVE}
 
-Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.GEL} sur ce Champion, le transfère instantanément de ce Champion sur l'ennemi. 
+Dès qu'un ennemi essaie de placer un débuff ${DEBUFFS.GEL} sur ce Champion, le transfère instantanément de ce Champion sur l'ennemi.${RETURN}${RETURN}
 
 ${ACTIVE}
 

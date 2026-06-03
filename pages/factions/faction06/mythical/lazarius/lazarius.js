@@ -13,7 +13,7 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Nid de vipères",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. Réduit également de 2 tours la durée de tous les buffs sur tous les ennemis. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours. Réduit également de 2 tours la durée de tous les buffs sur tous les ennemis.${RETURN}${RETURN}
 
 Après l'attaque, place un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.`,
           damage: "3.8*ATQ",
@@ -24,7 +24,7 @@ Après l'attaque, place un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis p
         {
           img: "assets/sort3.webp",
           name: "Le regard de la faille",
-          description: `Remplit le Compteur de Tour de tous les alliés de 20 %. Réduit également le Compteur de Tour de tous les ennemis de 20 %. 
+          description: `Remplit le Compteur de Tour de tous les alliés de 20 %. Réduit également le Compteur de Tour de tous les ennemis de 20 %.${RETURN}${RETURN}
 
 Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
@@ -43,7 +43,7 @@ Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.STRENGTHEN} de 25
           name: "Réalité modifiée [P]",
           description: `${PASSIVE}
 
-Au début du tour de ce Champion, lui accorde un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.PRE} de 50 % pendant 2 tours. Ce Champion reçoit également 3 % de dégâts en moins par tranche de 750 ATQ qu'il possède (s'accumule jusqu'à 30 %). 
+Au début du tour de ce Champion, lui accorde un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.PRE} de 50 % pendant 2 tours. Ce Champion reçoit également 3 % de dégâts en moins par tranche de 750 ATQ qu'il possède (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 ${ACTIVE}
 
@@ -73,9 +73,9 @@ ${ACTIVE}
         {
           img: "assets/sort4.webp",
           name: "Trident lumineux",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-La première frappe augmente l'ATQ de ce Champion de 3 % (s'accumule jusqu'à 30 %). La seconde frappe réduit 3 % de l'ATQ ou la DÉF de la cible ou détruit 3 % des PV MAX de la cible, en fonction de son Type (s'accumule jusqu'à 30 %). 
+La première frappe augmente l'ATQ de ce Champion de 3 % (s'accumule jusqu'à 30 %). La seconde frappe réduit 3 % de l'ATQ ou la DÉF de la cible ou détruit 3 % des PV MAX de la cible, en fonction de son Type (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 [Cet effet ne fonctionne pas contre les Champions de Type Soutien]`,
           damage: "2*ATQ",
@@ -85,9 +85,9 @@ La première frappe augmente l'ATQ de ce Champion de 3 % (s'accumule jusqu'à 30
         {
           img: "assets/sort5.webp",
           name: "Flot de destruction",
-          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.DEF}.
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.DEF}.${RETURN}${RETURN}
 
-Avant d'attaquer, retire tous les débuffs sur ce Champion. Augmente les dégâts de cette attaque de 15 % pour chaque débuff retiré. 
+Avant d'attaquer, retire tous les débuffs sur ce Champion. Augmente les dégâts de cette attaque de 15 % pour chaque débuff retiré.${RETURN}${RETURN}
 
 Si aucun débuff n'a été retiré sur ce Champion, augmente les dégâts de cette attaque de 15 % pour chaque allié en vie.`,
           damage: "3.4*ATQ+(3.4*ATQ*0.15*Living Allies)Multiplier: 3.4*ATQ+(3.4*ATQ*0.15*Removed Debuffs)",
@@ -98,7 +98,7 @@ Si aucun débuff n'a été retiré sur ce Champion, augmente les dégâts de cet
         {
           img: "assets/sort6.webp",
           name: "Vulcan de flammes",
-          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}, ainsi que 30 % de la DÉF de la cible.
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}, ainsi que 30 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Avant d'attaquer, vole 50 % du Compteur de Tour de la cible. Il est impossible de résister à cet effet.`,
           damage: "2.5*ATQ",
@@ -118,11 +118,11 @@ Avant d'attaquer, vole 50 % du Compteur de Tour de la cible. Il est impossible d
           name: "Pouvoir écrasant [P]",
           description: `${PASSIVE}
 
-Au début du tour de ce Champion, lui accorde un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % pendant 2 tours. 
+Au début du tour de ce Champion, lui accorde un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 ${ACTIVE}
 
-Dès que ce Champion tue un ennemi, augmente de 2 tours le temps de recharge de toutes les compétences ennemies. 
+Dès que ce Champion tue un ennemi, augmente de 2 tours le temps de recharge de toutes les compétences ennemies.${RETURN}${RETURN}
 
 Si ce Champion tue deux ennemis ou plus en une seule attaque, cet effet ne s'activera qu'une fois. Il est impossible de résister à cet effet.`,
           cooldown: 3,

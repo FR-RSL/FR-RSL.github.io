@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Corne-marteau",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Transfère un débuff aléatoire de ce Champion sur la cible. 
+Transfère un débuff aléatoire de ce Champion sur la cible.${RETURN}${RETURN}
 
 Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
           damage: "0.24*HP",
@@ -16,9 +16,9 @@ Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
         {
           img: "assets/sort2.webp",
           name: "Charge grondante",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis. 
+A 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
 
 Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette compétence.`,
           damage: "0.25*HP",
@@ -29,7 +29,7 @@ Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette com
         {
           img: "assets/sort3.webp",
           name: "Porte-bonheur",
-          description: `Retire 1 débuff aléatoire à tous les alliés. 
+          description: `Retire 1 débuff aléatoire à tous les alliés.${RETURN}${RETURN}
 
 Soigne tous les alliés de 20 % des PV MAX de ce Champion et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

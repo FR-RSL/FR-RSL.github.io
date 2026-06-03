@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Inversion de douleur",
-          description: `Attaque un ennemi. Possède 70 % de chances de transférer un débuff aléatoire de ce Champion sur la cible. 
+          description: `Attaque un ennemi. Possède 70 % de chances de transférer un débuff aléatoire de ce Champion sur la cible.${RETURN}${RETURN}
 
 Soigne également l'allié ayant le moins de PV de 10 % de ses PV MAX.`,
           damage: "3.9*ATQ",
@@ -14,9 +14,9 @@ Soigne également l'allié ayant le moins de PV de 10 % de ses PV MAX.`,
         {
           img: "assets/sort2.webp",
           name: "Déferlement vertébral",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Si 3 ennemis ou moins sont vivants, possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours. 
+Si 3 ennemis ou moins sont vivants, possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 2 tours.${RETURN}${RETURN}
 
 Si 4 ennemis ou plus sont vivants, possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur chaque ennemi pendant 3 tours.`,
           damage: "3*ATQ",

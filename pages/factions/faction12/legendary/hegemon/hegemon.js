@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Poigne Tombale",
-          description: `Attaque 2 fois au hasard.
+          description: `Attaque 2 fois au hasard.${RETURN}${RETURN}
 
 Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "1.7*ATQ",
@@ -14,7 +14,7 @@ Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de
         {
           img: "assets/sort2.webp",
           name: "Froid Engourdissant",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "3.7*ATQ",
@@ -25,7 +25,7 @@ Place un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 50 
         {
           img: "assets/passif1.webp",
           name: "Arrivée Fatidique [P]",
-          description: `Joue toujours en premier lors de chaque round.
+          description: `Joue toujours en premier lors de chaque round.${RETURN}${RETURN}
 
 Si plusieurs Hégémons participent au combat, l'Hégémon ayant la VIT la plus élevée jouera en premier, suivi du deuxième sur la liste et ainsi de suite.`,
           isPassive: true

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Échange tragique",
-          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible. 
+          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible.${RETURN}${RETURN}
 
 Possède également 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.23*PV",
@@ -17,7 +17,7 @@ Possède également 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant
         {
           img: "assets/sort2.webp",
           name: "Calamité aggravée",
-          description: `Attaque tous les ennemis. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs sur tous les ennemis. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs sur tous les ennemis.${RETURN}${RETURN}
 
 Place également un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
           damage: "0.28*PV",
@@ -32,11 +32,11 @@ Place également un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK
         {
           img: "assets/sort3.webp",
           name: "Éclat de puissance",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-La première frappe possède 80 % de chances de retirer tous les buffs de tous les ennemis.
+La première frappe possède 80 % de chances de retirer tous les buffs de tous les ennemis.${RETURN}${RETURN}
 
-La seconde frappe possède 80 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours. 
+La seconde frappe possède 80 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.CDAM} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
           damage: "0.14*PV",
@@ -52,7 +52,7 @@ Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendan
           name: "Déchaîné [P]",
           description: `${PASSIVE}
 
-Ce Champion est immunisé contre les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} et ${DEBUFFS.PETRIFICATION}.
+Ce Champion est immunisé contre les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} et ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 ${ACTIVE}
 

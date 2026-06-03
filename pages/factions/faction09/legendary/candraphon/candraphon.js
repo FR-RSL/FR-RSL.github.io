@@ -4,7 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Punis l'Orgueil",
-			description: `Attaque 1 ennemi.
+			description: `Attaque 1 ennemi.${RETURN}${RETURN}
 
 Place une frappe supplémentaire si la cible possède n'importe quel buff.`,
 			damage: "3*ATQ",
@@ -18,7 +18,7 @@ Place une frappe supplémentaire si la cible possède n'importe quel buff.`,
         {
 			img: "assets/sort2.webp",
 			name: "Allégresse du Boucher",
-			description: `Attaque tous les ennemis.
+			description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Accorde un Tour Supplémentaire et réinitialise le temps de recharge de la Compétence En Chasse si cette attaque tue un ennemi.`,
 			damage: "3.7*ATQ",
@@ -42,9 +42,9 @@ Accorde un Tour Supplémentaire et réinitialise le temps de recharge de la Comp
         	name: "Depuis les Ombres [P]",
         	description: `${PASSIVE}
 
-Les dégâts augmentent de 40 % lorsque ce Champion attaque alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
-Reçoit 40 % de dégâts en moins lorsqu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Augmente également le Compteur de Tour de ce Champion de 15 % chaque fois qu'il reçoit des dégâts alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.
-Ne fonctionne pas si ce Champion est le seul allié vivant de l'équipe.
+Les dégâts augmentent de 40 % lorsque ce Champion attaque alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}
+Reçoit 40 % de dégâts en moins lorsqu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Augmente également le Compteur de Tour de ce Champion de 15 % chaque fois qu'il reçoit des dégâts alors qu'il dispose d'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}
+Ne fonctionne pas si ce Champion est le seul allié vivant de l'équipe.${RETURN}${RETURN}
 
 ${ACTIVE}
 

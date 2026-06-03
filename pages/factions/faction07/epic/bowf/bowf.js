@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame puante",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "0.13*HP",
@@ -14,9 +14,9 @@ Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 
         {
           img: "assets/sort2.webp",
           name: "Lance de pestilence",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours. 
+Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Augmente également la durée de tous les buffs des alliés d'1 tour.`,
           damage: "0.25*HP",
@@ -27,7 +27,7 @@ Augmente également la durée de tous les buffs des alliés d'1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Giclée de soin",
-          description: `Retire 2 débuffs aléatoires sur tous les alliés, puis les soigne de 10 % de leurs PV MAX. 
+          description: `Retire 2 débuffs aléatoires sur tous les alliés, puis les soigne de 10 % de leurs PV MAX.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,

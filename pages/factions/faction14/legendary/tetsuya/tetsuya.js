@@ -4,7 +4,7 @@ const championData = {
     {
       img: "assets/sort1.webp",
       name: "Lacération rapide",
-      description: `Attaque un ennemi. 
+      description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de tous les alliés de 10 % si cette attaque est critique.`,
       damage: "3.2*ATQ",
@@ -16,9 +16,9 @@ Remplit le Compteur de Tour de tous les alliés de 10 % si cette attaque est cri
     {
       img: "assets/sort2.webp",
       name: "Tacticien surnaturel",
-      description: `Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires si le Compteur de Tour de la cible est inférieur à 50 %. 
+      description: `Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires si le Compteur de Tour de la cible est inférieur à 50 %.${RETURN}${RETURN}
 
-Ignorera un pourcentage de la DÉF de la cible équivalent au Compteur de Tour actuel de la cible. 
+Ignorera un pourcentage de la DÉF de la cible équivalent au Compteur de Tour actuel de la cible.${RETURN}${RETURN}
 
 Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
       damage: "2*ATQ",
@@ -33,7 +33,7 @@ Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
     {
       img: "assets/sort3.webp",
       name: "Prémonition décisive",
-      description: `Attaque un ennemi.
+      description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Vole 100 % du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.`,
       damage: "5*ATQ",
@@ -90,8 +90,8 @@ Vole 100 % du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.
 const aura = {
   img: "../../../../../../assets/images/auras/sup-speed.webp",
   description: `
-    Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.<br><br>
-    Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 15%.<br>
+    Augmente la statistique VIT des Alliés lors de toutes les Batailles de 19%.<br><br>${RETURN}
+    Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 15%.<br>${RETURN}
     (ne s'applique qu'a la Faction du Clan de l'Ombre).
   `,
 };

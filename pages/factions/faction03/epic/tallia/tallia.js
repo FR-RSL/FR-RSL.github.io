@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "À la hauteur du Devoir",
-          description: `Place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis.
+          description: `Place un buff ${BUFFS.ATK} de 25 % et un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis.${RETURN}${RETURN}
 
 [Possède 75 % de chances de placer un débuff ${DEBUFFS.BOMB} qui explosera après 3 tours lorsque Fenax se trouve dans la même équipe.]`,
           damage: "3.9*ATQ",

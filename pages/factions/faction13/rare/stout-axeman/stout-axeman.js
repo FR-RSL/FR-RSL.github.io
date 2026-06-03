@@ -12,8 +12,8 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Repousse la Horde",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur ce Champion.
-Possède 85 % de chances de placer, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur un allié pris au hasard.
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur ce Champion.${RETURN}
+Possède 85 % de chances de placer, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 15 % sur un allié pris au hasard.${RETURN}
 Possède également 35 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur deux ennemis pris au hasard.`,
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

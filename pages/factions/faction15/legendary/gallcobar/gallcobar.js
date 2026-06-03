@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Hypertrophie",
-          description: `Retire tous les débuffs sur tous les alliés. Place sur chaque allié un buff ${BUFFS.HEALS} de 15 % pendant 1 tour pour chaque débuff qui lui a été retiré. 
+          description: `Retire tous les débuffs sur tous les alliés. Place sur chaque allié un buff ${BUFFS.HEALS} de 15 % pendant 1 tour pour chaque débuff qui lui a été retiré.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 25 % des PV MAX de ce Champion.`,
           cooldown: 5,
@@ -42,11 +42,11 @@ Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. L
           img: "assets/passif1.webp",
           name: "Chamane des ronces [P]",
           description: `
-            Des qu'un ennemi sous débuff <span class='gbt'>Poison</span>
-            attaque un allié sous buff <span class='gbt'>Soins continus</span>, 
-            active instantanement 1 débuff <span class='gbt'>Poison</span>
-            sur cet ennemi.
-            Active également instantanement 1 buff <span class='gbt'>Soins continus</span>
+            Des qu'un ennemi sous débuff <span class='gbt'>Poison</span>${RETURN}
+            attaque un allié sous buff <span class='gbt'>Soins continus</span>,${RETURN}
+            active instantanement 1 débuff <span class='gbt'>Poison</span>${RETURN}
+            sur cet ennemi.${RETURN}
+            Active également instantanement 1 buff <span class='gbt'>Soins continus</span>${RETURN}
             sur l'allié attaque.
           `,
           isPassive: true,

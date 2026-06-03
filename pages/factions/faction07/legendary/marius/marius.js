@@ -21,9 +21,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tonnerre galopant",
-          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours. 
+          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
 
-Place ensuite un débuff ${DEBUFFS.STUN} d'1 tour sur l'ennemi ayant le Compteur de Tour le plus élevé. 
+Place ensuite un débuff ${DEBUFFS.STUN} d'1 tour sur l'ennemi ayant le Compteur de Tour le plus élevé.${RETURN}${RETURN}
 
 Enfin, accorde un Tour supplémentaire.`,
           cooldown: 6,
@@ -33,7 +33,7 @@ Enfin, accorde un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Chevalier loyal [P]",
-          description: `Ce Champion est immunisé contre les effets de réduction du Compteur de Tour utilisés par les ennemis, ainsi que les débuffs ${DEBUFFS.SPD}. 
+          description: `Ce Champion est immunisé contre les effets de réduction du Compteur de Tour utilisés par les ennemis, ainsi que les débuffs ${DEBUFFS.SPD}.${RETURN}${RETURN}
 
 Dès qu'un ennemi change de Forme ou tente de réduire le Compteur de Tour de ce Champion, contre-attaque en utilisant la compétence par défaut de ce Champion.`,
           isPassive: true

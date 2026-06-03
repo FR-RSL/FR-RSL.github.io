@@ -100,3 +100,7 @@ const PASSIVE = `<span class='gbt'>Effet Passif</span><br><br>`
 const ACTIVE = `<span class='gbt'>Effet Actif</span><br><br>`
 const INSTANT = `<span class='gbt'>Tour instantané</span><br><br>`
 const RETURN = `<br>`
+
+
+const PROP_BUFF = `<span class='gbt'>Propagation de Buffs</span>`
+const PROP_DEBUFF = `<span class='gbt'>Propagation de Débuffs</span>`

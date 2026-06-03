@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hallebarde du Soleil",
-          description: `Attaque un ennemi. Augmente la DÉF de ce Champion de 5 % si cette attaque passe en critique (s'accumule jusqu'à 20 %).
+          description: `Attaque un ennemi. Augmente la DÉF de ce Champion de 5 % si cette attaque passe en critique (s'accumule jusqu'à 20 %).${RETURN}${RETURN}
 
 Soignera également ce Champion de 75 % de sa DÉF après l'attaque si sa DÉF a déjà été augmentée de 20 %.`,
           damage: "3.2*DEF",
@@ -23,7 +23,7 @@ Soignera également ce Champion de 75 % de sa DÉF après l'attaque si sa DÉF a
         {
           img: "assets/sort3.webp",
           name: "Lumière Crue",
-          description: `Transfère tous les débuffs de tous les alliés sur une cible ennemie, puis attaque cet ennemi avec la compétence par défaut.
+          description: `Transfère tous les débuffs de tous les alliés sur une cible ennemie, puis attaque cet ennemi avec la compétence par défaut.${RETURN}${RETURN}
 
 Convertit la RÉS de ce Champion en PRÉ supplémentaire lors de l'utilisation de cette compétence.`,
           cooldown: 5,

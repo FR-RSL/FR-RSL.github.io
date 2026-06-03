@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Brise-cou",
-          description: `Attaque un ennemi. Les dégâts augmentent de 35 % en attaquant sous un buff ${BUFFS.VEIL}. Lors d'une attaque sous buff ${BUFFS.VEIL}, les ennemis tués par cette compétence ne peuvent pas être ranimés.
+          description: `Attaque un ennemi. Les dégâts augmentent de 35 % en attaquant sous un buff ${BUFFS.VEIL}. Lors d'une attaque sous buff ${BUFFS.VEIL}, les ennemis tués par cette compétence ne peuvent pas être ranimés.${RETURN}${RETURN}
 
 Lors d'une attaque sans buff ${BUFFS.VEIL}, vide totalement le Compteur de Tour de la cible et remplit le Compteur de Tour du Champion avec la totalité des pertes de la cible. Contre les Boss, ne peut réduire le Compteur de Tour que jusqu'à 50 %. Cette réduction du Compteur de Tour est irrésistible.`,
           damage: "5.2*ATQ",
@@ -23,7 +23,7 @@ Lors d'une attaque sans buff ${BUFFS.VEIL}, vide totalement le Compteur de Tour 
         {
           img: "assets/passif1.webp",
           name: "Prédateur invis. [P]",
-          description: `Place, au début de chaque round et pendant 1 tour, un buff ${BUFFS.VEIL} sur ce Champion.
+          description: `Place, au début de chaque round et pendant 1 tour, un buff ${BUFFS.VEIL} sur ce Champion.${RETURN}${RETURN}
 
 Place, pour 1 tour, un buff de ${BUFFS.VEIL} sur ce Champion à chaque fois qu'il tue un ennemi.`,
           isPassive: true

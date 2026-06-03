@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Pillage de Vitalité",
-          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 20 %, puis ajoute cette quantité de PV aux PV MAX de ce Champion.
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 20 %, puis ajoute cette quantité de PV aux PV MAX de ce Champion.${RETURN}${RETURN}
 
 [Ne peut pas détruire les PV MAX d'un seul Champion de plus de 60 % lors d'une Bataille. Ne peut pas augmenter les PV MAX de ce Champion de plus de 60 000. Détruit les PV MAX des Boss de 30 % des dégâts infligés. Les PV MAX de ce Champion seront augmentés de 15 000 lorsque cette Compétence est utilisée contre les Boss.]`,
           damage: "3.5*ATQ+0.3*HP",
@@ -32,9 +32,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Oubli de l'Éconduit [P]",
-          description: `Réduira les dégâts des frappes ennemies pour que les dégâts réalisés par une frappe unique ne dépassent pas 50 % des PV MAX de ce Champion. Accorde un Tour Supplémentaire si la réduction des dégâts survient. 
+          description: `Réduira les dégâts des frappes ennemies pour que les dégâts réalisés par une frappe unique ne dépassent pas 50 % des PV MAX de ce Champion. Accorde un Tour Supplémentaire si la réduction des dégâts survient.${RETURN}${RETURN}
 
-[Ne fonctionne pas contre les Boss.] 
+[Ne fonctionne pas contre les Boss.]${RETURN}${RETURN}
 
 Réduit de 15 % les dégâts infligés par les Boss. Réduit de 30 % les dégâts infligés par les Boss si Siphi la Mariée Égarée se trouve dans la même équipe.`,
           isPassive: true

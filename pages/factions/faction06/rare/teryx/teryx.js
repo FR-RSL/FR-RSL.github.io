@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Protéger la Couronnée",
-          description: `Place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 5,

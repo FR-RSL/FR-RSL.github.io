@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Art de furtivité [P]",
-          description: `Au début de chaque tour, place un buff ${BUFFS.PERFECT_VEIL} d'1 tour sur l'allié possédant l'ATQ la plus élevée. 
+          description: `Au début de chaque tour, place un buff ${BUFFS.PERFECT_VEIL} d'1 tour sur l'allié possédant l'ATQ la plus élevée.${RETURN}${RETURN}
 
 Inflige 20 % de dégâts supplémentaires contre les cibles dont la DÉF est inférieure à celle de ce Champion.`,
           isPassive: true

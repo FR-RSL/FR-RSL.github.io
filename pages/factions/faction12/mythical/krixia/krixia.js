@@ -13,7 +13,7 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Lanterne de ruine",
-          description: `Place un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. 
+          description: `Place un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Réduit également le Compteur de Tour de chaque cible de 20 %.`,
           cooldown: 4,
@@ -23,7 +23,7 @@ Réduit également le Compteur de Tour de chaque cible de 20 %.`,
         {
           img: "assets/sort3.webp",
           name: "Apparition mortelle",
-          description: `Attaque tous les ennemis. Retire tous les buffs dont disposent les ennemis.
+          description: `Attaque tous les ennemis. Retire tous les buffs dont disposent les ennemis.${RETURN}
 Augmente également de 3 tours la durée des temps de recharge de toutes les compétences des ennemis.`,
           damage: "4*ATQ",
           cooldown: 5,
@@ -73,7 +73,7 @@ Augmente également de 3 tours la durée des temps de recharge de toutes les com
         {
           img: "assets/sort5.webp",
           name: "Pluie de damnation",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours. 
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, remplit le Compteur de Tour de tous les alliés de 20 %.`,
           damage: "4*ATQ",

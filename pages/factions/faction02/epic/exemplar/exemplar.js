@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Posture Haute",
-          description: `Attaque 2 fois un ennemi. Place un coup supplémentaire si cette attaque passe en critique.
+          description: `Attaque 2 fois un ennemi. Place un coup supplémentaire si cette attaque passe en critique.${RETURN}${RETURN}
 
-Place une des compétences de la cible en recharge complète si la première frappe passe en critique et si la cible se trouve sous débuff ${DEBUFFS.WEAKEN}.
+Place une des compétences de la cible en recharge complète si la première frappe passe en critique et si la cible se trouve sous débuff ${DEBUFFS.WEAKEN}.${RETURN}${RETURN}
 
 Augmente de 2 tours le temps de recharge d'une des compétences de la cible si la première frappe passe en critique et si la cible ne se trouve pas sous débuff ${DEBUFFS.WEAKEN}.`,
           damage: "1.7*ATQ",

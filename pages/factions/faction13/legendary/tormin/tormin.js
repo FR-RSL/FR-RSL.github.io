@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Feu givré",
-          description: `Attaque tous les ennemis. Possède 15 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.
+          description: `Attaque tous les ennemis. Possède 15 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
 
 Active instantanément cette Compétence dès qu'un ennemi sous débuff ${DEBUFFS.GEL} et ${DEBUFFS.BURN} subit des dégâts d'un débuff ${DEBUFFS.BURN}.`,
           damage: "2*DEF",
@@ -14,7 +14,7 @@ Active instantanément cette Compétence dès qu'un ennemi sous débuff ${DEBUFF
         {
           img: "assets/sort2.webp",
           name: "Fracas d'Iceberg",
-          description: `Retire tous les buffs d'un ennemi ciblé, puis attaque 2 fois la cible. Sinon, vole tous les buffs si la cible se trouve sous débuff ${DEBUFFS.GEL}.
+          description: `Retire tous les buffs d'un ennemi ciblé, puis attaque 2 fois la cible. Sinon, vole tous les buffs si la cible se trouve sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.GEL} et ${DEBUFFS.BURN}.`,
           damage: "3*DEF",
@@ -25,9 +25,9 @@ Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.GEL} et ${DEBUFFS.
         {
           img: "assets/sort3.webp",
           name: "Rage du Blizzard",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours sur les ennemis sous débuff ${DEBUFFS.GEL}.
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours sur les ennemis sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
-Possède 60 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur les ennemis ne se trouvant pas sous débuff ${DEBUFFS.GEL}.
+Possède 60 % de chances de placer un débuff ${DEBUFFS.PROVOKE} d'1 tour sur les ennemis ne se trouvant pas sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge d'une Compétence aléatoire sur chaque allié pour chaque ennemi attaqué sous débuffs ${DEBUFFS.GEL} et ${DEBUFFS.BURN}.`,
           damage: "3.8*DEF",
@@ -40,9 +40,9 @@ Réduit d'1 tour le temps de recharge d'une Compétence aléatoire sur chaque al
           name: "Vent Hivernal [P]",
           description: `${PASSIVE}
 
-Possède 20 % de chances de placer un débuff ${DEBUFFS.GEL} sur l'ennemi chaque fois qu'il reçoit un buff ou que son Compteur de Tour est rempli. Les 20 % de chances s'appliquent jusqu'à deux fois par tour ennemi (une fois pour les buffs, une fois pour le remplissage de Compteur de Tour) si un ennemi reçoit plusieurs de ces effets simultanément. 
+Possède 20 % de chances de placer un débuff ${DEBUFFS.GEL} sur l'ennemi chaque fois qu'il reçoit un buff ou que son Compteur de Tour est rempli. Les 20 % de chances s'appliquent jusqu'à deux fois par tour ennemi (une fois pour les buffs, une fois pour le remplissage de Compteur de Tour) si un ennemi reçoit plusieurs de ces effets simultanément.${RETURN}${RETURN}
 
-Ne fonctionne pas avec les effets des Jeux d'Artéfacts, les effets de remplissage du Compteur de Tour des Maîtrises, les soins, ou les buffs ou effets prenant place au début d'un round.
+Ne fonctionne pas avec les effets des Jeux d'Artéfacts, les effets de remplissage du Compteur de Tour des Maîtrises, les soins, ou les buffs ou effets prenant place au début d'un round.${RETURN}${RETURN}
 
 ${ACTIVE}
 

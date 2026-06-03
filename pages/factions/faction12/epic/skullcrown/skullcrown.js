@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "D'outre-tombe [P]",
-          description: `Ranime cette Championne avec 30 % de PV. 
+          description: `Ranime cette Championne avec 30 % de PV.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Sinesha se trouve dans la même équipe.]`,
           cooldown: 8,

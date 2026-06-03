@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tempête de Bataille",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Place également un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours si Brago d'Acier se trouve sous buff ${BUFFS.DEF}.`,
           damage: "3.7*DEF",

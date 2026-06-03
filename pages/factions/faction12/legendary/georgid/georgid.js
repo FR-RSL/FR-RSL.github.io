@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Marche d'étain",
-          description: `Attaque tous les ennemis. Réduit le Compteur de Tour de toutes les cibles de 30 %. Il est impossible de résister à cet effet. 
+          description: `Attaque tous les ennemis. Réduit le Compteur de Tour de toutes les cibles de 30 %. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
           damage: "4*ATQ",
@@ -23,7 +23,7 @@ Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaqu
         {
           img: "assets/sort3.webp",
           name: "Ballet mortel",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.STONE_SKIN}, ${BUFFS.UNKILLABLE}, ${BUFFS.BLOCK_DAMAGE}, ${BUFFS.DEF}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}. 
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.STONE_SKIN}, ${BUFFS.UNKILLABLE}, ${BUFFS.BLOCK_DAMAGE}, ${BUFFS.DEF}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "5.7*ATQ",

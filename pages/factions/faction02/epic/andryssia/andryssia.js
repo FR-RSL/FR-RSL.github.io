@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Justice pointue",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs ${BUFFS.DEF} sur les alliés.`,
           damage: "3.7*DEF",
@@ -32,7 +32,7 @@ Augmente d'1 tour la durée de tous les buffs ${BUFFS.DEF} sur les alliés.`,
         {
           img: "assets/passif1.webp",
           name: "Coeur-fort [P]",
-          description: `Au début de chaque tour, place sur l'allié ayant le moins de PV MAX un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours. Ne sera pas placé sur cette Championne.
+          description: `Au début de chaque tour, place sur l'allié ayant le moins de PV MAX un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours. Ne sera pas placé sur cette Championne.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.DEF} de 60 % sur cette Championne pendant 2 tours.`,
           cooldown: 5,

@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Dynamo Fétide [P]",
-          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés à hauteur de 50 % des dégâts reçus. 
+          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés à hauteur de 50 % des dégâts reçus.${RETURN}${RETURN}
 
 [Soigne de 25 % des dégâts reçus seulement lors des attaques de Boss. Ce Champion ne reçoit que la moitié des soins reçus par les autres alliés.]`,
           isPassive: true
@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Présence Étrange [P]",
-          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.LEECH} de 2 tours sur l'assaillant.
+          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.LEECH} de 2 tours sur l'assaillant.${RETURN}${RETURN}
 
 Si l'assaillant est affligé d'un débuff ${DEBUFFS.PROVOKE} placé par ce Champion, possède également 70 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire de l'assaillant. Ne se produit qu'une fois par attaque.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

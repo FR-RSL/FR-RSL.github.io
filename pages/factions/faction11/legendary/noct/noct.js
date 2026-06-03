@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Trépas du rêveur",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour et deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour et deux débuffs ${DEBUFFS.POISON} de 5 % pendant 2 tours.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -30,7 +30,7 @@ Place deux débuffs ${DEBUFFS.POISON} de 5 % supplémentaires pendant 2 tours d�
         {
           img: "assets/sort4.webp",
           name: "Somnolence [P]",
-          description: `Soigne ce Champion de 3 % de ses PV MAX, et tous les alliés sauf ce Champion de 1 % des PV MAX de ce Champion, chaque fois qu'un débuff ${DEBUFFS.POISON} se déclenche sur un ennemi. 
+          description: `Soigne ce Champion de 3 % de ses PV MAX, et tous les alliés sauf ce Champion de 1 % des PV MAX de ce Champion, chaque fois qu'un débuff ${DEBUFFS.POISON} se déclenche sur un ennemi.${RETURN}${RETURN}
 
 Lorsqu'un allié est attaqué alors qu'il se trouve sous buff ${BUFFS.ALLY_PROTECT}, possède 40 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur l'assaillant pendant 1 tour.`,
           isPassive: true,

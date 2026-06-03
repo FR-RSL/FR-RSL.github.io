@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Flammes Internes",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Soigne tous les alliés de 15 % de leurs PV MAX si le débuff ${DEBUFFS.BURN} est placé. Remplit le Compteur de Tour de tous les alliés de 15 % si le débuff ${DEBUFFS.BURN} n'est pas placé.`,
           damage: "5*ATQ",

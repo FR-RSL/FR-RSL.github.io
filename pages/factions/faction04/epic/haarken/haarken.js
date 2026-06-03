@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Panique Contagieuse",
-          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuff], prenant 2 débuffs aléatoires sur la cible pour les placer sur tous les ennemis. Prolonge également de 2 tours la durée de ces débuffs.
+          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuff], prenant 2 débuffs aléatoires sur la cible pour les placer sur tous les ennemis. Prolonge également de 2 tours la durée de ces débuffs.${RETURN}
 Ne prolongera pas la durée des débuffs sur la cible initiale.`,
           damage: "5.5*ATQ",
           cooldown: 5,

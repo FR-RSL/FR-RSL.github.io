@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Déclencher la Chasse",
-          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.HEX}.
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
 Ignorera 25 % de la DÉF de chaque cible s'il y a 4 ennemis ou plus sous débuffs ${DEBUFFS.HEX}.`,
           damage: "3*ATQ",
@@ -21,7 +21,7 @@ Ignorera 25 % de la DÉF de chaque cible s'il y a 4 ennemis ou plus sous débuff
         {
           img: "assets/sort3.webp",
           name: "Traquer la Proie",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis place un débuff ${DEBUFFS.HEX} sur tous les ennemis pendant 2 tours.
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis place un débuff ${DEBUFFS.HEX} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours, puis remplit son Compteur de Tour de 50 %.`,
           cooldown: 6,
@@ -30,9 +30,9 @@ Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours, 
         {
           img: "assets/sort4.webp",
           name: "Gibier Marqué",
-          description: `Réduit de 5 % la VIT des ennemis sous débuffs ${DEBUFFS.HEX} et réduit de 10 % la RÉS de ces ennemis.
+          description: `Réduit de 5 % la VIT des ennemis sous débuffs ${DEBUFFS.HEX} et réduit de 10 % la RÉS de ces ennemis.${RETURN}${RETURN}
 
-Augmente également de 10 % les dégâts reçus par les ennemis sous débuffs ${DEBUFFS.HEX} et réduit de 30 % la valeur des soins qu'ils reçoivent.
+Augmente également de 10 % les dégâts reçus par les ennemis sous débuffs ${DEBUFFS.HEX} et réduit de 30 % la valeur des soins qu'ils reçoivent.${RETURN}${RETURN}
 
 Ces effets ne s'accumulent pas si plusieurs Ruel se trouvent dans la même équipe.`,
           isPassive: true,

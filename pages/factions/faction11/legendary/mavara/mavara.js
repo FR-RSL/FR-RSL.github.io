@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Frappe a mon signal",
           description: `Attaque un ennemi.${RETURN}${RETURN}
-Place un buff ${BUFFS.FERVEUR} de 2 tours sur un allie aleatoire qui n'est pas cette Championne. Si l'allie selectionne aleatoirement se trouve deja sous buff ${BUFFS.FERVEUR}, le place sur un autre allie selectionne aleatoirement.${RETURN}${RETURN}${PASSIVE}
+Place un buff ${BUFFS.FERVEUR} de 2 tours sur un allie aleatoire qui n'est pas cette Championne. Si l'allie selectionne aleatoirement se trouve deja sous buff ${BUFFS.FERVEUR}, le place sur un autre allie selectionne aleatoirement.${RETURN}${RETURN}${PASSIVE}${RETURN}
 Les allies sous buff ${BUFFS.FERVEUR} ont 50% de chances de rejoindre les attaques des autres allies sous buff ${BUFFS.FERVEUR}. Cette Championne ne rejoindra aucune attaque. Si plusieurs Champions de l'equipe disposent de cette Competence, une seule sera activee. Cette competence ne s'activera pas sur les copies en double de cette Championne si cette Championne specifique est morte.`,
           damage: "5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],

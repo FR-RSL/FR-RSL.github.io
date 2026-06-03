@@ -22,7 +22,7 @@ const championData = {
           name: "Bénédiction Runique",
           description: `${ACTIVE}
 
-Place un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion sur tous les alliés pendant 3 tours. 
+Place un buff ${BUFFS.SHIELD} équivalent à 15 % des PV MAX de ce Champion sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
 
 ${PASSIVE}
 

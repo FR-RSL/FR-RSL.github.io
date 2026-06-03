@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tactique de chasseur",
-          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de réduire le Compteur de Tour de la cible de 50 %. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de réduire le Compteur de Tour de la cible de 50 %. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           damage: "2.8*ATQ",

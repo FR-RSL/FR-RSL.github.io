@@ -32,13 +32,13 @@ const championData = {
           name: "Tisse-gel [P]",
           description: `${PASSIVE}
 
-Immunisé contre les débuffs ${DEBUFFS.GEL}.
+Immunisé contre les débuffs ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 25 % chaque fois qu'un allié reçoit un débuff ${DEBUFFS.GEL}.
+Remplit le Compteur de Tour de ce Champion de 25 % chaque fois qu'un allié reçoit un débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 ${ACTIVE}
 
-À la fin de chaque tour ennemi ou allié, retire tous les débuffs ${DEBUFFS.GEL} se trouvant sur les alliés. 
+À la fin de chaque tour ennemi ou allié, retire tous les débuffs ${DEBUFFS.GEL} se trouvant sur les alliés.${RETURN}${RETURN}
 
 Si plusieurs Champions dans l'équipe disposent de cette Compétence, une seule retirera les débuffs ${DEBUFFS.GEL} se trouvant sur les alliés.`,
           cooldown: 5,

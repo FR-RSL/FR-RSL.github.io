@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Zèle brûlant",
-          description: `Attaque un ennemi. Place une frappe supplémentaire si la cible est affligée de débuffs. 
+          description: `Attaque un ennemi. Place une frappe supplémentaire si la cible est affligée de débuffs.${RETURN}${RETURN}
 
 A 25 % de chances d'accorder un Tour supplémentaire.`,
           damage: "4*DEF+1.2*ATQ",
@@ -15,11 +15,11 @@ A 25 % de chances d'accorder un Tour supplémentaire.`,
         {
           img: "assets/sort2.webp",
           name: "Conflagration fidèle",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 25 % de la DÉF de la cible. Chaque frappe ignorera au lieu de ça 50 % de la DÉF de la cible si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}. 
+Chaque frappe ignorera 25 % de la DÉF de la cible. Chaque frappe ignorera au lieu de ça 50 % de la DÉF de la cible si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
-Chaque frappe détruit également la DÉF et la RÉS de la cible de 3 % (s'accumule jusqu'à 30 %). 
+Chaque frappe détruit également la DÉF et la RÉS de la cible de 3 % (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours si la cible est tuée par cette compétence. Il est impossible de résister à ce débuff.`,
           damage: "1.8*DEF+1.2*ATQ",
@@ -30,9 +30,9 @@ Place un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours si la cibl
         {
           img: "assets/sort3.webp",
           name: "Pyro Maxima",
-          description: `Attaque tous les ennemis. Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. 
+          description: `Attaque tous les ennemis. Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}.${RETURN}${RETURN}
 
-Active instantanément les débuffs ${DEBUFFS.BURN} sur tous les ennemis. 
+Active instantanément les débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_REA} sur les cibles tuées lorsqu'elles sont affligées d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.`,
           damage: "4*DEF+1.2*ATQ",
@@ -50,7 +50,7 @@ Place un débuff ${DEBUFFS.BLOCK_REA} sur les cibles tuées lorsqu'elles sont af
         {
           img: "assets/passif1.webp",
           name: "Maîtresse élémentaire [P]",
-          description: `Cette Championne inflige 25 % de dégâts en plus aux ennemis affligés d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}. Cette Championne inflige 100 % de dégâts en plus contre les ennemis affligés simultanément de débuffs ${DEBUFFS.BURN} et ${DEBUFFS.GEL}. 
+          description: `Cette Championne inflige 25 % de dégâts en plus aux ennemis affligés d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}. Cette Championne inflige 100 % de dégâts en plus contre les ennemis affligés simultanément de débuffs ${DEBUFFS.BURN} et ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 Cette Championne ignore la réduction des dégâts accordée par les débuffs ${DEBUFFS.GEL}.`,
           isPassive: true
@@ -77,9 +77,9 @@ Cette Championne ignore la réduction des dégâts accordée par les débuffs ${
         {
           img: "assets/sort4.webp",
           name: "Découpe glaciale",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur un allié aléatoire, sauf cette Championne, pendant 2 tours. Si l'allié se trouve déjà sous buff ${BUFFS.ALLY_PROTECT}, le place sur un autre allié choisi de manière aléatoire. 
+Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur un allié aléatoire, sauf cette Championne, pendant 2 tours. Si l'allié se trouve déjà sous buff ${BUFFS.ALLY_PROTECT}, le place sur un autre allié choisi de manière aléatoire.${RETURN}${RETURN}
 
 Soigne cette Championne et les alliés sous buffs ${BUFFS.ALLY_PROTECT}. La valeur du soin est proportionnelle à la DÉF de cette Championne.`,
           damage: "3*DEF+0.8*ATQ",
@@ -89,7 +89,7 @@ Soigne cette Championne et les alliés sous buffs ${BUFFS.ALLY_PROTECT}. La vale
         {
           img: "assets/sort5.webp",
           name: "Vrilles gelées",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.TRAP} de 100 % sur tous les ennemis pendant 2 tours. Les ennemis affligés d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL} ne peuvent pas résister à ce débuff.`,
           cooldown: 4,
@@ -99,7 +99,7 @@ Place un débuff ${DEBUFFS.TRAP} de 100 % sur tous les ennemis pendant 2 tours. 
         {
           img: "assets/sort6.webp",
           name: "Tempête de lame-glace",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place une pile d'${BUFFS.INTERCEPT} sur tous les alliés. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place une pile d'${BUFFS.INTERCEPT} sur tous les alliés.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff.`,
           damage: "3*DEF+0.8*ATQ",
@@ -119,7 +119,7 @@ Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impo
           name: "Réveil cryomantique [P]",
           description: `${PASSIVE}
 
-Les alliés affligés d'un débuff ${DEBUFFS.GEL} reçoivent 90 % de dégâts en moins. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.
+Les alliés affligés d'un débuff ${DEBUFFS.GEL} reçoivent 90 % de dégâts en moins. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.${RETURN}${RETURN}
 
 ${ACTIVE}
 

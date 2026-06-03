@@ -13,9 +13,9 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Croissant écarlate",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Ignorera 15 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}. 
+Ignorera 15 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
           damage: "2.8*ATQ",
@@ -26,7 +26,7 @@ Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
         {
           img: "assets/sort3.webp",
           name: "Cadeau de clair de lune",
-          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 3 tours. 
+          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 3 tours.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire.`,
           cooldown: 6,
@@ -68,7 +68,7 @@ Accorde un Tour supplémentaire.`,
         {
           img: "assets/sort4.webp",
           name: "Esprit de la meute",
-          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques. 
+          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques.${RETURN}${RETURN}
 
 Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.TRUE_FEAR}.`,
           damage: "2.5*ATQ",
@@ -78,7 +78,7 @@ Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.TRUE_FE
         {
           img: "assets/sort5.webp",
           name: "Déchiquette-vie",
-          description: `Attaque 2 fois tous les ennemis. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours. 
+          description: `Attaque 2 fois tous les ennemis. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.${RETURN}${RETURN}
 
 Cette attaque ne déclenchera pas de contre-attaques. Ignorera également les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
           damage: "2.15*ATQ",

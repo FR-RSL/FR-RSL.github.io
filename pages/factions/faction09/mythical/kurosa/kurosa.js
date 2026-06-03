@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Déferlement de chaos",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ de cette Championne.`,
           damage: "3*ATQ",
@@ -15,9 +15,9 @@ Soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ de cette
         {
           img: "assets/sort2.webp",
           name: "Tout pour Siroth",
-          description: `Retire tous les débuffs sur tous les alliés.
+          description: `Retire tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
-Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours.
+Ensuite, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours.${RETURN}
 La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de cette Championne.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
@@ -26,7 +26,7 @@ La valeur du ${BUFFS.SHIELD} est proportionnelle à l'ATQ de cette Championne.`,
         {
           img: "assets/sort3.webp",
           name: "Propagation",
-          description: `Place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.FORTIFY} de 25 % sur cette Championne pendant 2 tours.
+          description: `Place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.FORTIFY} de 25 % sur cette Championne pendant 2 tours.${RETURN}
 Place également un buff ${BUFFS.UNKILLABLE} sur tous les alliés sauf cette Championne pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
@@ -44,7 +44,7 @@ Place également un buff ${BUFFS.UNKILLABLE} sur tous les alliés sauf cette Cha
           name: "Collectrice de pions [P]",
           description: `${PASSIVE}
 
-Reçoit 15 % de dégâts en moins pour chaque allié vivant.
+Reçoit 15 % de dégâts en moins pour chaque allié vivant.${RETURN}${RETURN}
 
 ${ACTIVE}
 
@@ -74,7 +74,7 @@ Fait instantanément passer cette Championne à sa Forme alternative dès que so
         {
           img: "assets/sort4.webp",
           name: "Destructrice de tout",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, inflige des dégâts bruts à tous les autres ennemis. Si les autres ennemis ne sont pas des Boss ou des sbires, la quantité de dégâts bruts infligés est égale à 30 % des PV MAX de la cible initiale. Si les autres ennemis sont des Boss ou des sbires, les dégâts bruts infligés sont égaux à 10 % de leurs PV MAX. Cette attaque ne peut pas être critique.`,
           damage: "1.3*ATQMultiplier: Boss/Minion: 0.1*Enemy Max HP or Champion: 0.3 * Target Max HP",
@@ -93,9 +93,9 @@ Si cette attaque tue un ennemi, inflige des dégâts bruts à tous les autres en
         {
           img: "assets/sort6.webp",
           name: "Agente impitoyable",
-          description: `Place un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 3 tours. 
+          description: `Place un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 3 tours.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Les cibles dont l'ATQ est inférieure ou égale à l'ATQ de cette Championne ne peuvent pas résister à cet effet. 
+Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Les cibles dont l'ATQ est inférieure ou égale à l'ATQ de cette Championne ne peuvent pas résister à cet effet.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire.`,
           cooldown: 5,

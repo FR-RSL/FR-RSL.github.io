@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tempête de dagues",
-          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.CRATE} de 15 % sur ce Champion pendant 2 tours. 
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.CRATE} de 15 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 La première frappe possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours. La seconde frappe possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
           damage: "2.9*ATQ",
@@ -23,7 +23,7 @@ La première frappe possède 50 % de chances de placer un débuff ${DEBUFFS.DEF}
         {
           img: "assets/passif1.webp",
           name: "Tueur implacable [P]",
-          description: `Chaque frappe de ce Champion inflige 5 % de dégâts supplémentaires si la cible se trouve sous débuffs ${DEBUFFS.DEF} ou ${DEBUFFS.WEAKEN}. 
+          description: `Chaque frappe de ce Champion inflige 5 % de dégâts supplémentaires si la cible se trouve sous débuffs ${DEBUFFS.DEF} ou ${DEBUFFS.WEAKEN}.${RETURN}${RETURN}
 
 Inflige 10 % de dégâts supplémentaires si la cible se trouve à la fois sous débuffs ${DEBUFFS.DEF} et ${DEBUFFS.WEAKEN}.`,
           isPassive: true

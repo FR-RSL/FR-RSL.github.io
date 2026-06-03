@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Mené à l'Abattoir",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 2 tours.${RETURN}${RETURN}
 
 Soigne également ce Champion à hauteur de 20 % de ses PV MAX.`,
           damage: "6.4*DEF",

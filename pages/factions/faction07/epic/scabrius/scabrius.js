@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Méchanceté vicieuse",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours si le débuff ${DEBUFFS.WEAKEN} est placé.`,
           damage: "6*ATQ",

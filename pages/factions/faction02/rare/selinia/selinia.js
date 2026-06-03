@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèche crève-âme",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Soigne cette Championne à hauteur de 10 % de ses PV MAX. Lorsqu'elle attaque une cible sous débuff ${DEBUFFS.BURN} soigne plutôt cette Championne de 20 % de ses PV MAX.`,
           damage: "3.25*ATQ",
@@ -23,7 +23,7 @@ Soigne cette Championne à hauteur de 10 % de ses PV MAX. Lorsqu'elle attaque un
         {
           img: "assets/sort3.webp",
           name: "Baliste lunaire",
-          description: `Attaque 3 fois de façon aléatoire. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur cette Championne pendant 2 tours. 
+          description: `Attaque 3 fois de façon aléatoire. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "1.7*ATQ",

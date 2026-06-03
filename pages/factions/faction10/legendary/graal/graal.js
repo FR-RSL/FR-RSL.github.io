@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fléau de Fragilité",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.
+Possède 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.`,
           damage: "3.7*ATQ",
@@ -25,7 +25,7 @@ Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFF
         {
           img: "assets/sort3.webp",
           name: "Unité Élémentaire",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Place un débuff de ${DEBUFFS.GEL} d'1 tour sur chaque cible si la cible souffre d'un débuff de ${DEBUFFS.BURN}.`,
           damage: "3.6*ATQ",

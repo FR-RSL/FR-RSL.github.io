@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Témoignage de Valeur",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours, puis attaque un ennemi. 
+          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours, puis attaque un ennemi.${RETURN}${RETURN}
 
 Ignorera 25 % de la DÉF de la cible. Par contre, ignorera 50 % de la DÉF de la cible si la cible dispose d'un buff ${BUFFS.DEF}.`,
           damage: "5.5*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Ruée du vent d'ouest",
-          description: `Attaque 3 fois un ennemi. Attaque 6 fois un ennemi si cette Championne a 50 % de PV ou moins. 
+          description: `Attaque 3 fois un ennemi. Attaque 6 fois un ennemi si cette Championne a 50 % de PV ou moins.${RETURN}${RETURN}
 
 Chaque frappe réduit de 7,5 % le Compteur de Tour de l'ennemi et augmente de 7,5 % le Compteur de Tour de cette Championne. Il est impossible de résister à cet effet si cette Championne se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "1.35*ATQ",
@@ -13,7 +13,7 @@ Chaque frappe réduit de 7,5 % le Compteur de Tour de l'ennemi et augmente de 7,
         {
           img: "assets/sort2.webp",
           name: "Lance de Léonidas",
-          description: `Attaque un ennemi. Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.BURN}sur la cible pendant 3 tours. Il est impossible de résister à ces effets si cette Championne se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+          description: `Attaque un ennemi. Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.BURN}sur la cible pendant 3 tours. Il est impossible de résister à ces effets si cette Championne se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour si les dégâts infligés par cette compétence sont supérieurs à 50 % des PV MAX de la cible. Il est impossible de résister à ce débuff si cette Championne se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "6.5*ATQ",
@@ -23,9 +23,9 @@ Place un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour si les dég
         {
           img: "assets/sort3.webp",
           name: "Grâce d'Isu",
-          description: `Retire tous les débuffs sur cette Championne, la soigne de 50 % de ses PV MAX et remplit de 50 % son Compteur de Tour. 
+          description: `Retire tous les débuffs sur cette Championne, la soigne de 50 % de ses PV MAX et remplit de 50 % son Compteur de Tour.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.SPD} de 30 % sur cette Championne pendant 2 tours. 
+Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.SHATTER} de 15 % et un buff ${BUFFS.SPD} de 30 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 ${PASSIVE}
 

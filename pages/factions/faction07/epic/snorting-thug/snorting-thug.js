@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Défense Désespérée",
-          description: `Lorsqu'il est frappé, possède 30 % de chances de voler un buff aléatoire à l'assaillant. Survient une fois par frappe.
+          description: `Lorsqu'il est frappé, possède 30 % de chances de voler un buff aléatoire à l'assaillant. Survient une fois par frappe.${RETURN}${RETURN}
 
 Contre-attaque l'assaillant s'il ne possède pas de buff actif.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

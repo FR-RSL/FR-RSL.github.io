@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frappe Bûcher",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
           damage: "0.22*HP",
@@ -23,7 +23,7 @@ Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 t
         {
           img: "assets/sort3.webp",
           name: "Ver de Vie",
-          description: `Attaque tous les ennemis. Possède 85 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.
+          description: `Attaque tous les ennemis. Possède 85 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 Possède également 85 % de chances de placer un débuff ${DEBUFFS.LEECH} et un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
           damage: "0.2*HP",

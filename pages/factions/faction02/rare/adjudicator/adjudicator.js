@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Cellule d'Isolation",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 20 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
           damage: "3.7*ATQ",
@@ -14,7 +14,7 @@ Possède 20 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendan
         {
           img: "assets/sort2.webp",
           name: "Sanction Ralentissante",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de réduire de 20 % le Compteur de Tour.`,
           damage: "5.9*ATQ",
@@ -25,7 +25,7 @@ Possède 50 % de chances de réduire de 20 % le Compteur de Tour.`,
         {
           img: "assets/sort3.webp",
           name: "Pénaliser",
-          description: `Attaque 2 fois au hasard.
+          description: `Attaque 2 fois au hasard.${RETURN}${RETURN}
 
 Possède 50 % de chances d'augmenter de 1 tour le temps de recharge d'une des Compétences de la cible prise au hasard.`,
           damage: "2.7*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épées de djinn",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible.${RETURN}${RETURN}
 
 Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d'1 tour la durée de tout débuff ${DEBUFFS.BURN} sur la cible.`,
           damage: "1.5*ATQ",
@@ -23,7 +23,7 @@ Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d
         {
           img: "assets/sort3.webp",
           name: "Zéphyr ardent",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 15 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
           damage: "4*ATQ",
@@ -36,7 +36,7 @@ Remplit le Compteur de Tour de ce Champion de 15 % pour chaque débuff ${DEBUFFS
           name: "Colère frémissante [P]",
           description: `${PASSIVE}
 
-Toutes les 10 fois que des Compétences Actives sont utilisées au combat par des Champions ennemis ou alliés, ce Champion active instantanément la compétence Régal de berserker. Cela se produit toutes les 5 fois que des Compétences Actives sont utilisées si Djamarsa se trouve dans la même équipe.
+Toutes les 10 fois que des Compétences Actives sont utilisées au combat par des Champions ennemis ou alliés, ce Champion active instantanément la compétence Régal de berserker. Cela se produit toutes les 5 fois que des Compétences Actives sont utilisées si Djamarsa se trouve dans la même équipe.${RETURN}${RETURN}
 
 ${ACTIVE}
 

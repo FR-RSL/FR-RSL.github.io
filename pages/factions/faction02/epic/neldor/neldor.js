@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Rasoir dansant",
-          description: `Attaque 4 fois un ennemi. 
+          description: `Attaque 4 fois un ennemi.${RETURN}${RETURN}
 
-La première et la deuxième frappe possèdent 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+La première et la deuxième frappe possèdent 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 La troisième et la quatrième frappe possèdent 50 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
           damage: "1.35*ATQ",
@@ -25,7 +25,7 @@ La troisième et la quatrième frappe possèdent 50 % de chances de placer un d�
         {
           img: "assets/sort3.webp",
           name: "Croix chromatique",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
           damage: "1.8*ATQ",

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Siroter du sang",
-          description: `Attaque 2 fois un ennemi. Soigne ce Champion de 15 % de ses PV MAX lors de chaque coup critique. 
+          description: `Attaque 2 fois un ennemi. Soigne ce Champion de 15 % de ses PV MAX lors de chaque coup critique.${RETURN}${RETURN}
 
 Place sur ce Champion un buff ${BUFFS.ATK} de 50 % pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.BURN}.`,
           damage: "2.5*ATQ",
@@ -23,7 +23,7 @@ Place sur ce Champion un buff ${BUFFS.ATK} de 50 % pendant 2 tours si la cible e
         {
           img: "assets/sort3.webp",
           name: "Causer des ravages",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de tour de ce Champion de 15 % si au moins un ennemi est touché par un coup critique.`,
           damage: "3.8*ATQ",

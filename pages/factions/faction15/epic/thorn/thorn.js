@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames-vignes",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "1.7*DEF",
@@ -14,7 +14,7 @@ Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 
         {
           img: "assets/sort2.webp",
           name: "Visage terrifiant",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
 La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. La seconde frappe a 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
           damage: "1.9*DEF",
@@ -25,7 +25,7 @@ La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.FEAR} penda
         {
           img: "assets/sort3.webp",
           name: "Uni à la corruption",
-          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.COUNTER} et un buff ${BUFFS.RES} de 50 % sur ce Champion pendant 2 tours.`,
           cooldown: 5,

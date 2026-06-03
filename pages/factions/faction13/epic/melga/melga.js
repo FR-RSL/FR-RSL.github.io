@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Violence Exaltante",
-          description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 débuff pris au hasard sur un allié choisi au hasard.
+          description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 débuff pris au hasard sur un allié choisi au hasard.${RETURN}${RETURN}
 
 Impossible de retirer un débuff dont ce Champion est affligé.`,
           damage: "0.15*HP",

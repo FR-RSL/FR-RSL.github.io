@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Moulinet Massacreur",
-          description: `Attaque tous les ennemis. A 50 % de chances de réduire le Compteur de Tour de chaque cible de 10 %.
+          description: `Attaque tous les ennemis. A 50 % de chances de réduire le Compteur de Tour de chaque cible de 10 %.${RETURN}${RETURN}
 
 Si Minaya se trouve dans la même équipe, attaque 2 fois tous les ennemis et les chances de réduire le Compteur de Tour de chaque cible passent à 100 %. Les dégâts de chaque frappe seront réduits de 50 %.`,
           damage: "0.16*HPMultiplier: 0.08*HP",
@@ -14,9 +14,9 @@ Si Minaya se trouve dans la même équipe, attaque 2 fois tous les ennemis et le
         {
           img: "assets/sort2.webp",
           name: "Beuglement Bestial",
-          description: `A 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.
+          description: `A 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Si Minaya se trouve dans la même équipe, il est impossible de résister au débuff ${DEBUFFS.PROVOKE} placé par ce Champion.
+Si Minaya se trouve dans la même équipe, il est impossible de résister au débuff ${DEBUFFS.PROVOKE} placé par ce Champion.${RETURN}${RETURN}
 
 Si Minaya se trouve dans la même équipe, retire également tous les débuffs de tous les alliés, puis place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.DEF} sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
@@ -26,7 +26,7 @@ Si Minaya se trouve dans la même équipe, retire également tous les débuffs d
         {
           img: "assets/sort3.webp",
           name: "Valse de Bataille",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. 
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Si Minaya se trouve dans l'équipe, il est impossible de résister à ces débuffs.`,
           damage: "0.3*HP",
@@ -37,7 +37,7 @@ Si Minaya se trouve dans l'équipe, il est impossible de résister à ces débuf
         {
           img: "assets/passif1.webp",
           name: "Garde Féroce [P]",
-          description: `Contre-attaque lorsqu'il est frappé par des ennemis affligés de débuffs ${DEBUFFS.ATK}, ${DEBUFFS.DEF} ou ${DEBUFFS.SPD}. 
+          description: `Contre-attaque lorsqu'il est frappé par des ennemis affligés de débuffs ${DEBUFFS.ATK}, ${DEBUFFS.DEF} ou ${DEBUFFS.SPD}.${RETURN}${RETURN}
 
 Contre-attaque toujours lorsqu'il est frappé si Minaya se trouve dans la même équipe.`,
           isPassive: true

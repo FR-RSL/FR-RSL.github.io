@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Destructeur de blocus",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Après la seconde frappe, soigne tous tes alliés à hauteur de 5 % des PV MAX de ce Champion. 
+Après la seconde frappe, soigne tous tes alliés à hauteur de 5 % des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Possède également 10 % de chances d'accorder un Tour supplémentaire.`,
           damage: "0.15*HP",
@@ -16,7 +16,7 @@ Possède également 10 % de chances d'accorder un Tour supplémentaire.`,
         {
           img: "assets/sort2.webp",
           name: "Force de fracture",
-          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Après avoir attaqué la cible initiale, attaque tous les autres ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "0.5*HPMultiplier: 0.3*HP",
@@ -54,9 +54,9 @@ Après avoir attaqué la cible initiale, attaque tous les autres ennemis. Possè
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-speed.webp",
-  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 24%
+  description: `Augmente la statistique VIT des Alliés lors des batailles d'Arène de 24%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Marcheurs de Peau)
+(ne s'applique qu'à la Faction des Marcheurs de Peau)${RETURN}${RETURN}
 
 Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 60`,
 };

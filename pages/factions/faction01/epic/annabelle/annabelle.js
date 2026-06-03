@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Échange sanguin",
-          description: `Échange ses PV avec l'allié ciblé. Si les PV de cette Championne sont supérieurs ou égaux à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur la cible alliée pendant 2 tours. Si les PV de cette Championne sont inférieurs à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours.
+          description: `Échange ses PV avec l'allié ciblé. Si les PV de cette Championne sont supérieurs ou égaux à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur la cible alliée pendant 2 tours. Si les PV de cette Championne sont inférieurs à ceux de la cible après l'échange, place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

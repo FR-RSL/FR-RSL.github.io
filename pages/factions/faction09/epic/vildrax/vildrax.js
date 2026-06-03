@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Essaim d'Horreurs",
-          description: `Attaque tous les ennemis. Possède 80 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances d'augmenter d'1 tour la durée de tous les débuffs ennemis.${RETURN}${RETURN}
 
 Lorsque tu frappes des ennemis sous débuffs ${DEBUFFS.HEX}, possède également 60 % de chances de placer une de leurs compétences en temps de recharge.`,
           damage: "4.5*ATQ",
@@ -32,7 +32,7 @@ Lorsque tu frappes des ennemis sous débuffs ${DEBUFFS.HEX}, possède également
         {
           img: "assets/passif1.webp",
           name: "Pestiféré [P]",
-          description: `Possède 10 % de chances de voler le soin chaque fois qu'un ennemi sous débuff ${DEBUFFS.HEX} est sur le point d'être soigné.
+          description: `Possède 10 % de chances de voler le soin chaque fois qu'un ennemi sous débuff ${DEBUFFS.HEX} est sur le point d'être soigné.${RETURN}${RETURN}
  
 [Ne fonctionne pas contre les Boss. La quantité soignée sera la même qu'elle l'aurait été sur la cible originale du soin, sauf si le soin est basé sur les PV de la cible, auquel cas il s'étalonnera sur les PV de [Vildrax].]`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

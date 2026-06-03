@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tocade",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 %, puis attaque un ennemi.
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 %, puis attaque un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours sur tous les ennemis si cette attaque tue un ennemi. Il est impossible de résister à ce débuff.`,
           damage: "6.6*ATQ",
@@ -32,9 +32,9 @@ Possède 50 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours sur 
         {
           img: "assets/passif1.webp",
           name: "Partenaire Punitif [P]",
-          description: `Les attaques infligent 25 % de dégâts supplémentaires.
+          description: `Les attaques infligent 25 % de dégâts supplémentaires.${RETURN}${RETURN}
 
-Contre-attaque toujours lorsqu'il est attaqué.
+Contre-attaque toujours lorsqu'il est attaqué.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Vénus se trouve dans la même équipe.]`,
           isPassive: true

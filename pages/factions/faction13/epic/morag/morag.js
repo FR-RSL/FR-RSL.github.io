@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Capitaine des pillards",
-          description: `Fais équipe avec 2 alliés aléatoires pour attaquer un seul ennemi. Les alliés rejoignant l'attaque utiliseront toujours leurs compétences par défaut. 
+          description: `Fais équipe avec 2 alliés aléatoires pour attaquer un seul ennemi. Les alliés rejoignant l'attaque utiliseront toujours leurs compétences par défaut.${RETURN}${RETURN}
 
 Octroie un Tour supplémentaire si un ennemi est tué.`,
           cooldown: 6,

@@ -15,7 +15,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "La rouille te consume",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Vole également tous les buffs ${BUFFS.HEALS} de chaque ennemi. Il est impossible de résister à cet effet.`,
 		  damage: "3.3*DEF",

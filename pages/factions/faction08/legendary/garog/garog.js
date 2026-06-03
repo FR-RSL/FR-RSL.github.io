@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fendoirs Géants",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 75 % si le Compteur de Tour de la cible est supérieur ou égal à 50 %.`,
           damage: "1.8*ATQ",
@@ -14,7 +14,7 @@ Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ce
         {
           img: "assets/sort2.webp",
           name: "Couper en Morceaux",
-          description: `Attaque 4 fois un ennemi. 
+          description: `Attaque 4 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe ignorera 20 % de la DÉF de la cible. Chaque coup critique offre 50 % de chances de réduire d'1 tour le temps de recharge de la compétence Faiseur de Carnage.`,
           damage: "1.5*ATQ",
@@ -25,7 +25,7 @@ Chaque frappe ignorera 20 % de la DÉF de la cible. Chaque coup critique offre 5
         {
           img: "assets/sort3.webp",
           name: "Faiseur de Carnage",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Ignorera 20 % de la DÉF de chaque cible. Ignorera 5 % de DÉF supplémentaires pour chaque buff sur ce Champion.`,
           damage: "4*ATQ",

@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Cauchemar",
-          description: `Attaque 2 fois un ennemi. Chaque frappe réduit le Compteur de Tour de la cible de 7,5 % si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe réduit le Compteur de Tour de la cible de 7,5 % si la cible est affligée d'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
-Réduit d'1 tour le temps de recharge de la compétence  
+Réduit d'1 tour le temps de recharge de la compétence${RETURN}
 Goût du Désespoir [P] de ce Champion si cette attaque tue un ennemi.`,
           damage: "1.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
@@ -15,7 +15,7 @@ Goût du Désespoir [P] de ce Champion si cette attaque tue un ennemi.`,
         {
           img: "assets/sort2.webp",
           name: "Machette Hantée",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour et 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour et 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur 2 ennemis si cette attaque tue un ennemi. Un débuff ${DEBUFFS.TRUE_FEAR} sera placé sur l'ennemi ayant le Compteur de Tour le plus bas et un autre sera placé sur l'ennemi ayant le Compteur de Tour le plus élevé.`,
           damage: "5.8*ATQ",

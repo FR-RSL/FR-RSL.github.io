@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Brise-plaque",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours. 
+Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Chaque frappe soigne également cette Championne à hauteur de 20 % des dégâts infligés.`,
           damage: "0.12*HP",
@@ -16,7 +16,7 @@ Chaque frappe soigne également cette Championne à hauteur de 20 % des dégâts
         {
           img: "assets/sort2.webp",
           name: "Rébellion du Bouclier",
-          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de retirer 1 débuff aléatoire à tous les alliés. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de retirer 1 débuff aléatoire à tous les alliés.${RETURN}${RETURN}
 
 Après l'attaque, a 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
           damage: "0.24*HP",

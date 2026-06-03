@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Intimider",
-          description: `Attaque 4 fois au hasard. Chaque attaque possède 30 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. 
+          description: `Attaque 4 fois au hasard. Chaque attaque possède 30 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Les chances de débuff ${DEBUFFS.LOCK_ACTIVE} augmentent jusqu'à 100 % si la cible est affligée d'un débuff ${DEBUFFS.ATK}.`,
           damage: "1.65*DEF",

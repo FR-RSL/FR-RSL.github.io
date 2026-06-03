@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Nuage de Spores",
-          description: `Place trois débuffs ${DEBUFFS.POISON} de 2,5 % sur tous les alliés pendant 3 tours. Il est impossible de résister à ces débuffs ou de les bloquer. 
+          description: `Place trois débuffs ${DEBUFFS.POISON} de 2,5 % sur tous les alliés pendant 3 tours. Il est impossible de résister à ces débuffs ou de les bloquer.${RETURN}
 Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} de 2 tours sur tous les ennemis.`,
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -29,7 +29,7 @@ Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} 
         {
           img: "assets/passif1.webp",
           name: "Symbiotes [P]",
-          description: `Les alliés affligés de débuffs ${DEBUFFS.POISON} infligent 7,5 % de dégâts supplémentaires pour chaque débuff ${DEBUFFS.POISON} dont ils souffrent, s'additionnant jusqu'à un maximum de 30 %. Cette augmentation des dégâts s'applique à toutes leurs compétences.
+          description: `Les alliés affligés de débuffs ${DEBUFFS.POISON} infligent 7,5 % de dégâts supplémentaires pour chaque débuff ${DEBUFFS.POISON} dont ils souffrent, s'additionnant jusqu'à un maximum de 30 %. Cette augmentation des dégâts s'applique à toutes leurs compétences.${RETURN}${RETURN}
 
 Augmente également de 15 la RÉS de chaque allié pour chaque débuff ${DEBUFFS.POISON} dont ils sont affligés.`,
           isPassive: true

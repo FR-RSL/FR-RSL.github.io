@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Éruption Fétide",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 15 % le Compteur de Tour des ennemis souffrant d'1 débuff ${DEBUFFS.POISON} ou plus. Possède également 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les ennemis souffrant de 2 débuffs ${DEBUFFS.POISON} ou plus. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis souffrant de 3 débuffs ${DEBUFFS.POISON} ou plus.
+          description: `Attaque tous les ennemis. Possède 75 % de chances de réduire de 15 % le Compteur de Tour des ennemis souffrant d'1 débuff ${DEBUFFS.POISON} ou plus. Possède également 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les ennemis souffrant de 2 débuffs ${DEBUFFS.POISON} ou plus. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} d'1 tour sur les ennemis souffrant de 3 débuffs ${DEBUFFS.POISON} ou plus.${RETURN}${RETURN}
 
 [Active instantanément cette compétence lorsque ce Champion est ranimé par Rian l'Illusionniste.]`,
           damage: "0.24*HP",
@@ -31,12 +31,12 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Appel de la Cage [P]",
-          description: `Lorsque le Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours. 
+          description: `Lorsque le Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours.${RETURN}${RETURN}
 
-Lorsqu'un allié disposant d'un buff ${BUFFS.STRENGTHEN} se fait attaquer, possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.
+Lorsqu'un allié disposant d'un buff ${BUFFS.STRENGTHEN} se fait attaquer, possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
-Augmente les PV MAX de ce Champion de 5 % dès qu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion.
-Lorsqu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion, détruit également les PV MAX de cet ennemi de 5 %.
+Augmente les PV MAX de ce Champion de 5 % dès qu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion.${RETURN}
+Lorsqu'un ennemi subit des dégâts dus à un débuff ${DEBUFFS.POISON} placé par ce Champion, détruit également les PV MAX de cet ennemi de 5 %.${RETURN}${RETURN}
 
 [Ne peut pas détruire les PV MAX d'un seul Champion de plus de 25 % lors d'une Bataille. Ne détruira pas les PV MAX d'un Boss. Ne peut pas augmenter les PV MAX de ce Champion de plus de 50 %.]`,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

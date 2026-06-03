@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Pétrification Rampante",
-          description: `Retire tous les buffs d'un ennemi ciblé avant de l'attaquer.
+          description: `Retire tous les buffs d'un ennemi ciblé avant de l'attaquer.${RETURN}${RETURN}
 
-Sinon, vole tous les buffs si la cible se trouve sous un débuff ${DEBUFFS.BURN} placé par ce Champion.
+Sinon, vole tous les buffs si la cible se trouve sous un débuff ${DEBUFFS.BURN} placé par ce Champion.${RETURN}${RETURN}
 
 Réduit le temps de recharge de Prise Bourbier de 2 tours si la cible est tuée par cette Compétence alors qu'elle se trouve sous un débuff ${DEBUFFS.BURN} placé par ce Champion.`,
           damage: "6*ATQ",
@@ -25,7 +25,7 @@ Réduit le temps de recharge de Prise Bourbier de 2 tours si la cible est tuée 
         {
           img: "assets/sort3.webp",
           name: "Prise Bourbier",
-          description: `Vide totalement le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion de la quantité perdue par la cible.
+          description: `Vide totalement le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion de la quantité perdue par la cible.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} et un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 3 tours.`,
           cooldown: 5,
@@ -35,7 +35,7 @@ Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} et un débuff ${DE
         {
           img: "assets/passif1.webp",
           name: "Garde de pierre [P]",
-          description: `Réduit de 15 % les dégâts reçus par les alliés et dévie ces dégâts sur chaque ennemi affligé d'un débuff ${DEBUFFS.BURN} placé par ce Champion. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.
+          description: `Réduit de 15 % les dégâts reçus par les alliés et dévie ces dégâts sur chaque ennemi affligé d'un débuff ${DEBUFFS.BURN} placé par ce Champion. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.${RETURN}${RETURN}
 
 Lorsque ce Champion est attaqué, dévie au lieu de cela 30 % des dégâts. Lorsque des dégâts sont déviés, lors de chaque frappe ennemie, a 30 % de chances d'infliger des dégâts supplémentaires équivalents à 3 % des PV MAX de la cible.`,
           isPassive: true

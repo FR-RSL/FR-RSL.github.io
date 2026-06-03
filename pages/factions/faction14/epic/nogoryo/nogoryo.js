@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Enlèvement nocturne",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.${RETURN}${RETURN}
 
 Si ce Champion se trouve sous buff ${BUFFS.ATK}, vole tous les buffs de l'ennemi ciblé avant d'attaquer.`,
           damage: "5.2*ATQ",

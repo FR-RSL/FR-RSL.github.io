@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Porte-bonheur",
-          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Place, pendant 2 tours, un buff ${BUFFS.SPD} de 30 % sur tous les alliés ayant plus de 50 % de PV. Possède également 50 % de chances de placer un buff ${BUFFS.CRATE} de 30 % sur ces alliés pendant 2 tours.
+          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Place, pendant 2 tours, un buff ${BUFFS.SPD} de 30 % sur tous les alliés ayant plus de 50 % de PV. Possède également 50 % de chances de placer un buff ${BUFFS.CRATE} de 30 % sur ces alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place, pendant 2 tours, un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés ayant moins de 50 % de PV. Possède également 50 % de chances de placer un buff ${BUFFS.HEALS} de 15 % sur ces alliés pendant 2 tours.`,
           cooldown: 4,
@@ -22,7 +22,7 @@ Place, pendant 2 tours, un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés ay
         {
           img: "assets/sort3.webp",
           name: "Insaisissable",
-          description: `Place un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis. Réduit de 15 % le Compteur de Tour de tous les ennemis.
+          description: `Place un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis. Réduit de 15 % le Compteur de Tour de tous les ennemis.${RETURN}${RETURN}
 
 Remplit de 15 % le Compteur de Tour de tous les alliés si le Compteur de Tour de n'importe quel ennemi est inférieur à 50 %.`,
           cooldown: 5,

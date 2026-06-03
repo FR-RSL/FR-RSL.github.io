@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Sur Dévouée [P]",
-          description: `Ranime cette Championne avec 75 % de PV lorsqu'elle est tuée.
+          description: `Ranime cette Championne avec 75 % de PV lorsqu'elle est tuée.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Alika se trouve dans la même équipe.]`,
           cooldown: 7,

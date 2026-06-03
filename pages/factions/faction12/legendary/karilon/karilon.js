@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cantique du froid",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.GEL}, possède alors 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 3 tours.`,
           damage: "3.2*ATQ",
@@ -23,9 +23,9 @@ Si la cible se trouve sous débuff ${DEBUFFS.GEL}, possède alors 75 % de chance
         {
           img: "assets/sort3.webp",
           name: "Vortex polaire",
-          description: `Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. 
+          description: `Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
-Vide totalement le Compteur de Tour de tous les ennemis qui reçoivent des débuffs ${DEBUFFS.GEL} à cause de cette compétence. 
+Vide totalement le Compteur de Tour de tous les ennemis qui reçoivent des débuffs ${DEBUFFS.GEL} à cause de cette compétence.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de tous les alliés de 10 % pour chaque tentative de débuff ${DEBUFFS.GEL} que l'équipe ennemie a bloquée ou à laquelle elle a résisté.`,
           cooldown: 5,
@@ -35,7 +35,7 @@ Remplit le Compteur de Tour de tous les alliés de 10 % pour chaque tentative de
         {
           img: "assets/passif1.webp",
           name: "Marteau de givre [P]",
-          description: `Les alliés ignoreront 10 % de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.GEL}. 
+          description: `Les alliés ignoreront 10 % de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 Si le débuff ${DEBUFFS.GEL} a été placé par ce Champion, les alliés ignoreront alors 20 % de la DÉF de la cible.`,
           isPassive: true

@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Grâce Maternelle [P]",
-          description: `Soigne Agreth l'Araignée de l'Au-delà de 10 % de ses PV MAX chaque fois que ce Bébé contre-attaque. 
+          description: `Soigne Agreth l'Araignée de l'Au-delà de 10 % de ses PV MAX chaque fois que ce Bébé contre-attaque.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur Agreth pendant 2 tours dès qu'un buff ${BUFFS.COUNTER} de ce Bébé est retiré ou expire. Ce buff ${BUFFS.ALLY_PROTECT} ne peut pas être retiré. Si Agreth possède déjà un buff ${BUFFS.ALLY_PROTECT}, augmente sa durée d'1 tour.`,
           damage: "1.8*ATQ + 0.1*PV",

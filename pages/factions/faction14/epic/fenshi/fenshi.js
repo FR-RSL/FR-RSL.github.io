@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Irascibilité de Tueur",
-          description: `Attaque 2 fois un ennemi. Chaque frappe place un débuff ${DEBUFFS.POISON} de 5 % sur la cible pendant 3 tours.
+          description: `Attaque 2 fois un ennemi. Chaque frappe place un débuff ${DEBUFFS.POISON} de 5 % sur la cible pendant 3 tours.${RETURN}${RETURN}
 
 Ignorera 10 % de la DÉF de la cible pour chaque débuff ${DEBUFFS.POISON} dont la cible est affligée.`,
           damage: "2.7*ATQ",

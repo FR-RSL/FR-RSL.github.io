@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Dispersion",
-          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible. 
+          description: `Attaque tous les ennemis. Ignorera 15 % de la DÉF de chaque cible.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 10 % lors de chaque coup critique.`,
           damage: "3.9*ATQ",
@@ -21,7 +21,7 @@ Remplit le Compteur de Tour de ce Champion de 10 % lors de chaque coup critique.
         {
           img: "assets/sort3.webp",
           name: "Assassin royal",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours si cette attaque passe en critique.`,
           damage: "5.8*ATQ",

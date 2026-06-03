@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Destruction Absolue",
-          description: `Attaque un ennemi. Les ennemis tués par cette compétence ne peuvent pas être ranimés.
+          description: `Attaque un ennemi. Les ennemis tués par cette compétence ne peuvent pas être ranimés.${RETURN}${RETURN}
 
 Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion si cette attaque tue un ennemi.`,
           damage: "5.9*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Rage de Saki",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 La deuxième et la troisième frappe de cette compétence ignoreront 5 % et 10 % de la DÉF de la cible, respectivement. La deuxième et la troisième frappe de cette compétence infligeront 10 % et 20 % supplémentaires des DÉG C., respectivement.`,
           damage: "0.1*HP",
@@ -14,9 +14,9 @@ La deuxième et la troisième frappe de cette compétence ignoreront 5 % et 10 %
         {
           img: "assets/sort2.webp",
           name: "Ombre de shinobi",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-Chaque frappe critique détruit la DÉF de l'ennemi de 5 % (s'accumule jusqu'à 30 %). Chaque frappe critique augmente également les PV MAX de ce Champion de 5 % (s'accumule jusqu'à 30 %). 
+Chaque frappe critique détruit la DÉF de l'ennemi de 5 % (s'accumule jusqu'à 30 %). Chaque frappe critique augmente également les PV MAX de ce Champion de 5 % (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 Chaque frappe a 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. Il est impossible de résister à ce débuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "0.16*HP",
@@ -27,7 +27,7 @@ Chaque frappe a 75 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 
         {
           img: "assets/sort3.webp",
           name: "C'est le vrai ninjutsu !",
-          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs à une seule cible ennemie. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Remplit le Compteur de Tour de ce Champion de 15 % pour chaque buff volé. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs à une seule cible ennemie. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Remplit le Compteur de Tour de ce Champion de 15 % pour chaque buff volé.${RETURN}${RETURN}
 
 Ignorera 15 % de la DÉF de chaque ennemi, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. Si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}, ignorera au lieu de ça 30 % de la DÉF de chaque ennemi.`,
           damage: "0.27*HP",
@@ -40,9 +40,9 @@ Ignorera 15 % de la DÉF de chaque ennemi, ainsi que les buffs ${BUFFS.SHIELD} e
           name: "Tyran dimensionnel [P]",
           description: `${PASSIVE}
 
-Réduit tous les dégâts en approche de 30 %. Ces dégâts sont divisés également entre tous les alliés, sauf ce Champion.
+Réduit tous les dégâts en approche de 30 %. Ces dégâts sont divisés également entre tous les alliés, sauf ce Champion.${RETURN}${RETURN}
 
-Augmente les dégâts infligés par ce Champion de 15 % pour chaque allié mort.
+Augmente les dégâts infligés par ce Champion de 15 % pour chaque allié mort.${RETURN}${RETURN}
 
 ${ACTIVE}
 

@@ -21,11 +21,11 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Équilibre de la Mort",
-          description: `Égalise les PV de tous les alliés, puis attaque 1 ennemi.
+          description: `Égalise les PV de tous les alliés, puis attaque 1 ennemi.${RETURN}${RETURN}
 
-Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV. 
+Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant le plus de PV.${RETURN}${RETURN}
 
-Cette attaque ignorera 30 % de la DÉF de la cible si les PV actuels de la cible sont inférieurs ou égaux aux PV actuels de ce Champion.
+Cette attaque ignorera 30 % de la DÉF de la cible si les PV actuels de la cible sont inférieurs ou égaux aux PV actuels de ce Champion.${RETURN}${RETURN}
 
 Réduira d'1 tour le temps de recharge de la compétence Bûcher exalté si les PV actuels de la cible sont supérieurs aux PV actuels de ce Champion.`,
           damage: "0.35*HP",
@@ -36,7 +36,7 @@ Réduira d'1 tour le temps de recharge de la compétence Bûcher exalté si les 
         {
           img: "assets/passif1.webp",
           name: "Forteresse [P]",
-          description: `Renvoie sur l'assaillant 30 % des dégâts reçus par ce Champion si ce Champion possède 50 % de PV ou plus.
+          description: `Renvoie sur l'assaillant 30 % des dégâts reçus par ce Champion si ce Champion possède 50 % de PV ou plus.${RETURN}${RETURN}
 
 Inflige 30 % de dégâts en plus si ce Champion possède moins de 50 % de PV.`,
           isPassive: true

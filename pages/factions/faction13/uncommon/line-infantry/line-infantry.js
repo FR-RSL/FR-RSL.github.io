@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Provocation à la Lance",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 10 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "1.65*DEF+2.2*ATQ",
@@ -14,7 +14,7 @@ Possède 10 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
         {
           img: "assets/sort2.webp",
           name: "Agitateur",
-          description: `Attaque 2 fois au hasard.
+          description: `Attaque 2 fois au hasard.${RETURN}${RETURN}
 
 Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "2*DEF",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe stupéfiante",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.21*PV",
@@ -13,7 +13,7 @@ A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
         {
           img: "assets/sort2.webp",
           name: "Position de l'acier",
-          description: `Place un buff ${BUFFS.TAUNT} sur ce Champion pendant 1 tour. 
+          description: `Place un buff ${BUFFS.TAUNT} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 15 % des PV MAX de ce Champion.`,
           cooldown: 6,

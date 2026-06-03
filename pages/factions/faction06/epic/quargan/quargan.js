@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Harmonisation",
-          description: `Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.ATK} de 50 % pendant 2 tours sur tous les alliés dont l'ATQ est plus élevée que la DÉF. 
+          description: `Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.ATK} de 50 % pendant 2 tours sur tous les alliés dont l'ATQ est plus élevée que la DÉF.${RETURN}${RETURN}
  
 Place un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour et un buff ${BUFFS.DEF} de 60 % pendant 2 tours sur tous les alliés dont la DÉF est plus élevée que l'ATQ.`,
           cooldown: 6,

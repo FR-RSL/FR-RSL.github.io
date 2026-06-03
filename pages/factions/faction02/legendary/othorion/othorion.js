@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèche tombée du ciel",
-          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques. 
+          description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 5 % pour chaque ennemi en vie après l'attaque.`,
           damage: "2.5*ATQ",
@@ -14,7 +14,7 @@ Remplit le Compteur de Tour de ce Champion de 5 % pour chaque ennemi en vie apr�
         {
           img: "assets/sort2.webp",
           name: "Tir de faucon",
-          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 5 % pour chaque ennemi en vie après l'attaque.`,
           damage: "1.5*ATQ+0.035*Target Max HP",

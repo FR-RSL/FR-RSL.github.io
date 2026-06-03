@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Règne de terreur",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 2 tours. 
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible est un Boss, possède au lieu de ça 75 % de chances de lui infliger un débuff |Blocage des Buffs] et un débuff ${DEBUFFS.SPD} de 30 %.`,
           cooldown: 4,
@@ -22,7 +22,7 @@ Si la cible est un Boss, possède au lieu de ça 75 % de chances de lui infliger
         {
           img: "assets/sort3.webp",
           name: "Icône de domination",
-          description: `Retire tous les débuffs sur un seul allié (sauf cette Championne) et lui accorde 2 piles d'${BUFFS.INTERCEPT}. 
+          description: `Retire tous les débuffs sur un seul allié (sauf cette Championne) et lui accorde 2 piles d'${BUFFS.INTERCEPT}.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de l'allié ciblé de 50 % et réinitialise les temps de recharge de toutes ses compétences.`,
           cooldown: 6,
@@ -32,7 +32,7 @@ Remplit également le Compteur de Tour de l'allié ciblé de 50 % et réinitiali
         {
           img: "assets/passif1.webp",
           name: "Manifeste d'autorité [P]",
-          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.SHEEP}.
+          description: `Cette Championne est immunisée contre les débuffs ${DEBUFFS.SHEEP}.${RETURN}${RETURN}
 
 Chaque débuff placé par cette Championne réduit le Compteur de Tour d'une cible de 5 %, et réduit de façon permanente sa RÉS et sa PRÉ de 10 points (s'accumule jusqu'à 100).`,
           isPassive: true

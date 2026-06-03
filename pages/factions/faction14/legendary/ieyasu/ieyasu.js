@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Briseur d'exorcisme",
-          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si la cible bénéficie d'un buff. Place 2 frappes supplémentaires si la cible bénéficie d'un buff et appartient à la Faction des Hordes Mortes-vivantes. 
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si la cible bénéficie d'un buff. Place 2 frappes supplémentaires si la cible bénéficie d'un buff et appartient à la Faction des Hordes Mortes-vivantes.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi. Se produit une fois par compétence.`,
           damage: "1.8*ATQ",
@@ -18,9 +18,9 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi. Se produit une f
         {
           img: "assets/sort2.webp",
           name: "Purification violente",
-          description: `Attaque 2 fois un ennemi. Avant chaque frappe, détruit les PV MAX de la cible de 10 % (s'accumule jusqu'à 50 %). Cet effet ne fonctionne pas contre les Boss.
+          description: `Attaque 2 fois un ennemi. Avant chaque frappe, détruit les PV MAX de la cible de 10 % (s'accumule jusqu'à 50 %). Cet effet ne fonctionne pas contre les Boss.${RETURN}${RETURN}
 
-Les dégâts infligés par cette compétence augmentent de 10 % pour chaque buff et débuff sur la cible (s'accumule jusqu'à 100 %).
+Les dégâts infligés par cette compétence augmentent de 10 % pour chaque buff et débuff sur la cible (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
 
 Si la cible est tuée par cette compétence, place un débuff ${DEBUFFS.BLOCK_REA}.`,
           damage: "3*ATQ",
@@ -34,7 +34,7 @@ Si la cible est tuée par cette compétence, place un débuff ${DEBUFFS.BLOCK_RE
         {
           img: "assets/sort3.webp",
           name: "Vengeance finale",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Ignorera 50 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}.`,
           damage: "2.4*ATQ",
@@ -48,7 +48,7 @@ Ignorera 50 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${
         {
           img: "assets/passif1.webp",
           name: "Devoir d'Onryo [P]",
-          description: `Dès qu'un Champion attaque, tous les ennemis, sauf la cible initiale, reçoivent des dégâts équivalents à 25 % des dégâts infligés à la cible initiale. 
+          description: `Dès qu'un Champion attaque, tous les ennemis, sauf la cible initiale, reçoivent des dégâts équivalents à 25 % des dégâts infligés à la cible initiale.${RETURN}${RETURN}
 
 Ces dégâts supplémentaires ignoreront 100 % de la DÉF de chaque ennemi. Les dégâts supplémentaires ne peuvent pas passer en critique et ne déclencheront pas de contre-attaques.`,
           isPassive: true,

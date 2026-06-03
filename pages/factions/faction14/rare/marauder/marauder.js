@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Clameur de Défi",
-          description: `Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.
+          description: `Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Place sur ce Champion un buff ${BUFFS.SHIELD} égal à 20 % de ses PV MAX pendant 2 tours. Place également un buff ${BUFFS.REFLECT_DAM} de 15 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,

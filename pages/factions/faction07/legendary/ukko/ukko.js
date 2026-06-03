@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Furie d'Ukko",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75 % de chances de retirer 2 buffs aléatoires de la cible. 
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75 % de chances de retirer 2 buffs aléatoires de la cible.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours sur les cibles qui n'ont pas de buff après l'attaque.`,
           damage: "2*ATQ",
@@ -23,7 +23,7 @@ Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.PRE} de 50 % pen
         {
           img: "assets/sort3.webp",
           name: "Clémence d'Ukko",
-          description: `Ranime tous les alliés morts avec 40 % de PV, puis place un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour. 
+          description: `Ranime tous les alliés morts avec 40 % de PV, puis place un buff ${BUFFS.BLOCK_DAMAGE} pendant 1 tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Placera le buff ${BUFFS.SPD} même s'il n'y a pas d'alliés morts.`,
           cooldown: 6,

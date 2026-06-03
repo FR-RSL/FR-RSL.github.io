@@ -18,9 +18,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Maître des Invocations",
-          description: `Ranime un allié tombé avec 50 % de PV, puis remplit son Compteur de Tour de 50 %. Accorde-lui ensuite un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.
+          description: `Ranime un allié tombé avec 50 % de PV, puis remplit son Compteur de Tour de 50 %. Accorde-lui ensuite un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.${RETURN}${RETURN}
 
-Ranimera également Akoth le Brûlé et Urost Capturâme avec 30 % de PV s'ils se trouvent dans la même équipe et ne sont pas la cible de la compétence. Remplira ensuite leurs Compteurs de Tour de 30 % après la réanimation.
+Ranimera également Akoth le Brûlé et Urost Capturâme avec 30 % de PV s'ils se trouvent dans la même équipe et ne sont pas la cible de la compétence. Remplira ensuite leurs Compteurs de Tour de 30 % après la réanimation.${RETURN}${RETURN}
 
 Si Akoth le Brûlé ou Urost Capturâme sont la cible de la compétence, ce Champion sera ranimé avec 50 % de PV et 50 % de Compteur de Tour, ainsi qu'avec un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours.`,
           cooldown: 6,

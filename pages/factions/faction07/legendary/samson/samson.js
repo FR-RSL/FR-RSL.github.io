@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Offensé [P]",
-          description: `Réduit de 20 % les dégâts que ce Champion reçoit des coups critiques. Contre-attaque l'assaillant lorsque ce Champion est frappé par un coup critique.
+          description: `Réduit de 20 % les dégâts que ce Champion reçoit des coups critiques. Contre-attaque l'assaillant lorsque ce Champion est frappé par un coup critique.${RETURN}${RETURN}
 
 Possède 50 % de chances de contre-attaquer l'assaillant lorsque ce Champion est atteint par une frappe puissante, normale ou faible.`,
           isPassive: true

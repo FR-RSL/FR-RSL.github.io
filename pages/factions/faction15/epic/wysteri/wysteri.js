@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèches vigne-drain",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % sur la cible pendant 2 tours.`,
           damage: "2*ATQ",
@@ -14,9 +14,9 @@ Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % s
         {
           img: "assets/sort2.webp",
           name: "Carreau creusant",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera les buffs ${BUFFS.DEF} et ${BUFFS.SHIELD}, ainsi que 20 % de la DÉF de la cible. 
+Ignorera les buffs ${BUFFS.DEF} et ${BUFFS.SHIELD}, ainsi que 20 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, augmente d'1 tour la durée de tous les buffs de cette Championne.`,
           damage: "5.5*ATQ",

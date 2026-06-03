@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ailes de Purge",
-          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 10 % des PV MAX de ce Champion.
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 10 % des PV MAX de ce Champion.${RETURN}
 Soigne chaque allié de 10 % supplémentaires si 1 débuff ou plus de cet allié est retiré. Remplit de 15 % le Compteur de Tour de chaque allié si 2 débuffs ou plus de cet allié sont retirés.`,
           cooldown: 5,
           levelInfo: ["Soins +10%", "Soins +10%", "Soins +10%", "Temps de recharge -1"],

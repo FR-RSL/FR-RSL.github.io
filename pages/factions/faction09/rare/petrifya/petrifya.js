@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Grêle de silex",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.POISON_S} placé par cette Championne, chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "1.9*ATQ",
@@ -14,7 +14,7 @@ Si la cible se trouve sous débuff ${DEBUFFS.POISON_S} placé par cette Champion
         {
           img: "assets/sort2.webp",
           name: "Dessiccation",
-          description: `Attaque 2 fois tous les ennemis. 
+          description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
 La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours. La seconde frappe possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
           damage: "2*ATQ",

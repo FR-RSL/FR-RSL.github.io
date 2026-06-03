@@ -15,7 +15,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Main printanière",
-          description: `Soigne tous tes alliés à hauteur de 30 % de leurs PV MAX. 
+          description: `Soigne tous tes alliés à hauteur de 30 % de leurs PV MAX.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 4,
@@ -29,7 +29,7 @@ Augmente d'1 tour la durée de tous les buffs alliés.`,
         {
           img: "assets/sort3.webp",
           name: "Morphose",
-          description: `Remplit le Compteur de Tour de tous les alliés de 30 %. 
+          description: `Remplit le Compteur de Tour de tous les alliés de 30 %.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
@@ -42,7 +42,7 @@ Place également un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tou
         {
           img: "assets/passif1.webp",
           name: "Sans entraves [P]",
-          description: `Dès qu'un allié perd 15 % ou plus de ses PV MAX suite à une seule frappe, place un buff ${BUFFS.HEALS} de 15 % sur cet allié pendant 1 tour. Place un buff ${BUFFS.HEALS} de 15 % pendant 2 tours sur cet allié, puis l'active instantanément si Ultan la Carapace se trouve dans la même équipe. 
+          description: `Dès qu'un allié perd 15 % ou plus de ses PV MAX suite à une seule frappe, place un buff ${BUFFS.HEALS} de 15 % sur cet allié pendant 1 tour. Place un buff ${BUFFS.HEALS} de 15 % pendant 2 tours sur cet allié, puis l'active instantanément si Ultan la Carapace se trouve dans la même équipe.${RETURN}${RETURN}
 
 Ne peut arriver à un allié qu'une fois par tour.`,
           isPassive: true,

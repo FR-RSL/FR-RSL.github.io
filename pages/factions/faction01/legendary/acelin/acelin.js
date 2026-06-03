@@ -4,7 +4,7 @@ type: "Defense",
         {
           img: "assets/sort1.webp",
           name: "Marteau de Kaerok",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Ignorera 25 % de la RÉS de la cible si ce Champion dispose d'un buff ${BUFFS.SHIELD}.`,
           damage: "3.5*DEF",
@@ -18,7 +18,7 @@ Ignorera 25 % de la RÉS de la cible si ce Champion dispose d'un buff ${BUFFS.SH
         {
           img: "assets/sort2.webp",
           name: "Écrasement de bouclier",
-          description: `Soigne tous les alliés de la valeur totale des ${BUFFS.SHIELD}s sur tous les alliés. 
+          description: `Soigne tous les alliés de la valeur totale des ${BUFFS.SHIELD}s sur tous les alliés.${RETURN}${RETURN}
 
 Retire ensuite tous les ${BUFFS.SHIELD}s sur les alliés, puis attaque tous les ennemis. Les dégâts infligés par cette attaque sont équivalents à la valeur totale des ${BUFFS.SHIELD}s retirés (les dégâts ne peuvent pas dépasser 1 000 % de la DÉF de ce Champion).`,
 		  damage: "DEF + Valeur du Bouclier",
@@ -72,8 +72,8 @@ Retire ensuite tous les ${BUFFS.SHIELD}s sur les alliés, puis attaque tous les 
   const aura = {
   img: "../../../../../../assets/images/auras/sup-defence.webp",
   description: `
-    Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%.<br><br>
-    Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%.
+    Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%.<br><br>${RETURN}
+    Augmente la statistique PV des Alliés lors de toutes les Batailles de 15%.${RETURN}
     (ne s'applique qu'a la Faction des Seigneurs de l'Oriflamme).
   `,
 };

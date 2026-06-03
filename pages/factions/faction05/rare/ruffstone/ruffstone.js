@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ruée Salivante",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Possède 50 % de chances d'accorder un Tour Supplémentaire si cette attaque passe en critique.`,
           damage: "3.1*ATQ",

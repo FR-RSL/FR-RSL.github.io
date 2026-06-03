@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Chiens de guerre",
-          description: `Attaque tous les ennemis. Avant d'attaquer, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.`,
           damage: "0.25*HP",
@@ -23,7 +23,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennem
         {
           img: "assets/sort3.webp",
           name: "Purifeu",
-          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. 
+          description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Rétablit les PV MAX détruits de ce Champion de 10 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence. Soigne ce Champion de 5 % de ses PV MAX pour chaque tentative de débuff ${DEBUFFS.BURN} à laquelle l'équipe ennemie a résisté ou qu'elle a bloquée.`,
           damage: "0.14*HP",
@@ -34,7 +34,7 @@ Rétablit les PV MAX détruits de ce Champion de 10 % pour chaque débuff ${DEBU
         {
           img: "assets/passif1.webp",
           name: "Sang brûlant [P]",
-          description: `Dès qu'un débuff ${DEBUFFS.BURN} est activé, détruit les PV MAX de ce Champion de 5 %. S'accumule jusqu'à 50 %. 
+          description: `Dès qu'un débuff ${DEBUFFS.BURN} est activé, détruit les PV MAX de ce Champion de 5 %. S'accumule jusqu'à 50 %.${RETURN}${RETURN}
 
 Augmente les DÉG, les DÉG C. et la DÉF de ce Champion de 1 % par tranche de 1 % de ses PV MAX détruits. Augmente également la VIT et la RÉS de ce Champion de 2 points par tranche de 1 % de ses PV MAX détruits.`,
           isPassive: true

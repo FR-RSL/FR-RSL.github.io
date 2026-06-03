@@ -28,7 +28,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Lien Éternel [P]",
-          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de leur tour. 
+          description: `Soigne tous les alliés de 10 % de leurs PV MAX au début de leur tour.${RETURN}${RETURN}
 
 A 40 % de chances de retirer les débuffs ${DEBUFFS.GEL}, ${DEBUFFS.FEAR} et ${DEBUFFS.TRUE_FEAR} des alliés au début de leur tour. Retire tous les débuffs de Rotos le Marié Égaré au début de son tour s'il se trouve dans la même équipe.`,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],

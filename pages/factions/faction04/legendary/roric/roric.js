@@ -21,11 +21,11 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Briseur d'Écailles",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
 ${PASSIVE}
 
-Utilisera toujours cette Compétence au lieu de la Compétence par défaut lors d'une contre-attaque.
+Utilisera toujours cette Compétence au lieu de la Compétence par défaut lors d'une contre-attaque.${RETURN}${RETURN}
 
 Cette Compétence ne sera pas bloquée par les débuffs ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "4.7*ATQ",
@@ -36,7 +36,7 @@ Cette Compétence ne sera pas bloquée par les débuffs ${DEBUFFS.LOCK_ACTIVE}.`
         {
           img: "assets/passif1.webp",
           name: "Fin du Titan [P]",
-          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}. 
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}.${RETURN}${RETURN}
 
 Inflige 15 % de dégâts en plus sur les Boss et reçoit 15 % de dégâts en moins de leur part.`,
           isPassive: true

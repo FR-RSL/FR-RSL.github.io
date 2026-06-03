@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Touche de sommeil",
-          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. 
+          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 15 % si le débuff ${DEBUFFS.SLEEP} est placé.`,
           damage: "0.28*PV",
@@ -18,7 +18,7 @@ Remplit le Compteur de Tour de cette Championne de 15 % si le débuff ${DEBUFFS.
         {
           img: "assets/sort2.webp",
           name: "Perdue dans les bois",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. 
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Rétablit 100 % des PV MAX détruits de chaque allié, puis soigne tous les alliés de 20 % des PV MAX de cette Championne.`,
           cooldown: 4,

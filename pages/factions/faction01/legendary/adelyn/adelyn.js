@@ -20,9 +20,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Décret de sommeil",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur une cible pendant 1 tour. 
+          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur une cible pendant 1 tour.${RETURN}${RETURN}
 
-Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. 
+Possède également 75 % de chances de placer sur la cible un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Les débuffs placés par cette compétence ignoreront les débuffs ${BUFFS.BLOCK_DEBUFFS}.`,
           cooldown: 5,

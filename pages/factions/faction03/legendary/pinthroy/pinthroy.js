@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Verbe sacré",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis attaque tous les ennemis. Place un débuff ${DEBUFFS.HEALS} de 100 % sur tous les ennemis pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. 
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours, puis attaque tous les ennemis. Place un débuff ${DEBUFFS.HEALS} de 100 % sur tous les ennemis pendant 2 tours. Possède également 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Les Champions des Factions des Rejetons Démoniaques, des Morts-vivants et des Revenants Chevaliers ne peuvent pas résister à ces débuffs.`,
           damage: "4.8*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèches de Crypte",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "2*ATQ",
@@ -23,7 +23,7 @@ Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de
         {
           img: "assets/sort3.webp",
           name: "Traqueur de Tombeau",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} de 2 tours sur ce Champion si cette attaque passe en critique.`,
           damage: "6.1*ATQ",

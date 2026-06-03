@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Énorme Hallebarde",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 35 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "3.5*DEF",
@@ -14,7 +14,7 @@ Possède 35 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % penda
         {
           img: "assets/sort2.webp",
           name: "Bouclier Ancestral",
-          description: `Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.
+          description: `Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
           cooldown: 5,
@@ -24,9 +24,9 @@ Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Écrase-Sol",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.
+Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.${RETURN}
 Détruit les PV MAX de chaque cible de 30 % des dégâts infligés.`,
           damage: "3.3*DEF",
           cooldown: 5,

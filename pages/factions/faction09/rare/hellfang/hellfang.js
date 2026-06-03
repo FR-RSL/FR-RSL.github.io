@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Hurlement Effrayant",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.
+          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Rejeton de Cabot est dans la même équipe.]`,
           damage: "3.5*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lance de sérénité",
-          description: `Attaque un ennemi avec un allié aléatoire de la Faction des Argonites. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. 
+          description: `Attaque un ennemi avec un allié aléatoire de la Faction des Argonites. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.${RETURN}${RETURN}
 
 Soigne tous les alliés à hauteur de 10 % des PV MAX de cette Championne.`,
           damage: "6*ATQ",
@@ -20,7 +20,7 @@ Soigne tous les alliés à hauteur de 10 % des PV MAX de cette Championne.`,
         {
           img: "assets/sort3.webp",
           name: "Renouveau glorieux",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. 
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 7,
@@ -29,7 +29,7 @@ Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SPD} de 30 % sur to
         {
           img: "assets/sort4.webp",
           name: "Bouclier des Argolades [P]",
-          description: `Dès qu'un allié reçoit un débuff, place un buff ${BUFFS.SHIELD} d'1 tour sur cet allié, équivalent à 20 % de ses PV MAX. 
+          description: `Dès qu'un allié reçoit un débuff, place un buff ${BUFFS.SHIELD} d'1 tour sur cet allié, équivalent à 20 % de ses PV MAX.${RETURN}${RETURN}
 
 Remplit de 15 % les Compteurs de Tour de tous les alliés à la fin du tour de cette Championne.`,
           isPassive: true,

@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Compère Alerte ${PASSIVE}",
-          description: `Immunisé contre les débuffs d'${DEBUFFS.STUN}, de ${DEBUFFS.GEL} et de ${DEBUFFS.SLEEP}.
+          description: `Immunisé contre les débuffs d'${DEBUFFS.STUN}, de ${DEBUFFS.GEL} et de ${DEBUFFS.SLEEP}.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Kallia se trouve dans la même équipe.]`,
           isPassive: true

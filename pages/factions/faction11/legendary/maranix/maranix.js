@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Fin inexorable",
-          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD} si les cibles se trouvent sous débuff ${DEBUFFS.HEX}. 
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD} si les cibles se trouvent sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.UNKILLABLE} sur cette Championne pendant 1 tour si cette attaque tue un ennemi sans débuff ${DEBUFFS.HEX}. Place un buff ${BUFFS.UNKILLABLE} pendant 2 tours si cette attaque tue un ennemi sous débuff ${DEBUFFS.HEX}.`,
           damage: "4.1*ATQ",
@@ -29,7 +29,7 @@ Place un buff ${BUFFS.UNKILLABLE} sur cette Championne pendant 1 tour si cette a
         {
           img: "assets/sort4.webp",
           name: "Agente de la Mort [P]",
-          description: `Réinitialise le temps de recharge de la compétence [Fin inexorable] dès que cette Championne tue un ennemi sous débuff ${DEBUFFS.HEX}. 
+          description: `Réinitialise le temps de recharge de la compétence [Fin inexorable] dès que cette Championne tue un ennemi sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
 Augmente l'ATQ de cette Championne de 5 % pour chaque ennemi sous débuff ${DEBUFFS.HEX}.`,
           isPassive: true,

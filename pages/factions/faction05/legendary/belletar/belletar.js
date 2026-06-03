@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Moment critique [P]",
-          description: `A 75 % de chances de réduire d'1 tour tous les temps de recharge de compétence d'un allié lorsqu'il est ranimé.
+          description: `A 75 % de chances de réduire d'1 tour tous les temps de recharge de compétence d'un allié lorsqu'il est ranimé.${RETURN}${RETURN}
 
 Une fois par tour, si un allié est tué, réduit d'1 tour les temps de recharge de toutes les compétences de ce Champion.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

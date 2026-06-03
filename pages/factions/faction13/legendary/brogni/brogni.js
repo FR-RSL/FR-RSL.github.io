@@ -17,7 +17,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poigne de Caverne",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis.${RETURN}${RETURN}
 
 Possède 75 % de chances de retirer 1 débuff aléatoire sur tous les alliés. Augmente la valeur des buffs ${BUFFS.SHIELD} sur tous les alliés de 30 % des dégâts infligés.`,
           damage: "6.6*ATQ",
@@ -44,9 +44,9 @@ Possède 75 % de chances de retirer 1 débuff aléatoire sur tous les alliés. A
           img: "assets/passif1.webp",
           name: "Redoute [P]",
           description: `
-            Lorsqu'un allié se trouvant sous buff <span class='gbt'>Bouclier</span>
-            se fait attaquer, renvoie sur l'assaillant 25% des degats infliges au <span class='gbt'>Bouclier</span>.
-            Soigne également cet allié de 25% des degats infliges au <span class='gbt'>Bouclier</span>.<br><br>
+            Lorsqu'un allié se trouvant sous buff <span class='gbt'>Bouclier</span>${RETURN}
+            se fait attaquer, renvoie sur l'assaillant 25% des degats infliges au <span class='gbt'>Bouclier</span>.${RETURN}
+            Soigne également cet allié de 25% des degats infliges au <span class='gbt'>Bouclier</span>.<br><br>${RETURN}
             Si plusieurs Champions de l'equipe disposent de cette compétence, une seule sera activee.
           `,
           isPassive: true,

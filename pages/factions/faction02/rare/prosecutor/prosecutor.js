@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Intenter une action",
-          description: `Attaque 3 fois un ennemi. Place un buff ${BUFFS.PRE} de 50 % sur cette Championne pendant 2 tours avant d'attaquer. 
+          description: `Attaque 3 fois un ennemi. Place un buff ${BUFFS.PRE} de 50 % sur cette Championne pendant 2 tours avant d'attaquer.${RETURN}${RETURN}
 
 Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "1.9*ATQ",

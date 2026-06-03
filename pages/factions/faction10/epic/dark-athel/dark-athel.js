@@ -21,8 +21,8 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Récolte de Tourment",
-          description: `Attaque tous les ennemis. Place, pendant 3 tours, un buff d'${BUFFS.SPD} de 30 % sur ce Champion si cette attaque tue 4 ennemis ou plus.
-Soigne ce Champion de 50 % de ses PV MAX si cette attaque tue 6 ennemis ou plus.
+          description: `Attaque tous les ennemis. Place, pendant 3 tours, un buff d'${BUFFS.SPD} de 30 % sur ce Champion si cette attaque tue 4 ennemis ou plus.${RETURN}
+Soigne ce Champion de 50 % de ses PV MAX si cette attaque tue 6 ennemis ou plus.${RETURN}
 Accorde un Tour Supplémentaire si cette attaque tue 10 ennemis ou plus.`,
           damage: "3.65*ATQ",
           cooldown: 5,

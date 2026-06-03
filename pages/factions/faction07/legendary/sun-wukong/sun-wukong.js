@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Bâton à miracles",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. 
+          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
-Si la cible est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. Chaque frappe ignorera également 50 % de la DÉF de la cible. Cette attaque ne peut pas passer en critique. 
+Si la cible est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. Chaque frappe ignorera également 50 % de la DÉF de la cible. Cette attaque ne peut pas passer en critique.${RETURN}${RETURN}
 
 Si la cible initiale survit, lui inflige un débuff ${DEBUFFS.SHEEP} pendant 1 tour. Il est impossible de bloquer ce débuff.`,
           damage: "5*ATQMultiplier: Remaining Damage Amount",

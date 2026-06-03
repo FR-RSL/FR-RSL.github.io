@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup de gourdin d'os",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 La première frappe a 30 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours. La seconde frappe a 30 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
           damage: "2.3*ATQ",
@@ -22,9 +22,9 @@ La première frappe a 30 % de chances de placer un débuff ${DEBUFFS.LEECH} pend
         {
           img: "assets/sort3.webp",
           name: "Tabassage de Main-jaune",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Réduit les Compteurs de Tour de tous les ennemis de 15 %. 
+Réduit les Compteurs de Tour de tous les ennemis de 15 %.${RETURN}${RETURN}
 
 A 50 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           damage: "3.3*ATQ",

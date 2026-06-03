@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Révélation",
-          description: `Attaque tous les ennemis. Possède 25 % de chances de retirer tous les buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} sur tous les ennemis. 
+          description: `Attaque tous les ennemis. Possède 25 % de chances de retirer tous les buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} sur tous les ennemis.${RETURN}${RETURN}
 
 Possède également 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis.`,
           damage: "3.8*ATQ",
@@ -23,7 +23,7 @@ Possède également 75 % de chances de retirer 1 buff aléatoire sur tous les en
         {
           img: "assets/sort3.webp",
           name: "Force focalisée",
-          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. 
+          description: `Attaque 2 fois un ennemi. Ignorera les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Réinitialise le compteur de tour de cette compétence si cette attaque tue un ennemi.`,
           damage: "2.9*ATQ",

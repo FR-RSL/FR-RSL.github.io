@@ -27,7 +27,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Bombardier fou [P]",
-          description: `Lorsque ce Champion est attaqué, possède 30 % de chances de placer sur l'assaillant un débuff ${DEBUFFS.BOMB} qui détonera après 2 tours. Se produit une fois par frappe.
+          description: `Lorsque ce Champion est attaqué, possède 30 % de chances de placer sur l'assaillant un débuff ${DEBUFFS.BOMB} qui détonera après 2 tours. Se produit une fois par frappe.${RETURN}${RETURN}
 
 Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur tous les ennemis lorsque ce Champion se fait tuer.`,
           isPassive: true,

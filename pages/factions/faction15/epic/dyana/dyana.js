@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Embuscade au clair de lune",
-          description: `Fait équipe avec 2 alliés aléatoires pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut. 
+          description: `Fait équipe avec 2 alliés aléatoires pour attaquer un seul ennemi. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.DEF}, ces attaques ignoreront 20 % de la DÉF de la cible.`,
           cooldown: 5,
@@ -22,7 +22,7 @@ Si la cible se trouve sous débuff ${DEBUFFS.DEF}, ces attaques ignoreront 20 % 
         {
           img: "assets/sort3.webp",
           name: "Blitz secret",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 2 tours. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, place un buff ${BUFFS.VEIL} sur tous les alliés pendant 1 tour.`,
           damage: "3.75*ATQ",

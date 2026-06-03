@@ -30,7 +30,7 @@ const championData = {
           name: "Ramper [P]",
           description: `${ACTIVE}
 
-Au début de chaque tour, remplit le Compteur de Tour de tous les alliés de 10 %.
+Au début de chaque tour, remplit le Compteur de Tour de tous les alliés de 10 %.${RETURN}${RETURN}
 
 ${PASSIVE}
 

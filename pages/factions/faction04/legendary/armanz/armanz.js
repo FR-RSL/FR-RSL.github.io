@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame de destinée",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 35 % de chances d'augmenter le temps de recharge d'une compétence active de 2 tours. 
+Possède 35 % de chances d'augmenter le temps de recharge d'une compétence active de 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au temps de recharge.`,
           damage: "4*ATQ",
@@ -16,7 +16,7 @@ Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au t
         {
           img: "assets/sort2.webp",
           name: "Plus grands succès",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Vole tout le Compteur de Tour de chaque cible, sauf les ennemis sous débuffs ${DEBUFFS.SHEEP}. Place également un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis ne se trouvant pas sous débuff ${DEBUFFS.SHEEP}.`,
           damage: "4.2*ATQ",
@@ -27,7 +27,7 @@ Vole tout le Compteur de Tour de chaque cible, sauf les ennemis sous débuffs ${
         {
           img: "assets/sort3.webp",
           name: "Pour mon prochain tour !",
-          description: `Place un débuff ${DEBUFFS.SHEEP} sur un ennemi pendant 1 tour. Il est impossible de bloquer ce débuff.
+          description: `Place un débuff ${DEBUFFS.SHEEP} sur un ennemi pendant 1 tour. Il est impossible de bloquer ce débuff.${RETURN}${RETURN}
 
 Ensuite, possède 75 % de chances de retirer tous les buffs de tous les ennemis. Remplit le Compteur de Tour de ce Champion de 5 % pour chaque buff retiré.`,
           cooldown: 5,
@@ -37,9 +37,9 @@ Ensuite, possède 75 % de chances de retirer tous les buffs de tous les ennemis.
         {
           img: "assets/passif1.webp",
           name: "Maître de cérémonie [P]",
-          description: `Dès qu'un débuff ${DEBUFFS.SHEEP} est retiré ou expire sur un ennemi, augmente au maximum le temps de recharge d'une compétence active aléatoire sur cet ennemi. 
+          description: `Dès qu'un débuff ${DEBUFFS.SHEEP} est retiré ou expire sur un ennemi, augmente au maximum le temps de recharge d'une compétence active aléatoire sur cet ennemi.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au temps de recharge.
+Remplit le Compteur de Tour de ce Champion de 10 % pour chaque tour ajouté au temps de recharge.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true

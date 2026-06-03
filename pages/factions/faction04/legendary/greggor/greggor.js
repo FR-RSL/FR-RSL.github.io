@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fendre la terre",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Réduit d'1 tour la durée de tous les buffs des ennemis, puis augmente d'1 tour la durée de tous les buffs des alliés. 
+Réduit d'1 tour la durée de tous les buffs des ennemis, puis augmente d'1 tour la durée de tous les buffs des alliés.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 20 % des PV MAX de ce Champion.`,
           damage: "3.8*DEF",
@@ -51,9 +51,9 @@ Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, �
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-defence.webp",
-  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%
+  description: `Augmente la statistique DEF des Alliés lors de toutes les Batailles de 25%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Barbares)
+(ne s'applique qu'à la Faction des Barbares)${RETURN}${RETURN}
 
 Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

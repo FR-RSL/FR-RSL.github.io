@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Barrière vacillante",
-          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 3 tours. 
+          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de ce Champion pendant 3 tours.${RETURN}${RETURN}
 
 S'il y a des alliés morts, place plutôt sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 3 tours. Il est impossible pour les ennemis ou les alliés de retirer, voler, transférer ou propager ce buff, et d'augmenter ou de réduire sa durée.`,
           damage: "0.25*HP",

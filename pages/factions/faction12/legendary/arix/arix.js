@@ -26,7 +26,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Cynique [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 5 % chaque fois qu'un allié inflige un coup critique. 
+          description: `Remplit le Compteur de Tour de ce Champion de 5 % chaque fois qu'un allié inflige un coup critique.${RETURN}${RETURN}
 
 Soigne ce Champion de 5 % de ses PV MAX chaque fois qu'un ennemi inflige un coup critique.`,
           isPassive: true,

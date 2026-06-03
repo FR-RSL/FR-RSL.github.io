@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Partenaire Mortelle",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque deux fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % pendant 3 tours sur la cible si cette attaque passe en critique.
+          description: `Place un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque deux fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % pendant 3 tours sur la cible si cette attaque passe en critique.${RETURN}${RETURN}
 
 [Ignorera 50 % de la DÉF de la cible quand Roméro se trouve dans la même équipe.]`,
           damage: "3*ATQ",

@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Comète ardente",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe transfère un débuff aléatoire de ce Champion sur la cible. 
+Chaque frappe transfère un débuff aléatoire de ce Champion sur la cible.${RETURN}${RETURN}
 
 Si ce Champion est affligé d'un débuff lorsqu'il se fait attaquer, contre-attaque avec cette compétence.`,
           damage: "0.14*PV",
@@ -20,7 +20,7 @@ Si ce Champion est affligé d'un débuff lorsqu'il se fait attaquer, contre-atta
         {
           img: "assets/sort2.webp",
           name: "Salve calculée",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.FEAR}, un débuff ${DEBUFFS.CDAM} de 25 % et un débuff ${DEBUFFS.CRATE} de 30 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ces débuffs pour les ennemis qui sont déjà affligés de 2 débuffs ou plus.`,
           damage: "0.3*PV",
@@ -36,7 +36,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.FEAR}, un débuff ${DEBUFFS.CDA
         {
           img: "assets/sort3.webp",
           name: "Finis-les",
-          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Ignorera au lieu de ça 50 % de la DÉF de la cible si cette dernière est affligée de 2 débuffs ou plus. 
+          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Ignorera au lieu de ça 50 % de la DÉF de la cible si cette dernière est affligée de 2 débuffs ou plus.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours si cette attaque tue un ennemi.`,
           damage: "0.34*PV",
@@ -50,7 +50,7 @@ Place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours si cette att
         {
           img: "assets/passif1.webp",
           name: "L'inflexible [P]",
-          description: `Dès qu'un ennemi résiste à une tentative de débuffs de ce Champion, il est impossible de résister au prochain débuff placé par ce Champion. 
+          description: `Dès qu'un ennemi résiste à une tentative de débuffs de ce Champion, il est impossible de résister au prochain débuff placé par ce Champion.${RETURN}${RETURN}
 
 Chaque débuff placé par ce Champion augmente ses PV MAX de 3 % (s'accumule jusqu'à 30 %).`,
           isPassive: true,

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Défendre le Nid",
-          description: `Place sur un allié un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours, puis un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour. 
+          description: `Place sur un allié un buff ${BUFFS.ALLY_PROTECT} de 50 % pendant 2 tours, puis un buff ${BUFFS.BLOCK_DEBUFFS} pendant 1 tour.${RETURN}${RETURN}
 
 Place également sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 2 tours.`,
           cooldown: 5,

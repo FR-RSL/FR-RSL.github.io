@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Charge de Beau-Sabot",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff placé par cette compétence.`,
           damage: "4.1*ATQ",
@@ -23,7 +23,7 @@ Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff plac
         {
           img: "assets/sort3.webp",
           name: "Danse guerrière",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
           cooldown: 5,

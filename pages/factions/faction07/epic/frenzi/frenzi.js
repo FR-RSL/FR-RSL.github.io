@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mâchoires de flamme",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. 
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
           damage: "1.8*DEF",
@@ -23,7 +23,7 @@ Remplit le Compteur de Tour de cette Championne de 10 % pour chaque débuff ${DE
         {
           img: "assets/sort3.webp",
           name: "Ricanement vexant",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.DEF} de 60 % sur cette Championne pendant 2 tours.`,
           damage: "3.8*DEF",
@@ -34,7 +34,7 @@ Place également un buff ${BUFFS.DEF} de 60 % sur cette Championne pendant 2 tou
         {
           img: "assets/passif1.webp",
           name: "Rempart grillant [P]",
-          description: `Augmente la DÉF de cette Championne de 2 % chaque fois qu'un débuff ${DEBUFFS.BURN} est activé sur les ennemis (s'accumule jusqu'à 20 %). 
+          description: `Augmente la DÉF de cette Championne de 2 % chaque fois qu'un débuff ${DEBUFFS.BURN} est activé sur les ennemis (s'accumule jusqu'à 20 %).${RETURN}${RETURN}
 
 Se réinitialise à chaque round.`,
           isPassive: true

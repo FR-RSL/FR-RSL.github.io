@@ -15,7 +15,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Étreinte Seigneuriale",
-          description: `Retire tous les débuffs sur une cible alliée, puis place un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours, avant de soigner cet allié de 75 % de ses PV MAX.
+          description: `Retire tous les débuffs sur une cible alliée, puis place un buff ${BUFFS.BLOCK_DEBUFFS} de 2 tours, avant de soigner cet allié de 75 % de ses PV MAX.${RETURN}${RETURN}
 
 Soigne tous les autres alliés de 20 % de leurs PV Max, puis remplit de 15 % leurs Compteurs de Tour si la cible est totalement soignée par cette Compétence.`,
           cooldown: 3,
@@ -28,7 +28,7 @@ Soigne tous les autres alliés de 20 % de leurs PV Max, puis remplit de 15 % leu
         {
           img: "assets/sort3.webp",
           name: "Agresser",
-          description: `Possède 75 % de chances de retirer tous les buffs sur tous les ennemis, puis réduit de 10 % le Compteur de Tour de tous les ennemis et remplit de 10 % le Compteur de Tour de tous les alliés. 
+          description: `Possède 75 % de chances de retirer tous les buffs sur tous les ennemis, puis réduit de 10 % le Compteur de Tour de tous les ennemis et remplit de 10 % le Compteur de Tour de tous les alliés.${RETURN}${RETURN}
 
 Réduit de 20 % le Compteur de Tour de tous les ennemis et remplit de 20 % le Compteur de Tour de tous les alliés si 5 buffs, ou plus, ont été retirés.`,
           cooldown: 4,

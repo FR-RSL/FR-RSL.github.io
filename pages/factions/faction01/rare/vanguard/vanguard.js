@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Prise d'Élan",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour si la DÉF actuelle de la cible est inférieure à celle de ce Champion.`,
           damage: "4.3*ATQ",
@@ -14,7 +14,7 @@ Place un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour si la DÉF actuelle de
         {
           img: "assets/sort2.webp",
           name: "Courroux Inéluctable",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place un débuff de ${DEBUFFS.PROVOKE} d'1 tour si la cible souffre d'un débuff de ${DEBUFFS.DEF}.`,
           damage: "6.3*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bain d'Azoth",
-          description: `Attaque 2 fois un ennemi. Chaque frappe soigne cette Championne de 2 % de ses PV MAX. 
+          description: `Attaque 2 fois un ennemi. Chaque frappe soigne cette Championne de 2 % de ses PV MAX.${RETURN}${RETURN}
 
 Chaque frappe possède également 20 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
           damage: "0.12*HP",
@@ -23,7 +23,7 @@ Chaque frappe possède également 20 % de chances de placer un débuff ${DEBUFFS
         {
           img: "assets/sort3.webp",
           name: "Mousse vivifiante",
-          description: `Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 1 tour.
+          description: `Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 1 tour.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des PV MAX de cette Championne pendant 2 tours.`,
           cooldown: 6,

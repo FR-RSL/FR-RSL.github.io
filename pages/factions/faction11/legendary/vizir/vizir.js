@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames Maudites",
-          description: `Attaque 3 fois un ennemi.
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe offre 35 % de chances d'augmenter d'1 tour la durée de tous les débuffs.`,
           damage: "1.3*ATQ",
@@ -13,7 +13,7 @@ Chaque frappe offre 35 % de chances d'augmenter d'1 tour la durée de tous les d
         {
           img: "assets/sort2.webp",
           name: "Maître de la Détresse",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 50 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.BLOCK_BUFFS}, un débuff de ${DEBUFFS.ATK} de 50 % et un débuff de ${DEBUFFS.HEALS} de 100 %.`,
           damage: "2.7*ATQ",
@@ -23,7 +23,7 @@ Chaque frappe possède 50 % de chances de placer, pendant 2 tours, un débuff de
         {
           img: "assets/sort3.webp",
           name: "Vizir des Poisons",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Applique un effet de [Propagation de Débuff], prenant 2 débuffs aléatoires sur la cible pour les placer sur tous les ennemis.`,
           damage: "6.6*ATQ",

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cadeau de chaman",
-          description: `Soigne tous tes alliés à hauteur de 10 % des PV MAX de ce Champion. 
+          description: `Soigne tous tes alliés à hauteur de 10 % des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 6,

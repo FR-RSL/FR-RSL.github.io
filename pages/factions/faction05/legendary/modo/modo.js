@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Batteur de crâne",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
           damage: "1.8*ATQ",
@@ -14,9 +14,9 @@ Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 t
         {
           img: "assets/sort2.webp",
           name: "Bruit assourdissant",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.STUN}. Si Esmé la Danseuse se trouve dans la même équipe, placera toujours une frappe supplémentaire et ignorera 20 % de la DÉF de chaque ennemi.`,
           damage: "3.8*ATQ",
@@ -27,9 +27,9 @@ Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.STUN}. 
         {
           img: "assets/sort3.webp",
           name: "Carillon de fracture",
-          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD}. 
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
-Les dégâts augmentent de 75 % lors d'une attaque sur des ennemis sous buffs ${BUFFS.STONE_SKIN}. 
+Les dégâts augmentent de 75 % lors d'une attaque sur des ennemis sous buffs ${BUFFS.STONE_SKIN}.${RETURN}${RETURN}
 
 Si cette attaque retire un ou plusieurs buffs ${BUFFS.STONE_SKIN}, accorde un Tour supplémentaire à ce Champion.`,
           damage: "4*ATQ",
@@ -40,7 +40,7 @@ Si cette attaque retire un ou plusieurs buffs ${BUFFS.STONE_SKIN}, accorde un To
         {
           img: "assets/passif1.webp",
           name: "Compagnon adoré [P]",
-          description: `Dès que ce Champion tue un ennemi, place un débuff ${DEBUFFS.STUN} pendant 2 tours sur l'ennemi qui a le Compteur de Tour le plus élevé. Se produit une fois par compétence. 
+          description: `Dès que ce Champion tue un ennemi, place un débuff ${DEBUFFS.STUN} pendant 2 tours sur l'ennemi qui a le Compteur de Tour le plus élevé. Se produit une fois par compétence.${RETURN}${RETURN}
 
 Si Esmé la Danseuse se trouve dans la même équipe, les compétences de ce Champion ignoreront 50 % de la RÉS de chaque ennemi. De plus, si Esmé la Danseuse se trouve dans la même équipe, place une pile d'${BUFFS.INTERCEPT} sur ce Champion au début de son tour.`,
           isPassive: true

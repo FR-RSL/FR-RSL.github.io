@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Baiser du Soleil",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour. Place un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV pendant 1 tour.`,
           damage: "4.1*DEF",
@@ -14,7 +14,7 @@ Place un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour. Place un bu
         {
           img: "assets/sort2.webp",
           name: "Souffrance Radiante",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Applique un effet de [Propagation de Débuffs], qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis.`,
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Applique un effet de ${PROP_DEBUFF}, qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis.`,
           damage: "5.6*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -31,7 +31,7 @@ Place un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 1 tour. Place un bu
         {
           img: "assets/passif1.webp",
           name: "Inviolable [P]",
-          description: `Au début de chaque tour, retire un débuff aléatoire à tous les alliés. 
+          description: `Au début de chaque tour, retire un débuff aléatoire à tous les alliés.${RETURN}${RETURN}
 
 Sinon, retire 2 débuffs aléatoires aux alliés sous buffs ${BUFFS.HEALS}.`,
           isPassive: true

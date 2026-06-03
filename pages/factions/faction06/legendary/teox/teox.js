@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tactiques de guérilla",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-L'allié ayant les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. 
+L'allié ayant les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.${RETURN}${RETURN}
 
 Les dégâts infligés par ce Champion et l'allié rejoignant l'attaque augmenteront de 10 % pour chaque débuff sur la cible (s'accumule jusqu'à 100 %).`,
           damage: "2*ATQ",
@@ -16,9 +16,9 @@ Les dégâts infligés par ce Champion et l'allié rejoignant l'attaque augmente
         {
           img: "assets/sort2.webp",
           name: "Punition draconique",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 10 % de la DÉF de la cible pour chaque débuff sur la cible (s'accumule jusqu'à 50 %). Chaque frappe augmentera également l'ATQ de ce Champion de 10 % (s'accumule jusqu'à 50 %). 
+Chaque frappe ignorera 10 % de la DÉF de la cible pour chaque débuff sur la cible (s'accumule jusqu'à 50 %). Chaque frappe augmentera également l'ATQ de ce Champion de 10 % (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "2.1*ATQ",
@@ -29,9 +29,9 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
         {
           img: "assets/sort3.webp",
           name: "Courroux de la légion",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.
+Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Place une frappe supplémentaire sur les ennemis affligés de quelconques débuffs.`,
           damage: "4*ATQ",
@@ -60,9 +60,9 @@ Place une frappe supplémentaire sur les ennemis affligés de quelconques débuf
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-attack.webp",
-  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Homme Lézards)
+(ne s'applique qu'à la Faction des Homme Lézards)${RETURN}${RETURN}
 
 Augmente la statistique PRÉ des Alliés lors de toutes les Batailles de 40`,
 };

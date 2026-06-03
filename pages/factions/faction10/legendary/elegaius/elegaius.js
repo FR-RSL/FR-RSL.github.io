@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Arrêt complet",
-          description: `Attaque un ennemi. Place les compétences de la cible en recharge. Place également un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.
+          description: `Attaque un ennemi. Place les compétences de la cible en recharge. Place également un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.${RETURN}${RETURN}
 
 S'il y a des Champions ennemis qui ont la même Affinité que la cible initiale, place également toutes leurs compétences en recharge et leur inflige un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
           damage: "0.27*HP",
@@ -23,7 +23,7 @@ S'il y a des Champions ennemis qui ont la même Affinité que la cible initiale,
         {
           img: "assets/sort3.webp",
           name: "Rage fantomatique",
-          description: `Attaque tous les ennemis. A 75 % de chances de retirer tous les buffs. 
+          description: `Attaque tous les ennemis. A 75 % de chances de retirer tous les buffs.${RETURN}${RETURN}
 
 A également 75 % de chances de réduire les Compteurs de Tour de tous les ennemis de 20 %. Réduit le Compteur de Tour de chaque ennemi de 10 % supplémentaires pour chaque buff retiré.`,
           damage: "0.2*HP",
@@ -34,9 +34,9 @@ A également 75 % de chances de réduire les Compteurs de Tour de tous les ennem
         {
           img: "assets/passif1.webp",
           name: "Rejetée par la Mort [P]",
-          description: `Empêche la mort de cette Championne et la garde vivante avec 1 PV lorsqu'elle est frappée par un coup fatal.
+          description: `Empêche la mort de cette Championne et la garde vivante avec 1 PV lorsqu'elle est frappée par un coup fatal.${RETURN}${RETURN}
 
-Si cette compétence empêche la mort de cette Championne, elle la soigne de 30 % de ses PV MAX, remplit son Compteur de Tour de 30 % et lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % de ses PV MAX pendant 2 tours.
+Si cette compétence empêche la mort de cette Championne, elle la soigne de 30 % de ses PV MAX, remplit son Compteur de Tour de 30 % et lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % de ses PV MAX pendant 2 tours.${RETURN}${RETURN}
 
 N'empêchera pas la mort de cette Championne si elle est affligée d'un débuff ${DEBUFFS.HEALS}.`,
           cooldown: 5,

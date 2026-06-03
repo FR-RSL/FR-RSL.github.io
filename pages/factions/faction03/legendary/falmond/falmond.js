@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lamedeuil",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 50 % des dégâts infligés. S'il y a un excédent de soin, place un buff ${BUFFS.SHIELD} équivalent au soin excédentaire sur ce Champion pendant 2 tours. 
+Soigne ce Champion à hauteur de 50 % des dégâts infligés. S'il y a un excédent de soin, place un buff ${BUFFS.SHIELD} équivalent au soin excédentaire sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Attaquera au lieu de ça avec la compétence Courage ardent si la cible est issue de l'Alliance des Corrompus.`,
           damage: "3.5*ATQ",
@@ -16,7 +16,7 @@ Attaquera au lieu de ça avec la compétence Courage ardent si la cible est issu
         {
           img: "assets/sort2.webp",
           name: "Au nom de Lumaya",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff et débuff sur la cible. Ignorera 25 % de la DÉF des cibles qui ne disposent pas de buffs.`,
           damage: "3.7*ATQ",
@@ -54,9 +54,9 @@ Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff 
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-attack.webp",
-  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%
+  description: `Augmente la statistique ATQ des Alliés lors de toutes les Batailles de 30%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction de l'Ordre Sacré)
+(ne s'applique qu'à la Faction de l'Ordre Sacré)${RETURN}${RETURN}
 
 Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 15%`,
 };

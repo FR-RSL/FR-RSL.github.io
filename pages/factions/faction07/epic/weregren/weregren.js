@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Assaut de terreur",
-          description: `Attaque 3 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}. 
+          description: `Attaque 3 fois un ennemi. Chaque frappe ignorera les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour si cette attaque tue un ennemi. Place également un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
           damage: "2*ATQ",

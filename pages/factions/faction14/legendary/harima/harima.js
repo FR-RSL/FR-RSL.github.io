@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Punition purgative",
-          description: `Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 5 % (s'accumule jusqu'à 30 %). Chaque frappe augmente également la DÉF de cette Championne de 5 % (s'accumule jusqu'à 100 %). 
+          description: `Attaque 3 fois un ennemi. Chaque frappe réduit la DÉF de la cible de 5 % (s'accumule jusqu'à 30 %). Chaque frappe augmente également la DÉF de cette Championne de 5 % (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
 
 Active instantanément la compétence [Terreur céleste] si cette compétence tue un ennemi.`,
           damage: "1.6*DEF",
@@ -43,9 +43,9 @@ Active instantanément la compétence [Terreur céleste] si cette compétence tu
         {
           img: "assets/passif1.webp",
           name: "Tueuse de démons [P]",
-          description: `Les effets Ignorer la DÉF de l'ennemi sont réduits de 50 %. 
+          description: `Les effets Ignorer la DÉF de l'ennemi sont réduits de 50 %.${RETURN}${RETURN}
 
-Les Champions de la Faction des Rejetons Démoniaques ne peuvent pas infliger de coups critiques à cette Championne. 
+Les Champions de la Faction des Rejetons Démoniaques ne peuvent pas infliger de coups critiques à cette Championne.${RETURN}${RETURN}
 
 Cette Championne ne peut pas placer de coups faibles sur les Champions de la Faction des Rejetons Démoniaques.`,
           isPassive: true,

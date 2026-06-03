@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Je t'attends !",
-          description: `Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. Possède 80 % de chances de placer un buff ${BUFFS.COUNTER} de 2 tours sur ce Champion.
+          description: `Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. Possède 80 % de chances de placer un buff ${BUFFS.COUNTER} de 2 tours sur ce Champion.${RETURN}${RETURN}
 
 La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF. Il est impossible de retirer ce buff.`,
           cooldown: 6,

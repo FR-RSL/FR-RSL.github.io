@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Dévoiler",
-          description: `Retire tous les buffs ${BUFFS.DEF} sur tous les ennemis, puis attaque tous les ennemis. 
+          description: `Retire tous les buffs ${BUFFS.DEF} sur tous les ennemis, puis attaque tous les ennemis.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge de Dévoiler pour chaque ennemi tué par cette compétence.`,
           damage: "3.6*ATQ",

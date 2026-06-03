@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Spores de Vigueur",
-          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés. 
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés.${RETURN}${RETURN}
 
 Soigne également l'allié ayant le moins de PV à hauteur de 10 % de ses PV MAX. Ce soin n'affectera pas ce Champion.`,
           damage: "4.2*ATQ",
@@ -14,7 +14,7 @@ Soigne également l'allié ayant le moins de PV à hauteur de 10 % de ses PV MAX
         {
           img: "assets/sort2.webp",
           name: "Privilège Fongique",
-          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 2 tours, puis place sur tous les alliés sauf ce Champion un buff ${BUFFS.ALLY_PROTECT} de 25 % pendant 2 tours. 
+          description: `Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 20 % de ses PV MAX pendant 2 tours, puis place sur tous les alliés sauf ce Champion un buff ${BUFFS.ALLY_PROTECT} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Soignera également tous les alliés sauf ce Champion à hauteur de 10 % de leurs PV MAX.`,
           cooldown: 4,

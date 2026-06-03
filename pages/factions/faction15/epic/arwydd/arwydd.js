@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tornade d'herbes",
-          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les débuffs sur cette Championne. 
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les débuffs sur cette Championne.${RETURN}${RETURN}
 
 Possède 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
           damage: "4.2*ATQ",
@@ -23,7 +23,7 @@ Possède 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
         {
           img: "assets/sort3.webp",
           name: "Bond de hache",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Les dégâts augmentent de 30 % si cette Championne n'est affligée d'aucun débuff actif. Ignorera également les buffs ${BUFFS.UNKILLABLE} si cette Championne n'est affligée d'aucun débuff actif.`,
           damage: "6.2*ATQ",

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fléau Lourd",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}
 Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
           damage: "1.5*DEF",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
@@ -13,7 +13,7 @@ Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} 
         {
           img: "assets/sort2.webp",
           name: "Contact Fulgurant",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}
 Possède 75 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
           damage: "5.5*DEF",
           cooldown: 4,

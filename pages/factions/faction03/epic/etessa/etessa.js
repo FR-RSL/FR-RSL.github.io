@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coup du Lapin",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "5.9*ATQ",
@@ -23,7 +23,7 @@ Possède 75 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Purge-Démon",
-          description: `Attaque 1 ennemi avec 2 alliés choisis au hasard.
+          description: `Attaque 1 ennemi avec 2 alliés choisis au hasard.${RETURN}${RETURN}
 
 Les dégâts infligés par ce Champion et tous les alliés rejoignant cette attaque augmenteront de 20 % si la cible se trouve sous débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION}. Les alliés rejoignant l'attaque utilisent leurs compétences par défaut.`,
           cooldown: 5,

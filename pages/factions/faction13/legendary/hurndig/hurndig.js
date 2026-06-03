@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Frappe d'Inertie",
-          description: `Attaque un ennemi. Vide totalement le Compteur de Tour de la cible. 
+          description: `Attaque un ennemi. Vide totalement le Compteur de Tour de la cible.${RETURN}${RETURN}
 
 Attaquera également tous les ennemis si la première attaque passe en critique. Cette attaque de zone possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Après l'attaque, placera également un débuff ${DEBUFFS.BURN} pendant 2 tours sur les ennemis dont les Compteurs de Tour sont inférieurs à 30 %.`,
           damage: "6.2*ATQMultiplier: 4*ATQ",
@@ -32,7 +32,7 @@ Attaquera également tous les ennemis si la première attaque passe en critique.
         {
           img: "assets/passif1.webp",
           name: "Guindé [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 10 % chaque fois qu'il se fait frapper. Se produit une fois par frappe. 
+          description: `Remplit le Compteur de Tour de ce Champion de 10 % chaque fois qu'il se fait frapper. Se produit une fois par frappe.${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de ce Champion de 20 % lorsqu'un ennemi meurt.`,
           isPassive: true

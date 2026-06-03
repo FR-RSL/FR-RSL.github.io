@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Insurmontable",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Il est impossible de résister à ces débuffs lorsque Zavia se trouve dans la même équipe.
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Il est impossible de résister à ces débuffs lorsque Zavia se trouve dans la même équipe.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           damage: "4.2*ATQ",
@@ -32,9 +32,9 @@ Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`
         {
           img: "assets/sort4.webp",
           name: "Partenaire Tactique",
-          description: `Active la compétence Surarmement de ce Champion.
+          description: `Active la compétence Surarmement de ce Champion.${RETURN}${RETURN}
 
-Active également la compétence Pluie de Poison de Zavia.
+Active également la compétence Pluie de Poison de Zavia.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Zavia se trouve dans la même équipe.]`,
           damage: "Remaining Damage Amount",

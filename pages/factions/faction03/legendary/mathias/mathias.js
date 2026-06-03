@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Assombrir le ciel",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances de retirer un buff aléatoire à la cible. 
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances de retirer un buff aléatoire à la cible.${RETURN}${RETURN}
 
 Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infligés.`,
           damage: "0.07*HP",
@@ -14,7 +14,7 @@ Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infl
         {
           img: "assets/sort2.webp",
           name: "Tourbillon mortel",
-          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis qui ne bénéficient d'aucun buff. Chaque frappe supplémentaire ignorera 20 % de la DÉF de la cible. 
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis qui ne bénéficient d'aucun buff. Chaque frappe supplémentaire ignorera 20 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Chaque frappe soigne également tous les alliés à hauteur de 20 % des dégâts infligés.`,
           damage: "0.2*HP",
@@ -25,7 +25,7 @@ Chaque frappe soigne également tous les alliés à hauteur de 20 % des dégâts
         {
           img: "assets/sort3.webp",
           name: "Affrontez le Fléau-noir !",
-          description: `Place un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours. 
+          description: `Place un buff ${BUFFS.RES} de 50 % et un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.TAUNT} sur ce Champion pendant 2 tours.`,
           cooldown: 6,

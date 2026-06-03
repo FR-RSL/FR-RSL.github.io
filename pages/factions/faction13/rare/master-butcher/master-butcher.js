@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Échange de Chaleur [P]",
-          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés de la quantité de dégâts subis.
+          description: `Lorsque ce Champion se fait attaquer, soigne tous les alliés de la quantité de dégâts subis.${RETURN}
 [Ne fonctionne pas contre les Boss.]`,
           cooldown: 3,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],

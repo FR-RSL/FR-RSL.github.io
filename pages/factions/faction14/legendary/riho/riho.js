@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Absorption",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place pendant 1 tour un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV. Place également pendant 1 tour un buff ${BUFFS.HEALS} de 7,5 % sur tous les alliés ayant 30 % de PV ou moins.`,
           damage: "4.3*ATQ",
@@ -45,7 +45,7 @@ Place pendant 1 tour un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins 
         {
           img: "assets/passif1.webp",
           name: "Renvoi [P]",
-          description: `Lorsque ce Champion reçoit des débuffs, les retourne de ce Champion vers l'assaillant.
+          description: `Lorsque ce Champion reçoit des débuffs, les retourne de ce Champion vers l'assaillant.${RETURN}${RETURN}
 
 [Ne retournera pas les débuffs impossibles à retirer.]`,
 		  cooldown: 3,

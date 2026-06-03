@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Meute spectrale",
-          description: `Attaque 3 fois un ennemi. 
+          description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
           damage: "DEF*1.05",
@@ -14,7 +14,7 @@ Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pend
         {
           img: "assets/sort2.webp",
           name: "Racines fantomatiques",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "DEF*3",

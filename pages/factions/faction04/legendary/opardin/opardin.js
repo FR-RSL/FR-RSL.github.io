@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Paternel [P]",
-          description: `Chaque fois qu'un buff ${BUFFS.HEALS} soigne un allié, remplit le Compteur de Tour de cet allié de 10 %.
+          description: `Chaque fois qu'un buff ${BUFFS.HEALS} soigne un allié, remplit le Compteur de Tour de cet allié de 10 %.${RETURN}${RETURN}
 
 Si plusieurs Champions dans l'équipe disposent de cette Compétence, une seule sera activée.`,
           isPassive: true

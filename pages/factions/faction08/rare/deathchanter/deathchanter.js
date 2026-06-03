@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tyran",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Les dégâts augmentent en fonction des PV actuels de ce Champion.`,
           damage: "(4.9+2*Current HP %)*ATQ",

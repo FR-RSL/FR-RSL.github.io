@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Pluie de lances",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 15 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours. 
+Possède 15 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Si les PV de ce Champion sont pleins, les chances passent à 30 %.`,
           damage: "2.9*ATQ",
@@ -16,7 +16,7 @@ Si les PV de ce Champion sont pleins, les chances passent à 30 %.`,
         {
           img: "assets/sort2.webp",
           name: "Bannière de ralliement",
-          description: `Place un buff ${BUFFS.TAUNT} sur une cible alliée pendant 2 tours. 
+          description: `Place un buff ${BUFFS.TAUNT} sur une cible alliée pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

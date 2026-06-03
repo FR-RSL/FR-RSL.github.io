@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame Tempête de Sable",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
           damage: "3*ATQ",
@@ -22,7 +22,7 @@ Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 t
         {
           img: "assets/sort3.webp",
           name: "Tactiques d'Embuscade",
-          description: `Place un buff ${BUFFS.VEIL} d'1 tour sur un allié, ainsi qu'un buff d'${BUFFS.ATK} de 25 % de 2 tours.
+          description: `Place un buff ${BUFFS.VEIL} d'1 tour sur un allié, ainsi qu'un buff d'${BUFFS.ATK} de 25 % de 2 tours.${RETURN}${RETURN}
 
 Place également un buff de ${BUFFS.SHIELD} sur ce Champion, équivalent à 20 % de ses PV MAX, pendant 2 tours.`,
           cooldown: 4,

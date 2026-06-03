@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mauvaise Graine",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours. 
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.${RETURN}${RETURN}
 
 Ignorera les buffs ${BUFFS.SHIELD}.`,
           damage: "6*ATQ",

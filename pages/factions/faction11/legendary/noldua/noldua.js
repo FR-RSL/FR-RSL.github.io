@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe d'ombre",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 50 % de chances de placer un débuff ${DEBUFFS.UNFEEBLE} pendant 2 tours. Si la cible est un Boss, place au lieu de cela un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Il est impossible de résister à ce débuff si Solanar l'étincelant se trouve dans la même équipe.`,
           damage: "6*ATQ",
@@ -13,9 +13,9 @@ A 50 % de chances de placer un débuff ${DEBUFFS.UNFEEBLE} pendant 2 tours. Si l
         {
           img: "assets/sort2.webp",
           name: "Purge ombrale",
-          description: `A 75 % de chances de retirer tous les buffs sur tous les ennemis. Il est impossible de résiste à cet effet si Solanar l'étincelant se trouve dans la même équipe. 
+          description: `A 75 % de chances de retirer tous les buffs sur tous les ennemis. Il est impossible de résiste à cet effet si Solanar l'étincelant se trouve dans la même équipe.${RETURN}${RETURN}
 
-Ensuite, a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff si Solanar l'étincelant se trouve dans la même équipe. 
+Ensuite, a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff si Solanar l'étincelant se trouve dans la même équipe.${RETURN}${RETURN}
 
 Si Solanar l'étincelant se trouve dans la même équipe, place également un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -24,7 +24,7 @@ Si Solanar l'étincelant se trouve dans la même équipe, place également un bu
         {
           img: "assets/sort3.webp",
           name: "Grâce de fleur de lune",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Si Solanar l'étincelant se trouve dans la même équipe et qu'il est mort, le ranime au lieu de cela avec 100 % de Compteur de Tour. 
+          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Si Solanar l'étincelant se trouve dans la même équipe et qu'il est mort, le ranime au lieu de cela avec 100 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de cette Championne pendant 2 tours.`,
           cooldown: 6,

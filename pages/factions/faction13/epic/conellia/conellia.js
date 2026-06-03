@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Paix des Profondeurs",
-          description: `Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. 
+          description: `Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -24,9 +24,9 @@ Lorsqu'un ennemi perd un débuff ${DEBUFFS.SLEEP} placé par cette Compétence, 
         {
           img: "assets/sort3.webp",
           name: "Repos Régénérant",
-          description: `Place un débuff ${DEBUFFS.SLEEP} sur un allié pendant 1 tour. 
+          description: `Place un débuff ${DEBUFFS.SLEEP} sur un allié pendant 1 tour.${RETURN}${RETURN}
 
-Soigne cet allié de 50 % de ses PV Max, puis remplit son Compteur de Tour de 50 % lorsque le débuff ${DEBUFFS.SLEEP} expire ou est retiré.
+Soigne cet allié de 50 % de ses PV Max, puis remplit son Compteur de Tour de 50 % lorsque le débuff ${DEBUFFS.SLEEP} expire ou est retiré.${RETURN}${RETURN}
 
 Soigne cet allié de 100 % et remplit complètement son Compteur de Tour si le débuff ${DEBUFFS.SLEEP} est perdu à cause de dégâts infligés par un ennemi.`,
           cooldown: 4,

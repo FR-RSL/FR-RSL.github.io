@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Rite Renaissance [P]",
-          description: `Place, au début de chaque round et pendant 2 tours, un buff ${BUFFS.REVIVE_ON_DEATH} sur ce Champion.
+          description: `Place, au début de chaque round et pendant 2 tours, un buff ${BUFFS.REVIVE_ON_DEATH} sur ce Champion.${RETURN}${RETURN}
 
 Place, pendant 1 tour, un buff ${BUFFS.REVIVE_ON_DEATH} sur ce Champion lorsque ce Champion tue un ennemi avec un coup critique. [Ne peut pas se produire avec les Bébés Araignées.]`,
           isPassive: true

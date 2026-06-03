@@ -32,7 +32,7 @@ const championData = {
 			name: "Fervents serviteurs",
 			description: `${ACTIVE}
 
-Place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.
+Place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -46,7 +46,7 @@ Lorsqu'un buff ${BUFFS.BLOCK_DAMAGE} placé sur un allié par ce Champion est re
         {
         	img: "assets/passif1.webp",
         	name: "Festin d'agonie [P]",
-        	description: `Augmente la DÉF de ce Champion de 5 % pour chaque allié sous buff ${BUFFS.BLOCK_DAMAGE}.
+        	description: `Augmente la DÉF de ce Champion de 5 % pour chaque allié sous buff ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
 Contre-attaque avec la compétence par défaut dès qu'un allié se fait frapper lorsqu'il est sous buff ${BUFFS.BLOCK_DAMAGE}. Ne peut survenir qu'une fois par tour ennemi.`,
           	isPassive: true,

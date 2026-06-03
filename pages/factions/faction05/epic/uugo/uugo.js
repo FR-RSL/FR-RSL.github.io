@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Infusion d'Uugo",
-          description: `Retire tous les débuffs ${DEBUFFS.HEALS} sur tous les alliés, retire 1 débuff aléatoire sur tous les alliés, puis soigne tous les alliés de 20 % des PV MAX de ce Champion.
+          description: `Retire tous les débuffs ${DEBUFFS.HEALS} sur tous les alliés, retire 1 débuff aléatoire sur tous les alliés, puis soigne tous les alliés de 20 % des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Si tous les alliés sont morts, les ranime avec 50 % de leurs PV, puis remplit leurs Compteurs de Tour de 50 %.`,
           cooldown: 6,

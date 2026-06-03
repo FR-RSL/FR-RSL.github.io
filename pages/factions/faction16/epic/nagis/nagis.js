@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Attraper une proie",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 40 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "3.5*DEF",
@@ -13,9 +13,9 @@ A 40 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
         {
           img: "assets/sort2.webp",
           name: "Purification des marées",
-          description: `Retire tous les débuffs de ce Champion et d'une seule cible alliée. 
+          description: `Retire tous les débuffs de ce Champion et d'une seule cible alliée.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.ATK} de 50 % sur cette cible pendant 2 tours. 
+Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.ATK} de 50 % sur cette cible pendant 2 tours.${RETURN}${RETURN}
 
 Remplit ensuite de 15 % les Compteurs de Tour de ce Champion et de la cible alliée.`,
           cooldown: 6,
@@ -24,7 +24,7 @@ Remplit ensuite de 15 % les Compteurs de Tour de ce Champion et de la cible alli
         {
           img: "assets/sort3.webp",
           name: "Vague du serpent de mer",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 80 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. A également 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "4*DEF",

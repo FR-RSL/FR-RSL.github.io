@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Carcasse Invincible",
-          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. 
+          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour.${RETURN}
 Place un buff d'${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % sur tous les alliés, sauf sur ce Champion.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],

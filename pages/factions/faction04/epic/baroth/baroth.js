@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Haches Serpents",
-          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours et 75 % de chances de retirer les buffs ${BUFFS.ATK} sur la cible.
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours et 75 % de chances de retirer les buffs ${BUFFS.ATK} sur la cible.${RETURN}${RETURN}
 
 La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours et 75 % de chances de retirer les buffs ${BUFFS.DEF} sur la cible.`,
           damage: "0.18*HP",

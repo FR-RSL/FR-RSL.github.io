@@ -32,9 +32,9 @@ const championData = {
           name: "Revenant [P]",
           description: `${PASSIVE}
 
-Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 75 %.
+Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 75 %.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 50 %.
+Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 50 %.${RETURN}${RETURN}
 
 ${ACTIVE}
 

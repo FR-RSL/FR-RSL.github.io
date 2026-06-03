@@ -30,9 +30,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Stoïcisme [P]",
-          description: `Les dégâts infligés par ce Champion ne peuvent pas être réduits par les Compétences Passives ou les Maîtrises des ennemis, sauf par les Compétences Passives des Boss. 
+          description: `Les dégâts infligés par ce Champion ne peuvent pas être réduits par les Compétences Passives ou les Maîtrises des ennemis, sauf par les Compétences Passives des Boss.${RETURN}${RETURN}
 
-Les dégâts infligés par ce Champion ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ou les compétences Passives des alliés, sauf lors d'attaques sur les Boss.
+Les dégâts infligés par ce Champion ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ou les compétences Passives des alliés, sauf lors d'attaques sur les Boss.${RETURN}${RETURN}
 
 Dès que Yumeko meurt, accorde instantanément un tour à ce Champion et réinitialise le temps de recharge de chacune de ses compétences.`,
           isPassive: true

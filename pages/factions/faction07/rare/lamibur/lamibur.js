@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Avancée pressante",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de remplir le Compteur de Tour d'un allié aléatoire de
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances de remplir le Compteur de Tour d'un allié aléatoire de${RETURN}
 5 %.`,
           damage: "2.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],

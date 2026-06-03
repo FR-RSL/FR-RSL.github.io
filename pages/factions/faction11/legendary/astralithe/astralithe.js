@@ -21,7 +21,7 @@ const championData = {
           name: "Jugement",
           description: `${ACTIVE}
 
-Échange les niveaux de PV restants avec une cible ennemie, puis attaque avec la compétence par défaut. Ne peut pas être utilisé contre un boss.
+Échange les niveaux de PV restants avec une cible ennemie, puis attaque avec la compétence par défaut. Ne peut pas être utilisé contre un boss.${RETURN}${RETURN}
 
 ${PASSIVE}
 

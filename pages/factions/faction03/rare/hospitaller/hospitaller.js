@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Miséricordieux ${PASSIVE}",
-          description: `Ranime un allié choisi au hasard avec 25 % de PV, puis lui accorde un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour dès que Harrier tue un ennemi.
+          description: `Ranime un allié choisi au hasard avec 25 % de PV, puis lui accorde un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour dès que Harrier tue un ennemi.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Harrier se trouve dans la même équipe.]`,
           cooldown: 5,

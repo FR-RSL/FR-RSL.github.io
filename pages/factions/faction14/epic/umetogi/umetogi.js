@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Impasse [P]",
-          description: `Dès que ce Champion se fait attaquer, bloque totalement 1 frappe, réduisant à zéro les dégâts qui arrivent, puis contre-attaque avec la compétence par défaut.
+          description: `Dès que ce Champion se fait attaquer, bloque totalement 1 frappe, réduisant à zéro les dégâts qui arrivent, puis contre-attaque avec la compétence par défaut.${RETURN}${RETURN}
 
 Lorsqu'il est attaqué par un Boss, réduit de 50 % les dégâts en approche avant de contre-attaquer.`,
           cooldown: 4,

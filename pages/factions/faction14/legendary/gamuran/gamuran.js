@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Voleur de Sang",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de voler tous les buffs de chaque ennemi. 
+          description: `Attaque tous les ennemis. Possède 80 % de chances de voler tous les buffs de chaque ennemi.${RETURN}${RETURN}
 
 Après le vol, applique un effet [Propagation de Buff], prenant tous les buffs sur ce Champion pour les placer sur tous les alliés.`,
           damage: "3*ATQ",
@@ -23,9 +23,9 @@ Après le vol, applique un effet [Propagation de Buff], prenant tous les buffs s
         {
           img: "assets/sort3.webp",
           name: "Invocation de Terreur",
-          description: `Peut cibler les ennemis morts ou vivants. 
+          description: `Peut cibler les ennemis morts ou vivants.${RETURN}${RETURN}
 
-Si la cible est morte, lui place un ${DEBUFFS.BLOCK_REA}, puis attaque tous les ennemis. Chaque ennemi recevra des dégâts équivalents à 20 % des PV MAX de l'ennemi ciblé. Si la cible est un sbire de Boss, les dégâts seront équivalents à 20 % des PV MAX de ce Champion. Cette attaque ne peut pas passer en critique et ignorera tous les buffs ${BUFFS.SHIELD}, ainsi que 100 % de la DÉF de chaque cible.
+Si la cible est morte, lui place un ${DEBUFFS.BLOCK_REA}, puis attaque tous les ennemis. Chaque ennemi recevra des dégâts équivalents à 20 % des PV MAX de l'ennemi ciblé. Si la cible est un sbire de Boss, les dégâts seront équivalents à 20 % des PV MAX de ce Champion. Cette attaque ne peut pas passer en critique et ignorera tous les buffs ${BUFFS.SHIELD}, ainsi que 100 % de la DÉF de chaque cible.${RETURN}${RETURN}
 
 Si la cible est vivante, lui place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours, puis soigne tous les alliés de 20 % des PV MAX de l'ennemi ciblé. Si la cible est un Boss ou un sbire de Boss, les dégâts seront équivalents à 20 % des PV MAX de ce Champion. Il est impossible de résister au débuff ${DEBUFFS.TRUE_FEAR}.`,
           cooldown: 5,
@@ -35,7 +35,7 @@ Si la cible est vivante, lui place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tou
         {
           img: "assets/passif1.webp",
           name: "Charge d'Âme [P]",
-          description: `Ranime 1 allié aléatoire avec 30 % de PV et 30 % de Compteur de Tour chaque fois qu'un ennemi est tué. 
+          description: `Ranime 1 allié aléatoire avec 30 % de PV et 30 % de Compteur de Tour chaque fois qu'un ennemi est tué.${RETURN}${RETURN}
 
 Ranime 1 allié aléatoire avec 30 % de PV et 30 % de Compteur de Tour chaque fois qu'un débuff ${DEBUFFS.BLOCK_REA} est placé sur un ennemi.`,
           cooldown: 2,

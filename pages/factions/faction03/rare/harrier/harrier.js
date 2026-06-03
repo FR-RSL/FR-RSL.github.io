@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Compagne Douée ${PASSIVE}",
-          description: `Ignorera 50 % de la DÉF de la cible lorsque ce Champion infligera un coup critique.
+          description: `Ignorera 50 % de la DÉF de la cible lorsque ce Champion infligera un coup critique.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Hospitalière se trouve dans la même équipe.]`,
           isPassive: true

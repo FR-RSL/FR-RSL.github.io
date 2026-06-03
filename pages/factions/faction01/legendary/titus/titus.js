@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame de corbeau",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}. 
+A 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Dès qu'un allié contre-attaque, fait équipe avec les alliés pour attaquer, ou active instantanément une compétence. A également 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} sur l'ennemi ciblé pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           damage: "3.5*DEF",
@@ -16,7 +16,7 @@ Dès qu'un allié contre-attaque, fait équipe avec les alliés pour attaquer, o
         {
           img: "assets/sort2.webp",
           name: "Étudiant de la guerre",
-          description: `Attaque un ennemi. Cette attaque est toujours critique si ce Champion se trouve sous buff ${BUFFS.SHIELD}. Cette attaque gagne également un boost de dégâts égal à la différence en pourcentage entre les PV MAX de ce Champion et la valeur des buffs ${BUFFS.SHIELD} dont il bénéficie.
+          description: `Attaque un ennemi. Cette attaque est toujours critique si ce Champion se trouve sous buff ${BUFFS.SHIELD}. Cette attaque gagne également un boost de dégâts égal à la différence en pourcentage entre les PV MAX de ce Champion et la valeur des buffs ${BUFFS.SHIELD} dont il bénéficie.${RETURN}${RETURN}
 
 Retire tous les débuffs sur tous les alliés si la cible est tuée. Si la cible survit, place au lieu de cela un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}.`,
           damage: "5.5*DEF*(1+SHIELDS_SUM_VALUE/HP)",
@@ -27,7 +27,7 @@ Retire tous les débuffs sur tous les alliés si la cible est tuée. Si la cible
         {
           img: "assets/sort3.webp",
           name: "Confident d'Androc",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SPD} de 30 % sur un seul allié pendant 2 tours. Remplit également le Compteur de Tour de cet allié de 40 %. 
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SPD} de 30 % sur un seul allié pendant 2 tours. Remplit également le Compteur de Tour de cet allié de 40 %.${RETURN}${RETURN}
 
 Active instantanément cette compétence à la fin du tour d'un allié si cet allié n'a pas de buff et que ses PV sont inférieurs à 100 %. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           cooldown: 5,

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Déstabilise",
-          description: `Attaque 2 fois un ennemi.
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Possède 35 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
           damage: "1.9*ATQ",
@@ -13,7 +13,7 @@ Possède 35 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendan
         {
           img: "assets/sort2.webp",
           name: "Faux Maudite",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "6.5*ATQ",
@@ -23,7 +23,7 @@ Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tou
         {
           img: "assets/sort3.webp",
           name: "Salve Temporelle",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 90 % de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences de la cible prise au hasard.`,
           damage: "7.5*ATQ",

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Aucun survivant",
-          description: `Attaque tous les ennemis. Les dégâts augmentent de 10 % pour chaque débuff sur chaque cible. 
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 10 % pour chaque débuff sur chaque cible.${RETURN}${RETURN}
 
 Réinitialise le compteur de tour de la compétence [Tir fissurant] si cette attaque tue un ennemi.`,
           damage: "4*ATQ*(1+0.1*Target Debuffs)",
@@ -23,7 +23,7 @@ Réinitialise le compteur de tour de la compétence [Tir fissurant] si cette att
         {
           img: "assets/sort3.webp",
           name: "Tir fissurant",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}. 
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.ALLY_PROTECT}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "6*ATQ",

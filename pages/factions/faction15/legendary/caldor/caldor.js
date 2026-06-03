@@ -4,7 +4,7 @@ type: "Attaque",
         {
           img: "assets/sort1.webp",
           name: "Chant de dague",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ignorera 20 % de la RÉS de chaque cible pour chaque buff ${BUFFS.HEALS} sur ce Champion.`,
           damage: "2.4*ATQ",
@@ -17,11 +17,11 @@ A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ignorera 
         {
           img: "assets/sort2.webp",
           name: "Orchestre de guerre",
-          description: `Sélectionne une cible.
+          description: `Sélectionne une cible.${RETURN}${RETURN}
 
-Si la cible est un ennemi, réduit d'1 tour la durée de tous les buffs sur tous les ennemis. Place un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours et un ${DEBUFFS.POISON} de 5 % supplémentaire pendant 2 tours pour chaque buff ${BUFFS.HEALS} sur ce Champion. Il est impossible de résister à ces débuffs. Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis. 
+Si la cible est un ennemi, réduit d'1 tour la durée de tous les buffs sur tous les ennemis. Place un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours et un ${DEBUFFS.POISON} de 5 % supplémentaire pendant 2 tours pour chaque buff ${BUFFS.HEALS} sur ce Champion. Il est impossible de résister à ces débuffs. Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.${RETURN}${RETURN}
 
-Si la cible est un allié, augmente d'1 tour la durée de tous les buffs, puis active instantanément un déclenchement de tous les buffs ${BUFFS.HEALS} sur tous les alliés. Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. Place également un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 2 tours et un autre buff ${BUFFS.HEALS} de 15 % pendant 2 tours pour chaque allié vivant. 
+Si la cible est un allié, augmente d'1 tour la durée de tous les buffs, puis active instantanément un déclenchement de tous les buffs ${BUFFS.HEALS} sur tous les alliés. Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. Place également un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 2 tours et un autre buff ${BUFFS.HEALS} de 15 % pendant 2 tours pour chaque allié vivant.${RETURN}${RETURN}
 
 Enfin, remplit le Compteur de Tour de ce Champion de 15 % pour chaque buff ou débuff placé par cette compétence.`,
           cooldown: 5,
@@ -59,7 +59,7 @@ Enfin, remplit le Compteur de Tour de ce Champion de 15 % pour chaque buff ou d�
         {
           img: "assets/passif1.webp",
           name: "Symphonie de Sylvains [P]",
-          description: `Ignore 15 % de la DÉF de la cible lorsque ce Champion attaque en se trouvant sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+          description: `Ignore 15 % de la DÉF de la cible lorsque ce Champion attaque en se trouvant sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
 Ce Champion reçoit 30 % de dégâts en moins contre les ennemis qui ne se trouvent pas sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           factions: [
@@ -89,8 +89,8 @@ Ce Champion reçoit 30 % de dégâts en moins contre les ennemis qui ne se trouv
   const aura = {
   img: "../../../../../../assets/images/auras/sup-crit.webp",
   description: `
-    Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 25%.<br><br>
-    Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%.<br>
+    Augmente la statistique TAUX C. des Alliés lors de toutes les Batailles de 25%.<br><br>${RETURN}
+    Augmente la statistique VIT des Alliés lors de toutes les Batailles de 15%.<br>${RETURN}
     (ne s'applique qu'a la Faction des Gardes Sylvains).
   `,
 };

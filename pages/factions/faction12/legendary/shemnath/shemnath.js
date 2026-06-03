@@ -11,11 +11,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Sort de cariatide",
-          description: `Transfère tous les débuffs de cette Championne sur une cible ennemie, puis attaque 3 fois cet ennemi. 
+          description: `Transfère tous les débuffs de cette Championne sur une cible ennemie, puis attaque 3 fois cet ennemi.${RETURN}${RETURN}
 
-La première frappe augmente d'1 tour la durée de tous les débuffs de la cible. 
+La première frappe augmente d'1 tour la durée de tous les débuffs de la cible.${RETURN}${RETURN}
 
-La seconde frappe réduit d'1 tour la durée de tous les buffs de la cible. 
+La seconde frappe réduit d'1 tour la durée de tous les buffs de la cible.${RETURN}${RETURN}
 
 Augmente également d'1 tour la durée de tous les buffs de cette Championne après l'attaque.`,
           damage: "1.8*ATQ",
@@ -33,7 +33,7 @@ Augmente également d'1 tour la durée de tous les buffs de cette Championne apr
         {
           img: "assets/sort4.webp",
           name: "Chercheuse de mana [P]",
-          description: `Augmente la PRÉ de cette Championne de 10 pour chaque buff sur chaque ennemi.
+          description: `Augmente la PRÉ de cette Championne de 10 pour chaque buff sur chaque ennemi.${RETURN}${RETURN}
 
 Augmente les DÉG C. de cette Championne de 5 % pour chaque débuff sur chaque ennemi. S'accumule jusqu'à 100 %.`,
           isPassive: true,

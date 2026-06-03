@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Propagation de Panique",
-          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour.
+          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour.${RETURN}${RETURN}
 
-Ces chances passent à 30 % si la cible est affligée d'un débuff.
+Ces chances passent à 30 % si la cible est affligée d'un débuff.${RETURN}${RETURN}
 
 Ces chances passent à 45 % si la cible est affligée de 2 débuffs ou plus.`,
           damage: "4.2*ATQ",
@@ -15,9 +15,9 @@ Ces chances passent à 45 % si la cible est affligée de 2 débuffs ou plus.`,
         {
           img: "assets/sort2.webp",
           name: "Bonbons et Sorts",
-          description: `Attaque tous les ennemis. Possède 40 % de chances de voler 1 buff aléatoire sur chaque cible.
+          description: `Attaque tous les ennemis. Possède 40 % de chances de voler 1 buff aléatoire sur chaque cible.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours en cas de vol de buff.
+Place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours en cas de vol de buff.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur les ennemis dont les buffs ont été volés.`,
           damage: "4.3*ATQ",
@@ -34,7 +34,7 @@ Place un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur les ennemis dont les buffs on
         {
           img: "assets/sort4.webp",
           name: "Grace de Sorcière [P]",
-          description: `Au début de chaque tour, place sur ce Champion un buff de ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX.
+          description: `Au début de chaque tour, place sur ce Champion un buff de ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX.${RETURN}${RETURN}
 
 Quand il se fait attaquer lorsqu'il dispose d'un buff de ${BUFFS.SHIELD}, possède 35 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur l'assaillant.`,
           isPassive: true,

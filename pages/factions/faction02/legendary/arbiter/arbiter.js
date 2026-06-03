@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Appel du Destin",
-          description: `Ranime tous les alliés morts avec 30 % de PV, puis remplit de 20 % les Compteurs de tour de tous les alliés.
+          description: `Ranime tous les alliés morts avec 30 % de PV, puis remplit de 20 % les Compteurs de tour de tous les alliés.${RETURN}${RETURN}
 
 Accorde un Tour Supplémentaire à ce Champion si un allié a été ranimé.`,
           cooldown: 7,

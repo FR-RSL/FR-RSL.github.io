@@ -31,7 +31,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Toast au Combat",
-          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.
+          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Possède également 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Sinon, possède 75 % de chances de le placer sur les ennemis sous buffs ${BUFFS.ATK}.`,
           cooldown: 5,

@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Fouet fantôme",
-          description: `Attaque un ennemi avec un allié de la Faction du Clan de l'Ombre aléatoire. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.
+          description: `Attaque un ennemi avec un allié de la Faction du Clan de l'Ombre aléatoire. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.${RETURN}${RETURN}
 
 Place pendant 2 tours un buff ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de cette Championne sur l'allié ayant les PV les plus bas.`,
           damage: "3.9*ATQ",
@@ -15,7 +15,7 @@ Place pendant 2 tours un buff ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de 
         {
           img: "assets/sort2.webp",
           name: "Piège de soie",
-          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs des ennemis et de tous les débuffs des alliés. 
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs des ennemis et de tous les débuffs des alliés.${RETURN}${RETURN}
 
 Augmente ensuite d'1 tour la durée de tous les débuffs des ennemis et de tous les buffs des alliés.`,
           damage: "3.8*ATQ",
@@ -66,7 +66,7 @@ Augmente ensuite d'1 tour la durée de tous les débuffs des ennemis et de tous 
         {
           img: "assets/sort4.webp",
           name: "Araignée de cauchemar",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.SLEEP} pendant 1 tour. 
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.SLEEP} pendant 1 tour.${RETURN}${RETURN}
 
 Réduit également le Compteur de Tour de la cible de 15 %.`,
           damage: "3.9*ATQ",
@@ -76,7 +76,7 @@ Réduit également le Compteur de Tour de la cible de 15 %.`,
         {
           img: "assets/sort5.webp",
           name: "Mort fuyante",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Réduit également le Compteur de Tour de tous les ennemis de 30 %.`,
           damage: "3.8*ATQ",
@@ -87,7 +87,7 @@ Réduit également le Compteur de Tour de tous les ennemis de 30 %.`,
         {
           img: "assets/sort6.webp",
           name: "Ruine de Yakai",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Retire également tous les buffs sur tous les ennemis, puis leur place un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
           cooldown: 5,

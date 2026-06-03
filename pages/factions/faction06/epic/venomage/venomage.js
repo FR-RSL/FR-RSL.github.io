@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Toxicité",
-          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 75 % des dégâts infligés si elle se trouve sous débuff ${DEBUFFS.HEALS}.
+          description: `Attaque 2 fois un ennemi. Détruit les PV MAX de la cible de 75 % des dégâts infligés si elle se trouve sous débuff ${DEBUFFS.HEALS}.${RETURN}${RETURN}
 
 Chaque frappe possède 35 % de chances d'activer instantanément un débuff ${DEBUFFS.POISON} de 5 % sur la cible.`,
           damage: "2.4*ATQ",

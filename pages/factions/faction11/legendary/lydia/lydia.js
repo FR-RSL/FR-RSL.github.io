@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Oppression",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON_S}.
+          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. Possède 75 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.POISON_S}.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -31,11 +31,11 @@ Attaque les ennemis avec cette Compétence dès qu'ils placent un débuff ${DEBU
         {
           img: "assets/sort4.webp",
           name: "Prise Mortelle [P]",
-          description: `Empêche chaque tentative de réanimation ennemie. Cela fonctionne même si cette Championne est morte.
+          description: `Empêche chaque tentative de réanimation ennemie. Cela fonctionne même si cette Championne est morte.${RETURN}${RETURN}
 
-Si cette Championne est vivante lorsqu'une réanimation ennemie est empêchée, ranime les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Accorde un Tour Supplémentaire si aucun allié n'est mort.
+Si cette Championne est vivante lorsqu'une réanimation ennemie est empêchée, ranime les alliés morts avec 50 % de PV et 50 % de Compteur de Tour. Accorde un Tour Supplémentaire si aucun allié n'est mort.${RETURN}${RETURN}
 
-Si cette Championne est morte lorsqu'une réanimation ennemie est empêchée, ranime cette Championne avec 50 % de PV et 50 % de Compteur de Tour.
+Si cette Championne est morte lorsqu'une réanimation ennemie est empêchée, ranime cette Championne avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
 
 Cette compétence ignorera ${DEBUFFS.BLOCK_REA}.`,
           cooldown: 9,

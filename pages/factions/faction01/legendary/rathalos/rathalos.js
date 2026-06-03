@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup spirituel",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible est un Boss, il est impossible de résister à ce débuff.`,
           damage: "3.2*ATQ",
@@ -14,7 +14,7 @@ Si la cible est un Boss, il est impossible de résister à ce débuff.`,
         {
           img: "assets/sort2.webp",
           name: "Coup mobile spirituel",
-          description: `Attaque un ennemi. Chaque deuxième utilisation de cette compétence lors d'un round attaquera tous les ennemis à la place. 
+          description: `Attaque un ennemi. Chaque deuxième utilisation de cette compétence lors d'un round attaquera tous les ennemis à la place.${RETURN}${RETURN}
 
 Ignorera également 25 % de la DÉF de la cible. Si la cible est un Boss, ignorera 100 % de la DÉF de la cible.`,
           damage: "4*ATQ",

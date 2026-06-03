@@ -26,7 +26,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Délire [P]",
-          description: `Réduit de 15 % le TAUX C. des ennemis qui se trouvent sous 2 débuffs ${DEBUFFS.POISON} ou plus.
+          description: `Réduit de 15 % le TAUX C. des ennemis qui se trouvent sous 2 débuffs ${DEBUFFS.POISON} ou plus.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           isPassive: true,

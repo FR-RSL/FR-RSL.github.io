@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Frappe Fracassante",
-          description: `Attaque tous les ennemis. Ignorera la DÉF et les buffs de ${BUFFS.BLOCK_DAMAGE} si la cible est affligée d'un débuff de ${DEBUFFS.GEL}.
+          description: `Attaque tous les ennemis. Ignorera la DÉF et les buffs de ${BUFFS.BLOCK_DAMAGE} si la cible est affligée d'un débuff de ${DEBUFFS.GEL}.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Croc Infernal est dans la même équipe.]`,
           damage: "2.5*ATQ",

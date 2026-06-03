@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Plongeon d'aigle",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "4*ATQ",
@@ -14,9 +14,9 @@ A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. I
         {
           img: "assets/sort2.webp",
           name: "Plan de De Vinci",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur les ennemis affligés de 4 débuffs ou plus. 
+A 75 % de chances de placer deux débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur les ennemis affligés de 4 débuffs ou plus.${RETURN}${RETURN}
 
 Si des ennemis se trouvent sous buff ${BUFFS.STONE_SKIN}, a au lieu de cela 75 % de chances de placer 2 débuffs ${DEBUFFS.BOMB} qui explosent sur eux après 2 tours. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. Si tous les ennemis se trouvent sous buff ${BUFFS.STONE_SKIN}, réduit d'1 tour le compte à rebours de détonation de chaque débuff ${DEBUFFS.BOMB}.`,
           damage: "4*ATQ",
@@ -27,7 +27,7 @@ Si des ennemis se trouvent sous buff ${BUFFS.STONE_SKIN}, a au lieu de cela 75 %
         {
           img: "assets/sort3.webp",
           name: "Pistolet secret",
-          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}. 
+          description: `Attaque un ennemi. Avant d'attaquer, vole tous les buffs de la cible. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
 Ignorera 35 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}.`,
           damage: "5*ATQ",
@@ -44,9 +44,9 @@ Ignorera 35 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.SHIELD} et ${B
         {
           img: "assets/passif1.webp",
           name: "Synchronisation totale [P]",
-          description: `Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours. 
+          description: `Au début de chaque round, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Dès que ce Champion est sur le point de recevoir des dégâts qui dépasseraient 50 % de ses PV MAX, a au lieu de cela 35 % de chances de réduire les dégâts reçus à 0. 
+Dès que ce Champion est sur le point de recevoir des dégâts qui dépasseraient 50 % de ses PV MAX, a au lieu de cela 35 % de chances de réduire les dégâts reçus à 0.${RETURN}${RETURN}
 
 Dès que ce Champion est attaqué, a également 35 % de chances de contre-attaquer.`,
           isPassive: true

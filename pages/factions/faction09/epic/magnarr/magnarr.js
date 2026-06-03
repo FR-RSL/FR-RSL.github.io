@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Attiser les Flammes",
-          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuffs] qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis sous débuff ${DEBUFFS.BURN}. Augmente également d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur tous les ennemis.
+          description: `Attaque un ennemi. Applique un effet de ${PROP_DEBUFF} qui prend 2 débuffs aléatoires de la cible pour les placer sur tous les ennemis sous débuff ${DEBUFFS.BURN}. Augmente également d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 [Ne propagera pas les débuffs ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP} ou ${DEBUFFS.STUN}.]`,
           damage: "0.37*HP",

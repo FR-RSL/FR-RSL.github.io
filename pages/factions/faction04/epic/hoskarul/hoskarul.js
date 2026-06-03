@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Finir l'ennemi [P]",
-          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}. 
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}.${RETURN}${RETURN}
 
 Augmente de 15 % les dégâts infligés par tous les alliés lorsqu'ils attaquent des ennemis sous débuffs ${DEBUFFS.STUN}.`,
           isPassive: true

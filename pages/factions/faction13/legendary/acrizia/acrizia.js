@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Assaut infatigable",
-          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Les dégâts de cette compétence augmentent de 10 % chaque fois qu'elle est utilisée. S'accumule jusqu'à 100 %.`,
           damage: "2.5*ATQ | 2% PV MAX ennemis",
@@ -44,7 +44,7 @@ Les dégâts de cette compétence augmentent de 10 % chaque fois qu'elle est uti
         {
           img: "assets/passif1.webp",
           name: "Grandeur [P]",
-          description: `Réduit les dégâts subis de 50 % lors des attaques de zone. 
+          description: `Réduit les dégâts subis de 50 % lors des attaques de zone.${RETURN}${RETURN}
 
 Si les PV MAX d'une cible sont supérieurs au double de ceux de ce Champion, l'attaque de ce Champion infligera des dégâts en fonction des PV MAX de la cible, au lieu de l'ATQ de ce Champion.`,
           isPassive: true,

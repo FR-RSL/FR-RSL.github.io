@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Clémence",
-          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % % sur tous les alliés pendant 2 tours.
+          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ et aux PV de cette Championne.`,
           cooldown: 4,

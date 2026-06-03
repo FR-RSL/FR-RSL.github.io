@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Mutiler",
-          description: `Attaque un ennemi. A 55 % de chances de réduire d'1 tour la durée de tous les buffs de la cible.
+          description: `Attaque un ennemi. A 55 % de chances de réduire d'1 tour la durée de tous les buffs de la cible.${RETURN}${RETURN}
 
 A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "4*DEF",
@@ -23,7 +23,7 @@ A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant
         {
           img: "assets/passif1.webp",
           name: "Peau Épaisse [P]",
-          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SHEEP} et ${DEBUFFS.PETRIFICATION}.
+          description: `Immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SHEEP} et ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 Réduit de 15 % les dégâts subis par tous les alliés qui possèdent 1 ou plusieurs buffs. Réduit de 25 % les dégâts subis par tous les alliés ne possédant aucun buff.`,
           isPassive: true

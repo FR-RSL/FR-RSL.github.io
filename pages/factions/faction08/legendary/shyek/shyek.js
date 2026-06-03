@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Ordre de tuer",
-          description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. 
+          description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, fait équipe avec les Bêteffroyables, Masquegores, Rejetons de Cabot, Crocs Infernaux, Chiens Cruels, Bêtes Suturées et Kro'khad Coupe-gorge alliés pour attaquer. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.`,
           damage: "0.2*HP",
@@ -14,9 +14,9 @@ Ensuite, fait équipe avec les Bêteffroyables, Masquegores, Rejetons de Cabot, 
         {
           img: "assets/sort2.webp",
           name: "Alpha de meute",
-          description: `Retire tous les débuffs sur ce Champion, puis le soigne de 50 % de ses PV MAX. 
+          description: `Retire tous les débuffs sur ce Champion, puis le soigne de 50 % de ses PV MAX.${RETURN}${RETURN}
 
-Ensuite, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à tout surplus de soin. Il est impossible de retirer, voler et transférer le buff ${BUFFS.SHIELD} si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe. 
+Ensuite, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à tout surplus de soin. Il est impossible de retirer, voler et transférer le buff ${BUFFS.SHIELD} si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe.${RETURN}${RETURN}
 
 Enfin, place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 tours. Il est impossible de retirer, voler et transférer ces buffs si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe.`,
           cooldown: 5,
@@ -26,7 +26,7 @@ Enfin, place un buff ${BUFFS.TAUNT} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur 
         {
           img: "assets/sort3.webp",
           name: "Hurlement sanglant",
-          description: `Remplit les Compteurs de Tour de tous les alliés de 25 %. 
+          description: `Remplit les Compteurs de Tour de tous les alliés de 25 %.${RETURN}${RETURN}
 
 A également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff si au moins une Bêteffroyable, un Masquegore, un Rejeton de Cabot, un Croc Infernal, un Chien Cruel, une Bête Suturée ou Kro'khad Coupe-gorge se trouve dans la même équipe.`,
           cooldown: 4,
@@ -36,7 +36,7 @@ A également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tou
         {
           img: "assets/passif1.webp",
           name: "Nous chassons unis [P]",
-          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.HEX} sur l'assaillant pendant 1 tour. Les attaques lancées par des alliés sur des cibles affligées d'un débuff ${DEBUFFS.HEX} placé par ce Champion infligent 20 % de dégâts en plus. 
+          description: `Lorsque ce Champion est attaqué, place un débuff ${DEBUFFS.HEX} sur l'assaillant pendant 1 tour. Les attaques lancées par des alliés sur des cibles affligées d'un débuff ${DEBUFFS.HEX} placé par ce Champion infligent 20 % de dégâts en plus.${RETURN}${RETURN}
 
 Lorsque ce Champion se fait attaquer, les Bêteffroyables, Masquegores, Rejetons de Cabot, Crocs Infernaux, Chiens Cruels, Bêtes Suturées et Kro'khad Coupe-gorge alliés contre-attaqueront.`,
           isPassive: true

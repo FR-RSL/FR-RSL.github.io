@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Partenaire Altruiste",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés. Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DAMAGE} sur ce Champion.
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés. Place, pendant 1 tour, un buff de ${BUFFS.BLOCK_DAMAGE} sur ce Champion.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Tentatrice se trouve dans la même équipe.]`,
           cooldown: 5,

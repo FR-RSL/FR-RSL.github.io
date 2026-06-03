@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Chanson joyeuse [P]",
-          description: `Au début du tour de ce Champion, transfère 1 buff aléatoire d'un ennemi pris au hasard à un allié pris au hasard. 
+          description: `Au début du tour de ce Champion, transfère 1 buff aléatoire d'un ennemi pris au hasard à un allié pris au hasard.${RETURN}${RETURN}
 
 La PRÉ de ce Champion est augmentée de 5 pour chaque buff sur chaque allié.`,
           isPassive: true

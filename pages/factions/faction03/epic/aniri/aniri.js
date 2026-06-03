@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame de Bénédictions",
-          description: `Attaque un ennemi. Soigne l'allié ayant le moins de PV à hauteur de 5 % de ses PV MAX. 
+          description: `Attaque un ennemi. Soigne l'allié ayant le moins de PV à hauteur de 5 % de ses PV MAX.${RETURN}${RETURN}
 
 Ne peut pas soigner ce Champion.`,
           damage: "3.6*DEF",

@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Griffes toxiques",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours. 
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours.${RETURN}${RETURN}
 
-Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe possède également 40 % de chances d'appliquer un effet de [Propagation de Débuffs], prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis.`,
+Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe possède également 40 % de chances d'appliquer un effet de ${PROP_DEBUFF}, prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis.`,
           damage: "1.1*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -14,7 +14,7 @@ Si la cible se trouve sous débuff ${DEBUFFS.HEX}, chaque frappe possède égale
         {
           img: "assets/sort2.webp",
           name: "Imprécation immortelle",
-          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 60 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.HEX} sur les ennemis. 
+          description: `Attaque 3 fois tous les ennemis. Chaque frappe possède 60 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.HEX} sur les ennemis.${RETURN}${RETURN}
 
 Si les ennemis ne se trouvent pas sous débuff ${DEBUFFS.HEX}, chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
           damage: "1*ATQ",

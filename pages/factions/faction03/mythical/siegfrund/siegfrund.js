@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Fil écorchant",
-          description: `Attaque 2 fois un ennemi. 
+          description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 La première frappe transfère tous les débuffs de ce Champion sur la cible. La seconde frappe augmente ensuite d'1 tour la durée de tous les débuffs de la cible.`,
           damage: "2*ATQ",
@@ -15,9 +15,9 @@ La première frappe transfère tous les débuffs de ce Champion sur la cible. La
         {
           img: "assets/sort2.webp",
           name: "Vague séraphique",
-          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25 %. 
+          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25 %.${RETURN}${RETURN}
 
-Réinitialise le temps de recharge de la compétence Rage du Nephel si cette attaque tue un ennemi. 
+Réinitialise le temps de recharge de la compétence Rage du Nephel si cette attaque tue un ennemi.${RETURN}${RETURN}
 
 Réinitialise le temps de recharge de toutes les compétences de ce Champion si cette attaque tue 2 ennemis ou plus.`,
           damage: "4.6*ATQ",
@@ -28,7 +28,7 @@ Réinitialise le temps de recharge de toutes les compétences de ce Champion si 
         {
           img: "assets/sort3.webp",
           name: "Rage du Nephel",
-          description: `Attaque un ennemi. Ignore 50 % de la DÉF de la cible. Si la cible initiale est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. 
+          description: `Attaque un ennemi. Ignore 50 % de la DÉF de la cible. Si la cible initiale est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts.${RETURN}${RETURN}
 
 Soigne totalement ce Champion si la frappe initiale tue un ennemi.`,
           damage: "6*ATQMultiplier: Remaining Damage Amount",
@@ -39,7 +39,7 @@ Soigne totalement ce Champion si la frappe initiale tue un ennemi.`,
         {
           img: "assets/meta1.webp",
           name: "Métamorphe [P]",
-          description: `Fait passer ce Champion à sa Forme alternative lorsque tous les alliés sont morts et que ce Champion est vivant.
+          description: `Fait passer ce Champion à sa Forme alternative lorsque tous les alliés sont morts et que ce Champion est vivant.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
@@ -48,7 +48,7 @@ Accorde ensuite un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Stopper la lame [P]",
-          description: `Si ce Champion est sur le point de se faire tuer par un coup fatal, bloque les dégâts en approche et place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours. 
+          description: `Si ce Champion est sur le point de se faire tuer par un coup fatal, bloque les dégâts en approche et place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour de 100 %.`,
           cooldown: 3,
@@ -84,7 +84,7 @@ Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour
         {
           img: "assets/sort5.webp",
           name: "Parade néphélique",
-          description: `Retire tous les débuffs sur tous les alliés. 
+          description: `Retire tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
 Soigne ensuite une cible alliée de 30 % de ses PV MAX, puis lui accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
           cooldown: 4,

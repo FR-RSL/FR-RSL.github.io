@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Sombre Linceul",
-          description: `Soigne tous tes alliés à hauteur de 20 % des PV MAX de cette Championne.
+          description: `Soigne tous tes alliés à hauteur de 20 % des PV MAX de cette Championne.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours, puis place un buff ${BUFFS.SHIELD} égal à 30 % des PV MAX de cette Championne sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
@@ -20,7 +20,7 @@ Place également un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 t
         {
           img: "assets/sort3.webp",
           name: "Don de Soi",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 30 % de Compteur de Tour. 
+          description: `Ranime tous les alliés morts avec 50 % de PV et 30 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés sauf cette Championne pendant 1 tour.`,
           cooldown: 5,

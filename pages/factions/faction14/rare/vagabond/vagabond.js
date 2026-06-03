@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Visite Menaçante",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 1 tour.
+          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 1 tour.${RETURN}${RETURN}
 
 Remplit également de 15 % le Compteur de Tour de ce Champion, ainsi que le Compteur de Tour de l'allié qui a le Compteur de Tour le plus élevé.`,
           damage: "6*ATQ",

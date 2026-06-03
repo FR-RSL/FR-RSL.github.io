@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Grâce d'Arbre-bouclier",
-          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max. 
+          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
@@ -22,7 +22,7 @@ Place un buff ${BUFFS.DEF} de 30 % sur tous les alliés pendant 2 tours.`,
         {
           img: "assets/sort3.webp",
           name: "Jouvence de racine",
-          description: `Ranime 2 alliés aléatoires avec 25 % de PV et 25 % de Compteur de Tour. 
+          description: `Ranime 2 alliés aléatoires avec 25 % de PV et 25 % de Compteur de Tour.${RETURN}${RETURN}
 
 Place également sur tous les alliés ranimés un buff ${BUFFS.SHIELD} valant 20 % de leurs PV MAX pendant 2 tours.`,
           cooldown: 7,

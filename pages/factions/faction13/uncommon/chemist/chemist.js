@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Bombe Alchimique",
-          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.
+          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}
 Ces chances passent à 30 % si les PV de la cible sont inférieurs à 50 %.`,
           damage: "7*ATQ",
           cooldown: 4,

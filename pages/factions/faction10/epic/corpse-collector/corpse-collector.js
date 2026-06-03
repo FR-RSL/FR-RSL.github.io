@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Parasite Insidieux",
-          description: `Attaque un ennemi.
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 40 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
           damage: "3.6*ATQ",
@@ -14,7 +14,7 @@ Possède 40 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
         {
           img: "assets/sort2.webp",
           name: "Grêle de Feu",
-          description: `Attaque tous les ennemis.
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Possède 75 % de chances de placer, pendant 2 tours et sur tous les ennemis, un débuff de ${DEBUFFS.HEALS} de 100 % et un débuff de ${DEBUFFS.PRE} de 50 %.`,
           damage: "2.5*ATQ",
@@ -25,8 +25,8 @@ Possède 75 % de chances de placer, pendant 2 tours et sur tous les ennemis, un 
         {
           img: "assets/sort3.webp",
           name: "Fuite Toxique",
-          description: `Attaque 3 fois au hasard.
-Chaque frappe possède 75 % de chances de placer, pendant 2 tours, un débuff d'${DEBUFFS.POISON} de 5 %.
+          description: `Attaque 3 fois au hasard.${RETURN}
+Chaque frappe possède 75 % de chances de placer, pendant 2 tours, un débuff d'${DEBUFFS.POISON} de 5 %.${RETURN}
 Place un buff ${BUFFS.VEIL} sur ce Champion pendant 1 tour.`,
           damage: "1.65*ATQ",
           cooldown: 5,

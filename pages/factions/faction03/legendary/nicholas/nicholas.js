@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Protection Polaire",
-          description: `Attaque tous les ennemis. Ignorera 30 % de la DÉF de chaque cible si Dame Noëlle se trouve dans la même équipe.
+          description: `Attaque tous les ennemis. Ignorera 30 % de la DÉF de chaque cible si Dame Noëlle se trouve dans la même équipe.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 30 % des dégâts infligés.`,
           damage: "0.3*HP",
@@ -23,9 +23,9 @@ Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SHIELD} sur tous le
         {
           img: "assets/sort3.webp",
           name: "Bienveillance",
-          description: `Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.
+          description: `Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours. 
+Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Si Dame Noëlle se trouve dans la même équipe, place également un buff ${BUFFS.TAUNT} sur ce Champion pendant 2 tours.`,
           cooldown: 6,

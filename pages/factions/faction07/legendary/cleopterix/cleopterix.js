@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Plongeon Mortel",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Ces chances passent à 50 % si la cible est affligée d'un débuff ${DEBUFFS.HEX}. 
+          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Ces chances passent à 50 % si la cible est affligée d'un débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour si cette attaque tue un ennemi sous débuff ${DEBUFFS.HEX}.`,
           damage: "3.5*ATQ",
@@ -23,7 +23,7 @@ Place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour si cette atta
         {
           img: "assets/sort3.webp",
           name: "Punition Céleste",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours.
+          description: `Place un buff ${BUFFS.PRE} de 50 % sur ce Champion pendant 2 tours, puis attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours.${RETURN}${RETURN}
 
 Sinon, possède 100 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour sur les cibles affligées de débuffs ${DEBUFFS.HEX}.`,
           damage: "4.7*ATQ",

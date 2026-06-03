@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Briseur d'Armée",
-          description: `Attaque un ennemi, puis attaque tous les ennemis sauf la cible initiale s'il reste 3 ennemis vivants ou plus.
+          description: `Attaque un ennemi, puis attaque tous les ennemis sauf la cible initiale s'il reste 3 ennemis vivants ou plus.${RETURN}${RETURN}
 
 Inflige 20 % de dégâts supplémentaires lors de la première frappe si la cible possède des PV MAX plus élevés que ce Champion.`,
           damage: "7*ATQMultiplier: 4.5*ATQ",
@@ -32,7 +32,7 @@ Inflige 20 % de dégâts supplémentaires lors de la première frappe si la cibl
         {
           img: "assets/passif1.webp",
           name: "Vendetta [P]",
-          description: `Ignorera 7,5 % de la DÉF de l'ennemi chaque fois que ce Champion attaque la même cible ennemie lors d'attaques ou de Tours consécutifs. S'accumule jusqu'à 30 %. 
+          description: `Ignorera 7,5 % de la DÉF de l'ennemi chaque fois que ce Champion attaque la même cible ennemie lors d'attaques ou de Tours consécutifs. S'accumule jusqu'à 30 %.${RETURN}${RETURN}
 
 L'accumulation sera perdue et réinitialisée si ce Champion cible et attaque un ennemi différent.`,
           isPassive: true

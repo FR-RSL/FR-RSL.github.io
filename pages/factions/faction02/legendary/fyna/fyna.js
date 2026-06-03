@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée temporelle",
-          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire sur la cible. 
+          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire sur la cible.${RETURN}${RETURN}
 
 Lorsqu'elle contre-attaque avec cette compétence, fait équipe avec un allié aléatoire. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.`,
           damage: "4*ATQ",
@@ -14,7 +14,7 @@ Lorsqu'elle contre-attaque avec cette compétence, fait équipe avec un allié a
         {
           img: "assets/sort2.webp",
           name: "Tu ne faibliras pas !",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS}, un buff ${BUFFS.BLOCK_DAMAGE} et un buff ${BUFFS.COUNTER} sur un allié ciblé pendant 2 tours. Si la cible de la compétence n'est pas cette Championne, réinitialise le temps de recharge de toutes les compétences de la cible.
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS}, un buff ${BUFFS.BLOCK_DAMAGE} et un buff ${BUFFS.COUNTER} sur un allié ciblé pendant 2 tours. Si la cible de la compétence n'est pas cette Championne, réinitialise le temps de recharge de toutes les compétences de la cible.${RETURN}${RETURN}
 
 Le temps de recharge de cette compétence ne peut être ni réduit ni réinitialisé.`,
           cooldown: 5,
@@ -50,9 +50,9 @@ Le temps de recharge de cette compétence ne peut être ni réduit ni réinitial
 
 const aura = {
   img: "../../../../../assets/images/auras/sup-speed.webp",
-  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%
+  description: `Augmente la statistique VIT des Alliés lors de toutes les Batailles de 20%${RETURN}${RETURN}
 
-(ne s'applique qu'à la Faction des Hauts Elfes)
+(ne s'applique qu'à la Faction des Hauts Elfes)${RETURN}${RETURN}
 
 Augmente la statistique TAUX DE C. des Alliés lors de toutes les Batailles de 15%`,
 };

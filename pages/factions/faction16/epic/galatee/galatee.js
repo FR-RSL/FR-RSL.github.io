@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe de fierté",
-          description: `Attaque un ennemi.  
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEF}.  
+Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
 Réduit le Compteur de Tour de la cible de 10 %.`,
           damage: "4*ATQ",
@@ -15,9 +15,9 @@ Réduit le Compteur de Tour de la cible de 10 %.`,
         {
           img: "assets/sort2.webp",
           name: "Part du superprédateur",
-          description: `Attaque un ennemi.  
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée. 
+Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 30 %.`,
           damage: "6.3*ATQ",
@@ -27,9 +27,9 @@ Remplit le Compteur de Tour de cette Championne de 30 %.`,
         {
           img: "assets/sort3.webp",
           name: "Aspirante de Theosomi",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Ignorera 15 % de la DÉF de la cible si elle est d'Affinité Esprit. Ignorera 25 % de la DÉF de la cible si elle est d'une autre Affinité. 
+Ignorera 15 % de la DÉF de la cible si elle est d'Affinité Esprit. Ignorera 25 % de la DÉF de la cible si elle est d'une autre Affinité.${RETURN}${RETURN}
 
 Active la compétence Part du superprédateur sur un ennemi aléatoire dont les PV ont été réduits de plus de 50 % par cette compétence. Se produit une fois par compétence.`,
           damage: "3.8*ATQ",

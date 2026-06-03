@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Avant-goût d'oubli",
-          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. 
+          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour.${RETURN}${RETURN}
 
 Cette attaque passera toujours en critique si la cible se trouve sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.`,
           damage: "3*DEF",
@@ -31,9 +31,9 @@ Cette attaque passera toujours en critique si la cible se trouve sous débuff ${
         {
           img: "assets/sort3.webp",
           name: "Terreurs astrales",
-          description: `Attaque tous les ennemis. Ignorera 30 % de la DÉF de chaque cible contre les cibles sous débuffs ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. Cette attaque passera toujours en critique contre les cibles sous débuffs ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. 
+          description: `Attaque tous les ennemis. Ignorera 30 % de la DÉF de chaque cible contre les cibles sous débuffs ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. Cette attaque passera toujours en critique contre les cibles sous débuffs ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
-Les dégâts de cette compétence sont augmentés de 10 % chaque fois qu'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR} est placé sur un ennemi.
+Les dégâts de cette compétence sont augmentés de 10 % chaque fois qu'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR} est placé sur un ennemi.${RETURN}${RETURN}
 
 [Cette compétence possède 40 % de chances d'être débloquée pendant 1 tour dès qu'un débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR} est placé sur un ennemi.]`,
           damage: "3.5*DEF",
@@ -48,13 +48,13 @@ Les dégâts de cette compétence sont augmentés de 10 % chaque fois qu'un déb
           name: "Étoiles alignées [P]",
           description: `${PASSIVE}
 
-Augmente de 15 % les chances que les compétences des ennemis échouent lorsqu'ils sont sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}. 
+Augmente de 15 % les chances que les compétences des ennemis échouent lorsqu'ils sont sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
 ${ACTIVE}
 
-Empêche la mort de ce Champion et le maintient en vie avec 1 PV lorsqu'il est frappé par un coup fatal, puis retire tous les buffs et débuffs de ce Champion. Après avoir empêché la mort de ce Champion, le soigne totalement et épuise totalement son Compteur de Tour. 
+Empêche la mort de ce Champion et le maintient en vie avec 1 PV lorsqu'il est frappé par un coup fatal, puis retire tous les buffs et débuffs de ce Champion. Après avoir empêché la mort de ce Champion, le soigne totalement et épuise totalement son Compteur de Tour.${RETURN}${RETURN}
 
-Possède ensuite 80 % de chances de placer un débuff ${DEBUFFS.FEAR} sur tous les ennemis pendant 1 tour. 
+Possède ensuite 80 % de chances de placer un débuff ${DEBUFFS.FEAR} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 Place enfin un débuff ${DEBUFFS.SLEEP} sur ce Champion pendant 1 tour. Il est impossible de résister à ce débuff ou de le bloquer.`,
           cooldown: 4,

@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Flux de Bataille",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}. 
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Réduit le temps de recharge de la compétence Flux de Bataille de 2 tours, remplit le Compteur de Tour de ce Champion de 30 % et place un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si cette attaque tue un ennemi.`,
           damage: "5.9*ATQ",
@@ -32,7 +32,7 @@ Réduit le temps de recharge de la compétence Flux de Bataille de 2 tours, remp
         {
           img: "assets/passif1.webp",
           name: "Saine Rancune [P]",
-          description: `Soigne ce Champion de 50 % de ses PV MAX chaque fois qu'il tue un ennemi. 
+          description: `Soigne ce Champion de 50 % de ses PV MAX chaque fois qu'il tue un ennemi.${RETURN}${RETURN}
 
 Accorde également un Tour Supplémentaire chaque fois que ce Champion tue un ennemi des Factions des Hauts Elfes ou Elfes Noirs.`,
           isPassive: true

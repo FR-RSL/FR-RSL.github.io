@@ -32,7 +32,7 @@ Place egalement un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
         {
           img: "assets/sort4.webp",
           name: "Sang castique [P]",
-          description: `Des que ce Champion est attaque, a 25% de chances de placer un debuff ${DEBUFFS.POISON} de 5% sur l'assaillant pendant 2 tours.
+          description: `Des que ce Champion est attaque, a 25% de chances de placer un debuff ${DEBUFFS.POISON} de 5% sur l'assaillant pendant 2 tours.${RETURN}
 Il est impossible de resister a ce debuff et de le bloquer si l'attaque est critique.${RETURN}${RETURN}
 Si un ennemi est afflige d'un debuff ${DEBUFFS.POISON} place par ce Champion, reduit sa DEF de 20%.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

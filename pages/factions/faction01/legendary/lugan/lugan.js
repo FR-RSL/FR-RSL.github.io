@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Dévastateur",
-          description: `Attaque un ennemi. Soigne tous les alliés à hauteur de 25 % des dégâts infligés. 
+          description: `Attaque un ennemi. Soigne tous les alliés à hauteur de 25 % des dégâts infligés.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Lorsque ce Champion contre-attaque, ignorera également 20 % de la DÉF de la cible.`,
           damage: "0.26*HP",
@@ -24,9 +24,9 @@ Lorsque ce Champion contre-attaque, ignorera également 20 % de la DÉF de la ci
         {
           img: "assets/sort3.webp",
           name: "Marque de Silence",
-          description: `Attaque tous les ennemis. 
+          description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 80 % de chances de réduire de 2 tours la durée de tous les buffs dont bénéficient les ennemis. A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.
+A 80 % de chances de réduire de 2 tours la durée de tous les buffs dont bénéficient les ennemis. A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Ignorera 25 % de la DÉF de chaque cible si ce Champion se trouve sous buff ${BUFFS.SHIELD}.`,
           damage: "0.3*HP",
@@ -37,7 +37,7 @@ Ignorera 25 % de la DÉF de chaque cible si ce Champion se trouve sous buff ${BU
         {
           img: "assets/passif1.webp",
           name: "Solidarité stoïque [P]",
-          description: `Dès qu'un ennemi attaque un allié sous buff ${BUFFS.SHIELD}, contre-attaque avec la compétence par défaut de ce Champion.
+          description: `Dès qu'un ennemi attaque un allié sous buff ${BUFFS.SHIELD}, contre-attaque avec la compétence par défaut de ce Champion.${RETURN}${RETURN}
 
 Les dégâts infligés par ce Champion augmentent de 10 % pour chaque buff actif qui a été placé sur les alliés par ce Champion.`,
           isPassive: true

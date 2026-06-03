@@ -12,11 +12,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tir tournoyant",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
-Si la cible est un Boss, possède au lieu de ça 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. 
+Si la cible est un Boss, possède au lieu de ça 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
-Réduit également de 20 % le Compteur de Tour des ennemis affligés d'un débuff ${DEBUFFS.STUN} placé par cette compétence. 
+Réduit également de 20 % le Compteur de Tour des ennemis affligés d'un débuff ${DEBUFFS.STUN} placé par cette compétence.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de tous les alliés de 10 % si un débuff ${DEBUFFS.SPD} de 30 % est placé au lieu de ça par cette compétence.`,
           damage: "3.1*DEF",
@@ -27,7 +27,7 @@ Remplit le Compteur de Tour de tous les alliés de 10 % si un débuff ${DEBUFFS.
         {
           img: "assets/sort3.webp",
           name: "Tir rapide",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.HEX} pendant 2 tours et un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.HEX} pendant 2 tours et un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Si la cible est un Boss, place au lieu de ça un débuff ${DEBUFFS.HEX} pendant 3 tours et un débuff ${DEBUFFS.PROVOKE} pendant 2 tours.`,
           damage: "3*DEF",

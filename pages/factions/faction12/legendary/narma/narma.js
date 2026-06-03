@@ -11,9 +11,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Danse Effrayante",
-          description: `Attaque un ennemi. 
+          description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 3 tours. A également 75 % de chances de placer un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. Ensuite, active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.
+A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 3 tours. A également 75 % de chances de placer un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours. Ensuite, active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.${RETURN}${RETURN}
 
 Soigne tous tes alliés à hauteur de 25 % des PV MAX de ce Champion.`,
           damage: "6.5*ATQ",
@@ -23,7 +23,7 @@ Soigne tous tes alliés à hauteur de 25 % des PV MAX de ce Champion.`,
         {
           img: "assets/sort3.webp",
           name: "Transe Toxique",
-          description: `Attaque un ennemi. A 75 % de chances de placer trois débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % pendant 3 tours.
+          description: `Attaque un ennemi. A 75 % de chances de placer trois débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % pendant 3 tours.${RETURN}${RETURN}
 
 Si la cible initiale se trouve déjà sous 3 débuffs ou plus, place au lieu de ça trois débuffs ${DEBUFFS.POISON} de 5 % et un débuff ${DEBUFFS.POISON_S} de 25 % sur tous les ennemis pendant 3 tours.`,
           damage: "6.8*ATQ",
@@ -33,7 +33,7 @@ Si la cible initiale se trouve déjà sous 3 débuffs ou plus, place au lieu de 
         {
           img: "assets/sort4.webp",
           name: "Réfutation caustique [P]",
-          description: `Dès qu'un allié est attaqué, a 25 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours. Dès que ce Champion est attaqué, les chances passent à 50 %.
+          description: `Dès qu'un allié est attaqué, a 25 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % sur l'assaillant pendant 2 tours. Dès que ce Champion est attaqué, les chances passent à 50 %.${RETURN}${RETURN}
 
 Les ennemis sous débuffs ${DEBUFFS.POISON} infligent 5 % de dégâts en moins par débuff ${DEBUFFS.POISON} sur eux (s'accumule jusqu'à 25 %). Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée.`,
           isPassive: true,

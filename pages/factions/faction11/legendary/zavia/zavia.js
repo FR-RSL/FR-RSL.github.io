@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Catalyseur Mortel",
-          description: `Attaque tous les ennemis. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.
+          description: `Attaque tous les ennemis. Active instantanément tous les débuffs ${DEBUFFS.POISON} sur tous les ennemis.${RETURN}${RETURN}
 
 Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
           damage: "4.1*ATQ",
@@ -29,7 +29,7 @@ Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
         {
           img: "assets/sort4.webp",
           name: "Partenaire Calamiteux",
-          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuff], prenant 4 débuffs aléatoires sur la cible pour les placer sur tous les ennemis.
+          description: `Attaque un ennemi. Applique un effet de [Propagation de Débuff], prenant 4 débuffs aléatoires sur la cible pour les placer sur tous les ennemis.${RETURN}${RETURN}
 
 [Uniquement disponible lorsque Bélanor se trouve dans la même équipe.]`,
           damage: "4*ATQ",

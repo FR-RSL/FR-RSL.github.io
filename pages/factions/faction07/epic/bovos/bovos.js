@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Bénédiction de soufre",
-          description: `Retire 1 débuff aléatoire sur tous les alliés. 
+          description: `Retire 1 débuff aléatoire sur tous les alliés.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
           cooldown: 6,

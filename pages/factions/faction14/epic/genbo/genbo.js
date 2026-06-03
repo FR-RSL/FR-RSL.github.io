@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames Surs",
-          description: `Attaque 2 fois un ennemi. Chappe frappe vole tous les buffs ${BUFFS.ATK}. Chaque frappe possède également 30 % de chances de voler un buff aléatoire.
+          description: `Attaque 2 fois un ennemi. Chappe frappe vole tous les buffs ${BUFFS.ATK}. Chaque frappe possède également 30 % de chances de voler un buff aléatoire.${RETURN}${RETURN}
 
 Il est impossible de résister au vol de buff ${BUFFS.ATK}.`,
           damage: "2*ATQ",

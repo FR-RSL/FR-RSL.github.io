@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fureur impassible",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. 
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 tours.`,
           damage: "0.12*HP",
@@ -23,7 +23,7 @@ Place également un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion pendant 2 
         {
           img: "assets/sort3.webp",
           name: "Barricade vivante",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 25 % sur tous les alliés sauf ce Champion pendant 2 tours. 
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 25 % sur tous les alliés sauf ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.DEF} de 30 % sur ce Champion pendant 2 tours.`,
           cooldown: 6,

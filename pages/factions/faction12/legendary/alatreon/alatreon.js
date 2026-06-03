@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coup fructueux",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30 % des PV MAX de ce Champion. 
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30 % des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Si la cible est un Boss, ces buffs sont protégés.`,
           damage: "0.22*HP",
@@ -23,7 +23,7 @@ Si la cible est un Boss, ces buffs sont protégés.`,
         {
           img: "assets/sort3.webp",
           name: "Booster purificateur",
-          description: `Retire tous les débuffs de tous les alliés et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.
+          description: `Retire tous les débuffs de tous les alliés et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Si un Boss est présent dans le round en cours, ce buff est protégé.`,
           cooldown: 5,

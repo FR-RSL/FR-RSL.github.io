@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bond Rugissant",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "4.3*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Taureau Enragé",
-          description: `Attaque deux fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque deux fois au hasard. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "3.1*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Adrénaline [P]",
-          description: `Soigne ce Champion à hauteur de 15 % de ses PV MAX, puis place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours lorsque la frappe passe en critique.`,
+          description: `Soigne ce Champion à hauteur de 15% de ses PV MAX, puis place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours lorsque la frappe passe en critique.`,
           cooldown: 2,
           levelInfo: ["Temps de recharge -1"],
           isPassive: true

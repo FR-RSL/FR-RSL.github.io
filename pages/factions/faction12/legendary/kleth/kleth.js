@@ -6,7 +6,7 @@ const championData = {
           name: "Hache atrophique",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 80 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Il est impossible de résister à ce débuff si la cible a attaqué ce Champion avant ce tour.`,
+Possède 80% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. Il est impossible de résister à ce débuff si la cible a attaqué ce Champion avant ce tour.`,
           damage: "3.3*DEF",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -26,7 +26,7 @@ Ensuite, place un buff ${BUFFS.TAUNT} sur ce Champion pendant 2 tours.`,
         {
           img: "assets/sort3.webp",
           name: "Disque de finalité",
-          description: `Attaque un ennemi. Avant d'attaquer, transfère tous les débuffs de ce Champion sur la cible et soigne ce Champion de 10 % de ses PV MAX. Soigne ce Champion de 10 % supplémentaires de ses PV MAX pour chaque débuff transféré.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Avant d'attaquer, transfère tous les débuffs de ce Champion sur la cible et soigne ce Champion de 10% de ses PV MAX. Soigne ce Champion de 10% supplémentaires de ses PV MAX pour chaque débuff transféré.${RETURN}${RETURN}
 
 Utilisera toujours cette compétence au lieu de la compétence par défaut lors d'une contre-attaque.`,
           damage: "5*DEFMultiplier: Target Current HP",
@@ -37,7 +37,7 @@ Utilisera toujours cette compétence au lieu de la compétence par défaut lors 
         {
           img: "assets/passif1.webp",
           name: "La Représentation [P]",
-          description: `Chaque fois que ce Champion perd 25 % de PV ou plus lors d'une seule frappe, place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour.`,
+          description: `Chaque fois que ce Champion perd 25% de PV ou plus lors d'une seule frappe, place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 1 tour.`,
           isPassive: true
         }
       ],

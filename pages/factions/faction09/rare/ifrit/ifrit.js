@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sort d'Atrophie",
-          description: `Attaque un ennemi. Place un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Place un débuff d'${DEBUFFS.WEAKEN} de 15% pendant 1 tour.`,
           damage: "5.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Éclair Accablant",
-          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
           damage: "2.5*ATQ+0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Champ d'Ombres [P]",
-          description: `Réduit de 50 % les dégâts subis si les dégâts d'une seule frappe dépassent 30 % de PV. Place un débuff de ${DEBUFFS.DEF} de 30 % sur l'assaillant, pendant 2 tours, si l'attaque passe en critique.`,
+          description: `Réduit de 50% les dégâts subis si les dégâts d'une seule frappe dépassent 30% de PV. Place un débuff de ${DEBUFFS.DEF} de 30% sur l'assaillant, pendant 2 tours, si l'attaque passe en critique.`,
           isPassive: true
         }
       ],

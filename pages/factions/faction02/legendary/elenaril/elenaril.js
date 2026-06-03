@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Bouillir",
-          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours. Place un second débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours si cette attaque passe en critique.`,
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours. Place un second débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours si cette attaque passe en critique.`,
           damage: "4.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

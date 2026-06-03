@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Masse du Noble",
-          description: `Attaque 2 fois un ennemi. La première frappe possède 40 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. La seconde frappe possède 40 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. La première frappe possède 40% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours. La seconde frappe possède 40% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.`,
           damage: "2.1*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,9 +21,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Valeur inébranlable",
-          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera 30% de la DÉF de la cible.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours si cette attaque tue un ennemi. Il est impossible de retirer ces buffs.`,
+Place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 2 tours si cette attaque tue un ennemi. Il est impossible de retirer ces buffs.`,
           damage: "6.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],

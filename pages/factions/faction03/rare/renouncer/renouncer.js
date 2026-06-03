@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Épée Étincelante",
-          description: `Retire un débuff aléatoire sur ce Champion, puis attaque 1 ennemi. Soigne ce Champion à hauteur de 25 % des dégâts infligés.`,
+          description: `Retire un débuff aléatoire sur ce Champion, puis attaque 1 ennemi. Soigne ce Champion à hauteur de 25% des dégâts infligés.`,
           damage: "5.58*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Grâce de Guerre",
-          description: `Attaque un ennemi. Place sur tous les alliés un buff ${BUFFS.SPD} de 15 % pendant 2 tours si cette attaque tue un ennemi.`,
+          description: `Attaque un ennemi. Place sur tous les alliés un buff ${BUFFS.SPD} de 15% pendant 2 tours si cette attaque tue un ennemi.`,
           damage: "6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],

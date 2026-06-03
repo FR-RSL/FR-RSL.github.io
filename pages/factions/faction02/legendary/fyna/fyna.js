@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée temporelle",
-          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire sur la cible.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 50% de chances d'augmenter de 2 tours le temps de recharge d'une compétence aléatoire sur la cible.${RETURN}${RETURN}
 
 Lorsqu'elle contre-attaque avec cette compétence, fait équipe avec un allié aléatoire. L'allié qui rejoint l'attaque utilisera sa compétence par défaut.`,
           damage: "4*ATQ",
@@ -24,7 +24,7 @@ Le temps de recharge de cette compétence ne peut être ni réduit ni réinitial
         {
           img: "assets/sort3.webp",
           name: "Lignée exaltée",
-          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.ATK} de 50%, un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -32,7 +32,7 @@ Le temps de recharge de cette compétence ne peut être ni réduit ni réinitial
         {
           img: "assets/passif1.webp",
           name: "Monter au front [P]",
-          description: `Dès qu'un buff est placé sur un allié, remplit son Compteur de Tour de 3 %.`,
+          description: `Dès qu'un buff est placé sur un allié, remplit son Compteur de Tour de 3%.`,
           isPassive: true
         }
       ],

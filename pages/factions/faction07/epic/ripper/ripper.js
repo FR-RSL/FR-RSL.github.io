@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Marqué à Vie",
-          description: `Attaque un ennemi. Détruit ses PV MAX de 30 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Détruit ses PV MAX de 30% des dégâts infligés.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Sans pitié",
           description: `Attaque 2 fois un ennemi. Les dégâts augmentent à mesure que les PV de la cible baissent.`,
-          damage: "3*ATQ+(1.5*ATQ*(1-Current HP %))",
+          damage: "3*ATQ+(1.5*ATQ*(1-Current HP%))",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Frappe Lourde",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. Détruit ses PV MAX de 40 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Ignorera 50% de la DÉF de la cible. Détruit ses PV MAX de 40% des dégâts infligés.`,
           damage: "3.3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],

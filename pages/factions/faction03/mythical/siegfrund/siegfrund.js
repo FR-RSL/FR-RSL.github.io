@@ -15,7 +15,7 @@ La première frappe transfère tous les débuffs de ce Champion sur la cible. La
         {
           img: "assets/sort2.webp",
           name: "Vague séraphique",
-          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25 %.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Chaque coup critique remplit le Compteur de Tour de ce Champion de 25%.${RETURN}${RETURN}
 
 Réinitialise le temps de recharge de la compétence Rage du Nephel si cette attaque tue un ennemi.${RETURN}${RETURN}
 
@@ -28,7 +28,7 @@ Réinitialise le temps de recharge de toutes les compétences de ce Champion si 
         {
           img: "assets/sort3.webp",
           name: "Rage du Nephel",
-          description: `Attaque un ennemi. Ignore 50 % de la DÉF de la cible. Si la cible initiale est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignore 50% de la DÉF de la cible. Si la cible initiale est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts.${RETURN}${RETURN}
 
 Soigne totalement ce Champion si la frappe initiale tue un ennemi.`,
           damage: "6*ATQMultiplier: Remaining Damage Amount",
@@ -50,7 +50,7 @@ Accorde ensuite un Tour supplémentaire.`,
           name: "Stopper la lame [P]",
           description: `Si ce Champion est sur le point de se faire tuer par un coup fatal, bloque les dégâts en approche et place un buff ${BUFFS.BLOCK_DAMAGE} sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour de 100 %.`,
+Soigne ensuite ce Champion de 50% de ses PV max et remplit son Compteur de Tour de 100%.`,
           cooldown: 3,
           isPassive: true
         }
@@ -76,7 +76,7 @@ Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour
         {
           img: "assets/sort4.webp",
           name: "Consumer",
-          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 20 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 20% des dégâts infligés.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +10%"],
           isPassive: false
@@ -86,7 +86,7 @@ Soigne ensuite ce Champion de 50 % de ses PV max et remplit son Compteur de Tour
           name: "Parade néphélique",
           description: `Retire tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
-Soigne ensuite une cible alliée de 30 % de ses PV MAX, puis lui accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
+Soigne ensuite une cible alliée de 30% de ses PV MAX, puis lui accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -94,7 +94,7 @@ Soigne ensuite une cible alliée de 30 % de ses PV MAX, puis lui accorde un buff
         {
           img: "assets/sort6.webp",
           name: "Lumière de l'au-delà",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour, puis place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.`,
+          description: `Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour, puis place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -109,7 +109,7 @@ Soigne ensuite une cible alliée de 30 % de ses PV MAX, puis lui accorde un buff
         {
           img: "assets/passif2.webp",
           name: "Bouclier de défi [P]",
-          description: `Réduit les dégâts infligés par des compétences de 20 %.`,
+          description: `Réduit les dégâts infligés par des compétences de 20%.`,
           isPassive: true
         }
       ],

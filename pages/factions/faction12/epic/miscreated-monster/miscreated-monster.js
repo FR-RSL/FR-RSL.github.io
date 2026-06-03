@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Poings Massifs",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 1 tour si le débuff d'${DEBUFFS.STUN} est placé.`,
+Possède 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 1 tour si le débuff d'${DEBUFFS.STUN} est placé.`,
           damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -14,9 +14,9 @@ Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 
         {
           img: "assets/sort2.webp",
           name: "Orage Électrique",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 50% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
 
-Place, sur tous les alliés, 3 tours de buff de ${BUFFS.SHIELD} égal à 25 % des dégâts infligés.`,
+Place, sur tous les alliés, 3 tours de buff de ${BUFFS.SHIELD} égal à 25% des dégâts infligés.`,
           damage: "0.21*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
@@ -25,10 +25,10 @@ Place, sur tous les alliés, 3 tours de buff de ${BUFFS.SHIELD} égal à 25 % de
         {
           img: "assets/sort3.webp",
           name: "C'est vivant",
-          description: `Place, pendant 3 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés, sauf sur ce Champion.${RETURN}${RETURN}
+          description: `Place, pendant 3 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés, sauf sur ce Champion.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 50 % de ses PV MAX.${RETURN}
-Place, pendant 3 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
+Soigne ce Champion à hauteur de 50% de ses PV MAX.${RETURN}
+Place, pendant 3 tours, un buff de ${BUFFS.HEALS} de 15% sur ce Champion.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

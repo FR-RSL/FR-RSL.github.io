@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fracasse Carcasse",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Craquement Frénétique",
-          description: `Attaque 4 fois au hasard. Chaque frappe possède 40 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 40% de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
           damage: "1.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Brûler",
-          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 50 % des dégâts infligés. Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
+          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 50% des dégâts infligés. Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "3.5*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

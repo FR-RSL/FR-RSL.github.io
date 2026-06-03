@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Vague d'Acier",
-          description: `Attaque un ennemi. Place un buff ${BUFFS.SPD} de 30 % pendant 2 tours sur ce Champion si l'attaque passe en critique. Place un buff ${BUFFS.CRATE} de 30 % pendant 2 tours sur ce Champion si l'attaque ne passe pas en critique.`,
+          description: `Attaque un ennemi. Place un buff ${BUFFS.SPD} de 30% pendant 2 tours sur ce Champion si l'attaque passe en critique. Place un buff ${BUFFS.CRATE} de 30% pendant 2 tours sur ce Champion si l'attaque ne passe pas en critique.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Clairon de l'Ancien",
-          description: `Place un buff ${BUFFS.DEF} de 60 % sur ce Champion pendant 3 tours. Place un débuff ${DEBUFFS.FEAR} d'1 tour sur tous les ennemis. Place un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur les cibles affligées de débuffs ${BUFFS.BLOCK_DAMAGE}. Place un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours sur les cibles disposant de buffs ${BUFFS.SHIELD}. Il est impossible de résister à ces débuffs. Place également un débuff ${DEBUFFS.PROVOKE} sur les Champions Légendaires pendant 1 tour.`,
+          description: `Place un buff ${BUFFS.DEF} de 60% sur ce Champion pendant 3 tours. Place un débuff ${DEBUFFS.FEAR} d'1 tour sur tous les ennemis. Place un débuff ${DEBUFFS.TRUE_FEAR} d'1 tour sur les cibles affligées de débuffs ${BUFFS.BLOCK_DAMAGE}. Place un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours sur les cibles disposant de buffs ${BUFFS.SHIELD}. Il est impossible de résister à ces débuffs. Place également un débuff ${DEBUFFS.PROVOKE} sur les Champions Légendaires pendant 1 tour.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

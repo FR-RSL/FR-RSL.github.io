@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Griffe-lune",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "4.05*ATQ",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
@@ -15,7 +15,7 @@ const championForms = {
           name: "Croissant écarlate",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Ignorera 15 % de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
+Ignorera 15% de la DÉF de la cible ainsi que les buffs ${BUFFS.STONE_SKIN}, ${BUFFS.STRENGTHEN}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
           damage: "2.8*ATQ",
@@ -26,7 +26,7 @@ Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
         {
           img: "assets/sort3.webp",
           name: "Cadeau de clair de lune",
-          description: `Place un buff ${BUFFS.ATK} de 50 %, un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur cette Championne pendant 3 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.ATK} de 50%, un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur cette Championne pendant 3 tours.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire.`,
           cooldown: 6,
@@ -43,7 +43,7 @@ Accorde un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Chasse implacable [P]",
-          description: `Soigne cette Championne à hauteur de 20 % des dégâts infligés. Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours lorsqu'elle tue un ennemi.`,
+          description: `Soigne cette Championne à hauteur de 20% des dégâts infligés. Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours lorsqu'elle tue un ennemi.`,
           isPassive: true
         }
       ],
@@ -96,7 +96,7 @@ Cette attaque ne déclenchera pas de contre-attaques. Ignorera également les bu
         {
           img: "assets/passif2.webp",
           name: "Étreindre la bête [P]",
-          description: `Augmente l'ATQ et les DÉG C. de cette Championne de 20 % lorsqu'elle se trouve sous sa Forme alternative.`,
+          description: `Augmente l'ATQ et les DÉG C. de cette Championne de 20% lorsqu'elle se trouve sous sa Forme alternative.`,
           isPassive: true
         }
       ],

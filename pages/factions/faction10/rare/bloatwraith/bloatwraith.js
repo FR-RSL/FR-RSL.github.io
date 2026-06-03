@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Crochet d'Ancrage",
-          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Les chances de placer un débuff ${DEBUFFS.STUN} augmentent de 5 % pour chaque débuff se trouvant sur la cible.`,
+          description: `Attaque un ennemi. Possède 15% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Les chances de placer un débuff ${DEBUFFS.STUN} augmentent de 5% pour chaque débuff se trouvant sur la cible.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Puanteur Abjecte",
-          description: `Attaque tous les ennemis. Possède 85 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours. Possède également 25 % de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur les ennemis souffrant de débuffs ${DEBUFFS.DEF}.`,
+          description: `Attaque tous les ennemis. Possède 85% de chances de placer un débuff ${DEBUFFS.DEF} de 30% pendant 2 tours. Possède également 25% de chances de placer un débuff ${DEBUFFS.FEAR} d'1 tour sur les ennemis souffrant de débuffs ${DEBUFFS.DEF}.`,
           damage: "3.64*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],

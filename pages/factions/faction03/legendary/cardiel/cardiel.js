@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Intimide le Malfaisant",
-          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 7,5 % de leurs PV max.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Soigne tous tes alliés à hauteur de 7,5% de leurs PV max.${RETURN}${RETURN}
 
 Place également un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour si la cible est un Champion des Factions Rejetons Démoniaques, Morts-vivants ou Revenants Chevaliers.`,
           damage: "4*ATQ",
@@ -22,7 +22,7 @@ Place également un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour si la cible est 
         {
           img: "assets/sort3.webp",
           name: "Hôte Paradisiaque",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours, puis s'associe avec tous les alliés pour attaquer une cible ennemie.${RETURN}
+          description: `Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur tous les alliés pendant 2 tours, puis s'associe avec tous les alliés pour attaquer une cible ennemie.${RETURN}
 Réduit d'1 tour le temps de recharge de cette compétence si un ennemi est tué lors de cette attaque.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
@@ -31,9 +31,9 @@ Réduit d'1 tour le temps de recharge de cette compétence si un ennemi est tué
         {
           img: "assets/passif1.webp",
           name: "Gardien de Démons [P]",
-          description: `Les alliés subissent 20 % de dégâts en moins de la part des Champions des Factions Rejetons Démoniaques, Morts-vivants ou Revenants Chevaliers.${RETURN}${RETURN}
+          description: `Les alliés subissent 20% de dégâts en moins de la part des Champions des Factions Rejetons Démoniaques, Morts-vivants ou Revenants Chevaliers.${RETURN}${RETURN}
 
-Dès qu'un allié attaque, ce Champion possède 15 % de chances de faire équipe avec lui et de rejoindre l'attaque. Ce Champion attaquera avec sa compétence par défaut. Rejoint toujours les attaques de Sicia Languefeu si elle se trouve dans la même équipe.${RETURN}${RETURN}
+Dès qu'un allié attaque, ce Champion possède 15% de chances de faire équipe avec lui et de rejoindre l'attaque. Ce Champion attaquera avec sa compétence par défaut. Rejoint toujours les attaques de Sicia Languefeu si elle se trouve dans la même équipe.${RETURN}${RETURN}
 
 Ne peut rejoindre une attaque alliée qu'une fois par tour. Cardiel ne s'associera pas à des attaques alliées lors d'une contre-attaque ou lorsqu'il fait équipe pour attaquer avec un autre Champion.`,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],

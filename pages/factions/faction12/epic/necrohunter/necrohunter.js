@@ -6,7 +6,7 @@ const championData = {
           name: "Flèches de Crypte",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false

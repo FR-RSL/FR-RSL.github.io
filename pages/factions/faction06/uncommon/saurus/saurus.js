@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Vague de Feu",
-          description: `Attaque 2 fois tous les ennemis. Possède 10 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 1 tour. Place un débuff de ${DEBUFFS.HEALS} de 50 % si les PV actuels de la cible sont inférieurs ou égaux à 40 %.`,
+          description: `Attaque 2 fois tous les ennemis. Possède 10% de chances de placer un débuff de ${DEBUFFS.HEALS} de 50% pendant 1 tour. Place un débuff de ${DEBUFFS.HEALS} de 50% si les PV actuels de la cible sont inférieurs ou égaux à 40%.`,
           damage: "1.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

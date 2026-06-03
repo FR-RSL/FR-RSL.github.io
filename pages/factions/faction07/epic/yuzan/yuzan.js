@@ -8,7 +8,7 @@ const championData = {
 
 Transfère un débuff aléatoire de ce Champion sur la cible.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
+Soigne ce Champion à hauteur de 10% de ses PV MAX.`,
           damage: "0.24*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -18,9 +18,9 @@ Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
           name: "Charge grondante",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
+A 75% de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
 
-Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette compétence.`,
+Soigne ce Champion de 10% de ses PV MAX pour chaque buffs retiré par cette compétence.`,
           damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -31,7 +31,7 @@ Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette com
           name: "Porte-bonheur",
           description: `Retire 1 débuff aléatoire à tous les alliés.${RETURN}${RETURN}
 
-Soigne tous les alliés de 20 % des PV MAX de ce Champion et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
+Soigne tous les alliés de 20% des PV MAX de ce Champion et place un buff ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -39,7 +39,7 @@ Soigne tous les alliés de 20 % des PV MAX de ce Champion et place un buff ${BUF
         {
           img: "assets/passif1.webp",
           name: "Âme charitable [P]",
-          description: `Dès que ce Champion se soigne à l'aide d'une de ses compétences, soigne également tous les alliés de 20 % des soins en surplus.`,
+          description: `Dès que ce Champion se soigne à l'aide d'une de ses compétences, soigne également tous les alliés de 20% des soins en surplus.`,
           isPassive: true
         }
       ],

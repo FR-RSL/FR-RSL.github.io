@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mur de Flammes",
-          description: `Attaque un ennemi. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60 % sur tous les alliés. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} égal à 20 % de leurs PV MAX. sur tous les alliés si cette attaque tue un ennemi.`,
+          description: `Attaque un ennemi. Place, pendant 2 tours, un buff d'${BUFFS.DEF} de 60% sur tous les alliés. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} égal à 20% de leurs PV MAX. sur tous les alliés si cette attaque tue un ennemi.`,
           damage: "5.6*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Réveil Ardent [P]",
-          description: `Ranime un allié choisi au hasard avec 30 % de PV à chaque fois que ce Champion tue un ennemi. Réinitialise les temps de recharge des Compétences de ce Champion si ce Champion tue un ennemi et que tous les alliés sont en vie.`,
+          description: `Ranime un allié choisi au hasard avec 30% de PV à chaque fois que ce Champion tue un ennemi. Réinitialise les temps de recharge des Compétences de ce Champion si ce Champion tue un ennemi et que tous les alliés sont en vie.`,
           isPassive: true
         }
       ],

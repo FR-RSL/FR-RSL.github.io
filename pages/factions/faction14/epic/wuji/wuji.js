@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Terrible double-lame",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 30% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.${RETURN}${RETURN}
 
 [Ciblera tous les ennemis au lieu d'1 lors d'une contre-attaque avec cette compétence.]`,
           damage: "3*ATQ",
@@ -14,7 +14,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Monde des ténèbres",
-          description: `Attaque tous les ennemis. Possède 55 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 55% de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],

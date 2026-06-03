@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Carreau Estropiant",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 15% de chances de placer un débuff ${DEBUFFS.SPD} de 15% pendant 2 tours.`,
           damage: "1.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "il Averti",
-          description: `Place un buff ${BUFFS.CRATE} de 15 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours. Accorde un Tour Supplémentaire.`,
+          description: `Place un buff ${BUFFS.CRATE} de 15% et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 2 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Munitions Perçantes",
-          description: `Attaque un ennemi. Ignorera 30 % de la DÉF de la cible.`,
+          description: `Attaque un ennemi. Ignorera 30% de la DÉF de la cible.`,
           damage: "4.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

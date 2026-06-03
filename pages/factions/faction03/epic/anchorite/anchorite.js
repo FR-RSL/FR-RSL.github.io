@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Chaude étreinte",
-          description: `Attaque tous les ennemis. Soigne l'allié ayant le moins de PV de 10 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Soigne l'allié ayant le moins de PV de 10% des dégâts infligés.`,
           damage: "2.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Soins +5%", "Soins +10%"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Confiance sacrée",
-          description: `Soigne totalement une cible alliée, puis place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.`,
+          description: `Soigne totalement une cible alliée, puis place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

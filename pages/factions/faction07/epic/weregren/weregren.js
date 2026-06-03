@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bond bestial",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de voler un buff aléatoire.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances de voler un buff aléatoire.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -31,7 +31,7 @@ Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour si cet
         {
           img: "assets/passif1.webp",
           name: "Chasser les faibles [P]",
-          description: `Inflige 30 % de dégâts en plus contre les cibles dont les PV actuels sont inférieurs à ceux de ce Champion.`,
+          description: `Inflige 30% de dégâts en plus contre les cibles dont les PV actuels sont inférieurs à ceux de ce Champion.`,
           isPassive: true
         }
       ],

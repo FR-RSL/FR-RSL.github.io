@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fracas sur nous",
-          description: `Attaque 2 fois un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Chaque coup critique remplit le Compteur de Tour de tous les alliés de 5 %.`,
+          description: `Attaque 2 fois un ennemi. Possède 40% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Chaque coup critique remplit le Compteur de Tour de tous les alliés de 5%.`,
           damage: "0.12*B_HP",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +15%"],
           isPassive: false
@@ -25,9 +25,9 @@ Dès qu'un ennemi attaque Marichka la Robuste, attaque cet ennemi en utilisant c
         {
           img: "assets/sort3.webp",
           name: "Pression constante",
-          description: `Attaque tous les ennemis. Les dégâts augmentent de 15 % pour chaque buff sur les alliés. Augmente ensuite d'1 tour la durée de tous les buffs des alliés.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 15% pour chaque buff sur les alliés. Augmente ensuite d'1 tour la durée de tous les buffs des alliés.${RETURN}${RETURN}
 
-Soigne ce Champion de 5 % pour chaque buff dont la durée est augmentée. Restaure les PV MAX réduits d'une valeur équivalente à tous les soins en surplus.`,
+Soigne ce Champion de 5% pour chaque buff dont la durée est augmentée. Restaure les PV MAX réduits d'une valeur équivalente à tous les soins en surplus.`,
           damage: "0.26*B_HP",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -38,7 +38,7 @@ Soigne ce Champion de 5 % pour chaque buff dont la durée est augmentée. Restau
           name: "Battant féroce [P]",
           description: `${PASSIVE}
 
-Lorsque ce Champion est attaqué, réduit l'ATQ de l'ennemi de 10 % (jusqu'à 50 % ; 25 % contre les Boss). Ne peut se produire qu'une fois par compétence. La réduction d'ATQ se réinitialise après chaque round.${RETURN}${RETURN}
+Lorsque ce Champion est attaqué, réduit l'ATQ de l'ennemi de 10% (jusqu'à 50% ; 25% contre les Boss). Ne peut se produire qu'une fois par compétence. La réduction d'ATQ se réinitialise après chaque round.${RETURN}${RETURN}
 
 ${ACTIVE}
 
@@ -48,9 +48,9 @@ Place un débuff ${DEBUFFS.FEAR} sur tous les ennemis des Factions Orcs, Tribus 
         {
           img: "assets/passif1.webp",
           name: "Élégance [P]",
-          description: `Tous les dégâts en approche dus à des compétences sont réduits de 50 %.${RETURN}${RETURN}
+          description: `Tous les dégâts en approche dus à des compétences sont réduits de 50%.${RETURN}${RETURN}
 
-Lorsque ce Champion est attaqué, ses PV MAX seront réduits de 25 % des dégâts initiaux de l'attaque (avant la réduction des dégâts).`,
+Lorsque ce Champion est attaqué, ses PV MAX seront réduits de 25% des dégâts initiaux de l'attaque (avant la réduction des dégâts).`,
           isPassive: true
         }
       ],

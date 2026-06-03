@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Recouvrer",
-          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 7,5 % sur ce Champion si la frappe passe en critique.`,
+          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 7,5% sur ce Champion si la frappe passe en critique.`,
           damage: "3.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Déluge de Toxines",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5% pendant 2 tours.`,
           damage: "1.75*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tir Brûlant",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff de ${DEBUFFS.BURN} de 2 tours.`,
           damage: "6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

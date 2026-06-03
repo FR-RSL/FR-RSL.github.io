@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hampe Double",
-          description: `Attaque 2 fois un ennemi. Inflige 15 % de dégâts supplémentaires contre les cibles n'ayant pas de buff actif.`,
+          description: `Attaque 2 fois un ennemi. Inflige 15% de dégâts supplémentaires contre les cibles n'ayant pas de buff actif.`,
           damage: "1.85*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Flèche Maudite",
-          description: `Attaque un ennemi. Réduit de 20 % le Compteur de Tours de la cible si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Réduit de 20% le Compteur de Tours de la cible si cette attaque passe en critique.`,
           damage: "5.3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

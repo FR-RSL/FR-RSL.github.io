@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Attaque Totale",
-          description: `Attaque un ennemi. Remplit de 30 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
+          description: `Attaque un ennemi. Remplit de 30% le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Balayage",
-          description: `Attaque 2 fois tous les ennemis. Ignorera 20 % de la DÉF de chaque cible.`,
+          description: `Attaque 2 fois tous les ennemis. Ignorera 20% de la DÉF de chaque cible.`,
           damage: "1.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],

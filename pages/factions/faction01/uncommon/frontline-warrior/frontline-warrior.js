@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frères d'Armes",
-          description: `Place un buff de ${BUFFS.ALLY_PROTECT} de 25 % sur l'allié ayant le moins de PV, pendant 2 tours. Accorde un Tour Supplémentaire.`,
+          description: `Place un buff de ${BUFFS.ALLY_PROTECT} de 25% sur l'allié ayant le moins de PV, pendant 2 tours. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

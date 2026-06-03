@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cri Guerrier",
-          description: `Place un buff d'${BUFFS.CRATE} de 15 % et un buff d'${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.`,
+          description: `Place un buff d'${BUFFS.CRATE} de 15% et un buff d'${BUFFS.ATK} de 50% sur ce Champion pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Déchirure",
-          description: `Attaque 3 fois un ennemi. Possède 20 % de chances supplémentaires de porter un coup critique.`,
+          description: `Attaque 3 fois un ennemi. Possède 20% de chances supplémentaires de porter un coup critique.`,
           damage: "1.4*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

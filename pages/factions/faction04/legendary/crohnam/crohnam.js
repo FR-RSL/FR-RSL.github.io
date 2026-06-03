@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épées de djinn",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible.${RETURN}${RETURN}
 
 Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d'1 tour la durée de tout débuff ${DEBUFFS.BURN} sur la cible.`,
           damage: "1.5*ATQ",
@@ -14,7 +14,7 @@ Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d
         {
           img: "assets/sort2.webp",
           name: "Régal de berserker",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 80 % de chances d'activer instantanément un débuff ${DEBUFFS.BURN} sur la cible. Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BURN} activé par cette compétence.`,
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 80% de chances d'activer instantanément un débuff ${DEBUFFS.BURN} sur la cible. Soigne ce Champion de 10% de ses PV MAX pour chaque débuff ${DEBUFFS.BURN} activé par cette compétence.`,
           damage: "2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -23,9 +23,9 @@ Si Djamarsa se trouve dans la même équipe, chaque frappe augmente également d
         {
           img: "assets/sort3.webp",
           name: "Zéphyr ardent",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 80% de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 15 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
+Remplit le Compteur de Tour de ce Champion de 15% pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -40,7 +40,7 @@ Toutes les 10 fois que des Compétences Actives sont utilisées au combat par de
 
 ${ACTIVE}
 
-Si Djamarsa se trouve dans la même équipe, ranime ce Champion avec 50 % de PV et 50 % de Compteur de Tour lorsqu'il se fait tuer.`,
+Si Djamarsa se trouve dans la même équipe, ranime ce Champion avec 50% de PV et 50% de Compteur de Tour lorsqu'il se fait tuer.`,
           cooldown: 4,
           isPassive: true
         }

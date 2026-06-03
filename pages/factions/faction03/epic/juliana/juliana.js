@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Danse de bataille",
-          description: `Attaque 2 fois un ennemi. Chaque coup critique remplit de 10 % le Compteur de Tour de ce Champion.`,
+          description: `Attaque 2 fois un ennemi. Chaque coup critique remplit de 10% le Compteur de Tour de ce Champion.`,
           damage: "2.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Partenaire Mortelle",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 2 tours, puis attaque deux fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % pendant 3 tours sur la cible si cette attaque passe en critique.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.CRATE} de 30% sur ce Champion pendant 2 tours, puis attaque deux fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5% pendant 3 tours sur la cible si cette attaque passe en critique.${RETURN}${RETURN}
 
-[Ignorera 50 % de la DÉF de la cible quand Roméro se trouve dans la même équipe.]`,
+[Ignorera 50% de la DÉF de la cible quand Roméro se trouve dans la même équipe.]`,
           damage: "3*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
@@ -23,7 +23,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Feu de Purge",
-          description: `Attaque un ennemi. Retire tous les buffs de la cible. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 3 tours.`,
+          description: `Attaque un ennemi. Retire tous les buffs de la cible. Possède 75% de chances de placer un débuff ${DEBUFFS.BURN} pendant 3 tours.`,
           damage: "6*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],

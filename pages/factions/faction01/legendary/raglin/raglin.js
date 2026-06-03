@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Repentir",
-          description: `Attaque 3 fois un ennemi. Remplit de 15 % le Compteur de Tour de 3 alliés pris au hasard. Les alliés ne peuvent remplir leur Compteur de Tour qu'une fois grâce à cette Compétence.`,
+          description: `Attaque 3 fois un ennemi. Remplit de 15% le Compteur de Tour de 3 alliés pris au hasard. Les alliés ne peuvent remplir leur Compteur de Tour qu'une fois grâce à cette Compétence.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Clémence",
-          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.ATK} de 50 % % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Retire tous les débuffs de tous les alliés, puis place un buff ${BUFFS.PRE} de 50% et un buff ${BUFFS.ATK} de 50%% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ et aux PV de cette Championne.`,
           cooldown: 4,
@@ -22,7 +22,7 @@ Ensuite, soigne tous les alliés. La valeur du soin est proportionnelle à l'ATQ
         {
           img: "assets/sort3.webp",
           name: "Miracle",
-          description: `Ranime un allié avec 75 % de PV et 100 % de Compteur de Tour. Réduit également de 3 tours les temps de recharge de toutes les compétences des alliés ranimés.`,
+          description: `Ranime un allié avec 75% de PV et 100% de Compteur de Tour. Réduit également de 3 tours les temps de recharge de toutes les compétences des alliés ranimés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

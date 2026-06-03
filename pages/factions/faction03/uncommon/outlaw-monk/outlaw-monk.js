@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lancé de Dague",
-          description: `Attaque 1 ennemi. Possède 10 % de chances d'accorder un Tour Supplémentaire.`,
+          description: `Attaque 1 ennemi. Possède 10% de chances d'accorder un Tour Supplémentaire.`,
           damage: "3.6*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Homicide",
-          description: `Place, pour 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5 % sur la cible.`,
+          description: `Place, pour 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5% sur la cible.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

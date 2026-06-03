@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Distancer",
-          description: `Attaque un ennemi. Possède 80 % de chances de voler 15 % du Compteur de Tour de la cible. Possède 20 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour si le Compteur de Tour de la cible est réduit par cette compétence.`,
+          description: `Attaque un ennemi. Possède 80% de chances de voler 15% du Compteur de Tour de la cible. Possède 20% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour si le Compteur de Tour de la cible est réduit par cette compétence.`,
           damage: "0.21*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Supériorité naturelle",
-          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Possède également 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs ennemis. Possède également 60% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 10 % pour chaque buff qui a vu sa durée réduite.`,
+Remplit le Compteur de Tour de ce Champion de 10% pour chaque buff qui a vu sa durée réduite.`,
           damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -23,9 +23,9 @@ Remplit le Compteur de Tour de ce Champion de 10 % pour chaque buff qui a vu sa 
         {
           img: "assets/sort3.webp",
           name: "Tenir la ligne",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
+          description: `Possède 75% de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
-Place une ${BUFFS.COUNTER} et un buff ${BUFFS.HEALS} de 15 % sur ce Champion pendant 2 tours.`,
+Place une ${BUFFS.COUNTER} et un buff ${BUFFS.HEALS} de 15% sur ce Champion pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

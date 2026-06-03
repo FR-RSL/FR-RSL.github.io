@@ -7,7 +7,7 @@ const championForms = {
           name: "Tempête astrale",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de tous les alliés de 10 %. Remplit également le Compteur de Tour de chaque allié de 5 % supplémentaires s'ils possèdent des buffs actifs que ce Champion leur a accordés.`,
+Remplit le Compteur de Tour de tous les alliés de 10%. Remplit également le Compteur de Tour de chaque allié de 5% supplémentaires s'ils possèdent des buffs actifs que ce Champion leur a accordés.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
@@ -15,9 +15,9 @@ Remplit le Compteur de Tour de tous les alliés de 10 %. Remplit également le C
         {
           img: "assets/sort2.webp",
           name: "Embryon stellaire",
-          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 25 % des PV MAX de ce Champion.${RETURN}${RETURN}
+          description: `Retire tous les débuffs sur tous les alliés, puis les soigne à hauteur de 25% des PV MAX de ce Champion.${RETURN}${RETURN}
 
-Remplit également le Compteur de tour de tous les alliés de 15 % et leur accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
+Remplit également le Compteur de tour de tous les alliés de 15% et leur accorde un buff ${BUFFS.BLOCK_DEBUFFS} pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Soins +20%", "Temps de recharge -1"],
           isPassive: false
@@ -25,7 +25,7 @@ Remplit également le Compteur de tour de tous les alliés de 15 % et leur accor
         {
           img: "assets/sort3.webp",
           name: "Lever le voile",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 6,
@@ -44,7 +44,7 @@ Place également un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Cham
           name: "Au-delà éternel [P]",
           description: `${PASSIVE}
 
-Ce Champion reçoit 5 % de dégâts en moins par tranche de 100 RÉS qu'il possède (s'accumule jusqu'à 25 %).${RETURN}${RETURN}
+Ce Champion reçoit 5% de dégâts en moins par tranche de 100 RÉS qu'il possède (s'accumule jusqu'à 25%).${RETURN}${RETURN}
 
 ${ACTIVE}
 
@@ -75,7 +75,7 @@ Empêche la mort de ce Champion et le garde vivant avec 1 PV lorsqu'il reçoit d
           name: "Rayon de décréation",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Réduit le Compteur de Tour de tous les ennemis de 10 %. Réduit le Compteur de Tour de chaque ennemi de 5 % supplémentaires s'ils se trouvent sous un débuff ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.RES} ou ${DEBUFFS.STUN} placé par ce Champion.`,
+Réduit le Compteur de Tour de tous les ennemis de 10%. Réduit le Compteur de Tour de chaque ennemi de 5% supplémentaires s'ils se trouvent sous un débuff ${DEBUFFS.LOCK_ACTIVE}, ${DEBUFFS.RES} ou ${DEBUFFS.STUN} placé par ce Champion.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
@@ -96,9 +96,9 @@ Cette attaque ne déclenchera pas de contre-attaques.`,
         {
           img: "assets/sort6.webp",
           name: "Sombre nébuleuse",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Ensuite, place un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours et un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
+Ensuite, place un débuff ${DEBUFFS.RES} de 50% sur tous les ennemis pendant 2 tours et un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
           levelInfo: ["Ignorer la RES +20%"],
           isPassive: false
@@ -115,11 +115,11 @@ Ensuite, place un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 
           name: "Reflet d'étoile [P]",
           description: `${PASSIVE}
 
-Augmente la PRÉ de ce Champion afin qu'elle soit équivalente à 75 % de sa RÉS lorsqu'il place des débuffs ou active des effets instantanés.${RETURN}${RETURN}
+Augmente la PRÉ de ce Champion afin qu'elle soit équivalente à 75% de sa RÉS lorsqu'il place des débuffs ou active des effets instantanés.${RETURN}${RETURN}
 
 ${ACTIVE}
 
-Si la PRÉ d'un ennemi est plus élevée que la RÉS de ce Champion, possède 50 % de chances de renvoyer tout débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} sur l'ennemi lorsqu'il place ces débuffs sur ce Champion.`,
+Si la PRÉ d'un ennemi est plus élevée que la RÉS de ce Champion, possède 50% de chances de renvoyer tout débuff ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.SLEEP}, ${DEBUFFS.STUN} ou ${DEBUFFS.PETRIFICATION} sur l'ennemi lorsqu'il place ces débuffs sur ce Champion.`,
           cooldown: 3,
           isPassive: true
         }

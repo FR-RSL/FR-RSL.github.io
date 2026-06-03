@@ -16,7 +16,7 @@ Réduit d'1 tour le temps de recharge de la compétence Couper en Deux si cette 
           name: "Dissection",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+Possède 30% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours.`,
           damage: "6.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

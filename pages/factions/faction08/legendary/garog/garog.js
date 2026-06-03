@@ -6,7 +6,7 @@ const championData = {
           name: "Fendoirs Géants",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 75 % si le Compteur de Tour de la cible est supérieur ou égal à 50 %.`,
+Possède 50% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 75% si le Compteur de Tour de la cible est supérieur ou égal à 50%.`,
           damage: "1.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -16,7 +16,7 @@ Possède 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ce
           name: "Couper en Morceaux",
           description: `Attaque 4 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 20 % de la DÉF de la cible. Chaque coup critique offre 50 % de chances de réduire d'1 tour le temps de recharge de la compétence Faiseur de Carnage.`,
+Chaque frappe ignorera 20% de la DÉF de la cible. Chaque coup critique offre 50% de chances de réduire d'1 tour le temps de recharge de la compétence Faiseur de Carnage.`,
           damage: "1.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -27,7 +27,7 @@ Chaque frappe ignorera 20 % de la DÉF de la cible. Chaque coup critique offre 5
           name: "Faiseur de Carnage",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Ignorera 20 % de la DÉF de chaque cible. Ignorera 5 % de DÉF supplémentaires pour chaque buff sur ce Champion.`,
+Ignorera 20% de la DÉF de chaque cible. Ignorera 5% de DÉF supplémentaires pour chaque buff sur ce Champion.`,
           damage: "4*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

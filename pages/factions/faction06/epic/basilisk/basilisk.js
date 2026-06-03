@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Résister [P]",
-          description: `Ranime ce Champion avec 30 % de PV lorsqu'il se fait tuer et place un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour.`,
+          description: `Ranime ce Champion avec 30% de PV lorsqu'il se fait tuer et place un buff de ${BUFFS.BLOCK_DAMAGE} d'1 tour.`,
           cooldown: 8,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true

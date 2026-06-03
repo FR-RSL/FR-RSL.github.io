@@ -6,7 +6,7 @@ const championData = {
           name: "Provocation à la Lance",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 10 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+Possède 10% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "1.65*DEF+2.2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -16,7 +16,7 @@ Possède 10 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           name: "Agitateur",
           description: `Attaque 2 fois au hasard.${RETURN}${RETURN}
 
-Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+Possède 25% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "2*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

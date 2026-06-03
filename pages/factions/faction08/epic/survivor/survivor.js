@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Survivante Née [P]",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, pendant 2 tours, sur tous les alliés lorsque les PV de n'importe quel allié tombent sous 50 %. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50%, pendant 2 tours, sur tous les alliés lorsque les PV de n'importe quel allié tombent sous 50%. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: true

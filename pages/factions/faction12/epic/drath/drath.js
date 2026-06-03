@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sceptre d'Autorité",
-          description: `Attaque un ennemi. Possède 35 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 35% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Nécro Mutation",
-          description: `Soigne tous tes alliés à hauteur de 20 % des PV MAX de ce Champion. Après le soin, place un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours sur tous les alliés ayant tous leurs PV. Sinon, place pendant 1 tour un buff ${BUFFS.HEALS} de 15 % sur les alliés ayant moins de 100 % de PV.`,
+          description: `Soigne tous tes alliés à hauteur de 20% des PV MAX de ce Champion. Après le soin, place un buff ${BUFFS.PERFECT_VEIL} pendant 2 tours sur tous les alliés ayant tous leurs PV. Sinon, place pendant 1 tour un buff ${BUFFS.HEALS} de 15% sur les alliés ayant moins de 100% de PV.`,
           cooldown: 5,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Forme Spirituelle",
-          description: `Ranime un seul allié avec 60 % de PV et remplit son Compteur de Tour de 60 %. Place un buff ${BUFFS.PERFECT_VEIL} de 3 tours sur cet allié.`,
+          description: `Ranime un seul allié avec 60% de PV et remplit son Compteur de Tour de 60%. Place un buff ${BUFFS.PERFECT_VEIL} de 3 tours sur cet allié.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

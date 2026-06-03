@@ -6,7 +6,7 @@ const championData = {
           name: "Épées solaires",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à ce débuff si Vlad le Nocturne se trouve dans la même équipe.${RETURN}${RETURN}
+Place un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Il est impossible de résister à ce débuff si Vlad le Nocturne se trouve dans la même équipe.${RETURN}${RETURN}
 
 Place une frappe supplémentaire si la cible se trouve sous un débuff.`,
           damage: "3.6*ATQ",
@@ -16,11 +16,11 @@ Place une frappe supplémentaire si la cible se trouve sous un débuff.`,
         {
           img: "assets/sort2.webp",
           name: "Fracas de Runes",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe ignorera 15 % de la DÉF de chaque cible.${RETURN}${RETURN}
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe ignorera 15% de la DÉF de chaque cible.${RETURN}${RETURN}
 
-Chaque frappe ignorera 10 % supplémentaires de la DÉF de chaque cible pour chaque débuff ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} dont elle est affligée.${RETURN}${RETURN}
+Chaque frappe ignorera 10% supplémentaires de la DÉF de chaque cible pour chaque débuff ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} dont elle est affligée.${RETURN}${RETURN}
 
-Si une cible est sous débuffs ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} simultanément, chaque frappe ignorera au lieu de ça 75 % de sa DÉF.`,
+Si une cible est sous débuffs ${DEBUFFS.LEECH}, ${DEBUFFS.DEF} et ${DEBUFFS.LOCK_ACTIVE} simultanément, chaque frappe ignorera au lieu de ça 75% de sa DÉF.`,
           damage: "2.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

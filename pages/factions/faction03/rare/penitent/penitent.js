@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée de Foi",
-          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
+          description: `Attaque 2 fois un ennemi. Possède 30% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 1 tour.`,
           damage: "4.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false

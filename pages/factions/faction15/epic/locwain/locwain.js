@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Attrape-aubaine",
-          description: `Attaque un ennemi. Possède 30 % de chances de voler 1 buff aléatoire.`,
+          description: `Attaque un ennemi. Possède 30% de chances de voler 1 buff aléatoire.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Révélation",
-          description: `Attaque tous les ennemis. Possède 25 % de chances de retirer tous les buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} sur tous les ennemis.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 25% de chances de retirer tous les buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} sur tous les ennemis.${RETURN}${RETURN}
 
-Possède également 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis.`,
+Possède également 75% de chances de retirer 1 buff aléatoire sur tous les ennemis.`,
           damage: "3.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

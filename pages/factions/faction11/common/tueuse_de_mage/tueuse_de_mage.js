@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Presser",
-          description: `Attaque 1 ennemi. Possède 10 % de chances de placer les compétences de la cible en recharge.`,
+          description: `Attaque 1 ennemi. Possède 10% de chances de placer les compétences de la cible en recharge.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         }

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Touche de Vigueur",
-          description: `Soigne un allié à hauteur de 40 % de ses PV max. Par contre, soigne de 60 % si l'allié possède 50 % de PV ou moins.`,
+          description: `Soigne un allié à hauteur de 40% de ses PV max. Par contre, soigne de 60% si l'allié possède 50% de PV ou moins.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Chant Berçant",
-          description: `Possède 50 % de chances de retirer tous les buffs sur tous les ennemis. Place ensuite un débuff ${DEBUFFS.SLEEP} d'1 tour sur tous les ennemis ne possédant pas de buff actif.`,
+          description: `Possède 50% de chances de retirer tous les buffs sur tous les ennemis. Place ensuite un débuff ${DEBUFFS.SLEEP} d'1 tour sur tous les ennemis ne possédant pas de buff actif.`,
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

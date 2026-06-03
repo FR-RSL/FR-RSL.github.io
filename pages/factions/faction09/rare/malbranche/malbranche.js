@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Explosifs Démoniaques",
-          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff de ${DEBUFFS.BOMB} qui détonera après 3 tours.`,
+          description: `Attaque un ennemi. Possède 60% de chances de placer un débuff de ${DEBUFFS.BOMB} qui détonera après 3 tours.`,
           damage: "6.6*ATQ",
           cooldown: 6,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1", "Temps de recharge -1"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Sombre Sphère",
-          description: `Attaque tous les ennemis. Soigne ce Champion et tous les alliés à hauteur de 20 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Soigne ce Champion et tous les alliés à hauteur de 20% des dégâts infligés.`,
           damage: "2.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Malveillance",
-          description: `Retire tous les débuffs de tous les alliés. Place, pendant 2 tours, deux buffs de ${BUFFS.HEALS} de 15 % sur tous les alliés. Place, pendant 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5 % sur tous les ennemis.`,
+          description: `Retire tous les débuffs de tous les alliés. Place, pendant 2 tours, deux buffs de ${BUFFS.HEALS} de 15% sur tous les alliés. Place, pendant 2 tours, deux débuffs de ${DEBUFFS.POISON} de 5% sur tous les ennemis.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Harcèlement [P]",
-          description: `Tous les alliés infligent 20 % de dégâts supplémentaires contre les cibles souffrant de débuffs de ${DEBUFFS.POISON}.`,
+          description: `Tous les alliés infligent 20% de dégâts supplémentaires contre les cibles souffrant de débuffs de ${DEBUFFS.POISON}.`,
           isPassive: true
         }
       ],

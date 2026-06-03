@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames ignobles",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 20% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Guerre des nerfs",
-          description: `Attaque un ennemi. Avant d'attaquer, possède 50 % de chances de voler tous les buffs de la cible.`,
+          description: `Attaque un ennemi. Avant d'attaquer, possède 50% de chances de voler tous les buffs de la cible.`,
           damage: "5.3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

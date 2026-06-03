@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Planter",
-          description: `Attaque 1 ennemi. Possède 20 % de chances supplémentaires de porter un coup critique. Les dégâts infligés sont proportionnels à la DÉF.`,
+          description: `Attaque 1 ennemi. Possède 20% de chances supplémentaires de porter un coup critique. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "3.5*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

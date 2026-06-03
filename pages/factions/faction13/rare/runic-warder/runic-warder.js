@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Acier Supérieur",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances de placer un débuff de ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
           damage: "0.15*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Rune de Survie",
-          description: `Place un buff de ${BUFFS.REFLECT_DAM} de 15 % et un buff de ${BUFFS.HEALS} de 7,5 % sur tous les alliés pendant 2 tours.`,
+          description: `Place un buff de ${BUFFS.REFLECT_DAM} de 15% et un buff de ${BUFFS.HEALS} de 7,5% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

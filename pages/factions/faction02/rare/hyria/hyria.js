@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Feinte",
-          description: `Attaque un ennemi. Possède 25 % de chances supplémentaires de porter un coup critique.`,
+          description: `Attaque un ennemi. Possède 25% de chances supplémentaires de porter un coup critique.`,
           damage: "2.9*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lis Empoisonné",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 35% de chances de placer un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "1.7*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],

@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Balayage Spectaculaire",
-          description: `Attaque tous les ennemis, puis soigne tous les alliés à hauteur de 15 % de ses PV MAX.`,
+          description: `Attaque tous les ennemis, puis soigne tous les alliés à hauteur de 15% de ses PV MAX.`,
           damage: "0.12*PV + 2*ATQ",
           cooldown: 5,
           levelInfo: ["Soins +5%", "Soins +5%", "Dégâts +5%", "Soins +10%", "Soins +15%", "Dégâts +15%", "Temps de recharge -1"],

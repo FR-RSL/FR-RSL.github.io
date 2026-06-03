@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Force Grotesque",
-          description: `Possède 50 % de chances de placer un buff d'${BUFFS.ATK} de 25 % sur ce Champion, puis attaque un ennemi.`,
+          description: `Possède 50% de chances de placer un buff d'${BUFFS.ATK} de 25% sur ce Champion, puis attaque un ennemi.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Repas Macabre",
-          description: `Attaque 3 fois un ennemi. Soigne ce Champion à hauteur de 20 % des dégâts infligés.`,
+          description: `Attaque 3 fois un ennemi. Soigne ce Champion à hauteur de 20% des dégâts infligés.`,
           damage: "1.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

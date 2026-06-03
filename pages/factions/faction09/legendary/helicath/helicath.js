@@ -4,7 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Griffe Pyroclastique",
-			description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
+			description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}.`,
 			damage: "1.8*DEF",
 			levelInfo: [
 				"Dégâts +5%",
@@ -36,7 +36,7 @@ Place un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 tours.${RETUR
 
 ${PASSIVE}
 
-Lorsqu'un buff ${BUFFS.BLOCK_DAMAGE} placé sur un allié par ce Champion est retiré ou volé, ou qu'il expire, place un buff ${BUFFS.DEF} de 60 % sur cet allié pendant 2 tours.`,
+Lorsqu'un buff ${BUFFS.BLOCK_DAMAGE} placé sur un allié par ce Champion est retiré ou volé, ou qu'il expire, place un buff ${BUFFS.DEF} de 60% sur cet allié pendant 2 tours.`,
 			levelInfo: [
 				"Temps de recharge -1",
 				"Temps de recharge -1",
@@ -46,7 +46,7 @@ Lorsqu'un buff ${BUFFS.BLOCK_DAMAGE} placé sur un allié par ce Champion est re
         {
         	img: "assets/passif1.webp",
         	name: "Festin d'agonie [P]",
-        	description: `Augmente la DÉF de ce Champion de 5 % pour chaque allié sous buff ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
+        	description: `Augmente la DÉF de ce Champion de 5% pour chaque allié sous buff ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
 Contre-attaque avec la compétence par défaut dès qu'un allié se fait frapper lorsqu'il est sous buff ${BUFFS.BLOCK_DAMAGE}. Ne peut survenir qu'une fois par tour ennemi.`,
           	isPassive: true,

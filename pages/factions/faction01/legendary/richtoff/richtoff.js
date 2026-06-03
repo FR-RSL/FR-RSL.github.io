@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Perte",
-          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 30 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 30% des dégâts infligés.`,
           damage: "1.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Saignée",
-          description: `Attaque 3 fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5 % sur tous les ennemis pendant 2 tours.`,
+          description: `Attaque 3 fois un ennemi. Place un débuff ${DEBUFFS.POISON} de 5% sur tous les ennemis pendant 2 tours.`,
           damage: "1.9*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Prismaudite",
-          description: `Attaque un ennemi. Les dégâts critiques augmentent de 20 % pour chaque débuff Poison dont est affligée la cible. S'additionne jusqu'à 100 %.`,
+          description: `Attaque un ennemi. Les dégâts critiques augmentent de 20% pour chaque débuff Poison dont est affligée la cible. S'additionne jusqu'à 100%.`,
           damage: "6.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

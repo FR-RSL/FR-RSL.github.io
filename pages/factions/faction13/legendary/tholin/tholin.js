@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Brise-démon",
-          description: `Attaque tous les ennemis. Avant d'attaquer, a 25 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 25% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire. Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas résister à cet effet.${RETURN}${RETURN}
+A 50% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours si la cible est membre de l'Alliance corrompue, un Boss ou un sbire. Les ennemis de l'Alliance corrompue, les Boss et les sbires ne peuvent pas résister à cet effet.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si un débuff ${DEBUFFS.WEAKEN} a été placé sur tous les ennemis par cette compétence.`,
           damage: "2.5*ATQ",
@@ -22,9 +22,9 @@ Accorde un Tour supplémentaire si un débuff ${DEBUFFS.WEAKEN} a été placé s
           name: "Retour dans l'abîme",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 25 % de la DÉF de la cible. Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire, chaque frappe ignore au lieu de ça 50 % de la DÉF de la cible.${RETURN}${RETURN}
+Chaque frappe ignorera 25% de la DÉF de la cible. Si la cible est membre de l'Alliance corrompue, un Boss ou un sbire, chaque frappe ignore au lieu de ça 50% de la DÉF de la cible.${RETURN}${RETURN}
 
-Chaque frappe réduit l'ATQ de la cible de 5 % (s'accumule jusqu'à 25 %). Chaque frappe augmente également l'ATQ de ce Champion de 5 % (s'accumule jusqu'à 50 %).`,
+Chaque frappe réduit l'ATQ de la cible de 5% (s'accumule jusqu'à 25%). Chaque frappe augmente également l'ATQ de ce Champion de 5% (s'accumule jusqu'à 50%).`,
           damage: "2.4*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -36,9 +36,9 @@ Chaque frappe réduit l'ATQ de la cible de 5 % (s'accumule jusqu'à 25 %). Chaqu
         {
           img: "assets/sort3.webp",
           name: "Fureur enragée",
-          description: `Attaque 2 fois tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque 2 fois tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50% sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Pour chaque coup critique porté par la première frappe, augmente les dégâts infligés par la seconde frappe de 10 %. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}.`,
+Pour chaque coup critique porté par la première frappe, augmente les dégâts infligés par la seconde frappe de 10%. Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}.`,
           damage: "2*ATQ",
           cooldown: 4,
           levelInfo: [

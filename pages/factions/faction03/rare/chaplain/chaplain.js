@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Rayonnement",
-          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 25 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Soigne tous les alliés à hauteur de 25% des dégâts infligés.`,
           damage: "3.4*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

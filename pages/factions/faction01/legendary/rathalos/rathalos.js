@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup spirituel",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible est un Boss, il est impossible de résister à ce débuff.`,
           damage: "3.2*ATQ",
@@ -16,7 +16,7 @@ Si la cible est un Boss, il est impossible de résister à ce débuff.`,
           name: "Coup mobile spirituel",
           description: `Attaque un ennemi. Chaque deuxième utilisation de cette compétence lors d'un round attaquera tous les ennemis à la place.${RETURN}${RETURN}
 
-Ignorera également 25 % de la DÉF de la cible. Si la cible est un Boss, ignorera 100 % de la DÉF de la cible.`,
+Ignorera également 25% de la DÉF de la cible. Si la cible est un Boss, ignorera 100% de la DÉF de la cible.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ Ignorera également 25 % de la DÉF de la cible. Si la cible est un Boss, ignore
         {
           img: "assets/sort3.webp",
           name: "Coup vertical",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30% et un buff ${BUFFS.SPD} de 30% sur ce Champion pendant 2 tours.`,
           damage: "4.1*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

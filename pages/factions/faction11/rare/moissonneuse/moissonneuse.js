@@ -6,7 +6,7 @@ const championData = {
           name: "Déstabilise",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Possède 35 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+Possède 35% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15% pendant 2 tours.`,
           damage: "1.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
         },
@@ -15,7 +15,7 @@ Possède 35 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendan
           name: "Faux Maudite",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+Possède 80% de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "6.5*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
@@ -25,7 +25,7 @@ Possède 80 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tou
           name: "Salve Temporelle",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 90 % de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences de la cible prise au hasard.`,
+Possède 90% de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences de la cible prise au hasard.`,
           damage: "7.5*ATQ",
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épées Sanglantes",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "4.3*ATQ",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Accès de Rage",
-          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup critique. Dégâts augmentés de 50 % si ce Champion possède plus de 50 % de PV.`,
+          description: `Attaque un ennemi. Possède 15% de chances de porter un coup critique. Dégâts augmentés de 50% si ce Champion possède plus de 50% de PV.`,
           damage: "6.1*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

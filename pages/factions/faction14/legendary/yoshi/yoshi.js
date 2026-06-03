@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Alcool Puissant",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 30% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "4.1*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Spiritueux Brûlants",
-          description: `Attaque 2 fois au hasard. Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          description: `Attaque 2 fois au hasard. Possède 75% de chances de placer un débuff ${DEBUFFS.PRE} de 50% et un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "2.6*ATQ",
           cooldown: 3,
           levelInfo: [
@@ -31,9 +31,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Toast au Combat",
-          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Possède également 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Sinon, possède 75 % de chances de le placer sur les ennemis sous buffs ${BUFFS.ATK}.`,
+Possède également 50% de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour. Sinon, possède 75% de chances de le placer sur les ennemis sous buffs ${BUFFS.ATK}.`,
           cooldown: 5,
           levelInfo: [
             "Chance de Buff/débuff +10%",
@@ -45,7 +45,7 @@ Possède également 50 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} su
         {
           img: "assets/passif1.webp",
           name: "Fêtard [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 4 % chaque fois qu'un ennemi reçoit un buff.`,
+          description: `Remplit le Compteur de Tour de ce Champion de 4% chaque fois qu'un ennemi reçoit un buff.`,
           isPassive: true,
         },
       ],

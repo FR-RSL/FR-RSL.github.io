@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Multiplie la Misère",
-          description: `Attaque 1 ennemi. Possède 40 % de chances de transférer sur la cible 1 débuff aléatoire de ce Champion.`,
+          description: `Attaque 1 ennemi. Possède 40% de chances de transférer sur la cible 1 débuff aléatoire de ce Champion.`,
           damage: "1.5*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Chef de Guerre",
-          description: `Soigne tous tes alliés à hauteur de 30 % de leurs PV max. Augmente d'1 tour la durée de tous les buffs alliés.`,
+          description: `Soigne tous tes alliés à hauteur de 30% de leurs PV max. Augmente d'1 tour la durée de tous les buffs alliés.`,
           cooldown: 4,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Heurte Caboche",
-          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 15% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "7.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

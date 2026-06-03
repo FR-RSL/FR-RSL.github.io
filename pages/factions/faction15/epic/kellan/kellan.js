@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Empaler et entraver",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 30% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "3.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tactique de chasseur",
-          description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de réduire le Compteur de Tour de la cible de 50 %. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. La première frappe possède 75% de chances de réduire le Compteur de Tour de la cible de 50%. La seconde frappe possède 75% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           damage: "2.8*ATQ",
@@ -23,7 +23,7 @@ Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`
         {
           img: "assets/sort3.webp",
           name: "Cri de la Pie",
-          description: `Attaque tous les ennemis. Les dégâts augmentent de 5 % pour chaque débuff dont est affligée la cible.`,
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 5% pour chaque débuff dont est affligée la cible.`,
           damage: "3.7*ATQ*(1+0.05*Target Debuffs)",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

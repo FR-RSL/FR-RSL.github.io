@@ -16,9 +16,9 @@ Transfère tous les débuffs de cette Championne sur la cible. Il est impossible
         {
 			img: "assets/sort2.webp",
 			name: "Énergie maligne",
-			description: `Soigne tous tes alliés à hauteur de 25 % des PV MAX de cette Championne.${RETURN}${RETURN}
+			description: `Soigne tous tes alliés à hauteur de 25% des PV MAX de cette Championne.${RETURN}${RETURN}
 
-Place ensuite un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
+Place ensuite un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours.`,
 			levelInfo: [
 				"Soins +5%",
 				"Soins +5%",
@@ -30,7 +30,7 @@ Place ensuite un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SPD} de 30 % sur t
         {
 			img: "assets/sort3.webp",
 			name: "Graine de corruption",
-			description: `Ranime un seul allié avec 100 % de PV et 50 % de Compteur de Tour. Réinitialise totalement les temps de recharge de toutes ses compétences.`,
+			description: `Ranime un seul allié avec 100% de PV et 50% de Compteur de Tour. Réinitialise totalement les temps de recharge de toutes ses compétences.`,
 			levelInfo: [
 				"Temps de recharge -1",
 				"Temps de recharge -1",
@@ -42,7 +42,7 @@ Place ensuite un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SPD} de 30 % sur t
         	name: "Servante sacrificielle [P]",
         	description: `Au début du tour de cette Championne, transfère 1 débuff de chaque allié sur cette Championne. Ne transférera pas les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.SLEEP}, ${DEBUFFS.GEL}, ${DEBUFFS.PROVOKE}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PETRIFICATION} ou ${DEBUFFS.SHEEP}. Il est impossible de résister à cet effet et de le bloquer. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.${RETURN}${RETURN}
 
-À la fin du tour de cette Championne, remplit les Compteurs de Tour de tous les alliés de 10 % et de 2 % supplémentaires pour chaque débuff sur cette Championne. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
+À la fin du tour de cette Championne, remplit les Compteurs de Tour de tous les alliés de 10% et de 2% supplémentaires pour chaque débuff sur cette Championne. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de cette Championne si cette Championne spécifique est morte.`,
           	isPassive: true,
         },
       ],

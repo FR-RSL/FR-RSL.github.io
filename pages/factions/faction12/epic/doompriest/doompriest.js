@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tisse Destin",
-          description: `Attaque 1 ennemi. Si le coup passe en critique, place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur un allié pris au hasard.`,
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15% sur un allié pris au hasard.`,
           damage: "4.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Possession de Masse",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Soutenir [P]",
-          description: `Soigne tous les alliés de 7,5 % de leurs PV et retire un de leurs débuffs choisi au hasard au début du tour de ce Champion.`,
+          description: `Soigne tous les alliés de 7,5% de leurs PV et retire un de leurs débuffs choisi au hasard au début du tour de ce Champion.`,
           isPassive: true
         }
       ],

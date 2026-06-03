@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tir Harcelant",
-          description: `Attaque 1 ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 10% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours.`,
           damage: "2.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false

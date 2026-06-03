@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Tueur Géant [P]",
-          description: `Chaque attaque offre 30 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible. Les dégâts infligés par chaque attaque augmentent de 30 % si les PV actuels de l'ennemi sont supérieurs à 50 %.`,
+          description: `Chaque attaque offre 30% de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible. Les dégâts infligés par chaque attaque augmentent de 30% si les PV actuels de l'ennemi sont supérieurs à 50%.`,
           isPassive: true
         }
       ],

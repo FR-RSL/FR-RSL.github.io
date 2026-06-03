@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frissons du Mal",
-          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 25% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15% pendant 2 tours.`,
           damage: "3.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Chair Effritée",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50% de chances de placer un débuff ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
           damage: "1.6*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

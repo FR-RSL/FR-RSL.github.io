@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Mord-cuisse",
-          description: `Attaque un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Offre 25% de chances de placer un débuff de ${DEBUFFS.SPD} de 15% pendant 2 tours.`,
           damage: "4.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Infection Rabique",
-          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque tous les ennemis. Possède 25% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "4.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],

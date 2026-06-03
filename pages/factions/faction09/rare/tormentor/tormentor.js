@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Miasme Infernal",
-          description: `Attaque 2 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 25 % pendant 2 tours.`,
+          description: `Attaque 2 fois au hasard. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.PRE} de 25% pendant 2 tours.`,
           damage: "3.3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ruine Insidieuse",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances d'appliquer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours. Place un débuff d'${DEBUFFS.STUN} d'1 tour si la cible souffre d'un débuff de ${DEBUFFS.BLOCK_BUFFS}.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50% de chances d'appliquer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours. Place un débuff d'${DEBUFFS.STUN} d'1 tour si la cible souffre d'un débuff de ${DEBUFFS.BLOCK_BUFFS}.`,
           damage: "3.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],

@@ -6,9 +6,9 @@ const championData = {
           name: "Lame de corbeau",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}.${RETURN}${RETURN}
+A 40% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Il est impossible de résister à cet effet si ce Champion se trouve sous buff ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
-Dès qu'un allié contre-attaque, fait équipe avec les alliés pour attaquer, ou active instantanément une compétence. A également 40 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} sur l'ennemi ciblé pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
+Dès qu'un allié contre-attaque, fait équipe avec les alliés pour attaquer, ou active instantanément une compétence. A également 40% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} sur l'ennemi ciblé pendant 2 tours. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           damage: "3.5*DEF",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -27,9 +27,9 @@ Retire tous les débuffs sur tous les alliés si la cible est tuée. Si la cible
         {
           img: "assets/sort3.webp",
           name: "Confident d'Androc",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 %, un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.SPD} de 30 % sur un seul allié pendant 2 tours. Remplit également le Compteur de Tour de cet allié de 40 %.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50%, un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.SPD} de 30% sur un seul allié pendant 2 tours. Remplit également le Compteur de Tour de cet allié de 40%.${RETURN}${RETURN}
 
-Active instantanément cette compétence à la fin du tour d'un allié si cet allié n'a pas de buff et que ses PV sont inférieurs à 100 %. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
+Active instantanément cette compétence à la fin du tour d'un allié si cet allié n'a pas de buff et que ses PV sont inférieurs à 100%. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -37,7 +37,7 @@ Active instantanément cette compétence à la fin du tour d'un allié si cet al
         {
           img: "assets/passif1.webp",
           name: "Pour seigneur et terre [P]",
-          description: `Chaque fois qu'un ennemi frappe un allié, l'attaque suivante de cet allié infligera 10 % de dégâts supplémentaires pour chaque frappe qu'il subit (s'accumule jusqu'à 100 %). L'augmentation des dégâts se réinitialise après que cet allié a infligé des dégâts.`,
+          description: `Chaque fois qu'un ennemi frappe un allié, l'attaque suivante de cet allié infligera 10% de dégâts supplémentaires pour chaque frappe qu'il subit (s'accumule jusqu'à 100%). L'augmentation des dégâts se réinitialise après que cet allié a infligé des dégâts.`,
           isPassive: true
         }
       ],

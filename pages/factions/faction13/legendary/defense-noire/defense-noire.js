@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hache de Défense-noire",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Il est impossible de résister à ce débuff lorsque ce Champion attaque au cours de son tour actif.`,
           damage: "3*DEF + 0.2*PV",
@@ -33,7 +33,7 @@ Fait ensuite équipe avec tous les alliés pour attaquer un seul ennemi. Les all
           name: "Défenseur de Fer céleste",
           description: `Retire tous les buffs d'une cible ennemie, puis lui inflige un débuff ${DEBUFFS.STUN} pendant 2 tours.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 50 %. Remplit le Compteur de Tour de ce Champion de 10 % supplémentaires pour chaque buff retiré à la cible.`,
+Remplit le Compteur de Tour de ce Champion de 50%. Remplit le Compteur de Tour de ce Champion de 10% supplémentaires pour chaque buff retiré à la cible.`,
           cooldown: 5,
           factions: [
             "Il est impossible de resister au retrait de buff et au placement du débuff <span class='gbt'>Etourdissement</span>.",
@@ -48,7 +48,7 @@ Remplit le Compteur de Tour de ce Champion de 50 %. Remplit le Compteur de Tour 
         {
           img: "assets/passif1.webp",
           name: "Rassembleur des Nains [P]",
-          description: `Les alliés contre-attaqueront dès qu'ils perdent 10 % ou plus de leurs PV MAX lors d'une seule frappe. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
+          description: `Les alliés contre-attaqueront dès qu'ils perdent 10% ou plus de leurs PV MAX lors d'une seule frappe. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           factions: [
             `Des qu'un allié place un débuff <span class='gbt'>Peur</span>,
             <span class='gbt'>Peur Absolue</span>,

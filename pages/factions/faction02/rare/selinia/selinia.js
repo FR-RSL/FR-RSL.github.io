@@ -6,7 +6,7 @@ const championData = {
           name: "Flèche crève-âme",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne cette Championne à hauteur de 10 % de ses PV MAX. Lorsqu'elle attaque une cible sous débuff ${DEBUFFS.BURN} soigne plutôt cette Championne de 20 % de ses PV MAX.`,
+Soigne cette Championne à hauteur de 10% de ses PV MAX. Lorsqu'elle attaque une cible sous débuff ${DEBUFFS.BURN} soigne plutôt cette Championne de 20% de ses PV MAX.`,
           damage: "3.25*ATQ",
           levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
@@ -14,7 +14,7 @@ Soigne cette Championne à hauteur de 10 % de ses PV MAX. Lorsqu'elle attaque un
         {
           img: "assets/sort2.webp",
           name: "Tir de lune",
-          description: `Attaque tous les ennemis. Possède 50 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN}.`,
+          description: `Attaque tous les ennemis. Possède 50% de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN}.`,
           damage: "3.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -23,9 +23,9 @@ Soigne cette Championne à hauteur de 10 % de ses PV MAX. Lorsqu'elle attaque un
         {
           img: "assets/sort3.webp",
           name: "Baliste lunaire",
-          description: `Attaque 3 fois de façon aléatoire. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque 3 fois de façon aléatoire. Avant d'attaquer, place un buff ${BUFFS.PRE} de 25% sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
-Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+Chaque frappe possède 50% de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "1.7*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -34,7 +34,7 @@ Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.BURN} pend
         {
           img: "assets/passif1.webp",
           name: "Boost solaire [P]",
-          description: `Booste le Compteur de Tour de cette Championne de 5 % chaque fois qu'un débuff ${DEBUFFS.BURN} est activé.`,
+          description: `Booste le Compteur de Tour de cette Championne de 5% chaque fois qu'un débuff ${DEBUFFS.BURN} est activé.`,
           isPassive: true
         }
       ],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fiel",
-          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un buff d'${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 25% de chances de placer un buff d'${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Choc",
-          description: `Attaque tous les ennemis. Possède 20 % de chances de retirer 1 buff aléatoire de chaque cible.`,
+          description: `Attaque tous les ennemis. Possède 20% de chances de retirer 1 buff aléatoire de chaque cible.`,
           damage: "4.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Déterré",
-          description: `Ranime un allié en lui donnant 50 % de PV. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} d'une valeur de 20 % de ses PV MAX. sur le Champion ressuscité.`,
+          description: `Ranime un allié en lui donnant 50% de PV. Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} d'une valeur de 20% de ses PV MAX. sur le Champion ressuscité.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

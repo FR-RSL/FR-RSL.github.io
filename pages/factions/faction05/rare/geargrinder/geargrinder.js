@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Engrenages Sanglants",
-          description: `Attaque un ennemi. Place un buff ${BUFFS.HEALS} de 7,5 % sur ce Champion pendant 1 tour si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Place un buff ${BUFFS.HEALS} de 7,5% sur ce Champion pendant 1 tour si cette attaque passe en critique.`,
           damage: "0.15*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Giclées Curatives",
-          description: `Soigne tous tes alliés à hauteur de 15 % de leurs PV max.`,
+          description: `Soigne tous tes alliés à hauteur de 15% de leurs PV max.`,
           cooldown: 5,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Nécro Rouages",
-          description: `Ranime un allié mort avec 50 % de PV et 50 % de Compteur de Tour.`,
+          description: `Ranime un allié mort avec 50% de PV et 50% de Compteur de Tour.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

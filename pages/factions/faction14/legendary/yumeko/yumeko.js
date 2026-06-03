@@ -6,9 +6,9 @@ const championData = {
           name: "Griffes-garous",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe vole 7,5 % du Compteur de tour de la cible si ce Champion possède 50 % de PV ou moins.${RETURN}${RETURN}
+Chaque frappe vole 7,5% du Compteur de tour de la cible si ce Champion possède 50% de PV ou moins.${RETURN}${RETURN}
 
-Chaque frappe soigne ce Champion de 30 % des dégâts infligés si ce Champion possède moins de 50 % de PV.`,
+Chaque frappe soigne ce Champion de 30% des dégâts infligés si ce Champion possède moins de 50% de PV.`,
           damage: "2.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -16,13 +16,13 @@ Chaque frappe soigne ce Champion de 30 % des dégâts infligés si ce Champion p
         {
           img: "assets/sort2.webp",
           name: "Miroir du Destin",
-          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 80% de chances de placer un débuff ${DEBUFFS.HEX} pendant 3 tours.${RETURN}${RETURN}
 
 ${PASSIVE}
 
-Dès qu'un ennemi essaie de placer des débuffs sur ce Champion ou sur un allié, possède 55 % de chances de transférer ces débuffs sur un ennemi aléatoire sous débuff ${DEBUFFS.HEX} placé par ce Champion. Cela survient avant que des débuffs ne soient placés sur la cible initiale.${RETURN}${RETURN}
+Dès qu'un ennemi essaie de placer des débuffs sur ce Champion ou sur un allié, possède 55% de chances de transférer ces débuffs sur un ennemi aléatoire sous débuff ${DEBUFFS.HEX} placé par ce Champion. Cela survient avant que des débuffs ne soient placés sur la cible initiale.${RETURN}${RETURN}
 
-Sinon, possède 30 % de chances contre les Boss.${RETURN}${RETURN}
+Sinon, possède 30% de chances contre les Boss.${RETURN}${RETURN}
 
 Dès que quelqu'un remplit le Compteur de Tour d'un ennemi sous débuff ${DEBUFFS.HEX} placé par ce Champion, le Compteur de Tour de ce Champion sera rempli à la place. Uniquement disponible lorsque Karato le Chasseur se trouve dans la même équipe.`,
           damage: "6*ATQ",
@@ -46,7 +46,7 @@ Ne réduira pas les temps de recharge des compétences de cette Championne. Cett
 
 Ce Champion est immunisé contre tous débuffs des ennemis s'il se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
-Dès qu'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} est placé sur un ennemi, possède 75 % de chances de voler le buff. Cela survient avant que le buff ne soit placé sur la cible initiale. Uniquement disponible lorsque Karato le Chasseur se trouve dans la même équipe.`,
+Dès qu'un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL} est placé sur un ennemi, possède 75% de chances de voler le buff. Cela survient avant que le buff ne soit placé sur la cible initiale. Uniquement disponible lorsque Karato le Chasseur se trouve dans la même équipe.`,
           isPassive: true
         }
       ],

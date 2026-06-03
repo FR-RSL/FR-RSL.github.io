@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Entailler",
-          description: `Attaque un ennemi. Possède 20 % de chances d'accorder un Tour supplémentaire. Détruit les PV MAX des ennemis de 15 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Possède 20% de chances d'accorder un Tour supplémentaire. Détruit les PV MAX des ennemis de 15% des dégâts infligés.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Emportement",
-          description: `Attaque 3 fois tous les ennemis. Place un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque 3 fois tous les ennemis. Place un débuff d'${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "1.35*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

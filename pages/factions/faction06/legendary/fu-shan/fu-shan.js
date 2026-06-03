@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Mugissement",
-          description: `Attaque un ennemi. Possède 25 % de chances de porter un coup supplémentaire.`,
+          description: `Attaque un ennemi. Possède 25% de chances de porter un coup supplémentaire.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +15%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Griffes Effroyables",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 20% de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Déchiqueter",
-          description: `Attaque 4 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "1.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Chances de Buff/Debuff +25%", "Temps de recharge -1"],

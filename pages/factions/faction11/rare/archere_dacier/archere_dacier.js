@@ -4,14 +4,14 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèches Liantes",
-          description: `Attaque 2 fois un ennemi. Offre 35 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Offre 35% de chances de placer un débuff de ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
           damage: "1.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Frisson de la Chasse",
-          description: `Attaque 2 fois un ennemi. Soigne ce Champion de 50 % des dégâts infligés lors de chaque coup critique.`,
+          description: `Attaque 2 fois un ennemi. Soigne ce Champion de 50% des dégâts infligés lors de chaque coup critique.`,
           damage: "2.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

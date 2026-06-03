@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup de Bâton",
-          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV.`,
+          description: `Attaque un ennemi. Place, pendant 1 tour, un buff de ${BUFFS.HEALS} de 15% sur l'allié ayant le moins de PV.`,
           damage: "3.7*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Lumineux",
-          description: `Lorsqu'un allié se fait attaquer, place sur ce dernier un buff de ${BUFFS.SHIELD} équivalent à 35 % des PV MAX de ce Champion pendant 2 tours. Se produit une fois par tour. Place un buff de ${BUFFS.SHIELD} sur ce Champion.`,
+          description: `Lorsqu'un allié se fait attaquer, place sur ce dernier un buff de ${BUFFS.SHIELD} équivalent à 35% des PV MAX de ce Champion pendant 2 tours. Se produit une fois par tour. Place un buff de ${BUFFS.SHIELD} sur ce Champion.`,
           cooldown: 2,
           levelInfo: ["Bouclier +10%", "Bouclier +10%", "Bouclier +10%"],
           isPassive: false

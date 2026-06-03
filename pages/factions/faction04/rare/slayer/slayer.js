@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe Vicieuse",
-          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Offre 30% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Diminuer",
-          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours. Possède 75 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours. Possède 75% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "6.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

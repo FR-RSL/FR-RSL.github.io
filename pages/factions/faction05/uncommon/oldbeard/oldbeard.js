@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup au Foie",
-          description: `Attaque 1 ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 25% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Survivre",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.LEECH} de 2 tours.`,
           damage: "7.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],

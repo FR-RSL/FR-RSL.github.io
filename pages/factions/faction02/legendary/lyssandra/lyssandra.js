@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Stimuler",
-          description: `Place un buff d'${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Remplit de 30 % le Compteur de Tours de tous les alliés. Réduit de 30% le Compteur de Tours de tous les ennemis.`,
+          description: `Place un buff d'${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours. Remplit de 30% le Compteur de Tours de tous les alliés. Réduit de 30% le Compteur de Tours de tous les ennemis.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

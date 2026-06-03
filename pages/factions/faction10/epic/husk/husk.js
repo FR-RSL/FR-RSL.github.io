@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fer Brûlant",
-          description: `Attaque 2 fois un ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque 2 fois un ennemi. Possède 20% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "2.8*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Désespoir",
-          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Les dégâts infligés sont proportionnels aux PV MAX de l'ennemi.`,
+          description: `Attaque tous les ennemis. Possède 35% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Les dégâts infligés sont proportionnels aux PV MAX de l'ennemi.`,
           damage: "0.1*Target Max HP",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

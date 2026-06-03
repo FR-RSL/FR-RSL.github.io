@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Javelot",
-          description: `Attaque 1 ennemi. Possède 10 % de chances de porter un coup supplémentaire.`,
+          description: `Attaque 1 ennemi. Possède 10% de chances de porter un coup supplémentaire.`,
           damage: "3.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Paralyser",
-          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          description: `Attaque un ennemi. Possède 25% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "4.4*ATQ",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Toxine",
-          description: `Possède 75 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.POISON} de 5 % sur tous les ennemis.`,
+          description: `Possède 75% de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.POISON} de 5% sur tous les ennemis.`,
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

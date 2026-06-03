@@ -11,7 +11,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Remède de bouffon",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur chaque ennemi pendant 1 tour. Possède également 75 % de chances de placer sur chaque ennemi 2 débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 75% de chances de placer un débuff ${DEBUFFS.SLEEP} sur chaque ennemi pendant 1 tour. Possède également 75% de chances de placer sur chaque ennemi 2 débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours.`,
           damage: "3.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -27,7 +27,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Bombardier fou [P]",
-          description: `Lorsque ce Champion est attaqué, possède 30 % de chances de placer sur l'assaillant un débuff ${DEBUFFS.BOMB} qui détonera après 2 tours. Se produit une fois par frappe.${RETURN}${RETURN}
+          description: `Lorsque ce Champion est attaqué, possède 30% de chances de placer sur l'assaillant un débuff ${DEBUFFS.BOMB} qui détonera après 2 tours. Se produit une fois par frappe.${RETURN}${RETURN}
 
 Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur tous les ennemis lorsque ce Champion se fait tuer.`,
           isPassive: true,

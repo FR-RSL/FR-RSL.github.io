@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Éclair de Transfert",
-          description: `Attaque un ennemi. Possède 30 % de chances de voler un buff aléatoire de la cible.`,
+          description: `Attaque un ennemi. Possède 30% de chances de voler un buff aléatoire de la cible.`,
           damage: "4*DEF",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Sauvetage",
-          description: `Retire tous les débuffs de l'allié ayant le moins de PV, puis le soigne de 20 % des PV MAX de ce Champion. Place également un buff ${BUFFS.DEF} de 25 % sur cet allié pendant 3 tours.`,
+          description: `Retire tous les débuffs de l'allié ayant le moins de PV, puis le soigne de 20% des PV MAX de ce Champion. Place également un buff ${BUFFS.DEF} de 25% sur cet allié pendant 3 tours.`,
           cooldown: 5,
           levelInfo: ["Soins +10%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false

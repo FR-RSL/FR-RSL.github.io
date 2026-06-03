@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fracas",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 50 % si la DÉF de la cible est plus faible que celle de ce Champion.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 50% si la DÉF de la cible est plus faible que celle de ce Champion.`,
           damage: "3.7*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mur de Pierre",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés, sauf sur ce Champion. Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} sur tous les alliés, sauf sur ce Champion. Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour.`,
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés, sauf sur ce Champion. Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} sur tous les alliés, sauf sur ce Champion. Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Sanglant Festin",
-          description: `Attaque tous les ennemis. Soigne à hauteur de 20 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Soigne à hauteur de 20% des dégâts infligés.`,
           damage: "3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

@@ -6,7 +6,7 @@ const championData = {
           name: "Rage de vouivre",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 80 % de chances de voler un buff aléatoire à l'ennemi. Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur l'ennemi pendant 2 tours.`,
+Possède 80% de chances de voler un buff aléatoire à l'ennemi. Possède également 80% de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur l'ennemi pendant 2 tours.`,
           damage: "0.23*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -16,9 +16,9 @@ Possède 80 % de chances de voler un buff aléatoire à l'ennemi. Possède égal
           name: "Crève-terre",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de retirer tous les buffs sur tous les ennemis.${RETURN}${RETURN}
+Possède 75% de chances de retirer tous les buffs sur tous les ennemis.${RETURN}${RETURN}
 
-Ensuite, possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+Ensuite, possède 75% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -27,11 +27,11 @@ Ensuite, possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 %
         {
           img: "assets/sort3.webp",
           name: "Fortitude d'Ogryn",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Place également pendant 2 tours un buff ${BUFFS.DEF} de 60 % sur tous les alliés dont la DÉF est supérieure ou égale à leur ATQ.${RETURN}${RETURN}
+Place également pendant 2 tours un buff ${BUFFS.DEF} de 60% sur tous les alliés dont la DÉF est supérieure ou égale à leur ATQ.${RETURN}${RETURN}
 
-Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff ${BUFFS.ATK} de 50 % pendant 2 tours.`,
+Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff ${BUFFS.ATK} de 50% pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

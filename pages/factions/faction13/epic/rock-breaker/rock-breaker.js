@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Marteaux Tournoyants",
           description: `Attaque un ennemi.${RETURN}
-Augmente de 4 % la DÉF de ce Champion à chaque fois que cette Compétence est utilisée. S'additionne jusqu'à 20 %.`,
+Augmente de 4% la DÉF de ce Champion à chaque fois que cette Compétence est utilisée. S'additionne jusqu'à 20%.`,
           damage: "2.5*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -13,7 +13,7 @@ Augmente de 4 % la DÉF de ce Champion à chaque fois que cette Compétence est 
         {
           img: "assets/sort2.webp",
           name: "Frappe-Poitrine",
-          description: `Possède 75 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis.${RETURN}
+          description: `Possède 75% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur tous les ennemis.${RETURN}
 Place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -22,7 +22,7 @@ Place un buff de ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
         {
           img: "assets/passif1.webp",
           name: "Peau de Fer [P]",
-          description: `Possède 25 % de chances de réduire de 50 % les dégâts infligés à ce Champion à chaque fois que ce Champion se fait attaquer.`,
+          description: `Possède 25% de chances de réduire de 50% les dégâts infligés à ce Champion à chaque fois que ce Champion se fait attaquer.`,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true
         }

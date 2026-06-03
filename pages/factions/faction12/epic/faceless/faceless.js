@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Boule de feu",
-          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          description: `Attaque un ennemi. Possède 15% de chances de porter un coup supplémentaire.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Éclair",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 %, puis attaque un ennemi.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30%, puis attaque un ennemi.`,
           damage: "5.5*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],

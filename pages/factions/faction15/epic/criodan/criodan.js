@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame Givrécorce",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 25% de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
           damage: "1.2*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Grêle de rasoirs",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 45 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 45% de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.`,
           damage: "1.9*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Bénédiction du Bleu",
-          description: `Place un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Remplit également le Compteur de Tour de tous les alliés de 15 %.`,
+          description: `Place un buff ${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours. Remplit également le Compteur de Tour de tous les alliés de 15%.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Danseur de neige [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 5 % pour chaque débuff ${DEBUFFS.GEL} placé par ce Champion.`,
+          description: `Remplit le Compteur de Tour de ce Champion de 5% pour chaque débuff ${DEBUFFS.GEL} placé par ce Champion.`,
           isPassive: true
         }
       ],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Jeté de Hache",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 1 tour.`,
           damage: "ATQ*3",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false

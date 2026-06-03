@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Concasser",
-          description: `Attaque 1 ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          description: `Attaque 1 ennemi. Possède 15% de chances de porter un coup supplémentaire.`,
           damage: "3.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Remède",
-          description: `Retire tous les débuffs d'une cible alliée. Soigne la cible de 20 %. Les soins augmentent en fonction de la quantité de débuffs retirés.`,
+          description: `Retire tous les débuffs d'une cible alliée. Soigne la cible de 20%. Les soins augmentent en fonction de la quantité de débuffs retirés.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "De la Forêt [P]",
-          description: `Soigne, à chaque tour, l'allié ayant le moins de PV de 7,5 %. Ce soin ne peut pas passer en critique. Ne soignera pas ce Champion.`,
+          description: `Soigne, à chaque tour, l'allié ayant le moins de PV de 7,5%. Ce soin ne peut pas passer en critique. Ne soignera pas ce Champion.`,
           isPassive: true
         }
       ],

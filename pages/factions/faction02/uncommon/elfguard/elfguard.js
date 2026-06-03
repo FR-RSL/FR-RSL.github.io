@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Percer",
-          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 25% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 1 tour.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Empaler",
-          description: `Attaque un ennemi. Réduit le Compteur de tour actuel de l'ennemi de 50 %.`,
+          description: `Attaque un ennemi. Réduit le Compteur de tour actuel de l'ennemi de 50%.`,
           damage: "6.2*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Pillage",
-          description: `Attaque un ennemi. Possède 30 % de chances de voler un buff aléatoire à la cible. Les dégâts sont proportionnels à l'ATQ et la DÉF.`,
+          description: `Attaque un ennemi. Possède 30% de chances de voler un buff aléatoire à la cible. Les dégâts sont proportionnels à l'ATQ et la DÉF.`,
           damage: "1.9*ATQ+3*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Invincible [P]",
-          description: `Ranime ce Champion avec 50 % de PV lorsqu'il se fait tuer.`,
+          description: `Ranime ce Champion avec 50% de PV lorsqu'il se fait tuer.`,
           cooldown: 3,
           isPassive: true
         }

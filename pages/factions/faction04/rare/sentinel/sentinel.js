@@ -16,7 +16,7 @@ Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DE
           name: "Épées englouties",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Les chances augmentent de 5 % pour chaque ennemi vivant.`,
+A 50% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Les chances augmentent de 5% pour chaque ennemi vivant.`,
           damage: "4.4*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -27,9 +27,9 @@ A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. L
           name: "Défenseur d'Agaris",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 20 % des dégâts infligés. Soigne au lieu de cela ce Champion de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
+Soigne ce Champion à hauteur de 20% des dégâts infligés. Soigne au lieu de cela ce Champion de 30% si la cible se trouve sous débuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
-Détruit les PV MAX de la cible de 20 % des dégâts infligés. Détruit au lieu de cela les PV MAX de la cible de 30 % si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
+Détruit les PV MAX de la cible de 20% des dégâts infligés. Détruit au lieu de cela les PV MAX de la cible de 30% si la cible se trouve sous débuff ${DEBUFFS.DEF}.`,
           cooldown: 2,
           isPassive: true
         }

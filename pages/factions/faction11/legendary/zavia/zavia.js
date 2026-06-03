@@ -4,14 +4,14 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Enferrer",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 40% de chances de placer un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "1.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Pluie de Poison",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "2*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

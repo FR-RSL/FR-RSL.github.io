@@ -7,7 +7,7 @@ const championForms = {
           name: "Épée assoiffée",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne tous tes alliés de 5 % de leurs PV MAX. Soigne tous les alliés de 5 % supplémentaires de leurs PV MAX si cette Championne attaque une cible sous débuff ${DEBUFFS.LEECH}.`,
+Soigne tous tes alliés de 5% de leurs PV MAX. Soigne tous les alliés de 5% supplémentaires de leurs PV MAX si cette Championne attaque une cible sous débuff ${DEBUFFS.LEECH}.`,
           damage: "4*DEF",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
@@ -17,9 +17,9 @@ Soigne tous tes alliés de 5 % de leurs PV MAX. Soigne tous les alliés de 5 % s
           name: "Fente mortelle",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Soigne tous les alliés de 15 % des PV MAX de cette Championne. La valeur du soin augmente de 5 % pour chaque débuff ${DEBUFFS.LEECH} dont est affligée l'équipe ennemie.${RETURN}${RETURN}
+Soigne tous les alliés de 15% des PV MAX de cette Championne. La valeur du soin augmente de 5% pour chaque débuff ${DEBUFFS.LEECH} dont est affligée l'équipe ennemie.${RETURN}${RETURN}
 
-Si un Champion reçoit un surplus de soins, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de soins en surplus reçus, jusqu'à 30 % des PV MAX du Champion.`,
+Si un Champion reçoit un surplus de soins, place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de soins en surplus reçus, jusqu'à 30% des PV MAX du Champion.`,
           damage: "3.7*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Soins +20%"],
@@ -48,11 +48,11 @@ Place également un buff ${BUFFS.COUNTER} sur cette Championne pendant 2 tours.`
         {
           img: "assets/passif1.webp",
           name: "Réjouissance du combat [P]",
-          description: `Chaque fois que cette Championne frappe un ennemi sous débuff ${DEBUFFS.LEECH}, augmente la DÉF et les PV de cette Championne de 5 % (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
+          description: `Chaque fois que cette Championne frappe un ennemi sous débuff ${DEBUFFS.LEECH}, augmente la DÉF et les PV de cette Championne de 5% (s'accumule jusqu'à 50%).${RETURN}${RETURN}
 
-Lorsqu'elle est attaquée par des ennemis dont l'ATQ est supérieure ou égale à leur DÉF, a 100 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Lorsqu'elle est attaquée par des ennemis dont la DÉF est supérieure à leur ATQ, a au lieu de cela 100 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+Lorsqu'elle est attaquée par des ennemis dont l'ATQ est supérieure ou égale à leur DÉF, a 100% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Lorsqu'elle est attaquée par des ennemis dont la DÉF est supérieure à leur ATQ, a au lieu de cela 100% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-Lorsqu'elle est attaquée par des ennemis sous débuff ${DEBUFFS.LEECH}, a 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
+Lorsqu'elle est attaquée par des ennemis sous débuff ${DEBUFFS.LEECH}, a 50% de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           isPassive: true
         }
       ],
@@ -89,7 +89,7 @@ Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de r�
           name: "Exécution frénétique",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera les buffs ${BUFFS.STONE_SKIN}. Les dégâts infligés par cette compétence augmentent de 50 % si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
+Ignorera les buffs ${BUFFS.STONE_SKIN}. Les dégâts infligés par cette compétence augmentent de 50% si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
 
 Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
           damage: "0.3*PV",
@@ -100,11 +100,11 @@ Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
         {
           img: "assets/sort6.webp",
           name: "Séparateur d'âme",
-          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Avant d'attaquer, place un buff ${BUFFS.CDAM} de 30% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Vole 50 % du Compteur de Tour de la cible. Vole au lieu de cela 100 % du Compteur de Tour si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
+Vole 50% du Compteur de Tour de la cible. Vole au lieu de cela 100% du Compteur de Tour si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
 
-Détruit les PV MAX de la cible de 25 % des dégâts infligés. Détruit les PV MAX de la cible de 50 % des dégâts infligés si les PV MAX de la cible sont moins élevés que ceux de cette Championne.`,
+Détruit les PV MAX de la cible de 25% des dégâts infligés. Détruit les PV MAX de la cible de 50% des dégâts infligés si les PV MAX de la cible sont moins élevés que ceux de cette Championne.`,
           damage: "0.28*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
@@ -120,7 +120,7 @@ Détruit les PV MAX de la cible de 25 % des dégâts infligés. Détruit les PV 
         {
           img: "assets/passif2.webp",
           name: "Liaison de rage [P]",
-          description: `Ignorera 15 % de la DÉF d'une cible si les PV de la cible sont inférieurs à ceux de cette Championne. Ignorera également 15 % de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.LEECH}.${RETURN}${RETURN}
+          description: `Ignorera 15% de la DÉF d'une cible si les PV de la cible sont inférieurs à ceux de cette Championne. Ignorera également 15% de la DÉF de la cible si la cible se trouve sous débuff ${DEBUFFS.LEECH}.${RETURN}${RETURN}
 
 Chaque troisième compétence que cette Championne utilise attaquera au lieu de cela tous les ennemis.${RETURN}${RETURN}
 

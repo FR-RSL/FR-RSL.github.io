@@ -6,7 +6,7 @@ const championData = {
           name: "Attaque éclair de corsaire",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 75 % de chances de réduire le Compteur de Tour de la cible de 15 %. Chaque frappe réduira au lieu de cela le Compteur de Tour de la cible de 25 % si l'attaque passe en critique. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+Chaque frappe a 75% de chances de réduire le Compteur de Tour de la cible de 15%. Chaque frappe réduira au lieu de cela le Compteur de Tour de la cible de 25% si l'attaque passe en critique. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "1.35*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,9 +16,9 @@ Chaque frappe a 75 % de chances de réduire le Compteur de Tour de la cible de 1
           name: "Actionner le chien",
           description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-La première frappe vole tous les buffs de tous les ennemis et réduit de 20 % le Compteur de Tour de chaque ennemi. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
+La première frappe vole tous les buffs de tous les ennemis et réduit de 20% le Compteur de Tour de chaque ennemi. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
-La seconde frappe a 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} si l'attaque est critique. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+La seconde frappe a 75% de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} si l'attaque est critique. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           damage: "2.15*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Cooldown -"],
@@ -40,15 +40,15 @@ Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.`,
         {
           img: "assets/passif1.webp",
           name: "Tout est permis [P]",
-          description: `Dès que les PV d'un ennemi tombent sous 25 % après qu'il a reçu des dégâts de n'importe quel Assassin, il reçoit des dégâts bonus supplémentaires proportionnels à l'ATQ de ce Champion ou cette Championne. Ces dégâts bonus ignoreront 100 % de la DÉF de la cible et ne peuvent pas être critiques.`,
+          description: `Dès que les PV d'un ennemi tombent sous 25% après qu'il a reçu des dégâts de n'importe quel Assassin, il reçoit des dégâts bonus supplémentaires proportionnels à l'ATQ de ce Champion ou cette Championne. Ces dégâts bonus ignoreront 100% de la DÉF de la cible et ne peuvent pas être critiques.`,
           isPassive: true
         },
         {
           img: "assets/passif1.webp",
           name: "Sous la quille [P]",
-          description: `Chaque frappe infligée par ce Champion a 50 % de chances de placer un débuff ${DEBUFFS.TRAP} de 100 % sur sa cible pendant 2 tours. Dès que ce Champion tue un ennemi, place un débuff ${DEBUFFS.TRAP} de 100 % sur tous les autres ennemis pendant 2 tours et réduit de 20 % leur Compteur de Tour. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
+          description: `Chaque frappe infligée par ce Champion a 50% de chances de placer un débuff ${DEBUFFS.TRAP} de 100% sur sa cible pendant 2 tours. Dès que ce Champion tue un ennemi, place un débuff ${DEBUFFS.TRAP} de 100% sur tous les autres ennemis pendant 2 tours et réduit de 20% leur Compteur de Tour. Il est impossible de résister à ces effets si ce Champion se trouve sous buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
-Ce Champion inflige 20 % de dégâts supplémentaires contre les cibles affligés de débuffs ${DEBUFFS.TRAP}.`,
+Ce Champion inflige 20% de dégâts supplémentaires contre les cibles affligés de débuffs ${DEBUFFS.TRAP}.`,
           isPassive: true
         }
       ],

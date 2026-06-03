@@ -6,9 +6,9 @@ type: "Defense",
 			name: "Lame en fusion",
 			description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Chaque fois que cette compétence est utilisée, augmente de manière permanente les dégâts infligés par cette compétence de 10 % (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
+Chaque fois que cette compétence est utilisée, augmente de manière permanente les dégâts infligés par cette compétence de 10% (s'accumule jusqu'à 100%).${RETURN}${RETURN}
 
-Possède 50 % de chances de contre-attaquer avec cette compétence chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} attaque ce Champion ou ses alliés.`,
+Possède 50% de chances de contre-attaquer avec cette compétence chaque fois qu'un ennemi sous débuff ${DEBUFFS.BURN} attaque ce Champion ou ses alliés.`,
           	damage: "3.5*DEF",
           	levelInfo: [
             	"Dégâts +10%",
@@ -34,7 +34,7 @@ Place un débuff ${DEBUFFS.FEAR} pendant 2 tours. Les ennemis affligés d'un dé
           	name: "Brûlure de démolition",
           	description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Les dégâts infligés par cette compétence augmentent de 10 % pour les tours restants des débuffs ${DEBUFFS.BURN} sur l'équipe ennemie (s'accumule jusqu'à 100 %).`,
+Les dégâts infligés par cette compétence augmentent de 10% pour les tours restants des débuffs ${DEBUFFS.BURN} sur l'équipe ennemie (s'accumule jusqu'à 100%).`,
           	damage: "3*DEF",
           	cooldown: 4,
           	factions: [
@@ -60,9 +60,9 @@ Les dégâts infligés par cette compétence augmentent de 10 % pour les tours r
         {
           	img: "assets/passif1.webp",
           	name: "Feu démoniaque déferlant [P]",
-          	description: `Dès qu'un ennemi reçoit un buff ou que son Compteur de Tour est augmenté, a 50 % de chances de placer un débuff ${DEBUFFS.BURN} sur cet ennemi pendant 2 tours.${RETURN}${RETURN}
+          	description: `Dès qu'un ennemi reçoit un buff ou que son Compteur de Tour est augmenté, a 50% de chances de placer un débuff ${DEBUFFS.BURN} sur cet ennemi pendant 2 tours.${RETURN}${RETURN}
 
-Si un ennemi est déjà affligé d'un débuff ${DEBUFFS.BURN}, a au lieu de cela 50 % de chances de l'activer instantanément.${RETURN}${RETURN}
+Si un ennemi est déjà affligé d'un débuff ${DEBUFFS.BURN}, a au lieu de cela 50% de chances de l'activer instantanément.${RETURN}${RETURN}
 
 Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
           	factions: [

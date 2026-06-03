@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tailler",
-          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 25% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "3.5*ATQ",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Fil de Hache [P]",
-          description: `Augmente de 40 % les DÉG C.`,
+          description: `Augmente de 40% les DÉG C.`,
           isPassive: true
         }
       ],

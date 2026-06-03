@@ -6,7 +6,7 @@ const championData = {
           name: "Service dans la mort",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe vole 10 % du Compteur de Tour de la cible. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours si le Compteur de Tour de la cible est totalement vidé.`,
+Chaque frappe vole 10% du Compteur de Tour de la cible. Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours si le Compteur de Tour de la cible est totalement vidé.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -16,7 +16,7 @@ Chaque frappe vole 10 % du Compteur de Tour de la cible. Place un débuff ${DEBU
           name: "Invité importun",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.PETRIFICATION} pendant 1 tour. A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours sur tous les ennemis qui ne sont pas sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
+Place un débuff ${DEBUFFS.PETRIFICATION} pendant 1 tour. A 75% de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours sur tous les ennemis qui ne sont pas sous débuff ${DEBUFFS.FEAR} ou ${DEBUFFS.TRUE_FEAR}.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -29,9 +29,9 @@ Active cette compétence dès qu'un ennemi sous débuff ${DEBUFFS.FEAR} ou ${DEB
         {
           img: "assets/sort3.webp",
           name: "Fioriture spectrale",
-          description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de réduire de 3 tours la durée de tous les buffs ennemis. Accordera un Tour supplémentaire s'il n'y a aucun buff sur l'équipe ennemie avant l'attaque.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, a 75% de chances de réduire de 3 tours la durée de tous les buffs ennemis. Accordera un Tour supplémentaire s'il n'y a aucun buff sur l'équipe ennemie avant l'attaque.${RETURN}${RETURN}
 
-A également 75 % de chances d'augmenter de 3 tours les temps de recharge de toutes les compétences des ennemis.`,
+A également 75% de chances d'augmenter de 3 tours les temps de recharge de toutes les compétences des ennemis.`,
           damage: "4*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

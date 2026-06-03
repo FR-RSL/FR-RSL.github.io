@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Stupéfiant",
-          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 20% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours.`,
           damage: "(1+SPD/75)*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false

@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Merlin tonnant",
-          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 20 % des dégâts infligés.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 20% des dégâts infligés.${RETURN}${RETURN}
 
-Possède 40 % de chances d'augmenter d'1 tour la durée de 2 débuffs aléatoires dont le Champion ciblé est affligé.`,
+Possède 40% de chances d'augmenter d'1 tour la durée de 2 débuffs aléatoires dont le Champion ciblé est affligé.`,
           damage: "0.26*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -14,11 +14,11 @@ Possède 40 % de chances d'augmenter d'1 tour la durée de 2 débuffs aléatoire
         {
           img: "assets/sort2.webp",
           name: "Fissurer le ciel",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 75% de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de retirer tous les buffs sur tous les ennemis, même si cette attaque est une frappe faible, si Jetni la Géante est dans la même équipe.${RETURN}${RETURN}
+Possède 75% de chances de retirer tous les buffs sur tous les ennemis, même si cette attaque est une frappe faible, si Jetni la Géante est dans la même équipe.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
+Place également un buff ${BUFFS.HEALS} de 15% sur tous les alliés pendant 2 tours.`,
           damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -37,9 +37,9 @@ Place également un buff ${BUFFS.BLOCK_DAMAGE} sur tous les alliés pendant 2 to
         {
           img: "assets/passif1.webp",
           name: "Entrave",
-          description: `Lorsque le Champion est attaqué, possède 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur l'assaillant pendant 2 tours.${RETURN}${RETURN}
+          description: `Lorsque le Champion est attaqué, possède 50% de chances de placer un débuff ${DEBUFFS.SPD} de 30% sur l'assaillant pendant 2 tours.${RETURN}${RETURN}
 
-Les chances passent à 100 % si Jetni la Géante se trouve dans la même équipe.`,
+Les chances passent à 100% si Jetni la Géante se trouve dans la même équipe.`,
           isPassive: true
         }
       ],

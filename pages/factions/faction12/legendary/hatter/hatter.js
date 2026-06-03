@@ -6,7 +6,7 @@ const championData = {
           name: "Infâme distillation",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 25 % de chances de voler un buff aléatoire. Chaque frappe a également 75 % de chances d'appliquer un effet de ${PROP_DEBUFF}, prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.HEX}.`,
+Chaque frappe a 25% de chances de voler un buff aléatoire. Chaque frappe a également 75% de chances d'appliquer un effet de ${PROP_DEBUFF}, prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.HEX}.`,
           damage: "0.1*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,9 +16,9 @@ Chaque frappe a 25 % de chances de voler un buff aléatoire. Chaque frappe a ég
           name: "Mélange vraiment infect",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+Possède 75% de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25% sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-L'allié qui a les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. Les dégâts infligés par l'allié qui rejoint l'attaque augmenteront de 10 % pour chaque débuff sur la cible.`,
+L'allié qui a les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. Les dégâts infligés par l'allié qui rejoint l'attaque augmenteront de 10% pour chaque débuff sur la cible.`,
           damage: "0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -29,7 +29,7 @@ L'allié qui a les DÉG C. les plus élevés fera équipe et rejoindra l'attaque
           name: "Une effluve de folie",
           description: `Augmente d'1 tour la durée de tous les buffs sur tous les alliés et réduit d'1 tour la durée de tous les débuffs sur tous les alliés.${RETURN}${RETURN}
 
-Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
+Remplit également le Compteur de Tour de tous les alliés de 20%.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

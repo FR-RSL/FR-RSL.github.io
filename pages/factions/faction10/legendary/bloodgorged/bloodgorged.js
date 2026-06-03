@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bris de Défense",
-          description: `Attaque 2 fois un ennemi. Possède 55 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Possède 55% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "2.2*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false

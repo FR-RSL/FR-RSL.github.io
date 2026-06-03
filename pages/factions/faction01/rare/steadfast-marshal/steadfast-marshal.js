@@ -6,7 +6,7 @@ const championData = {
           name: "Beigne Fracassante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si le pourcentage de PV de la cible est inférieur à celui de ce Champion.`,
+Possède 50% de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si le pourcentage de PV de la cible est inférieur à celui de ce Champion.`,
           damage: "0.15*PV",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -14,7 +14,7 @@ Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour 
         {
           img: "assets/sort2.webp",
           name: "Tiens Fermement",
-          description: `Place un buff d'${BUFFS.DEF} de 60 % sur ce Champion pendant 2 tours.${RETURN}
+          description: `Place un buff d'${BUFFS.DEF} de 60% sur ce Champion pendant 2 tours.${RETURN}
 Accorde un Tour Supplémentaire.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],

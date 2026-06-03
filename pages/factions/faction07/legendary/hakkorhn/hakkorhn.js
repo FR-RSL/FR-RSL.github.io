@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Force Inhumaine",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cri de Ralliement",
-          description: `Retire tous les débuffs de tous les alliés, puis les soigne à hauteur de 15 % des PV de ce Champion. Soigne chaque allié de 10 % des PV MAX de ce Champion supplémentaires pour chaque débuff retiré.`,
+          description: `Retire tous les débuffs de tous les alliés, puis les soigne à hauteur de 15% des PV de ce Champion. Soigne chaque allié de 10% des PV MAX de ce Champion supplémentaires pour chaque débuff retiré.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
@@ -22,7 +22,7 @@ const championData = {
           name: "Offrande de Sang",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20 % des dégâts infligés.`,
+Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20% des dégâts infligés.`,
           damage: "0.28*PV",
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],

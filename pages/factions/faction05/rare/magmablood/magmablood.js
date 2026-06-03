@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Violent Jeté",
-          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
+          description: `Attaque 1 ennemi. Possède 15% de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "3.6*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Esquilles",
-          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 30% de chances de placer un débuff de ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
           damage: "3.6*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Bombe de Magma",
-          description: `Attaque 2 fois au hasard. Chaque frappe possède 60 % de chances de placer un débuff de ${DEBUFFS.BOMB} pendant 3 tours.`,
+          description: `Attaque 2 fois au hasard. Chaque frappe possède 60% de chances de placer un débuff de ${DEBUFFS.BOMB} pendant 3 tours.`,
           damage: "3.2*ATQ",
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

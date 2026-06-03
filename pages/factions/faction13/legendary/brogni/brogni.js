@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fléau de Cristal",
-          description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 45% de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "6.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -17,9 +17,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poigne de Caverne",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de retirer 1 buff aléatoire sur tous les ennemis.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 75% de chances de retirer 1 buff aléatoire sur tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de retirer 1 débuff aléatoire sur tous les alliés. Augmente la valeur des buffs ${BUFFS.SHIELD} sur tous les alliés de 30 % des dégâts infligés.`,
+Possède 75% de chances de retirer 1 débuff aléatoire sur tous les alliés. Augmente la valeur des buffs ${BUFFS.SHIELD} sur tous les alliés de 30% des dégâts infligés.`,
           damage: "6.6*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -33,7 +33,7 @@ Possède 75 % de chances de retirer 1 débuff aléatoire sur tous les alliés. A
         {
           img: "assets/sort3.webp",
           name: "Lueur Tenace",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours. Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. Le buff ${BUFFS.SHIELD} ne peut être retiré.`,
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours. Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30% des PV MAX de ce Champion pendant 2 tours. Le buff ${BUFFS.SHIELD} ne peut être retiré.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",

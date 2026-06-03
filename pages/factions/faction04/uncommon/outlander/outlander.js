@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Talisman de Puissance",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de réduire de 30 % le Compteur de Tours.`,
+          description: `Attaque tous les ennemis. Possède 50% de chances de réduire de 30% le Compteur de Tours.`,
           damage: "3.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

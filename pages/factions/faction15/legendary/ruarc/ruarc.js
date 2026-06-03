@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée des clairières",
-          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible. Soigne ce Champion de 5 % de ses PV MAX pour chaque débuff transféré.`,
+          description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible. Soigne ce Champion de 5% de ses PV MAX pour chaque débuff transféré.`,
           damage: "2.5*DEF",
           levelInfo: [
             "Dégâts +5%",
@@ -15,7 +15,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "La rouille te consume",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 80% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.${RETURN}${RETURN}
 
 Vole également tous les buffs ${BUFFS.HEALS} de chaque ennemi. Il est impossible de résister à cet effet.`,
 		  damage: "3.3*DEF",
@@ -30,7 +30,7 @@ Vole également tous les buffs ${BUFFS.HEALS} de chaque ennemi. Il est impossibl
         {
           img: "assets/sort3.webp",
           name: "Appel de la nature",
-          description: `Place un buff ${BUFFS.TAUNT}, un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.STRENGTHEN} de 25 % sur ce Champion pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.TAUNT}, un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.STRENGTHEN} de 25% sur ce Champion pendant 2 tours.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",
@@ -40,7 +40,7 @@ Vole également tous les buffs ${BUFFS.HEALS} de chaque ennemi. Il est impossibl
         {
           img: "assets/passif1.webp",
           name: "Preux des vignes [P]",
-          description: `Dès qu'un allié perd 10 % ou plus de ses PV MAX suite à une seule frappe, place sur cet allié un buff ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX pendant 2 tours.`,
+          description: `Dès qu'un allié perd 10% ou plus de ses PV MAX suite à une seule frappe, place sur cet allié un buff ${BUFFS.SHIELD} équivalent à 10% de ses PV MAX pendant 2 tours.`,
           cooldown: 1,
           levelInfo: [
             "Temps de recharge -1",

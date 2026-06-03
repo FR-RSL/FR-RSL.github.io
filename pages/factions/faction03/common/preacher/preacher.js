@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Sacré",
-          description: `Attaque 1 ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
+          description: `Attaque 1 ennemi. Possède 25% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 1 tour.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poussée de Force",
-          description: `Place, pendant 4 tours, un buff d'${BUFFS.ATK} de 50 % sur ce Champion. Accorde un Tour Supplémentaire.`,
+          description: `Place, pendant 4 tours, un buff d'${BUFFS.ATK} de 50% sur ce Champion. Accorde un Tour Supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Endurance Éternelle [P]",
-          description: `Lorsque touché par un ennemi, place, pour 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
+          description: `Lorsque touché par un ennemi, place, pour 2 tours, un buff de ${BUFFS.HEALS} de 15% sur ce Champion.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: true

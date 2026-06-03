@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame de Bénédictions",
-          description: `Attaque un ennemi. Soigne l'allié ayant le moins de PV à hauteur de 5 % de ses PV MAX.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Soigne l'allié ayant le moins de PV à hauteur de 5% de ses PV MAX.${RETURN}${RETURN}
 
 Ne peut pas soigner ce Champion.`,
           damage: "3.6*DEF",
@@ -14,7 +14,7 @@ Ne peut pas soigner ce Champion.`,
         {
           img: "assets/sort2.webp",
           name: "Quête de Sens",
-          description: `Attaque tous les ennemis. Soigne tous les alliés de 15 % de leurs PV MAX, puis réduit d'1 tour la durée de tous les buffs sur tous les ennemis et augmente d'1 tour la durée de tous les buffs sur tous les alliés.`,
+          description: `Attaque tous les ennemis. Soigne tous les alliés de 15% de leurs PV MAX, puis réduit d'1 tour la durée de tous les buffs sur tous les ennemis et augmente d'1 tour la durée de tous les buffs sur tous les alliés.`,
           damage: "3*DEF",
           cooldown: 4,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1"],
@@ -23,7 +23,7 @@ Ne peut pas soigner ce Champion.`,
         {
           img: "assets/sort3.webp",
           name: "Essor Glorieux",
-          description: `Ranime un allié tombé avec 50 % de PV, puis remplit son Compteur de Tour de 50 %, avant de réinitialiser les temps de recharge de ses compétences.`,
+          description: `Ranime un allié tombé avec 50% de PV, puis remplit son Compteur de Tour de 50%, avant de réinitialiser les temps de recharge de ses compétences.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

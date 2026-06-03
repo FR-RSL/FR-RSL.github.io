@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Fente éclatante",
-          description: `Attaque 2 fois un ennemi. Les dégâts augmentent de 5 % pour chaque buff sur la cible.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Les dégâts augmentent de 5% pour chaque buff sur la cible.${RETURN}${RETURN}
 
-Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+Chaque frappe a 35% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "1.75*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -18,9 +18,9 @@ Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 t
         {
           img: "assets/sort2.webp",
           name: "Force de miroitement",
-          description: `Attaque 2 fois un ennemi. Les dégâts infligés par cette compétence augmentent de 10 % par tranche de 10 % de PV perdus par ce Champion.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Les dégâts infligés par cette compétence augmentent de 10% par tranche de 10% de PV perdus par ce Champion.${RETURN}${RETURN}
 
-Si la cible bénéficie de 2 buffs ou plus, ignorera également 35 % de la DÉF de la cible.${RETURN}${RETURN}
+Si la cible bénéficie de 2 buffs ou plus, ignorera également 35% de la DÉF de la cible.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "2.7*ATQ",
@@ -37,7 +37,7 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           name: "Courroux de Hrothglime",
           description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.DEF}, ${BUFFS.STRENGTHEN} et ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
-Si cette attaque tue au moins 1 ennemi, réduit le Compteur de Tour de tous les ennemis de 50 %. Il est impossible de résister à cet effet.`,
+Si cette attaque tue au moins 1 ennemi, réduit le Compteur de Tour de tous les ennemis de 50%. Il est impossible de résister à cet effet.`,
           damage: "3.4*ATQ",
           cooldown: 6,
           levelInfo: [
@@ -52,7 +52,7 @@ Si cette attaque tue au moins 1 ennemi, réduit le Compteur de Tour de tous les 
           name: "Roi doré [P]",
           description: `${PASSIVE}
 
-Augmente l'ATQ de ce Champion de 5 % pour chaque buff actif sur l'équipe ennemie (s'accumule jusqu'à 100 %).${RETURN}${RETURN}
+Augmente l'ATQ de ce Champion de 5% pour chaque buff actif sur l'équipe ennemie (s'accumule jusqu'à 100%).${RETURN}${RETURN}
 
 ${ACTIVE}
 

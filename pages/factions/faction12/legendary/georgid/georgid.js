@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Série brisante",
-          description: `Attaque 2 fois un ennemi. Possède 30 % de chances de répéter l'attaque.`,
+          description: `Attaque 2 fois un ennemi. Possède 30% de chances de répéter l'attaque.`,
           damage: "1.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Marche d'étain",
-          description: `Attaque tous les ennemis. Réduit le Compteur de Tour de toutes les cibles de 30 %. Il est impossible de résister à cet effet.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Réduit le Compteur de Tour de toutes les cibles de 30%. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour si cette attaque tue un ennemi.`,
           damage: "4*ATQ",
@@ -34,7 +34,7 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
         {
           img: "assets/passif1.webp",
           name: "Craque carapace [P]",
-          description: `Possède 50 % de chances que ce Champion ignore 50 % de la DÉF de la cible pour chaque frappe placée par les compétences de ce Champion.`,
+          description: `Possède 50% de chances que ce Champion ignore 50% de la DÉF de la cible pour chaque frappe placée par les compétences de ce Champion.`,
           isPassive: true
         }
       ],

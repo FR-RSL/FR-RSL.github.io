@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Poussée d'ambre",
-          description: `Attaque un ennemi. Possède 50 % de chances d'activer instantanément un buff ${BUFFS.HEALS} sur chaque allié.`,
+          description: `Attaque un ennemi. Possède 50% de chances d'activer instantanément un buff ${BUFFS.HEALS} sur chaque allié.`,
           damage: "4.3*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -16,9 +16,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Touche d'or",
-          description: `Place un buff ${BUFFS.SPD} de 30 % et deux buffs ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.SPD} de 30% et deux buffs ${BUFFS.HEALS} de 15% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
+Remplit également le Compteur de Tour de tous les alliés de 20%.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",
@@ -28,7 +28,7 @@ Remplit également le Compteur de Tour de tous les alliés de 20 %.`,
         {
           img: "assets/sort3.webp",
           name: "Orée de la mort",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
 
 Fait ensuite équipe avec tous les alliés ranimés par cette compétence pour attaquer l'ennemi ayant le moins de PV. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.`,
           cooldown: 6,
@@ -40,7 +40,7 @@ Fait ensuite équipe avec tous les alliés ranimés par cette compétence pour a
         {
           img: "assets/passif1.webp",
           name: "Lueur curative [P]",
-          description: `Dès qu'un buff ${BUFFS.HEALS} s'active sur n'importe quel allié, remplit les Compteurs de Tour de tous les alliés de 5 %.${RETURN}${RETURN}
+          description: `Dès qu'un buff ${BUFFS.HEALS} s'active sur n'importe quel allié, remplit les Compteurs de Tour de tous les alliés de 5%.${RETURN}${RETURN}
 
 À la fin du tour de cette Championne, augmente d'1 tour la durée d'un buff ${BUFFS.HEALS} sur un allié aléatoire, sauf cette Championne.`,
           isPassive: true,

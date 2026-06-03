@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Arme d'hast du Roi-sauvage",
-          description: `Attaque un ennemi. Soigne tous les alliés ayant moins de 50 % de PV jusqu'à 50 % de leurs PV MAX.`,
+          description: `Attaque un ennemi. Soigne tous les alliés ayant moins de 50% de PV jusqu'à 50% de leurs PV MAX.`,
           damage: "0.26*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Stratagème sacrificiel",
-          description: `Attaque un allié. Les dégâts infligés sont égaux à 50 % des PV actuels de la cible.${RETURN}${RETURN}
+          description: `Attaque un allié. Les dégâts infligés sont égaux à 50% des PV actuels de la cible.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.SHIELD} sur cet allié pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la quantité de PV qui manque à cet allié.${RETURN}${RETURN}
 
@@ -27,7 +27,7 @@ Remplit également le Compteur de Tour de cet allié d'une quantité égale au p
           name: "Ricanement de lames",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
+Possède 100% de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25% sur tous les alliés pendant 2 tours.`,
           damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -36,7 +36,7 @@ Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les e
         {
           img: "assets/passif1.webp",
           name: "Outsiders [P]",
-          description: `Les alliés ayant 50 % de PV ou moins infligent 30 % de dégâts en plus.`,
+          description: `Les alliés ayant 50% de PV ou moins infligent 30% de dégâts en plus.`,
           cooldown: 1,
           isPassive: true
         }

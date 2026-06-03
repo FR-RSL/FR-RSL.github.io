@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Rouer de coups",
           description: `Attaque un ennemi.${RETURN}
-Possède 15 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+Possède 15% de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "6.7*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],

@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Embraser",
-          description: `Attaque 3 fois un ennemi. Chaque frappe a 30 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur la cible.${RETURN}${RETURN}
+          description: `Attaque 3 fois un ennemi. Chaque frappe a 30% de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur la cible.${RETURN}${RETURN}
 
-Chaque frappe a également 50 % de chances de réduire d'1 tour la durée d'un buff aléatoire de la cible. Si la cible est affligée d'un débuff ${DEBUFFS.BURN}, ces chances passent à 100 %.`,
+Chaque frappe a également 50% de chances de réduire d'1 tour la durée d'un buff aléatoire de la cible. Si la cible est affligée d'un débuff ${DEBUFFS.BURN}, ces chances passent à 100%.`,
           damage: "1.4*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -18,7 +18,7 @@ Chaque frappe a également 50 % de chances de réduire d'1 tour la durée d'un b
         {
           img: "assets/sort2.webp",
           name: "Incendie de forêt",
-          description: `Possède 80 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.`,
+          description: `Possède 80% de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.`,
           cooldown: 3,
           levelInfo: [
             "Chance de Buff/débuff +5%",
@@ -32,7 +32,7 @@ Chaque frappe a également 50 % de chances de réduire d'1 tour la durée d'un b
           name: "Panique ardente",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours. Si une cible se trouve sous débuff ${DEBUFFS.BURN}, a également 75 % de chances de placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
+Possède 75% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours. Si une cible se trouve sous débuff ${DEBUFFS.BURN}, a également 75% de chances de placer un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
           damage: "4.3*ATQ",
           cooldown: 5,
           levelInfo: [
@@ -43,9 +43,9 @@ Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 t
         {
           img: "assets/passif1.webp",
           name: "Attiser [P]",
-          description: `Dès que cette Championne est attaquée par un ennemi sous débuff ${DEBUFFS.BURN}, soigne cette Championne de 25 % des dégâts reçus et soigne tous les alliés de 10 % des dégâts reçus.${RETURN}${RETURN}
+          description: `Dès que cette Championne est attaquée par un ennemi sous débuff ${DEBUFFS.BURN}, soigne cette Championne de 25% des dégâts reçus et soigne tous les alliés de 10% des dégâts reçus.${RETURN}${RETURN}
 
-Possède également 35 % de chances d'activer instantanément les débuffs ${DEBUFFS.BURN} sur l'assaillant.`,
+Possède également 35% de chances d'activer instantanément les débuffs ${DEBUFFS.BURN} sur l'assaillant.`,
           isPassive: true,
           levelInfo: [
             "Chance de Buff/débuff +5%",

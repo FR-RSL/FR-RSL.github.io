@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Glace les Os",
-          description: `Retire tous les buffs dont disposent les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Accorde un Tour supplémentaire.`,
+          description: `Retire tous les buffs dont disposent les ennemis. Possède 80% de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Accorde un Tour supplémentaire.`,
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Avalanche",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Place une frappe supplémentaire si un ennemi se trouve sous débuff ${DEBUFFS.GEL}.`,
           damage: "4*ATQ",
@@ -31,9 +31,9 @@ Place une frappe supplémentaire si un ennemi se trouve sous débuff ${DEBUFFS.G
         {
           img: "assets/passif1.webp",
           name: "Étreinte Gelée [P]",
-          description: `Lorsque ce Champion est frappé par un ennemi, a 30 % de chances de placer un débuff ${DEBUFFS.GEL} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
+          description: `Lorsque ce Champion est frappé par un ennemi, a 30% de chances de placer un débuff ${DEBUFFS.GEL} sur l'assaillant pendant 1 tour.${RETURN}${RETURN}
 
-Augmente de 25 % les dégâts infligés par les alliés contre les ennemis sous débuff ${DEBUFFS.GEL}.`,
+Augmente de 25% les dégâts infligés par les alliés contre les ennemis sous débuff ${DEBUFFS.GEL}.`,
           isPassive: true
         }
       ],

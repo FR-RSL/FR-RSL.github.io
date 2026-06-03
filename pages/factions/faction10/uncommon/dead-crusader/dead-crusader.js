@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Plaie de Crypte",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % sur tous les ennemis pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 75% de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5% sur tous les ennemis pendant 2 tours.`,
           damage: "3.6*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],

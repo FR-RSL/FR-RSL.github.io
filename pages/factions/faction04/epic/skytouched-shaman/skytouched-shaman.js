@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Couteaux Serres",
-          description: `Attaque tous les ennemis. Soigne de 15 % des dégâts infligés si cette Championne possède moins de 50 % de PV. Sinon, booste de 20 % le Compteur de Tour de cette Championne si elle possède 50 % de PV ou plus.`,
+          description: `Attaque tous les ennemis. Soigne de 15% des dégâts infligés si cette Championne possède moins de 50% de PV. Sinon, booste de 20% le Compteur de Tour de cette Championne si elle possède 50% de PV ou plus.`,
           damage: "2.2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Rituel Ensanglanté [P]",
-          description: `Blesse cette Championne de 10 % de ses PV MAX au début de chaque tour. Soigne tous les alliés, sauf cette Championne, à hauteur de la moitié des PV perdus actuels de cette Championne. Au début de chaque tour, place un débuff ${DEBUFFS.SPD} de 30 % sur cette Championne pendant 1 tour. Possède également 50 % de chances de placer un débuff ${DEBUFFS.FEAR} sur cette Championne pendant 1 tour.`,
+          description: `Blesse cette Championne de 10% de ses PV MAX au début de chaque tour. Soigne tous les alliés, sauf cette Championne, à hauteur de la moitié des PV perdus actuels de cette Championne. Au début de chaque tour, place un débuff ${DEBUFFS.SPD} de 30% sur cette Championne pendant 1 tour. Possède également 50% de chances de placer un débuff ${DEBUFFS.FEAR} sur cette Championne pendant 1 tour.`,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: true
         }

@@ -8,7 +8,7 @@ const championData = {
 
 Place une frappe supplémentaire si la cible se trouve sous débuff ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
-Réduit le Compteur de Tour de la cible de 10 %.`,
+Réduit le Compteur de Tour de la cible de 10%.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
@@ -19,7 +19,7 @@ Réduit le Compteur de Tour de la cible de 10 %.`,
 
 Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 30 %.`,
+Remplit le Compteur de Tour de cette Championne de 30%.`,
           damage: "6.3*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -29,9 +29,9 @@ Remplit le Compteur de Tour de cette Championne de 30 %.`,
           name: "Aspirante de Theosomi",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Ignorera 15 % de la DÉF de la cible si elle est d'Affinité Esprit. Ignorera 25 % de la DÉF de la cible si elle est d'une autre Affinité.${RETURN}${RETURN}
+Ignorera 15% de la DÉF de la cible si elle est d'Affinité Esprit. Ignorera 25% de la DÉF de la cible si elle est d'une autre Affinité.${RETURN}${RETURN}
 
-Active la compétence Part du superprédateur sur un ennemi aléatoire dont les PV ont été réduits de plus de 50 % par cette compétence. Se produit une fois par compétence.`,
+Active la compétence Part du superprédateur sur un ennemi aléatoire dont les PV ont été réduits de plus de 50% par cette compétence. Se produit une fois par compétence.`,
           damage: "3.8*ATQ",
           cooldown: 6,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -39,7 +39,7 @@ Active la compétence Part du superprédateur sur un ennemi aléatoire dont les 
         {
           img: "assets/sort4.webp",
           name: "Leçons de Garde-Lion [P]",
-          description: `Avant d'attaquer, a 25 % de chances de retirer les débuffs ${DEBUFFS.ATK} sur cette Championne et de les remplacer par leur buff miroir équivalent. A également 25 % de chances de retirer les buffs ${BUFFS.DEF} sur les ennemis et de les remplacer par leur débuff miroir équivalent.`,
+          description: `Avant d'attaquer, a 25% de chances de retirer les débuffs ${DEBUFFS.ATK} sur cette Championne et de les remplacer par leur buff miroir équivalent. A également 25% de chances de retirer les buffs ${BUFFS.DEF} sur les ennemis et de les remplacer par leur débuff miroir équivalent.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: true,
         }

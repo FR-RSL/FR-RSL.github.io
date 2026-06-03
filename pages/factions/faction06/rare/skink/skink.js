@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poison Accablant",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours. Place un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours si la cible souffre d'un débuff de ${DEBUFFS.DEF}.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours. Place un débuff de ${DEBUFFS.HEALS} de 50% pendant 2 tours si la cible souffre d'un débuff de ${DEBUFFS.DEF}.`,
           damage: "5.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

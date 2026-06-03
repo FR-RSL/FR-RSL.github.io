@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mauviette !",
-          description: `Attaque un ennemi. Possède 50 % de chances de réduire de 20 % le Compteur de Tour.`,
+          description: `Attaque un ennemi. Possède 50% de chances de réduire de 20% le Compteur de Tour.`,
           damage: "7.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

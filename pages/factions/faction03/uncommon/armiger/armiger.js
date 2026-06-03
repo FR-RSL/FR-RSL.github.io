@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Riposte",
-          description: `Attaque 1 ennemi. Réduit de 30 % le Compteur de Tours si cette attaque passe en critique.`,
+          description: `Attaque 1 ennemi. Réduit de 30% le Compteur de Tours si cette attaque passe en critique.`,
           damage: "4*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

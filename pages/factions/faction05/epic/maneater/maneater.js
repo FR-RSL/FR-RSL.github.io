@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Marteler",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis si l'attaque passe en critique.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.ATK} de 50% sur tous les ennemis si l'attaque passe en critique.`,
           damage: "5.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Vieux Sang",
-          description: `Ce Champion subit des dégâts, puis place, pendant 2 tours, un buff ${BUFFS.UNKILLABLE} et un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés. Les dégâts subis sont égaux à 5 % des PV MAX de chaque allié vivant.`,
+          description: `Ce Champion subit des dégâts, puis place, pendant 2 tours, un buff ${BUFFS.UNKILLABLE} et un buff de ${BUFFS.BLOCK_DEBUFFS} sur tous les alliés. Les dégâts subis sont égaux à 5% des PV MAX de chaque allié vivant.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

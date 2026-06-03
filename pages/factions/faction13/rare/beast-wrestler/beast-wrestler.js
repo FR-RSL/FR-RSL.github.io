@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Tranchoir Écrasant",
           description: `Attaque 2 fois un ennemi.${RETURN}
-Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
+Possède 20% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
           damage: "1.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -24,7 +24,7 @@ Les ennemis tués par cette compétence ne peuvent pas être ranimés.`,
         {
           img: "assets/passif1.webp",
           name: "Premier Sang [P]",
-          description: `Augmente de 50 % les dégâts infligés lors de la première frappe sur chaque ennemi.`,
+          description: `Augmente de 50% les dégâts infligés lors de la première frappe sur chaque ennemi.`,
           isPassive: true
         }
       ],

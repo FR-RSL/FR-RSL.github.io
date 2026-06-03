@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Rage",
-          description: `Attaque 2 fois un ennemi. Possède 15 % de chances de voler 1 buff aléatoire de la cible.`,
+          description: `Attaque 2 fois un ennemi. Possède 15% de chances de voler 1 buff aléatoire de la cible.`,
           damage: "1.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Flamme Sacrée",
-          description: `Attaque 4 fois au hasard. Chaque frappe place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours.`,
+          description: `Attaque 4 fois au hasard. Chaque frappe place un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours.`,
           damage: "1.65*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

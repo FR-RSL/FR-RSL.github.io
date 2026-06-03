@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Vigueur Artificielle",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 25 % sur tous les alliés. Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion. Retire tous les débuffs dont ce Champion est affligé.`,
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.ALLY_PROTECT} de 25% sur tous les alliés. Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion. Retire tous les débuffs dont ce Champion est affligé.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Mort Refusée",
-          description: `Ranime ce Champion avec 30 % de PV et attaque tous les ennemis après avoir été tué. La frappe ne peut pas passer en critique.`,
+          description: `Ranime ce Champion avec 30% de PV et attaque tous les ennemis après avoir été tué. La frappe ne peut pas passer en critique.`,
           damage: "6.2*ATQ",
           cooldown: 5,
           isPassive: true

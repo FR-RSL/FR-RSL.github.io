@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Charge en Avant",
-          description: `Attaque tous les ennemis. Possède 30 % de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour. Possède également 50 % de chances de placer un débuff de ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 30% de chances de placer un débuff d'${DEBUFFS.STUN} pendant 1 tour. Possède également 50% de chances de placer un débuff de ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
           damage: "3.6*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +15%", "Chances de Buff/Debuff +15%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Scories en Fusion",
-          description: `Attaque 2 fois tous les ennemis. Réduit de 25 % le Compteur de Tours. Possède 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+          description: `Attaque 2 fois tous les ennemis. Réduit de 25% le Compteur de Tours. Possède 30% de chances de placer un débuff de ${DEBUFFS.SPD} de 30% pendant 2 tours.`,
           damage: "1.9*ATQ",
           cooldown: 7,
           levelInfo: ["Dégâts +10%", "Dégâts +15%", "Temps de recharge -1", "Temps de recharge -1"],

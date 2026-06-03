@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coupe-herbe",
-          description: `Attaque un ennemi. Possède 50 % de chances de voler un buff aléatoire à la cible.`,
+          description: `Attaque un ennemi. Possède 50% de chances de voler un buff aléatoire à la cible.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -14,7 +14,7 @@ const championData = {
           name: "Tornade d'herbes",
           description: `Attaque tous les ennemis. Avant d'attaquer, retire tous les débuffs sur cette Championne.${RETURN}${RETURN}
 
-Possède 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
+Possède 75% de chances de retirer 1 buff aléatoire à tous les ennemis.`,
           damage: "4.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ Possède 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
           name: "Bond de hache",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Les dégâts augmentent de 30 % si cette Championne n'est affligée d'aucun débuff actif. Ignorera également les buffs ${BUFFS.UNKILLABLE} si cette Championne n'est affligée d'aucun débuff actif.`,
+Les dégâts augmentent de 30% si cette Championne n'est affligée d'aucun débuff actif. Ignorera également les buffs ${BUFFS.UNKILLABLE} si cette Championne n'est affligée d'aucun débuff actif.`,
           damage: "6.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

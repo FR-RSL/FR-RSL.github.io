@@ -6,7 +6,7 @@ const championData = {
           name: "Siphon de Vie",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Soigne l'allié ayant le moins de PV de 5 % des dégâts infligés.`,
+Soigne l'allié ayant le moins de PV de 5% des dégâts infligés.`,
           damage: "2.5*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -16,7 +16,7 @@ Soigne l'allié ayant le moins de PV de 5 % des dégâts infligés.`,
           name: "Sombre Crampon",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.`,
+Possède 50% de chances de placer un débuff de ${DEBUFFS.ATK} de 50% sur tous les ennemis pendant 2 tours.`,
           damage: "4.5*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

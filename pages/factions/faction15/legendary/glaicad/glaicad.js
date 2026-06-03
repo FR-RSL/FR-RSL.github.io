@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Foudre boréale",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35% de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour.${RETURN}${RETURN}
 
-Il est impossible de résister à ce débuff si la cible possède 50 % de PV ou moins.`,
+Il est impossible de résister à ce débuff si la cible possède 50% de PV ou moins.`,
           damage: "3.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -18,11 +18,11 @@ Il est impossible de résister à ce débuff si la cible possède 50 % de PV ou 
         {
           img: "assets/sort2.webp",
           name: "Voile d'eau de fonte",
-          description: `Place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Possède également 80 % de chances de placer un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Champion pendant 2 tours.${RETURN}${RETURN}
+Possède également 80% de chances de placer un buff ${BUFFS.PERFECT_VEIL} sur tous les alliés sauf ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Ensuite, remplit le Compteur de Tour de tous les alliés de 15 %.`,
+Ensuite, remplit le Compteur de Tour de tous les alliés de 15%.`,
           cooldown: 5,
           levelInfo: [
             "Chance de Buff/débuff +10%",
@@ -33,9 +33,9 @@ Ensuite, remplit le Compteur de Tour de tous les alliés de 15 %.`,
         {
           img: "assets/sort3.webp",
           name: "Ruisseau de vie",
-          description: `Ranime tous les alliés morts avec 40 % de PV et 25 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime tous les alliés morts avec 40% de PV et 25% de Compteur de Tour.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours. Ces buffs seront placés même si aucun allié n'a été ranimé.${RETURN}${RETURN}
+Place également un buff ${BUFFS.PRE} de 50% et un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 3 tours. Ces buffs seront placés même si aucun allié n'a été ranimé.${RETURN}${RETURN}
 
 Si aucun allié n'a été ranimé par cette compétence, accorde un Tour supplémentaire à ce Champion.`,
           cooldown: 7,
@@ -48,9 +48,9 @@ Si aucun allié n'a été ranimé par cette compétence, accorde un Tour supplé
         {
           img: "assets/passif1.webp",
           name: "Force du dégel [P]",
-          description: `Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10 % de dégâts en plus.${RETURN}${RETURN}
+          description: `Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10% de dégâts en plus.${RETURN}${RETURN}
 
-Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10 % de dégâts en plus aux ennemis sous buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+Les alliés sous buff ${BUFFS.PERFECT_VEIL} placé par ce Champion infligent 10% de dégâts en plus aux ennemis sous buffs ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
           isPassive: true,
         },
       ],

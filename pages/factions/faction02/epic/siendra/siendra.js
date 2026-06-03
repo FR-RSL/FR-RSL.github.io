@@ -6,7 +6,7 @@ const championData = {
           name: "Frappe éclairante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 25 % de chances de voler un buff aléatoire à la cible. Si cette attaque est critique, a au lieu de ça 100 % de chances de voler un buff aléatoire sur la cible.`,
+A 25% de chances de voler un buff aléatoire à la cible. Si cette attaque est critique, a au lieu de ça 100% de chances de voler un buff aléatoire sur la cible.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,7 +16,7 @@ A 25 % de chances de voler un buff aléatoire à la cible. Si cette attaque est 
           name: "Coup aveuglant",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 75 % de chances de voler 15 % du Compteur de Tour de la cible. Si une frappe est critique, a au lieu de ça 75 % de chances de voler 30 % du Compteur de Tour de la cible.`,
+Chaque frappe a 75% de chances de voler 15% du Compteur de Tour de la cible. Si une frappe est critique, a au lieu de ça 75% de chances de voler 30% du Compteur de Tour de la cible.`,
           damage: "2.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ Chaque frappe a 75 % de chances de voler 15 % du Compteur de Tour de la cible. S
         {
           img: "assets/sort3.webp",
           name: "Rafale resplendissante",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur cette Championne pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50% et un buff ${BUFFS.CRATE} de 30% sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de tous les buffs de cette Championne si cette attaque est critique.`,
           damage: "3.85*ATQ",
@@ -36,7 +36,7 @@ Augmente d'1 tour la durée de tous les buffs de cette Championne si cette attaq
         {
           img: "assets/passif1.webp",
           name: "Bénédiction de pupille [P]",
-          description: `Augmente l'ATQ de cette Championne de 2 % pour chaque buff qu'elle reçoit (s'accumule jusqu'à 30 %).`,
+          description: `Augmente l'ATQ de cette Championne de 2% pour chaque buff qu'elle reçoit (s'accumule jusqu'à 30%).`,
           isPassive: true
         }
       ],

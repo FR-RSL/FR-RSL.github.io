@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lance aurique",
-          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff ${DEBUFFS.UNFEEBLE} pendant 1 tour.`,
+          description: `Attaque tous les ennemis. Possède 35% de chances de placer un débuff ${DEBUFFS.UNFEEBLE} pendant 1 tour.`,
           damage: "2.5*DEF",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Tonnerre galopant",
-          description: `Place un buff ${BUFFS.PRE} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.PRE} de 50% et un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
 
 Place ensuite un débuff ${DEBUFFS.STUN} d'1 tour sur l'ennemi ayant le Compteur de Tour le plus élevé.${RETURN}${RETURN}
 

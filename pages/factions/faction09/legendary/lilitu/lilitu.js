@@ -4,7 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Invocation Abyssale",
-			description: `Attaque deux fois un ennemi, puis place sur ce Champion et sur l'allié ayant le moins de PV, un buff de ${BUFFS.SHIELD} égal à 10 % des PV MAX de ce Champion pendant 2 tours.`,
+			description: `Attaque deux fois un ennemi, puis place sur ce Champion et sur l'allié ayant le moins de PV, un buff de ${BUFFS.SHIELD} égal à 10% des PV MAX de ce Champion pendant 2 tours.`,
 			damage: "1.7*DEF",
 			levelInfo: [
 				"Dégâts +10%",
@@ -14,7 +14,7 @@ const championData = {
         {
 			img: "assets/sort2.webp",
 			name: "Linceul d'Âmes",
-			description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+			description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
  
 Place un buff ${BUFFS.VEIL} sur tous les alliés sauf cette Championne pendant 1 tour.`,
 			levelInfo: [
@@ -25,10 +25,10 @@ Place un buff ${BUFFS.VEIL} sur tous les alliés sauf cette Championne pendant 1
         {
 			img: "assets/sort3.webp",
 			name: "Renaissance Spectrale",
-			description: `Ranime tous alliés tombés avec 70 % de leurs PV.${RETURN}${RETURN}
+			description: `Ranime tous alliés tombés avec 70% de leurs PV.${RETURN}${RETURN}
 
 Place, pendant 1 tour, un buff ${BUFFS.VEIL} sur tous les alliés, sauf sur ce Champion.${RETURN}
-Place un buff de ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
+Place un buff de ${BUFFS.HEALS} de 15% sur tous les alliés pendant 2 tours.`,
 			levelInfo: [
 				"Temps de recharge -1",
 				"Temps de recharge -1",
@@ -38,7 +38,7 @@ Place un buff de ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
         {
         	img: "assets/passif1.webp",
         	name: "Chemins Éthérés [P]",
-        	description: `Réduit de 25 % les dégâts reçus par tous les alliés lors des attaques de zone (15 % contre les Boss).`,
+        	description: `Réduit de 25% les dégâts reçus par tous les alliés lors des attaques de zone (15% contre les Boss).`,
           	isPassive: true,
         },
       ],

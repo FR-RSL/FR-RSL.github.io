@@ -6,7 +6,7 @@ const championData = {
       name: "Lames dissimulées",
       description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 75 % de chances de voler un buff aléatoire. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
+Chaque frappe a 75% de chances de voler un buff aléatoire. Il est impossible de résister à cet effet si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.`,
       damage: "0.14*PV",
       levelInfo: [
         "Dégâts +10%",
@@ -20,7 +20,7 @@ Chaque frappe a 75 % de chances de voler un buff aléatoire. Il est impossible d
       name: "Assassin nautique",
       description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera 25 % de la DÉF de la cible, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}. Ignorera également les buffs ${BUFFS.STONE_SKIN} si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
+Ignorera 25% de la DÉF de la cible, ainsi que les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}. Ignorera également les buffs ${BUFFS.STONE_SKIN} si ce Champion se trouve sous un buff ${BUFFS.VEIL} ou ${BUFFS.PERFECT_VEIL}.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, augmente d'1 tour la durée de tous les buffs de ce Champion.`,
       damage: "0.34*PV",
@@ -35,11 +35,11 @@ Si cette attaque tue un ennemi, augmente d'1 tour la durée de tous les buffs de
     {
       img: "assets/sort3.webp",
       name: "Assaut du Ressac",
-      description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
+      description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
-Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera 15 % de la DÉF du premier ennemi. Après avoir frappé le premier ennemi, frappera chacun des autres ennemis. Après la première frappe, chaque frappe successive ignore 5 % supplémentaires de la DÉF de la cible (s'accumule jusqu'à 35 %).${RETURN}${RETURN}
+Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera 15% de la DÉF du premier ennemi. Après avoir frappé le premier ennemi, frappera chacun des autres ennemis. Après la première frappe, chaque frappe successive ignore 5% supplémentaires de la DÉF de la cible (s'accumule jusqu'à 35%).${RETURN}${RETURN}
 
-Pour chaque ennemi tué par cette attaque, augmente les PV de ce Champion de 5 % (s'accumule jusqu'à 30 %).`,
+Pour chaque ennemi tué par cette attaque, augmente les PV de ce Champion de 5% (s'accumule jusqu'à 30%).`,
       damage: "0.32*PV",
       cooldown: 6,
       levelInfo: [
@@ -56,11 +56,11 @@ Pour chaque ennemi tué par cette attaque, augmente les PV de ce Champion de 5 %
 
 Au début de chaque Tour, place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
 
-Possède 20 % de chances de renvoyer sur l'assaillant tous les dégâts et débuffs que reçoit ce Champion. Ne fonctionnera que sur les compétences qui infligent des dégâts ou qui infligent des dégâts et placent des débuffs. Ne fonctionne pas contre les Boss.${RETURN}${RETURN}
+Possède 20% de chances de renvoyer sur l'assaillant tous les dégâts et débuffs que reçoit ce Champion. Ne fonctionnera que sur les compétences qui infligent des dégâts ou qui infligent des dégâts et placent des débuffs. Ne fonctionne pas contre les Boss.${RETURN}${RETURN}
 
 ${ACTIVE}
 
-Si les dégâts renvoyés tuent un ennemi, remplit le Compteur de Tour de ce Champion de 30 % et place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.`,
+Si les dégâts renvoyés tuent un ennemi, remplit le Compteur de Tour de ce Champion de 30% et place un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 1 tour.`,
       cooldown: 4,
       levelInfo: [
         "Temps de recharge -1",

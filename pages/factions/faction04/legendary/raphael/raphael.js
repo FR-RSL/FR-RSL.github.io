@@ -8,7 +8,7 @@ const championData = {
 
 Place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée.${RETURN}${RETURN}
 
-Chaque coup critique remplit le Compteur de Tour de ce Champion de 10 %.`,
+Chaque coup critique remplit le Compteur de Tour de ce Champion de 10%.`,
           damage: "2.2*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -22,9 +22,9 @@ Chaque coup critique remplit le Compteur de Tour de ce Champion de 10 %.`,
           name: "Claque sismique",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE} en cas d'attaque sous débuff ${DEBUFFS.BERSERK} placé par ce Champion. Si ce Champion n'est pas sous débuff ${DEBUFFS.BERSERK} placé par lui-même, les dégâts infligés contre les ennemis sous buffs ${BUFFS.SHIELD} sont augmentés de 50 %.${RETURN}${RETURN}
+Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE} en cas d'attaque sous débuff ${DEBUFFS.BERSERK} placé par ce Champion. Si ce Champion n'est pas sous débuff ${DEBUFFS.BERSERK} placé par lui-même, les dégâts infligés contre les ennemis sous buffs ${BUFFS.SHIELD} sont augmentés de 50%.${RETURN}${RETURN}
 
-Chaque coup critique remplit le Compteur de Tour de ce Champion de 10 %.`,
+Chaque coup critique remplit le Compteur de Tour de ce Champion de 10%.`,
           damage: "4.3*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -38,7 +38,7 @@ Chaque coup critique remplit le Compteur de Tour de ce Champion de 10 %.`,
           name: "Pas aujourd'hui, crétin !",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 20 % de la DÉF de la cible.${RETURN}${RETURN}
+Chaque frappe ignorera 20% de la DÉF de la cible.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 2 tours si la cible est tuée. Si la cible survit, place un débuff ${DEBUFFS.BERSERK} sur ce Champion pendant 2 tours. Il est impossible de bloquer ce débuff et d'y résister.`,
           damage: "2*ATQ",
@@ -56,7 +56,7 @@ Place un buff ${BUFFS.PERFECT_VEIL} et un buff ${BUFFS.UNKILLABLE} sur ce Champi
 
 Place un débuff ${DEBUFFS.BERSERK} sur ce Champion pendant 1 tour dès qu'un Champion meurt.${RETURN}${RETURN}
 
-A 20 % de chances d'accorder un Tour supplémentaire lors d'une attaque sous débuff ${DEBUFFS.BERSERK} placé par ce Champion.`,
+A 20% de chances d'accorder un Tour supplémentaire lors d'une attaque sous débuff ${DEBUFFS.BERSERK} placé par ce Champion.`,
           isPassive: true,
         },
       ],

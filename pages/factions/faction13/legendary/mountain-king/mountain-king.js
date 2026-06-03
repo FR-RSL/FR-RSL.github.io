@@ -6,7 +6,7 @@ const championData = {
           name: "Fente Fracassante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de ce Champion de 10 %. Remplit de 2 % supplémentaires pour chaque buff sur la cible.`,
+Remplit le Compteur de Tour de ce Champion de 10%. Remplit de 2% supplémentaires pour chaque buff sur la cible.`,
           damage: "0.27*PV+1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -16,7 +16,7 @@ Remplit le Compteur de Tour de ce Champion de 10 %. Remplit de 2 % supplémentai
           name: "Hache Enchantée",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
+Ignorera 50% de la DÉF de la cible.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
           damage: "0.3*PV+1.8*ATQ",
@@ -40,7 +40,7 @@ Réduit le temps de recharge de la compétence [Hache enchantée] de 2 tours si 
         {
           img: "assets/passif1.webp",
           name: "Habileté Fabuleuse [P]",
-          description: `Augmente l'ATQ de ce Champion de 50 % chaque fois que ce Champion tue un ennemi. S'accumule jusqu'à 100 %.${RETURN}${RETURN}
+          description: `Augmente l'ATQ de ce Champion de 50% chaque fois que ce Champion tue un ennemi. S'accumule jusqu'à 100%.${RETURN}${RETURN}
 
 Immunisé contre les débuffs ${DEBUFFS.ATK} et ${DEBUFFS.LOCK_ACTIVE}.`,
           isPassive: true

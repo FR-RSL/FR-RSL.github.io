@@ -4,14 +4,14 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Faucher",
-          description: `Attaque 1 ennemi. Soigne à hauteur de 50 % des dégâts infligés.`,
+          description: `Attaque 1 ennemi. Soigne à hauteur de 50% des dégâts infligés.`,
           damage: "3.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Renforcer",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
         },

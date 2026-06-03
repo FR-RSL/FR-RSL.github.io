@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Saigneur",
-          description: `Attaque 1 ennemi. Offre 60 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours. Soigne ce Champion à hauteur de 10 % des dégâts infligés.`,
+          description: `Attaque 1 ennemi. Offre 60% de chances de placer un débuff de ${DEBUFFS.ATK} de 50% pendant 2 tours. Soigne ce Champion à hauteur de 10% des dégâts infligés.`,
           damage: "6.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Haine Ardente",
-          description: `Place un buff d'${BUFFS.ATK} de 50 %, un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours. Octroie un Tour Supplémentaire.`,
+          description: `Place un buff d'${BUFFS.ATK} de 50%, un buff d'${BUFFS.CRATE} de 30% et un buff d'${BUFFS.SPD} de 30% sur ce Champion pendant 2 tours. Octroie un Tour Supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

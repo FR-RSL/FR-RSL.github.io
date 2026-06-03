@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Coupure d'aile",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.${RETURN}${RETURN}
 
 Lors d'une contre-attaque, les dégâts infligés par cette compétence sont basés sur la DÉF de ce Champion et les PV MAX de l'ennemi.`,
           damage: "3.6*DEF",
@@ -30,7 +30,7 @@ Place également un buff ${BUFFS.UNKILLABLE} sur ce Champion pendant 1 tour et u
           name: "Appel de Crête-sang",
           description: `Rétablit totalement les PV MAX détruits de tous alliés.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.REVIVE_ON_DEATH} et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+Place également un buff ${BUFFS.REVIVE_ON_DEATH} et un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           cooldown: 4,
@@ -47,11 +47,11 @@ Accorde ensuite un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Régner sur le perchoir [P]",
-          description: `Renvoie sur l'assaillant 50 % des dégâts reçus par ce Champion.${RETURN}${RETURN}
+          description: `Renvoie sur l'assaillant 50% des dégâts reçus par ce Champion.${RETURN}${RETURN}
 
-Si l'assaillant est un Boss, renvoie 100 % des dégâts reçus par ce Champion.${RETURN}${RETURN}
+Si l'assaillant est un Boss, renvoie 100% des dégâts reçus par ce Champion.${RETURN}${RETURN}
 
-Soigne également ce Champion à hauteur de 50 % des dégâts reçus.`,
+Soigne également ce Champion à hauteur de 50% des dégâts reçus.`,
           isPassive: true
         }
       ],
@@ -86,9 +86,9 @@ Soigne également ce Champion à hauteur de 50 % des dégâts reçus.`,
           name: "Ciel déchiré",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours. Il est impossible de résister à cet effet.${RETURN}${RETURN}
+Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
-Les dégâts augmentent de 10 % pour chaque ennemi sous débuff ${DEBUFFS.DEF}. Vole également 20 % du Compteur de Tour de chaque ennemi.`,
+Les dégâts augmentent de 10% pour chaque ennemi sous débuff ${DEBUFFS.DEF}. Vole également 20% du Compteur de Tour de chaque ennemi.`,
           damage: "4.5*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
@@ -99,10 +99,10 @@ Les dégâts augmentent de 10 % pour chaque ennemi sous débuff ${DEBUFFS.DEF}. 
           name: "Torture sonique",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Ignorera 20 % de la DÉF de chaque cible si elle ne dispose d'aucun buff.${RETURN}
+Ignorera 20% de la DÉF de chaque cible si elle ne dispose d'aucun buff.${RETURN}
 Ignore les buffs ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
-Les dégâts augmentent de 15 % pour chaque buff sur chaque cible.${RETURN}${RETURN}
+Les dégâts augmentent de 15% pour chaque buff sur chaque cible.${RETURN}${RETURN}
 
 Réduit la durée de tous les buffs des ennemis de 2 tours.`,
           damage: "4.7*DEF*(1+0.15*Active Target Buffs)",

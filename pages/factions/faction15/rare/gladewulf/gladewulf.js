@@ -6,7 +6,7 @@ const championData = {
           name: "Meute spectrale",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+Chaque frappe a 35% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.`,
           damage: "DEF*1.05",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -16,7 +16,7 @@ Chaque frappe a 35 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pend
           name: "Racines fantomatiques",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
+A 50% de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "DEF*3",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Arooo !",
-          description: `Place un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours. Place également un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours. Place également un buff ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés sauf ce Champion pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -33,7 +33,7 @@ A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
         {
           img: "assets/passif1.webp",
           name: "L'union fait la force [P]",
-          description: `Réduit les dégâts reçus par ce Champion de 5 % pour chaque allié sous buff ${BUFFS.ALLY_PROTECT} placé par ce Champion.`,
+          description: `Réduit les dégâts reçus par ce Champion de 5% pour chaque allié sous buff ${BUFFS.ALLY_PROTECT} placé par ce Champion.`,
           isPassive: true
         }
       ],

@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Explosion de Magma",
-          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BOMB} qui détonera après 3 tours.`,
+          description: `Attaque 2 fois tous les ennemis. Chaque frappe possède 75% de chances de placer un débuff ${DEBUFFS.BOMB} qui détonera après 3 tours.`,
           damage: "2.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

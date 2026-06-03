@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ténèbres",
-          description: `Attaque tous les ennemis. Offre 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Offre 25% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "3.7*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

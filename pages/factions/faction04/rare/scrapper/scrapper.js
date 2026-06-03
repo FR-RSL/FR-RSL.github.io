@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Arts d'Arène",
-          description: `Attaque un ennemi. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 5 % des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 5% des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Favori des Foules",
-          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30 % des dégâts infligés. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 30 % des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Détruit les PV MAX de la cible de 30% des dégâts infligés. Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 30% des dégâts infligés pendant 2 tours si cette attaque passe en critique.`,
           damage: "6.5*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +5%", "Dégâts +5%", "Bouclier +10%", "Temps de recharge -1"],

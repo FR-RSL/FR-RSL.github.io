@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Exhortation",
-          description: `Retire 1 débuff aléatoire sur tous les alliés. Possède 60 % de chances de placer une ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.`,
+          description: `Retire 1 débuff aléatoire sur tous les alliés. Possède 60% de chances de placer une ${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours.`,
           cooldown: 3,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false

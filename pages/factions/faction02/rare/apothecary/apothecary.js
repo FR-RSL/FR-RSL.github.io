@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mélopée Apaisante",
-          description: `Soigne de 35 % de PV la cible alliée. Ce Soin peut passer en critique.`,
+          description: `Soigne de 35% de PV la cible alliée. Ce Soin peut passer en critique.`,
           cooldown: 3,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Aubaine de Vitesse",
-          description: `Place un buff d'${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours. Remplit de 15 % le Compteur de Tours de tous les alliés.`,
+          description: `Place un buff d'${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours. Remplit de 15% le Compteur de Tours de tous les alliés.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

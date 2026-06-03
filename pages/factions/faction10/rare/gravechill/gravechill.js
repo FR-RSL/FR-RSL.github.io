@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Toxine Glaçante",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.POISON} de 5 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff ${DEBUFFS.POISON} de 5% pendant 1 tour.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Glace les Sangs",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 30 % pendant 2 tours. Possède, à la place, 75 % de chances de placer sur la cible un débuff ${DEBUFFS.DEF} de 60 % si la cible souffre d'un débuff ${DEBUFFS.POISON}.`,
+          description: `Attaque un ennemi. Possède 75% de chances de placer un débuff ${DEBUFFS.DEF} de 30% pendant 2 tours. Possède, à la place, 75% de chances de placer sur la cible un débuff ${DEBUFFS.DEF} de 60% si la cible souffre d'un débuff ${DEBUFFS.POISON}.`,
           damage: "6.8*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

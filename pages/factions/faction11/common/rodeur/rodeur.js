@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Flèche Vitale",
-          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 15% de chances de placer un débuff de ${DEBUFFS.POISON} de 2,5% pendant 2 tours.`,
           damage: "3.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
         }

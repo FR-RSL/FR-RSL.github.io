@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Lancer de Couteaux",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.POISON} de 2,5 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50% de chances de placer un débuff ${DEBUFFS.POISON} de 2,5% pendant 2 tours.`,
           damage: "3.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],

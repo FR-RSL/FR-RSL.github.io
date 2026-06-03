@@ -6,7 +6,7 @@ const championData = {
           name: "Écrase-genou",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+Chaque frappe a 30% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.`,
           damage: "1.7*DEF",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -14,7 +14,7 @@ Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pend
         {
           img: "assets/sort2.webp",
           name: "Arriver à ses fins",
-          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.ALLY_PROTECT} de 50% sur tous les alliés sauf ce Champion pendant 2 tours. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -24,9 +24,9 @@ Chaque frappe a 30 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pend
           name: "Combattant borné",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de résister à ce débuff si la DÉF de ce Champion est inférieure à celle de la cible.${RETURN}${RETURN}
+A 50% de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Il est impossible de résister à ce débuff si la DÉF de ce Champion est inférieure à celle de la cible.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.`,
+Place un buff ${BUFFS.REFLECT_DAM} de 30% sur tous les alliés pendant 2 tours.`,
           damage: "4*DEF",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -35,7 +35,7 @@ Place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours.
         {
           img: "assets/passif1.webp",
           name: "Paria abhorré [P]",
-          description: `Lorsqu'un ennemi attaque un allié sous buff ${BUFFS.ALLY_PROTECT}, a 15 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.`,
+          description: `Lorsqu'un ennemi attaque un allié sous buff ${BUFFS.ALLY_PROTECT}, a 15% de chances de placer un débuff ${DEBUFFS.PROVOKE} sur l'assaillant pendant 1 tour.`,
           isPassive: true
         }
       ],

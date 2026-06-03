@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Poings vaniteux",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 35% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.12*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Rugissement victorieux",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 3 tours. Place également un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 3 tours, puis accorde un tour supplémentaire.`,
+          description: `Place un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 3 tours. Place également un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 3 tours, puis accorde un tour supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -29,9 +29,9 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Offensé [P]",
-          description: `Réduit de 20 % les dégâts que ce Champion reçoit des coups critiques. Contre-attaque l'assaillant lorsque ce Champion est frappé par un coup critique.${RETURN}${RETURN}
+          description: `Réduit de 20% les dégâts que ce Champion reçoit des coups critiques. Contre-attaque l'assaillant lorsque ce Champion est frappé par un coup critique.${RETURN}${RETURN}
 
-Possède 50 % de chances de contre-attaquer l'assaillant lorsque ce Champion est atteint par une frappe puissante, normale ou faible.`,
+Possède 50% de chances de contre-attaquer l'assaillant lorsque ce Champion est atteint par une frappe puissante, normale ou faible.`,
           isPassive: true
         }
       ],

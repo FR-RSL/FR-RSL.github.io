@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame Corrompue",
-          description: `Attaque 1 ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 30% de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "2.9*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
         },
@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Lien d'Âme",
-          description: `Soigne de 25 % l'allié ayant les PV les plus bas, puis nivèle les niveaux de PV de tous les alliés.`,
+          description: `Soigne de 25% l'allié ayant les PV les plus bas, puis nivèle les niveaux de PV de tous les alliés.`,
           cooldown: 5,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
         }

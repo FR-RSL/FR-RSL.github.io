@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lames Surs",
-          description: `Attaque 2 fois un ennemi. Chappe frappe vole tous les buffs ${BUFFS.ATK}. Chaque frappe possède également 30 % de chances de voler un buff aléatoire.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chappe frappe vole tous les buffs ${BUFFS.ATK}. Chaque frappe possède également 30% de chances de voler un buff aléatoire.${RETURN}${RETURN}
 
 Il est impossible de résister au vol de buff ${BUFFS.ATK}.`,
           damage: "2*ATQ",
@@ -14,7 +14,7 @@ Il est impossible de résister au vol de buff ${BUFFS.ATK}.`,
         {
           img: "assets/sort2.webp",
           name: "Raid Cruel",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de réduire d'1 tour la durée de tous les buffs. Il est impossible de résister à cet effet lors de frappes critiques.`,
+          description: `Attaque tous les ennemis. Possède 80% de chances de réduire d'1 tour la durée de tous les buffs. Il est impossible de résister à cet effet lors de frappes critiques.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -23,7 +23,7 @@ Il est impossible de résister au vol de buff ${BUFFS.ATK}.`,
         {
           img: "assets/sort3.webp",
           name: "Transe d'Épée",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 3 tours, puis accorde un Tour Supplémentaire.`,
+          description: `Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

@@ -6,7 +6,7 @@ const championData = {
           name: "Frappe stupéfiante",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
+A 15% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           damage: "0.21*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
@@ -15,14 +15,14 @@ A 15 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
           name: "Position de l'acier",
           description: `Place un buff ${BUFFS.TAUNT} sur ce Champion pendant 1 tour.${RETURN}${RETURN}
 
-Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 15 % des PV MAX de ce Champion.`,
+Place également sur tous les alliés un buff ${BUFFS.SHIELD} pendant 2 tours, équivalent à 15% des PV MAX de ce Champion.`,
           cooldown: 6,
           levelInfo: ["Bouclier +10%", "Bouclier +10%", "Temps de recharge -1", "Temps de recharge -1"],
         },
         {
           img: "assets/sort3.webp",
           name: "Discipline militaire [P]",
-          description: `Dès que ce Champion est attaqué, a 5 % de chances de réduire à zéro tous les dégâts en approche.`,
+          description: `Dès que ce Champion est attaqué, a 5% de chances de réduire à zéro tous les dégâts en approche.`,
           cooldown: 1,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: true,

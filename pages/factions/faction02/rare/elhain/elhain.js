@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Flèche Éclair",
-          description: `Attaque 1 ennemi, puis tous les ennemis. Possède 15 % de chances supplémentaires de porter un coup critique. Place un buff d'${BUFFS.CRATE} de 30 % sur ce Champion, pendant 3 tours, si la cible est tuée.`,
+          description: `Attaque 1 ennemi, puis tous les ennemis. Possède 15% de chances supplémentaires de porter un coup critique. Place un buff d'${BUFFS.CRATE} de 30% sur ce Champion, pendant 3 tours, si la cible est tuée.`,
           damage: "2.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

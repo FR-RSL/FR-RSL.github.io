@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Doubles griffes du Lion",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 60% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-Dégâts augmentés de 20 % si la cible possède moins de 60 % de PV.`,
+Dégâts augmentés de 20% si la cible possède moins de 60% de PV.`,
           damage: "1.65*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -27,9 +27,9 @@ Ce Champion est immunisé contre les débuffs ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, $
         {
           img: "assets/sort3.webp",
           name: "Rugissement terrifiant",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 80% de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour.${RETURN}${RETURN}
 
-Avant d'attaquer, possède 80 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.`,
+Avant d'attaquer, possède 80% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25% sur tous les ennemis pendant 2 tours.`,
           damage: "3.85*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -44,7 +44,7 @@ Place instantanément un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion avant
 
 ${PASSIVE}
 
-Les dégâts augmentent à mesure que les PV du Champion baissent (+1 % par 1 % de PV perdus).`,
+Les dégâts augmentent à mesure que les PV du Champion baissent (+1% par 1% de PV perdus).`,
           cooldown: 4,
           isPassive: true
         }

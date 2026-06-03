@@ -23,7 +23,7 @@ Place, pendant 2 tours, un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion si cet
         {
           img: "assets/sort3.webp",
           name: "Victime Impuissante",
-          description: `Attaque un ennemi. Dégâts augmentés de 15 % si la cible ne possède aucun buff actif.`,
+          description: `Attaque un ennemi. Dégâts augmentés de 15% si la cible ne possède aucun buff actif.`,
           damage: "6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

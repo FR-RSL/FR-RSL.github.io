@@ -6,7 +6,7 @@ const championData = {
           name: "Lance de l'aube",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Championne.`,
+Soigne l'allié qui a le moins de PV à hauteur de 10% des PV MAX de cette Championne.`,
           damage: "4.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -14,7 +14,7 @@ Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Cham
         {
           img: "assets/sort2.webp",
           name: "Rayon fortifiant",
-          description: `Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -22,7 +22,7 @@ Soigne l'allié qui a le moins de PV à hauteur de 10 % des PV MAX de cette Cham
         {
           img: "assets/sort3.webp",
           name: "Chatoiement de vie",
-          description: `Ranime un allié avec 25 % de PV et 100 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime un allié avec 25% de PV et 100% de Compteur de Tour.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cet allié pendant 2 tours.`,
           cooldown: 6,

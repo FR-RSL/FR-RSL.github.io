@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Entaille Rouillée",
-          description: `Attaque 1 ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.SPD} de 15 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 30% de chances de placer un débuff de ${DEBUFFS.SPD} de 15% pendant 2 tours.`,
           damage: "1.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

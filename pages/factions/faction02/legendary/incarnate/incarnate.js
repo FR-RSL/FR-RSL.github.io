@@ -4,14 +4,14 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Porteuse de Silence",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 30% de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour.`,
           damage: "1.8*DEF",
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Épée Fluide",
-          description: `Attaque un ennemi. Possède 50 % de chances de réduire de 50 % le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion d'une valeur équivalent à la somme des pertes de la cible.`,
+          description: `Attaque un ennemi. Possède 50% de chances de réduire de 50% le Compteur de Tour de la cible. Remplit le Compteur de Tour de ce Champion d'une valeur équivalent à la somme des pertes de la cible.`,
           damage: "3.6*DEF",
           cooldown: 4,
           isPassive: false
@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Copieuse Hémorragie",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 1 tour.`,
+          description: `Attaque tous les ennemis. Possède 80% de chances de placer un débuff de ${DEBUFFS.HEALS} de 50% pendant 1 tour.`,
           cooldown: 5,
           isPassive: false
         },

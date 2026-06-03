@@ -4,14 +4,14 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Terrible Perforation",
-          description: `Attaque 4 fois un ennemi. Ignorera 50 % de la DÉF ennemie.`,
+          description: `Attaque 4 fois un ennemi. Ignorera 50% de la DÉF ennemie.`,
           damage: "0.8*ATQ",
           isPassive: false
         },
         {
           img: "assets/sort2.webp",
           name: "Malédiction d'Agonie",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Possède 75 % de chances de retirer 2 buffs pris au hasard de la cible. Accorde un Tour Supplémentaire.`,
+          description: `Attaque un ennemi. Possède 75% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. Possède 75% de chances de retirer 2 buffs pris au hasard de la cible. Accorde un Tour Supplémentaire.`,
           damage: "6.9*ATQ",
           cooldown: 3,
           isPassive: false

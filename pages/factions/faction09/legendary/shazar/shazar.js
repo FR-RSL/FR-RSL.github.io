@@ -4,7 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Damnation",
-			description: `Attaque 3 fois 1 ennemi. Les dégâts augmentent de 15 % pour chaque débuff dont est affligée la cible.`,
+			description: `Attaque 3 fois 1 ennemi. Les dégâts augmentent de 15% pour chaque débuff dont est affligée la cible.`,
 			damage: "1.3*ATQ",
 			levelInfo: [
 				"Dégâts +5%",
@@ -16,7 +16,7 @@ const championData = {
         {
 			img: "assets/sort2.webp",
 			name: "Fureur Éternelle",
-			description: `Place un buff d'${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours. Il est impossible de retirer ce buff. Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion pendant 2 tours. Octroie un Tour Supplémentaire.`,
+			description: `Place un buff d'${BUFFS.ATK} de 50% sur ce Champion pendant 2 tours. Il est impossible de retirer ce buff. Place un buff de ${BUFFS.BLOCK_DEBUFFS} sur ce Champion pendant 2 tours. Octroie un Tour Supplémentaire.`,
 			levelInfo: [
 				"Temps de recharge -1",
 			],
@@ -25,7 +25,7 @@ const championData = {
         {
 			img: "assets/sort3.webp",
 			name: "Destin Cruel",
-			description: `Attaque tous les ennemis. Possède 75 % de chances de placer deux débuffs de ${DEBUFFS.BOMB} qui détonent après 2 tours.`,
+			description: `Attaque tous les ennemis. Possède 75% de chances de placer deux débuffs de ${DEBUFFS.BOMB} qui détonent après 2 tours.`,
 			damage: "3.2*ATQ | 4.2*ATQ (Bombe)",
 			levelInfo: [
 				"Dégâts +10%",

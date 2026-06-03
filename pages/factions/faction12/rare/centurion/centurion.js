@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Nourrir de Souffrance",
-          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 15 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 15% des dégâts infligés.`,
           damage: "3.5*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Étrange Résistance",
-          description: `Soigne ce Champion à hauteur de 30 % de ses PV MAX, puis place un buff d'${BUFFS.DEF} de 30 % sur ce Champion pendant 2 tours.`,
+          description: `Soigne ce Champion à hauteur de 30% de ses PV MAX, puis place un buff d'${BUFFS.DEF} de 30% sur ce Champion pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false

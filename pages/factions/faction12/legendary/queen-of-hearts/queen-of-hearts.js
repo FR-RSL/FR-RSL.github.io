@@ -6,9 +6,9 @@ const championData = {
           name: "Éclat de Coeur",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+Place un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-Remplit également le Compteur de Tour de tous les alliés de 5 %.`,
+Remplit également le Compteur de Tour de tous les alliés de 5%.`,
           damage: "2.77*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -18,7 +18,7 @@ Remplit également le Compteur de Tour de tous les alliés de 5 %.`,
           name: "Qu'on leur coupe la tête !",
           description: `Retire tous les buffs dont disposent les ennemis. Place ensuite un débuff ${DEBUFFS.DEATHBRAND} sur la cible initiale pendant 2 tours. Place également un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff retiré par cette compétence.`,
+Remplit le Compteur de Tour de cette Championne de 5% pour chaque buff retiré par cette compétence.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -26,7 +26,7 @@ Remplit le Compteur de Tour de cette Championne de 5 % pour chaque buff retiré 
         {
           img: "assets/sort3.webp",
           name: "Ordre de reine",
-          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Fait équipe avec tous les alliés pour attaquer un seul ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Réduit de 2 tours le temps de recharge de la compétence Qu'on leur coupe la tête ! de cette Championne si la cible est tuée.`,
           cooldown: 6,

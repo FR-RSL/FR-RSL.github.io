@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame Crépitante",
-          description: `Attaque 2 fois un ennemi. Possède 55 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Possède 55% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Puissance des Ancêtres",
-          description: `Place un buff d'${BUFFS.ATK} de 50 %, un buff d'${BUFFS.CRATE} de 30 % et un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours. Accorde un Tour supplémentaire.`,
+          description: `Place un buff d'${BUFFS.ATK} de 50%, un buff d'${BUFFS.CRATE} de 30% et un buff d'${BUFFS.SPD} de 30% sur ce Champion pendant 2 tours. Accorde un Tour supplémentaire.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

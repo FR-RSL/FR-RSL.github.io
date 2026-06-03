@@ -6,7 +6,7 @@ const championData = {
           name: "Coupeur de chitine",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 75 % de chances de voler un buff aléatoire à la cible. Il est impossible de résister à cet effet et de le bloquer.`,
+Possède 75% de chances de voler un buff aléatoire à la cible. Il est impossible de résister à cet effet et de le bloquer.`,
           damage: "3.8*ATQ",
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +15%", "Chances de Buff/Debuff +15%"],
         },
@@ -25,7 +25,7 @@ Si la cible initiale survit, place une frappe supplémentaire sur tous les ennem
           name: "Festin insectoïde",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Les dégâts infligés par cette compétence augmentent de 10 % chaque fois qu'un ennemi reçoit un débuff. L'augmentation des dégâts se réinitialise chaque fois que cette compétence est utilisée.`,
+Les dégâts infligés par cette compétence augmentent de 10% chaque fois qu'un ennemi reçoit un débuff. L'augmentation des dégâts se réinitialise chaque fois que cette compétence est utilisée.`,
           damage: "3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -38,7 +38,7 @@ Les dégâts infligés par cette compétence augmentent de 10 % chaque fois qu'u
         {
           img: "assets/sort4.webp",
           name: "Conducteur de nuée [P]",
-          description: `Ignorera 12 % de la DÉF de chaque cible si elle ne dispose d'aucun buff actif.`,
+          description: `Ignorera 12% de la DÉF de chaque cible si elle ne dispose d'aucun buff actif.`,
           factions: [
             `Les allies recoivent 15% de degats en moins de la part des ennemis qui ont des buffs.${RETURN}
 Les allies recoivent 30% de degats en moins de la part des ennemis qui n'ont aucun buff.`,

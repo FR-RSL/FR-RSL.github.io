@@ -7,7 +7,7 @@ const championForms = {
           name: "Crocs hypnotiques",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe réduit le Compteur de Tour de la cible de 5 %. Chaque frappe réduit le Compteur de Tour de la cible de 5 % supplémentaires si la cible est affligée de débuffs placés par cette Championne.`,
+Chaque frappe réduit le Compteur de Tour de la cible de 5%. Chaque frappe réduit le Compteur de Tour de la cible de 5% supplémentaires si la cible est affligée de débuffs placés par cette Championne.`,
           damage: "3.3*ATQ",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
@@ -17,7 +17,7 @@ Chaque frappe réduit le Compteur de Tour de la cible de 5 %. Chaque frappe réd
           name: "Mâchoire d'araignée-lune",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Réduit les Compteurs de Tour de tous les ennemis de 50 %. Réduit au lieu de cela les Compteurs de Tour de tous les ennemis de 100 % si cette compétence est utilisée lors d'un Tour supplémentaire ou d'un Tour instantané.${RETURN}${RETURN}
+Réduit les Compteurs de Tour de tous les ennemis de 50%. Réduit au lieu de cela les Compteurs de Tour de tous les ennemis de 100% si cette compétence est utilisée lors d'un Tour supplémentaire ou d'un Tour instantané.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Place au lieu de cela un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours contre les ennemis dont le Compteur de Tour est totalement réduit par cette compétence et contre les Boss.`,
           damage: "5.3*ATQ",
@@ -30,7 +30,7 @@ Place un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Place au lieu de cela un d
           name: "Sombre transe",
           description: `Retire tous les buffs dont disposent les ennemis.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.LOCK_ACTIVE} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+Place un débuff ${DEBUFFS.DEF} de 60% et un débuff ${DEBUFFS.LOCK_ACTIVE} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si 8 débuffs ou plus ont été placés par cette compétence.`,
           cooldown: 5,
@@ -74,7 +74,7 @@ Accorde un Tour supplémentaire si 8 débuffs ou plus ont été placés par cett
           name: "Ravage astral",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 5 % pour chaque frappe critique. Remplit le Compteur de Tour de cette Championne de 5 % supplémentaires pour chaque frappe critique si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
+Remplit le Compteur de Tour de cette Championne de 5% pour chaque frappe critique. Remplit le Compteur de Tour de cette Championne de 5% supplémentaires pour chaque frappe critique si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, accorde au lieu de cela un Tour supplémentaire.`,
           damage: "2.2*ATQ",
@@ -88,7 +88,7 @@ Si cette attaque tue un ennemi, accorde au lieu de cela un Tour supplémentaire.
 
 Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE}. De plus, ignore les buffs ${BUFFS.UNKILLABLE} si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 15 % pour chaque frappe critique.`,
+Remplit le Compteur de Tour de cette Championne de 15% pour chaque frappe critique.`,
           damage: "1.7*ATQ+0.05*TRG_HP",
           cooldown: 3,
           levelInfo: ["Dégâts +20%"],
@@ -99,9 +99,9 @@ Remplit le Compteur de Tour de cette Championne de 15 % pour chaque frappe criti
           name: "Exécution arachnéenne",
           description: `Attaque 4 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe ignorera 15 % de la DÉF de la cible. Chaque frappe ignorera 30 % de DÉF si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
+Chaque frappe ignorera 15% de la DÉF de la cible. Chaque frappe ignorera 30% de DÉF si la cible se trouve sous débuff ${DEBUFFS.LOCK_ACTIVE} ou ${DEBUFFS.DEF}.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 20 % pour chaque frappe critique.${RETURN}${RETURN}
+Remplit le Compteur de Tour de cette Championne de 20% pour chaque frappe critique.${RETURN}${RETURN}
 
 Ensuite, place un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.`,
           damage: "1.9*ATQ",

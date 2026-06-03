@@ -6,7 +6,7 @@ const championData = {
           name: "Fleur maudite",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 10 %. Remplit le Compteur de Tour de cette Championne de 10 % supplémentaires si un ennemi se trouve sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
+Remplit le Compteur de Tour de cette Championne de 10%. Remplit le Compteur de Tour de cette Championne de 10% supplémentaires si un ennemi se trouve sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
 Contre-attaquera en utilisant cette compétence lorsqu'elle est frappée par des ennemis sous débuff ${DEBUFFS.HEX}.`,
           damage: "3.8*ATQ",
@@ -22,9 +22,9 @@ Contre-attaquera en utilisant cette compétence lorsqu'elle est frappée par des
           name: "Dépit capricieux",
           description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-Les dégâts augmentent de 10 % pour chaque ennemi sous débuff ${DEBUFFS.HEX}. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}. Ignorera également les buffs ${BUFFS.BLOCK_DAMAGE} sur les ennemis sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
+Les dégâts augmentent de 10% pour chaque ennemi sous débuff ${DEBUFFS.HEX}. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.STRENGTHEN}. Ignorera également les buffs ${BUFFS.BLOCK_DAMAGE} sur les ennemis sous débuff ${DEBUFFS.HEX}.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 30 %. Remplit le Compteur de Tour de cette Championne de 20 % pour chaque ennemi tué par cette compétence.`,
+Remplit le Compteur de Tour de cette Championne de 30%. Remplit le Compteur de Tour de cette Championne de 20% pour chaque ennemi tué par cette compétence.`,
           damage: "2*ATQ",
           cooldown: 4,
           levelInfo: [
@@ -36,11 +36,11 @@ Remplit le Compteur de Tour de cette Championne de 30 %. Remplit le Compteur de 
         {
           img: "assets/sort3.webp",
           name: "Nuage attrape-esprit",
-          description: `Place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.DEATHBRAND} sur la cible ennemie pendant 2 tours. A également 75 % de chances de placer un débuff ${DEBUFFS.HEX} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+A 75% de chances de placer un débuff ${DEBUFFS.DEATHBRAND} sur la cible ennemie pendant 2 tours. A également 75% de chances de placer un débuff ${DEBUFFS.HEX} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Ensuite, remplit le Compteur de Tour de cette Championne de 50 %. Remplit également le Compteur de Tour de cette Championne de 10 % pour chaque débuff placé par cette compétence. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
+Ensuite, remplit le Compteur de Tour de cette Championne de 50%. Remplit également le Compteur de Tour de cette Championne de 10% pour chaque débuff placé par cette compétence. Place également un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 1 tour.`,
           cooldown: 5,
           levelInfo: [
             "Chance de Buff/débuff +10%",
@@ -52,11 +52,11 @@ Ensuite, remplit le Compteur de Tour de cette Championne de 50 %. Remplit égale
         {
           img: "assets/passif1.webp",
           name: "Frénésie de Lilas-croc [P]",
-          description: `Si cette Championne tue un ou plusieurs ennemis lors d'une bataille, ignorera 10 % de la DÉF de n'importe quelle cible.${RETURN}${RETURN}
+          description: `Si cette Championne tue un ou plusieurs ennemis lors d'une bataille, ignorera 10% de la DÉF de n'importe quelle cible.${RETURN}${RETURN}
 
-Si cette Championne tue 2 ennemis ou plus lors d'une bataille, cette Championne recevra un buff ${BUFFS.SHIELD} équivalent à 40 % de ses PV MAX pendant 2 tours au début de son propre tour.${RETURN}${RETURN}
+Si cette Championne tue 2 ennemis ou plus lors d'une bataille, cette Championne recevra un buff ${BUFFS.SHIELD} équivalent à 40% de ses PV MAX pendant 2 tours au début de son propre tour.${RETURN}${RETURN}
 
-Si cette Championne tue 3 ennemis ou plus lors d'une bataille, chaque attaque réduira le Compteur de Tour d'une cible de 10 %. Il est impossible de résister à cet effet.`,
+Si cette Championne tue 3 ennemis ou plus lors d'une bataille, chaque attaque réduira le Compteur de Tour d'une cible de 10%. Il est impossible de résister à cet effet.`,
           isPassive: true,
         },
       ],

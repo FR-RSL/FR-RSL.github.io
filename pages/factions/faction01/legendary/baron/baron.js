@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Écartèlement",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.DEF}  de 60 % pendant 2 tours. Ce débuff est garanti.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.DEF}  de 60% pendant 2 tours. Ce débuff est garanti.`,
           damage: "5.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/sort4.webp",
           name: "Perceciel",
-          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE} ainsi que 50 % de la DÉF de la cible.`,
+          description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.SHIELD} et ${BUFFS.BLOCK_DAMAGE} ainsi que 50% de la DÉF de la cible.`,
           damage: "4.3*ATQ",
           cooldown: 4,
           isPassive: false

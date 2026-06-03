@@ -6,7 +6,7 @@ const championData = {
           name: "Lames Maudites",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe offre 35 % de chances d'augmenter d'1 tour la durée de tous les débuffs.`,
+Chaque frappe offre 35% de chances d'augmenter d'1 tour la durée de tous les débuffs.`,
           damage: "1.3*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
         },
@@ -15,7 +15,7 @@ Chaque frappe offre 35 % de chances d'augmenter d'1 tour la durée de tous les d
           name: "Maître de la Détresse",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe possède 50 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.BLOCK_BUFFS}, un débuff de ${DEBUFFS.ATK} de 50 % et un débuff de ${DEBUFFS.HEALS} de 100 %.`,
+Chaque frappe possède 50% de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.BLOCK_BUFFS}, un débuff de ${DEBUFFS.ATK} de 50% et un débuff de ${DEBUFFS.HEALS} de 100%.`,
           damage: "2.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],

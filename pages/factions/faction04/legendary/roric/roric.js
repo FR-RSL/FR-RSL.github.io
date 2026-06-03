@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Marteau Tue-Dragon",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Chaque frappe remplira le Compteur de Tour de ce Champion de 15 % si la cible ne se trouve pas sous débuff ${DEBUFFS.STUN} après la frappe.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 40% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Chaque frappe remplira le Compteur de Tour de ce Champion de 15% si la cible ne se trouve pas sous débuff ${DEBUFFS.STUN} après la frappe.`,
           damage: "1.75*ATQ",
           levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Rage de Dragon",
-          description: `Attaque un ennemi. Possède 80 % de chances de réduire le Compteur de Tour de la cible de 75 %. Si cette compétence vide totalement le Compteur de Tour de la cible, possède également 80 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les autres ennemis pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 80% de chances de réduire le Compteur de Tour de la cible de 75%. Si cette compétence vide totalement le Compteur de Tour de la cible, possède également 80% de chances de placer un débuff ${DEBUFFS.STUN} sur tous les autres ennemis pendant 1 tour.`,
           damage: "3.5*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Briseur d'Écailles",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera 50% de la DÉF de la cible.${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -38,7 +38,7 @@ Cette Compétence ne sera pas bloquée par les débuffs ${DEBUFFS.LOCK_ACTIVE}.`
           name: "Fin du Titan [P]",
           description: `Immunisé contre les débuffs ${DEBUFFS.STUN}.${RETURN}${RETURN}
 
-Inflige 15 % de dégâts en plus sur les Boss et reçoit 15 % de dégâts en moins de leur part.`,
+Inflige 15% de dégâts en plus sur les Boss et reçoit 15% de dégâts en moins de leur part.`,
           isPassive: true
         }
       ],

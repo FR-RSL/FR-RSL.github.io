@@ -6,7 +6,7 @@ const championData = {
           name: "Hiver réducteur",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 25 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
+A 25% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
 Active instantanément cette compétence dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
           damage: "2.7*ATQ",
@@ -18,9 +18,9 @@ Active instantanément cette compétence dès que ce Champion passe un tour à c
           name: "Blizzard de coups",
           description: `Attaque tous les ennemis. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
+A 75% de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Il est impossible de résister à ce débuff s'il y a au moins 1 ennemi sous débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
-Ranime un allié aléatoire avec 50 % de PV et 50 % de Compteur de Tour si cette compétence n'a pas tué d'ennemi. Ranime tous les alliés avec 50 % de PV et 50 % de Compteur de Tour si cette compétence tue au moins un ennemi.`,
+Ranime un allié aléatoire avec 50% de PV et 50% de Compteur de Tour si cette compétence n'a pas tué d'ennemi. Ranime tous les alliés avec 50% de PV et 50% de Compteur de Tour si cette compétence tue au moins un ennemi.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -40,9 +40,9 @@ Les dégâts infligés par cette compétence augmentent de la quantité de Compt
         {
           img: "assets/passif1.webp",
           name: "Démon solitaire [P]",
-          description: `Remplit le Compteur de Tour de ce Champion de 50 % dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
+          description: `Remplit le Compteur de Tour de ce Champion de 50% dès que ce Champion passe un tour à cause d'un débuff ${DEBUFFS.STUN}, ${DEBUFFS.GEL}, ${DEBUFFS.SLEEP}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
-Dès que ce Champion passe un tour à cause d'un de ces débuffs, sa prochaine compétence active ignorera 50 % de la DÉF de la cible.`,
+Dès que ce Champion passe un tour à cause d'un de ces débuffs, sa prochaine compétence active ignorera 50% de la DÉF de la cible.`,
           isPassive: true
         }
       ],

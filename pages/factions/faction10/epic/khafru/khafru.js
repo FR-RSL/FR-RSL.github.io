@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Glaive en os",
-          description: `Attaque un ennemi. Possède 50 % de chances de transférer 1 débuff aléatoire de ce Champion sur la cible.`,
+          description: `Attaque un ennemi. Possède 50% de chances de transférer 1 débuff aléatoire de ce Champion sur la cible.`,
           damage: "3.9*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ordre de Khafru",
-          description: `Attaque tous les ennemis. Avant d'attaquer, retire 1 débuff aléatoire sur tous les alliés. Les dégâts augmentent de 5 % pour chaque débuff retiré.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, retire 1 débuff aléatoire sur tous les alliés. Les dégâts augmentent de 5% pour chaque débuff retiré.${RETURN}${RETURN}
 
-Soigne également chaque allié de 10 % des PV MAX de ce Champion si un débuff leur a été retiré.`,
+Soigne également chaque allié de 10% des PV MAX de ce Champion si un débuff leur a été retiré.`,
           damage: "4.1*DEF",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -31,7 +31,7 @@ Soigne également chaque allié de 10 % des PV MAX de ce Champion si un débuff 
         {
           img: "assets/passif1.webp",
           name: "Gardien de Nekhret [P]",
-          description: `Réduit les dégâts reçus par tous les alliés de 10 %. Ce Champion recevra ces dégâts à la place.`,
+          description: `Réduit les dégâts reçus par tous les alliés de 10%. Ce Champion recevra ces dégâts à la place.`,
           isPassive: true
         }
       ],

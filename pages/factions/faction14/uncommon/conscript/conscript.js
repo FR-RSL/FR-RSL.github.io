@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fusillade",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 15% pendant 2 tours.`,
           damage: "6.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],

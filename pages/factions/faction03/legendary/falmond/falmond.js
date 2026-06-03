@@ -6,7 +6,7 @@ const championData = {
           name: "Lamedeuil",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne ce Champion à hauteur de 50 % des dégâts infligés. S'il y a un excédent de soin, place un buff ${BUFFS.SHIELD} équivalent au soin excédentaire sur ce Champion pendant 2 tours.${RETURN}${RETURN}
+Soigne ce Champion à hauteur de 50% des dégâts infligés. S'il y a un excédent de soin, place un buff ${BUFFS.SHIELD} équivalent au soin excédentaire sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Attaquera au lieu de ça avec la compétence Courage ardent si la cible est issue de l'Alliance des Corrompus.`,
           damage: "3.5*ATQ",
@@ -18,7 +18,7 @@ Attaquera au lieu de ça avec la compétence Courage ardent si la cible est issu
           name: "Au nom de Lumaya",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff et débuff sur la cible. Ignorera 25 % de la DÉF des cibles qui ne disposent pas de buffs.`,
+Les dégâts infligés par cette compétence augmentent de 5% pour chaque buff et débuff sur la cible. Ignorera 25% de la DÉF des cibles qui ne disposent pas de buffs.`,
           damage: "3.7*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
@@ -27,7 +27,7 @@ Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff 
         {
           img: "assets/sort3.webp",
           name: "Courage ardent",
-          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible. Les dégâts augmentent de 20 % pour chaque buff retiré.`,
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible. Les dégâts augmentent de 20% pour chaque buff retiré.`,
           damage: "6*ATQ+(0.2*6*ATQ*HeroCounterWithId(2))Multiplier: Remaining Damage Amount",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -36,7 +36,7 @@ Les dégâts infligés par cette compétence augmentent de 5 % pour chaque buff 
         {
           img: "assets/passif1.webp",
           name: "Jusqu'au dernier soupir [P]",
-          description: `Réduit les dégâts des frappes subies par ce Champion de 10 % pour chaque tour joué par un allié ou un ennemi avant le prochain tour de ce Champion. Se réinitialise à la fin du prochain tour de ce Champion.`,
+          description: `Réduit les dégâts des frappes subies par ce Champion de 10% pour chaque tour joué par un allié ou un ennemi avant le prochain tour de ce Champion. Se réinitialise à la fin du prochain tour de ce Champion.`,
           isPassive: true
         }
       ],

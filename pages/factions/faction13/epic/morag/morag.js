@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Affront",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.STRENGTHEN} de 25% sur tous les alliés pendant 2 tours.`,
           damage: "3.9*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

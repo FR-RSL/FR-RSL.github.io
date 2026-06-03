@@ -7,9 +7,9 @@ const championForms = {
           name: "Lance sacrée",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Soigne tous les alliés. La valeur du soin est proportionnelle à leur RÉS et 5 % de leurs PV MAX.${RETURN}${RETURN}
+Soigne tous les alliés. La valeur du soin est proportionnelle à leur RÉS et 5% de leurs PV MAX.${RETURN}${RETURN}
 
-A 35 % de chances d'appliquer un effet ${PROP_BUFF}, prenant un buff aléatoire sur chaque allié pour le placer sur tous les alliés.`,
+A 35% de chances d'appliquer un effet ${PROP_BUFF}, prenant un buff aléatoire sur chaque allié pour le placer sur tous les alliés.`,
           damage: "ATQ*(6+RES/1000)",
           levelInfo: ["Soins +20%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -17,9 +17,9 @@ A 35 % de chances d'appliquer un effet ${PROP_BUFF}, prenant un buff aléatoire 
         {
           img: "assets/sort2.webp",
           name: "Symbole d'espoir",
-          description: `Retire tous les débuffs sur tous les alliés. Place ensuite un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
+          description: `Retire tous les débuffs sur tous les alliés. Place ensuite un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.RES} de 50% sur tous les alliés pendant 3 tours.${RETURN}${RETURN}
 
-Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
+Remplit également les Compteurs de Tour de tous les alliés de 15%.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -27,7 +27,7 @@ Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
         {
           img: "assets/sort3.webp",
           name: "Foi retrouvée",
-          description: `Ranime un seul allié avec 75 % de PV, puis place un buff ${BUFFS.UNKILLABLE} sur cet allié pendant 2 tours.${RETURN}${RETURN}
+          description: `Ranime un seul allié avec 75% de PV, puis place un buff ${BUFFS.UNKILLABLE} sur cet allié pendant 2 tours.${RETURN}${RETURN}
 
 Active ensuite un effet ${INSTANT} sur l'allié ranimé.`,
           cooldown: 4,
@@ -46,7 +46,7 @@ Active ensuite un effet ${INSTANT} sur l'allié ranimé.`,
           name: "Lames radieuses",
           description: `Attaque tous les ennemis. Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone.${RETURN}${RETURN}
 
-Dès que cette Championne contre-attaque, augmente l'effet Ignorer la DÉF de cette compétence de 5 % (s'accumule jusqu'à 25 %).${RETURN}${RETURN}
+Dès que cette Championne contre-attaque, augmente l'effet Ignorer la DÉF de cette compétence de 5% (s'accumule jusqu'à 25%).${RETURN}${RETURN}
 
 ${PASSIVE}
 
@@ -76,9 +76,9 @@ Inflige le double de dégâts lors d'une contre-attaque.`,
         {
           img: "assets/sort4.webp",
           name: "Percé par la lumière",
-          description: `Attaque tous les ennemis. Avant d'attaquer, vole 25 % du Compteur de Tour de chaque ennemi. Il est impossible de résister à cet effet.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, vole 25% du Compteur de Tour de chaque ennemi. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
-Les dégâts infligés par cette compétence augmentent de 35 % contre les ennemis dont la RÉS est inférieure à celle de cette Championne.${RETURN}${RETURN}
+Les dégâts infligés par cette compétence augmentent de 35% contre les ennemis dont la RÉS est inférieure à celle de cette Championne.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 2 tours.`,
           damage: "ATQ*(2.9+RES/1000)",
@@ -90,7 +90,7 @@ Place ensuite un buff ${BUFFS.BLOCK_DAMAGE} sur cette Championne pendant 2 tours
           name: "Balayage séraphique",
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
-Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. Ignorera également 35 % de la DÉF contre les cibles dont la RÉS est inférieure à celle de cette Championne.${RETURN}${RETURN}
+Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.BLOCK_DAMAGE} et ${BUFFS.UNKILLABLE}. Ignorera également 35% de la DÉF contre les cibles dont la RÉS est inférieure à celle de cette Championne.${RETURN}${RETURN}
  
 
 Si la cible est tuée et que sa RÉS est inférieure à celle de cette Championne, lui inflige un débuff ${DEBUFFS.BLOCK_REA}. Si la cible n'est pas tuée, accorde au lieu de ça un Tour supplémentaire.`,

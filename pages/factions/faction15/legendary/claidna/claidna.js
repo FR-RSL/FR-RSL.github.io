@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Touche de sommeil",
-          description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 80% de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de cette Championne de 15 % si le débuff ${DEBUFFS.SLEEP} est placé.`,
+Remplit le Compteur de Tour de cette Championne de 15% si le débuff ${DEBUFFS.SLEEP} est placé.`,
           damage: "0.28*PV",
           levelInfo: [
             "Dégâts +5%",
@@ -18,9 +18,9 @@ Remplit le Compteur de Tour de cette Championne de 15 % si le débuff ${DEBUFFS.
         {
           img: "assets/sort2.webp",
           name: "Perdue dans les bois",
-          description: `Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+          description: `Possède 75% de chances de placer un débuff ${DEBUFFS.SPD} de 30% et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Rétablit 100 % des PV MAX détruits de chaque allié, puis soigne tous les alliés de 20 % des PV MAX de cette Championne.`,
+Rétablit 100% des PV MAX détruits de chaque allié, puis soigne tous les alliés de 20% des PV MAX de cette Championne.`,
           cooldown: 4,
           levelInfo: [
             "Chance de Buff/débuff +10%",
@@ -41,7 +41,7 @@ Rétablit 100 % des PV MAX détruits de chaque allié, puis soigne tous les alli
         {
           img: "assets/passif1.webp",
           name: "Monarque fée [P]",
-          description: `Possède 30 % de chances de totalement bloquer les dégâts en approche de la première frappe d'une attaque sur un allié aléatoire. Ne peut se produire qu'une fois par tour.`,
+          description: `Possède 30% de chances de totalement bloquer les dégâts en approche de la première frappe d'une attaque sur un allié aléatoire. Ne peut se produire qu'une fois par tour.`,
           cooldown: 1,
           levelInfo: [
             "Chance de Buff/débuff +15%",

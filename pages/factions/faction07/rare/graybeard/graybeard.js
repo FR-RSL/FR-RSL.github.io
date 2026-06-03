@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Exposer la Faiblesse",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cage de Glace",
-          description: `Attaque tous les ennemis. Possède 25 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
+          description: `Attaque tous les ennemis. Possède 25% de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "4.1*DEF",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Temps de recharge -1", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Je t'attends !",
-          description: `Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. Possède 80 % de chances de placer un buff ${BUFFS.COUNTER} de 2 tours sur ce Champion.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.SHIELD} sur ce Champion pendant 2 tours. Possède 80% de chances de placer un buff ${BUFFS.COUNTER} de 2 tours sur ce Champion.${RETURN}${RETURN}
 
 La valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF. Il est impossible de retirer ce buff.`,
           cooldown: 6,

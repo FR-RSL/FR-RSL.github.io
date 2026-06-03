@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Poignard",
-          description: `Attaque un ennemi. Offre 30 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Offre 30% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 1 tour.`,
           damage: "5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Flèche de Feu",
-          description: `Attaque un ennemi. Détruit les PV MAX des ennemis de 15 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Détruit les PV MAX des ennemis de 15% des dégâts infligés.`,
           damage: "7.7*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Terrifiant Bloc de Fer",
-          description: `Attaque un ennemi. Avant d'attaquer, possède 75 % de chances de placer sur la cible un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Avant d'attaquer, possède 75% de chances de placer sur la cible un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "6.2*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

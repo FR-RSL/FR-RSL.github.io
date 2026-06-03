@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Cri Ravageur",
-          description: `Attaque 2 fois un ennemi. Chaque frappe place un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe place un débuff de ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
           damage: "1.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Infusion Spéciale",
-          description: `Attaque tous les ennemis. Place deux débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours. Les dégâts de la Bombe augmentent de 100 % contre les Boss.`,
+          description: `Attaque tous les ennemis. Place deux débuffs ${DEBUFFS.BOMB} qui détoneront après 2 tours. Les dégâts de la Bombe augmentent de 100% contre les Boss.`,
           damage: "4.25*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

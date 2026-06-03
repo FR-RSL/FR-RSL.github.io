@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lancé Tournoyant",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25 % de chances d'ignorer de 50 % la DÉF.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 25% de chances d'ignorer de 50% la DÉF.`,
           damage: "ATQ*1.7",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Éclair de Feu",
-          description: `Attaque un ennemi. Retire 1 buff aléatoire sur une cible. Remplit de 30 % le Compteur de Tours de ce Champion.`,
+          description: `Attaque un ennemi. Retire 1 buff aléatoire sur une cible. Remplit de 30% le Compteur de Tours de ce Champion.`,
           damage: "ATQ*5",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],

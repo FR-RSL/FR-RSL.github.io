@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Claque",
-          description: `Attaque un ennemi. Remplit de 20 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
+          description: `Attaque un ennemi. Remplit de 20% le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
           damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Cannibalisme [P]",
-          description: `Soigne tous les alliés de 10 % des PV MAX de ce Champion lorsqu'il porte un coup critique.`,
+          description: `Soigne tous les alliés de 10% des PV MAX de ce Champion lorsqu'il porte un coup critique.`,
           isPassive: true
         }
       ],

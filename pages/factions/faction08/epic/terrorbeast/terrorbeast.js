@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Morsure Douloureuse",
-          description: `Attaque un ennemi. Possède 20 % de chances d'augmenter d'1 tour le temps de recharge d'une des compétences de la cible prise au hasard.`,
+          description: `Attaque un ennemi. Possède 20% de chances d'augmenter d'1 tour le temps de recharge d'une des compétences de la cible prise au hasard.`,
           damage: "4.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Cri Perçant",
-          description: `Attaque 2 fois au hasard. Place, pendant 3 tours, un buff de ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés.`,
+          description: `Attaque 2 fois au hasard. Place, pendant 3 tours, un buff de ${BUFFS.REFLECT_DAM} de 30% sur tous les alliés.`,
           damage: "0.23*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

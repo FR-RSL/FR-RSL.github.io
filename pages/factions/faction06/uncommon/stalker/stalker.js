@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Griffes Sanglantes",
-          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10 % des dégâts infligés.`,
+          description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10% des dégâts infligés.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Dépecer",
-          description: `Attaque 2 fois un ennemi. Offre 15 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Offre 15% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "3.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Vollée",
-          description: `Attaque 3 fois un ennemi. Possède 10 % de chances de réduire de 20 % le Compteur de Tours.`,
+          description: `Attaque 3 fois un ennemi. Possède 10% de chances de réduire de 20% le Compteur de Tours.`,
           damage: "ATQ*1",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false

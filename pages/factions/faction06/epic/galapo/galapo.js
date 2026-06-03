@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Suivre le cours du temps",
-          description: `Attaque tous les ennemis. Soigne ce Champion de 5 % de ses PV MAX.`,
+          description: `Attaque tous les ennemis. Soigne ce Champion de 5% de ses PV MAX.`,
           damage: "3.2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Sage reclus",
-          description: `Soigne tous les alliés de 15 % des PV MAX de ce Champion et remplit de 15 % le Compteur de Tour de tous les alliés.${RETURN}${RETURN}
+          description: `Soigne tous les alliés de 15% des PV MAX de ce Champion et remplit de 15% le Compteur de Tour de tous les alliés.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tours.`,
+Place également un buff ${BUFFS.RES} de 25% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -22,9 +22,9 @@ Place également un buff ${BUFFS.RES} de 25 % sur tous les alliés pendant 2 tou
         {
           img: "assets/sort3.webp",
           name: "Tu as beaucoup à apprendre",
-          description: `Ranime un allié avec 75 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime un allié avec 75% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur cet allié pendant 2 tours.`,
+Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.REFLECT_DAM} de 30% sur cet allié pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -32,7 +32,7 @@ Place un buff ${BUFFS.UNKILLABLE} et un buff ${BUFFS.REFLECT_DAM} de 30 % sur ce
         {
           img: "assets/passif1.webp",
           name: "Survivant aux empires [P]",
-          description: `Soigne ce Champion de 25 % de ses PV MAX chaque fois qu'un allié meurt. Soigne tous les alliés de 50 % des PV MAX de ce Champion lorsque ce Champion meurt.`,
+          description: `Soigne ce Champion de 25% de ses PV MAX chaque fois qu'un allié meurt. Soigne tous les alliés de 50% des PV MAX de ce Champion lorsque ce Champion meurt.`,
           isPassive: true
         }
       ],

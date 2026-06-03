@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Broyer",
-          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 1 tour.`,
+          description: `Attaque 1 ennemi. Possède 15% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 1 tour.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Inspiration",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

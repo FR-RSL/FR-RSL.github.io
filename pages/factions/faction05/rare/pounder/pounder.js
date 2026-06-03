@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Cassos",
-          description: `Attaque 1 ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 25% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "3.8*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Propagation de Glace",
-          description: `Attaque 1 ennemi. Possède 75 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, possède 25 % de chances de le placer sur un autre ennemi.`,
+          description: `Attaque 1 ennemi. Possède 75% de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, possède 25% de chances de le placer sur un autre ennemi.`,
           damage: "6*DEF",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

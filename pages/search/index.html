@@ -376,6 +376,7 @@
     </footer>
 
     <script src="../../assets/js/champions-index.js"></script>
+    <script src="../../assets/js/champion-sort-data.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script>
     (function () {
@@ -448,6 +449,14 @@
                 const matchRarity  = currentRarity  === 'all' || c.rarity  === currentRarity;
                 const matchFaction = currentFaction === 'all' || c.faction === currentFaction;
                 return matchQuery && matchRarity && matchFaction;
+            }).sort((a, b) => {
+                if (a.faction !== b.faction) return a.faction.localeCompare(b.faction);
+                const RARITY_ORDER = { mythical: 0, legendary: 1, epic: 2, rare: 3, uncommon: 4, common: 5 };
+                if (a.rarity !== b.rarity) return (RARITY_ORDER[a.rarity] ?? 99) - (RARITY_ORDER[b.rarity] ?? 99);
+                const sa = (typeof CHAMPION_SORT !== 'undefined' && CHAMPION_SORT[a.folder]) || { a: 99, i: 99999 };
+                const sb = (typeof CHAMPION_SORT !== 'undefined' && CHAMPION_SORT[b.folder]) || { a: 99, i: 99999 };
+                if (sa.a !== sb.a) return sa.a - sb.a;
+                return sa.i - sb.i;
             });
 
             if (currentQuery) {

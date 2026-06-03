@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fer à Marquer",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 50 % de chances de placer, pendant 1 tour, un débuff d'${DEBUFFS.WEAKEN} de 15 %.`,
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 50% de chances de placer, pendant 1 tour, un débuff d'${DEBUFFS.WEAKEN} de 15%.`,
           damage: "2.1*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

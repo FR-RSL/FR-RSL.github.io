@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "As Tactique",
-          description: `Attaque 1 ennemi. Possède 40 % de chances de voler 2 buffs aléatoires sur la cible.`,
+          description: `Attaque 1 ennemi. Possède 40% de chances de voler 2 buffs aléatoires sur la cible.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frappe Fixante",
-          description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 50% de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours.`,
           damage: "4.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

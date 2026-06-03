@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Dénigrement",
-          description: `Attaque 2 fois un ennemi. Réduit de 10 % le Compteur de Tours lors de chaque frappe si la cible possède des buffs.`,
+          description: `Attaque 2 fois un ennemi. Réduit de 10% le Compteur de Tours lors de chaque frappe si la cible possède des buffs.`,
           damage: "1.7*ATQ+0.6*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Jalousie [P]",
-          description: `Le Compteur de Tours de ce Champion sera augmenté de 10 % à chaque fois qu'un Champion ennemi place un buff. Les Champions ennemis verront leurs Compteurs de Tours réduits de 10 % pour chaque buff qu'ils reçoivent.`,
+          description: `Le Compteur de Tours de ce Champion sera augmenté de 10% à chaque fois qu'un Champion ennemi place un buff. Les Champions ennemis verront leurs Compteurs de Tours réduits de 10% pour chaque buff qu'ils reçoivent.`,
           isPassive: true
         }
       ],

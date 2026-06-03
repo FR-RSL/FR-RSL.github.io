@@ -6,7 +6,7 @@ const championData = {
           name: "Éclair de Fée",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Active instantanément un buff ${BUFFS.HEALS} aléatoire sur tous les alliés ayant moins de 85 % de PV.`,
+Active instantanément un buff ${BUFFS.HEALS} aléatoire sur tous les alliés ayant moins de 85% de PV.`,
           damage: "3.5*ATQ",
           levelInfo: [
             "Dégâts +5%",
@@ -16,9 +16,9 @@ Active instantanément un buff ${BUFFS.HEALS} aléatoire sur tous les alliés ay
         {
           img: "assets/sort2.webp",
           name: "Soin du Bois de Brume",
-          description: `Retire tous les débuffs sur un allié ciblé, puis soigne cet allié de 50 % des PV MAX de ce Champion. Ce soin ne peut pas passer en critique.${RETURN}${RETURN}
+          description: `Retire tous les débuffs sur un allié ciblé, puis soigne cet allié de 50% des PV MAX de ce Champion. Ce soin ne peut pas passer en critique.${RETURN}${RETURN}
 
-Si la cible alliée n'est pas totalement soignée, lui accorde un buff ${BUFFS.BLOCK_DAMAGE} pendant 2 tours. Si l'allié est totalement soigné, remplit son Compteur de Tour de 50 % et soigne tous les alliés à hauteur de 50 % des soins en surplus.`,
+Si la cible alliée n'est pas totalement soignée, lui accorde un buff ${BUFFS.BLOCK_DAMAGE} pendant 2 tours. Si l'allié est totalement soigné, remplit son Compteur de Tour de 50% et soigne tous les alliés à hauteur de 50% des soins en surplus.`,
           cooldown: 4,
           levelInfo: [
             "Soins +10%",
@@ -29,7 +29,7 @@ Si la cible alliée n'est pas totalement soignée, lui accorde un buff ${BUFFS.B
         {
           img: "assets/sort3.webp",
           name: "Force rythmique",
-          description: `Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.STRENGTHEN} de 25% et un buff ${BUFFS.HEALS} de 15% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Réduit également d'1 tour le temps de recharge de toutes les compétences des alliés, sauf celles de ce Champion.`,
           cooldown: 5,

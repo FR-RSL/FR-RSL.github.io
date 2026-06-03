@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup prévoyant",
-          description: `Attaque un ennemi. Possède 40 % de chances d'augmenter d'1 tour la durée de 2 buffs aléatoires sur chaque allié individuel.`,
+          description: `Attaque un ennemi. Possède 40% de chances d'augmenter d'1 tour la durée de 2 buffs aléatoires sur chaque allié individuel.`,
           damage: "0.2*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coup fructueux",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.DEF} de 60 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30 % des PV MAX de ce Champion.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.DEF} de 60% et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. Le buff ${BUFFS.SHIELD} est équivalent à 30% des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Si la cible est un Boss, ces buffs sont protégés.`,
           damage: "0.22*PV",

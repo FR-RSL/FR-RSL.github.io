@@ -6,7 +6,7 @@ const championData = {
           name: "Sanction Éclair",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Offre 35 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+Offre 35% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -14,7 +14,7 @@ Offre 35 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 t
         {
           img: "assets/sort2.webp",
           name: "Plein de Grâces",
-          description: `Soigne un allié à hauteur de 30 % des PV MAX de ce Champion.${RETURN}${RETURN}
+          description: `Soigne un allié à hauteur de 30% des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à n'importe quel surplus de soins si la cible est totalement soignée par cette Compétence.`,
           cooldown: 4,
@@ -24,8 +24,8 @@ Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à n'importe quel
         {
           img: "assets/sort3.webp",
           name: "Déborde de Vie",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 7,5 % sur tous les alliés.${RETURN}
-Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à 10 % des PV MAX de la cible sur tous les alliés si les PV d'un allié sont pleins.`,
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 7,5% sur tous les alliés.${RETURN}
+Place, pendant 2 tours, un buff de ${BUFFS.SHIELD} équivalent à 10% des PV MAX de la cible sur tous les alliés si les PV d'un allié sont pleins.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

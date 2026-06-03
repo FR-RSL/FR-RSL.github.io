@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Amollir la Volonté",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Assaut Chargé",
-          description: `Attaque un ennemi. Avant d'attaquer, place sur ce Champion un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % pendant 2 tours si la cible possède des PV MAX plus élevés que ceux de ce Champion. Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.WEAKEN}.`,
+          description: `Attaque un ennemi. Avant d'attaquer, place sur ce Champion un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.CRATE} de 30% pendant 2 tours si la cible possède des PV MAX plus élevés que ceux de ce Champion. Ignorera la DÉF si la cible se trouve sous débuff ${DEBUFFS.WEAKEN}.`,
           damage: "3.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Implacable [P]",
-          description: `Possède 10 % de chances d'accorder un Tour Supplémentaire dès que ce Champion porte un coup critique. Augmente de 20 % les dégâts infligés sur les Boss.`,
+          description: `Possède 10% de chances d'accorder un Tour Supplémentaire dès que ce Champion porte un coup critique. Augmente de 20% les dégâts infligés sur les Boss.`,
           isPassive: true
         }
       ],

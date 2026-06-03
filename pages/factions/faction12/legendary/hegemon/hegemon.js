@@ -6,7 +6,7 @@ const championData = {
           name: "Poigne Tombale",
           description: `Attaque 2 fois au hasard.${RETURN}${RETURN}
 
-Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours.`,
+Chaque frappe possède 35% de chances de placer un débuff de ${DEBUFFS.SPD} de 30% pendant 2 tours.`,
           damage: "1.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -16,7 +16,7 @@ Chaque frappe possède 35 % de chances de placer un débuff de ${DEBUFFS.SPD} de
           name: "Froid Engourdissant",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Possède également 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+Place un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Possède également 50% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "3.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],

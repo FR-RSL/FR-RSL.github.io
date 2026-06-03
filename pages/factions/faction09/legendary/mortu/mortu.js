@@ -4,7 +4,7 @@ const championData = {
         {
 			img: "assets/sort1.webp",
 			name: "Stigmates",
-			description: `Attaque 1 ennemi. Possède 60 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+			description: `Attaque 1 ennemi. Possède 60% de chances de placer un débuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
 			damage: "4.8*ATQ",
           	levelInfo: [
 				"Dégâts +5%",
@@ -17,7 +17,7 @@ const championData = {
         {
 			img: "assets/sort2.webp",
 			name: "Tombé en Disgrâce",
-			description: `Attaque 2 fois tous les ennemis. Place un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours sur les cibles affligées de débuffs de ${DEBUFFS.HEALS}. Chaque frappe possède 50 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours contre les cibles non affligées de débuffs de ${DEBUFFS.HEALS}.`,
+			description: `Attaque 2 fois tous les ennemis. Place un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours sur les cibles affligées de débuffs de ${DEBUFFS.HEALS}. Chaque frappe possède 50% de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} de 2 tours contre les cibles non affligées de débuffs de ${DEBUFFS.HEALS}.`,
 			damage: "1*ATQ + 0.1*PV",
           	levelInfo: [
 				"Dégâts +10%",
@@ -31,7 +31,7 @@ const championData = {
 		{
 			img: "assets/passif1.webp",
 			name: "Rage Ardente [P]",
-			description: `Possède 10 % de chances de débloquer une Compétence secrète, Péril, pendant 1 tour. Possède également 20 % de chances de remplir le Compteur de Tour de ce Champion de 25 % lorsqu'il se fait attaquer.`,
+			description: `Possède 10% de chances de débloquer une Compétence secrète, Péril, pendant 1 tour. Possède également 20% de chances de remplir le Compteur de Tour de ce Champion de 25% lorsqu'il se fait attaquer.`,
 			  isPassive: true,
 		},
         {

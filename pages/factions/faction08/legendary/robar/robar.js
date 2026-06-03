@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Force Divine",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Accorde un Tour Supplémentaire si ce débuff est placé.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour. Accorde un Tour Supplémentaire si ce débuff est placé.`,
           damage: "3.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Balayage Sauvage",
-          description: `Attaque tous les ennemis. Chaque frappe possède 75 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Chaque frappe possède 75% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "4.3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

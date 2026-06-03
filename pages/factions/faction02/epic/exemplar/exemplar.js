@@ -16,7 +16,7 @@ Augmente de 2 tours le temps de recharge d'une des compétences de la cible si l
         {
           img: "assets/sort2.webp",
           name: "Attaque en Tenailles",
-          description: `Attaque 3 fois au hasard. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
+          description: `Attaque 3 fois au hasard. Chaque frappe possède 75% de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours.`,
           damage: "2.1*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ Augmente de 2 tours le temps de recharge d'une des compétences de la cible si l
         {
           img: "assets/sort3.webp",
           name: "Capturer",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour et un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 75% de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour et un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "6.4*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

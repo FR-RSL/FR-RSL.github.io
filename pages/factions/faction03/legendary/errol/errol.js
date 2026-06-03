@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Épée Embrasée",
-          description: `Attaque 1 ennemi. Possède 30 % de chances supplémentaires de porter un coup critique.`,
+          description: `Attaque 1 ennemi. Possède 30% de chances supplémentaires de porter un coup critique.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Brisheaume",
-          description: `Attaque 2 fois tous les ennemis. Possède 30 % de chances supplémentaires de porter un coup critique. Chaque frappe ignorera 15 % de la DÉF de la cible.`,
+          description: `Attaque 2 fois tous les ennemis. Possède 30% de chances supplémentaires de porter un coup critique. Chaque frappe ignorera 15% de la DÉF de la cible.`,
           damage: "1.85*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Dégâts +15%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Négation",
-          description: `Attaque un ennemi. Avant d'attaquer, retire tous les débuffs sur ce Champion et vole tous les buffs de la cible. Possède 30 % de chances supplémentaires de porter un coup critique. Octroie un Tour supplémentaire si la cible est tuée.`,
+          description: `Attaque un ennemi. Avant d'attaquer, retire tous les débuffs sur ce Champion et vole tous les buffs de la cible. Possède 30% de chances supplémentaires de porter un coup critique. Octroie un Tour supplémentaire si la cible est tuée.`,
           damage: "5.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +15%", "Dégâts +15%", "Dégâts +15%", "Temps de recharge -1"],

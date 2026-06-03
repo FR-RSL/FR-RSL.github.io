@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Jolis Ongles",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % et un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 50% de chances de placer un débuff ${DEBUFFS.HEALS} de 100% et un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "1.3*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,11 +12,11 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Poupée Creuse",
-          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % sur cette Championne pendant 2 tours. Ignorera 25 % de la DÉF de la cible.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50% sur cette Championne pendant 2 tours. Ignorera 25% de la DÉF de la cible.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur cette Championne pendant 2 tours.${RETURN}${RETURN}
 
-Ensuite, remplit le Compteur de Tour de cette Championne de 30 %.`,
+Ensuite, remplit le Compteur de Tour de cette Championne de 30%.`,
           damage: "2.7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ Ensuite, remplit le Compteur de Tour de cette Championne de 30 %.`,
         {
           img: "assets/sort3.webp",
           name: "Goûter",
-          description: `Attaque un ennemi. Ignorera 25 % de la DÉF de la cible. Détruit les PV MAX de la cible de 25 % des dégâts infligés.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera 25% de la DÉF de la cible. Détruit les PV MAX de la cible de 25% des dégâts infligés.${RETURN}${RETURN}
 
 Répétera l'attaque si la DÉF et les PV MAX de la cible sont plus élevés que ceux de cette Championne.${RETURN}${RETURN}
 
@@ -38,7 +38,7 @@ Place un buff ${BUFFS.REVIVE_ON_DEATH} sur cette Championne pendant 2 tours si c
         {
           img: "assets/passif1.webp",
           name: "Jouets Immortels [P]",
-          description: `Lorsque ce Champion est ranimé, attaque l'ennemi qui l'a tué avec la Compétence par défaut. Remplit également le Compteur de Tour de ce Champion de 25 % et place un buff ${BUFFS.SHIELD} équivalent à 50 % de ses PV MAX pendant 2 tours.`,
+          description: `Lorsque ce Champion est ranimé, attaque l'ennemi qui l'a tué avec la Compétence par défaut. Remplit également le Compteur de Tour de ce Champion de 25% et place un buff ${BUFFS.SHIELD} équivalent à 50% de ses PV MAX pendant 2 tours.`,
           isPassive: true
         },
         {

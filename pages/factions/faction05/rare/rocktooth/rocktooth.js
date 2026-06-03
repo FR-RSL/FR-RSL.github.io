@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fouler",
-          description: `Attaque tous les ennemis. Place un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés pendant 1 tour.`,
+          description: `Attaque tous les ennemis. Place un buff d'${BUFFS.CRATE} de 15% sur tous les alliés pendant 1 tour.`,
           damage: "3.2*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Cohue",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
           damage: "5.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],

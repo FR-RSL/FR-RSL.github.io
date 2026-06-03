@@ -6,9 +6,9 @@ const championData = {
           name: "Fléau de Fragilité",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 60 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
+Possède 60% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.${RETURN}${RETURN}
 
-Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.`,
+Sinon, possède 100% de chances si la cible est affligée d'un débuff ${DEBUFFS.BURN} ou ${DEBUFFS.GEL}.`,
           damage: "3.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -16,7 +16,7 @@ Sinon, possède 100 % de chances si la cible est affligée d'un débuff ${DEBUFF
         {
           img: "assets/sort2.webp",
           name: "Feux Mortels",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 75% de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "3.9*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

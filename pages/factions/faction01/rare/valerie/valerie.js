@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Présence Énergisante",
-          description: `Augmente d'1 tour la durée de tous les buffs de tous les alliés. Réduit également d'1 tour la durée de tous les débuffs de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
+          description: `Augmente d'1 tour la durée de tous les buffs de tous les alliés. Réduit également d'1 tour la durée de tous les débuffs de tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

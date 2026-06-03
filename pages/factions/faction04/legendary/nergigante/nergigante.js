@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tir chargé",
-          description: `Attaque un ennemi. Place un buff ${BUFFS.PRE} de 50 % sur cette Championne pendant 2 tours.`,
+          description: `Attaque un ennemi. Place un buff ${BUFFS.PRE} de 50% sur cette Championne pendant 2 tours.`,
           damage: "3*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,13 +12,13 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tir tournoyant",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Possède 75% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
-Si la cible est un Boss, possède au lieu de ça 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
+Si la cible est un Boss, possède au lieu de ça 75% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.${RETURN}${RETURN}
 
-Réduit également de 20 % le Compteur de Tour des ennemis affligés d'un débuff ${DEBUFFS.STUN} placé par cette compétence.${RETURN}${RETURN}
+Réduit également de 20% le Compteur de Tour des ennemis affligés d'un débuff ${DEBUFFS.STUN} placé par cette compétence.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de tous les alliés de 10 % si un débuff ${DEBUFFS.SPD} de 30 % est placé au lieu de ça par cette compétence.`,
+Remplit le Compteur de Tour de tous les alliés de 10% si un débuff ${DEBUFFS.SPD} de 30% est placé au lieu de ça par cette compétence.`,
           damage: "3.1*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

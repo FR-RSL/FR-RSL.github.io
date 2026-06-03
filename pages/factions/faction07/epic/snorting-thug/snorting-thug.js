@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Agression Gratuite",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de voler un buff aléatoire.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances de voler un buff aléatoire.`,
           damage: "0.08*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Défense Désespérée",
-          description: `Lorsqu'il est frappé, possède 30 % de chances de voler un buff aléatoire à l'assaillant. Survient une fois par frappe.${RETURN}${RETURN}
+          description: `Lorsqu'il est frappé, possède 30% de chances de voler un buff aléatoire à l'assaillant. Survient une fois par frappe.${RETURN}${RETURN}
 
 Contre-attaque l'assaillant s'il ne possède pas de buff actif.`,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "En pleine tête",
-          description: `Attaque 1 ennemi. Si la cible possède moins de 30 % de PV, cette attaque passe toujours en critique.`,
+          description: `Attaque 1 ennemi. Si la cible possède moins de 30% de PV, cette attaque passe toujours en critique.`,
           damage: "ATQ*3.8",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Carreau Perçant",
-          description: `Attaque 1 ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "ATQ*6",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

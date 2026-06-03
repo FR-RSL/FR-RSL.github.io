@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Dard de Gungnir",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.BERSERK} pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.BERSERK} pendant 2 tours.${RETURN}${RETURN}
 
 Il est impossible de placer ce débuff sur les Boss.`,
           damage: "5*ATQ",
@@ -19,7 +19,7 @@ Il est impossible de placer ce débuff sur les Boss.`,
           name: "Tempête de familiers",
           description: `Retire tous les buffs dont disposent les ennemis.${RETURN}${RETURN}
 
-Possède 80 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Possède également 80 % de chances de placer un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
+Possède 80% de chances de placer un débuff ${DEBUFFS.DEF} de 60% sur tous les ennemis pendant 2 tours. Possède également 80% de chances de placer un débuff ${DEBUFFS.STUN} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
           levelInfo: [
             "Chances de Buff/débuff +10%",
@@ -38,9 +38,9 @@ DÉF : infligera des dégâts basés sur la DÉF de la cible${RETURN}${RETURN}
 
 PV/Soutien/Boss : infligera des dégâts basés sur les PV MAX de la cible.${RETURN}${RETURN}
 
-Cette attaque ignorera également 100 % de la DÉF de la cible.${RETURN}${RETURN}
+Cette attaque ignorera également 100% de la DÉF de la cible.${RETURN}${RETURN}
 
-Si la cible a été tuée par cette compétence, ranime un allié mort aléatoire avec 50 % de PV et 50 % de Compteur de Tour.`,
+Si la cible a été tuée par cette compétence, ranime un allié mort aléatoire avec 50% de PV et 50% de Compteur de Tour.`,
           cooldown: 4,
           levelInfo: [
             "Dégâts +10%",

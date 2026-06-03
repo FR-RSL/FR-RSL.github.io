@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Parasite",
-          description: `Attaque 1 ennemi. Soigne ce Champion à hauteur de 30 % des dégâts infligés.`,
+          description: `Attaque 1 ennemi. Soigne ce Champion à hauteur de 30% des dégâts infligés.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Tornade",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30 % et un buff d'${BUFFS.CRATE} de 30 % sur ce Champion et sur une cible alliée. Accorde un Tour Supplémentaire à ce Champion.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.SPD} de 30% et un buff d'${BUFFS.CRATE} de 30% sur ce Champion et sur une cible alliée. Accorde un Tour Supplémentaire à ce Champion.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Plaies Ouvertes",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours. Inflige 50 % de dégâts supplémentaires contre les cibles disposant de buffs.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours. Inflige 50% de dégâts supplémentaires contre les cibles disposant de buffs.`,
           damage: "6.6*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

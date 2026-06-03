@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Tenir la Ligne",
-          description: `Attaque 1 ennemi. Augmente de 3 % la DÉF de ce Champion (jusqu'à 10 fois lors d'un round).`,
+          description: `Attaque 1 ennemi. Augmente de 3% la DÉF de ce Champion (jusqu'à 10 fois lors d'un round).`,
           damage: "3.65*ATQ+DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coup Dédaigneux",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur la cible.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour sur la cible.`,
           damage: "5.5*DEF+ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

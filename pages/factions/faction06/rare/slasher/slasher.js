@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Hache menu",
-          description: `Attaque 2 fois un ennemi. Offre 25 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Offre 25% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours.`,
           damage: "2.9*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Zèle Meurtrier",
-          description: `Place un buff d'${BUFFS.CRATE} de 15 % et un buff de ${BUFFS.SHIELD} de 2 tours sur ce Champion. La valeur du ${BUFFS.SHIELD} est proportionnelle à la ATQ et au DÉG C. de ce Champion. Accorde un Tour Supplémentaire.`,
+          description: `Place un buff d'${BUFFS.CRATE} de 15% et un buff de ${BUFFS.SHIELD} de 2 tours sur ce Champion. La valeur du ${BUFFS.SHIELD} est proportionnelle à la ATQ et au DÉG C. de ce Champion. Accorde un Tour Supplémentaire.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

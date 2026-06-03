@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe Vacillante",
-          description: `Attaque un ennemi. Les dégâts augmentent de 20 % en attaquant sous un buff ${BUFFS.VEIL}. Soigne ce Champion de 25 % des dégâts infligés lorsqu'il attaque en bénéficiant d'un buff ${BUFFS.VEIL}.`,
+          description: `Attaque un ennemi. Les dégâts augmentent de 20% en attaquant sous un buff ${BUFFS.VEIL}. Soigne ce Champion de 25% des dégâts infligés lorsqu'il attaque en bénéficiant d'un buff ${BUFFS.VEIL}.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Brise-cou",
-          description: `Attaque un ennemi. Les dégâts augmentent de 35 % en attaquant sous un buff ${BUFFS.VEIL}. Lors d'une attaque sous buff ${BUFFS.VEIL}, les ennemis tués par cette compétence ne peuvent pas être ranimés.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Les dégâts augmentent de 35% en attaquant sous un buff ${BUFFS.VEIL}. Lors d'une attaque sous buff ${BUFFS.VEIL}, les ennemis tués par cette compétence ne peuvent pas être ranimés.${RETURN}${RETURN}
 
-Lors d'une attaque sans buff ${BUFFS.VEIL}, vide totalement le Compteur de Tour de la cible et remplit le Compteur de Tour du Champion avec la totalité des pertes de la cible. Contre les Boss, ne peut réduire le Compteur de Tour que jusqu'à 50 %. Cette réduction du Compteur de Tour est irrésistible.`,
+Lors d'une attaque sans buff ${BUFFS.VEIL}, vide totalement le Compteur de Tour de la cible et remplit le Compteur de Tour du Champion avec la totalité des pertes de la cible. Contre les Boss, ne peut réduire le Compteur de Tour que jusqu'à 50%. Cette réduction du Compteur de Tour est irrésistible.`,
           damage: "5.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],

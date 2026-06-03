@@ -6,7 +6,7 @@ const championData = {
           name: "Lames-vignes",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
+Chaque frappe a 25% de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
           damage: "1.7*DEF",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,7 +16,7 @@ Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 
           name: "Visage terrifiant",
           description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. La seconde frappe a 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours.`,
+La première frappe a 75% de chances de placer un débuff ${DEBUFFS.FEAR} pendant 1 tour. La seconde frappe a 75% de chances de placer un débuff ${DEBUFFS.PRE} de 50% pendant 2 tours.`,
           damage: "1.9*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -25,9 +25,9 @@ La première frappe a 75 % de chances de placer un débuff ${DEBUFFS.FEAR} penda
         {
           img: "assets/sort3.webp",
           name: "Uni à la corruption",
-          description: `Place un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.COUNTER} et un buff ${BUFFS.RES} de 50 % sur ce Champion pendant 2 tours.`,
+Place également un buff ${BUFFS.COUNTER} et un buff ${BUFFS.RES} de 50% sur ce Champion pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

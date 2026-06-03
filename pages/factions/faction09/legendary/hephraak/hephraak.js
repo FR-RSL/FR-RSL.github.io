@@ -18,7 +18,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mépris d'Héphraak",
-          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les cibles ayant moins de 50 % de PV après la première frappe. Chaque frappe ignorera 15 % de la DÉF de la cible.`,
+          description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les cibles ayant moins de 50% de PV après la première frappe. Chaque frappe ignorera 15% de la DÉF de la cible.`,
           cooldown: 4,
           damage: "3.6*ATQ",
           levelInfo: [
@@ -30,7 +30,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Mégalomanie",
-          description: `Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CRATE} de 30 % sur ce Champion pendant 3 tours, puis accorde un Tour supplémentaire.`,
+          description: `Place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.CRATE} de 30% sur ce Champion pendant 3 tours, puis accorde un Tour supplémentaire.`,
           cooldown: 6,
           levelInfo: [
             "Temps de recharge -1",

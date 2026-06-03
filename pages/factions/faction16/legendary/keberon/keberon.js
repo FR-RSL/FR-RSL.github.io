@@ -6,9 +6,9 @@ const championData = {
           name: "Déchirure de feu",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+A 75% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-A 50 % de chances d'attaquer avec cette compétence dès qu'un débuff ${DEBUFFS.BURN} est activé sur un ennemi. Se produit une fois par tour.`,
+A 50% de chances d'attaquer avec cette compétence dès qu'un débuff ${DEBUFFS.BURN} est activé sur un ennemi. Se produit une fois par tour.`,
           damage: "1.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
         },
@@ -17,9 +17,9 @@ A 50 % de chances d'attaquer avec cette compétence dès qu'un débuff ${DEBUFFS
           name: "Marque brûlante",
           description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un débuff ${DEBUFFS.DEATHBRAND} sur la cible pendant 2 tours.${RETURN}${RETURN}
 
-Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}, ainsi que 25 % de la DÉF de la cible.${RETURN}${RETURN}
+Ignorera les buffs ${BUFFS.UNKILLABLE} et ${BUFFS.SHIELD}, ainsi que 25% de la DÉF de la cible.${RETURN}${RETURN}
 
-Active la compétence Pouvoir de Pyrenei de ce Champion si la cible est tuée. Si la cible survit, remplit au lieu de cela le Compteur de Tour de ce Champion de 50 %.`,
+Active la compétence Pouvoir de Pyrenei de ce Champion si la cible est tuée. Si la cible survit, remplit au lieu de cela le Compteur de Tour de ce Champion de 50%.`,
           damage: "2.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -27,11 +27,11 @@ Active la compétence Pouvoir de Pyrenei de ce Champion si la cible est tuée. S
         {
           img: "assets/sort3.webp",
           name: "Pouvoir de Pyrenei",
-          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+A 75% de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Remplit de 20 % le Compteur de Tour de ce Champion pour chaque débuff ${DEBUFFS.BURN}placé sur les ennemis et remplit de 10 % le Compteur de Tour de ce Champion pour chaque débuff ${DEBUFFS.BURN} auquel les ennemis résistent.`,
+Remplit de 20% le Compteur de Tour de ce Champion pour chaque débuff ${DEBUFFS.BURN}placé sur les ennemis et remplit de 10% le Compteur de Tour de ce Champion pour chaque débuff ${DEBUFFS.BURN} auquel les ennemis résistent.`,
           damage: "4.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -45,7 +45,7 @@ Active un effet [Délai] sur ce Champion dès qu'il reçoit un coup fatal.${RETU
 
 ${PASSIVE}
 
-Soigne ce Champion de 20 % de ses PV MAX dès qu'un débuff ${DEBUFFS.BURN} est activé sur un ennemi.${RETURN}${RETURN}
+Soigne ce Champion de 20% de ses PV MAX dès qu'un débuff ${DEBUFFS.BURN} est activé sur un ennemi.${RETURN}${RETURN}
 
 Dès qu'un débuff ${DEBUFFS.BURN} expire ou est retiré à un ennemi, place un débuff ${DEBUFFS.TRUE_FEAR} sur cet ennemi pendant 1 tour.`,
           cooldown: 4,

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Berceuse de Source",
-          description: `Attaque un ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 15% de chances de placer un débuff de ${DEBUFFS.SLEEP} pendant 1 tour.`,
           damage: "5.2*ATQ",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Peau de Chêne",
-          description: `Place un buff d'${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Soigne tous tes alliés à hauteur de 25 % des PV MAX de ce Champion.`,
+          description: `Place un buff d'${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours. Soigne tous tes alliés à hauteur de 25% des PV MAX de ce Champion.`,
           cooldown: 4,
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false

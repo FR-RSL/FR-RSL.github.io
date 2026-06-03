@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hache Ensorcelée",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 30% de chances de placer un débuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
           damage: "2.1*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Protection de Fée",
-          description: `Attaque 3 fois un ennemi. Chaque frappe possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.HEALS}. Place sur ce Champion un buff ${BUFFS.SHIELD} de 3 tours équivalent à 30 % des dégâts infligés.`,
+          description: `Attaque 3 fois un ennemi. Chaque frappe possède 75% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours si la cible est affligée d'un débuff ${DEBUFFS.HEALS}. Place sur ce Champion un buff ${BUFFS.SHIELD} de 3 tours équivalent à 30% des dégâts infligés.`,
           damage: "1.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

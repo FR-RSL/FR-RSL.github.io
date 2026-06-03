@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Broyeur d'Acier",
-          description: `Attaque 1 ennemi. Offre 40 % de chances de placer un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 40% de chances de placer un débuff de ${DEBUFFS.ATK} de 25% pendant 2 tours.`,
           damage: "7.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Spectacle Démoralisant",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer sur la cible un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer sur la cible un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "7.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],

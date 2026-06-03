@@ -1082,4 +1082,8 @@ const CHAMPIONS = [
   img: c.noImg ? null : `pages/factions/${c.faction}/${c.rarity}/${c.folder}/assets/${c.folder}.webp`,
   factionName: FACTION_META[c.faction]?.name ?? c.faction,
   factionImg:  `assets/images/factions/${FACTION_META[c.faction]?.img ?? ''}`,
-}));
+})).sort((a, b) => {
+  if (a.faction !== b.faction) return a.faction.localeCompare(b.faction);
+  const RARITY_ORDER = { mythical: 0, legendary: 1, epic: 2, rare: 3, uncommon: 4, common: 5 };
+  return (RARITY_ORDER[a.rarity] ?? 99) - (RARITY_ORDER[b.rarity] ?? 99);
+});

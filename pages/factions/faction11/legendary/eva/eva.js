@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Cautériser",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de placer un débuff de ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
           damage: "3.2*ATQ",
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Dégâts +20%"],
         },
@@ -19,7 +19,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Drain Énergétique",
-          description: `Attaque tous les ennemis. Réduit de 20 % le Compteur de Tours. Réinitialise les temps de recharge de chacune des Compétences de ce Champion si une cible est tuée. Possède 15 % de chances supplémentaires de porter un coup critique.`,
+          description: `Attaque tous les ennemis. Réduit de 20% le Compteur de Tours. Réinitialise les temps de recharge de chacune des Compétences de ce Champion si une cible est tuée. Possède 15% de chances supplémentaires de porter un coup critique.`,
           damage: "4*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

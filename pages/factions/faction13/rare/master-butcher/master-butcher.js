@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Écrabouiller",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Attaque un ennemi. Possède 30% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ordres Aboyés",
-          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur la cible ennemie pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15 % sur tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
+          description: `Place un débuff de ${DEBUFFS.PROVOKE} sur la cible ennemie pendant 2 tours. Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 15% sur tous les alliés. Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur tous les alliés.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

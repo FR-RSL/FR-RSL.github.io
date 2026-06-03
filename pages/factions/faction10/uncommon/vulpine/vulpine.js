@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Montrer les Crocs",
-          description: `Attaque 1 ennemi. Offre 60 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Offre 60% de chances de placer un débuff de ${DEBUFFS.DEF} de 30% pendant 2 tours.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +15%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Alpha",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

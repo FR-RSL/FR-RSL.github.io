@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Empalement de Masse",
-          description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Possède 75% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "5.1*ATQ",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -23,7 +23,7 @@ const championData = {
           name: "Courroux Divin",
           description: `Attaque tous les ennemis. Les dégâts infligés sont proportionnels soit à l'ATQ de ce Champion, soit à la statistique de DÉF ou d'ATQ de la cible, selon celle qui est la plus élevée.${RETURN}${RETURN}
 
-Inflige 30 % de DÉG C. supplémentaires si l'ATQ de la cible est plus élevée. Ignorera 30 % de la DÉF de la cible si la DÉF de la cible est la plus élevée.`,
+Inflige 30% de DÉG C. supplémentaires si l'ATQ de la cible est plus élevée. Ignorera 30% de la DÉF de la cible si la DÉF de la cible est la plus élevée.`,
           damage: "4.5*ATQMultiplier: TRG_ATQ*4.5Multiplier: 4.5*TRG_DEF",
           cooldown: 6,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],

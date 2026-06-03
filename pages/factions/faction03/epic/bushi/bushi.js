@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Fil Mortel",
-          description: `Attaque un ennemi. Cette attaque passe toujours en critique. Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.SPD} de 15 % sur ce Champion pendant 3 tours.`,
+          description: `Attaque un ennemi. Cette attaque passe toujours en critique. Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.SPD} de 15% sur ce Champion pendant 3 tours.`,
           damage: "7*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Inflexible",
-          description: `Ranime ce Champion avec 30 % de PV. Place, pendant 1 tour, un buff ${BUFFS.UNKILLABLE} sur ce Champion.`,
+          description: `Ranime ce Champion avec 30% de PV. Place, pendant 1 tour, un buff ${BUFFS.UNKILLABLE} sur ce Champion.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

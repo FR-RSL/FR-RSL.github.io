@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bâton emmêlé",
-          description: `Attaque un ennemi. Place un buff ${BUFFS.SHIELD} de 2 tours sur l'allié ayant le moins de PV. La valeur du ${BUFFS.SHIELD} est égale à 15 % des PV MAX de l'allié.`,
+          description: `Attaque un ennemi. Place un buff ${BUFFS.SHIELD} de 2 tours sur l'allié ayant le moins de PV. La valeur du ${BUFFS.SHIELD} est égale à 15% des PV MAX de l'allié.`,
           damage: "3.75*ATQ",
           levelInfo: [
             "Dégâts +10%",
@@ -16,7 +16,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Épines vitrioliques",
-          description: `Attaque tous les ennemis. Possède 80 % de chances de retirer tous les buffs. Place sur chaque ennemi un débuff ${DEBUFFS.POISON} de 5 % pendant 2 tours pour chaque buff qui lui a été retiré. Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 1 tour.`,
+          description: `Attaque tous les ennemis. Possède 80% de chances de retirer tous les buffs. Place sur chaque ennemi un débuff ${DEBUFFS.POISON} de 5% pendant 2 tours pour chaque buff qui lui a été retiré. Possède également 80% de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 1 tour.`,
           cooldown: 4,
           damage: "4.2*ATQ",
           levelInfo: [
@@ -29,9 +29,9 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Hypertrophie",
-          description: `Retire tous les débuffs sur tous les alliés. Place sur chaque allié un buff ${BUFFS.HEALS} de 15 % pendant 1 tour pour chaque débuff qui lui a été retiré.${RETURN}${RETURN}
+          description: `Retire tous les débuffs sur tous les alliés. Place sur chaque allié un buff ${BUFFS.HEALS} de 15% pendant 1 tour pour chaque débuff qui lui a été retiré.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 25 % des PV MAX de ce Champion.`,
+Place également un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 25% des PV MAX de ce Champion.`,
           cooldown: 5,
           levelInfo: [
             "Temps de recharge -1",

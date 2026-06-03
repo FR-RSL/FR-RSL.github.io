@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Perdition",
-          description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 40% de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Pénitence",
-          description: `Attaque tous les ennemis. Possède 55 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours. Les cibles sous débuff ${DEBUFFS.BURN} ne peuvent pas résister à ce débuff.`,
+          description: `Attaque tous les ennemis. Possède 55% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours. Les cibles sous débuff ${DEBUFFS.BURN} ne peuvent pas résister à ce débuff.`,
           damage: "4.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Toujours surveillé",
-          description: `Réduit d'1 tour la durée de tous les débuffs sur les alliés, puis place un buff ${BUFFS.STRENGTHEN} de 15 % sur tous les alliés pendant 2 tours. Il est impossible de retirer ou de voler ce buff.`,
+          description: `Réduit d'1 tour la durée de tous les débuffs sur les alliés, puis place un buff ${BUFFS.STRENGTHEN} de 15% sur tous les alliés pendant 2 tours. Il est impossible de retirer ou de voler ce buff.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

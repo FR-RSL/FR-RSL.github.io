@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Calamité",
-          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs. Offre 50% de chances de placer un débuff de ${DEBUFFS.ATK} de 50% pendant 2 tours.`,
           damage: "1.8*ATQ+0.1*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Marque Éclatante",
-          description: `Possède 60 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 60 % sur tous les ennemis. Possède 30 % de chances de placer, pendant 1 tour, un débuff d'${DEBUFFS.WEAKEN} de 15 % sur tous les ennemis.`,
+          description: `Possède 60% de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 60% sur tous les ennemis. Possède 30% de chances de placer, pendant 1 tour, un débuff d'${DEBUFFS.WEAKEN} de 15% sur tous les ennemis.`,
           cooldown: 6,
           levelInfo: ["Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

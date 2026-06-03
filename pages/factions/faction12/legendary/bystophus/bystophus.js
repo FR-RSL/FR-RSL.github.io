@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Horreur",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "3.3*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +15%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Frappe Fantôme",
-          description: `Attaque tous les ennemis. Inflige un coup critique contre les cibles sous débuffs ${DEBUFFS.LOCK_ACTIVE}. Soigne à hauteur de 20 % des dégâts infligés.`,
+          description: `Attaque tous les ennemis. Inflige un coup critique contre les cibles sous débuffs ${DEBUFFS.LOCK_ACTIVE}. Soigne à hauteur de 20% des dégâts infligés.`,
           damage: "3.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1", "Dégâts +20%"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Émietter",
-          description: `Attaque 4 fois au hasard. Chaque frappe possède 50 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Chaque frappe possède également 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 50% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. Chaque frappe possède également 50% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "3.2*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],

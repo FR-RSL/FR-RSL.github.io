@@ -6,7 +6,7 @@ const championData = {
           name: "Fente protectrice",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % des dégâts infligés pendant 2 tours. Soigne également ce Champion à hauteur de 10 % des dégâts infligés si ses PV sont inférieurs à 50 %.`,
+Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10% des dégâts infligés pendant 2 tours. Soigne également ce Champion à hauteur de 10% des dégâts infligés si ses PV sont inférieurs à 50%.`,
           damage: "3.4*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -16,7 +16,7 @@ Place sur ce Champion un buff ${BUFFS.SHIELD} équivalent à 10 % des dégâts i
           name: "Pals paralysants",
           description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. La seconde frappe possède 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour si les ennemis ne se trouvent pas sous débuff ${DEBUFFS.LOCK_ACTIVE}.`,
+La première frappe possède 75% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours. La seconde frappe possède 75% de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour si les ennemis ne se trouvent pas sous débuff ${DEBUFFS.LOCK_ACTIVE}.`,
           damage: "2.1*ATQ",
           cooldown: 6,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Temps de recharge -1"],
@@ -25,7 +25,7 @@ La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.LOCK
         {
           img: "assets/sort3.webp",
           name: "Or scintillant",
-          description: `Place sur ce Champion un buff ${BUFFS.CDAM} de 30 % pendant 3 tours et un buff ${BUFFS.PRE} de 50 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Place sur ce Champion un buff ${BUFFS.CDAM} de 30% pendant 3 tours et un buff ${BUFFS.PRE} de 50% pendant 2 tours.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           cooldown: 6,
@@ -35,7 +35,7 @@ Accorde ensuite un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Frapper au Coeur [P]",
-          description: `Ignore 10 % de la DÉF lors d'une attaque sur les Champions de Soutien, DÉF et PV.${RETURN}${RETURN}
+          description: `Ignore 10% de la DÉF lors d'une attaque sur les Champions de Soutien, DÉF et PV.${RETURN}${RETURN}
 
 [Ne fonctionne pas contre les Boss]`,
           isPassive: true

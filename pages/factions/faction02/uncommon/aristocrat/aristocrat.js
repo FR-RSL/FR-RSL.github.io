@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Astuces d'Infection",
-          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Possède 25% de chances de placer un débuff de ${DEBUFFS.HEALS} de 50% pendant 2 tours.`,
           damage: "3.9*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Réprimande Piquante",
-          description: `Attaque 2 fois un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15 % pendant 1 tour.`,
+          description: `Attaque 2 fois un ennemi. Possède 50% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 15% pendant 1 tour.`,
           damage: "3*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

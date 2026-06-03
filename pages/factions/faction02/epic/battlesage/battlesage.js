@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Toucher de la Nature",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50 % sur tous les alliés, puis retire tous les débuffs sur tous les alliés. Il est impossible de retirer ce buff.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 50% sur tous les alliés, puis retire tous les débuffs sur tous les alliés. Il est impossible de retirer ce buff.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

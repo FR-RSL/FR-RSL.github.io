@@ -6,9 +6,9 @@ const championData = {
           name: "Abatteur de monstre",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+Possède 50% de chances de placer un débuff ${DEBUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-Ignorera 5 % de la DÉF de la cible pour chaque débuff dont elle est affligée.`,
+Ignorera 5% de la DÉF de la cible pour chaque débuff dont elle est affligée.`,
           damage: "0.22*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -29,9 +29,9 @@ Répétera l'attaque contre tous les ennemis si la cible initiale se trouve sous
           name: "Brèche terrestre",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+Possède 75% de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.LEECH} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Remplit également le Compteur de Tour de ce Champion de 5 % pour chaque débuff placé par cette compétence.`,
+Remplit également le Compteur de Tour de ce Champion de 5% pour chaque débuff placé par cette compétence.`,
           damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -40,7 +40,7 @@ Remplit également le Compteur de Tour de ce Champion de 5 % pour chaque débuff
         {
           img: "assets/passif1.webp",
           name: "Marche de représailles [P]",
-          description: `Augmente les PV MAX de ce Champion de 5 % (s'accumule jusqu'à 50 %) et ses DÉG C. de 5 % (s'accumule jusqu'à 50 %) pour chaque débuff placé par ce Champion.`,
+          description: `Augmente les PV MAX de ce Champion de 5% (s'accumule jusqu'à 50%) et ses DÉG C. de 5% (s'accumule jusqu'à 50%) pour chaque débuff placé par ce Champion.`,
           isPassive: true
         }
       ],

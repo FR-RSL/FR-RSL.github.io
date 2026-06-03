@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Brochette",
-          description: `Attaque 1 ennemi. Si le coup passe en critique, place un débuff de ${DEBUFFS.SPD} de 15 %.`,
+          description: `Attaque 1 ennemi. Si le coup passe en critique, place un débuff de ${DEBUFFS.SPD} de 15%.`,
           damage: "5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Compétence Infernale",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} et un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.COUNTER} et un buff de ${BUFFS.HEALS} de 15% sur ce Champion.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Éclairs Paralysants",
-          description: `Attaque tous les ennemis. Possède 35 % de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour. Il est impossible de retirer ce débuff.`,
+          description: `Attaque tous les ennemis. Possède 35% de chances de placer un débuff de ${DEBUFFS.SLEEP} d'1 tour. Il est impossible de retirer ce débuff.`,
           damage: "5.1*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],

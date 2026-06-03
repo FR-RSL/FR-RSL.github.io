@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hachoirs brosses",
-          description: `Attaque un ennemi. Possède 15 % de chances de porter un coup supplémentaire.`,
+          description: `Attaque un ennemi. Possède 15% de chances de porter un coup supplémentaire.`,
           damage: "2.7*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Rage antique",
-          description: `Place un buff ${BUFFS.CDAM} de 30 % et un buff ${BUFFS.ATK} de 50 % sur cette Championne pendant 3 tours, puis accorde un Tour Supplémentaire.`,
+          description: `Place un buff ${BUFFS.CDAM} de 30% et un buff ${BUFFS.ATK} de 50% sur cette Championne pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Froid Glacial",
-          description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
+          description: `Attaque un ennemi. Possède 30% de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "1*DEF",
           levelInfo: ["Dégâts +15%", "Dégâts +15%", "Soins +10%", "Soins +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Immobile [P]",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30 % sur ce Champion, puis attaque un ennemi. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, attaque tous les ennemis et retire le débuff de ${DEBUFFS.GEL} sur la cible initiale. Les dégâts infligés sont proportionnels à la DÉF.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.CRATE} de 30% sur ce Champion, puis attaque un ennemi. Si la cible souffre d'un débuff de ${DEBUFFS.GEL}, attaque tous les ennemis et retire le débuff de ${DEBUFFS.GEL} sur la cible initiale. Les dégâts infligés sont proportionnels à la DÉF.`,
           isPassive: true
         }
       ],

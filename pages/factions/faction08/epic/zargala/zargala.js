@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Scinder",
-          description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25 % pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 50% de chances de placer un débuff d'${DEBUFFS.WEAKEN} de 25% pendant 1 tour.`,
           damage: "3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Craque l'Armure",
-          description: `Attaque 3 fois tous les ennemis. Après la première frappe, possède 50 % de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 60 % sur tous les ennemis.`,
+          description: `Attaque 3 fois tous les ennemis. Après la première frappe, possède 50% de chances de placer, pendant 2 tours, un débuff de ${DEBUFFS.DEF} de 60% sur tous les ennemis.`,
           damage: "1.2*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

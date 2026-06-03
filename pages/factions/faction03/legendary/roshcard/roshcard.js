@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Réprimande",
-          description: `Attaque 1 ennemi. Possède 50 % de chances de retirer 1 buff aléatoire sur chaque cible.`,
+          description: `Attaque 1 ennemi. Possède 50% de chances de retirer 1 buff aléatoire sur chaque cible.`,
           damage: "5*ATQ",
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false

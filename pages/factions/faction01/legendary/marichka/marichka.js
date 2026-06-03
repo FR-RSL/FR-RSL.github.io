@@ -14,9 +14,9 @@ Si Taras le Farouche se trouve dans la même équipe, il sera toujours celui qui
         {
           img: "assets/sort2.webp",
           name: "Source de ténacité",
-          description: `Restaure totalement tous les PV MAX réduits des alliés, puis soigne tous les alliés de 40 % des PV MAX de cette Championne.${RETURN}${RETURN}
+          description: `Restaure totalement tous les PV MAX réduits des alliés, puis soigne tous les alliés de 40% des PV MAX de cette Championne.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.STRENGTHEN} protégé sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20 % des PV MAX de cette Championne.`,
+Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.STRENGTHEN} protégé sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 20% des PV MAX de cette Championne.`,
           cooldown: 4,
           levelInfo: ["Soins +10%", "Bouclier +10%", "Soins +10%", "Bouclier +10%", "Temps de recharge -1"],
           isPassive: false
@@ -24,7 +24,7 @@ Place un buff ${BUFFS.SHIELD} et un buff ${BUFFS.STRENGTHEN} protégé sur tous 
         {
           img: "assets/sort3.webp",
           name: "Amitié nourrie",
-          description: `Retire tous les débuffs sur tous les alliés, puis remplit les Compteurs de tour de tous les alliés de 15 %. Remplit le Compteur de Tour de chaque allié de 5 % supplémentaires pour chaque débuff qui leur a été retiré.${RETURN}${RETURN}
+          description: `Retire tous les débuffs sur tous les alliés, puis remplit les Compteurs de tour de tous les alliés de 15%. Remplit le Compteur de Tour de chaque allié de 5% supplémentaires pour chaque débuff qui leur a été retiré.${RETURN}${RETURN}
 
 Augmente la RÉS de tous les alliés de 5 pour chaque débuff retiré. Accorde un Tour supplémentaire si 5 débuffs ou plus ont été retirés.`,
           cooldown: 6,
@@ -34,7 +34,7 @@ Augmente la RÉS de tous les alliés de 5 pour chaque débuff retiré. Accorde u
         {
           img: "assets/passif1.webp",
           name: "Tout donner [P]",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 75 % de Compteur de Tour dès que cette Championne est tuée.${RETURN}${RETURN}
+          description: `Ranime tous les alliés morts avec 50% de PV et 75% de Compteur de Tour dès que cette Championne est tuée.${RETURN}${RETURN}
 
 ${ACTIVE}
 

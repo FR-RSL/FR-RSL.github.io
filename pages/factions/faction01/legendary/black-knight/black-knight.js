@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup Violent",
-          description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 75% de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
           damage: "0.28*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Visière Basse",
-          description: `Place un buff ${BUFFS.HEALS} de 15 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours.`,
+          description: `Place un buff ${BUFFS.HEALS} de 15% et un buff ${BUFFS.DEF} de 60% sur tous les alliés pendant 2 tours.`,
           cooldown: 3,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false
@@ -29,7 +29,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Valeureux [P]",
-          description: `Place un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion si les dégâts reçus dépassent 15 % des PV MAX en une seule attaque.`,
+          description: `Place un buff ${BUFFS.UNKILLABLE} d'1 tour sur ce Champion si les dégâts reçus dépassent 15% des PV MAX en une seule attaque.`,
           cooldown: 2,
           isPassive: true
         }

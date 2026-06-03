@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Ronger",
-          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
+          description: `Attaque 1 ennemi. Place un débuff de ${DEBUFFS.POISON} de 5% pendant 2 tours. Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "7.5*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

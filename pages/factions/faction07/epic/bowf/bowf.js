@@ -6,7 +6,7 @@ const championData = {
           name: "Lame puante",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
+Chaque frappe possède 25% de chances de placer un débuff ${DEBUFFS.HEALS} de 100% pendant 2 tours.`,
           damage: "0.13*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,7 +16,7 @@ Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 
           name: "Lance de pestilence",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+Possède 75% de chances de placer un débuff ${DEBUFFS.PRE} de 50% sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Augmente également la durée de tous les buffs des alliés d'1 tour.`,
           damage: "0.25*PV",
@@ -27,9 +27,9 @@ Augmente également la durée de tous les buffs des alliés d'1 tour.`,
         {
           img: "assets/sort3.webp",
           name: "Giclée de soin",
-          description: `Retire 2 débuffs aléatoires sur tous les alliés, puis les soigne de 10 % de leurs PV MAX.${RETURN}${RETURN}
+          description: `Retire 2 débuffs aléatoires sur tous les alliés, puis les soigne de 10% de leurs PV MAX.${RETURN}${RETURN}
 
-Place également un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.`,
+Place également un buff ${BUFFS.PRE} de 50% sur tous les alliés pendant 2 tours.`,
           cooldown: 5,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -37,7 +37,7 @@ Place également un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tou
         {
           img: "assets/passif1.webp",
           name: "Bombe antibiotique [P]",
-          description: `Réduit de 50 % les dégâts que tous les alliés reçoivent des débuffs ${DEBUFFS.POISON}.`,
+          description: `Réduit de 50% les dégâts que tous les alliés reçoivent des débuffs ${DEBUFFS.POISON}.`,
           isPassive: true
         }
       ],

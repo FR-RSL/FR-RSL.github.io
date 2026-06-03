@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Filage",
-          description: `Attaque 1 ennemi. Possède 15 % de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.`,
+          description: `Attaque 1 ennemi. Possède 15% de chances de placer un débuff de ${DEBUFFS.GEL} pendant 1 tour.`,
           damage: "3.4*ATQ+25",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false

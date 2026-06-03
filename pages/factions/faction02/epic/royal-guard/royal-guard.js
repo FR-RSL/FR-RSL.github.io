@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Lame Rasoir",
-          description: `Attaque un ennemi. Offre 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
+          description: `Attaque un ennemi. Offre 50% de chances de placer un débuff de ${DEBUFFS.DEF} de 60% pendant 2 tours.`,
           damage: "3.3*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Ankyloser",
-          description: `Attaque 4 fois au hasard. Chaque frappe possède 60 % de chances de placer un débuff de ${DEBUFFS.SPD} de 30 % pendant 2 tours. Chaque frappe possède également 60 % de chances de réduire le Compteur de Tours de la cible de 25 %.`,
+          description: `Attaque 4 fois au hasard. Chaque frappe possède 60% de chances de placer un débuff de ${DEBUFFS.SPD} de 30% pendant 2 tours. Chaque frappe possède également 60% de chances de réduire le Compteur de Tours de la cible de 25%.`,
           damage: "1.5*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

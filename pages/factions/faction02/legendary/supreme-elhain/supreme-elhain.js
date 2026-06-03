@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Aucun survivant",
-          description: `Attaque tous les ennemis. Les dégâts augmentent de 10 % pour chaque débuff sur chaque cible.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Les dégâts augmentent de 10% pour chaque débuff sur chaque cible.${RETURN}${RETURN}
 
 Réinitialise le compteur de tour de la compétence [Tir fissurant] si cette attaque tue un ennemi.`,
           damage: "4*ATQ*(1+0.1*Target Debuffs)",
@@ -34,7 +34,7 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
         {
           img: "assets/passif1.webp",
           name: "Implacable [P]",
-          description: `Immunisée contre les débuffs ${DEBUFFS.ATK}. Inflige 20 % de dégâts en plus contre les cibles dont l'ATQ est inférieure à celle de cette Championne.`,
+          description: `Immunisée contre les débuffs ${DEBUFFS.ATK}. Inflige 20% de dégâts en plus contre les cibles dont l'ATQ est inférieure à celle de cette Championne.`,
           isPassive: true
         }
       ],

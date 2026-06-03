@@ -6,9 +6,9 @@ const championData = {
           name: "Infestation mordante",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
+A 50% de chances de placer un débuff ${DEBUFFS.SPD} de 30% pendant 2 tours.${RETURN}${RETURN}
 
-Vole 5 % du Compteur de Tour de chaque ennemi. Vole au lieu de ça 10 % du Compteur de Tour de chaque ennemi qui se trouve sous débuff ${DEBUFFS.SPD}.`,
+Vole 5% du Compteur de Tour de chaque ennemi. Vole au lieu de ça 10% du Compteur de Tour de chaque ennemi qui se trouve sous débuff ${DEBUFFS.SPD}.`,
           damage: "4.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -20,7 +20,7 @@ Vole 5 % du Compteur de Tour de chaque ennemi. Vole au lieu de ça 10 % du Compt
 
 Place toutes les compétences de la cible en recharge.${RETURN}${RETURN}
 
-A 75 % de chances de réduire de 15 % les Compteurs de Tour de tous les ennemis sous débuff ${DEBUFFS.SLEEP}. A au lieu de ça 75 % de chances de réduire de 30 % les Compteurs de Tour de tous les ennemis sans débuff ${DEBUFFS.SLEEP}.`,
+A 75% de chances de réduire de 15% les Compteurs de Tour de tous les ennemis sous débuff ${DEBUFFS.SLEEP}. A au lieu de ça 75% de chances de réduire de 30% les Compteurs de Tour de tous les ennemis sans débuff ${DEBUFFS.SLEEP}.`,
           damage: "7.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -31,7 +31,7 @@ A 75 % de chances de réduire de 15 % les Compteurs de Tour de tous les ennemis 
           name: "Dards de sommeil",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}.${RETURN}${RETURN}
+A 75% de chances de placer un débuff ${DEBUFFS.SLEEP} sur tous les ennemis pendant 1 tour. Ignorera les buffs ${BUFFS.BLOCK_DEBUFFS}.${RETURN}${RETURN}
 
 Accorde ensuite un Tour supplémentaire.`,
           damage: "5.4*ATQ",
@@ -44,7 +44,7 @@ Accorde ensuite un Tour supplémentaire.`,
           name: "Désherbage [P]",
           description: `${PASSIVE}
 
-Dès qu'un ennemi essaie d'augmenter son Compteur de Tour, réduit de 25 % la valeur de cet effet de remplissage du Compteur de Tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.${RETURN}${RETURN}
+Dès qu'un ennemi essaie d'augmenter son Compteur de Tour, réduit de 25% la valeur de cet effet de remplissage du Compteur de Tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.${RETURN}${RETURN}
 
 ${ACTIVE}
 

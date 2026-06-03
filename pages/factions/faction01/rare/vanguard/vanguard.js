@@ -6,7 +6,7 @@ const championData = {
           name: "Prise d'Élan",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Place un débuff de ${DEBUFFS.DEF} de 30 % pendant 1 tour si la DÉF actuelle de la cible est inférieure à celle de ce Champion.`,
+Place un débuff de ${DEBUFFS.DEF} de 30% pendant 1 tour si la DÉF actuelle de la cible est inférieure à celle de ce Champion.`,
           damage: "4.3*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

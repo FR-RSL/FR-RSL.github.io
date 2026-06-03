@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Chef d'Assaut",
-          description: `Attaque un ennemi. Remplit de 15 % le Compteur de Tour d'un allié pris au hasard. Remplit de 15 % supplémentaires le Compteur de Tour de tous les alliés si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Remplit de 15% le Compteur de Tour d'un allié pris au hasard. Remplit de 15% supplémentaires le Compteur de Tour de tous les alliés si cette attaque passe en critique.`,
           damage: "3.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
         },
@@ -25,7 +25,7 @@ const championData = {
 
 ${PASSIVE}
 
-Accorde un Tour Supplémentaire et réduit de 3 tours le temps de recharge de cette Compétence si les PV de ce Champion tombent sous 20 % lorsqu'il se fait attaquer.`,
+Accorde un Tour Supplémentaire et réduit de 3 tours le temps de recharge de cette Compétence si les PV de ce Champion tombent sous 20% lorsqu'il se fait attaquer.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
         }

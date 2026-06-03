@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Coup Final",
-          description: `Attaque un ennemi. Si la cible possède moins de 50 % de PV, cette attaque passe toujours en critique.`,
+          description: `Attaque un ennemi. Si la cible possède moins de 50% de PV, cette attaque passe toujours en critique.`,
           damage: "5.5*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Décimer",
-          description: `Attaque un ennemi. Place sur tous les ennemis un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.PRE} de 50 % pendant 2 tours si cette attaque passe en critique.`,
+          description: `Attaque un ennemi. Place sur tous les ennemis un débuff ${DEBUFFS.SPD} de 30% et un débuff ${DEBUFFS.PRE} de 50% pendant 2 tours si cette attaque passe en critique.`,
           damage: "6*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],

@@ -6,7 +6,7 @@ const championData = {
       name: "Lacération rapide",
       description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Remplit le Compteur de Tour de tous les alliés de 10 % si cette attaque est critique.`,
+Remplit le Compteur de Tour de tous les alliés de 10% si cette attaque est critique.`,
       damage: "3.2*ATQ",
       levelInfo: [
         "Dégâts +10%",
@@ -16,7 +16,7 @@ Remplit le Compteur de Tour de tous les alliés de 10 % si cette attaque est cri
     {
       img: "assets/sort2.webp",
       name: "Tacticien surnaturel",
-      description: `Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires si le Compteur de Tour de la cible est inférieur à 50 %.${RETURN}${RETURN}
+      description: `Attaque 2 fois un ennemi. Placera 2 frappes supplémentaires si le Compteur de Tour de la cible est inférieur à 50%.${RETURN}${RETURN}
 
 Ignorera un pourcentage de la DÉF de la cible équivalent au Compteur de Tour actuel de la cible.${RETURN}${RETURN}
 
@@ -35,7 +35,7 @@ Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
       name: "Prémonition décisive",
       description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Vole 100 % du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.`,
+Vole 100% du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.TRUE_FEAR} pendant 2 tours.`,
       damage: "5*ATQ",
       cooldown: 5,
       factions: [
@@ -56,7 +56,7 @@ Vole 100 % du Compteur de Tour actuel de la cible et place un débuff ${DEBUFFS.
     {
       img: "assets/passif1.webp",
       name: "Fléau du Mikage [P]",
-      description: `Remplit le Compteur de Tour de ce Champion de 15 % dès qu'un Champion ennemi joue un tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
+      description: `Remplit le Compteur de Tour de ce Champion de 15% dès qu'un Champion ennemi joue un tour. Si plusieurs Champions de l'équipe disposent de cette Compétence, une seule sera activée. Cette compétence ne s'activera pas sur les copies en double de ce Champion si ce Champion spécifique est mort.`,
       factions: [
         `
         Les effets d'augmentation du Compteur de Tour sur les alliés sont 20% plus efficaces.

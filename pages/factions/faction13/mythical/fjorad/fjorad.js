@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Morsure du loup",
-          description: `Attaque 2 fois un ennemi. Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. Il est impossible de résister à ce débuff et de le bloquer si le Champion ciblé fait partie du Pacte Gaellen.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Chaque frappe a 50% de chances de placer un débuff ${DEBUFFS.GEL} pendant 1 tour. Il est impossible de résister à ce débuff et de le bloquer si le Champion ciblé fait partie du Pacte Gaellen.${RETURN}${RETURN}
 
 Si la cible ne se trouve pas sous débuff ${DEBUFFS.GEL}, répétera une fois l'attaque.`,
           damage: "2.6*ATQ",
@@ -15,7 +15,7 @@ Si la cible ne se trouve pas sous débuff ${DEBUFFS.GEL}, répétera une fois l'
         {
           img: "assets/sort2.webp",
           name: "Grand Capitaine",
-          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.SPD} de 30% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge de toutes les compétences des alliés, sauf celles de ce Champion.`,
           cooldown: 4,
@@ -27,9 +27,9 @@ Réduit d'1 tour le temps de recharge de toutes les compétences des alliés, sa
           name: "Rage du Coeur-de-loup",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour et un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis pendant 2 tours. Si un ennemi appartient au Pacte Gaellen, place au lieu de cela un débuff ${DEBUFFS.GEL} pendant 2 tours, et il est impossible de bloquer ce débuff et d'y résister.${RETURN}${RETURN}
+Place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour et un débuff ${DEBUFFS.SPD} de 30% sur tous les ennemis pendant 2 tours. Si un ennemi appartient au Pacte Gaellen, place au lieu de cela un débuff ${DEBUFFS.GEL} pendant 2 tours, et il est impossible de bloquer ce débuff et d'y résister.${RETURN}${RETURN}
 
-Réduit également le Compteur de Tour de la cible de 30 %. Si l'ennemi fait partie du Pacte Gaellen, réduit son Compteur de Tour de 50 %.${RETURN}${RETURN}
+Réduit également le Compteur de Tour de la cible de 30%. Si l'ennemi fait partie du Pacte Gaellen, réduit son Compteur de Tour de 50%.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire.`,
           damage: "5.6*ATQ",
@@ -47,9 +47,9 @@ Accorde un Tour supplémentaire.`,
         {
           img: "assets/passif1.webp",
           name: "Se mange froid [P]",
-          description: `Dès que ce Champion ou un allié reçoit un débuff d'un ennemi, a 30 % de chances de placer un débuff ${DEBUFFS.GEL} sur cet ennemi pendant 1 tour.${RETURN}${RETURN}
+          description: `Dès que ce Champion ou un allié reçoit un débuff d'un ennemi, a 30% de chances de placer un débuff ${DEBUFFS.GEL} sur cet ennemi pendant 1 tour.${RETURN}${RETURN}
 
-Ces chances augmentent jusqu'à 100 %, et il est impossible de bloquer ce débuff et d'y résister si la cible fait partie du Pacte Gaellen.`,
+Ces chances augmentent jusqu'à 100%, et il est impossible de bloquer ce débuff et d'y résister si la cible fait partie du Pacte Gaellen.`,
           isPassive: true
         }
       ],
@@ -76,7 +76,7 @@ Ces chances augmentent jusqu'à 100 %, et il est impossible de bloquer ce débuf
           name: "Fente de givre",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera 15 % de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUFFS.GEL}, ignorera au lieu de cela 35 % de la DÉF de la cible.${RETURN}${RETURN}
+Ignorera 15% de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUFFS.GEL}, ignorera au lieu de cela 35% de la DÉF de la cible.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, réinitialise le temps de recharge d'une compétence aléatoire de ce Champion.`,
           damage: "0.28*PV",
@@ -88,9 +88,9 @@ Si cette attaque tue un ennemi, réinitialise le temps de recharge d'une compét
           name: "Séisme de glacier",
           description: `Attaque tous les ennemis. Inflige une frappe supplémentaire aux ennemis sous débuffs ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.${RETURN}${RETURN}
 
-Chaque frappe réduit les PV MAX de chaque cible de 25 % des dégâts infligés (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
+Chaque frappe réduit les PV MAX de chaque cible de 25% des dégâts infligés (s'accumule jusqu'à 50%).${RETURN}${RETURN}
 
-Chaque frappe réduit également le Compteur de Tour de chaque cible de 25 %. Il est impossible de résister à cet effet si un ennemi se trouve sous débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
+Chaque frappe réduit également le Compteur de Tour de chaque cible de 25%. Il est impossible de résister à cet effet si un ennemi se trouve sous débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
           damage: "0.3*PVMultiplier: 0.28*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
@@ -101,7 +101,7 @@ Chaque frappe réduit également le Compteur de Tour de chaque cible de 25 %. Il
           name: "Disciple de Tormin",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Ignorera 50 % de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUFFS.GEL}, ignorera au lieu de cela 100 % de la DÉF de la cible et les buffs ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
+Ignorera 50% de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUFFS.GEL}, ignorera au lieu de cela 100% de la DÉF de la cible et les buffs ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
 Si la cible est tuée lorsqu'elle se trouve sous débuff ${DEBUFFS.GEL}, place également un débuff ${DEBUFFS.BLOCK_REA} sur elle et place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
@@ -123,7 +123,7 @@ Il est impossible pour les ennemis du Pacte Gaellen de bloquer le débuff ${DEBU
           name: "Résolution glaciale [P]",
           description: `Contre-attaque avec la compétence Fente de givre dès qu'un ennemi augmente le temps de recharge d'une des compétences de ce Champion.${RETURN}${RETURN}
 
-Lorsqu'un allié est tué, a 50 % de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Ces chances augmentent jusqu'à 100 % et il est impossible pour les ennemis du Pacte Gaellen de le bloquer ou d'y résister.`,
+Lorsqu'un allié est tué, a 50% de chances de placer un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour. Ces chances augmentent jusqu'à 100% et il est impossible pour les ennemis du Pacte Gaellen de le bloquer ou d'y résister.`,
           isPassive: true
         }
       ],

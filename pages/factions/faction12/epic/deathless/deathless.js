@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Murmures de Tombe",
-          description: `Attaque un ennemi. Possède 70 % de chances de placer 2 tours de débuff de ${DEBUFFS.DEF} de 60 % si un ou plusieurs alliés sont morts, 2 tours de débuff de ${DEBUFFS.SPD} de 30 % si 2 alliés ou plus sont morts, et 2 tours de débuff de ${DEBUFFS.PRE} de 50 % si 3 alliés ou plus sont morts.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Possède 70% de chances de placer 2 tours de débuff de ${DEBUFFS.DEF} de 60% si un ou plusieurs alliés sont morts, 2 tours de débuff de ${DEBUFFS.SPD} de 30% si 2 alliés ou plus sont morts, et 2 tours de débuff de ${DEBUFFS.PRE} de 50% si 3 alliés ou plus sont morts.${RETURN}${RETURN}
 
 Les dégâts infligés sont proportionnels à la DÉF.`,
           damage: "4.5*DEF",
@@ -14,7 +14,7 @@ Les dégâts infligés sont proportionnels à la DÉF.`,
         {
           img: "assets/sort2.webp",
           name: "Insultes Abominables",
-          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 30 % sur ce Champion, puis attaque un ennemi. Possède 80 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
+          description: `Place, pendant 2 tours, un buff de ${BUFFS.REFLECT_DAM} de 30% sur ce Champion, puis attaque un ennemi. Possède 80% de chances de placer un débuff de ${DEBUFFS.PROVOKE} d'1 tour.`,
           damage: "6.2*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],

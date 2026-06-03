@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Marais grinçant",
-          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20 % des dégâts infligés.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20% des dégâts infligés.${RETURN}${RETURN}
 
-Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
+Soigne également ce Champion de 10% de ses PV MAX pour chaque coup critique.`,
           damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -23,7 +23,7 @@ Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
         {
           img: "assets/sort3.webp",
           name: "Superprédateur",
-          description: `Place un buff ${BUFFS.CRATE} de 30 % et un buff ${BUFFS.CDAM} de 30 % sur tous les alliés pendant 3 tours, puis accorde un Tour Supplémentaire.`,
+          description: `Place un buff ${BUFFS.CRATE} de 30% et un buff ${BUFFS.CDAM} de 30% sur tous les alliés pendant 3 tours, puis accorde un Tour Supplémentaire.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -31,7 +31,7 @@ Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
         {
           img: "assets/passif1.webp",
           name: "Faim insatiable [P]",
-          description: `Dès que ce Champion attaque, réduit l'ATQ ou la DÉF de la cible de 5 %, et sa PRÉ ou sa RÉS de 5 %, selon la statistique la plus élevée (s'accumule jusqu'à 30 %).`,
+          description: `Dès que ce Champion attaque, réduit l'ATQ ou la DÉF de la cible de 5%, et sa PRÉ ou sa RÉS de 5%, selon la statistique la plus élevée (s'accumule jusqu'à 30%).`,
           isPassive: true
         }
       ],

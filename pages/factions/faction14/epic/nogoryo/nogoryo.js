@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Doubles kamas",
-          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si ce Champion se trouve sous buff ${BUFFS.ATK}. Chaque frappe possède 20 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
+          description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si ce Champion se trouve sous buff ${BUFFS.ATK}. Chaque frappe possède 20% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.`,
           damage: "1.2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -32,7 +32,7 @@ Si ce Champion se trouve sous buff ${BUFFS.ATK}, vole tous les buffs de l'ennemi
         {
           img: "assets/passif1.webp",
           name: "Désir d'assassin [P]",
-          description: `Place un buff ${BUFFS.ATK} de 50 % sur ce Champion pendant 2 tours lorsque ses PV tombent sous 30 %. Il est impossible de retirer ce buff.`,
+          description: `Place un buff ${BUFFS.ATK} de 50% sur ce Champion pendant 2 tours lorsque ses PV tombent sous 30%. Il est impossible de retirer ce buff.`,
           cooldown: 3,
           isPassive: true
         }

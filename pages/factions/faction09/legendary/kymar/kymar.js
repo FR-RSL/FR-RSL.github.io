@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Feu Fantôme",
-          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5 % pendant 1 tour si cette attaque passe en critique.`,
+          description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.POISON} de 5% pendant 1 tour si cette attaque passe en critique.`,
           damage: "3*ATQ",
           levelInfo: [
             "Dégâts +5%",

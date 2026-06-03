@@ -4,18 +4,18 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Coup chargé",
-          description: `Attaque un ennemi. Ignore 15 % de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignore 15% de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
 
-Possède également 20 % de chances d'accorder un Tour supplémentaire.`,
+Possède également 20% de chances d'accorder un Tour supplémentaire.`,
           damage: "0.22*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
         },
         {
           img: "assets/sort2.webp",
           name: "Coup large",
-          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.STONE_SKIN}, ${BUFFS.DEF} et ${BUFFS.ALLY_PROTECT}. Ignore également 15 % de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera les buffs ${BUFFS.STRENGTHEN}, ${BUFFS.STONE_SKIN}, ${BUFFS.DEF} et ${BUFFS.ALLY_PROTECT}. Ignore également 15% de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
 
-Réduit l'ATQ de la cible de 10 % (s'accumule jusqu'à 30 %).`,
+Réduit l'ATQ de la cible de 10% (s'accumule jusqu'à 30%).`,
           damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -23,9 +23,9 @@ Réduit l'ATQ de la cible de 10 % (s'accumule jusqu'à 30 %).`,
         {
           img: "assets/sort3.webp",
           name: "Coup large puissant",
-          description: `Attaque tous les ennemis. Ignore 15 % de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Ignore 15% de la DÉF de la cible si cette attaque passe en critique.${RETURN}${RETURN}
 
-Réduit la DÉF de la cible de 5 % (s'accumule jusqu'à 30 %).`,
+Réduit la DÉF de la cible de 5% (s'accumule jusqu'à 30%).`,
           damage: "0.26*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -33,7 +33,7 @@ Réduit la DÉF de la cible de 5 % (s'accumule jusqu'à 30 %).`,
         {
           img: "assets/sort4.webp",
           name: "Véritable coup chargé",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible. Remplit le Compteur de Tour de ce Champion de 50 % si l'attaque passe en critique.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera 50% de la DÉF de la cible. Remplit le Compteur de Tour de ce Champion de 50% si l'attaque passe en critique.${RETURN}${RETURN}
 
 Les dégâts infligés par cette compétence ne peuvent pas être réduits par les Compétences Passives ou Maîtrises des ennemis, sauf les Compétences Passives des Boss.${RETURN}${RETURN}
 

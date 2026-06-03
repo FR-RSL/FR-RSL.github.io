@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Chef Épéiste",
-          description: `Attaque un ennemi. Place, pendant 1 tour, un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés si l'attaque passe en critique.`,
+          description: `Attaque un ennemi. Place, pendant 1 tour, un buff d'${BUFFS.CRATE} de 30% sur tous les alliés si l'attaque passe en critique.`,
           damage: "3.6*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Insurmontable",
-          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours. Il est impossible de résister à ces débuffs lorsque Zavia se trouve dans la même équipe.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.DEF} de 60% et un débuff ${DEBUFFS.WEAKEN} de 25% pendant 2 tours. Il est impossible de résister à ces débuffs lorsque Zavia se trouve dans la même équipe.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.PERFECT_VEIL} sur ce Champion pendant 2 tours.`,
           damage: "4.2*ATQ",

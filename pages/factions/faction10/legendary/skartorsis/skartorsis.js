@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Main Mortelle",
-          description: `Attaque tous les ennemis. Possède 30 % de chances de voler 1 buff aléatoire sur chaque ennemi.`,
+          description: `Attaque tous les ennemis. Possède 30% de chances de voler 1 buff aléatoire sur chaque ennemi.`,
           damage: "4*ATQ",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Adjonction",
-          description: `Place un buff d'${BUFFS.ATK} de 50 % et un buff d'${BUFFS.CRATE} de 30 % sur tous les alliés pendant 2 tours.`,
+          description: `Place un buff d'${BUFFS.ATK} de 50% et un buff d'${BUFFS.CRATE} de 30% sur tous les alliés pendant 2 tours.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

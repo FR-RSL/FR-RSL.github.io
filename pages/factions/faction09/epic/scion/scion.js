@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Khépesh de Cauchemar",
-          description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
+          description: `Attaque un ennemi. Possède 20% de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Mauvaise Graine",
-          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.HEALS} de 100% pendant 2 tours.${RETURN}${RETURN}
 
 Ignorera les buffs ${BUFFS.SHIELD}.`,
           damage: "6*ATQ",
@@ -23,7 +23,7 @@ Ignorera les buffs ${BUFFS.SHIELD}.`,
         {
           img: "assets/sort3.webp",
           name: "Chaos rampant",
-          description: `Retire tous les débuffs sur ce Champion, puis attaque tous les ennemis. Après l'attaque, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 1 tour.`,
+          description: `Retire tous les débuffs sur ce Champion, puis attaque tous les ennemis. Après l'attaque, place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 1 tour.`,
           damage: "3.8*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],

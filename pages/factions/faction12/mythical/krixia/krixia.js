@@ -5,7 +5,7 @@ const championForms = {
         {
           img: "assets/sort1.webp",
           name: "Entaille de lance-épée",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50% de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
@@ -13,9 +13,9 @@ const championForms = {
         {
           img: "assets/sort2.webp",
           name: "Lanterne de ruine",
-          description: `Place un débuff ${DEBUFFS.RES} de 50 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+          description: `Place un débuff ${DEBUFFS.RES} de 50% et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
-Réduit également le Compteur de Tour de chaque cible de 20 %.`,
+Réduit également le Compteur de Tour de chaque cible de 20%.`,
           cooldown: 4,
           levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
@@ -65,7 +65,7 @@ Augmente également de 3 tours la durée des temps de recharge de toutes les com
         {
           img: "assets/sort4.webp",
           name: "Aile-lame",
-          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de réduire d'1 tour la durée de tous les débuffs sur un allié aléatoire.`,
+          description: `Attaque 2 fois un ennemi. Chaque frappe possède 50% de chances de réduire d'1 tour la durée de tous les débuffs sur un allié aléatoire.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -73,9 +73,9 @@ Augmente également de 3 tours la durée des temps de recharge de toutes les com
         {
           img: "assets/sort5.webp",
           name: "Pluie de damnation",
-          description: `Attaque tous les ennemis. Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.RES} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Place un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.RES} de 50% sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
-Ensuite, remplit le Compteur de Tour de tous les alliés de 20 %.`,
+Ensuite, remplit le Compteur de Tour de tous les alliés de 20%.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Temps de recharge -1"],

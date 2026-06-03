@@ -4,9 +4,9 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Hallebarde du Soleil",
-          description: `Attaque un ennemi. Augmente la DÉF de ce Champion de 5 % si cette attaque passe en critique (s'accumule jusqu'à 20 %).${RETURN}${RETURN}
+          description: `Attaque un ennemi. Augmente la DÉF de ce Champion de 5% si cette attaque passe en critique (s'accumule jusqu'à 20%).${RETURN}${RETURN}
 
-Soignera également ce Champion de 75 % de sa DÉF après l'attaque si sa DÉF a déjà été augmentée de 20 %.`,
+Soignera également ce Champion de 75% de sa DÉF après l'attaque si sa DÉF a déjà été augmentée de 20%.`,
           damage: "3.2*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
@@ -14,7 +14,7 @@ Soignera également ce Champion de 75 % de sa DÉF après l'attaque si sa DÉF a
         {
           img: "assets/sort2.webp",
           name: "Bénédiction Solaire",
-          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20 % des dégâts infligés pendant 2 tours.`,
+          description: `Attaque tous les ennemis. Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 20% des dégâts infligés pendant 2 tours.`,
           damage: "3*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
@@ -33,7 +33,7 @@ Convertit la RÉS de ce Champion en PRÉ supplémentaire lors de l'utilisation d
         {
           img: "assets/passif1.webp",
           name: "Intercesseuse [P]",
-          description: `Dès qu'un allié qui possède 2 débuffs ou plus se fait attaquer, ce Champion absorbera 30 % des dégâts infligés à cet allié.`,
+          description: `Dès qu'un allié qui possède 2 débuffs ou plus se fait attaquer, ce Champion absorbera 30% des dégâts infligés à cet allié.`,
           isPassive: true
         }
       ],

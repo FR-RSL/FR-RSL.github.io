@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Stupéfier",
-          description: `Attaque un ennemi. Possède 60 % de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. Possède 50 % de chances d'accorder un Tour Supplémentaire si un débuff ${DEBUFFS.SLEEP} est placé.`,
+          description: `Attaque un ennemi. Possède 60% de chances de placer un débuff ${DEBUFFS.SLEEP} pendant 1 tour. Possède 50% de chances d'accorder un Tour Supplémentaire si un débuff ${DEBUFFS.SLEEP} est placé.`,
           damage: "3.8*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false

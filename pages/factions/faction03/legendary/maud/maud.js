@@ -6,9 +6,9 @@ const championData = {
           name: "Lance bénie",
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
-Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
+Possède 50% de chances de placer un débuff ${DEBUFFS.ATK} de 50% pendant 2 tours.${RETURN}${RETURN}
 
-Possède également 80 % de chances de placer un buff ${BUFFS.ATK} de 50 % sur l'allié ayant l'ATQ la plus élevée pendant 1 tour.`,
+Possède également 80% de chances de placer un buff ${BUFFS.ATK} de 50% sur l'allié ayant l'ATQ la plus élevée pendant 1 tour.`,
           damage: "4.5*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -18,9 +18,9 @@ Possède également 80 % de chances de placer un buff ${BUFFS.ATK} de 50 % sur l
           name: "Phalange sacrée",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Possède 75 % de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis.${RETURN}${RETURN}
+Possède 75% de chances de réduire de 2 tours la durée de tous les buffs sur les ennemis.${RETURN}${RETURN}
 
-Augmente ensuite la durée de tous les buffs des alliés d'1 tour. Soigne également tous tes alliés à hauteur de 20 % des PV MAX de cette Championne.`,
+Augmente ensuite la durée de tous les buffs des alliés d'1 tour. Soigne également tous tes alliés à hauteur de 20% des PV MAX de cette Championne.`,
           damage: "4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -29,11 +29,11 @@ Augmente ensuite la durée de tous les buffs des alliés d'1 tour. Soigne égale
         {
           img: "assets/sort3.webp",
           name: "Psaume de renaissance",
-          description: `Ranime tous les alliés morts avec 50 % de PV et 50 % de Compteur de Tour.${RETURN}${RETURN}
+          description: `Ranime tous les alliés morts avec 50% de PV et 50% de Compteur de Tour.${RETURN}${RETURN}
 
-Si la DÉF d'un allié est supérieure ou égale à son ATQ, lui accorde un buff ${BUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
+Si la DÉF d'un allié est supérieure ou égale à son ATQ, lui accorde un buff ${BUFFS.DEF} de 60% pendant 2 tours.${RETURN}${RETURN}
 
-Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff ${BUFFS.ATK} de 50 % pendant 2 tours.`,
+Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff ${BUFFS.ATK} de 50% pendant 2 tours.`,
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -43,7 +43,7 @@ Si l'ATQ d'un allié est plus élevée que sa DÉF, lui accorde plutôt un buff 
           name: "Vêpres éclatantes [P]",
           description: `Au début du tour de cette Championne, retire un débuff aléatoire sur tous les alliés.${RETURN}${RETURN}
 
-À la fin du tour de cette Championne, place un buff ${BUFFS.HEALS} de 15 % pendant 1 tour sur l'allié ayant le moins de PV.`,
+À la fin du tour de cette Championne, place un buff ${BUFFS.HEALS} de 15% pendant 1 tour sur l'allié ayant le moins de PV.`,
           isPassive: true
         }
       ],

@@ -6,7 +6,7 @@ const championData = {
           name: "Tonalité d'effroi",
           description: `Attaque un ennemi. Transfère tous les débuffs de ce Champion sur la cible avant l'attaque. Il est impossible pour les Boss de résister à cet effet.${RETURN}${RETURN}
 
-A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il est impossible pour les Boss de résister à ce débuff.`,
+A 75% de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il est impossible pour les Boss de résister à ce débuff.`,
           damage: "3.3*DEF",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -16,9 +16,9 @@ A 75 % de chances de placer un débuff ${DEBUFFS.TRUE_FEAR} pendant 1 tour. Il e
           name: "Dissonance sismique",
           description: `Attaque 2 fois tous les ennemis.${RETURN}${RETURN}
 
-Après la première frappe, a 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.${RETURN}${RETURN}
+Après la première frappe, a 75% de chances de placer un débuff ${DEBUFFS.DEF} de 60% et un débuff ${DEBUFFS.WEAKEN} de 25% sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.${RETURN}${RETURN}
 
-Après la seconde frappe, a 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % et un débuff ${DEBUFFS.RES} de 50 % sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.`,
+Après la seconde frappe, a 75% de chances de placer un débuff ${DEBUFFS.PRE} de 50% et un débuff ${DEBUFFS.RES} de 50% sur tous les ennemis pendant 2 tours. Il est impossible pour les Boss de résister à ces débuffs.`,
           damage: "2*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
@@ -35,7 +35,7 @@ Après la seconde frappe, a 75 % de chances de placer un débuff ${DEBUFFS.PRE} 
         {
           img: "assets/passif1.webp",
           name: "Bourdonnement d'agonie [P]",
-          description: `Dès que ce Champion place un débuff sur un ennemi, inflige des dégâts égaux à 1 % de ses PV MAX pour chaque débuff dont il est actuellement affligé. (S'accumule jusqu'à 10 %.) Se produit une fois par compétence et une fois par cible.`,
+          description: `Dès que ce Champion place un débuff sur un ennemi, inflige des dégâts égaux à 1% de ses PV MAX pour chaque débuff dont il est actuellement affligé. (S'accumule jusqu'à 10%.) Se produit une fois par compétence et une fois par cible.`,
           damage: "0.01*Target Max HP*Target Debuffs",
           isPassive: true
         }

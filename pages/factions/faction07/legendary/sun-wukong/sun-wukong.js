@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Je te tiens !",
-          description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 50 % si la cible possède des buffs.`,
+          description: `Attaque un ennemi. Possède 25% de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour. Ces chances passent à 50% si la cible possède des buffs.`,
           damage: "3.5*ATQ",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -12,9 +12,9 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Bâton à miracles",
-          description: `Attaque un ennemi. Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
+          description: `Attaque un ennemi. Ignorera 50% de la DÉF de la cible.${RETURN}${RETURN}
 
-Si la cible est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. Chaque frappe ignorera également 50 % de la DÉF de la cible. Cette attaque ne peut pas passer en critique.${RETURN}${RETURN}
+Si la cible est tuée, attaquera tous les ennemis restants avec l'excédent de dégâts. Chaque frappe ignorera également 50% de la DÉF de la cible. Cette attaque ne peut pas passer en critique.${RETURN}${RETURN}
 
 Si la cible initiale survit, lui inflige un débuff ${DEBUFFS.SHEEP} pendant 1 tour. Il est impossible de bloquer ce débuff.`,
           damage: "5*ATQMultiplier: Remaining Damage Amount",
@@ -34,7 +34,7 @@ Si la cible initiale survit, lui inflige un débuff ${DEBUFFS.SHEEP} pendant 1 t
         {
           img: "assets/passif1.webp",
           name: "Invincible Wukong [P]",
-          description: `Ranime ce Champion avec 100 % de PV et 100 % de Compteur de tour 3 tours après qu'il s'est fait tuer.`,
+          description: `Ranime ce Champion avec 100% de PV et 100% de Compteur de tour 3 tours après qu'il s'est fait tuer.`,
           isPassive: true
         }
       ],

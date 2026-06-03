@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Frappe Ensorcelée",
-          description: `Attaque 1 ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
+          description: `Attaque 1 ennemi. Possède 30% de chances de placer un débuff de ${DEBUFFS.HEALS} de 50% pendant 2 tours.`,
           damage: "5.1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
@@ -12,7 +12,7 @@ const championData = {
         {
           img: "assets/sort2.webp",
           name: "Répandre la Frénésie",
-          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25 % sur tous les alliés.`,
+          description: `Place, pendant 2 tours, un buff d'${BUFFS.ATK} de 25% sur tous les alliés.`,
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

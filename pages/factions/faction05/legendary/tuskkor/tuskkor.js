@@ -6,7 +6,7 @@ const championData = {
           name: "Broyeur d'adversaire",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-A 25 % de chances d'accorder un Tour supplémentaire.`,
+A 25% de chances d'accorder un Tour supplémentaire.`,
           damage: "2*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
@@ -14,7 +14,7 @@ A 25 % de chances d'accorder un Tour supplémentaire.`,
         {
           img: "assets/sort2.webp",
           name: "Barrage de hachette",
-          description: `Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 10 % pour chaque buff dont bénéficie ce Champion.${RETURN}${RETURN}
+          description: `Attaque tous les ennemis. Les dégâts infligés par cette compétence augmentent de 10% pour chaque buff dont bénéficie ce Champion.${RETURN}${RETURN}
 
 Réduit d'1 tour le temps de recharge de cette compétence si cette attaque tue un ennemi. Si cette attaque tue 2 ennemis ou plus, accorde au lieu de ça un Tour supplémentaire à ce Champion.`,
           damage: "4*ATQ*(1+0.1*Active Buff Count)",
@@ -25,7 +25,7 @@ Réduit d'1 tour le temps de recharge de cette compétence si cette attaque tue 
         {
           img: "assets/sort3.webp",
           name: "Furie de Prime-hache",
-          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.CDAM} de 30 % sur ce Champion pendant 2 tours.${RETURN}${RETURN}
+          description: `Attaque 2 fois un ennemi. Avant d'attaquer, place un buff ${BUFFS.ATK} de 50% et un buff ${BUFFS.CDAM} de 30% sur ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Ignorera les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
@@ -38,9 +38,9 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
         {
           img: "assets/passif1.webp",
           name: "Véhémence brutale [P]",
-          description: `Chaque Tour supplémentaire qu'obtient ce Champion augmente ses DÉG C. de 10 % (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
+          description: `Chaque Tour supplémentaire qu'obtient ce Champion augmente ses DÉG C. de 10% (s'accumule jusqu'à 50%).${RETURN}${RETURN}
 
-Chaque Tour supplémentaire qu'obtient ce Champion réduit également les dégâts qu'il reçoit de 5 % (s'accumule jusqu'à 50 %).`,
+Chaque Tour supplémentaire qu'obtient ce Champion réduit également les dégâts qu'il reçoit de 5% (s'accumule jusqu'à 50%).`,
           isPassive: true
         }
       ],

@@ -4,7 +4,7 @@ const championData = {
         {
           img: "assets/sort1.webp",
           name: "Bec plongeant",
-          description: `Attaque un ennemi. Possède 50 % de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences prise au hasard de la cible.`,
+          description: `Attaque un ennemi. Possède 50% de chances d'augmenter de 2 tours le temps de recharge d'une des Compétences prise au hasard de la cible.`,
           damage: "3.3*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Posture de sentinelle",
-          description: `Place sur ce Champion un buff ${BUFFS.DEF} de 60 % pendant 3 tours et un buff ${BUFFS.COUNTER} pendant 2 tours.`,
+          description: `Place sur ce Champion un buff ${BUFFS.DEF} de 60% pendant 3 tours et un buff ${BUFFS.COUNTER} pendant 2 tours.`,
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -31,7 +31,7 @@ const championData = {
           name: "Mouette rieuse [P]",
           description: `${PASSIVE}
 
-Augmente la DÉF de ce Champion de 10 % chaque fois qu'il contre-attaque. La DÉF se réinitialise chaque fois que ce Champion joue un tour.${RETURN}${RETURN}
+Augmente la DÉF de ce Champion de 10% chaque fois qu'il contre-attaque. La DÉF se réinitialise chaque fois que ce Champion joue un tour.${RETURN}${RETURN}
 
 Lorsqu'il attaque, convertit la RÉS de ce Champion en PRÉ supplémentaire.${RETURN}${RETURN}
 

@@ -20,7 +20,7 @@ const championData = {
         {
           img: "assets/sort3.webp",
           name: "Agacer",
-          description: `Attaque 1 ennemi. Possède 80 % de chances de placer un débuff de ${DEBUFFS.PROVOKE} de 2 tours. Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15 % sur ce Champion.`,
+          description: `Attaque 1 ennemi. Possède 80% de chances de placer un débuff de ${DEBUFFS.PROVOKE} de 2 tours. Place, pendant 2 tours, un buff de ${BUFFS.HEALS} de 15% sur ce Champion.`,
           damage: "5.8*DEF",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],

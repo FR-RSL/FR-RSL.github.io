@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Flamme Bénie",
           description: `Attaque 1 ennemi. Possède 10 % de chances de placer un débuff de ${DEBUFFS.DEF} de 30 % pendant 2 tours.`,
-          damage: "0.14*HP",
+          damage: "0.14*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Rafale de Cristal",
           description: `Attaque tous les ennemis. Place un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

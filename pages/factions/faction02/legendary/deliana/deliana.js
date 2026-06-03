@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Voleuse de Coeur",
           description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff ${DEBUFFS.LEECH} pendant 2 tours.`,
-          damage: "0.22*HP",
+          damage: "0.22*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS}, applique également un effet de [Propagation de Débuff], prenant tout débuff ${DEBUFFS.RES} sur la cible pour le placer sur tous les ennemis.`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 4,
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
@@ -28,7 +28,7 @@ Si la cible se trouve sous débuff ${DEBUFFS.BLOCK_BUFFS}, applique également u
 Soigne tous les alliés de 5 % de leurs PV MAX pour chaque débuff ${DEBUFFS.BLOCK_BUFFS} placé par cette compétence.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 10 % pour chaque tentative de débuff ${DEBUFFS.BLOCK_BUFFS} à laquelle l'équipe ennemie a résisté ou qu'elle a bloquée.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 5,
           levelInfo: ["Chances de Buff/Debuff +10%", "Dégâts +5%", "Chances de Buff/Debuff +15%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

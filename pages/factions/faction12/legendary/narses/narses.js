@@ -9,7 +9,7 @@ const championData = {
 Possède 30 % de chances d'augmenter aléatoirement le temps de recharge d'une compétence de la cible de 2 tours.${RETURN}${RETURN}
 
 Il est impossible de résister à cet effet si Ankora Reine Spectre se trouve dans la même équipe.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Il est impossible de résister à cet effet si Ankora Reine Spectre se trouve da
           description: `Attaque tous les ennemis. Ignorera 25 % de la DÉF de la cible. Place une frappe supplémentaire sur les cibles sous buffs ${BUFFS.SHIELD} ou ${BUFFS.STRENGTHEN}.${RETURN}${RETURN}
 
 Les dégâts infligés par cette compétence ne peuvent pas être réduits par les Compétences Passives ou Maîtrises des ennemis, sauf les Compétences Passives des Boss. Les dégâts infligés par cette compétence ne peuvent pas non plus être augmentés par les Maîtrises de ce Champion ni les compétences Passives des alliés, sauf lors d'attaques sur les Boss.`,
-          damage: "0.28*HP",
+          damage: "0.28*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
@@ -32,7 +32,7 @@ Les dégâts infligés par cette compétence ne peuvent pas être réduits par l
 Si cette attaque tue une cible qui dispose de 3 buffs ou plus, place un débuff ${DEBUFFS.BLOCK_REA}.${RETURN}${RETURN}
 
 Accorde également un Tour supplémentaire si cette attaque tue un ennemi lorsque Ankora Reine Spectre se trouve dans la même équipe.`,
-          damage: "0.2*HP+(0.2*HP*0.1*Active Target Buffs)+(0.2*HP*0.1*Active Buff Count)",
+          damage: "0.2*PV+(0.2*PV*0.1*Active Target Buffs)+(0.2*PV*0.1*Active Buff Count)",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

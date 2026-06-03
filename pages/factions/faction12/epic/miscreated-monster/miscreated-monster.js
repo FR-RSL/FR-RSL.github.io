@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 15 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 1 tour si le débuff d'${DEBUFFS.STUN} est placé.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ Possède 50 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 
           description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.${RETURN}${RETURN}
 
 Place, sur tous les alliés, 3 tours de buff de ${BUFFS.SHIELD} égal à 25 % des dégâts infligés.`,
-          damage: "0.21*HP",
+          damage: "0.21*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

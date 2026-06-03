@@ -8,7 +8,7 @@ const championForms = {
           description: `Attaque tous les ennemis. Détruit les PV MAX de chaque cible de 3 % (s'accumule jusqu'à 30 %).${RETURN}${RETURN}
 
 Augmente également d'1 tour la durée d'1 debuff aléatoire sur tous les ennemis. Il est impossible de résister à cet effet si les ennemis sont affligés de piles de ${DEBUFFS.NECROSIS}.`,
-          damage: "0.19*HP",
+          damage: "0.19*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -34,7 +34,7 @@ Retire également les buffs affectant positivement les stats et les remplace par
 Ensuite, vole 5 % du Compteur de Tour de chaque cible pour chaque buff converti en débuff par cette compétence. Réduit également le Compteur de Tour de tous les ennemis de 20 %.${RETURN}${RETURN}
 
 Il est impossible de résister à ces effets si les ennemis sont affligés de piles de ${DEBUFFS.NECROSIS}.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 5,
           levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false

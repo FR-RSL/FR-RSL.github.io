@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Pyro tabassage",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée des débuffs ${DEBUFFS.BURN}.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Brise mensonge",
           description: `Attaque 2 fois un ennemi. La première frappe possède 75 % de chances de retirer tous les buffs ${BUFFS.BLOCK_DEBUFFS}. La seconde frappe possède 75% de chances de retirer un buff aléatoire, sauf les buffs ${BUFFS.BLOCK_DEBUFFS}.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
@@ -22,7 +22,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Feux du vieux",
           description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours. Remplit également le Compteur de Tour de ce Champion de 5 % pour chaque débuff ${DEBUFFS.BURN} dont est affligée l'équipe ennemie avant cette attaque.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

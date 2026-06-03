@@ -9,7 +9,7 @@ const championData = {
 A 50 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Lorsque ce Champion contre-attaque, ignorera également 20 % de la DÉF de la cible.`,
-          damage: "0.26*HP",
+          damage: "0.26*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -29,7 +29,7 @@ Lorsque ce Champion contre-attaque, ignorera également 20 % de la DÉF de la ci
 A 80 % de chances de réduire de 2 tours la durée de tous les buffs dont bénéficient les ennemis. A également 80 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Ignorera 25 % de la DÉF de chaque cible si ce Champion se trouve sous buff ${BUFFS.SHIELD}.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 3,
           levelInfo: ["Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%"],
           isPassive: false

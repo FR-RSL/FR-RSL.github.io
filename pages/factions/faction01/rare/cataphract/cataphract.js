@@ -21,7 +21,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Coupheaume",
           description: `Attaque 1 ennemi. Ignorera la DÉF si la cible possède moins de 50 % de PV. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
-          damage: "3.9*ATQ+0.1*HP",
+          damage: "3.9*ATQ+0.1*PV",
           cooldown: 6,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false

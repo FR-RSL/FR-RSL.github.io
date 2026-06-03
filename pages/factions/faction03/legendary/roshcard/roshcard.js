@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Sanction",
           description: `Attaque un ennemi. Place un débuff ${DEBUFFS.LOCK_ACTIVE} et un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de résister à ces débuffs.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

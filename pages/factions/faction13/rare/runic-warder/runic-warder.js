@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Double Coupe",
           description: `Attaque 2 fois un ennemi.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Acier Supérieur",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false

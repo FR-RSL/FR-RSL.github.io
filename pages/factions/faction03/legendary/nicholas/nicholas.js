@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Lame Boréale",
           description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff de ${DEBUFFS.GEL} d'1 tour.`,
-          damage: "0.28*HP",
+          damage: "0.28*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque tous les ennemis. Ignorera 30 % de la DÉF de chaque cible si Dame Noëlle se trouve dans la même équipe.${RETURN}${RETURN}
 
 Place un buff ${BUFFS.STRENGTHEN} de 25 % et un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à 30 % des dégâts infligés.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

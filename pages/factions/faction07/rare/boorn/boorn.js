@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 A 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },

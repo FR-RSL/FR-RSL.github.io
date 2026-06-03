@@ -21,7 +21,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Coup de Grâce",
           description: `Attaque un ennemi. Place une frappe supplémentaire si la cible est affligée d'un débuff ${DEBUFFS.STUN}. La frappe supplémentaire passe toujours en critique. Vole 50 % du Compteur de Tour de la cible si elle ne se trouve pas sous débuff ${DEBUFFS.STUN}.`,
-          damage: "2*ATQ+0.2*HP",
+          damage: "2*ATQ+0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

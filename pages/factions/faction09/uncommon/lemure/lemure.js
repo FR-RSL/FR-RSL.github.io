@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Sombre Rafale",
           description: `Attaque 1 ennemi. Possède 60 % de chances de placer un débuff de ${DEBUFFS.BOMB} qui détone après 3 tours.`,
-          damage: "2.8*ATQ+0.2*HP",
+          damage: "2.8*ATQ+0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Claque",
           description: `Attaque un ennemi. Remplit de 20 % le Compteur de Tours de ce Champion si l'attaque passe en critique.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Frappe Éclair",
           description: `Attaque un ennemi.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

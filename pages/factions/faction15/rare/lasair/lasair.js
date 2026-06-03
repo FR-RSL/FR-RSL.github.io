@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 3 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe soigne ce Champion de 3 % de ses PV MAX.`,
-          damage: "0.08*HP",
+          damage: "0.08*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe soigne ce Champion de 3 % de ses PV MAX.`,
 Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 25 % pendant 2 tours.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD}, équivalent à 20 % des PV MAX de ce Champion, pendant 2 tours.`,
-          damage: "0.13*HP",
+          damage: "0.13*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

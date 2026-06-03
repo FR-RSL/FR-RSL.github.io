@@ -10,7 +10,7 @@ const championForms = {
 Soigne tous tes alliés à hauteur de 5 % des PV MAX de cette Championne.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de cette Championne de 5 % pour chaque allié vivant et de 2,5 % supplémentaires pour chaque ennemi vivant.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           levelInfo: ["Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
@@ -76,7 +76,7 @@ Les alliés recevront 1 % de dégâts en moins par tranche de 2 % de PV perdus (
 Détruit la VIT de la cible de 3 points (s'accumule jusqu'à 30).${RETURN}${RETURN}
 
 Réduit le Compteur de Tour de la cible de 5 % pour chaque allié vivant et de 2,5 % supplémentaires pour chaque ennemi vivant.`,
-          damage: "0.29*HP",
+          damage: "0.29*PV",
           levelInfo: ["Ignorer la RES +20%"],
           isPassive: false
         },
@@ -86,7 +86,7 @@ Réduit le Compteur de Tour de la cible de 5 % pour chaque allié vivant et de 2
           description: `Attaque tous les ennemis. Avant d'attaquer, vole tous les buffs de tous les ennemis.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Si la VIT d'un ennemi est inférieure à la VIT de cette Championne, ces débuffs seront protégés.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false

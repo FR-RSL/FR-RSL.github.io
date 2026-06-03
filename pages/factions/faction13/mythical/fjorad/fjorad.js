@@ -79,7 +79,7 @@ Ces chances augmentent jusqu'à 100 %, et il est impossible de bloquer ce débuf
 Ignorera 15 % de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUFFS.GEL}, ignorera au lieu de cela 35 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Si cette attaque tue un ennemi, réinitialise le temps de recharge d'une compétence aléatoire de ce Champion.`,
-          damage: "0.28*HP",
+          damage: "0.28*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -91,7 +91,7 @@ Si cette attaque tue un ennemi, réinitialise le temps de recharge d'une compét
 Chaque frappe réduit les PV MAX de chaque cible de 25 % des dégâts infligés (s'accumule jusqu'à 50 %).${RETURN}${RETURN}
 
 Chaque frappe réduit également le Compteur de Tour de chaque cible de 25 %. Il est impossible de résister à cet effet si un ennemi se trouve sous débuff ${DEBUFFS.GEL}, ${DEBUFFS.STUN}, ${DEBUFFS.FEAR}, ${DEBUFFS.TRUE_FEAR}, ${DEBUFFS.PROVOKE} ou ${DEBUFFS.PETRIFICATION}.`,
-          damage: "0.3*HPMultiplier: 0.28*HP",
+          damage: "0.3*PVMultiplier: 0.28*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
@@ -106,7 +106,7 @@ Ignorera 50 % de la DÉF de la cible. Si la cible se trouve sous débuff ${DEBUF
 Si la cible est tuée lorsqu'elle se trouve sous débuff ${DEBUFFS.GEL}, place également un débuff ${DEBUFFS.BLOCK_REA} sur elle et place un débuff ${DEBUFFS.GEL} sur tous les ennemis pendant 1 tour.${RETURN}${RETURN}
 
 Il est impossible pour les ennemis du Pacte Gaellen de bloquer le débuff ${DEBUFFS.GEL} et d'y résister.`,
-          damage: "0.37*HP",
+          damage: "0.37*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

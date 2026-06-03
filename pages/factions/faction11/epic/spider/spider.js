@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Calamité",
           description: `Attaque tous les ennemis. Réduit d'1 tour la durée de tous les buffs. Offre 50 % de chances de placer un débuff de ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
-          damage: "1.8*ATQ+0.1*HP",
+          damage: "1.8*ATQ+0.1*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

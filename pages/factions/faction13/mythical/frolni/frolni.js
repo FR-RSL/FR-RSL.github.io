@@ -6,7 +6,7 @@ const championForms = {
           img: "assets/sort1.webp",
           name: "Choc sismique",
           description: `Attaque un ennemi. Ignorera 5 % de la DÉF de la cible pour chaque buff dont bénéficie ce Champion.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -16,7 +16,7 @@ const championForms = {
           description: `Attaque un ennemi. Vole 2 buffs à une cible ennemie. Il est impossible de résister à cet effet.${RETURN}${RETURN}
 
 Si cette attaque passe en critique, répète une fois l'attaque.`,
-          damage: "0.34*HP",
+          damage: "0.34*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
@@ -25,7 +25,7 @@ Si cette attaque passe en critique, répète une fois l'attaque.`,
           img: "assets/sort3.webp",
           name: "Exterminer les faibles",
           description: `Attaque tous les ennemis. Les dégâts de cette compétence augmentent de 30 % si les PV MAX de ce Champion sont plus élevés que les PV MAX de chaque cible.`,
-          damage: "0.31*HP",
+          damage: "0.31*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

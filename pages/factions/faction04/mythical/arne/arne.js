@@ -82,7 +82,7 @@ Dès que ce Champion est tué, le ranime avec 50 % de PV et 100 % de Compteur de
           description: `Attaque 2 fois un ennemi. Place un débuff ${DEBUFFS.STUN} pendant 1 tour.${RETURN}${RETURN}
 
 Si les PV de MAX de ce Champion sont supérieurs ou égaux à ceux de la cible, il est impossible de résister à ce débuff.`,
-          damage: "0.12*HP+1.4*ATQ",
+          damage: "0.12*PV+1.4*ATQ",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -102,7 +102,7 @@ Place un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours. 
           description: `Attaque tous les ennemis. Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours. Si les PV de MAX de ce Champion sont supérieurs ou égaux à ceux de la cible, il est impossible de résister à ce débuff.${RETURN}${RETURN}
 
 Cette attaque inflige à chaque cible individuelle des dégâts sur cible unique plutôt que des dégâts de zone. Ignorera 30 % de la DÉF de chaque cible. Place une frappe supplémentaire sur les Boss et les ennemis sous débuffs ${DEBUFFS.STUN} et ${DEBUFFS.PROVOKE}. Si une cible est un Boss, ou se trouve sous débuffs ${DEBUFFS.STUN} ou ${DEBUFFS.PROVOKE}, ignorera au lieu de cela 50 % de la DÉF.`,
-          damage: "0.35*HP+1.4*ATQ",
+          damage: "0.35*PV+1.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

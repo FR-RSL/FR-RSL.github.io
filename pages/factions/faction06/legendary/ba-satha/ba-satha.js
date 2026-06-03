@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Rouleau Mortel",
           description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -23,7 +23,7 @@ Place également un buff ${BUFFS.SHIELD} de 2 tours égal à 25 % des PV de ce C
           img: "assets/sort3.webp",
           name: "Poids Sidérant",
           description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour et de réduire le Compteur de Tour de chaque ennemi de 30 %.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

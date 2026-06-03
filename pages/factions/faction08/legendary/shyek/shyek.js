@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi. A 50 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, fait équipe avec les Bêteffroyables, Masquegores, Rejetons de Cabot, Crocs Infernaux, Chiens Cruels, Bêtes Suturées et Kro'khad Coupe-gorge alliés pour attaquer. Les alliés qui rejoignent l'attaque utiliseront leurs compétences par défaut.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
-          damage: "0.13*HP",
+          damage: "0.13*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe possède 25 % de chances de placer un débuff ${DEBUFFS.HEALS} de 
 Possède 75 % de chances de placer un débuff ${DEBUFFS.PRE} de 50 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Augmente également la durée de tous les buffs des alliés d'1 tour.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +15%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

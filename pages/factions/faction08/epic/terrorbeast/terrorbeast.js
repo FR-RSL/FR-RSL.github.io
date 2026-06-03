@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Cri Perçant",
           description: `Attaque 2 fois au hasard. Place, pendant 3 tours, un buff de ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

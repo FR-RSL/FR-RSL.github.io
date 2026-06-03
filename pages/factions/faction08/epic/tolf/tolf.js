@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion à hauteur de 30 % des dégâts infligés.${RETURN}${RETURN}
 
 Cette attaque ne peut pas passer en critique.`,
-          damage: "0.21*HP",
+          damage: "0.21*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Cette attaque ne peut pas passer en critique.`,
 Inflige des dégâts basés sur les PV MAX de ce Champion lorsqu'il attaque des Boss.${RETURN}${RETURN}
 
 Cette attaque ne peut pas passer en critique.`,
-          damage: "0.32*HPMultiplier: 1*HP",
+          damage: "0.32*PVMultiplier: 1*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

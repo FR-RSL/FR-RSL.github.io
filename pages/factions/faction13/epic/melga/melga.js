@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi. Possède 50 % de chances de retirer 1 débuff pris au hasard sur un allié choisi au hasard.${RETURN}${RETURN}
 
 Impossible de retirer un débuff dont ce Champion est affligé.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

@@ -19,7 +19,7 @@ Chaque frappe ignorera 20 % de la DÉF de la cible.`,
           description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
@@ -32,7 +32,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.DEF} de 60 % et un débuff ${DE
 Ignorera les buffs ${BUFFS.UNKILLABLE}, ${BUFFS.STONE_SKIN} et ${BUFFS.BLOCK_DAMAGE}. Si la cible ne se trouve pas sous buff ${BUFFS.UNKILLABLE}, ${BUFFS.STONE_SKIN} ou ${BUFFS.BLOCK_DAMAGE}, cette attaque infligera 100 % de dégâts en plus.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances de retirer un buff aléatoire à la cible.${RETURN}${RETURN}
 
 Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infligés.`,
-          damage: "0.07*HP",
+          damage: "0.07*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ Chaque frappe soigne également ce Champion à hauteur de 20 % des dégâts infl
           description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis qui ne bénéficient d'aucun buff. Chaque frappe supplémentaire ignorera 20 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Chaque frappe soigne également tous les alliés à hauteur de 20 % des dégâts infligés.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

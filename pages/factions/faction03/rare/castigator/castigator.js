@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Punir",
           description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

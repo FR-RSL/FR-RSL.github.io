@@ -69,7 +69,7 @@ Place également sur tous les alliés un buff ${BUFFS.COUNTER} pendant 2 tours e
           img: "assets/sort4.webp",
           name: "Secousse d'éclair",
           description: `Attaque tous les ennemis. Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.BURN}.`,
-          damage: "0.18*HP",
+          damage: "0.18*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -81,7 +81,7 @@ Place également sur tous les alliés un buff ${BUFFS.COUNTER} pendant 2 tours e
 Ensuite, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur les ennemis sous buff ${BUFFS.STONE_SKIN}.${RETURN}${RETURN}
 
 Place également un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false

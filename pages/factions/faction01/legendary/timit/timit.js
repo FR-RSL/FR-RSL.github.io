@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion de 10 % de ses PV MAX.${RETURN}${RETURN}
 
 Si la cible ne possède aucun buff actif, chaque frappe remplit également le Compteur de Tour de ce Champion de 10 %.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ Si la cible ne possède aucun buff actif, chaque frappe remplit également le Co
           description: `Attaque tous les ennemis. Réduit la durée de tous les buffs des ennemis de 3 tours.${RETURN}${RETURN}
 
 Si aucun ennemi ne possède de buff actif, accorde un Tour supplémentaire. Accorde toujours un Tour supplémentaire si Kaja l'Ironique se trouve dans la même équipe, même s'il y a des ennemis avec des buffs actifs.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false
@@ -28,7 +28,7 @@ Si aucun ennemi ne possède de buff actif, accorde un Tour supplémentaire. Acco
           description: `Attaque tous les ennemis. Avant d'attaquer, place un buff ${BUFFS.PRE} de 50 % sur tous les alliés pendant 2 tours.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.TRUE_FEAR} sur tous les ennemis pendant 1 tour.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 6,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

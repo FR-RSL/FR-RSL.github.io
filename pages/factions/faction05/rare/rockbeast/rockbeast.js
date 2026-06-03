@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Club",
           description: `Attacks 1 enemy. Has a 50% chance of placing a ${DEBUFFS.PROVOKE} debuff for 1 turn. Damage increases according to this Champion's MAX HP.`,
-          damage: "1.5*ATQ+0.15*HP",
+          damage: "1.5*ATQ+0.15*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

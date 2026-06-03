@@ -10,7 +10,7 @@ const championForms = {
 Chaque frappe a 50 % de chances d'augmenter d'1 tour la durée de tous les débuffs de la cible.${RETURN}${RETURN}
 
 Chaque frappe a 100 % de chances d'augmenter d'1 tour la durée d'un débuff ${DEBUFFS.BURN} sur la cible si les chances initiales ne se sont pas activées.`,
-          damage: "0.09*HP",
+          damage: "0.09*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -24,7 +24,7 @@ Active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} su
 Dès que cette compétence active un débuff ${DEBUFFS.BURN} sur un ennemi, réduit sa RÉS de 10 points (s'accumule jusqu'à 100). Dès que cette compétence active un débuff ${DEBUFFS.BURN} sur un allié, augmente sa RÉS de 10 points (s'accumule jusqu'à 100).${RETURN}${RETURN}
 
 Remplit également le Compteur de Tour de tous les alliés de 5 % pour chaque débuff ${DEBUFFS.BURN} activé sur les ennemis.`,
-          damage: "0.26*HP",
+          damage: "0.26*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

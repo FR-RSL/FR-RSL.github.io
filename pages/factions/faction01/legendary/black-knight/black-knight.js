@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Coup Violent",
           description: `Attaque un ennemi. Possède 75 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
-          damage: "0.28*HP",
+          damage: "0.28*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -21,7 +21,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Dernier Souffle",
           description: `Attaque tous les ennemis. Les dégâts augmentent en fonction de la quantité de PV que ce Champion a perdus.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false

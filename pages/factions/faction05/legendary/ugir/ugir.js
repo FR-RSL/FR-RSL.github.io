@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 80 % de chances de voler un buff aléatoire à l'ennemi. Possède également 80 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur l'ennemi pendant 2 tours.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Possède 80 % de chances de voler un buff aléatoire à l'ennemi. Possède égal
 Possède 75 % de chances de retirer tous les buffs sur tous les ennemis.${RETURN}${RETURN}
 
 Ensuite, possède 75 % de chances de placer un débuff ${DEBUFFS.WEAKEN} de 25 % pendant 2 tours.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi. Chaque frappe soigne également tous tes alliés à hauteur de 5 % des PV MAX de ce Champion.${RETURN}${RETURN}
 
 Chaque frappe a également 75 % de chances de remplir de 10 % le Compteur de Tour de l'allié dont le Compteur de Tour est le plus bas.`,
-          damage: "0.13*HP",
+          damage: "0.13*PV",
           levelInfo: ["Soins +10%", "Chances de Buff/Debuff +10%", "Soins +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe a également 75 % de chances de remplir de 10 % le Compteur de Tou
 Ensuite, a 75 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} et un débuff ${DEBUFFS.SPD} de 30 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Remplit également les Compteurs de Tour de tous les alliés de 15 %.`,
-          damage: "0.21*HP",
+          damage: "0.21*PV",
           cooldown: 6,
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

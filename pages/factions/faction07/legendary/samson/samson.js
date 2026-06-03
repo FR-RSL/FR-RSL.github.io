@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Poings vaniteux",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 35 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Colère explosive",
           description: `Attaque tous les ennemis. Retire tous les buffs ${BUFFS.DEF} des ennemis avant d'attaquer. Place une frappe supplémentaire si cette attaque tue un ennemi.`,
-          damage: "0.29*HP",
+          damage: "0.29*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

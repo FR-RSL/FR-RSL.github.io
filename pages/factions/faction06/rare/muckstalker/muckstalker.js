@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Bondir",
           description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours.`,
-          damage: "1.5*ATQ+0.12*HP",
+          damage: "1.5*ATQ+0.12*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Étranglement",
           description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.SLEEP} pendant 2 tours si la cible ne possède pas de buff actif.`,
-          damage: "2.5*ATQ+0.2*HP",
+          damage: "2.5*ATQ+0.2*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

@@ -90,7 +90,7 @@ La première frappe augmente l'ATQ de ce Champion de 3 % (s'accumule jusqu'à 30
 Avant d'attaquer, retire tous les débuffs sur ce Champion. Augmente les dégâts de cette attaque de 15 % pour chaque débuff retiré.${RETURN}${RETURN}
 
 Si aucun débuff n'a été retiré sur ce Champion, augmente les dégâts de cette attaque de 15 % pour chaque allié en vie.`,
-          damage: "3.4*ATQ+(3.4*ATQ*0.15*Living Allies)Multiplier: 3.4*ATQ+(3.4*ATQ*0.15*Removed Debuffs)",
+          damage: "3.4*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

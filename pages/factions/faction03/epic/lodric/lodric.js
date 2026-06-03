@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Attaque de Désarroi",
           description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

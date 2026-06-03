@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 75 % de chances d'augmenter d'1 tour la durée d'un débuff aléatoire de la cible.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["+5% Damage", "+10% Buff/Debuff Chance", "+10% Damage", "+15% Buff/Debuff Chance"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe a 75 % de chances d'augmenter d'1 tour la durée d'un débuff alé
 Possède 75 % de chances de placer un débuff ${DEBUFFS.PETRIFICATION} sur la cible pendant 1 tour. Si la cible est un Boss, place au lieu de ça un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Dès qu'un débuff ${DEBUFFS.PETRIFICATION} est retiré ou expire sur un ennemi, a 50 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % sur cet ennemi pendant 1 tour.`,
-          damage: "0.32*HP",
+          damage: "0.32*PV",
           cooldown: 5,
           levelInfo: ["+15% Damage", "+10% Buff/Debuff Chance", "Temps de recharge -1", "+15% Buff/Debuff Chance", "Temps de recharge -1"],
           isPassive: false

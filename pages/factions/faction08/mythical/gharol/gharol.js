@@ -8,7 +8,7 @@ const championForms = {
           description: `Attaque un ennemi. Avant d'attaquer, retire tous les buffs sur la cible.${RETURN}${RETURN}
 
 Augmente de 2 tours le temps de recharge d'une compétence aléatoire de la cible même si cette attaque est une frappe faible.`,
-          damage: "0.28*HP+1*ATQ",
+          damage: "0.28*PV+1*ATQ",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
@@ -18,7 +18,7 @@ Augmente de 2 tours le temps de recharge d'une compétence aléatoire de la cibl
           description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Ce débuff ignorera les buffs ${BUFFS.BLOCK_DEBUFFS} et peut être placé même si cette attaque est une frappe faible.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.UNKILLABLE} protégé et un buff ${BUFFS.COUNTER} sur cette Championne pendant 3 tours.`,
-          damage: "0.25*HP+1*ATQ",
+          damage: "0.25*PV+1*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
@@ -71,7 +71,7 @@ Soigne également tous les alliés sauf cette Championne à hauteur de 50 % des 
           img: "assets/sort4.webp",
           name: "Cognement de magma",
           description: `Attaque tous les ennemis. A 25 % de chances de répéter l'attaque. Ignorera les buffs ${BUFFS.BLOCK_DAMAGE}.`,
-          damage: "2.7*ATQ+0.12*HP",
+          damage: "2.7*ATQ+0.12*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -81,7 +81,7 @@ Soigne également tous les alliés sauf cette Championne à hauteur de 50 % des 
           description: `Attaque tous les ennemis. Les dégâts de cette compétence augmentent de 10 % pour chaque buff sur cette Championne et sur la cible.${RETURN}${RETURN}
 
 Ignorera 30 % de la DÉF de la cible. Ignorera au lieu de cela 50 % de la DÉF de la cible si cette Championne a plus de buffs que la cible.`,
-          damage: "4*ATQ+0.12*HP",
+          damage: "4*ATQ+0.12*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Dégâts +10%"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Rasoir-chaos",
           description: `Attaque tous les ennemis. Possède 35 % de chances de prolonger d'1 tour la durée des débuffs ${DEBUFFS.BURN} sur chaque cible.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque tous les ennemis. Avant d'attaquer, active instantanément un déclenchement de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennemis pendant 2 tours.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
@@ -26,7 +26,7 @@ A 75 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur tous les ennem
           description: `Attaque 2 fois tous les ennemis. La première frappe possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Rétablit les PV MAX détruits de ce Champion de 10 % pour chaque débuff ${DEBUFFS.BURN} placé par cette compétence. Soigne ce Champion de 5 % de ses PV MAX pour chaque tentative de débuff ${DEBUFFS.BURN} à laquelle l'équipe ennemie a résisté ou qu'elle a bloquée.`,
-          damage: "0.14*HP",
+          damage: "0.14*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

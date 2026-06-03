@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Gourdin de Marais",
           description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Odeur Nauséabonde",
           description: `Attaque tous les ennemis. Possède 50 % de chances de placer 1 débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Les chances augmentent de 5 % pour chaque débuff sur l'équipe ennemie.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

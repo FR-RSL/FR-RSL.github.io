@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi. Soigne cette Championne de 5 % de ses PV MAX après chaque frappe.${RETURN}${RETURN}
 
 Chaque frappe a également 25 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur la cible pendant 1 tour.`,
-          damage: "0.13*HP",
+          damage: "0.13*PV",
           levelInfo: ["Soins +5%", "Soins +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -29,7 +29,7 @@ Place un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours. Place
 Place sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 25 % des PV MAX de cette Championne pendant 2 tours.${RETURN}${RETURN}
 
 Dès qu'un buff ${BUFFS.SHIELD} placé par cette Championne expire ou est retiré par des dégâts, soigne l'allié concerné de 15 % de ses PV MAX et lui accorde un buff ${BUFFS.STRENGTHEN} de 25 % pendant 1 tour.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

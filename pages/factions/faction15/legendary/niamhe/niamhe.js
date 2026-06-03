@@ -19,7 +19,7 @@ Place un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.CRATE} de 30 % s
           name: "Gardienne céruléenne",
           description: `Attaque un ennemi. Si la cible a 50 % de PV ou moins, cette attaque est toujours critique et ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
-Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la différence entre les PV actuels de la cible et les PV MAX de la cible. Si la cible est un Boss, la valeur du ${BUFFS.SHIELD} est proportionnelle à la DÉF de cette Championne.${RETURN}${RETURN}
+Place un buff ${BUFFS.SHIELD} sur tous les alliés pendant 2 tours. La valeur du ${BUFFS.SHIELD} est égale à la différence entre les PV actuels de la cible et les PV MAX de la cible. Si la cible est un Boss, la valeur du ${BUFFS.SHIELD} est equivalente a 400% de la DEF de cette Championne.${RETURN}${RETURN}
 
 Si la cible est tuée, réduit également de 2 tours les temps de recharge de toutes les compétences alliées.`,
           damage: "5.4*DEF",
@@ -33,7 +33,7 @@ Si la cible est tuée, réduit également de 2 tours les temps de recharge de to
         {
           img: "assets/sort3.webp",
           name: "Feuille ornée",
-          description: `Soigne tous les alliés. La valeur du soin est proportionnelle à la DÉF de cette Championne.${RETURN}${RETURN}
+          description: `Soigne tous les alliés. La valeur du soin est equivalent a 400% de la DEF de cette Championne.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.BLOCK_DEBUFFS} et un buff ${BUFFS.ALLY_PROTECT} de 50 % sur tous les alliés pendant 2 tours.`,
           cooldown: 4,

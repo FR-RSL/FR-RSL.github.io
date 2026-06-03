@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Remplit le Compteur de Tour de ce Champion de 10 %. Remplit de 2 % supplémentaires pour chaque buff sur la cible.`,
-          damage: "0.27*HP+1*ATQ",
+          damage: "0.27*PV+1*ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Remplit le Compteur de Tour de ce Champion de 10 %. Remplit de 2 % supplémentai
 Ignorera 50 % de la DÉF de la cible.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
-          damage: "0.3*HP+1.8*ATQ",
+          damage: "0.3*PV+1.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
@@ -32,7 +32,7 @@ Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
 Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.STRENGTHEN}, ${BUFFS.UNKILLABLE}, ${BUFFS.ALLY_PROTECT} et ${BUFFS.BLOCK_DAMAGE}.${RETURN}${RETURN}
 
 Réduit le temps de recharge de la compétence [Hache enchantée] de 2 tours si cette attaque tue un ennemi.`,
-          damage: "0.35*HP+1.8*ATQ",
+          damage: "0.35*PV+1.8*ATQ",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

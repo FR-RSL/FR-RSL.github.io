@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Arme d'hast du Roi-sauvage",
           description: `Attaque un ennemi. Soigne tous les alliés ayant moins de 50 % de PV jusqu'à 50 % de leurs PV MAX.`,
-          damage: "0.26*HP",
+          damage: "0.26*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -28,7 +28,7 @@ Remplit également le Compteur de Tour de cet allié d'une quantité égale au p
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
 Possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Place également un buff ${BUFFS.STRENGTHEN} de 25 % sur tous les alliés pendant 2 tours.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -8,7 +8,7 @@ const championForms = {
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}.`,
-          damage: "0.26*HP+1.2*ATQ",
+          damage: "0.26*PV+1.2*ATQ",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -18,7 +18,7 @@ Ignorera les buffs ${BUFFS.SHIELD}, ${BUFFS.UNKILLABLE} et ${BUFFS.BLOCK_DAMAGE}
           description: `Attaque tous les ennemis. Cette attaque ne déclenchera pas de contre-attaques et ignore les buffs ${BUFFS.SHIELD}.${RETURN}${RETURN}
 
 Vole également 20 % du Compteur de Tour de chaque ennemi. Les ennemis avec plus de 50 % de Compteur de Tour ne peuvent pas résister à cet effet.`,
-          damage: "0.3*HP+1.85*ATQ",
+          damage: "0.3*PV+1.85*ATQ",
           cooldown: 4,
           levelInfo: ["Dégâts +15%", "Temps de recharge -1"],
           isPassive: false
@@ -33,7 +33,7 @@ Détruit les PV MAX de la cible et réduit son ATQ, sa DÉF, sa VIT, sa RÉS et 
 Augmente également les PV MAX, l'ATQ, la DÉF, la VIT, la RÉS et la PRÉ de ce Champion de 10 % chaque fois que ce Champion réduit des stats ennemies avec cette compétence.${RETURN}${RETURN}
 
 Enfin, place un débuff ${DEBUFFS.BLOCK_REA} si la cible est tuée par cette compétence.`,
-          damage: "(!If Boss*(0.47*HP+2.5*ATQ))+(If Boss*(0.94*HP+5*ATQ))",
+          damage: "0.47*PV+2.5*ATQ",
           cooldown: 3,
           levelInfo: ["Dégâts +20%"],
           isPassive: false
@@ -79,7 +79,7 @@ Empêche également la mort de ce Champion et le garde vivant avec 1 PV lorsqu'i
           description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion de 7,5 % de ses PV MAX.${RETURN}${RETURN}
 
 Si les PV de ce Champion sont pleins, chaque frappe remplit au lieu de ça le Compteur de Tour de ce Champion de 15 %.`,
-          damage: "0.13*HP",
+          damage: "0.13*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -89,7 +89,7 @@ Si les PV de ce Champion sont pleins, chaque frappe remplit au lieu de ça le Co
           description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si ce Champion possède plus de 50 % de PV. Il est impossible de résister à ce débuff si ce Champion possède plus de 75 % de PV.${RETURN}${RETURN}
 
 Si ce Champion possède 50 % de PV ou moins, place au lieu de ça un débuff ${DEBUFFS.STUN} pendant 1 tour. Il est impossible de résister à ce débuff.`,
-          damage: "0.45*HP",
+          damage: "0.45*PV",
           cooldown: 4,
           levelInfo: ["Temps de recharge -1"],
           isPassive: false

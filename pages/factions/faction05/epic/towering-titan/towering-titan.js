@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Fend-Bouclier",
           description: `Attaque un ennemi. Possède 40 % de chances de placer un débuff de ${DEBUFFS.DEF} de 60 % pendant 2 tours.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Assaut Gesticulant",
           description: `Attaque 4 fois au hasard. La première frappe possède 100 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour. Chacune des autres frappes possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour.`,
-          damage: "0.08*HP",
+          damage: "0.08*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

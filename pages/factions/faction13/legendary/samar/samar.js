@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Chair Cristalline",
           description: `Attaque un ennemi. Soigne de 15 % des dégâts infligés si ce Champion possède 50 % de PV ou moins. Remplit le Compteur de Tour de ce Champion de 15 % s'il possède plus de 50 % de PV.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque un ennemi.${RETURN}
 Inflige des dégâts bonus équivalents à la différence entre le niveau de pourcentage de PV de ce Champion et celui de la cible (+1 % de dégâts par 1 % de différence).${RETURN}
 Inflige des dégâts bonus égaux à la différence entre le nombre de buffs de ce Champion et celui de la cible (+10 % de dégâts par buff).`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false
@@ -24,7 +24,7 @@ Inflige des dégâts bonus égaux à la différence entre le nombre de buffs de 
           img: "assets/sort3.webp",
           name: "Joyeuse Subversion",
           description: `Attaque tous les ennemis. Possède 80 % de chances de voler 2 buffs aléatoires avant d'attaquer. Place une frappe supplémentaire sur les ennemis à qui il reste des buffs.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

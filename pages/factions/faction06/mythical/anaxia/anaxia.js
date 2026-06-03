@@ -80,7 +80,7 @@ Lorsqu'elle est attaquée par des ennemis sous débuff ${DEBUFFS.LEECH}, a 50 % 
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de résister à ce débuff si les PV de la cible sont inférieurs à ceux de cette Championne.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           levelInfo: ["Dégâts +20%"],
           isPassive: false
         },
@@ -92,7 +92,7 @@ Place un débuff ${DEBUFFS.BLOCK_BUFFS} pendant 2 tours. Il est impossible de r�
 Ignorera les buffs ${BUFFS.STONE_SKIN}. Les dégâts infligés par cette compétence augmentent de 50 % si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
 
 Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false
@@ -105,7 +105,7 @@ Réinitialise le temps de recharge de cette compétence si la cible est tuée.`,
 Vole 50 % du Compteur de Tour de la cible. Vole au lieu de cela 100 % du Compteur de Tour si les PV de la cible sont inférieurs à ceux de cette Championne.${RETURN}${RETURN}
 
 Détruit les PV MAX de la cible de 25 % des dégâts infligés. Détruit les PV MAX de la cible de 50 % des dégâts infligés si les PV MAX de la cible sont moins élevés que ceux de cette Championne.`,
-          damage: "0.28*HP",
+          damage: "0.28*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false

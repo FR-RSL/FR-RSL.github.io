@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Éclair Accablant",
           description: `Attaque un ennemi. Place un débuff de ${DEBUFFS.ATK} de 25 % pendant 2 tours. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
-          damage: "2.5*ATQ+0.2*HP",
+          damage: "2.5*ATQ+0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

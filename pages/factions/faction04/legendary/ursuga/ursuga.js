@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Gigantesque Gourdin",
           description: `Attaque un ennemi. Possède 45 % de chances de placer un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 1 tour.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Foncer dans le tas",
           description: `Attaque tous les ennemis. Place, pendant 2 tours, un débuff ${DEBUFFS.CDAM} de 25 % et un débuff ${DEBUFFS.ATK} de 50 % sur les cibles dont l'ATQ est plus élevée que la DÉF. Place, pendant 2 tours, un débuff ${DEBUFFS.SPD} de 30 % et un débuff ${DEBUFFS.DEF} de 60 % sur les cibles dont l'ATQ est inférieure ou égale à la DÉF.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

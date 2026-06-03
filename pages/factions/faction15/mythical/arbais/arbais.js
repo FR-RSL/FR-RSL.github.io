@@ -66,7 +66,7 @@ Place ensuite un buff ${BUFFS.REVIVE_ON_DEATH} sur tous les alliés pendant 2 to
           description: `Attaque un ennemi. Réduit le Compteur de Tour de la cible de 30 %.${RETURN}${RETURN}
 
 Place ensuite un buff ${BUFFS.HEALS} de 15 % sur cette Championne pendant 1 tour. Place également un buff ${BUFFS.HEALS} de 15 % sur l'allié ayant le moins de PV, sauf cette Championne, pendant 1 tour.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
@@ -74,7 +74,7 @@ Place ensuite un buff ${BUFFS.HEALS} de 15 % sur cette Championne pendant 1 tour
           img: "assets/sort5.webp",
           name: "Brûleronce",
           description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.LEECH} et un débuff ${DEBUFFS.BURN} pendant 2 tours.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false

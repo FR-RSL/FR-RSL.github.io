@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Beigne",
           description: `Attaque un ennemi. Possède 25 % de chances de placer un débuff de ${DEBUFFS.HEALS} de 100 % pendant 2 tours.`,
-          damage: "0.1*HP+ATQ",
+          damage: "0.1*PV+ATQ",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

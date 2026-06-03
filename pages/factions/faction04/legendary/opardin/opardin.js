@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Marteaux jumelés",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 50 % de chances de réduire le Compteur de Tour de la cible de 10 % et 50 % de chances de remplir le Compteur de Tour de ce Champion de 10 %.`,
-          damage: "0.14*HP",
+          damage: "0.14*PV",
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Rallier la Tribu",
           description: `Attaque tous les ennemis. Soigne tous tes alliés à hauteur de 20 % des PV MAX de ce Champion. Sinon, soigne de 30 % tous les alliés sous buffs ${BUFFS.HEALS}.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Soins +10%", "Temps de recharge -1"],
           isPassive: false

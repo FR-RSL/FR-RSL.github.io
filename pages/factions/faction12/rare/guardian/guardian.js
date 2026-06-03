@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Dernière Chance",
           description: `Place un buff d'${BUFFS.DEF} de 60 % et un buff d'${BUFFS.SPD} de 30 % sur ce Champion pendant 2 tours.`,
-          damage: "ATQ+0.03*HP",
+          damage: "ATQ+0.03*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Exacerber",
           description: `Attaque 2 fois un ennemi. Place une frappe supplémentaire si un ennemi souffre d'un débuff de ${DEBUFFS.PROVOKE}.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ const championData = {
 Place un débuff ${DEBUFFS.PROVOKE} sur les ennemis pendant 1 tour. Possède également 75 % de chances de leur infliger, au lieu de ça, un débuff ${DEBUFFS.PROVOKE} pendant 2 tours.${RETURN}${RETURN}
 
 Ensuite, place un buff ${BUFFS.REFLECT_DAM} de 30 % sur tous les alliés pendant 2 tours. Place également un buff ${BUFFS.COUNTER} sur ce Champion pendant 2 tours.`,
-          damage: "0.27*HP",
+          damage: "0.27*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Cimeterre Avalesort",
           description: `Attaque un ennemi. Vole 1 buff aléatoire à la cible. Possède également 50 % de chances de voler un autre buff aléatoire si la cible possède 2 buffs ou plus.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Dégâts +10%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} pendant 2 tours.${RETURN}${RETURN}
 
 Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 tours.`,
-          damage: "0.22*HP",
+          damage: "0.22*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +10%", "Dégâts +20%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
@@ -26,7 +26,7 @@ Place également un buff ${BUFFS.HEALS} de 15 % sur tous les alliés pendant 2 t
           description: `Attaque tous les ennemis. Possède 85 % de chances d'augmenter d'1 tour la durée de tous les débuffs ${DEBUFFS.BURN} sur tous les ennemis.${RETURN}${RETURN}
 
 Possède également 85 % de chances de placer un débuff ${DEBUFFS.LEECH} et un débuff ${DEBUFFS.HEX} pendant 2 tours.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

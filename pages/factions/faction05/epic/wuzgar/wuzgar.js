@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Violence revigorante",
           description: `Attaque 4 fois un ennemi. Chaque frappe soigne l'allié ayant le moins de PV à hauteur de 2 % des PV MAX de ce Champion.`,
-          damage: "0.07*HP",
+          damage: "0.07*PV",
           levelInfo: ["Soins +5%", "Soins +5%", "Soins +5%", "Soins +5%"],
           isPassive: false
         },

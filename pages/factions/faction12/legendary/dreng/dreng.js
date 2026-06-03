@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Feu de cadavre",
           description: `Attaque 2 fois un ennemi. Active instantanément tout débuff ${DEBUFFS.BURN} sur la cible après avoir attaqué.`,
-          damage: "0.11*HP",
+          damage: "0.11*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Bûcher exalté",
           description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.BURN} sur tous les ennemis pendant 2 tours. Il est impossible de résister à ce débuff.`,
-          damage: "0.23*HP",
+          damage: "0.23*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false
@@ -28,7 +28,7 @@ Les niveaux de PV de tous les alliés seront amenés au niveau de l'allié ayant
 Cette attaque ignorera 30 % de la DÉF de la cible si les PV actuels de la cible sont inférieurs ou égaux aux PV actuels de ce Champion.${RETURN}${RETURN}
 
 Réduira d'1 tour le temps de recharge de la compétence Bûcher exalté si les PV actuels de la cible sont supérieurs aux PV actuels de ce Champion.`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Rocher Brise-os",
           description: `Attaque un ennemi. Offre 20 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

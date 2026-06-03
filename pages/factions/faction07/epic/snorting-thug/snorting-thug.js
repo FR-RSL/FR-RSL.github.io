@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Agression Gratuite",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 30 % de chances de voler un buff aléatoire.`,
-          damage: "0.08*HP",
+          damage: "0.08*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Grabuge",
           description: `Attaque un ennemi. Ignorera la DÉF de la cible si elle ne dispose d'aucun buff actif. Vole 2 buffs aléatoires à la cible.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false

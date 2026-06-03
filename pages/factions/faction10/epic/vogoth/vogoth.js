@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Terrible Force",
           description: `Attaque 3 fois un ennemi. Chaque frappe possède 30 % de chances d'augmenter d'1 tour la durée d'1 débuff de la cible pris au hasard.`,
-          damage: "0.07*HP",
+          damage: "0.07*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Vague de Révulsion",
           description: `Attaque tous les ennemis. Possède 60 % de chances de placer un débuff ${DEBUFFS.PROVOKE} sur tous les ennemis pendant 1 tour. Possède également 60 % de chances de placer pendant 2 tours un débuff ${DEBUFFS.ATK} de 50 % sur les cibles affligés d'un débuff |Provocation] grâce à cette compétence.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false

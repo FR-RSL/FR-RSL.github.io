@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Masse Écrasante",
           description: `Attaque un ennemi. Inflige des dégâts supplémentaires si ce Champion se trouve sous un buff ${BUFFS.SHIELD}. Les dégâts supplémentaires sont égaux à 30 % de la valeur du ${BUFFS.SHIELD} et ne peuvent pas dépasser 200 000.`,
-          damage: "0.19*HP",
+          damage: "0.19*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },
@@ -21,7 +21,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Ténacité Funeste",
           description: `Attaque un ennemi. Possède 80 % de chances de placer un débuff ${DEBUFFS.PROVOKE} de 1 tour.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Temps de recharge -1"],
           isPassive: false

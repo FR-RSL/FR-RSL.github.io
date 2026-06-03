@@ -9,7 +9,7 @@ const championData = {
 Chaque frappe a 25 % de chances de placer un débuff ${DEBUFFS.RES} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Chaque frappe soigne également cette Championne à hauteur de 20 % des dégâts infligés.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe soigne également cette Championne à hauteur de 20 % des dégâts
           description: `Attaque tous les ennemis. Avant d'attaquer, a 75 % de chances de retirer 1 débuff aléatoire à tous les alliés.${RETURN}${RETURN}
 
 Après l'attaque, a 75 % de chances de retirer 1 buff aléatoire à tous les ennemis.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Ring Of Dissonance",
           description: `Attacks all enemies.<br><br>Has a 50% chance of placing a 30% ${DEBUFFS.CRATE} debuff for 1 turn.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           levelInfo: ["+10% Damage", "+10% Damage", "+10% Buff/Debuff Chance", "+15% Buff/Debuff Chance"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Redemptive Fervor",
           description: `Attacks 1 enemy. Before attacking, has a 75% chance of transferring all debuffs from all allies to the target.<br><br>Heals all allies by 25% of this Champion’s MAX HP and places a 25% ${BUFFS.STRENGTHEN} buff on all allies for 2 turns.`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 4,
           levelInfo: ["+10% Damage", "+10% Buff/Debuff Chance", "+15% Buff/Debuff Chance", "Temps de recharge -1"],
           isPassive: false
@@ -22,7 +22,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Humble Savior",
           description: `Attacks all enemies. Before attacking, revives all dead allies with 50% HP and 50% Turn Meter. This skill can be used even if there are no dead allies.<br><br>Has a 75% chance of placing a ${DEBUFFS.STUN} debuff for 1 turn and a ${DEBUFFS.BLOCK_BUFFS} debuff for 2 turns. Has a 75% chance of placing a 30% ${DEBUFFS.SPD} debuff and a ${DEBUFFS.BLOCK_BUFFS} debuff for 2 turns instead, if the target is a Boss.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 5,
           levelInfo: ["+10% Damage", "+10% Buff/Debuff Chance", "+15% Buff/Debuff Chance", "Temps de recharge -1"],
           isPassive: false

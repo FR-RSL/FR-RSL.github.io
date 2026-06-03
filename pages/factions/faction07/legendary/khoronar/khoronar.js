@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque tous les ennemis. A 50 % de chances de réduire le Compteur de Tour de chaque cible de 10 %.${RETURN}${RETURN}
 
 Si Minaya se trouve dans la même équipe, attaque 2 fois tous les ennemis et les chances de réduire le Compteur de Tour de chaque cible passent à 100 %. Les dégâts de chaque frappe seront réduits de 50 %.`,
-          damage: "0.16*HPMultiplier: 0.08*HP",
+          damage: "0.16*PVMultiplier: 0.08*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -29,7 +29,7 @@ Si Minaya se trouve dans la même équipe, retire également tous les débuffs d
           description: `Attaque tous les ennemis. Place un débuff ${DEBUFFS.ATK} de 50 % et un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Si Minaya se trouve dans l'équipe, il est impossible de résister à ces débuffs.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

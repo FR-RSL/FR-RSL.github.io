@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Étrange hostilité",
           description: `Attaque un ennemi. Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
-          damage: "0.21*HP",
+          damage: "0.21*PV",
           levelInfo: ["Dégâts +10%", "Soins +10%", "Dégâts +10%", "Soins +10%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque tous les ennemis. Possède 75 % de chances de remplir le Compteur de Tour de tous les alliés de 30 %.${RETURN}${RETURN}
 
 Possède également 75 % de chances de retirer tous les débuffs sur tous les alliés.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

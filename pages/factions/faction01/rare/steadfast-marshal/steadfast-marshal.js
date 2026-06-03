@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi.${RETURN}${RETURN}
 
 Possède 50 % de chances de placer un débuff ${DEBUFFS.PROVOKE} pendant 1 tour si le pourcentage de PV de la cible est inférieur à celui de ce Champion.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           levelInfo: ["Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

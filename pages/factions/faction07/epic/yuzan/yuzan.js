@@ -9,7 +9,7 @@ const championData = {
 Transfère un débuff aléatoire de ce Champion sur la cible.${RETURN}${RETURN}
 
 Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -21,7 +21,7 @@ Soigne ce Champion à hauteur de 10 % de ses PV MAX.`,
 A 75 % de chances de retirer 2 buffs aléatoires sur tous les ennemis.${RETURN}${RETURN}
 
 Soigne ce Champion de 10 % de ses PV MAX pour chaque buffs retiré par cette compétence.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

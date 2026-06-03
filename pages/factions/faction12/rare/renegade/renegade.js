@@ -22,7 +22,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Rituel Sacrificiel",
           description: `Réduit de 2 tours le temps de recharge de toutes les compétences des alliés. Cette compétence n'affecte pas cette Championne, ni les autres Champions qui ont cette compétence. Cette Championne recevra des dégâts équivalents à 30 % de ses PV MAX. Ceci se produira même si cela tue cette Championne. Le temps de recharge de cette compétence ne peut pas être réduit ou réinitialisé.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 7,
           levelInfo: ["Temps de recharge -1", "Temps de recharge -1"],
           isPassive: false

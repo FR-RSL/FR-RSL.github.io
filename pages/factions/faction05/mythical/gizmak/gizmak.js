@@ -78,7 +78,7 @@ Accorde ensuite un Tour supplémentaire.`,
           description: `Attaque un ennemi. Si les PV de ce Champion ou les PV de la cible initiale sont inférieurs ou égaux à 50 %, attaque tous les ennemis à la place.${RETURN}${RETURN}
 
 Augmente d'1 tour la durée de 2 débuffs aléatoires de la cible. En cas d'attaque sur tous les ennemis, augmente d'1 tour la durée de 2 débuffs aléatoires sur tous les ennemis à la place. Il est impossible de résister à cet effet si cette attaque passe en critique.`,
-          damage: "0.14*HP+0.7*DEFMultiplier: 0.2*HP+0.7*DEF",
+          damage: "0.14*PV+0.7*DEFMultiplier: 0.2*PV+0.7*DEF",
           levelInfo: ["Dégâts +10%", "Dégâts +20%"],
           isPassive: false
         },
@@ -92,7 +92,7 @@ Avant d'attaquer, place un débuff ${DEBUFFS.DEF} de 60 % sur tous les ennemis p
 Place une frappe supplémentaire sur les ennemis sous débuffs ${DEBUFFS.BURN}.${RETURN}${RETURN}
 
 Accorde un Tour supplémentaire si cette attaque tue un ennemi.`,
-          damage: "0.23*HP+0.7*DEF",
+          damage: "0.23*PV+0.7*DEF",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Temps de recharge -1"],
           isPassive: false

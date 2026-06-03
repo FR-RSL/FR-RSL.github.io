@@ -6,7 +6,7 @@ const championData = {
           name: "Maillet Furieux",
           description: `Attaque un ennemi.${RETURN}
 Place sur ce Champion un buff de ${BUFFS.SHIELD} équivalent à 10 % de ses PV MAX pendant 2 tours.`,
-          damage: "0.1*HP+0.1*DEF",
+          damage: "0.1*PV+0.1*DEF",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +10%", "Bouclier +5%", "Bouclier +5%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ Place sur ce Champion un buff de ${BUFFS.SHIELD} équivalent à 10 % de ses PV M
           name: "Sans Retour",
           description: `Attaque un ennemi.${RETURN}
 Place un débuff de ${DEBUFFS.HEALS} de 50 % pendant 2 tours.`,
-          damage: "0.2*HP+1.5*DEF",
+          damage: "0.2*PV+1.5*DEF",
           cooldown: 3,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false

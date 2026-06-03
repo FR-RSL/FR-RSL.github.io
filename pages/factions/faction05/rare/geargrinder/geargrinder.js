@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Engrenages Sanglants",
           description: `Attaque un ennemi. Place un buff ${BUFFS.HEALS} de 7,5 % sur ce Champion pendant 1 tour si cette attaque passe en critique.`,
-          damage: "0.15*HP",
+          damage: "0.15*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +10%"],
           isPassive: false
         },

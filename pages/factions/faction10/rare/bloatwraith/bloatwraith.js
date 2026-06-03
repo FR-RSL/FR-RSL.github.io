@@ -21,7 +21,7 @@ const championData = {
         {
           img: "assets/passif1.webp",
           name: "Death Feast [P]",
-          description: `Heals this Champion by 15% of their MAX HP every time this Champion or an ally kills an enemy.<br><br>Heal Multiplier: 0.15*HP`,
+          description: `Heals this Champion by 15% of their MAX HP every time this Champion or an ally kills an enemy.<br><br>Heal Multiplier: 0.15*PV`,
           isPassive: true
         }
       ],

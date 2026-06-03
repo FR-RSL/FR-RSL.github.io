@@ -31,7 +31,7 @@ Place également un buff ${BUFFS.SPD} de 30 % sur tous les alliés pendant 2 tou
         {
           img: "assets/passif1.webp",
           name: "The Red Lady [P]",
-          description: `Heals this Champion by 50% of their MAX HP whenever an ally or an enemy dies.<br><br>Heal Multiplier: 0.5*HP`,
+          description: `Heals this Champion by 50% of their MAX HP whenever an ally or an enemy dies.<br><br>Heal Multiplier: 0.5*PV`,
           isPassive: true
         }
       ],

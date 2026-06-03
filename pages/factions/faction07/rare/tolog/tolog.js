@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Coupe irrégulière",
           description: `Attaque 2 fois un ennemi. Chaque frappe soigne ce Champion de 2 % de ses PV MAX.`,
-          damage: "0.11*HP",
+          damage: "0.11*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },

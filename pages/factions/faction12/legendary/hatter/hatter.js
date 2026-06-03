@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
 Chaque frappe a 25 % de chances de voler un buff aléatoire. Chaque frappe a également 75 % de chances d'appliquer un effet de ${PROP_DEBUFF}, prenant 1 débuff aléatoire de la cible pour le placer sur tous les ennemis sous débuff ${DEBUFFS.HEX}.`,
-          damage: "0.1*HP",
+          damage: "0.1*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
@@ -19,7 +19,7 @@ Chaque frappe a 25 % de chances de voler un buff aléatoire. Chaque frappe a ég
 Possède 75 % de chances de placer un débuff ${DEBUFFS.HEX} et un débuff ${DEBUFFS.WEAKEN} de 25 % sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 L'allié qui a les DÉG C. les plus élevés fera équipe et rejoindra l'attaque. L'allié qui rejoint l'attaque utilisera sa compétence par défaut. Les dégâts infligés par l'allié qui rejoint l'attaque augmenteront de 10 % pour chaque débuff sur la cible.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           cooldown: 5,
           levelInfo: ["Dégâts +15%", "Chances de Buff/Debuff +10%", "Temps de recharge -1", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

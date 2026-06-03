@@ -22,7 +22,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Massacre",
           description: `Attaque tous les ennemis. Possède 50 % de chances de placer un débuff de ${DEBUFFS.BLOCK_BUFFS} d'1 tour. Les dégâts augmentent en fonction des PV MAX de ce Champion.`,
-          damage: "DEF+0.23*HP",
+          damage: "DEF+0.23*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%", "Temps de recharge -1"],
           isPassive: false

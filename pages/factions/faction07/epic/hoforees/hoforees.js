@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Coup Robuste",
           description: `Attaque 2 fois un ennemi. Chaque frappe possède 10 % de chances de placer un débuff ${DEBUFFS.STUN} pendant 1 tour.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +5%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

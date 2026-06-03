@@ -7,7 +7,7 @@ const championData = {
           description: `Attaque un ennemi. Possède 50 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % pendant 2 tours.${RETURN}${RETURN}
 
 Si la cible se trouve sous débuff ${DEBUFFS.LEECH}, possède également 100 % de chances de placer un débuff ${DEBUFFS.ATK} de 50 % sur la cible pendant 2 tours avant d'attaquer.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +5%", "Dégâts +10%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ Si la cible se trouve sous débuff ${DEBUFFS.LEECH}, possède également 100 % d
           description: `Attaque tous les ennemis. Possède 75 % de chances de placer un débuff ${DEBUFFS.SPD} de 30 % pendant 2 tours.${RETURN}${RETURN}
 
 Place également sur tous les alliés un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours. Le buff ${BUFFS.SHIELD} ne peut pas être retiré s'il est placé lorsqu'il y a des ennemis sous débuffs ${DEBUFFS.LEECH}.`,
-          damage: "0.35*HP",
+          damage: "0.35*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Soif de Sang",
           description: `Attaque un ennemi. Les dégâts sont proportionnels aux PV MAX de ce Champion et augmentent en fonction du nombre d'alliés morts.`,
-          damage: "0.3*HP*(1+Allies Dead)",
+          damage: "0.3*PV*(1+Allies Dead)",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Temps de recharge -1"],
           isPassive: false

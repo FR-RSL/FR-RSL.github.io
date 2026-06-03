@@ -22,7 +22,7 @@ const championData = {
           img: "assets/sort3.webp",
           name: "Riposter",
           description: `Attaque 1 ennemi. Les dégâts augmentent en fonction des PV actuels de ce Champion.`,
-          damage: "0.33*HP",
+          damage: "0.33*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

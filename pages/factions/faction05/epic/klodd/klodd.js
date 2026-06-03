@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Nouvelle Main Violente",
           description: `Attaque un ennemi. Possède 30 % de chances de placer un débuff ${DEBUFFS.CRATE} de 30 % pendant 2 tours.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +10%", "Dégâts +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },

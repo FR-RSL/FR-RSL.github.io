@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Lancière",
           description: `Attaque un ennemi. Possède 30 % de chances de voler un buff aléatoire à la cible.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +10%"],
           isPassive: false
         },
@@ -17,7 +17,7 @@ const championData = {
 Avant d'attaquer, possède 50 % de chances de retirer les buffs ${BUFFS.BLOCK_DEBUFFS} de tous les ennemis.${RETURN}${RETURN}
 
 Possède également 50 % de chances de placer un débuff ${DEBUFFS.BLOCK_BUFFS} sur tous les ennemis pendant 2 tours après avoir attaqué.`,
-          damage: "0.24*HP",
+          damage: "0.24*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Chances de Buff/Debuff +15%", "Chances de Buff/Debuff +15%", "Temps de recharge -1"],
           isPassive: false

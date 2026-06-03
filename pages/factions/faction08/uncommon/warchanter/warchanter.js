@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Blessure à la Tête",
           description: `Attaque un ennemi. Possède 20 % de chances de placer un débuff d'${DEBUFFS.STUN} d'1 tour.`,
-          damage: "0.2*HP",
+          damage: "0.2*PV",
           levelInfo: ["Dégâts +5%", "Chances de Buff/Debuff +5%", "Dégâts +5%", "Chances de Buff/Debuff +5%"],
           isPassive: false
         },

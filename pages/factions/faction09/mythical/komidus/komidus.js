@@ -10,7 +10,7 @@ const championForms = {
 Chaque frappe réduit la DÉF de la cible de 2 % (s'accumule jusqu'à 20 %).${RETURN}${RETURN}
 
 Chaque frappe vole également 10 % du Compteur de Tour de la cible.`,
-          damage: "0.11*HP",
+          damage: "0.11*PV",
           levelInfo: ["Dégâts +10%", "Ignorer la RES +20%"],
           isPassive: false
         },
@@ -20,7 +20,7 @@ Chaque frappe vole également 10 % du Compteur de Tour de la cible.`,
           description: `Attaque tous les ennemis. Retire tous les buffs sur tous les ennemis et leur inflige un débuff ${DEBUFFS.LOCK_ACTIVE} pendant 2 tours.${RETURN}${RETURN}
 
 Vole également 20 % du Compteur de Tour de chaque ennemi sous débuff ${DEBUFFS.LOCK_ACTIVE}.`,
-          damage: "0.22*HP",
+          damage: "0.22*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
@@ -31,7 +31,7 @@ Vole également 20 % du Compteur de Tour de chaque ennemi sous débuff ${DEBUFFS
           description: `Attaque un ennemi. Vole 100 % du Compteur de Tour de la cible.${RETURN}${RETURN}
 
 Place également les compétences de la cible en recharge.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%", "Temps de recharge -1"],
           isPassive: false
@@ -49,7 +49,7 @@ Place également les compétences de la cible en recharge.`,
           description: `Dès que ce Champion perd 30 % de PV ou plus lors d'un seul tour, inflige des dégâts équivalents à 30 % des PV MAX de ce Champion à l'assaillant. Se produit une fois par tour.${RETURN}${RETURN}
 
 De plus, lorsque ce Champion perd 30 % de PV ou plus lors d'un seul tour, lui accorde un buff ${BUFFS.SHIELD} équivalent à 30 % des PV MAX de ce Champion pendant 2 tours.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           isPassive: true
         }
       ],
@@ -76,10 +76,10 @@ De plus, lorsque ce Champion perd 30 % de PV ou plus lors d'un seul tour, lui ac
           name: "Artiste instable",
           description: `Attaque 2 fois un ennemi.${RETURN}${RETURN}
 
-Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.BOMB} pendant 2 tours.${RETURN}${RETURN}
+Chaque frappe a 50 % de chances de placer un débuff ${DEBUFFS.BOMB} equivalent a 15% des PV MAX de ce Champion pendant 2 tours.${RETURN}${RETURN}
 
 Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BOMB} placé.`,
-          damage: "0.12*HP",
+          damage: "0.12*PV",
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false
         },
@@ -88,12 +88,12 @@ Soigne ce Champion de 10 % de ses PV MAX pour chaque débuff ${DEBUFFS.BOMB} pla
           name: "Clou du spectacle explosif",
           description: `Attaque tous les ennemis.${RETURN}${RETURN}
 
-Place 2 débuffs ${DEBUFFS.BOMB} sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
+Place 2 débuffs ${DEBUFFS.BOMB} equivalent a 33% des PV MAX de ce Champion sur tous les ennemis pendant 2 tours.${RETURN}${RETURN}
 
 Fait exploser instantanément tous les débuffs ${DEBUFFS.BOMB} sur les ennemis dotés de buffs ${BUFFS.STONE_SKIN} ou les ennemis dont les PV sont inférieurs aux PV de ce Champion.${RETURN}${RETURN}
 
 Ensuite, place un débuff ${DEBUFFS.STUN} pendant 1 tour sur tous les ennemis dont les débuffs ${DEBUFFS.BOMB} ont explosé à cause de cette compétence.`,
-          damage: "0.25*HP",
+          damage: "0.25*PV",
           cooldown: 3,
           levelInfo: ["Dégâts +20%", "Ignorer la RES +20%"],
           isPassive: false

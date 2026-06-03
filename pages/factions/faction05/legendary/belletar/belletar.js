@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Hache fumante",
           description: `Attaque un ennemi. A 75 % de chances de réduire d'1 tour le temps de recharge d'une compétence aléatoire de l'allié qui a le Compteur de Tour le plus élevé, sauf ce Champion.`,
-          damage: "0.22*HP",
+          damage: "0.22*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Chances de Buff/Debuff +10%", "Chances de Buff/Debuff +15%"],
           isPassive: false
         },
@@ -13,7 +13,7 @@ const championData = {
           img: "assets/sort2.webp",
           name: "Rugissement du tueur",
           description: `Attaque tous les ennemis. Place un buff ${BUFFS.ATK} de 50 % et un buff ${BUFFS.DEF} de 60 % sur tous les alliés pendant 2 tours. Soigne également tous les alliés à hauteur de 20 % des PV MAX de ce Champion et remplit de 20 % les Compteurs de Tour de tous les alliés.`,
-          damage: "0.22*HP",
+          damage: "0.22*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +5%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

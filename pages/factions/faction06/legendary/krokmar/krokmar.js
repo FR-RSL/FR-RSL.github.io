@@ -5,7 +5,7 @@ const championData = {
           img: "assets/sort1.webp",
           name: "Fendeur de viande",
           description: `Attaque 1 ennemi. Attaque une fois tous les ennemis si la première attaque passe en critique.`,
-          damage: "0.18*HP",
+          damage: "0.18*PV",
           levelInfo: ["Dégâts +5%", "Dégâts +5%", "Dégâts +5%", "Dégâts +5%"],
           isPassive: false
         },
@@ -15,7 +15,7 @@ const championData = {
           description: `Attaque tous les ennemis. Place sur ce Champion un buff ${BUFFS.SHIELD} de 2 tours, équivalent à 20 % des dégâts infligés.${RETURN}${RETURN}
 
 Soigne également ce Champion de 10 % de ses PV MAX pour chaque coup critique.`,
-          damage: "0.3*HP",
+          damage: "0.3*PV",
           cooldown: 4,
           levelInfo: ["Dégâts +10%", "Dégâts +10%", "Temps de recharge -1"],
           isPassive: false

@@ -40,7 +40,6 @@ const CHAMPIONS = [
   { name: "Loki le Trompeur",            faction: "faction04", rarity: "legendary", folder: "loki"           },
   { name: "Odin Patriarche",            faction: "faction04", rarity: "legendary", folder: "odin"           },
   // ── Faction 06 — Homme Lézards ──────────────────────────────────────────
-  { name: "Donnie",       faction: "faction06", rarity: "legendary", folder: "donatello"      },
   { name: "Predator",        faction: "faction06", rarity: "legendary", folder: "predator"       },
   // ── Faction 07 — Marcheurs de Peau ──────────────────────────────────────
   { name: "Galleus Crete-sang",         faction: "faction07", rarity: "mythical",  folder: "galleus"        },
